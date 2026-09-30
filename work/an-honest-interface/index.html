@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/work/an-honest-interface/">
+<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/work/an-honest-interface/">
+<meta property="og:site_name" content="Tarek Alfutih">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<title>An Honest Interface — Tarek Alfutih</title>
+<meta name="description" content="What if Polestar&#x27;s in-car interfaces showed the environmental impact we usually don&#x27;t see?">
+<style>
+body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#122a8f;text-decoration:none}
+a:hover{color:#1b3ac4;text-decoration:underline}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin:0 auto;background:#fff;border-left:1px solid #dcd9d4;border-right:1px solid #dcd9d4}
+.pad{padding:56px}
+.rule{border-bottom:2px solid #1c1b1a}
+.lbl{font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e}
+.gray{background:transparent}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid #1c1b1a}
+.facts>div{padding:20px;border-right:1px solid #dcd9d4}
+.facts>div:last-child{border-right:none}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.scenario-lbl{font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#53565A;border-left:3px solid #F6BE00;padding-left:10px}
+section[id]{scroll-margin-top:96px}
+nav a{position:relative;display:inline-block;padding-bottom:2px}
+nav a:hover{color:#1b3ac4}
+nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#1b3ac4}
+@media (max-width:860px){
+  .pad{padding:32px 24px}
+  h1.h1r{font-size:34px !important}
+  .facts{grid-template-columns:1fr}
+  .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
+  .g2,.g3{grid-template-columns:1fr !important}
+  .hi-process{grid-template-columns:1fr !important}
+  .hi-process>div{border-right:none !important;border-bottom:1px solid #dcd9d4}
+  .hi-process>div:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="cs-hd">
+    <div class="cs-bar">
+      <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
+      <a class="cs-back" href="/My-new-portfolio-2026/work/" data-back>← All work</a>
+      <nav class="cs-main" aria-label="Main"><a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work</a><a href="/My-new-portfolio-2026/about/">About</a><a href="/My-new-portfolio-2026/contact/">Contact</a></nav>
+      <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    </div>
+    <script>
+      /* Arrived from Home (?from=home): back link goes Home and the Work link is shown.
+         Otherwise the back link already points to Work, so the Work nav link stays hidden. */
+      (function () {
+        if (new URLSearchParams(location.search).get('from') !== 'home') return;
+        var back = document.querySelector('[data-back]');
+        back.href = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
+        back.textContent = '← Home';
+        document.querySelector('[data-work-link]').hidden = false;
+      })();
+    </script>
+    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+      <a href="#context" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Context</a>
+      <a href="#research" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Research</a>
+      <a href="#insight" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Insight</a>
+      <a href="#direction" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Direction</a>
+      <a href="#exploration" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Exploration</a>
+      <a href="#decisions" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 Decisions</a>
+      <a href="#result" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Result</a>
+      <a href="#reflection" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">08 Reflection</a>
+      <a href="#future" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">09 Future</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <section class="pad rule" id="context">
+    <div class="lbl" style="margin-bottom:20px">01 · Context &amp; challenge</div>
+    <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;text-wrap:pretty">An Honest Interface</h1>
+    <p style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:680px;margin:0 0 32px;text-wrap:pretty">What if Polestar's in-car interfaces showed the environmental impact we usually don't see?</p>
+
+    <div class="gray" style="aspect-ratio:2480/1395;max-width:780px;margin-bottom:32px"><img class="slot" src="/My-new-portfolio-2026/assets/img/bird-on-the-big-screen-polestar.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 72vw, 780px" alt="Hero — final design in context" decoding="async" style="object-fit:contain;"></div>
+
+    <div class="facts">
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Type</div><div style="font:600 15px/1.35 Archivo">Critical &amp; speculative design · individual</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div style="font:600 15px/1.35 Archivo">Literature-grounded critical design, digital illustration, Photoshop compositing</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Year</div><div style="font:600 15px/1.35 Archivo">2025</div></div>
+    </div>
+
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:32px 0 20px;text-wrap:pretty">In this project, I designed an honest interface for a Polestar car — one that shows the hidden environmental impact of using an electric vehicle. The goal isn't to offer a solution, but to encourage drivers to reflect on how their driving can affect the environment.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 20px;text-wrap:pretty">I used a Critical Design approach because it helps question what already exists and creates space for reflection and new perspectives.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 20px;text-wrap:pretty">Polestar shares information about the environmental impact of its electric vehicles in its sustainability report, but this information is not visible in its in-car interfaces. The center display, driver display, and head-up display mainly focus on information such as driving, navigation, speed, and range.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 28px;text-wrap:pretty">For example, when planning a trip from Gothenburg to Stockholm, the navigation interface does not show information about the environmental impact of the trip or encourage the driver to consider another way of travelling. This became the starting point for asking: what if the car interface also showed the environmental impact we usually don't see?</p>
+    <div class="g2">
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Center display — comfort &amp; speed</div>
+        <div class="gray" style="aspect-ratio:1190/669;max-width:340px"><img class="slot" src="/My-new-portfolio-2026/assets/img/polestar-center-display.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/polestar-center-display-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/polestar-center-display-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/polestar-center-display-1190.webp 1190w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 45vw, (max-width: 1280px) 32vw, 340px" alt="Polestar center display" decoding="async" style="object-fit:contain;"></div>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Trip navigation — all green, no warning</div>
+        <div style="display:flex;gap:16px;flex-wrap:wrap">
+          <div class="gray" style="aspect-ratio:1280/720;width:320px;flex:0 0 320px"><img class="slot" src="/My-new-portfolio-2026/assets/img/the-screen-is-green.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/the-screen-is-green-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/the-screen-is-green-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/the-screen-is-green-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/the-screen-is-green-1280.webp 1280w" sizes="(max-width: 560px) 96vw, (max-width: 900px) 47vw, (max-width: 1280px) 33vw, 356px" alt="Polestar navigation — green route map" loading="lazy" decoding="async" data-view="1.1124 5.619 0" style="object-fit:contain;"></div>
+          <div class="gray" style="aspect-ratio:720/900;width:180px;flex:0 0 180px"><img class="slot" src="/My-new-portfolio-2026/assets/img/polestar-display-green-45c8c868.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/polestar-display-green-45c8c868-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/polestar-display-green-45c8c868-720.webp 720w" sizes="(max-width: 560px) 49vw, (max-width: 900px) 24vw, (max-width: 1280px) 17vw, 180px" alt="Polestar HUD — green route, no warning" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="research">
+    <div class="lbl" style="margin-bottom:20px">02 · Research</div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 20px;text-wrap:pretty">While reading Polestar's 2024 Sustainability Report, I found the information that shaped this research. Polestar performs better on climate action than other car companies, which is why I focused on Polestar rather than another manufacturer. CEO Michael Lohscheller reported a 25% cut in relative carbon footprint per car sold since 2020 — about a quarter of all emissions per car sold.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap;margin-bottom:20px">
+      <div class="gray" style="aspect-ratio:1613/1496;width:150px"><img class="slot" src="/My-new-portfolio-2026/assets/img/polestar-sustaniability-report.png" srcset="/My-new-portfolio-2026/assets/img/opt/polestar-sustaniability-report-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/polestar-sustaniability-report-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/polestar-sustaniability-report-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/polestar-sustaniability-report-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/polestar-sustaniability-report-1613.webp 1613w" sizes="(max-width: 560px) 41vw, (max-width: 900px) 20vw, (max-width: 1280px) 14vw, 150px" alt="Polestar 2024 Sustainability Report" loading="lazy" decoding="async" style="width: 150px; height: 153px"></div>
+      <div class="gray" style="aspect-ratio:1132/1156;width:150px"><img class="slot" src="/My-new-portfolio-2026/assets/img/mickael-lohscheller.png" srcset="/My-new-portfolio-2026/assets/img/opt/mickael-lohscheller-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/mickael-lohscheller-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/mickael-lohscheller-1132.webp 1132w" sizes="(max-width: 560px) 41vw, (max-width: 900px) 20vw, (max-width: 1280px) 14vw, 150px" alt="Michael Lohscheller, CEO" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+    </div>
+    <blockquote style="border-left:3px solid #1b3ac4;margin:0 0 24px;padding:4px 0 4px 20px;font:400 17px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Polestar 4 isn't just our fastest car to date, with a 0–100 acceleration of 3.8 seconds, it also has the lowest carbon footprint of any Polestar car." <span style="color:#75726e;font-size:14px">— Polestar, 2024</span></blockquote>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">Even with Polestar's transparency and its efforts to build greener cars, the company still makes vehicles built for fast driving — and fast driving increases tire wear, particle emissions like microplastics, and air pollution. The same report shows that making EV batteries releases toxic chemicals and heavy metals during cobalt, lithium and nickel mining, and that EVs also produce emissions from brake dust and tire wear, not just from the exhaust.</p>
+    <div class="g3">
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Mining pollution</div>
+        <div class="gray" style="aspect-ratio:1/1;max-width:150px"><img class="slot" src="/My-new-portfolio-2026/assets/img/image-frog.png" srcset="/My-new-portfolio-2026/assets/img/opt/image-frog-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/image-frog-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/image-frog-1024.webp 1024w" sizes="(max-width: 560px) 44vw, (max-width: 900px) 22vw, (max-width: 1280px) 15vw, 162px" alt="Frog near a mining site" loading="lazy" decoding="async" data-view="1.0792 0 -3.962" style="object-fit:contain;"></div>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Tire wear &amp; microplastics</div>
+        <div class="gray" style="aspect-ratio:1024/1536;max-width:110px"><img class="slot" src="/My-new-portfolio-2026/assets/img/image-tire.png" srcset="/My-new-portfolio-2026/assets/img/opt/image-tire-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/image-tire-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/image-tire-1024.webp 1024w" sizes="(max-width: 560px) 30vw, (max-width: 900px) 15vw, (max-width: 1280px) 11vw, 110px" alt="Tire particle wear" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Cost of fast driving</div>
+        <div class="gray" style="aspect-ratio:721/371;max-width:180px"><img class="slot" src="/My-new-portfolio-2026/assets/img/istock-486966584-1-min-e1578948738419.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/istock-486966584-1-min-e1578948738419-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/istock-486966584-1-min-e1578948738419-721.webp 721w" sizes="(max-width: 560px) 49vw, (max-width: 900px) 24vw, (max-width: 1280px) 17vw, 180px" alt="Roadkill" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="insight">
+    <div class="lbl" style="margin-bottom:20px">03 · Key insight</div>
+    <p style="font:600 24px/1.4 Archivo;letter-spacing:-.01em;color:#1c1b1a;max-width:680px;margin:0 0 20px;text-wrap:pretty">Everything the report tells you, the interface hides.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">Polestar is honest about its environmental impact on paper, in a 60-page report almost no driver will read — but says nothing about it on the one screen every driver sees, every trip. That gap between what's disclosed and what's displayed is the real design opportunity: not a new feature, but a missing layer of honesty in an interface that already has room for it.</p>
+    <div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap">
+      <div class="gray" style="aspect-ratio:1480/833;max-width:280px"><img class="slot" src="/My-new-portfolio-2026/assets/img/sigarets.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/sigarets-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/sigarets-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/sigarets-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/sigarets-1480.webp 1480w" sizes="(max-width: 1280px) 100vw, 1280px" alt="Tobacco packaging warning — reference example" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      <p style="font:400 15px/1.6 Archivo;color:#75726e;margin:0;max-width:420px">The closest example is tobacco packaging: warning images of sick people, printed on the box, required by law but honest about what they showed. It doesn't stop anyone smoking, but it puts the truth in front of you at the moment you use the product. That's the model for this project.</p>
+    </div>
+  </section>
+
+  <section class="pad rule" id="direction">
+    <div class="lbl" style="margin-bottom:20px">04 · Design direction</div>
+    <p style="font:600 26px/1.35 Archivo;letter-spacing:-.01em;color:#1c1b1a;max-width:620px;margin:0 0 28px;text-wrap:pretty">A dialogue between driver and car — not a warning, not a lecture. The car gently points out the consequences of driving, without restricting, judging, or demanding attention.</p>
+    <div style="display:flex;gap:28px;flex-wrap:wrap;align-items:flex-start;margin-bottom:28px">
+      <div class="gray" style="aspect-ratio:1/1;max-width:340px;flex:1 1 300px"><img class="slot" src="/My-new-portfolio-2026/assets/img/image-dialoge.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/image-dialoge-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/image-dialoge-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/image-dialoge-1024.webp 1024w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 44vw, (max-width: 1280px) 32vw, 340px" alt="Coal-plant warning dialogue concept" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;flex:1 1 320px;min-width:260px;margin:0;text-wrap:pretty">Instead of a warning light, the interface asks a quiet question: <em>did you know your drive today used energy from a coal plant?</em> No alarm, no lock-out — just information the driver didn't have before. The driver stays in control; the car just stops pretending the choice has no cost.</p>
+    </div>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 20px;text-wrap:pretty">The interface works like an honest mirror, using symbols and short cues to make the driver pause and think: "Am I contributing to harm without realizing it?" That led to three moments where the car already has the driver's attention: while driving, before a long trip, and at speed on the head-up display.</p>
+    <div style="border-top:1px solid #dcd9d4;padding-top:18px">
+      <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#75726e">Theoretical grounding</div>
+      <p style="font:400 14px/1.6 Archivo;color:#75726e;max-width:760px;margin:0">Malpass (2013): critical design creates distance between the object and the user, making room for reflection. Dunne &amp; Raby (2001): design shouldn't only serve the market — it should also ask, "can we live differently?" Wakkary &amp; Odom (2018): technology that lives alongside us, slowly building awareness without demanding attention.</p>
+    </div>
+  </section>
+
+  <section class="pad rule" id="exploration">
+    <div class="lbl" style="margin-bottom:20px">05 · Exploration &amp; development</div>
+    <div style="display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap;margin-bottom:28px">
+      <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;flex:1 1 400px;min-width:280px;margin:0;text-wrap:pretty">Making a realistic mockup of a Polestar driving display was a technical challenge — I solved it by drawing over a photo of the real display in Photoshop, using a digital drawing tablet. Getting the critical message across without being too harsh was another challenge, solved by choosing a cartoon style over real photos of dead or sick animals — closer to a warning label than a graphic image.</p>
+      <div style="flex:0 0 120px">
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Tool</div>
+        <div class="gray" style="aspect-ratio:1/1;width:120px"><img class="slot" src="/My-new-portfolio-2026/assets/img/wacom-intuos-pro-m.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/wacom-intuos-pro-m-400.webp 400w" sizes="(max-width: 560px) 33vw, (max-width: 900px) 16vw, (max-width: 1280px) 11vw, 120px" alt="Wacom drawing tablet" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      </div>
+    </div>
+    <div style="margin-bottom:32px">
+      <div class="lbl" style="font-size:10px;margin-bottom:14px;color:#75726e">Sketches</div>
+      <div class="g3">
+        <div>
+          <div class="gray" style="aspect-ratio:880/854;max-width:220px"><img class="slot" src="/My-new-portfolio-2026/assets/img/ahi-symbol-bird.webp" srcset="/My-new-portfolio-2026/assets/img/opt/ahi-symbol-bird-440.webp 440w" sizes="(max-width: 560px) 60vw, (max-width: 900px) 29vw, (max-width: 1280px) 21vw, 220px" alt="Bird" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+          <p style="font:400 14px/1.5 Archivo;color:#4a4744;margin:10px 0 0;max-width:220px">The bird can only breathe with a mask and an oxygen supply.</p>
+        </div>
+        <div>
+          <div class="gray" style="aspect-ratio:3074/2919;max-width:220px"><img class="slot" src="/My-new-portfolio-2026/assets/img/fox-for-polestar-skech.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/fox-for-polestar-skech-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/fox-for-polestar-skech-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/fox-for-polestar-skech-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/fox-for-polestar-skech-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/fox-for-polestar-skech-2400.webp 2400w" sizes="(max-width: 560px) 60vw, (max-width: 900px) 29vw, (max-width: 1280px) 21vw, 220px" alt="Fox" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+          <p style="font:400 14px/1.5 Archivo;color:#4a4744;margin:10px 0 0;max-width:220px">The fox struggles to breathe in the toxic air.</p>
+        </div>
+        <div>
+          <div class="gray" style="aspect-ratio:5184/3456;max-width:220px"><img class="slot" src="/My-new-portfolio-2026/assets/img/fish.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/fish-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/fish-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/fish-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/fish-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/fish-2400.webp 2400w" sizes="(max-width: 560px) 60vw, (max-width: 900px) 29vw, (max-width: 1280px) 21vw, 220px" alt="Fish" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+          <p style="font:400 14px/1.5 Archivo;color:#4a4744;margin:10px 0 0;max-width:220px">Pollution is killing the fish.</p>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;gap:24px;align-items:center;flex-wrap:wrap;margin-bottom:28px">
+      <div style="flex:0 1 200px;min-width:160px">
+        <p style="font:400 14px/1.5 Archivo;color:#4a4744;margin:0">Early sketches of environment symbols — a planet and a leaf, on paper.</p>
+      </div>
+      <div class="gray" style="aspect-ratio:3689/2861;flex:2 1 420px;max-width:520px"><img class="slot" src="/My-new-portfolio-2026/assets/img/ahi-sketches.webp" srcset="/My-new-portfolio-2026/assets/img/opt/ahi-sketches-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/ahi-sketches-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/ahi-sketches-1040.webp 1040w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 65vw, (max-width: 1280px) 48vw, 520px" alt="Sketches — environment symbols, deer" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      <div style="flex:0 1 200px;min-width:160px">
+        <p style="font:400 14px/1.5 Archivo;color:#4a4744;margin:0">A deer breathing with a mask and an oxygen supply.</p>
+      </div>
+    </div>
+    <p style="font:400 14px/1.5 Archivo;color:#75726e;margin:0 0 28px">Digital driver display in the Polestar.</p>
+  </section>
+
+  <section class="pad rule" id="decisions">
+    <div class="lbl" style="margin-bottom:20px">06 · Design decisions</div>
+    <div class="g3">
+      <div>
+        <p style="font:600 15px/1.4 Archivo;margin:0 0 8px">Three moments, not one screen</p>
+        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0">Instead of one single warning, the message meets the driver where their attention already is: quiet while driving, clearer before a trip, and pointed at speed — so it feels like feedback, not an alarm.</p>
+      </div>
+      <div>
+        <p style="font:600 15px/1.4 Archivo;margin:0 0 8px">Illustration over data</p>
+        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0">A tree losing its leaves or a struggling animal gets the point across faster than a number would, and keeps the tone reflective rather than harsh — closer to a warning label than a dashboard alert.</p>
+      </div>
+      <div>
+        <p style="font:600 15px/1.4 Archivo;margin:0 0 8px">Cartoon over real photos</p>
+        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0">I considered and rejected using real images of dead or sick animals — the goal was to make people reflect, not upset them. A cartoon style keeps the message clear without being aggressive.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="result">
+    <div class="lbl" style="margin-bottom:20px">07 · Final result</div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 32px;text-wrap:pretty">Three scenarios, composited onto real photos of Polestar's in-car displays, showing the same interfaces with one honest layer added.</p>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:28px;margin-bottom:36px">
+      <div class="scenario-lbl" style="margin-bottom:14px">Scenario 1 — Speed-linked trees</div>
+      <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 20px;text-wrap:pretty">Below 50 km/h, green trees appear on the dashboard. As speed increases, the leaves start to disappear — a visual readout of damage, tied directly to the driving behaviour causing it. Giechaskiel et al. (2024) found that fast driving increases tire wear, which worsens air pollution; the illustration makes that link visible in the moment it happens.</p>
+      <div class="g2" style="max-width:780px;margin-bottom:24px">
+        <div>
+          <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Before</div>
+          <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/My-new-portfolio-2026/assets/img/before-design-1.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/before-design-1-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/before-design-1-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/before-design-1-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/before-design-1-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/before-design-1-1920.webp 1920w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 35vw, 378px" alt="Before — plain HUD, no trees" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        </div>
+        <div>
+          <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">After — animated</div>
+          <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/My-new-portfolio-2026/assets/img/opt/design-1-an-honest-interface.webp" alt="50 km/h — animated view" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        </div>
+      </div>
+      <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">As speed increases, the trees thin out</div>
+      <div class="g3" style="gap:2px;max-width:780px;grid-template-columns:repeat(5,1fr)">
+        <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/My-new-portfolio-2026/assets/img/polestar-3-speed-effect-1.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-1-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-1-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-1-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-1-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-1-1920.webp 1920w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 15vw, 154px" alt="50 km/h — full trees" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/My-new-portfolio-2026/assets/img/polestar-3-speed-effect-2.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-2-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-2-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-2-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-2-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-2-1920.webp 1920w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 15vw, 154px" alt="60 km/h" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/My-new-portfolio-2026/assets/img/polestar-3-speed-effect-3.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-3-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-3-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-3-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-3-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-3-1920.webp 1920w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 15vw, 154px" alt="70 km/h" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/My-new-portfolio-2026/assets/img/polestar-3-speed-effect-4.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-4-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-4-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-4-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-4-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-4-1920.webp 1920w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 15vw, 154px" alt="80 km/h — leaves thinning" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/My-new-portfolio-2026/assets/img/polestar-3-speed-effect-5.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-5-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-5-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-5-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-5-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/polestar-3-speed-effect-5-1920.webp 1920w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 15vw, 154px" alt="100 km/h — bare trees" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      </div>
+      <div style="max-width:780px;display:grid;grid-template-columns:repeat(5,1fr);font:600 11px/1 Archivo;color:#75726e;letter-spacing:.06em;text-transform:uppercase;padding-top:6px;text-align:center">
+        <span>50 km/h</span><span>60 km/h</span><span>70 km/h</span><span>80 km/h</span><span>100 km/h</span>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:28px;margin-bottom:36px">
+      <div class="scenario-lbl" style="margin-bottom:14px">Scenario 2 — Before a long trip</div>
+      <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 20px;text-wrap:pretty">Planning a trip from Gothenburg to Stockholm, the driver opens navigation. Before pressing start, a sick bird appears beside the route, with the message: "Protect nature, drive less." It appears at the one moment the decision to travel is still open — nudging toward an alternative, like the train, instead of warning after the fact.</p>
+      <div class="g2" style="max-width:780px;margin-bottom:20px">
+        <div>
+          <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Before</div>
+          <div class="gray" style="aspect-ratio:2496/1408"><img class="slot" src="/My-new-portfolio-2026/assets/img/before-the-design-2.webp" srcset="/My-new-portfolio-2026/assets/img/opt/before-the-design-2-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/before-the-design-2-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/before-the-design-2-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/before-the-design-2-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/before-the-design-2-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 35vw, 378px" alt="Before — route overview, no warning" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        </div>
+        <div>
+          <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">After</div>
+          <div class="gray" style="aspect-ratio:2480/1395"><img class="slot" src="/My-new-portfolio-2026/assets/img/bird-on-the-big-screen-polestar.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 72vw, 780px" alt="Scenario 2 — route overview with bird warning" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+          <div class="gray" style="aspect-ratio:636/528;max-width:220px;margin-top:12px"><img class="slot" src="/My-new-portfolio-2026/assets/img/bird-on-the-big-screen-polestar-zoom.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-zoom-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-zoom-636.webp 636w" sizes="(max-width: 560px) 60vw, (max-width: 900px) 29vw, (max-width: 1280px) 21vw, 220px" alt="Scenario 2 — detail" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+          <div class="gray" style="aspect-ratio:880/854;max-width:160px;margin-top:12px"><img class="slot" src="/My-new-portfolio-2026/assets/img/opt/bird.webp" alt="Bird illustration — animated" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        </div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:28px">
+      <div class="scenario-lbl" style="margin-bottom:14px">Scenario 3 — Head-up display, fast driving</div>
+      <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 20px;text-wrap:pretty">Polestar's head-up display projects real facts directly onto the windshield during high-speed driving. A fox struggling to breathe appears in that space — reminding the driver that speed itself has an environmental and animal cost, right where speed is visible.</p>
+      <div class="g2" style="max-width:600px">
+        <div>
+          <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Before</div>
+          <div class="gray" style="aspect-ratio:903/1130"><img class="slot" src="/My-new-portfolio-2026/assets/img/head-up-display-before.avif" srcset="/My-new-portfolio-2026/assets/img/opt/head-up-display-before-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/head-up-display-before-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/head-up-display-before-904.webp 904w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 79vw, (max-width: 1280px) 27vw, 288px" alt="Before — plain head-up display" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        </div>
+        <div>
+          <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">After</div>
+          <div class="gray" style="aspect-ratio:903/1130"><img class="slot" src="/My-new-portfolio-2026/assets/img/head-up-display-polestar.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/head-up-display-polestar-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/head-up-display-polestar-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/head-up-display-polestar-904.webp 904w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 79vw, (max-width: 1280px) 27vw, 288px" alt="Scenario 3 — fox on head-up display" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+          <div class="gray" style="aspect-ratio:3074/2919;max-width:160px;margin-top:12px"><img class="slot" src="/My-new-portfolio-2026/assets/img/opt/fox-for-polestar.webp" alt="Fox illustration — animated" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad" id="reflection">
+    <div class="lbl" style="margin-bottom:20px">08 · Reflection &amp; outcome</div>
+    <div class="g2" style="margin-bottom:28px">
+      <div>
+        <div class="lbl" style="font-size:11px;margin-bottom:12px;color:#122a8f">Potential gains</div>
+        <ul style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;padding-left:18px">
+          <li style="margin-bottom:10px">Messages like these could get people to drive less, which is better for the environment and good for Polestar's image as an environmental leader.</li>
+          <li style="margin-bottom:10px">More awareness could help with tax breaks or sustainability incentives, and build trust with customers who care about the environment.</li>
+          <li>If laws later require car companies to show drivers their environmental impact, this project shows one way to do that.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:11px;margin-bottom:12px;color:#75726e">Risks &amp; consequences</div>
+        <ul style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;padding-left:18px">
+          <li style="margin-bottom:10px">Not everyone will drive less because of this, so Polestar could lose some sales — though every car maker would face the same problem.</li>
+          <li style="margin-bottom:10px">Not everyone wants to see this kind of message, or cares about the environmental impact. It could feel like moral pressure instead of just information.</li>
+          <li style="margin-bottom:10px">The same illustrations could get ignored over time if drivers see them too often. Changing them up (different animals, different scenarios) could help keep the message noticeable.</li>
+          <li>There's a trade-off too: the idea also asks drivers to think about other ways to travel, like public transport, not just to drive more carefully.</li>
+        </ul>
+      </div>
+    </div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">This fits well with what critical design is about — it makes you stop and think, and opens up a conversation, which is exactly what I wanted. This project isn't telling people to stop driving. It's making the hidden environmental cost of driving visible, so people can reflect on it themselves.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0;text-wrap:pretty">One limitation is that the illustrations alone might not always be clear enough. Some people may not get why a tree is losing its leaves, or why a fox is struggling to breathe. A good next step would be adding a short line of text next to each illustration, so the message doesn't rely only on reading the picture correctly.</p>
+  </section>
+
+  <section class="pad" style="border-top:1px solid #dcd9d4" id="future">
+    <div class="lbl" style="margin-bottom:6px;color:#122a8f">Planned — not yet built</div>
+    <div class="lbl" style="margin-bottom:20px">09 · Future work</div>
+    <p style="font:600 22px/1.4 Archivo;letter-spacing:-.01em;color:#1c1b1a;max-width:680px;margin:0 0 20px;text-wrap:pretty">The next step would be to move from raising awareness to encouraging better driving behaviour.</p>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 16px;text-wrap:pretty">Driving cannot always be avoided, but the environmental impact of how we drive can sometimes be reduced. Instead of only showing negative consequences, a future version could use positive feedback and rewards to encourage more eco-friendly driving.</p>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 16px;text-wrap:pretty">For example, smoother driving, lower energy use, or other eco-friendly behaviours could earn points, scores, digital awards, or positive visual feedback.</p>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 36px;text-wrap:pretty">The goal would be to combine honest environmental information with positive encouragement, without distracting the driver.</p>
+
+    <div class="lbl" style="font-size:11px;margin-bottom:16px;color:#75726e">Planned process</div>
+    <div class="hi-process" style="display:grid;grid-template-columns:repeat(5,1fr);gap:0;border-top:2px solid #1c1b1a;border-bottom:2px solid #1c1b1a">
+      <div style="padding:18px 16px;border-right:1px solid #dcd9d4">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#122a8f">01 · Research</div>
+        <p style="font:400 14px/1.55 Archivo;color:#4a4744;margin:0">Explore sustainable driving behaviour, existing eco-driving systems, driver needs, and what types of feedback may motivate people.</p>
+      </div>
+      <div style="padding:18px 16px;border-right:1px solid #dcd9d4">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#122a8f">02 · Sketch</div>
+        <p style="font:400 14px/1.55 Archivo;color:#4a4744;margin:0">Explore different ways to communicate environmental impact and reward better driving behaviour.</p>
+      </div>
+      <div style="padding:18px 16px;border-right:1px solid #dcd9d4">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#122a8f">03 · Prototype</div>
+        <p style="font:400 14px/1.55 Archivo;color:#4a4744;margin:0">Build an interactive Figma prototype showing how the feedback and reward system could work inside the car interface.</p>
+      </div>
+      <div style="padding:18px 16px;border-right:1px solid #dcd9d4">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#122a8f">04 · Test &amp; evaluate</div>
+        <p style="font:400 14px/1.55 Archivo;color:#4a4744;margin:0">Let users interact with the prototype and check whether the information is understandable, motivating, and not distracting.</p>
+      </div>
+      <div style="padding:18px 16px">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#122a8f">05 · Refine</div>
+        <p style="font:400 14px/1.55 Archivo;color:#4a4744;margin:0">Improve the concept based on the testing results, and identify what works, what doesn't, and what needs more work.</p>
+      </div>
+    </div>
+
+    <div style="margin-top:28px;padding-top:20px;border-top:1px solid #dcd9d4;display:flex;flex-wrap:wrap;gap:8px;align-items:center">
+      <span style="font:600 13px Archivo;color:#1c1b1a">Critical design</span>
+      <span style="color:#75726e">→</span>
+      <span style="font:600 13px Archivo;color:#1c1b1a">Awareness &amp; reflection</span>
+      <span style="color:#75726e">→</span>
+      <span style="font:400 13px Archivo;color:#75726e">Research</span>
+      <span style="color:#75726e">→</span>
+      <span style="font:400 13px Archivo;color:#75726e">Prototype</span>
+      <span style="color:#75726e">→</span>
+      <span style="font:400 13px Archivo;color:#75726e">User testing</span>
+      <span style="color:#75726e">→</span>
+      <span style="font:400 13px Archivo;color:#75726e">Positive behaviour change</span>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="ft">
+    <span class="ft-copy">© 2026 Tarek Alfutih</span>
+  </footer>
+
+</div>
+<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
+</body>
+</html>

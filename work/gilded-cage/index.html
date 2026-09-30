@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/work/gilded-cage/">
+<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/work/gilded-cage/">
+<meta property="og:site_name" content="Tarek Alfutih">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<title>Gilded Cage — Tarek Alfutih</title>
+<meta name="description" content="A short game about a fairy trapped inside a glass terrarium. It looks calm and cosy on the surface. Underneath, it&#x27;s a lot darker.">
+<style>
+body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#122a8f;text-decoration:none}
+a:hover{color:#1b3ac4;text-decoration:underline}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin:0 auto;background:#fff;border-left:1px solid #dcd9d4;border-right:1px solid #dcd9d4}
+.pad{padding:56px}
+.rule{border-bottom:2px solid #1c1b1a}
+.lbl{font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid #1c1b1a;border-bottom:2px solid #1c1b1a}
+.facts>div{padding:20px;border-right:1px solid #dcd9d4}
+.facts>div:last-child{border-right:none}
+img{image-rendering:auto}
+.pixel{image-rendering:pixelated}
+section[id]{scroll-margin-top:96px}
+nav a{position:relative;display:inline-block;padding-bottom:2px}
+nav a:hover{color:#1b3ac4}
+nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#1b3ac4}
+@media (max-width:860px){
+  .pad{padding:32px 24px}
+  h1.h1r{font-size:32px !important}
+  .loop-strip{grid-template-columns:1fr !important}
+  .contrib-row{grid-template-columns:1fr !important}
+  .facts{grid-template-columns:1fr;border-top:none}
+  .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
+  .findings-grid{grid-template-columns:1fr !important}
+}
+.gc-dl:hover,.gc-dl:focus-visible{background:#4561dc !important;color:#fff !important;text-decoration:none !important}
+.gc-dl:active{background:#122a8f !important}
+.gc-play:hover,.gc-play:focus-visible{background:#d3dbfa !important;color:#122a8f !important;text-decoration:none !important}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="cs-hd">
+    <div class="cs-bar">
+      <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
+      <a class="cs-back" href="/My-new-portfolio-2026/work/" data-back>← All work</a>
+      <nav class="cs-main" aria-label="Main"><a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work</a><a href="/My-new-portfolio-2026/about/">About</a><a href="/My-new-portfolio-2026/contact/">Contact</a></nav>
+      <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    </div>
+    <script>
+      /* Arrived from Home (?from=home): back link goes Home and the Work link is shown.
+         Otherwise the back link already points to Work, so the Work nav link stays hidden. */
+      (function () {
+        if (new URLSearchParams(location.search).get('from') !== 'home') return;
+        var back = document.querySelector('[data-back]');
+        back.href = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
+        back.textContent = '← Home';
+        document.querySelector('[data-work-link]').hidden = false;
+      })();
+    </script>
+    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+      <a href="#intro" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Intro</a>
+      <a href="#facts" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Facts</a>
+      <a href="#concept" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Concept</a>
+      <a href="#loop" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Loop</a>
+      <a href="#motion" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">In motion</a>
+      <a href="#contribution" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Contribution</a>
+      <a href="#testing" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Testing</a>
+      <a href="#play" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Play it</a>
+      <a href="#learned" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Learned</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <!-- Intro: dark band, sets the "cosy dystopia" tone before the cosy image lands -->
+  <section class="rule" style="background:#161512;color:#f3f2f2;padding:56px" id="intro">
+    <div class="lbl" style="color:#8b8880;margin-bottom:20px">Game design · Illustration</div>
+    <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 18px;text-wrap:pretty">Gilded Cage</h1>
+    <p style="font:400 19px/1.55 Archivo;color:#c9c6c0;max-width:640px;margin:0;text-wrap:pretty">A short game about a fairy trapped inside a glass terrarium. It looks calm and cosy on the surface. Underneath, it's a lot darker. Made in Godot with a team of six, over eight weeks, as a university course project.</p>
+  </section>
+
+  <!-- Hero: the biggest image — the discovery moment, the story's turning point -->
+  <div class="rule" style="background:#000">
+    <img src="/My-new-portfolio-2026/assets/img/discover-the-hidden-plant-4ebf7c9c.png" srcset="/My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-2400.webp 2400w" sizes="(max-width: 1280px) 100vw, 1278px" alt="The fairy discovers a hidden flower in the terrarium" style="width:100%;display:block;max-height:640px;object-fit:contain">
+  </div>
+
+  <section class="pad facts" id="facts">
+    <div><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.4 Archivo">Illustration &amp; visual design<br><span style="font-weight:400;color:#75726e">Involved in the whole design process except coding. Drew the visuals, put them into Godot myself, adjusted details like grass colours, and designed the home screen.</span></div></div>
+    <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Team &amp; process</div><div style="font:600 15px/1.4 Archivo">6 people, 8 weeks<br><span style="font-weight:400;color:#75726e">Triple diamond process, MoSCoW, Scrum with weekly sprints. Godot for the game, Aseprite for pixel art.</span></div></div>
+    <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Status</div><div style="font:600 15px/1.4 Archivo">Finished, playable game<br><span style="font-weight:400;color:#75726e">Tested twice during development, then shown at a public game exhibition.</span></div></div>
+  </section>
+
+  <section class="pad rule" id="concept">
+    <div class="lbl" style="margin-bottom:20px">The concept</div>
+    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Cosy on top, dystopian underneath</h2>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:700px;margin:0 0 16px;text-wrap:pretty">Gilded Cage mixes two genres: cosy games, which are calm and relaxing, and dystopian games, which hide something darker. We wanted a game that feels comforting at first, then slowly reveals it isn't what it looked like.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:700px;margin:0;text-wrap:pretty">The fairy lives inside a glass terrarium — the Cage. Everything inside is green and cosy. But she's trapped, and has lost hope of getting out. We looked at games like Stardew Valley for the cosy farming feel, and Blackwell Fishing for a short loop with a dark side you can easily miss if you're not paying attention.</p>
+  </section>
+
+  <!-- The loop, told as a sequence with the three real screenshots -->
+  <section class="rule" id="loop">
+    <div class="pad" style="padding-bottom:24px">
+      <div class="lbl" style="margin-bottom:20px">The loop</div>
+      <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Water the flowers, live the day, repeat</h2>
+      <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:700px;margin:0;text-wrap:pretty">Each day the fairy waters a flower, eats a fruit from it, then rests on a bench. Small and repeatable — until she finds the one flower that's different. Watering and eating from that one ends the game, and shows what the cosy loop was really hiding.</p>
+    </div>
+    <div class="loop-strip" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#dcd9d4">
+      <figure style="margin:0;background:#fff">
+        <img src="/My-new-portfolio-2026/assets/img/watering-plants.png" srcset="/My-new-portfolio-2026/assets/img/opt/watering-plants-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/watering-plants-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/watering-plants-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/watering-plants-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/watering-plants-2400.webp 2400w" sizes="(max-width: 900px) 100vw, (max-width: 1280px) 34vw, 425px" alt="Fairy watering the flowers" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
+        <figcaption style="font:600 12px/1 Archivo;letter-spacing:.05em;text-transform:uppercase;color:#75726e;padding:12px 16px">1 · Water</figcaption>
+      </figure>
+      <figure style="margin:0;background:#fff">
+        <img src="/My-new-portfolio-2026/assets/img/eating-graps.png" srcset="/My-new-portfolio-2026/assets/img/opt/eating-graps-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/eating-graps-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/eating-graps-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/eating-graps-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/eating-graps-2400.webp 2400w" sizes="(max-width: 900px) 100vw, (max-width: 1280px) 34vw, 425px" alt="Fairy eating a fruit" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
+        <figcaption style="font:600 12px/1 Archivo;letter-spacing:.05em;text-transform:uppercase;color:#75726e;padding:12px 16px">2 · Eat</figcaption>
+      </figure>
+      <figure style="margin:0;background:#fff">
+        <img src="/My-new-portfolio-2026/assets/img/discover-the-hidden-plant.png" srcset="/My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/discover-the-hidden-plant-2400.webp 2400w" sizes="(max-width: 900px) 100vw, (max-width: 1280px) 34vw, 425px" alt="Fairy finds the hidden flower" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
+        <figcaption style="font:600 12px/1 Archivo;letter-spacing:.05em;text-transform:uppercase;color:#122a8f;padding:12px 16px">3 · Find the different one</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- Video demo -->
+  <section class="pad rule" id="motion">
+    <div class="lbl" style="margin-bottom:20px">See it in motion</div>
+    <div style="background:#000;max-width:860px">
+      <video src="/My-new-portfolio-2026/assets/video/gilded-cage-gameplay.mp4?v=f60db22c" poster="/My-new-portfolio-2026/assets/video/gilded-cage-gameplay-poster.webp?v=ffc2d321" controls="controls" playsinline="playsinline" style="width:100%;display:block"></video>
+    </div>
+    <p style="font:400 13px/1.5 Archivo;color:#75726e;max-width:640px;margin:12px 0 0">Short clip for now — full gameplay video coming during coding.</p>
+  </section>
+
+  <!-- My contribution: home screen shot + the raw hand-drawn textures, side by side -->
+  <section class="pad rule" id="contribution">
+    <div class="lbl" style="margin-bottom:20px">My contribution</div>
+    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Illustration and visual design</h2>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:700px;margin:0 0 32px;text-wrap:pretty">I was part of the design process from the start, and my main focus was illustration. I drew the game's visuals — the environment, the cage, the flowers and grass — and put them into Godot myself, adjusting things like grass colours directly in the engine. I also designed the home screen. Along the way I learned the basics of Godot, even though coding wasn't my main role.</p>
+
+    <div class="contrib-row" style="display:grid;grid-template-columns:1.2fr 1fr;gap:32px;align-items:start">
+      <div>
+        <div class="lbl" style="font-size:11px;margin-bottom:10px">Home screen — designed by me</div>
+        <img src="/My-new-portfolio-2026/assets/img/the-menu-shot.png" srcset="/My-new-portfolio-2026/assets/img/opt/the-menu-shot-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/the-menu-shot-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/the-menu-shot-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/the-menu-shot-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/the-menu-shot-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 48vw, 619px" alt="Gilded Cage main menu, designed by Tarek" style="width:100%;display:block;border:1px solid #dcd9d4">
+      </div>
+      <div>
+        <div class="lbl" style="font-size:11px;margin-bottom:10px">Hand-drawn ground textures</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#dcd9d4;border:1px solid #dcd9d4">
+          <img src="/My-new-portfolio-2026/assets/img/gras2.png" srcset="/My-new-portfolio-2026/assets/img/opt/gras2-16.webp 16w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 47vw, (max-width: 1280px) 20vw, 256px" alt="Grass texture, version 1" class="pixel" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
+          <img src="/My-new-portfolio-2026/assets/img/grass-4.png" srcset="/My-new-portfolio-2026/assets/img/opt/grass-4-48.webp 48w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 47vw, (max-width: 1280px) 20vw, 256px" alt="Grass texture, version 2" class="pixel" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block">
+          <img src="/My-new-portfolio-2026/assets/img/sand-4.png" srcset="/My-new-portfolio-2026/assets/img/opt/sand-4-48.webp 48w" sizes="(max-width: 560px) 86vw, (max-width: 900px) 94vw, (max-width: 1280px) 40vw, 513px" alt="Sand texture" class="pixel" style="width:100%;aspect-ratio:1/1;object-fit:cover;display:block;grid-column:span 2">
+        </div>
+        <p style="font:400 13px/1.5 Archivo;color:#75726e;margin:10px 0 0">Ground tiles I drew and tuned by hand — small details, but they set the whole cosy feel.</p>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #dcd9d4;margin-top:32px;padding-top:32px;display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap">
+      <img src="/My-new-portfolio-2026/assets/img/gilded-cage-poster-small-size.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/gilded-cage-poster-small-size-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/gilded-cage-poster-small-size-702.webp 702w" sizes="(max-width: 560px) 49vw, (max-width: 900px) 24vw, (max-width: 1280px) 17vw, 180px" alt="Gilded Cage exhibition poster, designed by Tarek Alfutih" style="width:100%;max-width:180px;display:block;border:1px solid #dcd9d4">
+      <div style="flex:1;min-width:240px">
+        <div class="lbl" style="font-size:11px;margin-bottom:10px">Exhibition poster</div>
+        <h3 style="font:700 20px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 12px;text-wrap:pretty">Designed for the game exhibition</h3>
+        <p style="font:400 15px/1.6 Archivo;color:#4a4744;max-width:500px;margin:0;text-wrap:pretty">I drew and designed this poster for the course's game exhibition, where Gilded Cage was shown to the public.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="testing">
+    <div class="lbl" style="margin-bottom:20px">What testing found</div>
+    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Two playtests, then an exhibition</h2>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">We tested the game twice during development, then again in front of the public at a game exhibition. Some of what we learned:</p>
+    <div class="findings-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#dcd9d4;border:1px solid #dcd9d4">
+      <div style="background:#fff;padding:20px"><p style="font:400 15px/1.6 Archivo;margin:0">Many players missed the secret ending entirely, or thought the fairy just fell asleep instead of dying.</p></div>
+      <div style="background:#fff;padding:20px"><p style="font:400 15px/1.6 Archivo;margin:0">A crossed-out water droplet icon confused players — they thought they needed to refill the watering can instead of finding more flowers.</p></div>
+      <div style="background:#fff;padding:20px"><p style="font:400 15px/1.6 Archivo;margin:0">The fade to black at the ending happened too fast, so players didn't get time to understand what was going on.</p></div>
+      <div style="background:#fff;padding:20px"><p style="font:400 15px/1.6 Archivo;margin:0">Players liked the exploration, the graphics, and the music — and the ones who understood the story liked it too.</p></div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="play">
+    <div class="lbl" style="margin-bottom:20px">Play it / read it</div>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:640px;margin:0 0 24px;text-wrap:pretty">Gilded Cage is a finished, playable game.</p>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a class="gc-play" href="/My-new-portfolio-2026/assets/downloads/gilded-cage.dmg" download="Gilded-Cage.dmg" style="display:inline-block;background:#e5e9fb;color:#122a8f;font:600 14px/1 Archivo;letter-spacing:.02em;padding:16px 28px;border:1px dashed #1b3ac4;text-decoration:none">Play Gilded Cage <span aria-hidden="true">→</span></a>
+      <a class="gc-dl" href="/My-new-portfolio-2026/assets/docs/gilded-cage-project-report.pdf" download="Gilded-Cage-Project-Report.pdf" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.02em;padding:16px 28px;text-decoration:none">Download the full report (PDF)</a>
+    </div>
+  </section>
+
+  <section class="pad" id="learned">
+    <div class="lbl" style="margin-bottom:20px">What I learned</div>
+    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">What I learned</h2>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">Gilded Cage was my first time putting illustration directly into a game engine, not just handing off static images. Learning the basics of Godot helped me understand how visual design actually meets code, and what's realistic to ask for as a designer working with a small team.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0;text-wrap:pretty">Watching people play at the exhibition also showed me how much a single icon or a few seconds of pacing can change whether players understand your story at all.</p>
+  </section>
+
+  </main>
+
+  <footer class="ft">
+    <span class="ft-copy">© 2026 Tarek Alfutih</span>
+  </footer>
+
+</div>
+<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
+</body>
+</html>

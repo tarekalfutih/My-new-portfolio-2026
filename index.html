@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/">
+<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/">
+<meta property="og:site_name" content="Tarek Alfutih">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<title>Tarek Alfutih — Interaction Designer</title>
+<meta name="description" content="Interaction Designer based in Gothenburg, Sweden. Turning complexity into intuitive experiences.">
+<style>
+html{scrollbar-gutter:stable;overflow-y:scroll}
+body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#122a8f;text-decoration:none}
+a:hover{color:#1b3ac4;text-decoration:underline}
+*{box-sizing:border-box}
+@keyframes heroFadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroDrawLine{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes cueBob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
+@keyframes cueRun{0%{transform:translateY(-20px)}70%,100%{transform:translateY(56px)}}
+.cue-run{animation:cueRun 2.2s cubic-bezier(.6,0,.3,1) infinite;animation-delay:1.4s}
+@media (prefers-reduced-motion:reduce){.cue-run{animation:none;transform:translateY(18px)}}
+.scroll-cue-arrow{animation:cueBob 2.4s ease-in-out infinite;animation-delay:1.6s}
+@media (prefers-reduced-motion:reduce){.scroll-cue-arrow{animation:none}}
+@keyframes blobDrift{0%{transform:translate(0,0)}33%{transform:translate(6px,-5px)}66%{transform:translate(-5px,5px)}100%{transform:translate(0,0)}}
+@keyframes heroWordUp{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+[data-reveal]{opacity:0;transform:translateY(24px);transition:opacity .6s cubic-bezier(.2,.7,.3,1),transform .6s cubic-bezier(.2,.7,.3,1)}
+[data-reveal].is-in{opacity:1;transform:translateY(0)}
+.hl-w{display:inline-block;opacity:0}
+@keyframes auroraPan{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.aurora-word{background:linear-gradient(90deg,#1b3ac4,#7a5cff,#ff7a59,#23c3d8,#1b3ac4);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:auroraPan 12s ease-in-out infinite}
+.sp-zone{position:absolute;background:repeating-linear-gradient(45deg,rgba(27,58,196,.16) 0 1px,transparent 1px 6px);opacity:0;transition:opacity .45s cubic-bezier(.4,0,.2,1);pointer-events:none;z-index:4;display:flex;align-items:center;justify-content:center}
+.sp-zone.on{opacity:1}
+.sp-zone span{font:600 11px/1 Archivo;letter-spacing:.02em;color:#1b3ac4;background:#fff;border:1px solid #1b3ac4;padding:3px 6px;white-space:nowrap}
+.sp-extra{position:absolute;opacity:0;transition:opacity .45s cubic-bezier(.4,0,.2,1);pointer-events:none;z-index:5}
+.sp-extra.on{opacity:1}
+.sp-extra>span{font:600 11px/1 Archivo;letter-spacing:.02em;border:1px solid;padding:3px 6px;white-space:nowrap;display:inline-block}
+.sp-box{border:1.5px solid #1b3ac4}
+.sp-box .sp-boxlab{position:absolute;left:-1.5px;top:calc(100% + 6px)}
+.sp-h{position:absolute;width:7px;height:7px;background:#fff;border:1.5px solid #1b3ac4}
+.sp-h.tl{left:-4.5px;top:-4.5px}.sp-h.tr{right:-4.5px;top:-4.5px}.sp-h.bl{left:-4.5px;bottom:-4.5px}.sp-h.br{right:-4.5px;bottom:-4.5px}
+@media (prefers-reduced-motion:reduce){.aurora-word{animation:none}.sp-zone,.sp-extra{display:none}}
+@keyframes caretBlink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.type-caret{display:inline-block;width:4px;margin-right:-4px;height:.82em;background:#1b3ac4;vertical-align:-.06em;transition:opacity .4s}
+.type-caret.blink{animation:caretBlink 1s steps(1) infinite}
+.is-in .hl-w{animation:heroWordUp .5s ease-out both}
+.hl-line{width:56px;height:3px;background:#1b3ac4;transform-origin:left;transform:scaleX(0)}
+.is-in .hl-line{animation:heroDrawLine .5s ease-out .35s both}
+@media (prefers-reduced-motion:reduce){.hl-w{opacity:1 !important;animation:none !important}.hl-line{transform:none !important;animation:none !important}}
+[data-reveal-lead]>*{opacity:0;transform:translateY(14px);transition:opacity .5s cubic-bezier(.2,.7,.3,1),transform .5s cubic-bezier(.2,.7,.3,1);transition-delay:.18s}
+[data-reveal-lead]>*:first-child{transform:translateY(8px);transition-delay:0s}
+[data-reveal-lead].is-in>*{opacity:1;transform:translateY(0)}
+[data-reveal-lead]>*:nth-child(3){transition-delay:.28s}
+[data-reveal-lead]>*:nth-child(n+4){transition-delay:.36s}
+[data-reveal-lead] .short-grid>*,[data-reveal-lead] .poster-grid>*{opacity:0;transform:translateY(16px);transition:opacity .5s cubic-bezier(.2,.7,.3,1),transform .5s cubic-bezier(.2,.7,.3,1)}
+[data-reveal-lead].is-in .short-grid>*,[data-reveal-lead].is-in .poster-grid>*{opacity:1;transform:translateY(0)}
+[data-reveal-lead] .short-grid>*:nth-child(1),[data-reveal-lead] .poster-grid>*:nth-child(1){transition-delay:.25s}
+[data-reveal-lead] .short-grid>*:nth-child(2),[data-reveal-lead] .poster-grid>*:nth-child(2){transition-delay:.33s}
+[data-reveal-lead] .short-grid>*:nth-child(3),[data-reveal-lead] .poster-grid>*:nth-child(3){transition-delay:.41s}
+[data-reveal-lead] .short-grid>*:nth-child(4){transition-delay:.49s}
+@media (prefers-reduced-motion:reduce){[data-reveal-lead]>*,[data-reveal-lead] .short-grid>*,[data-reveal-lead] .poster-grid>*,[data-reveal]{opacity:1 !important;transform:none !important;transition:none !important}}
+@media (max-width:1100px){.lead-photo{grid-column:1 / span 5 !important}.lead-text{grid-column:6 / span 7 !important}}
+@media (max-width:900px){
+  .hd{padding:16px 24px !important;gap:16px !important}
+  .hd-actions{margin-left:0 !important;width:100%;justify-content:space-between}
+  .sec-pad{padding:40px 24px !important}
+  .hero-pad{padding-bottom:88px !important}
+  .scroll-cue{left:24px !important;bottom:24px !important}
+  .lead-grid{grid-template-columns:1fr !important;gap:28px !important}
+  .lead-photo,.lead-text{grid-column:1 / -1 !important}
+  .lead-photo{max-width:460px}
+  .facts-grid{grid-template-columns:1fr 1fr !important}
+  .fact-cell{padding:20px !important;border-right:none !important;border-bottom:1px solid #dcd9d4}
+  .h1-hero{font-size:40px !important}
+  .hero-grid{grid-template-columns:1fr !important;margin-top:24px !important}
+  .hero-grid>div{grid-column:auto !important}
+  .hero-photo{max-width:320px;max-height:none !important}
+  .two-col{grid-template-columns:1fr !important;gap:28px !important}
+  .lead-title{font-size:30px !important}
+  .feat-title{font-size:26px !important}
+  .short-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:20px !important}
+  .poster{padding:40px 24px !important}
+  .poster-grid{grid-template-columns:1fr !important;border-top:none !important}
+  .poster-grid>div{padding:24px 0 0 0 !important;border-top:1px solid rgba(255,255,255,.3) !important}
+  .poster-grid>div:first-child{border-top:none !important}
+  .poster-grid>div .poster-node{display:none !important}
+  .poster-line{font-size:19px !important}
+  .footnote{padding:56px 24px 64px !important}
+  .illo-grid{grid-template-columns:1fr !important;gap:32px !important}
+  .illo-cover,.illo-text{grid-column:1 / -1 !important}
+  .illo-cover{max-width:320px}
+  .foot{padding:20px 24px !important}
+  .foot{grid-template-columns:1fr !important}
+  .foot-title{font-size:28px !important}
+}
+.hw-mark{--mk:169,182,238;margin:0 -.3em;padding:.08em .35em .04em;border-radius:.9em .35em 1.1em .3em/.45em .9em .35em .8em;background-image:linear-gradient(100deg,rgba(var(--mk),0) .6%,rgba(var(--mk),.9) 2.2%,rgba(var(--mk),.68) 6%,rgba(var(--mk),.56) 60%,rgba(var(--mk),.78) 94%,rgba(var(--mk),.92) 97%,rgba(var(--mk),0) 99.4%),linear-gradient(182deg,rgba(var(--mk),0) 0%,rgba(var(--mk),.35) 12%,rgba(var(--mk),0) 30%,rgba(var(--mk),0) 72%,rgba(var(--mk),.3) 88%,rgba(var(--mk),0) 100%);background-repeat:no-repeat;background-size:100% 100%;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.sk-armed .hw-mark{background-size:0% 100%}
+.hw-mark.go{animation:hwSwipe .8s cubic-bezier(.5,.1,.3,1) both}
+@keyframes hwSwipe{from{background-size:0% 100%}to{background-size:100% 100%}}
+.sc-card:hover{text-decoration:none}.sc-card:hover h3{color:#122a8f}.sc-card:focus-visible{outline:2px solid #1b3ac4;outline-offset:4px}
+.img-link:focus-visible{outline:2px solid #1b3ac4;outline-offset:4px}
+.sk-cur{position:absolute;left:0;top:0;transform-origin:0 0;pointer-events:none;z-index:4;opacity:0}
+.sk-mq{position:absolute;left:0;top:0;width:0;height:0;box-sizing:border-box;border:1.5px solid #1b3ac4;pointer-events:none;z-index:3;opacity:0}
+.sk-armed .sk-edu,.sk-armed .sk-frame,.sk-armed .sk-h,.sk-armed .sk-tag,.sk-armed .sk-cta-wrap,.sk-armed .sk-how-l,.sk-armed .sk-step{opacity:0}
+.sk-cta{position:relative;text-decoration:none;color:#1c1b1a}
+.sk-cta:hover{text-decoration:none}
+.sk-cta:focus-visible{outline:2px solid #1b3ac4;outline-offset:4px}
+.sk-cta-arr{position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;flex:none}
+.sk-cta:hover .sk-cta-arr svg,.sk-cta:focus-visible .sk-cta-arr svg{animation:ctaDrop .8s cubic-bezier(.6,0,.3,1) infinite}
+@keyframes ctaDrop{0%{transform:translateY(0);opacity:1}45%{transform:translateY(24px);opacity:0}46%{transform:translateY(-24px);opacity:0}100%{transform:translateY(0);opacity:1}}
+.sk-cta{display:inline-flex;align-items:center;gap:8px;min-height:44px;font:600 12px/1 Archivo;letter-spacing:.12em;text-transform:uppercase}
+.sk-cta .ar{display:inline-flex;transition:transform .25s cubic-bezier(.2,.7,.3,1)}
+.sk-cta:hover .ar,.sk-cta:focus-visible .ar{transform:translateY(3px)}
+.c-layer{padding:0 16px 0 12px;border:1px solid #1b3ac4;background:#1b3ac4;color:#fff;transition:background .2s,border-color .2s,color .2s}
+.c-layer .cv{display:inline-flex;transition:transform .25s cubic-bezier(.2,.7,.3,1)}
+.c-layer:hover,.c-layer:focus-visible{background:#4561dc;border-color:#4561dc;color:#fff}.c-layer:active{background:#122a8f;border-color:#122a8f}
+.c-layer:hover .cv,.c-layer:focus-visible .cv{transform:rotate(90deg)}
+.sk-out{display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #1c1b1a;color:#1c1b1a;background:transparent;text-decoration:none;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,color .2s,border-color .2s}
+.sk-out:hover{background:#1c1b1a;border-color:#1c1b1a;color:#fff;text-decoration:none}.sk-out:active{background:#000;border-color:#000;color:#fff}
+.sk-out:focus-visible{outline:2px solid #1b3ac4;outline-offset:3px}
+.sk-out .ar{display:inline-block;animation:skBob 1.6s ease-in-out infinite}
+@keyframes skBob{0%,100%{transform:translateY(-2px)}50%{transform:translateY(3px)}}
+html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sk-out{transition:none}.sk-out .ar{animation:none}}
+@media (prefers-reduced-motion:reduce){.sk-cta *,.sk-cta{transition:none !important}}
+@media (max-width:900px){.sk-row>*{grid-column:1 / -1 !important}.sk-frame{padding:20px !important}.sk-how{margin-top:48px !important;gap:12px !important}.sk-steps{grid-template-columns:1fr !important;gap:20px !important}}
+@media (max-width:520px){
+  .short-grid{grid-template-columns:1fr !important}
+  nav.mainnav{display:none !important}
+}
+@keyframes ffly{0%,100%{opacity:0;transform:translate(0,0)}20%{opacity:.9}50%{opacity:.35;transform:translate(14px,-18px)}80%{opacity:.85}}
+@media (prefers-reduced-motion:reduce){.ffly{animation:none !important;opacity:.6 !important}}
+@keyframes illoShine{from{background-position:0% 50%}to{background-position:300% 50%}}
+@media (prefers-reduced-motion:reduce){.illo-shine{animation:none !important}}
+@keyframes typerBlink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.typer-caret{animation:typerBlink 1s steps(1) infinite}
+@media (prefers-reduced-motion:reduce){.typer-caret{animation:none;opacity:0}}
+.hv1:hover{color:#1b3ac4 !important}
+.hv2:hover{background:#122a8f !important;color:#fff !important}
+.hv3:hover{background:#1c1b1a !important;color:#fff !important}
+.hv4:hover{background:#122a8f !important;color:#fff !important}
+.hv5:hover{background:#d2c6f7 !important;border-color:#d2c6f7 !important;color:#0b1a5c !important;text-decoration:none !important}
+.hv6:hover{background:#7ee0b5 !important;color:#0b1a5c !important;text-decoration:none !important}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="hd">
+    <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
+    <nav class="hd-nav" aria-label="Main">
+      <a href="/My-new-portfolio-2026/work/">Work</a>
+      <a href="/My-new-portfolio-2026/about/">About</a>
+      <a href="/My-new-portfolio-2026/contact/">Contact</a>
+    </nav>
+    <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+  </header>
+
+  <main id="main">
+
+  <div class="first-screen" style="display:flex;flex-direction:column;min-height:calc(100svh - 86px)">
+  <section class="sec-pad hero-pad" data-sp-hero="1" style="padding:48px 56px 96px;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative">
+    <div class="hero-grid" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start">
+      <div data-sp="text" style="grid-column:1 / span 7;min-width:0">
+        <div data-sp="role" style="display:flex;align-items:center;gap:14px;margin:0 0 28px;animation:heroFadeUp .5s ease-out both"><span style="width:40px;height:3px;background:#1b3ac4;flex:none;transform-origin:left;animation:heroDrawLine .5s ease-out both"></span><span style="font:600 16px/1.2 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#1b3ac4">Interaction Designer</span></div>
+        <h1 class="h1-hero" data-sp="h1" data-type-hero="1" aria-label="Turning complexity into intuitive experiences." style="font:700 clamp(56px, 7.5vw, 96px)/.98 Archivo;letter-spacing:-.045em;margin:0;text-wrap:pretty"><span style="display:inline-block">Turning</span> <span style="display:inline-block">complexity</span> <span style="display:inline-block">into</span> <span class="aurora-word" style="display:inline-block">intuitive</span> <span style="display:inline-block">experiences.</span></h1>
+        <p class="hero-typer" style="margin:40px 0 0;min-height:1.4em;display:flex;align-items:center;gap:14px;font:500 clamp(18px, 1.7vw, 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Based in Gothenburg, Sweden. Usability first, always. Turning feedback into better design. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true" style="display:inline-flex;align-items:center"><span data-typer-text="1">Based in Gothenburg, Sweden</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;background:#1b3ac4"></span></span></p>
+      </div>
+      <div data-sp="photo" class="hero-photo" style="grid-column:8 / span 5;width:100%;height:clamp(320px, calc(100svh - 260px), 600px);overflow:hidden;background:#ececea;animation:heroFadeUp .6s ease-out both;animation-delay:.2s">
+        <img src="/My-new-portfolio-2026/assets/img/my-photo-ai.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/my-photo-ai-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-1244.webp 1244w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 42vw, (max-width: 1280px) 37vw, 472px" alt="Tarek Alfutih" style="width:100%;height:100%;object-fit:cover;display:block">
+      </div>
+    </div>
+    
+    <a class="hv1" href="#skills" aria-label="Scroll down" style="position:absolute;left:0;right:0;margin:0 auto;bottom:22px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;color:#75726e;animation:heroFadeUp .6s ease-out both;animation-delay:1s"><svg class="scroll-cue-arrow" width="22" height="12" viewBox="0 0 22 12" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M1 1l10 10L21 1"></path></svg></a>
+  </section>
+
+  </div>
+
+  <section id="skills" class="sec-pad sk" style="position:relative;min-height:calc(100svh - 66px);display:flex;flex-direction:column;justify-content:center;padding:72px 56px 56px;background:linear-gradient(180deg,rgba(251,251,250,0) 0%,#fbfbfa 28%,#fbfbfa 72%,rgba(251,251,250,0) 100%);overflow:hidden;scroll-margin-top:66px">
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;background-image:linear-gradient(#e2dfda 1px,transparent 1px),linear-gradient(90deg,#e2dfda 1px,transparent 1px);background-size:32px 32px;background-position:-1px -1px;-webkit-mask-image:radial-gradient(ellipse 80% 75% at 50% 50%,#000 35%,transparent 100%);mask-image:radial-gradient(ellipse 80% 75% at 50% 50%,#000 35%,transparent 100%)"></div>
+    <div class="sk-row" style="position:relative;margin:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start">
+      <div class="sk-edu" style="grid-column:2 / span 3;border-top:3px solid #1c1b1a;padding-top:26px;display:flex;flex-direction:column;gap:14px">
+        <div style="font:700 clamp(26px, 2.5vw, 34px)/1.08 Archivo;letter-spacing:-.03em;color:#1c1b1a;text-wrap:balance">Master’s in Interaction Design</div>
+        <div style="display:flex;align-items:center;gap:10px;font:600 16px/1.3 Archivo;color:#122a8f"><span aria-hidden="true" style="width:8px;height:8px;background:#122a8f;flex:none"></span>Chalmers · 2026</div>
+      </div>
+      <div class="sk-frame" style="grid-column:5 / span 7;position:relative;box-sizing:border-box;padding:28px 32px 30px;border:1px solid #a9b6ee;background:rgba(229,233,251,.45)">
+        <h2 class="sk-h" style="font:700 clamp(26px, 2.7vw, 36px)/1.08 Archivo;letter-spacing:-.03em;color:#1c1b1a;margin:0 0 18px;text-wrap:balance">I design across digital + physical</h2>
+        <ul style="list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px">
+          <li class="sk-tag" style="padding:5px 12px;border:1px solid #a9b6ee;border-radius:999px;background:rgba(255,255,255,.7);font:500 14px/1.3 Archivo;color:#122a8f">Digital products</li>
+          <li class="sk-tag" style="padding:5px 12px;border:1px solid #a9b6ee;border-radius:999px;background:rgba(255,255,255,.7);font:500 14px/1.3 Archivo;color:#122a8f">Tangible interactions</li>
+          <li class="sk-tag" style="padding:5px 12px;border:1px solid #a9b6ee;border-radius:999px;background:rgba(255,255,255,.7);font:500 14px/1.3 Archivo;color:#122a8f">UX research</li>
+          <li class="sk-tag" style="padding:5px 12px;border:1px solid #a9b6ee;border-radius:999px;background:rgba(255,255,255,.7);font:500 14px/1.3 Archivo;color:#122a8f">Prototyping</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sk-row sk-how" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px 24px;align-items:start;margin-top:64px">
+      <div class="sk-how-l" style="grid-column:2 / span 10">
+        <h3 style="display:flex;align-items:center;gap:12px;font:700 clamp(18px, 1.6vw, 22px)/1.1 Archivo;letter-spacing:-.015em;color:#1c1b1a;margin:0"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none"></span><span class="hw-mark">How I work</span></h3>
+      </div>
+      <ol class="sk-steps" style="grid-column:2 / span 10;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px 32px">
+        <li class="sk-step" style="display:flex;flex-direction:column;gap:10px;border-top:2px solid #1c1b1a;padding-top:14px">
+          <span style="font:600 12px/1 Archivo;letter-spacing:.14em;color:#1b3ac4">01</span>
+          <p style="font:400 16px/1.5 Archivo;color:#1c1b1a;margin:0;max-width:340px;text-wrap:pretty">I start by understanding the problem and the people I'm designing for.</p>
+        </li>
+        <li class="sk-step" style="display:flex;flex-direction:column;gap:10px;border-top:2px solid #1c1b1a;padding-top:14px">
+          <span style="font:600 12px/1 Archivo;letter-spacing:.14em;color:#1b3ac4">02</span>
+          <p style="font:400 16px/1.5 Archivo;color:#1c1b1a;margin:0;max-width:340px;text-wrap:pretty">I explore different ideas and turn them into prototypes that people can interact with.</p>
+        </li>
+        <li class="sk-step" style="display:flex;flex-direction:column;gap:10px;border-top:2px solid #1c1b1a;padding-top:14px">
+          <span style="font:600 12px/1 Archivo;letter-spacing:.14em;color:#1b3ac4">03</span>
+          <p style="font:400 16px/1.5 Archivo;color:#1c1b1a;margin:0;max-width:340px;text-wrap:pretty">By testing and observing how people use them, I learn what works, what doesn't and what should change in the next iteration.</p>
+        </li>
+      </ol>
+    </div>
+    <div class="sk-cta-wrap sk-row" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;padding-top:48px">
+      <div style="grid-column:5 / span 7;display:flex"><a href="#work" class="sk-out">Explore selected work <span class="ar" aria-hidden="true">↓</span></a></div>
+    </div>
+    <div class="sk-mq" aria-hidden="true"><i style="position:absolute;left:-4px;top:-4px;width:7px;height:7px;box-sizing:border-box;background:#fff;border:1.5px solid #1b3ac4"></i><i style="position:absolute;right:-4px;top:-4px;width:7px;height:7px;box-sizing:border-box;background:#fff;border:1.5px solid #1b3ac4"></i><i style="position:absolute;left:-4px;bottom:-4px;width:7px;height:7px;box-sizing:border-box;background:#fff;border:1.5px solid #1b3ac4"></i><i style="position:absolute;right:-4px;bottom:-4px;width:7px;height:7px;box-sizing:border-box;background:#fff;border:1.5px solid #1b3ac4"></i><span class="sk-size" style="position:absolute;right:0;top:100%;margin-top:8px;font:500 10px/1 Archivo;letter-spacing:.02em;color:#122a8f;font-variant-numeric:tabular-nums;white-space:nowrap"></span></div>
+    <div class="sk-cur" aria-hidden="true"><svg width="16" height="20" viewBox="0 0 16 20"><path d="M1 1v16l4.5-4.5 3 6.5 2.6-1.2-3-6.3H14z" fill="#1c1b1a" stroke="#fff" stroke-width="1.2"></path></svg><span style="position:absolute;left:14px;top:16px;background:#ffd23f;color:#1c1b1a;font:600 10px/1 Archivo;padding:3px 6px;white-space:nowrap">Tarek</span></div>
+  </section>
+
+  <section id="work" class="sec-pad" data-reveal-lead="1" style="scroll-margin-top:66px;padding:56px 56px 64px;border-bottom:2px solid #1c1b1a">
+    <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:24px">
+      <div><div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e"><span class="hl-w" style="animation-delay:0.10s">Lead</span> <span class="hl-w" style="animation-delay:0.18s">project</span></div><div class="hl-line" style="margin-top:12px"></div></div>
+    </div>
+    <div class="lead-grid" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center">
+      <div class="lead-photo" style="grid-column:1 / span 5;min-width:0;aspect-ratio:1290/1510;background:#ececea">
+        <a href="/My-new-portfolio-2026/work/lego-alma/?from=home" aria-label="Master's Thesis — LEGO ALMA case study" class="img-link" style="display:block;width:100%;height:100%"><img class="slot" src="/My-new-portfolio-2026/assets/img/onsala-observatory.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/onsala-observatory-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-1290.webp 1290w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 61vw, (max-width: 1280px) 37vw, 472px" alt="Onsala Space Observatory" decoding="async"></a>
+      </div>
+      <div class="lead-text" style="grid-column:7 / span 6;min-width:0;display:flex;flex-direction:column">
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 20px"><span style="display:inline-flex;align-items:center;gap:8px;background:#e5e9fb;color:#122a8f;font:600 13px/1 Archivo;letter-spacing:.02em;padding:8px 12px"><span aria-hidden="true" style="width:6px;height:6px;background:#122a8f"></span>Onsala Space Observatory</span><span style="font:500 13px/1 Archivo;color:#75726e">Jan – Jun 2026</span></div>
+        <h2 class="lead-title" style="font:600 44px/1.04 Archivo;letter-spacing:-.03em;margin:0 0 16px;text-wrap:balance">Master's Thesis — LEGO ALMA</h2>
+        <p style="font:400 19px/1.5 Archivo;color:#1c1b1a;margin:0 0 20px;max-width:520px;text-wrap:pretty">Made the installation more accessible, engaging, and intuitive for visitors.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:36px">
+          <span style="border:1px solid #122a8f;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">Accessibility</span>
+          <span style="border:1px solid #122a8f;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">Tangible interaction</span>
+          <span style="border:1px solid #122a8f;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">Science communication</span>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="hv2" href="/My-new-portfolio-2026/work/lego-alma/?from=home" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:15px 22px;text-decoration:none">Read the case</a>
+          <a class="hv3" href="/My-new-portfolio-2026/assets/docs/lego-alma-thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Download thesis (PDF)</a>
+        </div>
+      </div>
+    </div>
+  </section><section class="sec-pad" data-reveal-lead="1" style="padding:56px;border-bottom:2px solid #1c1b1a">
+    <div style="margin-bottom:24px"><div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e"><span class="hl-w" style="animation-delay:0.10s">Second</span> <span class="hl-w" style="animation-delay:0.18s">featured</span></div><div class="hl-line" style="margin-top:12px"></div></div>
+    <div class="two-col" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center">
+      <div style="width:100%;height:340px;background:#ececea">
+        <a href="/My-new-portfolio-2026/work/smart-fishing/?from=home" aria-label="Smart Fishing case study" class="img-link" style="display:block;width:100%;height:100%"><img class="slot" src="/My-new-portfolio-2026/assets/img/home-fishing-hero.webp" srcset="/My-new-portfolio-2026/assets/img/opt/home-fishing-hero-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/home-fishing-hero-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/home-fishing-hero-1074.webp 1074w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 43vw, 559px" alt="Smart Fishing — app screens" decoding="async"></a>
+      </div>
+      <div>
+        <h2 class="feat-title" style="font:600 36px/1.08 Archivo;letter-spacing:-.03em;margin:0 0 8px">Smart Fishing</h2>
+        <div style="font:400 15px/1.4 Archivo;color:#75726e;margin:0 0 14px">Mobile fishing app · 2025</div>
+        <p style="font:400 18px/1.55 Archivo;margin:0 0 18px;max-width:460px;text-wrap:pretty">Make fishing simpler, smarter, and more responsible.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:22px">
+          <span style="border:1px solid #122a8f;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">UX / UI</span>
+          <span style="border:1px solid #122a8f;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">Built in Flutter</span>
+        </div>
+        <a class="hv4" href="/My-new-portfolio-2026/work/smart-fishing/?from=home" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:15px 22px;text-decoration:none">Read the case</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec-pad" data-reveal-lead="1" style="padding:56px;border-bottom:2px solid #1c1b1a">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px">
+      <div><div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e"><span class="hl-w" style="animation-delay:0.10s">Selected</span> <span class="hl-w" style="animation-delay:0.18s">short</span> <span class="hl-w" style="animation-delay:0.26s">cases</span></div><div class="hl-line" style="margin-top:12px"></div></div>
+      <a href="/My-new-portfolio-2026/work/" style="font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f">All selected work, grouped by kind →</a>
+    </div>
+    <div class="short-grid" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px">
+      <article>
+        <a href="/My-new-portfolio-2026/work/playrent/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
+        <div style="width:100%;height:190px;background:#ececea;margin-bottom:14px">
+          <img class="slot" src="/My-new-portfolio-2026/assets/img/idx-playrent.webp" srcset="/My-new-portfolio-2026/assets/img/opt/idx-playrent-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/idx-playrent-716.webp 716w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 271px" alt="PlayRent" loading="lazy" decoding="async" data-view="1 0 -6.25">
+        </div>
+        <h3 style="font:600 19px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 6px">PlayRent</h3>
+        <div style="font:400 14px/1.45 Archivo;color:#75726e">Instrument rental platform for musicians · 2025</div>
+        </a>
+      </article>
+      <article>
+        <a href="/My-new-portfolio-2026/work/resource-booking/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
+        <div style="width:100%;height:190px;background:#ececea;margin-bottom:14px">
+          <img class="slot" src="/My-new-portfolio-2026/assets/img/idx-booking.webp" srcset="/My-new-portfolio-2026/assets/img/opt/idx-booking-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/idx-booking-716.webp 716w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 271px" alt="Resource Booking Website" loading="lazy" decoding="async" data-view="1 0 -3.546">
+        </div>
+        <h3 style="font:600 19px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 6px">Resource Booking Website</h3>
+        <div style="font:400 14px/1.45 Archivo;color:#75726e">Room booking system for teachers · 2024</div>
+        </a>
+      </article>
+      <article>
+        <a href="/My-new-portfolio-2026/work/an-honest-interface/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
+        <div style="width:100%;height:190px;background:#ececea;margin-bottom:14px">
+          <img class="slot" src="/My-new-portfolio-2026/assets/img/bird-on-the-big-screen-polestar.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 271px" alt="An Honest Interface" loading="lazy" decoding="async">
+        </div>
+        <h3 style="font:600 19px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 6px">An Honest Interface</h3>
+        <div style="font:400 14px/1.45 Archivo;color:#75726e">Critical design, Polestar EV interfaces · 2025</div>
+        </a>
+      </article>
+      <article>
+        <a href="/My-new-portfolio-2026/work/gilded-cage/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
+        <div style="width:100%;height:190px;background:#ececea;margin-bottom:14px">
+          <img class="slot" src="/My-new-portfolio-2026/assets/img/idx-gilded.webp" srcset="/My-new-portfolio-2026/assets/img/opt/idx-gilded-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/idx-gilded-576.webp 576w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 271px" alt="Gilded Cage" loading="lazy" decoding="async" data-view="1 7.026 0">
+        </div>
+        <h3 style="font:600 19px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 6px">Gilded Cage</h3>
+        <div style="font:400 14px/1.45 Archivo;color:#75726e">Digital game, built in Godot · 2025</div>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <section class="footnote" data-reveal-lead="1" style="position:relative;overflow:hidden;padding:120px 56px 140px;border-top:2px solid #1c1b1a;background:#0b1a5c url(/My-new-portfolio-2026/assets/img/forest-bg.jpg) center 70%/cover no-repeat;color:#fff">
+    <div aria-hidden="true" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,92,.15) 0%,rgba(11,26,92,.55) 55%,rgba(11,26,92,.8) 100%)"></div><span class="ffly" aria-hidden="true" style="position:absolute;left:18%;top:62%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 0s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:27%;top:70%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 1.4s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:41%;top:58%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 2.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:55%;top:74%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 0.8s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:63%;top:64%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 3.1s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:72%;top:69%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 1.9s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:84%;top:60%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 0.3s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:90%;top:72%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 2.2s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:35%;top:78%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 3.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:48%;top:66%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 4.2s infinite"></span><div class="illo-grid" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center">
+      <div class="illo-cover" style="grid-column:2 / span 4;aspect-ratio:1/1;background:#ececea;box-shadow:0 24px 60px rgba(0,0,0,.45)">
+        <img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-cover.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 42vw, (max-width: 1280px) 29vw, 373px" alt="Skräphjältarna" loading="lazy" decoding="async">
+      </div>
+      <div class="illo-text" style="grid-column:7 / span 5;display:flex;flex-direction:column">
+        <div aria-hidden="true" style="display:flex;gap:6px;margin:0 0 20px"><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #f26b3a"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #4cb867"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #ffd23f"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #a9b6ee"></span></div><h3 style="color:#fff;font:600 34px/1.1 Archivo;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance"><span class="illo-shine" style="background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite">Illustration &amp; Visual Storytelling</span></h3>
+        <p style="font:400 17px/1.6 Archivo;color:#e5e9fb;margin:0 0 32px;max-width:460px;text-wrap:pretty">Alongside interaction design, I've illustrated 20+ children's books. Latest: <em style="font-style:normal;font-weight:700;color:#fff">Skräphjältarna</em>, 2023.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="hv5" href="/My-new-portfolio-2026/illustration/" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #b9a6f0;background:#b9a6f0;color:#0b1a5c;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">Read about Skräphjältarna <span aria-hidden="true">→</span></a>
+          <a class="hv6" href="https://tarekalfutih.se" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #7ee0b5;color:#7ee0b5;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">tarekalfutih.se <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <footer class="ft ft-home">
+    <span class="ft-copy">© 2026 Tarek Alfutih</span>
+    <nav class="ft-nav" aria-label="Contact">
+      <a href="mailto:tarek.alfutih@hotmail.com">tarek.alfutih@hotmail.com</a>
+    </nav>
+  </footer>
+
+</div>
+<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/home.js?v=65e19a34" defer></script>
+</body>
+</html>

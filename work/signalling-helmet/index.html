@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/work/signalling-helmet/">
+<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/work/signalling-helmet/">
+<meta property="og:site_name" content="Tarek Alfutih">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<title>Signalling Helmet — Tarek Alfutih</title>
+<meta name="description" content="Cyclists signal turns by taking a hand off the handlebar — a gesture that reduces control and raises the risk of accidents, especially for older cyclists.">
+<style>
+:root{--color-accent:#1b3ac4 !important;--color-accent-100:#e5e9fb !important;--color-accent-800:#122a8f !important;--color-accent-2:#1b3ac4 !important;--color-accent-2-100:#e5e9fb !important;--color-accent-2-800:#122a8f !important;}
+
+body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#122a8f;text-decoration:none}
+a:hover{color:#1b3ac4;text-decoration:underline}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin:0 auto;background:#fff;border-left:1px solid #dcd9d4;border-right:1px solid #dcd9d4}
+.pad{padding:56px}
+.rule{border-bottom:2px solid #1c1b1a}
+.lbl{font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e}
+.gray{background:#ececea}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid #1c1b1a}
+.facts>div{padding:18px 20px;border-right:1px solid #dcd9d4}
+.facts>div:last-child{border-right:none}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:860px){
+  .pad{padding:32px 24px}
+  h1.h1r{font-size:34px !important}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
+  .g2,.g3{grid-template-columns:1fr !important}
+}
+section[id]{scroll-margin-top:96px}
+nav a{position:relative;display:inline-block;padding-bottom:2px}
+nav a:hover{color:#1b3ac4}
+nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#1b3ac4}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="cs-hd">
+    <div class="cs-bar">
+      <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
+      <a class="cs-back" href="/My-new-portfolio-2026/work/" data-back>← All work</a>
+      <nav class="cs-main" aria-label="Main"><a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work</a><a href="/My-new-portfolio-2026/about/">About</a><a href="/My-new-portfolio-2026/contact/">Contact</a></nav>
+      <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    </div>
+    <script>
+      /* Arrived from Home (?from=home): back link goes Home and the Work link is shown.
+         Otherwise the back link already points to Work, so the Work nav link stays hidden. */
+      (function () {
+        if (new URLSearchParams(location.search).get('from') !== 'home') return;
+        var back = document.querySelector('[data-back]');
+        back.href = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
+        back.textContent = '← Home';
+        document.querySelector('[data-work-link]').hidden = false;
+      })();
+    </script>
+    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+      <a href="#hero" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Hero</a>
+      <a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Problem</a>
+      <a href="#research" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Research</a>
+      <a href="#iteration" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Iteration</a>
+      <a href="#before-after" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Before/after</a>
+      <a href="#accessibility" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 Accessibility</a>
+      <a href="#evaluation" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Reflection</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <section class="pad rule" id="facts">
+    <div style="margin-bottom:20px;display:flex;align-items:center;gap:12px">
+      <span style="background:#1b3ac4;color:#fff;font:600 11px/1 Archivo;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px">University course project — functional prototype</span>
+    </div>
+    <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 10px;text-wrap:pretty">Signalling Helmet</h1>
+    <div style="font:400 18px/1.4 Archivo;color:#75726e;margin-bottom:28px">A gesture-activated turn-signal helmet and glove system for cyclists</div>
+    <div class="facts">
+      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Role</div><div style="font:600 15px/1.35 Archivo">Participated throughout the design process — concept sketches, Arduino prototyping, user testing</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Team</div><div style="font:600 15px/1.35 Archivo">Group of 5</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Context</div><div style="font:600 15px/1.35 Archivo">Tangible Interaction course project, 2025</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Methods</div><div style="display:flex;flex-wrap:wrap;gap:6px">
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Brainstorming</span>
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Six Thinking Hats</span>
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Prototyping</span>
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">User testing</span>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="hero">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">01 · Hero</div>
+    <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center">
+      <div class="gray" style="aspect-ratio:4/3"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-hero.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-hero-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-hero-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-hero-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/helmet-hero-1448.webp 1448w" sizes="(max-width: 560px) 40vw, (max-width: 900px) 47vw, (max-width: 1280px) 45vw, 590px" alt="Hero — signalling helmet and gloves" decoding="async" style="object-fit:contain;"></div>
+      <p style="font:400 20px/1.5 Archivo;color:#4a4744;margin:0;text-wrap:pretty">Cyclists signal turns by taking a hand off the handlebar — a gesture that reduces control and raises the risk of accidents, especially for older cyclists. We built a helmet with LED turn indicators, activated by a simple finger gesture on gloves, so cyclists can signal without letting go.</p>
+    </div>
+  </section>
+
+  <section class="pad rule" id="problem">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">02 · Problem</div>
+    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Signalling shouldn't cost cyclists control of their bike</h2>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 16px;text-wrap:pretty">Most bicycles, especially older ones, have no built-in turn indicators. Cyclists rely on arm signals, raising a hand from the handlebars to alert others — reducing control and increasing risk, particularly for older cyclists who find it hard to release the handlebar and turn to look behind before turning.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">Swedish cyclists face a significantly higher risk than car occupants — 10 times greater chance of a fatal accident and 20 times higher likelihood of an injury requiring hospital treatment, per million kilometres travelled.</p>
+    <div class="gray" style="aspect-ratio:1166/1349;max-width:420px"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-signal.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-signal-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-signal-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-signal-1166.webp 1166w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 55vw, (max-width: 1280px) 39vw, 420px" alt="Figure 2 — cyclist signalling before turning" decoding="async" style="object-fit:contain;"></div>
+  </section>
+
+  <section class="pad rule" id="research">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">03 · Research &amp; ideation</div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 16px;text-wrap:pretty">The team of five set out to build a wearable that could make a real difference, under the theme "wearable future product". We researched tangible products for inspiration, then each member brought at least three ideas to a brainstorming session.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">Four concepts were shortlisted by dot voting — a solar-powered hat, a guitar that teaches by light and tone, a garbage bin that rewards correct sorting with music, and two connected music boxes for sending emotional messages between users. We used the Six Thinking Hats method to weigh each from multiple angles, then dot-voted again. The solar hat won, designed with a power bank and tactile buttons for a fan or speaker.</p>
+    <div class="g2" style="margin-bottom:20px">
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 1a — Initial ideas</div>
+        <div class="gray" style="aspect-ratio:4/3"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-sketch1.webp" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-sketch1-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-sketch1-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-sketch1-1098.webp 1098w" sizes="(max-width: 560px) 88vw, (max-width: 900px) 95vw, (max-width: 1280px) 45vw, 577px" alt="Brainstorming sketches" loading="lazy" decoding="async" data-view="1.0106 -0.529 -0.573"></div>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 1b — The chosen initial idea</div>
+        <div class="gray" style="aspect-ratio:1600/1131"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-sketch2.webp" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-sketch2-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-sketch2-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-sketch2-1098.webp 1098w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Solar hat concept" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      </div>
+    </div>
+    <div style="border-top:1px solid #dcd9d4;padding-top:24px">
+      <div class="lbl" style="margin-bottom:12px">Pivot</div>
+      <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">Pitch feedback showed the solar hat's panel was too small to power the planned features, and Sweden's low sunlight made it worse. We stayed within the wearable theme but pivoted to a safety problem: cyclist turn signalling — trading a sustainability angle for a real-world safety issue affecting cyclists, pedestrians, and other road users.</p>
+    </div>
+  </section>
+
+  <section class="pad rule" id="iteration">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">04 · Iteration</div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 20px;text-wrap:pretty">The design pairs LED strips on the sides of the helmet with flex sensors on the gloves' index fingers. Bending the finger sends a signal to light the corresponding indicator — letting cyclists signal direction without leaving the handlebars.</p>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 20px;text-wrap:pretty">Interviews with two cyclists, run before building the prototype, showed fingers move unintentionally while riding. To prevent accidental activation, we added a pressure sensor to the glove: cyclists press their thumb while raising the index finger to trigger the LED — a two-part gesture chosen for being intuitive to make.</p>
+    <div style="background:#1b3ac4;color:#fff;padding:18px;text-align:center;margin-bottom:24px">
+      <div style="font:700 16px/1.3 Archivo;margin-bottom:4px">Thumb press + index raise</div>
+      <div style="font:600 13px/1.3 Archivo;letter-spacing:.06em">The gesture that activates the LED indicator</div>
+    </div>
+    <div style="margin-bottom:24px">
+      <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3a — Sketch of the signalling helmet</div>
+      <div style="aspect-ratio:1435/1096"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-sketch3.webp" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-sketch3-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-sketch3-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-sketch3-1098.webp 1098w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 90vw, 1166px" alt="Helmet sketch" loading="lazy" decoding="async"></div>
+    </div>
+    <div style="margin-bottom:24px">
+      <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3b — Circuit built in Tinkercad</div>
+      <div style="aspect-ratio:930/850"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-tinkercad-circuit.png" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-tinkercad-circuit-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-tinkercad-circuit-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-tinkercad-circuit-931.webp 931w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 90vw, 1166px" alt="Tinkercad circuit" loading="lazy" decoding="async"></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3c — Prototype, back</div>
+        <div style="aspect-ratio:4284/5712"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-prototype-front.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-prototype-front-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-prototype-front-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-prototype-front-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/helmet-prototype-front-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/helmet-prototype-front-2400.webp 2400w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 46vw, (max-width: 1280px) 45vw, 575px" alt="Prototype, back" loading="lazy" decoding="async"></div>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3d — Prototype, side</div>
+        <div style="aspect-ratio:5712/4284"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-prototype-side.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-prototype-side-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-prototype-side-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-prototype-side-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/helmet-prototype-side-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/helmet-prototype-side-2400.webp 2400w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 46vw, (max-width: 1280px) 45vw, 575px" alt="Prototype, side" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">The first build used an Arduino UNO, a breadboard, wires, resistors, two flex sensors, two pressure sensors, and two LED strips. Sensors were tested on the breadboard first to measure resistance and set an activation threshold, then wired to the LED strips and attached to the helmet. Sensors were initially sewn into the gloves with conductive thread, but connections were unstable — we switched to soldering and gluing wires directly to the sensors, secured to the outside of the gloves for stability, and tuned the threshold repeatedly to avoid over-sensitivity.</p>
+  </section>
+
+  <section class="pad rule" id="before-after">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">05 · Before / after</div>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">Two changes came directly out of user testing.</p>
+    <div class="g2">
+      <div style="border:2px solid #1c1b1a;padding:24px">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#75726e">Before</div>
+        <p style="font:400 15px/1.55 Archivo;color:#1c1b1a;margin:0 0 12px">Blue LEDs, blinking in groups of three from back to front.</p>
+        <p style="font:400 14px/1.5 Archivo;color:#75726e;margin:0">Users associated blue with emergency-vehicle lights, and the sweeping pattern read as unclear.</p>
+      </div>
+      <div style="border:2px solid #1b3ac4;padding:24px">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#122a8f">After</div>
+        <p style="font:400 15px/1.55 Archivo;color:#1c1b1a;margin:0 0 12px">Orange LEDs, all lighting at once.</p>
+        <p style="font:400 14px/1.5 Archivo;color:#75726e;margin:0">Orange matches conventional car turn signals; a single synchronized flash reads faster than a moving pattern.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="accessibility">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">06 · Accessibility</div>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">Clear LED signals and simple finger gestures made the cyclist's intentions easier for other road users to understand. User testing also showed the need for vibration or visual feedback on the glove so cyclists can confirm when a signal is active.</p>
+  </section>
+
+
+  <section class="pad" id="evaluation">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">07 · Reflection</div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">We ran a two-week evaluation: cyclists tested the prototype first, then pedestrians assessed how clearly the system communicated a cyclist's intentions. Six users of different ages and genders — teachers, students, and regular cyclists — took part in ~10-minute sessions of observation, feedback, and a questionnaire.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">Cyclists couldn't see the LED from their own helmet and asked for confirmation that a signal had activated — a vibration or sound was suggested, along with different colours, blinking patterns, and more LEDs for visibility. Opinions were split on whether the signal should switch off automatically or need manual deactivation.</p>
+    <div style="max-width:680px;margin:0 0 24px">
+      <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 4 — Visual feedback on the glove during signalling</div>
+      <div style="aspect-ratio:5184/3456"><img class="slot" src="/My-new-portfolio-2026/assets/img/helmet-glove-feedback.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/helmet-glove-feedback-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/helmet-glove-feedback-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/helmet-glove-feedback-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/helmet-glove-feedback-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/helmet-glove-feedback-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 90vw, (max-width: 1280px) 63vw, 680px" alt="Visual feedback on glove" loading="lazy" decoding="async"></div>
+    </div>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 16px;text-wrap:pretty">Left for future development: a vibration or synchronized light on the glove to confirm activation, colour/brightness customization, and a wireless (Bluetooth) link between glove and helmet to remove the wired connection. Gloves also proved uncomfortable in hot weather, limiting appeal for some users.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 28px;text-wrap:pretty">Turning a sustainability-themed brief into a road-safety product made the project more concrete and grounded it in a real-world problem. By improving communication between cyclists, pedestrians, and other road users, the system points toward safer streets for everyone.</p>
+    <a href="/My-new-portfolio-2026/assets/docs/signalling-helmet-report.pdf" download="Signalling_Helmet_report.pdf" class="btn btn-secondary" style="display:inline-flex">Download full report (PDF)</a>
+  </section>
+
+  </main>
+
+  <footer class="ft">
+    <span class="ft-copy">© 2026 Tarek Alfutih</span>
+  </footer>
+
+</div>
+<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
+</body>
+</html>
