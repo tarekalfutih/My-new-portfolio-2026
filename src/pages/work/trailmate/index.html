@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--@head /work/trailmate/-->
+<title>TrailMate — Tarek Alfutih</title>
+<meta name="description" content="Solo hiking is often avoided out of fear of harassment, injury, or getting lost — a barrier that falls disproportionately on women and other minority groups.">
+<style>
+:root{--color-accent:#1b3ac4 !important;--color-accent-100:#e5e9fb !important;--color-accent-800:#122a8f !important;--color-accent-2:#1b3ac4 !important;--color-accent-2-100:#e5e9fb !important;--color-accent-2-800:#122a8f !important;}
+
+body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#122a8f;text-decoration:none}
+a:hover{color:#1b3ac4;text-decoration:underline}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin:0 auto;background:#fff;border-left:1px solid #dcd9d4;border-right:1px solid #dcd9d4}
+.pad{padding:56px}
+.rule{border-bottom:2px solid #1c1b1a}
+.lbl{font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e}
+.gray{background:#ececea}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid #1c1b1a}
+.facts>div{padding:18px 20px;border-right:1px solid #dcd9d4}
+.facts>div:last-child{border-right:none}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.two{display:grid;grid-template-columns:1.3fr 1fr;gap:32px}
+@media (max-width:860px){
+  .pad{padding:32px 24px}
+  h1.h1r{font-size:34px !important}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
+  .g2,.g3,.two{grid-template-columns:1fr !important}
+}
+section[id]{scroll-margin-top:96px}
+nav a{position:relative;display:inline-block;padding-bottom:2px}
+nav a:hover{color:#1b3ac4}
+nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#1b3ac4}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="cs-hd">
+    <!--@case-bar-->
+    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+      <a href="#hero" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Hero</a>
+      <a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Problem</a>
+      <a href="#research" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Research</a>
+      <a href="#iteration" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Iteration</a>
+      <a href="#prototype" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Working prototype</a>
+      <a href="#before-after" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 Before/after</a>
+      <a href="#accessibility" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Accessibility</a>
+      <a href="#evaluation" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">08 Reflection</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <section class="pad rule" id="facts">
+    <div style="margin-bottom:20px;display:flex;align-items:center;gap:12px">
+      <span style="background:#1b3ac4;color:#fff;font:600 11px/1 Archivo;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px">Chalmers course project — functional prototype</span>
+    </div>
+    <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 10px;text-wrap:pretty">TrailMate</h1>
+    <div style="font:400 18px/1.4 Archivo;color:#75726e;margin-bottom:28px">A connected bracelet system designed to make solo hiking safer.</div>
+    <div class="facts">
+      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Team</div><div style="font:600 15px/1.35 Archivo">Group of 4 — Tarek Alfutih, Elin Ruud, Eva Sif Einarsdóttir, Sally Kalm</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Context</div><div style="font:600 15px/1.35 Archivo">Prototyping in Interaction Design, Chalmers, 2024</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Methods</div><div style="display:flex;flex-wrap:wrap;gap:6px">
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">6-3-5 brainwriting</span>
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Low-fi prototyping</span>
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Wizard-of-Oz</span>
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Semi-structured interviews</span>
+        <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Arduino prototyping</span>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="hero">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">01 · Hero</div>
+    <div class="gray" style="aspect-ratio:16/9;margin-bottom:12px"><video poster="/assets/img/trailmate-hero.jpg" src="/assets/video/trailmate-hero.mp4" controls="true" playsinline="true" style="width:100%;height:100%;object-fit:cover;display:block"></video></div>
+    <div style="font:400 14px/1.4 Archivo;color:#75726e;margin-bottom:20px">Project overview video explaining the full TrailMate concept, how it works, and the key interactions.</div>
+    <p style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">Solo hiking is often avoided out of fear of harassment, injury, or getting lost — a barrier that falls disproportionately on women and other minority groups. TrailMate is a two-way bracelet system, one for the hiker and one for a trusted partner at home, that keeps both sides quietly aware of each other and lets either one raise an alert.</p>
+  </section>
+
+  <section class="pad rule two" id="problem">
+    <div>
+      <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">02 · Problem</div>
+      <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Solo hiking isn't equally safe for everyone</h2>
+      <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 16px;text-wrap:pretty">Hiking is often described as a benefit to health, but not everybody gets to enjoy it as freely. Women, queer people, people of colour and other minority groups are underrepresented in solo hiking, partly from fear of harassment and partly from fear of accidental injury or getting lost.</p>
+      <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">The research question driving the project: how can a wearable device favour solo hikers, fostering a sense of companionship and improving both safety and emotional well-being during their hikes?</p>
+    </div>
+    <div style="border-top:1px solid #dcd9d4;padding-top:16px">
+      <div class="lbl" style="font-size:11px;margin-bottom:10px">Contribution split</div>
+      <p style="font:600 14px/1.3 Archivo;margin:0 0 4px">Tarek — individual: filmed and edited the project video, including the final video montage</p>
+      <p style="font:600 14px/1.3 Archivo;margin:12px 0 4px">Shared (team of 4)</p>
+      <p style="font:400 14px/1.5 Archivo;color:#75726e;margin:0">Full design process — research, ideation, prototyping and testing</p>
+    </div>
+  </section>
+
+  <section class="pad rule" id="research">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">03 · Research &amp; ideation</div>
+    <div style="display:grid;grid-template-columns:200px 1fr;gap:16px;align-items:start">
+      <div>
+        <div class="gray" style="aspect-ratio:1151/1535"><img class="slot" src="/assets/img/trailmate-ideas.png" alt="Concept sketches" decoding="async" style="object-fit:contain;"></div>
+        <div class="lbl" style="font-size:10px;margin-top:6px;color:#75726e">Early concept sketches</div>
+      </div>
+      <div>
+        <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 16px;text-wrap:pretty">Mind-mapping social sports narrowed the focus to hiking, then to women and minorities who hike solo. Ideas came from 6-3-5 brainwriting — three sketches per member, voted on by the group.</p>
+        <p style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">The two top ideas — a check-in bracelet and a health-status ring — were merged into one bracelet system, chosen for comfort and clearer colour visibility while hiking.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="iteration">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">04 · Iteration</div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 16px;text-wrap:pretty">A low-fidelity prototype came first: two bracelets built from tape, paper, string and pearls, one for the hiker and one for the partner, the partner's bracelet operated with a Wizard-of-Oz technique — pulling different coloured paper through it to simulate status changes. Two semi-structured interviews (three women, one man, ages 20–30) tested the concept against a written hiking scenario.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 16px;text-wrap:pretty">Feedback reshaped the design for the working prototype: the two separate bracelets were merged into a single unit, the emergency self-indication tag was dropped in favour of a simpler interface, and a new "warning" mode was added for situations between a routine check-in and full distress. The feedback system was expanded to auditory, haptic and visual signals together, and GPS coordinates are sent as an SMS rather than only shown on the bracelet.</p>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">The working prototype ran on an Arduino Uno with a button and an LED strip cycling white, green, yellow and red. The band was hand-sewn from fabric sized to hold the LED strip, button and wiring; the links covering the LED strip were modelled in Fusion 360 and 3D printed in transparent PLA, designed to click together and rotate independently so the band could wrap the wrist.</p>
+    <div class="g2" style="margin-bottom:24px">
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 2 — Low-fidelity prototype, tape and string</div>
+        <div class="gray" style="aspect-ratio:1151/1534"><img class="slot" src="/assets/img/trailmate-lofi-prototype.jpg" alt="Low-fidelity prototype" decoding="async"></div>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3 — Building the LED and button circuit</div>
+        <div class="gray" style="aspect-ratio:839/968"><img class="slot" src="/assets/img/trailmate-build.png" alt="Circuit build" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="prototype">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">05 · Working prototype</div>
+    <div style="margin-bottom:24px">
+      <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 4 — Interaction and feedback table for hiker and partner bracelets</div>
+      <div class="gray" style="aspect-ratio:1711/1595"><img class="slot" src="/assets/img/trailmate-interaction-table.jpg" alt="Interaction table" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+    </div>
+    <div style="margin-bottom:24px">
+      <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 5 — The four status states: idle, confirmation, warning, distress</div>
+      <div class="g3" style="grid-template-columns:repeat(4,1fr)">
+        <div>
+          <div class="gray" style="aspect-ratio:1/1"><img class="slot" src="/assets/img/trailmate-idle.jpg" alt="Idle" loading="lazy" decoding="async"></div>
+          <div style="font:600 12px/1.3 Archivo;margin:8px 0 2px">Idle — white</div>
+          <div style="font:400 12px/1.4 Archivo;color:#75726e">Default state, nothing pending</div>
+        </div>
+        <div>
+          <div class="gray" style="aspect-ratio:1/1"><img class="slot" src="/assets/img/trailmate-confirmation.jpg" alt="Confirmation" loading="lazy" decoding="async"></div>
+          <div style="font:600 12px/1.3 Archivo;margin:8px 0 2px">Confirmation — green</div>
+          <div style="font:400 12px/1.4 Archivo;color:#75726e">Both bracelets flash green once a check-in is answered, then return to idle</div>
+        </div>
+        <div>
+          <div class="gray" style="aspect-ratio:1/1"><img class="slot" src="/assets/img/trailmate-warning.jpg" alt="Warning" loading="lazy" decoding="async"></div>
+          <div style="font:600 12px/1.3 Archivo;margin:8px 0 2px">Warning — yellow</div>
+          <div style="font:400 12px/1.4 Archivo;color:#75726e">The hiker flags a possible risk before it becomes an emergency — the partner's bracelet turns yellow, the hiker's blinks and vibrates once</div>
+        </div>
+        <div>
+          <div class="gray" style="aspect-ratio:1/1"><img class="slot" src="/assets/img/trailmate-distress.jpg" alt="Distress" loading="lazy" decoding="async"></div>
+          <div style="font:600 12px/1.3 Archivo;margin:8px 0 2px">Distress — red</div>
+          <div style="font:400 12px/1.4 Archivo;color:#75726e">Triggered by holding the button for three seconds — vibrates, sounds, and sends the hiker's GPS coordinates to the partner by SMS</div>
+        </div>
+      </div>
+    </div>
+    <div class="g2">
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 6 — (a) The idle state of a hikers' smart bracelet</div>
+        <div class="gray" style="aspect-ratio:1461/827"><img class="slot" src="/assets/img/trailmate-fig1a-idle.jpg" alt="Idle state, hiker's bracelet" loading="lazy" decoding="async"></div>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 7 — (b) The connected partner bracelet</div>
+        <div class="gray" style="aspect-ratio:1462/821"><img class="slot" src="/assets/img/trailmate-fig1b-partner.jpg" alt="Connected partner bracelet" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+    <div class="g2" style="margin-top:24px">
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 8 — Hikers bracelet in hike-mode</div>
+        <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/assets/img/trailmate-hike-mode.jpg" alt="Hikers bracelet in hike-mode" loading="lazy" decoding="async"></div>
+      </div>
+      <div>
+        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 9 — Partner bracelet in home-mode</div>
+        <div class="gray" style="aspect-ratio:1920/1080"><img class="slot" src="/assets/img/trailmate-home-mode-final.jpg" alt="Partner bracelet in home-mode" loading="lazy" decoding="async"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="before-after">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">06 · Before / after</div>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">Both changes came directly out of the pilot interviews.</p>
+    <div class="g2">
+      <div style="border:2px solid #1c1b1a;padding:24px">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#75726e">Before</div>
+        <p style="font:400 15px/1.55 Archivo;color:#1c1b1a;margin:0 0 12px">Two separate bracelets, an emergency self-indication tag, and status shown only through colour.</p>
+        <p style="font:400 14px/1.5 Archivo;color:#75726e;margin:0">Users didn't want to buy or carry two different devices, and colour alone excluded people who couldn't rely on sight.</p>
+      </div>
+      <div style="border:2px solid #1b3ac4;padding:24px">
+        <div class="lbl" style="font-size:10px;margin-bottom:10px;color:#122a8f">After</div>
+        <p style="font:400 15px/1.55 Archivo;color:#1c1b1a;margin:0 0 12px">One merged bracelet design, an added warning mode, and status through colour, vibration and sound together.</p>
+        <p style="font:400 14px/1.5 Archivo;color:#75726e;margin:0">A single unit and a middle alert level matched how people actually wanted to signal; redundant feedback channels meant no one mode had to carry the whole message.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="accessibility">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">07 · Accessibility</div>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">The feedback system was refined to combine auditory, haptic and visual signals so no single channel carried the whole message and people with disabilities weren't excluded. GPS coordinates are sent as an SMS text message rather than shown only on a small screen, since phones can read texts aloud for people who are visually impaired.</p>
+  </section>
+
+  <section class="pad" id="evaluation">
+    <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">08 · Reflection</div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">The working prototype was evaluated through two semi-structured group interviews with four students aged 20–30. Asked to describe the product in one word, participants used: effective, comforting, direct, connected, safety, responsibility, and "peace of mind".</p>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">Opinions split on the red distress light — some felt it could scare off a potential attacker, others worried it would make the situation more dangerous by revealing the alert. Participants also asked for a more discreet form, suggesting a necklace or ring instead of a visible bracelet, and raised questions about battery life and indication.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 28px;text-wrap:pretty">Left for future work: further evaluation of a mid-fidelity prototype before committing to high-fidelity builds, a more delicate physical design, and deeper testing of whether a visible alert helps or endangers the hiker in a real confrontation.</p>
+    <a href="/assets/docs/trailmate-report.pdf" download="TrailMate_report.pdf" class="btn btn-secondary" style="display:inline-flex">Download full report (PDF)</a>
+  </section>
+
+  </main>
+
+  <!--@footer-->
+
+</div>
+<!--@scripts-->
+</body>
+</html>

@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--@head /work/resource-booking/-->
+<title>Resource Booking System for Teachers — Tarek Alfutih</title>
+<meta name="description" content="A web-based room booking system that helps teachers book multiple rooms for recurring sessions based on specific preferences.">
+<style>
+body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#122a8f;text-decoration:none}
+a:hover{color:#1b3ac4;text-decoration:underline}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin:0 auto;background:#fff;border-left:1px solid #dcd9d4;border-right:1px solid #dcd9d4}
+.pad{padding:88px 80px}
+.rule{border-bottom:2px solid #1c1b1a}
+.lbl{font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e}
+.step{font:600 12px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f;margin-bottom:14px;display:flex;align-items:center;gap:12px}
+.step-n{font:700 12px/1 Archivo;color:#fff;background:#1b3ac4;width:26px;height:26px;border-radius:50%;display:flex;align-items:center;justify-content:center;letter-spacing:0}
+.copy{font:400 16px/1.65 Archivo;color:#3a3835;max-width:600px;text-wrap:pretty}
+.copy-lg{font:400 18px/1.6 Archivo;color:#201e1d;max-width:640px;text-wrap:pretty}
+.cap{font:600 12px/1 Archivo;color:#75726e;margin-top:10px}
+.frame{border:2px solid #1c1b1a;position:relative}
+.card{border:1px solid #dcd9d4;padding:22px;background:#fbfbfa}
+.card .n{font:700 12px/1 Archivo;color:#1b3ac4;letter-spacing:.06em;margin-bottom:8px}
+.card .t{font:600 16px/1.35 Archivo;margin-bottom:8px}
+.card .d{font:400 14px/1.6 Archivo;color:#4a4744}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.facts{display:grid;grid-template-columns:repeat(5,1fr);border-top:2px solid #1c1b1a;border-bottom:2px solid #1c1b1a}
+.facts>div{padding:20px;border-right:1px solid #dcd9d4}
+.facts>div:last-child{border-right:none}
+
+.fd-row{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding:16px 0;border-top:1px solid #dcd9d4}
+.fd-row:first-child{border-top:none}
+.fd-n{font:700 12px/1 Archivo;color:#1b3ac4;background:transparent;border:1.5px solid #1b3ac4;width:24px;height:24px;border-radius:0;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.fd-decision{font:600 15px/1.5 Archivo;color:#1c1b1a}
+.dark{background:#1c1b1a;color:#f3f2f2}
+.dark .lbl{color:#c7c4f8}
+.dark .step{color:#c7c4f8}
+.dark .step-n{background:#8fa2f5;color:#1c1b1a}
+.stack>*+*{margin-top:32px}
+section[id]{scroll-margin-top:96px}
+nav a{position:relative;display:inline-block;padding-bottom:2px}
+nav a:hover{color:#1b3ac4}
+nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#1b3ac4}
+@media (max-width:900px){
+  .pad{padding:40px 24px}
+  .grid2,.grid2img{grid-template-columns:1fr}
+  .fd-row{grid-template-columns:1fr}
+  .fd-arrow{display:none}
+  h1.h1r{font-size:32px !important}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="cs-hd">
+    <!--@case-bar-->
+    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 64px;overflow-x:auto;white-space:nowrap">
+      <a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Problem</a>
+      <a href="#midfi" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Mid-fi</a>
+      <a href="#test1" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Test 1</a>
+      <a href="#decisions" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Decisions</a>
+      <a href="#hifi" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Hi-fi</a>
+      <a href="#ai" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 On AI</a>
+      <a href="#future" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Future</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <!-- HERO -->
+  <section class="pad rule">
+    <div class="lbl" style="margin-bottom:22px">UX case study</div>
+    <h1 class="h1r" style="font-size:clamp(28px,4vw,50px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px">Resource Booking System for Teachers</h1>
+    <div style="font:400 19px/1.4 Archivo;color:#3a3835;margin-bottom:26px;max-width:600px">Making recurring room booking clearer, faster and more flexible.</div>
+    <p class="copy" style="margin:0 0 34px">A web-based room booking system that helps teachers book multiple rooms for recurring sessions based on specific preferences. The project was developed through low-, mid-, and high-fidelity prototypes and is currently paused after the first design iteration, ahead of a second user test.</p>
+    <div class="facts">
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Role</div><div style="font:600 15px/1.35 Archivo">UX/UI</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Tools</div><div style="font:600 15px/1.35 Archivo">Figma · Claude Design</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div style="font:600 15px/1.35 Archivo">User testing · iteration</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Duration</div><div style="font:600 15px/1.35 Archivo">Two weeks</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Status</div><div style="font:600 15px/1.35 Archivo">Preparing Test 2</div></div>
+    </div>
+  </section>
+
+  <!-- PROBLEM & REQUIREMENTS -->
+  <section class="pad rule" style="padding-top:120px" id="problem">
+    <div class="step"><span class="step-n">01</span>The problem</div>
+    <div class="grid2" style="margin-top:20px">
+      <p class="copy-lg" style="margin:0">Teachers often face challenges when booking classrooms and equipment for their courses. Existing booking systems can be time-consuming and require users to navigate multiple pages before finding a suitable room. This project explores a more efficient and user-friendly booking experience.</p>
+      <div class="card">
+        <div class="lbl" style="margin-bottom:14px">Requirements — scenario breakdown</div>
+        <ul style="margin:0;padding-left:20px;line-height:1.85;font:400 15px Archivo;color:#3a3835">
+          <li>Allow booking of three rooms.</li>
+          <li>Ensure each room accommodates a minimum of 20 participants.</li>
+          <li>Ensure all selected rooms are located within 500 meters of each other.</li>
+          <li>Allow the same rooms to be used for multiple exercises.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- MID-FI -->
+  <section class="pad rule" id="midfi">
+    <div class="step"><span class="step-n">02</span>Mid-fidelity prototype — Figma</div>
+    <p class="copy-lg" style="margin:0 0 32px">Built to work out the booking logic first: search by room type, equipment, building, date, time and seats — with multiple rooms, multiple dates, system-suggested rooms, and managing bookings. All components in the Figma prototype were created from scratch. The logic starts by asking the user what, where, when.</p>
+    <div class="frame" style="aspect-ratio:16/9">
+      <video src="/assets/video/rb-lofi-walkthrough.mp4" poster="/assets/video/rb-lofi-walkthrough-poster.webp" controls="controls" playsinline="playsinline" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
+    </div>
+    <div class="cap">Walkthrough — mid-fidelity prototype (Figma)</div>
+  </section>
+
+  <!-- TEST 1 -->
+  <section class="pad rule" id="test1">
+    <div class="step"><span class="step-n">03</span>Usability Test 1 <span style="color:#75726e;text-transform:none;letter-spacing:0;font-weight:500">· 5 users</span></div>
+    <p class="copy-lg" style="margin:0 0 32px">I tested the mid-fidelity prototype with five users to understand how they used the room booking system and to identify where the experience became difficult or unclear.</p>
+
+    <div class="lbl" style="margin-bottom:16px">Direct usability findings</div>
+    <div class="grid2" style="margin-bottom:36px">
+      <div class="card"><div class="n">01</div><div class="t">The search bar required too many clicks.</div><div class="d">Users sometimes needed to click twice to select an option and move to the next field.</div></div>
+      <div class="card"><div class="n">02</div><div class="t">Time selection needed improvement</div><div class="d">Selecting a start/end time from the search bar wasn't smooth enough.</div></div>
+      <div class="card"><div class="n">03</div><div class="t">Users wanted recommendations before pressing Search</div><div class="d">Users expected recommendations while making their selections, not only after pressing Search.</div></div>
+      <div class="card"><div class="n">04</div><div class="t">Selecting time from the schedule needed visual improvement</div><div class="d">The old Room Schedule already showed rooms and their available/busy times, and selecting a booking time from it was functionally clear, but the visual presentation needed improvement.</div></div>
+    </div>
+
+    <div class="lbl" style="margin-bottom:16px">Gaps I identified while evaluating the prototype</div>
+    <div class="grid2">
+      <div class="card"><div class="n">05</div><div class="t">No quick way to find a room available now</div><div class="d">The prototype had no dedicated path for "which room can I use right now?"</div></div>
+      <div class="card"><div class="n">06</div><div class="t">No complete way to browse all rooms</div><div class="d">There was no catalogue experience for browsing rooms and comparing them.</div></div>
+      <div class="card"><div class="n">07</div><div class="t">Room Schedule was difficult to access</div><div class="d">It wasn't clearly available as one of the system's main destinations.</div></div>
+    </div>
+  </section>
+
+  <!-- FINDINGS -> DECISIONS -->
+  <section class="pad rule" id="decisions">
+    <div class="step"><span class="step-n">04</span>Design decisions</div>
+    <p class="copy" style="margin:0 0 24px">Each decision responds directly to a numbered finding or gap from Usability Test 1.</p>
+    <div style="margin-top:8px">
+      <div class="fd-row"><div class="fd-n">01</div><div class="fd-decision">Selecting an option now completes the step and moves to the next field</div></div>
+      <div class="fd-row"><div class="fd-n">02</div><div class="fd-decision">Redesigned time-selection interaction</div></div>
+      <div class="fd-row"><div class="fd-n">03</div><div class="fd-decision">Recommended rooms for you, shown below the search bar as requirements are selected</div></div>
+      <div class="fd-row"><div class="fd-n">04</div><div class="fd-decision">Clearer start/end time selection directly from a room's availability timeline</div></div>
+      <div class="fd-row"><div class="fd-n">05</div><div class="fd-decision">Adding Available Now page to the navigation bar</div></div>
+      <div class="fd-row"><div class="fd-n">06</div><div class="fd-decision">Adding Our Rooms — the full catalogue to the navigation bar</div></div>
+      <div class="fd-row"><div class="fd-n">07</div><div class="fd-decision">Added as its own top-level destination in navigation bar</div></div>
+    </div>
+  </section>
+
+  <!-- HI-FI -->
+  <section class="pad rule" id="hifi">
+    <div class="step"><span class="step-n">05</span>High-fidelity prototype — Claude Design</div>
+    <p class="copy-lg" style="margin:0 0 32px">Usability Test 1 surfaced both interaction problems and gaps in the booking experience. I used Claude Design to move quickly from those findings to this high-fidelity prototype — directing decisions, reviewing what it produced, and refining it. It includes the design responses above, but has not been tested yet.</p>
+    <div class="frame" style="aspect-ratio:16/9">
+      <video src="/assets/video/rb-hifi-walkthrough.mp4" poster="/assets/video/rb-hifi-walkthrough-poster.webp" controls="controls" playsinline="playsinline" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
+    </div>
+    <div class="cap" style="margin-bottom:36px">Walkthrough — high-fidelity prototype</div>
+    <div class="stack">
+      <div><div class="frame" style="aspect-ratio:1304/766"><img class="slot" src="/assets/img/rb-new-home-select-anim-4.gif" alt="Homepage — selecting what, where, when" decoding="async" style="object-fit:contain;"></div><div class="cap">Selecting requirements on the homepage</div></div>
+      <div><div class="frame" style="aspect-ratio:2980/1764"><img class="slot" src="/assets/img/rb-new-best-available.webp" alt="Best Available Rooms" decoding="async" data-view="1.0074 0.003 0.371" style="object-fit:contain;"></div><div class="cap">Search Result</div></div>
+      <div><div class="frame" style="aspect-ratio:2972/1750"><img class="slot" src="/assets/img/rb-new-my-booking.webp" alt="My Booking" loading="lazy" decoding="async" style="object-fit:contain;"></div><div class="cap">My Booking</div></div>
+      <div><div class="frame" style="aspect-ratio:2980/1764"><img class="slot" src="/assets/img/rb-new-available-now.webp" alt="Available Now" loading="lazy" decoding="async" style="object-fit:contain;"></div><div class="cap">Available Now</div></div>
+      <div><div class="frame" style="aspect-ratio:2980/1764"><img class="slot" src="/assets/img/rb-new-schedule.webp" alt="Room Schedule" loading="lazy" decoding="async" style="object-fit:contain;"></div><div class="cap">Room Schedule</div></div>
+    </div>
+  </section>
+
+  <!-- AI NOTE -->
+  <section class="pad dark rule" id="ai">
+    <div class="step"><span class="step-n">06</span>On using AI</div>
+    <p style="font:400 17px/1.65 Archivo;margin:0;max-width:640px;color:#d8d6d2">Claude Design shortened the distance between a usability finding and a testable interaction. I directed the decisions and refined the result — it didn't design the project for me.</p>
+  </section>
+
+  <!-- NEXT -->
+  <section class="pad" id="future">
+    <div class="step"><span class="step-n">07</span>Future work</div>
+    <p class="copy-lg" style="margin:0 0 22px">The project is paused here. I need to test whether these changes actually work better before making further iterations.</p>
+    <div style="font:600 15px/1.5 Archivo;color:#1b3ac4">Prototype 1 → Usability Test 1 (5 users) → Findings → Design iteration → High-fidelity Prototype 2 → Usability Test 2</div>
+  </section>
+
+  </main>
+
+  <!--@footer-->
+
+</div>
+<!--@scripts-->
+</body>
+</html>

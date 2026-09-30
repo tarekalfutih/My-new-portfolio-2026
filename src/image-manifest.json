@@ -1,0 +1,3159 @@
+{
+ "/assets/img/8686222f-516d-4c30-b48d-0fb3f2d42f7b-rw-1920.png": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/8686222f-516d-4c30-b48d-0fb3f2d42f7b-rw-1920-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/8686222f-516d-4c30-b48d-0fb3f2d42f7b-rw-1920-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/8686222f-516d-4c30-b48d-0fb3f2d42f7b-rw-1920-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/8686222f-516d-4c30-b48d-0fb3f2d42f7b-rw-1920-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/8686222f-516d-4c30-b48d-0fb3f2d42f7b-rw-1920-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/96b09752-3ead-48ec-a95f-f343b27904cb.png": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/96b09752-3ead-48ec-a95f-f343b27904cb-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/96b09752-3ead-48ec-a95f-f343b27904cb-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/96b09752-3ead-48ec-a95f-f343b27904cb-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/96b09752-3ead-48ec-a95f-f343b27904cb-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/96b09752-3ead-48ec-a95f-f343b27904cb-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/ad8f2213-6e1a-45ed-b33a-1678b7872901-rw-1920.png": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/ad8f2213-6e1a-45ed-b33a-1678b7872901-rw-1920-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/ad8f2213-6e1a-45ed-b33a-1678b7872901-rw-1920-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/ad8f2213-6e1a-45ed-b33a-1678b7872901-rw-1920-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/ad8f2213-6e1a-45ed-b33a-1678b7872901-rw-1920-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/ad8f2213-6e1a-45ed-b33a-1678b7872901-rw-1920-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/ahi-sketches.webp": {
+  "h": 807,
+  "variants": [
+   [
+    "/assets/img/opt/ahi-sketches-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/ahi-sketches-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/ahi-sketches-1040.webp",
+    1040
+   ]
+  ],
+  "w": 1040
+ },
+ "/assets/img/ahi-symbol-bird.webp": {
+  "h": 427,
+  "variants": [
+   [
+    "/assets/img/opt/ahi-symbol-bird-440.webp",
+    440
+   ]
+  ],
+  "w": 440
+ },
+ "/assets/img/alma-after.png": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/alma-after-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/alma-after-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/alma-after-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/alma-after-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/alma-after-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/alma-before.png": {
+  "h": 1964,
+  "variants": [
+   [
+    "/assets/img/opt/alma-before-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/alma-before-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/alma-before-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/alma-before-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/alma-before-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
+ },
+ "/assets/img/alma-gif-place.gif": {
+  "h": 2480,
+  "replace": "/assets/img/opt/alma-gif-place.webp",
+  "w": 3508
+ },
+ "/assets/img/alma-gif-reset.gif": {
+  "h": 2480,
+  "replace": "/assets/img/opt/alma-gif-reset.webp",
+  "w": 3508
+ },
+ "/assets/img/alma-gif-spread.gif": {
+  "h": 2480,
+  "replace": "/assets/img/opt/alma-gif-spread.webp",
+  "w": 3508
+ },
+ "/assets/img/alma-hero.jpg": {
+  "h": 2400,
+  "variants": [
+   [
+    "/assets/img/opt/alma-hero-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/alma-hero-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/alma-hero-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/alma-hero-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/alma-hero-2299.webp",
+    2299
+   ]
+  ],
+  "w": 2299
+ },
+ "/assets/img/alma-initial-observations.jpg": {
+  "h": 4085,
+  "variants": [
+   [
+    "/assets/img/opt/alma-initial-observations-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/alma-initial-observations-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/alma-initial-observations-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/alma-initial-observations-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/alma-initial-observations-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4284
+ },
+ "/assets/img/alma-proto-1.webp": {
+  "h": 539,
+  "variants": [
+   [
+    "/assets/img/opt/alma-proto-1-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/alma-proto-1-722.webp",
+    722
+   ]
+  ],
+  "w": 722
+ },
+ "/assets/img/alma-proto-2.webp": {
+  "h": 401,
+  "variants": [
+   [
+    "/assets/img/opt/alma-proto-2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/alma-proto-2-722.webp",
+    722
+   ]
+  ],
+  "w": 722
+ },
+ "/assets/img/alma-proto-3.webp": {
+  "h": 722,
+  "variants": [
+   [
+    "/assets/img/opt/alma-proto-3-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/alma-proto-3-646.webp",
+    646
+   ]
+  ],
+  "w": 646
+ },
+ "/assets/img/alma-universeum-1.webp": {
+  "h": 436,
+  "variants": [
+   [
+    "/assets/img/opt/alma-universeum-1-327.webp",
+    327
+   ]
+  ],
+  "w": 327
+ },
+ "/assets/img/alma-universeum-2.webp": {
+  "h": 630,
+  "variants": [
+   [
+    "/assets/img/opt/alma-universeum-2-473.webp",
+    473
+   ]
+  ],
+  "w": 473
+ },
+ "/assets/img/alma-universeum-3.webp": {
+  "h": 630,
+  "variants": [
+   [
+    "/assets/img/opt/alma-universeum-3-473.webp",
+    473
+   ]
+  ],
+  "w": 473
+ },
+ "/assets/img/alma-universeum-4.webp": {
+  "h": 340,
+  "variants": [
+   [
+    "/assets/img/opt/alma-universeum-4-255.webp",
+    255
+   ]
+  ],
+  "w": 255
+ },
+ "/assets/img/alma-universeum-5.webp": {
+  "h": 340,
+  "variants": [
+   [
+    "/assets/img/opt/alma-universeum-5-255.webp",
+    255
+   ]
+  ],
+  "w": 255
+ },
+ "/assets/img/before-design-1.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/before-design-1-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/before-design-1-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/before-design-1-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/before-design-1-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/before-design-1-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/before-the-design-2.webp": {
+  "h": 1404,
+  "variants": [
+   [
+    "/assets/img/opt/before-the-design-2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/before-the-design-2-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/before-the-design-2-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/before-the-design-2-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/before-the-design-2-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2496
+ },
+ "/assets/img/bird-on-the-big-screen-polestar-zoom.jpg": {
+  "h": 528,
+  "variants": [
+   [
+    "/assets/img/opt/bird-on-the-big-screen-polestar-zoom-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/bird-on-the-big-screen-polestar-zoom-636.webp",
+    636
+   ]
+  ],
+  "w": 636
+ },
+ "/assets/img/bird-on-the-big-screen-polestar.jpg": {
+  "h": 1395,
+  "variants": [
+   [
+    "/assets/img/opt/bird-on-the-big-screen-polestar-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/bird-on-the-big-screen-polestar-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/bird-on-the-big-screen-polestar-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/bird-on-the-big-screen-polestar-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/bird-on-the-big-screen-polestar-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2480
+ },
+ "/assets/img/bird.gif": {
+  "h": 854,
+  "replace": "/assets/img/opt/bird.webp",
+  "w": 880
+ },
+ "/assets/img/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8.png": {
+  "h": 1245,
+  "variants": [
+   [
+    "/assets/img/opt/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8-1973.webp",
+    1973
+   ]
+  ],
+  "w": 1973
+ },
+ "/assets/img/catch-records-lacked-detai-after.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/catch-records-lacked-detai-after-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/catch-records-lacked-detai-before.png": {
+  "h": 908,
+  "variants": [
+   [
+    "/assets/img/opt/catch-records-lacked-detai-before-428.webp",
+    428
+   ]
+  ],
+  "w": 428
+ },
+ "/assets/img/character-wakes-up-edited.jpg": {
+  "h": 2995,
+  "variants": [
+   [
+    "/assets/img/opt/character-wakes-up-edited-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/character-wakes-up-edited-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/character-wakes-up-edited-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/character-wakes-up-edited-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/character-wakes-up-edited-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4171
+ },
+ "/assets/img/choose-a-topic.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/choose-a-topic-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/clock.jpg": {
+  "h": 3085,
+  "variants": [
+   [
+    "/assets/img/opt/clock-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/clock-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/clock-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/clock-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/clock-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4043
+ },
+ "/assets/img/color-rotation-hero.jpg": {
+  "h": 1107,
+  "variants": [
+   [
+    "/assets/img/opt/color-rotation-hero-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/color-rotation-hero-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/color-rotation-hero-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/color-rotation-hero-1421.webp",
+    1421
+   ]
+  ],
+  "w": 1421
+ },
+ "/assets/img/design-1-an-honest-interface.gif": {
+  "h": 1080,
+  "replace": "/assets/img/opt/design-1-an-honest-interface.webp",
+  "w": 1920
+ },
+ "/assets/img/discover-the-hidden-plant-4ebf7c9c.png": {
+  "h": 1600,
+  "variants": [
+   [
+    "/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2534
+ },
+ "/assets/img/discover-the-hidden-plant.png": {
+  "h": 1964,
+  "variants": [
+   [
+    "/assets/img/opt/discover-the-hidden-plant-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
+ },
+ "/assets/img/eating-graps.png": {
+  "h": 1964,
+  "variants": [
+   [
+    "/assets/img/opt/eating-graps-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/eating-graps-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/eating-graps-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/eating-graps-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/eating-graps-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
+ },
+ "/assets/img/enhancing-safety-and-users-support.png": {
+  "h": 874,
+  "variants": [
+   [
+    "/assets/img/opt/enhancing-safety-and-users-support-390.webp",
+    390
+   ]
+  ],
+  "w": 390
+ },
+ "/assets/img/final-iteration.jpg": {
+  "h": 3024,
+  "variants": [
+   [
+    "/assets/img/opt/final-iteration-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/final-iteration-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/final-iteration-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/final-iteration-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/final-iteration-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4032
+ },
+ "/assets/img/final-prot.png": {
+  "h": 1600,
+  "variants": [
+   [
+    "/assets/img/opt/final-prot-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/final-prot-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/final-prot-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/final-prot-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/final-prot-2000.webp",
+    2000
+   ]
+  ],
+  "w": 2000
+ },
+ "/assets/img/fish-logo-mtri0siz-lui5.png": {
+  "h": 2462,
+  "variants": [
+   [
+    "/assets/img/opt/fish-logo-mtri0siz-lui5-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/fish-logo-mtri0siz-lui5-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/fish-logo-mtri0siz-lui5-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/fish-logo-mtri0siz-lui5-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/fish-logo-mtri0siz-lui5-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4111
+ },
+ "/assets/img/fish.jpg": {
+  "h": 3456,
+  "variants": [
+   [
+    "/assets/img/opt/fish-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/fish-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/fish-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/fish-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/fish-2400.webp",
+    2400
+   ]
+  ],
+  "w": 5184
+ },
+ "/assets/img/forecast-lacked-fishing-guidance-after.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/forecast-lacked-fishing-guidance-after-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/forecast-lacked-fishing-guidance-before.png": {
+  "h": 908,
+  "variants": [
+   [
+    "/assets/img/opt/forecast-lacked-fishing-guidance-before-428.webp",
+    428
+   ]
+  ],
+  "w": 428
+ },
+ "/assets/img/forest-bg.jpg": {
+  "h": 1200,
+  "variants": [
+   [
+    "/assets/img/opt/forest-bg-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/forest-bg-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/forest-bg-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/forest-bg-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/forest-bg-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2400
+ },
+ "/assets/img/fox-for-polestar-skech.jpg": {
+  "h": 2919,
+  "variants": [
+   [
+    "/assets/img/opt/fox-for-polestar-skech-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/fox-for-polestar-skech-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/fox-for-polestar-skech-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/fox-for-polestar-skech-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/fox-for-polestar-skech-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3074
+ },
+ "/assets/img/fox-for-polestar.gif": {
+  "h": 2919,
+  "replace": "/assets/img/opt/fox-for-polestar.webp",
+  "w": 3074
+ },
+ "/assets/img/gilded-cage-poster-small-size.jpg": {
+  "h": 1984,
+  "variants": [
+   [
+    "/assets/img/opt/gilded-cage-poster-small-size-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/gilded-cage-poster-small-size-702.webp",
+    702
+   ]
+  ],
+  "w": 702
+ },
+ "/assets/img/graph-displaying-the-comparison-of-mean-points-9d9acb4e.png": {
+  "h": 1190,
+  "variants": [
+   [
+    "/assets/img/opt/graph-displaying-the-comparison-of-mean-points-9d9acb4e-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/graph-displaying-the-comparison-of-mean-points-9d9acb4e-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/graph-displaying-the-comparison-of-mean-points-9d9acb4e-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/graph-displaying-the-comparison-of-mean-points-9d9acb4e-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/graph-displaying-the-comparison-of-mean-points-9d9acb4e-1991.webp",
+    1991
+   ]
+  ],
+  "w": 1991
+ },
+ "/assets/img/gras2.png": {
+  "h": 16,
+  "variants": [
+   [
+    "/assets/img/opt/gras2-16.webp",
+    16
+   ]
+  ],
+  "w": 16
+ },
+ "/assets/img/grass-4.png": {
+  "h": 48,
+  "variants": [
+   [
+    "/assets/img/opt/grass-4-48.webp",
+    48
+   ]
+  ],
+  "w": 48
+ },
+ "/assets/img/head-up-display-before.avif": {
+  "h": 1130,
+  "variants": [
+   [
+    "/assets/img/opt/head-up-display-before-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/head-up-display-before-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/head-up-display-before-904.webp",
+    904
+   ]
+  ],
+  "w": 904
+ },
+ "/assets/img/head-up-display-polestar.jpg": {
+  "h": 1130,
+  "variants": [
+   [
+    "/assets/img/opt/head-up-display-polestar-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/head-up-display-polestar-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/head-up-display-polestar-904.webp",
+    904
+   ]
+  ],
+  "w": 904
+ },
+ "/assets/img/hello-heart-cover.jpg": {
+  "h": 1086,
+  "variants": [
+   [
+    "/assets/img/opt/hello-heart-cover-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/hello-heart-cover-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/hello-heart-cover-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/hello-heart-cover-1448.webp",
+    1448
+   ]
+  ],
+  "w": 1448
+ },
+ "/assets/img/helmet-glove-feedback.jpg": {
+  "h": 3456,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-glove-feedback-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-glove-feedback-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-glove-feedback-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/helmet-glove-feedback-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/helmet-glove-feedback-2400.webp",
+    2400
+   ]
+  ],
+  "w": 5184
+ },
+ "/assets/img/helmet-hero.jpg": {
+  "h": 1086,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-hero-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-hero-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-hero-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/helmet-hero-1448.webp",
+    1448
+   ]
+  ],
+  "w": 1448
+ },
+ "/assets/img/helmet-prototype-front.jpg": {
+  "h": 5712,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-prototype-front-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-prototype-front-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-prototype-front-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/helmet-prototype-front-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/helmet-prototype-front-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4284
+ },
+ "/assets/img/helmet-prototype-side.jpg": {
+  "h": 4284,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-prototype-side-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-prototype-side-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-prototype-side-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/helmet-prototype-side-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/helmet-prototype-side-2400.webp",
+    2400
+   ]
+  ],
+  "w": 5712
+ },
+ "/assets/img/helmet-signal.jpg": {
+  "h": 1349,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-signal-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-signal-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-signal-1166.webp",
+    1166
+   ]
+  ],
+  "w": 1166
+ },
+ "/assets/img/helmet-sketch1.webp": {
+  "h": 893,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-sketch1-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-sketch1-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-sketch1-1098.webp",
+    1098
+   ]
+  ],
+  "w": 1098
+ },
+ "/assets/img/helmet-sketch2.webp": {
+  "h": 776,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-sketch2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-sketch2-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-sketch2-1098.webp",
+    1098
+   ]
+  ],
+  "w": 1098
+ },
+ "/assets/img/helmet-sketch3.webp": {
+  "h": 839,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-sketch3-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-sketch3-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-sketch3-1098.webp",
+    1098
+   ]
+  ],
+  "w": 1098
+ },
+ "/assets/img/helmet-tinkercad-circuit.png": {
+  "h": 850,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-tinkercad-circuit-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-tinkercad-circuit-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-tinkercad-circuit-931.webp",
+    931
+   ]
+  ],
+  "w": 931
+ },
+ "/assets/img/his-girlfriend-chats-with-him-unaware-ai-is-answering.png": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/his-girlfriend-chats-with-him-unaware-ai-is-answering-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/his-girlfriend-chats-with-him-unaware-ai-is-answering-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/his-girlfriend-chats-with-him-unaware-ai-is-answering-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/his-girlfriend-chats-with-him-unaware-ai-is-answering-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/his-girlfriend-chats-with-him-unaware-ai-is-answering-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/home-fishing-hero.webp": {
+  "h": 716,
+  "variants": [
+   [
+    "/assets/img/opt/home-fishing-hero-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/home-fishing-hero-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/home-fishing-hero-1074.webp",
+    1074
+   ]
+  ],
+  "w": 1074
+ },
+ "/assets/img/ideation.png": {
+  "h": 409,
+  "variants": [
+   [
+    "/assets/img/opt/ideation-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/ideation-500.webp",
+    500
+   ]
+  ],
+  "w": 500
+ },
+ "/assets/img/idx-booking.webp": {
+  "h": 537,
+  "variants": [
+   [
+    "/assets/img/opt/idx-booking-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/idx-booking-716.webp",
+    716
+   ]
+  ],
+  "w": 716
+ },
+ "/assets/img/idx-fishing.webp": {
+  "h": 477,
+  "variants": [
+   [
+    "/assets/img/opt/idx-fishing-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/idx-fishing-716.webp",
+    716
+   ]
+  ],
+  "w": 716
+ },
+ "/assets/img/idx-gilded.webp": {
+  "h": 164,
+  "variants": [
+   [
+    "/assets/img/opt/idx-gilded-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/idx-gilded-576.webp",
+    576
+   ]
+  ],
+  "w": 576
+ },
+ "/assets/img/idx-helmet.webp": {
+  "h": 537,
+  "variants": [
+   [
+    "/assets/img/opt/idx-helmet-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/idx-helmet-716.webp",
+    716
+   ]
+  ],
+  "w": 716
+ },
+ "/assets/img/idx-playrent.webp": {
+  "h": 537,
+  "variants": [
+   [
+    "/assets/img/opt/idx-playrent-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/idx-playrent-716.webp",
+    716
+   ]
+  ],
+  "w": 716
+ },
+ "/assets/img/image-dialoge.jpg": {
+  "h": 1024,
+  "variants": [
+   [
+    "/assets/img/opt/image-dialoge-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/image-dialoge-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/image-dialoge-1024.webp",
+    1024
+   ]
+  ],
+  "w": 1024
+ },
+ "/assets/img/image-frog.png": {
+  "h": 1024,
+  "variants": [
+   [
+    "/assets/img/opt/image-frog-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/image-frog-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/image-frog-1024.webp",
+    1024
+   ]
+  ],
+  "w": 1024
+ },
+ "/assets/img/image-tire.png": {
+  "h": 1536,
+  "variants": [
+   [
+    "/assets/img/opt/image-tire-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/image-tire-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/image-tire-1024.webp",
+    1024
+   ]
+  ],
+  "w": 1024
+ },
+ "/assets/img/istock-486966584-1-min-e1578948738419.jpg": {
+  "h": 371,
+  "variants": [
+   [
+    "/assets/img/opt/istock-486966584-1-min-e1578948738419-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/istock-486966584-1-min-e1578948738419-721.webp",
+    721
+   ]
+  ],
+  "w": 721
+ },
+ "/assets/img/kalila-and-dimna-part-one.jpg": {
+  "h": 3233,
+  "variants": [
+   [
+    "/assets/img/opt/kalila-and-dimna-part-one-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/kalila-and-dimna-part-one-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/kalila-and-dimna-part-one-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/kalila-and-dimna-part-one-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/kalila-and-dimna-part-one-2362.webp",
+    2362
+   ]
+  ],
+  "w": 2362
+ },
+ "/assets/img/kalila-and-dimna-part-two.jpg": {
+  "h": 3233,
+  "variants": [
+   [
+    "/assets/img/opt/kalila-and-dimna-part-two-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/kalila-and-dimna-part-two-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/kalila-and-dimna-part-two-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/kalila-and-dimna-part-two-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/kalila-and-dimna-part-two-2362.webp",
+    2362
+   ]
+  ],
+  "w": 2362
+ },
+ "/assets/img/knak-the-door-2.png": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/knak-the-door-2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/knak-the-door-2-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/knak-the-door-2-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/knak-the-door-2-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/knak-the-door-2-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/learn-a-practical-skill.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/learn-a-practical-skill-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/mickael-lohscheller.png": {
+  "h": 1156,
+  "variants": [
+   [
+    "/assets/img/opt/mickael-lohscheller-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/mickael-lohscheller-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/mickael-lohscheller-1132.webp",
+    1132
+   ]
+  ],
+  "w": 1132
+ },
+ "/assets/img/more-water-information-1.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/more-water-information-1-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/more-water-information-2.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/more-water-information-2-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/more-water-information-3.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/more-water-information-3-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/my-design-log-in.png": {
+  "h": 869,
+  "variants": [
+   [
+    "/assets/img/opt/my-design-log-in-400.webp",
+    400
+   ]
+  ],
+  "w": 400
+ },
+ "/assets/img/my-photo-ai.jpg": {
+  "h": 1265,
+  "variants": [
+   [
+    "/assets/img/opt/my-photo-ai-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/my-photo-ai-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/my-photo-ai-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/my-photo-ai-1244.webp",
+    1244
+   ]
+  ],
+  "w": 1244
+ },
+ "/assets/img/observing-the-area.png": {
+  "h": 550,
+  "variants": [
+   [
+    "/assets/img/opt/observing-the-area-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/observing-the-area-738.webp",
+    738
+   ]
+  ],
+  "w": 738
+ },
+ "/assets/img/octopus-gif.gif": {
+  "h": 1080,
+  "replace": "/assets/img/opt/octopus-gif.webp",
+  "w": 1920
+ },
+ "/assets/img/octopus.gif": {
+  "h": 3024,
+  "replace": "/assets/img/opt/octopus.webp",
+  "w": 4032
+ },
+ "/assets/img/onsala-observatory.jpg": {
+  "h": 1510,
+  "variants": [
+   [
+    "/assets/img/opt/onsala-observatory-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/onsala-observatory-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/onsala-observatory-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/onsala-observatory-1290.webp",
+    1290
+   ]
+  ],
+  "w": 1290
+ },
+ "/assets/img/people-sitting.png": {
+  "h": 552,
+  "variants": [
+   [
+    "/assets/img/opt/people-sitting-405.webp",
+    405
+   ]
+  ],
+  "w": 405
+ },
+ "/assets/img/playrent-confirm.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-confirm-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-confirm-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-confirm-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-confirm-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-dates.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-dates-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-dates-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-dates-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-dates-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-home.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-home-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-home-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-home-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-home-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-item-book.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-item-book-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-item-book-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-item-book-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-item-book-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-item-open.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-item-open-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-item-open-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-item-open-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-item-open-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-item.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-item-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-item-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-item-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-item-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-login.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-login-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-login-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-login-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-login-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-publish.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-publish-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-publish-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-publish-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-publish-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-search1.png": {
+  "h": 917,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-search1-412.webp",
+    412
+   ]
+  ],
+  "w": 412
+ },
+ "/assets/img/playrent-search2.png": {
+  "h": 2751,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-search2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-search2-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-search2-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-search2-1236.webp",
+    1236
+   ]
+  ],
+  "w": 1236
+ },
+ "/assets/img/playrent-signup.png": {
+  "h": 917,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-signup-412.webp",
+    412
+   ]
+  ],
+  "w": 412
+ },
+ "/assets/img/playrent-success.png": {
+  "h": 917,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-success-412.webp",
+    412
+   ]
+  ],
+  "w": 412
+ },
+ "/assets/img/polestar-3-speed-effect-1.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/polestar-3-speed-effect-1-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-1-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-1-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-1-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-1-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/polestar-3-speed-effect-2.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/polestar-3-speed-effect-2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-2-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-2-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-2-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-2-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/polestar-3-speed-effect-3.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/polestar-3-speed-effect-3-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-3-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-3-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-3-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-3-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/polestar-3-speed-effect-4.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/polestar-3-speed-effect-4-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-4-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-4-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-4-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-4-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/polestar-3-speed-effect-5.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/polestar-3-speed-effect-5-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-5-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-5-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-5-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/polestar-3-speed-effect-5-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/polestar-center-display.jpg": {
+  "h": 669,
+  "variants": [
+   [
+    "/assets/img/opt/polestar-center-display-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/polestar-center-display-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/polestar-center-display-1190.webp",
+    1190
+   ]
+  ],
+  "w": 1190
+ },
+ "/assets/img/polestar-display-green-45c8c868.jpg": {
+  "h": 900,
+  "variants": [
+   [
+    "/assets/img/opt/polestar-display-green-45c8c868-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/polestar-display-green-45c8c868-720.webp",
+    720
+   ]
+  ],
+  "w": 720
+ },
+ "/assets/img/polestar-sustaniability-report.png": {
+  "h": 1496,
+  "variants": [
+   [
+    "/assets/img/opt/polestar-sustaniability-report-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/polestar-sustaniability-report-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/polestar-sustaniability-report-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/polestar-sustaniability-report-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/polestar-sustaniability-report-1613.webp",
+    1613
+   ]
+  ],
+  "w": 1613
+ },
+ "/assets/img/protect-privacy-and-location-security-my-design.png": {
+  "h": 874,
+  "variants": [
+   [
+    "/assets/img/opt/protect-privacy-and-location-security-my-design-390.webp",
+    390
+   ]
+  ],
+  "w": 390
+ },
+ "/assets/img/protect-privacy-and-location-security-tinder.png": {
+  "h": 873,
+  "variants": [
+   [
+    "/assets/img/opt/protect-privacy-and-location-security-tinder-403.webp",
+    403
+   ]
+  ],
+  "w": 403
+ },
+ "/assets/img/prototype-1.png": {
+  "h": 551,
+  "variants": [
+   [
+    "/assets/img/opt/prototype-1-370.webp",
+    370
+   ]
+  ],
+  "w": 370
+ },
+ "/assets/img/prototype-2-1.png": {
+  "h": 569,
+  "variants": [
+   [
+    "/assets/img/opt/prototype-2-1-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/prototype-2-1-757.webp",
+    757
+   ]
+  ],
+  "w": 757
+ },
+ "/assets/img/rb-new-available-now.webp": {
+  "h": 707,
+  "variants": [
+   [
+    "/assets/img/opt/rb-new-available-now-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-new-available-now-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-new-available-now-1200.webp",
+    1200
+   ]
+  ],
+  "w": 1200
+ },
+ "/assets/img/rb-new-best-available.webp": {
+  "h": 714,
+  "variants": [
+   [
+    "/assets/img/opt/rb-new-best-available-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-new-best-available-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-new-best-available-1200.webp",
+    1200
+   ]
+  ],
+  "w": 1200
+ },
+ "/assets/img/rb-new-home-select-anim-4.gif": {
+  "h": 766,
+  "replace": "/assets/img/opt/rb-new-home-select-anim-4.webp",
+  "w": 1304
+ },
+ "/assets/img/rb-new-my-booking.webp": {
+  "h": 704,
+  "variants": [
+   [
+    "/assets/img/opt/rb-new-my-booking-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-new-my-booking-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-new-my-booking-1200.webp",
+    1200
+   ]
+  ],
+  "w": 1200
+ },
+ "/assets/img/rb-new-schedule.webp": {
+  "h": 707,
+  "variants": [
+   [
+    "/assets/img/opt/rb-new-schedule-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-new-schedule-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-new-schedule-1200.webp",
+    1200
+   ]
+  ],
+  "w": 1200
+ },
+ "/assets/img/record-section-after-mts8p0lk-foqw.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/record-section-after-mts8p0lk-foqw-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/relai-cover-v2.jpg": {
+  "h": 1086,
+  "variants": [
+   [
+    "/assets/img/opt/relai-cover-v2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/relai-cover-v2-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/relai-cover-v2-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/relai-cover-v2-1448.webp",
+    1448
+   ]
+  ],
+  "w": 1448
+ },
+ "/assets/img/results-from-the-semantic-differential-scale-12739c96.png": {
+  "h": 742,
+  "variants": [
+   [
+    "/assets/img/opt/results-from-the-semantic-differential-scale-12739c96-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/results-from-the-semantic-differential-scale-12739c96-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/results-from-the-semantic-differential-scale-12739c96-1066.webp",
+    1066
+   ]
+  ],
+  "w": 1066
+ },
+ "/assets/img/sand-4.png": {
+  "h": 48,
+  "variants": [
+   [
+    "/assets/img/opt/sand-4-48.webp",
+    48
+   ]
+  ],
+  "w": 48
+ },
+ "/assets/img/screenshot-2025-06-02-at-16-28-42.png": {
+  "h": 577,
+  "variants": [
+   [
+    "/assets/img/opt/screenshot-2025-06-02-at-16-28-42-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/screenshot-2025-06-02-at-16-28-42-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/screenshot-2025-06-02-at-16-28-42-903.webp",
+    903
+   ]
+  ],
+  "w": 903
+ },
+ "/assets/img/screenshot-2026-09-14-at-19-18-45.png": {
+  "h": 1573,
+  "variants": [
+   [
+    "/assets/img/opt/screenshot-2026-09-14-at-19-18-45-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/screenshot-2026-09-14-at-19-18-45-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/screenshot-2026-09-14-at-19-18-45-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/screenshot-2026-09-14-at-19-18-45-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/screenshot-2026-09-14-at-19-18-45-2088.webp",
+    2088
+   ]
+  ],
+  "w": 2088
+ },
+ "/assets/img/screenshot-2026-09-16-at-20-26-38.png": {
+  "h": 1754,
+  "variants": [
+   [
+    "/assets/img/opt/screenshot-2026-09-16-at-20-26-38-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/screenshot-2026-09-16-at-20-26-38-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/screenshot-2026-09-16-at-20-26-38-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/screenshot-2026-09-16-at-20-26-38-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/screenshot-2026-09-16-at-20-26-38-2315.webp",
+    2315
+   ]
+  ],
+  "w": 2315
+ },
+ "/assets/img/sf-map-after-mockup.png": {
+  "h": 843,
+  "variants": [
+   [
+    "/assets/img/opt/sf-map-after-mockup-415.webp",
+    415
+   ]
+  ],
+  "w": 415
+ },
+ "/assets/img/sf-record-before.png": {
+  "h": 2796,
+  "variants": [
+   [
+    "/assets/img/opt/sf-record-before-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/sf-record-before-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/sf-record-before-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/sf-record-before-1290.webp",
+    1290
+   ]
+  ],
+  "w": 1290
+ },
+ "/assets/img/sigarets.jpg": {
+  "h": 833,
+  "variants": [
+   [
+    "/assets/img/opt/sigarets-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/sigarets-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/sigarets-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/sigarets-1480.webp",
+    1480
+   ]
+  ],
+  "w": 1480
+ },
+ "/assets/img/skraphjaltarna-compost.jpg": {
+  "h": 1800,
+  "variants": [
+   [
+    "/assets/img/opt/skraphjaltarna-compost-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-compost-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-compost-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-compost-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-compost-1800.webp",
+    1800
+   ]
+  ],
+  "w": 1800
+ },
+ "/assets/img/skraphjaltarna-cover.jpg": {
+  "h": 1254,
+  "variants": [
+   [
+    "/assets/img/opt/skraphjaltarna-cover-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-cover-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-cover-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-cover-1254.webp",
+    1254
+   ]
+  ],
+  "w": 1254
+ },
+ "/assets/img/skraphjaltarna-cycle.jpg": {
+  "h": 1800,
+  "variants": [
+   [
+    "/assets/img/opt/skraphjaltarna-cycle-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-cycle-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-cycle-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-cycle-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-cycle-1800.webp",
+    1800
+   ]
+  ],
+  "w": 1800
+ },
+ "/assets/img/skraphjaltarna-farewell.jpg": {
+  "h": 1800,
+  "variants": [
+   [
+    "/assets/img/opt/skraphjaltarna-farewell-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-farewell-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-farewell-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-farewell-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-farewell-1800.webp",
+    1800
+   ]
+  ],
+  "w": 1800
+ },
+ "/assets/img/skraphjaltarna-metal.jpg": {
+  "h": 1800,
+  "variants": [
+   [
+    "/assets/img/opt/skraphjaltarna-metal-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-metal-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-metal-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-metal-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-metal-1800.webp",
+    1800
+   ]
+  ],
+  "w": 1800
+ },
+ "/assets/img/skraphjaltarna-playground.png": {
+  "h": 1343,
+  "variants": [
+   [
+    "/assets/img/opt/skraphjaltarna-playground-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-playground-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-playground-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/skraphjaltarna-playground-1343.webp",
+    1343
+   ]
+  ],
+  "w": 1343
+ },
+ "/assets/img/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic.png": {
+  "h": 1024,
+  "variants": [
+   [
+    "/assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-1024.webp",
+    1024
+   ]
+  ],
+  "w": 1024
+ },
+ "/assets/img/smart-fishing-logo-white.png": {
+  "h": 2462,
+  "variants": [
+   [
+    "/assets/img/opt/smart-fishing-logo-white-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/smart-fishing-logo-white-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/smart-fishing-logo-white-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/smart-fishing-logo-white-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/smart-fishing-logo-white-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4111
+ },
+ "/assets/img/species-info.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/species-info-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/stop-harmful-messages-my-design.png": {
+  "h": 874,
+  "variants": [
+   [
+    "/assets/img/opt/stop-harmful-messages-my-design-390.webp",
+    390
+   ]
+  ],
+  "w": 390
+ },
+ "/assets/img/stop-harmful-messages-tinder.png": {
+  "h": 874,
+  "variants": [
+   [
+    "/assets/img/opt/stop-harmful-messages-tinder-390.webp",
+    390
+   ]
+  ],
+  "w": 390
+ },
+ "/assets/img/the-final-prototype-mockup.jpg": {
+  "h": 4087,
+  "variants": [
+   [
+    "/assets/img/opt/the-final-prototype-mockup-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/the-final-prototype-mockup-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/the-final-prototype-mockup-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/the-final-prototype-mockup-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/the-final-prototype-mockup-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4730
+ },
+ "/assets/img/the-happy-rabbit.jpg": {
+  "h": 2400,
+  "variants": [
+   [
+    "/assets/img/opt/the-happy-rabbit-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/the-happy-rabbit-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/the-happy-rabbit-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/the-happy-rabbit-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/the-happy-rabbit-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2400
+ },
+ "/assets/img/the-menu-shot.png": {
+  "h": 1606,
+  "variants": [
+   [
+    "/assets/img/opt/the-menu-shot-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/the-menu-shot-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/the-menu-shot-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/the-menu-shot-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/the-menu-shot-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2547
+ },
+ "/assets/img/the-planning.png": {
+  "h": 378,
+  "variants": [
+   [
+    "/assets/img/opt/the-planning-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/the-planning-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/the-planning-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/the-planning-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/the-planning-1896.webp",
+    1896
+   ]
+  ],
+  "w": 1896
+ },
+ "/assets/img/the-screen-is-green.jpg": {
+  "h": 720,
+  "variants": [
+   [
+    "/assets/img/opt/the-screen-is-green-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/the-screen-is-green-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/the-screen-is-green-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/the-screen-is-green-1280.webp",
+    1280
+   ]
+  ],
+  "w": 1280
+ },
+ "/assets/img/thematic-analys.png": {
+  "h": 681,
+  "variants": [
+   [
+    "/assets/img/opt/thematic-analys-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/thematic-analys-529.webp",
+    529
+   ]
+  ],
+  "w": 529
+ },
+ "/assets/img/tinder-log-in.png": {
+  "h": 867,
+  "variants": [
+   [
+    "/assets/img/opt/tinder-log-in-400.webp",
+    400
+   ]
+  ],
+  "w": 400
+ },
+ "/assets/img/top-left-to-bottom-right-favoured-ideas-1-5.png": {
+  "h": 442,
+  "variants": [
+   [
+    "/assets/img/opt/top-left-to-bottom-right-favoured-ideas-1-5-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/top-left-to-bottom-right-favoured-ideas-1-5-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/top-left-to-bottom-right-favoured-ideas-1-5-830.webp",
+    830
+   ]
+  ],
+  "w": 830
+ },
+ "/assets/img/trailmate-build.png": {
+  "h": 968,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-build-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-build-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-build-839.webp",
+    839
+   ]
+  ],
+  "w": 839
+ },
+ "/assets/img/trailmate-confirmation.jpg": {
+  "h": 1130,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-confirmation-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-confirmation-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-confirmation-1130.webp",
+    1130
+   ]
+  ],
+  "w": 1130
+ },
+ "/assets/img/trailmate-cover.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-cover-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-cover-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-cover-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/trailmate-cover-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/trailmate-cover-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/trailmate-distress.jpg": {
+  "h": 1130,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-distress-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-distress-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-distress-1130.webp",
+    1130
+   ]
+  ],
+  "w": 1130
+ },
+ "/assets/img/trailmate-fig1a-idle.jpg": {
+  "h": 827,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-fig1a-idle-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-fig1a-idle-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-fig1a-idle-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/trailmate-fig1a-idle-1461.webp",
+    1461
+   ]
+  ],
+  "w": 1461
+ },
+ "/assets/img/trailmate-fig1b-partner.jpg": {
+  "h": 821,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-fig1b-partner-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-fig1b-partner-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-fig1b-partner-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/trailmate-fig1b-partner-1462.webp",
+    1462
+   ]
+  ],
+  "w": 1462
+ },
+ "/assets/img/trailmate-hero.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-hero-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-hero-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-hero-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/trailmate-hero-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/trailmate-hero-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/trailmate-hike-mode.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-hike-mode-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-hike-mode-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-hike-mode-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/trailmate-hike-mode-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/trailmate-hike-mode-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/trailmate-home-mode-final.jpg": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-home-mode-final-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-home-mode-final-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-home-mode-final-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/trailmate-home-mode-final-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/trailmate-home-mode-final-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
+ "/assets/img/trailmate-ideas.png": {
+  "h": 1535,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-ideas-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-ideas-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-ideas-1151.webp",
+    1151
+   ]
+  ],
+  "w": 1151
+ },
+ "/assets/img/trailmate-idle.jpg": {
+  "h": 1130,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-idle-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-idle-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-idle-1130.webp",
+    1130
+   ]
+  ],
+  "w": 1130
+ },
+ "/assets/img/trailmate-interaction-table.jpg": {
+  "h": 1595,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-interaction-table-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-interaction-table-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-interaction-table-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/trailmate-interaction-table-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/trailmate-interaction-table-1711.webp",
+    1711
+   ]
+  ],
+  "w": 1711
+ },
+ "/assets/img/trailmate-lofi-prototype.jpg": {
+  "h": 1534,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-lofi-prototype-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-lofi-prototype-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-lofi-prototype-1151.webp",
+    1151
+   ]
+  ],
+  "w": 1151
+ },
+ "/assets/img/trailmate-warning.jpg": {
+  "h": 1119,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-warning-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-warning-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-warning-1187.webp",
+    1187
+   ]
+  ],
+  "w": 1187
+ },
+ "/assets/img/unclear-map-signals-after-mtsbd7ta-1w64.png": {
+  "h": 922,
+  "variants": [
+   [
+    "/assets/img/opt/unclear-map-signals-after-mtsbd7ta-1w64-453.webp",
+    453
+   ]
+  ],
+  "w": 453
+ },
+ "/assets/img/unclear-map-signals.png": {
+  "h": 908,
+  "variants": [
+   [
+    "/assets/img/opt/unclear-map-signals-428.webp",
+    428
+   ]
+  ],
+  "w": 428
+ },
+ "/assets/img/user-test-color-rotation-first-image.png": {
+  "h": 1215,
+  "variants": [
+   [
+    "/assets/img/opt/user-test-color-rotation-first-image-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-first-image-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-first-image-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-first-image-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-first-image-2276.webp",
+    2276
+   ]
+  ],
+  "w": 2276
+ },
+ "/assets/img/user-test-color-rotation-second-image.png": {
+  "h": 1281,
+  "variants": [
+   [
+    "/assets/img/opt/user-test-color-rotation-second-image-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-second-image-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-second-image-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-second-image-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-second-image-2323.webp",
+    2323
+   ]
+  ],
+  "w": 2323
+ },
+ "/assets/img/user-test-color-rotation-third-image.png": {
+  "h": 1289,
+  "variants": [
+   [
+    "/assets/img/opt/user-test-color-rotation-third-image-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-third-image-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-third-image-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-third-image-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/user-test-color-rotation-third-image-2320.webp",
+    2320
+   ]
+  ],
+  "w": 2320
+ },
+ "/assets/img/using-a-fake-photo-as-profile-picture-on-tinders-app.png": {
+  "h": 873,
+  "variants": [
+   [
+    "/assets/img/opt/using-a-fake-photo-as-profile-picture-on-tinders-app-403.webp",
+    403
+   ]
+  ],
+  "w": 403
+ },
+ "/assets/img/verified-users-photo-1.png": {
+  "h": 874,
+  "variants": [
+   [
+    "/assets/img/opt/verified-users-photo-1-390.webp",
+    390
+   ]
+  ],
+  "w": 390
+ },
+ "/assets/img/verified-users-photo-2.png": {
+  "h": 877,
+  "variants": [
+   [
+    "/assets/img/opt/verified-users-photo-2-405.webp",
+    405
+   ]
+  ],
+  "w": 405
+ },
+ "/assets/img/verified-users-photo-3.png": {
+  "h": 874,
+  "variants": [
+   [
+    "/assets/img/opt/verified-users-photo-3-390.webp",
+    390
+   ]
+  ],
+  "w": 390
+ },
+ "/assets/img/wacom-intuos-pro-m.jpg": {
+  "h": 400,
+  "variants": [
+   [
+    "/assets/img/opt/wacom-intuos-pro-m-400.webp",
+    400
+   ]
+  ],
+  "w": 400
+ },
+ "/assets/img/watering-plants.png": {
+  "h": 1964,
+  "variants": [
+   [
+    "/assets/img/opt/watering-plants-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/watering-plants-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/watering-plants-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/watering-plants-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/watering-plants-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
+ },
+ "/assets/img/wicky-crocodile.jpg": {
+  "h": 2400,
+  "variants": [
+   [
+    "/assets/img/opt/wicky-crocodile-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/wicky-crocodile-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/wicky-crocodile-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/wicky-crocodile-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/wicky-crocodile-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2400
+ }
+}

@@ -1,0 +1,17 @@
+<div class="cs-bar">
+      <a class="hd-logo" href="/">Tarek Alfutih</a>
+      <a class="cs-back" href="/work/" data-back>← All work</a>
+      <nav class="cs-main" aria-label="Main"><a href="/work/" data-work-link hidden>Work</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+      <a class="btn-cv" href="/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    </div>
+    <script>
+      /* Arrived from Home (?from=home): back link goes Home and the Work link is shown.
+         Otherwise the back link already points to Work, so the Work nav link stays hidden. */
+      (function () {
+        if (new URLSearchParams(location.search).get('from') !== 'home') return;
+        var back = document.querySelector('[data-back]');
+        back.href = '/';
+        back.textContent = '← Home';
+        document.querySelector('[data-work-link]').hidden = false;
+      })();
+    </script>

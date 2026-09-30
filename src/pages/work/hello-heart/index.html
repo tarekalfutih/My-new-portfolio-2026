@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--@head /work/hello-heart/-->
+<title>Hello Heart — Tarek Alfutih</title>
+<meta name="description" content="A dating app addressing loneliness with an ethical approach. Hello Heart improves on Tinder by enhancing ethical design and user safety.">
+<style>
+body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#122a8f;text-decoration:none}
+a:hover{color:#1b3ac4;text-decoration:underline}
+*{box-sizing:border-box}
+.wrap{max-width:1280px;margin:0 auto;background:#fff;border-left:1px solid #dcd9d4;border-right:1px solid #dcd9d4}
+.pad{padding:56px}
+.rule{border-bottom:2px solid #1c1b1a}
+.lbl{font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid #1c1b1a;border-bottom:2px solid #1c1b1a}
+.facts>div{padding:20px;border-right:1px solid #dcd9d4}
+.facts>div:last-child{border-right:none}
+.two{display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+section[id]{scroll-margin-top:96px}
+nav a{position:relative;display:inline-block;padding-bottom:2px}
+nav a:hover{color:#1b3ac4}
+nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#1b3ac4}
+@media (max-width:860px){
+  .pad{padding:32px 24px}
+  h1.h1r{font-size:34px !important}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
+  .two,.three,.g2{grid-template-columns:1fr !important}
+}
+@media (max-width:560px){
+  /* Tinder vs Hello Heart phone pairs: share the row instead of overflowing it */
+  div[style^="width:170px"]{flex:1 1 0;min-width:0;width:auto !important}
+  div[style*="width:170px;aspect-ratio"]{width:100% !important}
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="wrap">
+
+  <header class="cs-hd">
+    <!--@case-bar-->
+    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+      <a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Ethical question</a>
+      <a href="#research" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Research</a>
+      <a href="#concept" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Concept</a>
+      <a href="#reflection" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Reflection</a>
+    </nav>
+  </header>
+
+  <main id="main">
+
+  <section class="pad rule">
+    <div class="lbl" style="margin-bottom:20px">Individual project · Responsible Interaction, Chalmers</div>
+    <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;text-wrap:pretty">Hello Heart</h1>
+    <div style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
+    <p style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">A dating app addressing loneliness with an ethical approach. Hello Heart improves on Tinder by enhancing ethical design and user safety.</p>
+    <div class="facts">
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Individual — literature review, ethical analysis and concept design</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Context</div><div style="font:600 15px/1.35 Archivo">Responsible Interaction, Chalmers · 2025</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div style="font:600 15px/1.35 Archivo">Literature review &amp; ethical analysis — no user testing</div></div>
+    </div>
+  </section>
+
+  <section class="pad rule two" id="problem">
+    <div>
+      <div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">01 · The ethical question</div>
+      <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 16px;text-wrap:pretty">Tinder's platform helps people dealing with loneliness, or looking for a partner or friends. But this design also comes with ethical dilemmas.</p>
+      <ul style="font:400 16px/1.7 Archivo;color:#4a4744;margin:0 0 16px;padding-left:20px;max-width:720px">
+        <li style="margin-bottom:8px">Many crimes have occurred through the use of dating platforms such as Tinder, including kidnapping, sexual assault and human trafficking (Pooley &amp; Boxall, 2020), and financial exploitation (Van der Linde, 2024).</li>
+        <li style="margin-bottom:8px">Tinder does not protect user data — especially exact location — which makes it easy for someone to track and locate a user in real life (Pooley &amp; Boxall, 2020).</li>
+        <li style="margin-bottom:8px">People can use harmful language when chatting on Tinder (Thompson, 2018).</li>
+        <li style="margin-bottom:8px">Tinder allows users to create profiles with no verification, making it easy for scammers to fake identities (Morris, 2022).</li>
+        <li>Tinder's app seems more focused on making money from users, making the platform less affordable for everyone (PYMNTS, n.d.).</li>
+      </ul>
+      <p style="font:600 15px/1.6 Archivo;color:#1c1b1a;margin:0;text-wrap:pretty">The question behind Hello Heart: how can a dating platform be designed to address these safety, privacy and fairness problems responsibly, instead of leaving them for users to deal with on their own?</p>
+    </div>
+    <div style="border-top:1px solid #dcd9d4;padding-top:16px">
+      <div class="lbl" style="font-size:11px;margin-bottom:10px">About this project</div>
+      <p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0">A short, individual course project. The work is research and literature-based, built around ethical reflection rather than a full UX process — there was no prototyping stage or user testing.</p>
+    </div>
+  </section>
+
+  <section class="pad rule" id="research">
+    <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">02 · Research &amp; literature</div>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 28px;text-wrap:pretty">Three ideas from the course literature shaped the analysis of Tinder and the direction for Hello Heart.</p>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="border-top:1px solid #dcd9d4;padding-top:18px">
+        <p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Design justice — affordability as an ethical issue</p>
+        <blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Design justice impels us to consider whether a given affordance is equally available to all people." <span style="color:#75726e;font-size:13px">— Costanza-Chock, 2020, pp. 37–38</span></blockquote>
+        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder requires a monthly fee that is quite expensive, making the app less affordable to many users. Read through design justice, that is not just a pricing choice — it decides who gets to use a safer, better-designed platform at all.</p>
+      </div>
+      <div style="border-top:1px solid #dcd9d4;padding-top:18px">
+        <p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Invisible Women — gender data gaps in design</p>
+        <blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Before we even get to the more serious offenses like being assaulted, women are dealing on a daily basis with behaviours from men that make — and are often calculated to make — them feel uncomfortable." <span style="color:#75726e;font-size:13px">— Criado-Perez, 2020, p. 55</span></blockquote>
+        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 10px;max-width:700px">Tinder's app doesn't stop users from sending harmful messages, which mostly affect women. Criado-Perez's Chapter 1 example — a Karlskoga snow-clearing schedule built around men's commuting habits, without thinking about women's daily routines (p. 32) — shows the same pattern: designs built without gender data in mind end up putting women at a disadvantage.</p>
+        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder shares users' exact location, a feature that can put women at higher risk of stalking or kidnapping. A 22-year-old man was accused of using Snapchat's location-sharing feature to try to kidnap a woman on the Blue Ridge Parkway in North Carolina (ABC7 Chicago, 2023) — a real case of a location feature designed without women's safety in mind.</p>
+      </div>
+      <div style="border-top:1px solid #dcd9d4;padding-top:18px">
+        <p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Ethics for people who work in tech — privacy as a human right</p>
+        <blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Protecting privacy is not only protecting our data... it is protecting a human right including various values like justice, equality, freedom and more." <span style="color:#75726e;font-size:13px">— Steen, 2023, p. 51</span></blockquote>
+        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder asks for photo verification only after several days, leaving a window where people can use stolen or fake photos — including a fake photo generated by ChatGPT, uploaded in a test that Tinder did not flag for verification right away.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pad rule" id="concept">
+    <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">03 · The Hello Heart concept</div>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">Hello Heart is a concept redesign of Tinder — each design response answers one of the ethical problems identified above. Before/after pairs below compare Tinder's real interface with the Hello Heart concept.</p>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Verify users with BankID</p>
+      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Signing in with BankID ensures every user has a verified identity, discouraging fake accounts and scams, and letting law enforcement identify a profile's owner when a crime is investigated (Husz, 2018).</p>
+      <div style="display:flex;gap:16px">
+        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/tinder-log-in.png" alt="Tinder sign-in screen" decoding="async" style="object-fit:contain;"></div></div>
+        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/my-design-log-in.png" alt="Hello Heart sign-in with BankID" decoding="async" style="object-fit:contain;"></div></div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Stop harmful messages</p>
+      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">AI automatically detects and blocks harmful language before it's sent. The sender is blocked right away, and the recipient is notified that a message was blocked for using inappropriate language.</p>
+      <div style="display:flex;gap:16px">
+        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/stop-harmful-messages-tinder.png" alt="Tinder chat — harmful message sent" loading="lazy" decoding="async" style="object-fit:contain;"></div></div>
+        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/stop-harmful-messages-my-design.png" alt="Hello Heart chat — message blocked by AI" loading="lazy" decoding="async" style="object-fit:contain;"></div></div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Fair, ethical pricing</p>
+      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0;max-width:700px">A more affordable price than Tinder's, so a safer platform isn't only available to people who can pay a high monthly fee — in line with design justice.</p>
+    </div>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Protect location privacy</p>
+      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Rethinking how exact location is shared, so the feature can't be used the way Tinder's has been, to track or locate a person in real life.</p>
+      <div style="display:flex;gap:16px">
+        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/protect-privacy-and-location-security-tinder.png" alt="Tinder profile screen" loading="lazy" decoding="async" style="object-fit:contain;"></div></div>
+        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/protect-privacy-and-location-security-my-design.png" alt="Hello Heart profile screen" loading="lazy" decoding="async" style="object-fit:contain;"></div></div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Verified photos</p>
+      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Users must verify their photos through a secure AI service before sharing them on the platform, protecting people's photos from being stolen and reused elsewhere.</p>
+      <div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder — a fake, AI-generated photo uploaded without being flagged for verification</div>
+      <div style="background:#0a0a0c;width:170px;aspect-ratio:390/874;margin-bottom:18px"><img class="slot" src="/assets/img/using-a-fake-photo-as-profile-picture-on-tinders-app.png" alt="Tinder profile with fake photo" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart — the verification flow</div>
+      <div style="display:flex;gap:16px;flex-wrap:wrap">
+        <div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/verified-users-photo-3.png" alt="Verified profile badge" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div style="background:#0a0a0c;width:170px;aspect-ratio:405/877"><img class="slot" src="/assets/img/verified-users-photo-1.png" alt="Adding profile media" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/verified-users-photo-2.png" alt="Selfie verification prompt" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      </div>
+    </div>
+
+    <div style="border-top:1px solid #dcd9d4;padding-top:22px">
+      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Safety &amp; support</p>
+      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">A safety section with three options: block or report a person, read about rules and rights, or contact mental health support.</p>
+      <div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/assets/img/enhancing-safety-and-users-support.png" alt="Hello Heart safety panel" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+    </div>
+  </section>
+
+  <section class="pad" id="reflection">
+    <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">04 · Reflection &amp; outcome</div>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:700px;margin:0 0 16px;text-wrap:pretty">Even with these changes, some problems remain open. Users can still take a screenshot of a profile photo and use a reverse image search to find information about that person — a limitation this concept doesn't solve.</p>
+    <blockquote style="border-left:3px solid #75726e;margin:0 0 16px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#4a4744;max-width:680px">"As long as you do not know exactly which data are being collected, by whom, to whom they are sold, and for what purposes they are used, you do in fact have something to hide." <span style="color:#75726e;font-size:13px">— Steen, 2023, p. 52</span></blockquote>
+    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">Stardust et al. (2022) note that dating apps are under growing pressure from civil society, media and governments to address safety concerns — which has led to more safety features, but also raises a separate concern: some of those features add more surveillance, not less. That tension is left open here, and would need further study to design around properly.</p>
+    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:700px;margin:0;text-wrap:pretty">Hello Heart is a concept, not a built or tested product. The outcome of this project is the analysis itself: applying design justice, gender data gaps and privacy-as-a-human-right to an existing platform, and using that analysis to shape a more responsible alternative.</p>
+  </section>
+
+  </main>
+
+  <!--@footer-->
+
+</div>
+<!--@scripts-->
+</body>
+</html>
