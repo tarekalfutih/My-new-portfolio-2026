@@ -10,7 +10,7 @@
       (function () {
         if (new URLSearchParams(location.search).get('from') !== 'home') return;
         var back = document.querySelector('[data-back]');
-        back.href = '/';
+        back.href = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
         back.textContent = '← Home';
         document.querySelector('[data-work-link]').hidden = false;
       })();

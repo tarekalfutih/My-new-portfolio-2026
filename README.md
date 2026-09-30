@@ -37,7 +37,7 @@ public/                  copied to dist/ as-is
   assets/js/home.js, lego-alma.js, contact.js, work.js   page interactions
   assets/downloads/          downloadable builds (Gilded Cage macOS .dmg, 87 MB)
   assets/img|video|docs/     renamed assets (lowercase kebab-case); img/opt/ holds the WebP variants
-.github/workflows/deploy.yml   builds and deploys to GitHub Pages on push to main
+tools/deploy_pages.sh    builds for GitHub Pages and publishes dist/ to the gh-pages branch
 ```
 
 Pages use these include markers, which `build.py` expands:
@@ -101,9 +101,24 @@ the Work link. The logic is the inline script in `src/partials/case-bar.html`.
 
 ## Deploying
 
-GitHub Pages: push to `main`, then set Settings → Pages → Source to "GitHub Actions". The
-`CNAME` file sets the custom domain.
-Netlify or Vercel: use `python3 build.py` as the build command and `dist` as the publish directory.
+The site is published with GitHub Pages from the `gh-pages` branch:
+
+```bash
+sh tools/deploy_pages.sh
+```
+
+This builds with `BASE_PATH=/My-new-portfolio-2026`, because the site lives at
+https://tarekalfutih.github.io/My-new-portfolio-2026/. That prefixes every root-relative link,
+image, video and CSS `url()` and leaves out `CNAME`. It then commits `dist/` to `gh-pages` and
+pushes; only changed files are uploaded. Push your source changes to `main` as usual; `main`
+holds the source and `gh-pages` holds the built site.
+
+When **tarekdesign.se** points to GitHub Pages, edit `tools/deploy_pages.sh` so it uses an empty
+`BASE_PATH` and `SITE_URL=https://tarekdesign.se`. The build then keeps `public/CNAME` and root URLs.
+Also set the custom domain under the repo's Settings → Pages.
+
+Netlify or Vercel (serving at a domain root): the build command is `python3 build.py`, and the
+publish directory is `dist`.
 
 ## Known open items (waiting on the owner)
 

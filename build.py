@@ -4,6 +4,10 @@
     python3 build.py            # build into dist/
     python3 build.py --serve    # build, then serve dist/ on http://localhost:8000
 
+    BASE_PATH=/My-new-portfolio-2026 python3 build.py
+                                # build for a sub-path (GitHub Pages without a custom domain):
+                                # every root-relative URL gets the prefix and CNAME is left out
+
 Pages live in src/pages/ (one index.html per route). They are plain HTML with a
 few include markers that are expanded from src/partials/:
 
@@ -29,7 +33,8 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(ROOT, 'src')
 PUBLIC = os.path.join(ROOT, 'public')
 DIST = os.path.join(ROOT, 'dist')
-SITE_URL = 'https://tarekdesign.se'
+BASE_PATH = os.environ.get('BASE_PATH', '').rstrip('/')          # '' when served at a domain root
+SITE_URL = os.environ.get('SITE_URL', 'https://tarekdesign.se').rstrip('/')  # canonical origin (+ base)
 
 NAV = [('work', '/work/', 'Work'), ('about', '/about/', 'About'), ('contact', '/contact/', 'Contact')]
 
@@ -88,6 +93,17 @@ def cache_bust(text):
     return re.sub(r'"(/assets/(?:css|js|video)/[^"?]+)"', repl, text)
 
 
+def with_base(text):
+    """Prefix root-relative URLs (href/src/poster, srcset entries, CSS url()) with BASE_PATH."""
+    if not BASE_PATH:
+        return text
+    text = re.sub(r'\b(href|src|poster|action)="/(?!/)', r'\1="%s/' % BASE_PATH, text)
+    text = re.sub(r'\bsrcset="([^"]*)"',
+                  lambda m: 'srcset="%s"' % re.sub(r'(^|,\s*)/(?!/)', r'\1%s/' % BASE_PATH, m.group(1)), text)
+    text = re.sub(r'url\((["\']?)/(?!/)', r'url(\1%s/' % BASE_PATH, text)
+    return text
+
+
 def render(text, route='/'):
     text = re.sub(r'<!--@head (\S+)-->',
                   lambda m: partial('head').replace('{{url}}', SITE_URL + m.group(1)), text)
@@ -99,6 +115,7 @@ def render(text, route='/'):
     text = text.replace('<!--@scripts-->', partial('scripts'))
     text = responsive_images(text, route)
     text = cache_bust(text)
+    text = with_base(text)
     left = re.findall(r'<!--@[^>]*-->', text)
     if left:
         raise SystemExit('Unknown include marker(s): %s' % left)
@@ -109,6 +126,8 @@ def build():
     if os.path.isdir(DIST):
         shutil.rmtree(DIST)
     shutil.copytree(PUBLIC, DIST)
+    if BASE_PATH and os.path.exists(os.path.join(DIST, 'CNAME')):
+        os.remove(os.path.join(DIST, 'CNAME'))   # custom domain only applies to a root build
     pages_dir = os.path.join(SRC, 'pages')
     count = 0
     for dirpath, _, files in os.walk(pages_dir):
@@ -125,7 +144,8 @@ def build():
             with open(dest, 'w', encoding='utf-8') as f:
                 f.write(out)
             count += 1
-    print('Built %d pages into %s' % (count, os.path.relpath(DIST, os.getcwd())))
+    print('Built %d pages into %s%s' % (count, os.path.relpath(DIST, os.getcwd()),
+                                        ' (base path %s)' % BASE_PATH if BASE_PATH else ''))
 
 
 def serve(port=8000):
