@@ -26,7 +26,6 @@ import json
 import os
 import re
 import shutil
-import socketserver
 import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -55,6 +54,15 @@ def header(current):
             for key, href, label in rows if key != current]
     # "← Home" beside the name on Work, About and Contact (hidden on phones).
     home = ('\n    <a class="hd-home" href="/">← Home</a>' if current in ('work', 'about', 'contact') else '')
+    if current == 'illustration':
+        # Back link: to Work by default, to Home when arriving from Home (?from=home, site.js).
+        # On phones it is the first menu row; the menu then offers the other of Home / Work.
+        home = '\n    <a class="hd-home" href="/work/" data-back>← Work</a>'
+        menu = ['<a href="/work/" data-back>← Work</a>',
+                '<a href="/" data-from-home-hide>Home<span aria-hidden="true">→</span></a>',
+                '<a href="/work/" data-from-home-show hidden>Work<span aria-hidden="true">→</span></a>',
+                '<a href="/about/">About<span aria-hidden="true">→</span></a>',
+                '<a href="/contact/">Contact<span aria-hidden="true">→</span></a>']
     return (partial('header').replace('{{nav}}', '\n      '.join(links))
             .replace('{{menu}}', '\n      '.join(menu)).replace('{{home}}', home))
 
@@ -158,8 +166,9 @@ def build():
 def serve(port=8000):
     os.chdir(DIST)
     handler = http.server.SimpleHTTPRequestHandler
-    socketserver.TCPServer.allow_reuse_address = True
-    with socketserver.TCPServer(('', port), handler) as httpd:
+    # Threaded: a video download (browsers keep that connection open) must not block every other file.
+    http.server.ThreadingHTTPServer.allow_reuse_address = True
+    with http.server.ThreadingHTTPServer(('', port), handler) as httpd:
         print('Serving dist/ at http://localhost:%d' % port)
         httpd.serve_forever()
 
