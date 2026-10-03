@@ -78,7 +78,13 @@
   var btn = document.querySelector('[data-menu-btn]');
   var menu = document.getElementById('m-menu');
   if (!btn || !menu) return;
+  var header = btn.closest('header');
   function set(open, refocus, keyboard) {
+    if (open && header) {
+      // The menu starts right under the header, wherever the header is on screen.
+      var b = header.getBoundingClientRect().bottom;
+      menu.style.setProperty('--m-top', Math.max(0, Math.round(b) - 2) + 'px');
+    }
     menu.hidden = !open;
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');

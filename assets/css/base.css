@@ -246,9 +246,11 @@ html.cvv-open { overflow: hidden; }
   }
   .m-btn .m-ic-close, .m-btn[aria-expanded="true"] .m-ic-open { display: none; }
   .m-btn[aria-expanded="true"] .m-ic-close { display: block; }
+  /* Fixed to the screen (not hung under the header), so it shows wherever the page is scrolled.
+     site.js sets --m-top to the header's bottom edge when the menu opens. */
   .m-menu:not([hidden]) {
-    position: absolute; left: 0; right: 0; top: 100%; z-index: 6;
-    height: calc(100vh - 56px); height: calc(100dvh - 56px); overflow-y: auto;
+    position: fixed; left: 0; right: 0; top: var(--m-top, 56px); bottom: 0; z-index: 50;
+    overflow-y: auto; overscroll-behavior: contain;
     display: flex; flex-direction: column; background: #fff; border-top: 2px solid var(--ink);
   }
   /* Lock the page behind the open menu on <html> only: hiding body overflow too resets the scroll
