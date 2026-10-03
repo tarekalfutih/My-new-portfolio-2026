@@ -251,6 +251,7 @@ html.cvv-open { overflow: hidden; }
 .m-menu a:hover { color: var(--ink); text-decoration: none; }
 .m-menu a:active { background: var(--cobalt-50); }
 .m-menu a span { font-size: 16px; }
+.m-menu a[aria-current="page"] { font-weight: 800; box-shadow: inset 3px 0 0 var(--ink); }
 @media (max-width: 767px) {
   html, body { overflow-x: clip; overscroll-behavior-x: none; }
   .hd {

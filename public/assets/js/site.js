@@ -72,22 +72,25 @@
 })();
 
 /* Phone menu (< 768px): the header's hamburger opens a full-screen list of links.
-   Esc and link taps close it; focus moves to the first link; the page behind does not scroll. */
+   Esc and link taps close it; opened from the keyboard, focus moves to the first link; the page
+   behind does not scroll. */
 (function () {
   var btn = document.querySelector('[data-menu-btn]');
   var menu = document.getElementById('m-menu');
   if (!btn || !menu) return;
-  function set(open, refocus) {
+  function set(open, refocus, keyboard) {
     menu.hidden = !open;
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
     btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
     document.documentElement.classList.toggle('m-open', open);
-    if (open) {
+    // Keyboard users go straight into the menu; a tap or click doesn't move focus (no focus ring).
+    if (open && keyboard) {
       var first = menu.querySelector('a:not([hidden])');
       if (first) first.focus();
-    } else if (refocus) btn.focus();
+    } else if (!open && refocus) btn.focus();
   }
-  btn.addEventListener('click', function () { set(menu.hidden); });
+  // e.detail is 0 when the button is activated with Enter / Space.
+  btn.addEventListener('click', function (e) { set(menu.hidden, false, e.detail === 0); });
   menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && !menu.hidden) set(false, true);

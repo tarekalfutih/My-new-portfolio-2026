@@ -48,10 +48,10 @@ def header(current):
     for key, href, label in NAV:
         cur = ' aria-current="page"' if key == current else ''
         links.append('<a href="%s"%s>%s</a>' % (href, cur, label))
-    # Phone menu (hamburger): every other page, Home first.
+    # Phone menu (hamburger): all four pages in the same order on every page; the current one is marked.
     rows = [('home', '/', 'Home')] + NAV
-    menu = ['<a href="%s">%s<span aria-hidden="true">→</span></a>' % (href, label)
-            for key, href, label in rows if key != current]
+    menu = ['<a href="%s"%s>%s<span aria-hidden="true">→</span></a>'
+            % (href, ' aria-current="page"' if key == current else '', label) for key, href, label in rows]
     # "← Home" beside the name on Work, About and Contact (hidden on phones).
     home = ('\n    <a class="hd-home" href="/">← Home</a>' if current in ('work', 'about', 'contact') else '')
     if current == 'illustration':
