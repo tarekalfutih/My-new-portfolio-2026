@@ -36,7 +36,18 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   div[style^="width:170px"]{flex:1 1 0;min-width:0;width:auto !important}
   div[style*="width:170px;aspect-ratio"]{width:100% !important}
 }
-.hh-mhero{display:none}
+.hh-mhero,.hh-dhero{display:none}
+/* First screen (3 Oct, >= 768px): the cover beside the text, facts full width underneath. */
+@media (min-width:768px){
+  .hh-dhero{display:block}
+  .hh-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:clamp(32px,4vw,56px);align-items:center;margin-bottom:28px}
+  .hh-txt .hh-lead{margin-bottom:0 !important}
+}
+@media (min-width:768px) and (max-width:1024px){
+  .hh-top{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+  .hh-txt h1.h1r{font-size:40px !important}
+  .hh-txt .hh-lead{font-size:17px !important}
+}
 /* Phones (< 768px), on top of case-phone.css. Desktop and iPad are unchanged. */
 @media (max-width:767px){
   /* Cover image first, then the title */
@@ -87,6 +98,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
     <div class="hh-line" style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
     <p class="hh-lead" style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">A dating app addressing loneliness with an ethical approach. Hello Heart improves on Tinder by enhancing ethical design and user safety.</p>
     </div>
+    <div class="hh-dhero" style="aspect-ratio:1448/1086;background:#ececea"><img class="slot" src="/assets/img/hello-heart-cover.jpg" alt="Hello Heart" decoding="async"></div>
     </div>
     <div class="facts">
       <div class="hh-role"><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Individual — literature review, ethical analysis and concept design</div></div>

@@ -81,6 +81,11 @@ support (Space/K, ←/→, M, F). Native controls were dropped because Safari ti
 while they show, and pages can't turn that off. Without JavaScript the native controls remain.
 Keep writing `controls` on new `<video>` tags and the script takes over.
 
+**Rotate prompt.** `assets/js/video-behavior.js` shows a "Rotate your phone for full screen" card over a
+landscape video when it starts playing on a phone or iPad held upright (once per video; hides after
+3.6s, on rotation or on tap). It covers the whole video, control bar included. Test it on a desktop
+with `?rotatetest=1` in the URL.
+
 **Encoding.**
 
 Owner-supplied recordings are often HEVC (Firefox and many Chrome setups can't play it) and far

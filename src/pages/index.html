@@ -169,6 +169,26 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .short-grid{align-items:start}
   .feat-img{height:auto !important;width:100% !important;aspect-ratio:16/10}
 }
+/* Lead project (3 Oct). 768–900px: photo in columns 1–6, text in 7–12, vertically centred.
+   768–819px (iPad mini): the thesis button is hidden and the type is a step smaller. */
+@media (min-width:768px) and (max-width:900px){
+  .lead-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;gap:24px !important;align-items:center !important}
+  .lead-photo{grid-column:1 / span 6 !important;max-width:none !important}
+  .lead-text{grid-column:7 / span 6 !important}
+  .lead-title{font-size:30px !important;margin-bottom:12px !important}
+  .lead-text p{font-size:17px !important;margin-bottom:16px !important}
+  .lead-chip{margin-bottom:14px !important}
+  .lead-text>div.m-hide{margin-bottom:24px !important}
+}
+@media (min-width:768px) and (max-width:819px){
+  .thesis-dl{display:none !important}
+  .lead-title{font-size:26px !important}
+  .lead-text p{font-size:15px !important}
+  .lead-text>div.m-hide{margin-bottom:20px !important}
+}
+/* Fireflies on the forest illustration: brighter and larger on wide screens. */
+.ffly{pointer-events:none;z-index:1}
+@media (min-width:1281px){.ffly{width:7px !important;height:7px !important;background:#fff3c4 !important;box-shadow:0 0 18px 6px rgba(255,220,130,.75),0 0 4px 1px #fff !important}}
 /* Phones (< 768px). */
 @media (max-width:767px){
   .m-hide,.cue-a,.ffly{display:none !important}
