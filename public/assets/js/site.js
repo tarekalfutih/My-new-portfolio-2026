@@ -58,3 +58,32 @@
     else window.addEventListener('resize', function () { apply(img); });
   });
 })();
+
+/* Phone menu (< 768px): the header's hamburger opens a full-screen list of links.
+   Esc and link taps close it; focus moves to the first link; the page behind does not scroll. */
+(function () {
+  var btn = document.querySelector('[data-menu-btn]');
+  var menu = document.getElementById('m-menu');
+  if (!btn || !menu) return;
+  function set(open, refocus) {
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.documentElement.classList.toggle('m-open', open);
+    if (open) {
+      var first = menu.querySelector('a:not([hidden])');
+      if (first) first.focus();
+    } else if (refocus) btn.focus();
+  }
+  btn.addEventListener('click', function () { set(menu.hidden); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menu.hidden) set(false, true);
+  });
+  // Rotating or resizing past the phone layout closes the menu.
+  var mq = window.matchMedia('(min-width: 768px)');
+  function onChange() { if (mq.matches && !menu.hidden) set(false); }
+  if (mq.addEventListener) mq.addEventListener('change', onChange); else mq.addListener(onChange);
+  // Back/forward cache: never come back to an open menu.
+  window.addEventListener('pageshow', function () { if (!menu.hidden) set(false); });
+})();

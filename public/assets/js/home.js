@@ -186,3 +186,15 @@
   initSkills();
   setTimeout(intro, 700);
 })();
+
+/* Phones: the lead and second-featured covers wipe in from the bottom, the photo settles from a
+   slight zoom and the title fades up, once each as they scroll into view. Not with reduced motion. */
+(function () {
+  if (!window.matchMedia('(max-width: 767px)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.lead-grid,.two-col');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('m-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  els.forEach(function (el) { el.classList.add('m-arm'); io.observe(el); });
+})();

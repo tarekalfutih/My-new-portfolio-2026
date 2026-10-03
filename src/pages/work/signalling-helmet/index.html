@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <!--@head /work/signalling-helmet/-->
+<link rel="stylesheet" href="/assets/css/case-phone.css">
 <title>Signalling Helmet — Tarek Alfutih</title>
 <meta name="description" content="Cyclists signal turns by taking a hand off the handlebar — a gesture that reduces control and raises the risk of accidents, especially for older cyclists.">
 <style>
@@ -32,6 +33,34 @@ section[id]{scroll-margin-top:96px}
 nav a{position:relative;display:inline-block;padding-bottom:2px}
 nav a:hover{color:#1b3ac4}
 nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#1b3ac4}
+.sh-mline{display:none}
+/* Phones (< 768px), on top of case-phone.css. Desktop and iPad are unchanged. */
+@media (max-width:767px){
+  /* Hero image first, then the title */
+  main{display:flex;flex-direction:column}
+  .sh-hero{order:-1;padding-top:0 !important;padding-bottom:0 !important;border-bottom:0 !important}
+  .sh-hero>.lbl,.sh-hero p{display:none !important}
+  .sh-hero>div{display:block !important}
+  .sh-intro{padding-top:20px !important;padding-bottom:28px !important}
+  .sh-badge{margin-bottom:12px !important}
+  .sh-badge span{font-size:10px !important;padding:5px 8px !important}
+  html .sh-intro h1.h1r{font-size:32px !important;margin-bottom:8px !important}
+  .sh-sub{font-size:16px !important;line-height:1.45 !important;color:#4a4744 !important;margin-bottom:20px !important}
+  .sh-intro .facts>div{padding:14px 12px 14px 0 !important;border-bottom:0 !important}
+  .sh-intro .facts>div.sh-role,.sh-intro .facts>div.sh-meth{grid-column:1 / -1}
+  .sh-intro .facts>div.sh-role{border-bottom:1px solid #dcd9d4 !important}
+  .sh-intro .facts>div.sh-meth{border-top:1px solid #dcd9d4;padding-bottom:0 !important}
+  .sh-chips{display:none !important}
+  .sh-mline{display:block !important;font:400 14px/1.45 Archivo;color:#4a4744}
+  /* Figure 3c and 3d: 2 per row, edge to edge, 4px gap */
+  .sh-pair{margin-left:-20px;margin-right:-20px;gap:4px !important;grid-template-columns:1fr 1fr !important}
+  .sh-pair>div{min-width:0}
+  .sh-pair>div>.lbl{padding:0 8px 0 20px}
+  .sh-pair>div:last-child>.lbl{padding:0 20px 0 8px}
+  html .wrap section .sh-pair div:has(> img):not(.m-keep):not(.vc){width:auto !important;margin:0 !important;max-width:none !important}
+  .sh-r2{display:none !important}
+  #research>.sh-pivot{padding-top:20px !important}
+}
 </style>
 </head>
 <body>
@@ -53,17 +82,17 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 
   <main id="main">
 
-  <section class="pad rule" id="facts">
-    <div style="margin-bottom:20px;display:flex;align-items:center;gap:12px">
+  <section class="pad rule sh-intro" id="facts">
+    <div class="sh-badge" style="margin-bottom:20px;display:flex;align-items:center;gap:12px">
       <span style="background:#1b3ac4;color:#fff;font:600 11px/1 Archivo;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px">University course project — functional prototype</span>
     </div>
     <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 10px;text-wrap:pretty">Signalling Helmet</h1>
-    <div style="font:400 18px/1.4 Archivo;color:#75726e;margin-bottom:28px">A gesture-activated turn-signal helmet and glove system for cyclists</div>
+    <div class="sh-sub" style="font:400 18px/1.4 Archivo;color:#75726e;margin-bottom:28px">A gesture-activated turn-signal helmet and glove system for cyclists</div>
     <div class="facts">
-      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Role</div><div style="font:600 15px/1.35 Archivo">Participated throughout the design process — concept sketches, Arduino prototyping, user testing</div></div>
+      <div class="sh-role"><div class="lbl" style="font-size:11px;margin-bottom:5px">Role</div><div style="font:600 15px/1.35 Archivo">Participated throughout the design process — concept sketches, Arduino prototyping, user testing</div></div>
       <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Team</div><div style="font:600 15px/1.35 Archivo">Group of 5</div></div>
       <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Context</div><div style="font:600 15px/1.35 Archivo">Tangible Interaction course project, 2025</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Methods</div><div style="display:flex;flex-wrap:wrap;gap:6px">
+      <div class="sh-meth"><div class="lbl" style="font-size:11px;margin-bottom:5px">Methods</div><div class="sh-mline">Brainstorming · Six Thinking Hats · Prototyping · User testing</div><div class="sh-chips" style="display:flex;flex-wrap:wrap;gap:6px">
         <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Brainstorming</span>
         <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Six Thinking Hats</span>
         <span style="border:1px solid #1b3ac4;color:#122a8f;font:600 11px/1 Archivo;padding:4px 8px">Prototyping</span>
@@ -72,7 +101,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
     </div>
   </section>
 
-  <section class="pad rule" id="hero">
+  <section class="pad rule sh-hero" id="hero">
     <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">01 · Hero</div>
     <div style="display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center">
       <div class="gray" style="aspect-ratio:4/3"><img class="slot" src="/assets/img/helmet-hero.jpg" alt="Hero — signalling helmet and gloves" decoding="async" style="object-fit:contain;"></div>
@@ -102,7 +131,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
         <div class="gray" style="aspect-ratio:1600/1131"><img class="slot" src="/assets/img/helmet-sketch2.webp" alt="Solar hat concept" loading="lazy" decoding="async" style="object-fit:contain;"></div>
       </div>
     </div>
-    <div style="border-top:1px solid #dcd9d4;padding-top:24px">
+    <div class="sh-pivot" style="border-top:1px solid #dcd9d4;padding-top:24px">
       <div class="lbl" style="margin-bottom:12px">Pivot</div>
       <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">Pitch feedback showed the solar hat's panel was too small to power the planned features, and Sweden's low sunlight made it worse. We stayed within the wearable theme but pivoted to a safety problem: cyclist turn signalling — trading a sustainability angle for a real-world safety issue affecting cyclists, pedestrians, and other road users.</p>
     </div>
@@ -124,7 +153,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
       <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3b — Circuit built in Tinkercad</div>
       <div style="aspect-ratio:930/850"><img class="slot" src="/assets/img/helmet-tinkercad-circuit.png" alt="Tinkercad circuit" loading="lazy" decoding="async"></div>
     </div>
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
+    <div class="sh-pair m-keep" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
       <div>
         <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3c — Prototype, back</div>
         <div style="aspect-ratio:4284/5712"><img class="slot" src="/assets/img/helmet-prototype-front.jpg" alt="Prototype, back" loading="lazy" decoding="async"></div>
@@ -163,7 +192,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   <section class="pad" id="evaluation">
     <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">07 · Reflection</div>
     <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">We ran a two-week evaluation: cyclists tested the prototype first, then pedestrians assessed how clearly the system communicated a cyclist's intentions. Six users of different ages and genders — teachers, students, and regular cyclists — took part in ~10-minute sessions of observation, feedback, and a questionnaire.</p>
-    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">Cyclists couldn't see the LED from their own helmet and asked for confirmation that a signal had activated — a vibration or sound was suggested, along with different colours, blinking patterns, and more LEDs for visibility. Opinions were split on whether the signal should switch off automatically or need manual deactivation.</p>
+    <p class="sh-r2" style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">Cyclists couldn't see the LED from their own helmet and asked for confirmation that a signal had activated — a vibration or sound was suggested, along with different colours, blinking patterns, and more LEDs for visibility. Opinions were split on whether the signal should switch off automatically or need manual deactivation.</p>
     <div style="max-width:680px;margin:0 0 24px">
       <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 4 — Visual feedback on the glove during signalling</div>
       <div style="aspect-ratio:5184/3456"><img class="slot" src="/assets/img/helmet-glove-feedback.jpg" alt="Visual feedback on glove" loading="lazy" decoding="async"></div>

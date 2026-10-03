@@ -173,6 +173,43 @@ button { font-family: inherit; }
   .hd-nav, .cs-main { display: none; }
   .hd .btn-cv, .cs-bar .btn-cv { margin-left: auto; }
 }
+/* Phone header (< 768px): name + 44px menu button; nav, back link, CV and section tabs move
+   out (the menu holds the links; no CV on phones). Desktop never shows .m-btn / .m-menu. */
+.m-btn, .m-menu { display: none; }
+.m-menu a {
+  height: 56px; display: flex; align-items: center; justify-content: space-between; padding: 0 20px;
+  border-bottom: 1px solid var(--hairline); font: 600 20px/1 Archivo, sans-serif; letter-spacing: -.02em;
+  color: var(--ink); text-decoration: none;
+}
+.m-menu a:last-child { border-bottom: 0; }
+.m-menu a:hover { color: var(--ink); text-decoration: none; }
+.m-menu a:active { background: var(--cobalt-50); }
+.m-menu a span { font-size: 16px; }
+@media (max-width: 767px) {
+  html, body { overflow-x: clip; overscroll-behavior-x: none; }
+  .hd {
+    height: 56px; padding: 0 6px 0 20px; flex-wrap: nowrap; gap: 12px;
+  }
+  .cs-bar { height: 56px; padding: 0 6px 0 20px; flex-wrap: nowrap; gap: 12px; border-bottom: 0; }
+  .hd-logo { font-size: 17px; min-height: 44px; display: inline-flex; align-items: center; }
+  .hd-nav, .cs-main, .cs-back, .cs-nav, .btn-cv, .cv-link { display: none !important; }
+  .m-btn {
+    display: flex; margin-left: auto; width: 44px; height: 44px; flex: none; align-items: center; justify-content: center;
+    background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink);
+  }
+  .m-btn .m-ic-close, .m-btn[aria-expanded="true"] .m-ic-open { display: none; }
+  .m-btn[aria-expanded="true"] .m-ic-close { display: block; }
+  .m-menu:not([hidden]) {
+    position: absolute; left: 0; right: 0; top: 100%; z-index: 6;
+    height: calc(100vh - 56px); height: calc(100dvh - 56px); overflow-y: auto;
+    display: flex; flex-direction: column; background: #fff; border-top: 2px solid var(--ink);
+  }
+  html.m-open, html.m-open body { overflow: hidden; }
+  .ft { padding: 16px 20px; }
+  .ft-copy, .ft-nav a { font-size: 12px; }
+  section[id] { scroll-margin-top: 64px; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto !important; }
   [data-reveal] { opacity: 1 !important; transform: none !important; transition: none !important; }

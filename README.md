@@ -30,7 +30,8 @@ public/                  copied to dist/ as-is
   cv.pdf
   CNAME                  tarekdesign.se (GitHub Pages custom domain)
   assets/css/modernist.css   design-system base (from the handoff's _ds/ folder)
-  assets/css/base.css        tokens, page frame, header, footer, focus, shared motion
+  assets/css/base.css        tokens, page frame, header, footer, focus, shared motion, phone header + menu
+  assets/css/case-phone.css  shared phone layer (< 768px) for the case studies that link it
   assets/js/site.js          scroll reveal + Claude Design image crops (every page)
   assets/js/video-controls.js  site video controls, no tint over the footage (every page)
   assets/js/video-behavior.js  pause off-screen, one video at a time, reset on back (every page)

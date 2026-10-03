@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 <!--@head /work/rel-ai-tionship/-->
+<link rel="stylesheet" href="/assets/css/case-phone.css">
 <title>Rel-AI-tionship — Tarek Alfutih</title>
 <meta name="description" content="An animation video exploring AI dependency in everyday life, told through the story of Steve, a man who gradually becomes dependent on AI for everyday choices, with humour and satire.">
 <style>
@@ -31,6 +32,35 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .strip{grid-template-columns:1fr 1fr}
   .strip>div{border-right:none;border-bottom:1px solid #dcd9d4}
 }
+.m-inl{display:none}
+/* Phones (< 768px), on top of case-phone.css. Desktop and iPad are unchanged. */
+@media (max-width:767px){
+  .m-hide{display:none !important}
+  .m-inl{display:inline !important}
+  /* No hero image: the page starts with the title */
+  .ra-intro{padding-top:20px !important;padding-bottom:28px !important}
+  .ra-intro>.lbl:first-child{margin-bottom:10px !important}
+  .ra-course,.ra-rdet,.ra-notes,#process p,.ra-skcap{display:none !important}
+  html .ra-intro h1.h1r{font-size:32px !important;margin-bottom:10px !important}
+  .ra-intro>.ra-line{margin-bottom:14px !important}
+  .ra-lead{font-size:16px !important;line-height:1.5 !important;margin-bottom:20px !important}
+  /* Facts as a list: 84px label column, value 15px, 1px dividers */
+  html .ra-intro .facts{grid-template-columns:minmax(0,1fr) !important;border-bottom:1px solid #dcd9d4}
+  html .ra-intro .facts>div{display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:12px;align-items:baseline;padding:12px 0 !important;border-bottom:1px solid #dcd9d4 !important}
+  html .ra-intro .facts>div:last-child{border-bottom:0 !important}
+  html .ra-intro .facts>div>div{margin:0 !important;font-size:15px !important;line-height:1.4 !important}
+  html .ra-intro .facts>div>.lbl{font-size:11px !important;margin:0 !important}
+  html .ra-intro .facts>div>div.ra-when{grid-column:2;font-size:13px !important;color:#75726e}
+  .ra-film{padding:0 !important}
+  .ra-film>div{max-width:none !important}
+  .ra-film video{width:100% !important}
+  .strip>div>div:last-child{padding:10px 12px 12px !important}
+  .strip>div>div:last-child>div:last-child{font-size:13px !important}
+  #process>div{margin-bottom:28px !important}
+  /* Storyboard edge to edge; the three sketches in one row with a 4px gap */
+  html .wrap section .ra-sk{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:4px !important;margin:0 -20px}
+  html .wrap section .ra-sk div:has(> img):not(.m-keep):not(.vc){width:auto !important;margin:0 !important;max-width:none !important}
+}
 </style>
 </head>
 <body>
@@ -48,22 +78,22 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 
   <main id="main">
 
-  <section class="pad rule">
+  <section class="pad rule ra-intro">
     <div class="lbl" style="margin-bottom:20px">Group project</div>
-    <div style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;border:1px solid #1b3ac4;margin-bottom:16px"><span style="font:600 11px Archivo;letter-spacing:.06em;text-transform:uppercase;color:#122a8f">Course - Interactive and Linear Storytelling with Digital Media</span></div>
+    <div class="ra-course" style="display:inline-flex;align-items:center;gap:8px;padding:4px 10px;border:1px solid #1b3ac4;margin-bottom:16px"><span style="font:600 11px Archivo;letter-spacing:.06em;text-transform:uppercase;color:#122a8f">Course - Interactive and Linear Storytelling with Digital Media</span></div>
     <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px">Rel-AI-tionship</h1>
-    <div style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
-    <p style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">An animation video exploring AI dependency in everyday life, told through the story of Steve, a man who gradually becomes dependent on AI for everyday choices, with humour and satire.</p>
+    <div class="ra-line" style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
+    <p class="ra-lead" style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">An animation video exploring AI dependency in everyday life, told through the story of Steve, a man who gradually becomes dependent on AI for everyday choices, with humour and satire.</p>
 
     <div class="facts">
       <div>
         <div class="lbl" style="font-size:11px;margin-bottom:10px">My role</div>
         <div style="font:600 15px/1.45 Archivo;margin-bottom:6px">Art Director, Lead Illustrator, Video Editor and Project Manager</div>
-        <div style="font:400 14px/1.4 Archivo;color:#75726e">Coordinated production, created the visual style, produced most illustrations, edited the final animation in After Effects</div>
+        <div class="ra-rdet" style="font:400 14px/1.4 Archivo;color:#75726e">Coordinated production, created the visual style, produced most illustrations, edited the final animation in After Effects</div>
       </div>
       <div>
         <div class="lbl" style="font-size:11px;margin-bottom:10px">Team</div>
-        <div style="font:600 15px/1.45 Archivo">Tarek Alfutih, Marie Tornau, Rasti Tengman Mhealden, Tabassum Alam and Kimia Mohammadi</div>
+        <div style="font:600 15px/1.45 Archivo"><span class="m-hide">Tarek Alfutih, Marie Tornau, Rasti Tengman Mhealden, Tabassum Alam and Kimia Mohammadi</span><span class="m-inl">5 people</span></div>
       </div>
       <div>
         <div class="lbl" style="font-size:11px;margin-bottom:10px">Format</div>
@@ -72,12 +102,12 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
       <div>
         <div class="lbl" style="font-size:11px;margin-bottom:10px">Status</div>
         <div style="font:600 15px/1.45 Archivo">Course project</div>
-        <div style="font:400 14px/1.4 Archivo;color:#75726e;margin-top:6px">Concluded, 2026</div>
+        <div class="ra-when" style="font:400 14px/1.4 Archivo;color:#75726e;margin-top:6px">Concluded, 2026</div>
       </div>
     </div>
   </section>
 
-  <section class="rule" style="padding:32px 24px">
+  <section class="rule ra-film" style="padding:32px 24px">
     <div style="max-width:900px;margin:0 auto">
       <video src="/assets/video/relaitionship-small-size-file.mp4" controls="controls" playsinline="true" style="width:100%;aspect-ratio:16/9;background:#191919;display:block"></video>
       <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:8px 0 0">The final animation.</p>
@@ -121,23 +151,23 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
     <div style="margin-bottom:36px">
       <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">From sketch to final</div>
       <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 16px;max-width:760px">Sketches were drawn by hand on paper, sometimes referencing photos, then divided across the team. Drawings and animation were produced in Krita and Photoshop; the finished work was collected and edited into the final video in After Effects.</p>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
+      <div class="ra-sk m-keep" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
         <div>
           <div style="background:#ececea;aspect-ratio:4/3"><img class="slot" src="/assets/img/character-wakes-up-edited.jpg" alt="Hand-drawn sketch - Steve waking to the alarm" loading="lazy" decoding="async" data-view="1.017 1.994 0.85"></div>
-          <div style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Sketch on paper - waking to the alarm</div>
+          <div class="ra-skcap" style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Sketch on paper - waking to the alarm</div>
         </div>
         <div>
           <div style="background:#ececea;aspect-ratio:4/3"><img class="slot" src="/assets/img/clock.jpg" alt="Hand-drawn sketch - alarm clock detail" loading="lazy" decoding="async" data-view="1 0 0.755"></div>
-          <div style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Sketch on paper - alarm clock detail</div>
+          <div class="ra-skcap" style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Sketch on paper - alarm clock detail</div>
         </div>
         <div>
           <div style="background:#ececea;aspect-ratio:4/3"><img class="slot" src="/assets/img/knak-the-door-2.png" alt="Redrawn line art in Krita and Photoshop" loading="lazy" decoding="async" data-view="1 4.968 0"></div>
-          <div style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Redrawn in Krita and Photoshop</div>
+          <div class="ra-skcap" style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Redrawn in Krita and Photoshop</div>
         </div>
       </div>
     </div>
 
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
+    <div class="ra-notes" style="display:grid;grid-template-columns:repeat(3,1fr);gap:28px">
       <div>
         <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Ideation</div>
         <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0">Each team member spent two minutes writing a short story idea on paper, then rotated papers and continued each other's stories. Five concepts emerged, most exploring AI's role in daily life, and the group used dot voting to pick the final story.</p>

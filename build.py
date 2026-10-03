@@ -49,7 +49,12 @@ def header(current):
     for key, href, label in NAV:
         cur = ' aria-current="page"' if key == current else ''
         links.append('<a href="%s"%s>%s</a>' % (href, cur, label))
-    return partial('header').replace('{{nav}}', '\n      '.join(links))
+    # Phone menu (hamburger): every other page, Home first.
+    rows = [('home', '/', 'Home')] + NAV
+    menu = ['<a href="%s">%s<span aria-hidden="true">→</span></a>' % (href, label)
+            for key, href, label in rows if key != current]
+    return (partial('header').replace('{{nav}}', '\n      '.join(links))
+            .replace('{{menu}}', '\n      '.join(menu)))
 
 
 def load_json(name):

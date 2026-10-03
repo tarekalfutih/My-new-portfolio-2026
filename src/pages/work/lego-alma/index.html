@@ -53,6 +53,50 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .universeum-row>div{flex:1 1 28% !important;min-width:110px}
 }
 .hv1:hover{background:#1c1b1a !important;color:#fff !important}
+.ba-cap{display:none;margin:0}
+/* Phones (< 768px). Desktop and iPad are unchanged. */
+@media (max-width:767px){
+  .m-hide,.night-loc,.night-cap,.night-trail,.cs-dl{display:none !important}
+  .pad{padding:36px 20px}
+  .lbl{font-size:11px !important;letter-spacing:.14em !important}
+  .pad>.lbl:first-child,.pad>div>.lbl:first-child{font-size:12px !important;margin-bottom:16px !important}
+  .night-grid{grid-template-columns:minmax(0,1fr) !important;padding:36px 20px 40px !important;gap:32px !important}
+  .night-text,.night-photo{grid-column:1 / -1 !important}
+  h1.h1r{font-size:30px !important;line-height:1.05 !important;margin-bottom:16px !important}
+  .night-lead{font-size:16px !important;line-height:1.45 !important;margin-bottom:28px !important}
+  .night-facts>div{padding:12px 10px 12px 0 !important}
+  .night-facts>div:nth-child(even){padding-left:12px !important}
+  .night-facts>div>span:last-child{font-size:13px !important;line-height:1.35 !important}
+  .night-facts>div>span:first-child{font-size:12px !important}
+  .night-photo{max-width:none !important}
+  .night-photo>div:first-child{margin:0 -20px;outline:none !important}
+  .pad p{font-size:16px !important;line-height:1.55 !important;max-width:none !important}
+  .pad li{font-size:16px !important;line-height:1.5 !important}
+  .rq{padding:18px 18px 20px !important}
+  .rq p{font-size:17px !important}
+  .universeum-row{display:grid !important;grid-template-columns:1fr 1fr;gap:16px 12px !important;margin-top:12px}
+  .universeum-row>div{min-width:0 !important}
+  .universeum-row p{font-size:12px !important;line-height:1.35 !important}
+  .obs{gap:16px !important}
+  .obs-photo{margin:0 -20px}
+  #iteration .three{gap:32px !important}
+  #iteration .three>div>div:first-child{font-size:12px !important}
+  #iteration .gray{margin-left:-20px;margin-right:-20px}
+  .ba-grid{grid-template-columns:1fr !important;border:0 !important;gap:0 !important}
+  .ba-img{margin:0 -20px;border:0 !important}
+  .ba-img .ba-tag{top:12px !important;left:20px !important;font-size:12px !important;padding:6px 10px !important}
+  .pad p.ba-cap{display:block !important;font:400 16px/1.55 Archivo !important;color:#4a4744;padding:14px 0 0;text-wrap:pretty}
+  .pad p.ba-cap:nth-of-type(1){padding-bottom:28px;margin-bottom:28px !important;border-bottom:1px solid #dcd9d4}
+  .ba-txt{display:none !important}
+  .acc-grid{grid-template-columns:1fr !important;row-gap:20px !important}
+  #final .three{gap:28px !important}
+  #final .three>div>div:first-child{margin:0 -20px 12px !important;border-left:0 !important;border-right:0 !important}
+  #final .three>div>div:nth-child(2){font-size:16px !important}
+  #final .three>div>div:nth-child(3){font-size:15px !important;line-height:1.5 !important;color:#a9a6a1 !important}
+  .cs-vid{margin:0 -20px;aspect-ratio:auto !important;border-left:0 !important;border-right:0 !important}
+  .cs-vid video{height:auto !important}
+  .space-end{height:200px !important}
+}
 </style>
 </head>
 <body>
@@ -83,19 +127,19 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
         <div aria-hidden="true" style="position:absolute;right:60px;top:50%;width:420px;height:420px;margin-top:-210px;border:1px solid rgba(169,182,238,.28);border-radius:50%"></div>
         <div class="night-grid" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;padding:80px 56px 72px;align-items:center">
           <div class="night-text" style="grid-column:1 / span 6;display:flex;flex-direction:column">
-            <div style="display:flex;align-items:center;gap:10px;margin-bottom:28px"><span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:#a9b6ee;box-shadow:0 0 0 4px rgba(169,182,238,.2)"></span><span style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#a9b6ee">Onsala Space Observatory · Onsala, Sweden</span></div>
+            <div class="night-loc" style="display:flex;align-items:center;gap:10px;margin-bottom:28px"><span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:#a9b6ee;box-shadow:0 0 0 4px rgba(169,182,238,.2)"></span><span style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#a9b6ee">Onsala Space Observatory · Onsala, Sweden</span></div>
             <h1 class="h1r" style="font:700 64px/1 Archivo;letter-spacing:-.045em;margin:0 0 28px;color:#fff;text-wrap:balance">Master's Thesis — LEGO ALMA</h1>
-            <p style="font:500 22px/1.45 Archivo;margin:0 0 48px;max-width:480px;color:#fff;text-wrap:pretty">Made the installation more accessible, engaging, and intuitive for visitors.</p>
-            <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid rgba(169,182,238,.45)">
+            <p class="night-lead" style="font:500 22px/1.45 Archivo;margin:0 0 48px;max-width:480px;color:#fff;text-wrap:pretty">Made the installation more accessible, engaging, and intuitive for visitors.</p>
+            <div class="night-facts" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid rgba(169,182,238,.45)">
               <div style="display:flex;flex-direction:column;gap:8px;padding:16px 16px 16px 0;border-bottom:1px solid rgba(169,182,238,.25)"><span style="font:600 11px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#a9b6ee">My role</span><span style="font:500 15px/1.4 Archivo">Interaction Designer &amp; UX Researcher</span></div>
               <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0 16px 16px;border-bottom:1px solid rgba(169,182,238,.25);border-left:1px solid rgba(169,182,238,.25)"><span style="font:600 11px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#a9b6ee">Team</span><span style="font:500 15px/1.4 Archivo">Tarek Alfutih &amp; Adam Wikström</span></div>
-              <div style="display:flex;flex-direction:column;gap:8px;padding:16px 16px 16px 0"><span style="font:600 11px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#a9b6ee">Duration</span><span style="font:500 15px/1.4 Archivo">Jan – Jun 2026 · 5 months</span></div>
-              <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0 16px 16px;border-left:1px solid rgba(169,182,238,.25)"><span style="font:600 11px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#a9b6ee">Methods</span><span style="font:500 15px/1.4 Archivo">Research through Design · iterative prototyping · usability testing</span></div>
+              <div style="display:flex;flex-direction:column;gap:8px;padding:16px 16px 16px 0"><span style="font:600 11px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#a9b6ee">Duration</span><span style="font:500 15px/1.4 Archivo">Jan – Jun 2026<span class="m-hide"> · 5 months</span></span></div>
+              <div style="display:flex;flex-direction:column;gap:8px;padding:16px 0 16px 16px;border-left:1px solid rgba(169,182,238,.25)"><span style="font:600 11px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#a9b6ee">Methods</span><span style="font:500 15px/1.4 Archivo">Research through Design<span class="m-hide"> · iterative prototyping · usability testing</span></span></div>
             </div>
           </div>
           <div class="night-photo" style="grid-column:8 / span 5;display:flex;flex-direction:column;gap:12px">
             <div style="aspect-ratio:2299/2400;background:#0a0a0c;outline:1px solid rgba(169,182,238,.35);outline-offset:10px"><img class="slot" src="/assets/img/alma-hero.jpg" alt="LEGO ALMA — installation photo" decoding="async"></div>
-            <p style="font:400 13px/1.4 Archivo;color:#a9b6ee;margin:10px 0 0">Outcome — Final LEGO ALMA design at Onsala Space Observatory.</p>
+            <p class="night-cap" style="font:400 13px/1.4 Archivo;color:#a9b6ee;margin:10px 0 0">Outcome — Final LEGO ALMA design at Onsala Space Observatory.</p>
           </div>
         </div>
       </section>
@@ -166,22 +210,24 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   <section class="pad rule" id="before-after">
     <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">04 · Before / after</div>
     <div class="ba-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #dcd9d4">
-      <div class="gray" style="aspect-ratio:16/9;border-right:1px solid #dcd9d4;position:relative">
-        <span class="lbl" style="position:absolute;top:10px;left:10px;font-size:10px;background:#fff;padding:4px 8px;z-index:1">Before</span>
+      <div class="gray ba-img" style="aspect-ratio:16/9;border-right:1px solid #dcd9d4;position:relative">
+        <span class="lbl ba-tag" style="position:absolute;top:10px;left:10px;font-size:10px;background:#fff;padding:4px 8px;z-index:1">Before</span>
         <img class="slot" src="/assets/img/alma-before.png" alt="Original installation" loading="lazy" decoding="async" data-view="1 0 2.006">
       </div>
-      <div class="gray" style="aspect-ratio:16/9;position:relative">
-        <span class="lbl" style="position:absolute;top:10px;left:10px;font-size:10px;background:#1b3ac4;color:#fff;padding:4px 8px;z-index:1">After</span>
+      <p class="ba-cap"><span><strong style="font-weight:700;color:#1c1b1a">Before:</strong> a guide was needed to explain the graphs and get visitors started.</span></p>
+      <div class="gray ba-img" style="aspect-ratio:16/9;position:relative">
+        <span class="lbl ba-tag" style="position:absolute;top:10px;left:10px;font-size:10px;background:#1b3ac4;color:#fff;padding:4px 8px;z-index:1">After</span>
         <img class="slot" src="/assets/img/alma-after.png" alt="Redesigned installation" loading="lazy" decoding="async">
       </div>
+      <p class="ba-cap"><span><strong style="font-weight:700;color:#122a8f">After:</strong> an animated, feedback-driven interface lets visitors place antennas and understand the result on their own.</span></p>
     </div>
-    <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin-top:14px;max-width:760px">Before: a guide was needed to explain the graphs and get visitors started. After: an animated, feedback-driven interface lets visitors place antennas and understand the result on their own.</p>
+    <p class="ba-txt" style="font:400 15px/1.6 Archivo;color:#4a4744;margin-top:14px;max-width:760px">Before: a guide was needed to explain the graphs and get visitors started. After: an animated, feedback-driven interface lets visitors place antennas and understand the result on their own.</p>
   </section>
 
   <section class="pad rule" id="accessibility">
     <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">05 · Accessibility decisions</div>
     <p style="font:400 14px/1.4 Archivo;color:#a09c96;margin:0 0 24px">Answer to the research question — six key factors identified across the testing rounds</p>
-    <div class="three" style="grid-template-columns:repeat(3,1fr);row-gap:28px">
+    <div class="three acc-grid" style="grid-template-columns:repeat(3,1fr);row-gap:28px">
       <div><div style="font:700 13px/1 Archivo;color:#a9b6ee;margin-bottom:6px">01</div><p style="font:600 15px/1.3 Archivo;margin:0 0 6px">Reduce overload</p><p style="font:400 14px/1.5 Archivo;color:#4a4744;margin:0">Short text and animation made complex concepts easier to follow.</p></div>
       <div><div style="font:700 13px/1 Archivo;color:#a9b6ee;margin-bottom:6px">02</div><p style="font:600 15px/1.3 Archivo;margin:0 0 6px">Audio feedback</p><p style="font:400 14px/1.5 Archivo;color:#4a4744;margin:0">Increased engagement and guided attention to digital feedback.</p></div>
       <div><div style="font:700 13px/1 Archivo;color:#a9b6ee;margin-bottom:6px">03</div><p style="font:600 15px/1.3 Archivo;margin:0 0 6px">Balance resources</p><p style="font:400 14px/1.5 Archivo;color:#4a4744;margin:0">Fewer physical elements encouraged exploration.</p></div>
@@ -214,7 +260,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 
     <div style="margin-bottom:0">
       <div class="lbl" style="font-size:12px;color:#ff4d94;margin-bottom:10px">Final outcome — using the completed installation</div>
-      <div style="background:#000;aspect-ratio:16/9;max-width:1100px;display:flex;align-items:center;justify-content:center;border:1px solid #2a2a28">
+      <div class="cs-vid" style="background:#000;aspect-ratio:16/9;max-width:1100px;display:flex;align-items:center;justify-content:center;border:1px solid #2a2a28">
         <video preload="metadata" src="/assets/video/alma-final-outcome.mp4" poster="/assets/video/alma-final-outcome-poster.webp" controls="controls" playsinline="playsinline" style="width:100%;height:100%;display:block;object-fit:contain"></video>
       </div>
     </div>
@@ -223,7 +269,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   <section class="pad rule" id="idle">
     <div class="lbl" style="font-size:12px;color:#122a8f;margin-bottom:10px">07 · Idle / attract mode — when nobody is using it</div>
     <p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0 0 16px;max-width:760px">Plays on a loop on the installation's screen whenever nobody is interacting with it, inviting passers-by to step up and try it — separate from the "Final outcome" recording above, which shows someone actively using the installation.</p>
-    <div class="gray" style="aspect-ratio:16/9;max-width:1100px">
+    <div class="gray cs-vid" style="aspect-ratio:16/9;max-width:1100px">
       <video preload="auto" src="/assets/video/alma-idle-loop.mp4" poster="/assets/video/alma-idle-loop-poster.webp" controls="controls" muted="muted" loop="loop" playsinline="playsinline" style="width:100%;height:100%;display:block;object-fit:contain"></video>
     </div>
   </section>
@@ -231,7 +277,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   <section class="pad" id="reflection">
     <div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">08 · Reflection</div>
     <p style="font:400 16px/1.6 Archivo;color:#4a4744;margin:0 0 24px;max-width:760px">Two things stayed unsolved: the physical buttons sit too far from most visitors' hands to reach comfortably, and users have to keep moving their heads between the board and the screen, missing feedback in between. Worth testing next: buttons set flat on the board, and a screen positioned lower and closer.</p>
-    <a class="hv1" href="/assets/docs/lego-alma-thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Download the full thesis (PDF)</a>
+    <a class="hv1 cs-dl" href="/assets/docs/lego-alma-thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Download the full thesis (PDF)</a>
   </section>
 
   <section class="space-end" aria-hidden="true" style="position:relative;overflow:hidden;height:clamp(280px,42svh,420px);border-top:2px solid #1c1b1a;background:linear-gradient(180deg,#0b1a5c 0%,#07103a 100%);color:#fff">
