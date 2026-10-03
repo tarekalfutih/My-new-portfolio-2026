@@ -76,16 +76,140 @@
     t(function () { els.forEach(function (e) { e.d.remove(); }); }, hideAt + 1100);
   }
 
-  /* Second screen: a "Tarek" cursor drags a selection marquee to the frame's measured size
-     (live W × H label), then the heading types in and tags / steps stagger in. Plays once. */
+  /* Second screen, "How I work" whiteboard. Plays once on scroll into view:
+     a "Tarek" cursor drags a selection marquee to the frame (live W × H label), the heading types
+     in and the tags stagger in; then the cobalt pen leaves its tray, underlines "How I work" and the
+     seven key phrases, draws the arrows between the notes, hand-writes "Explore selected work ↓"
+     and returns to the tray. Reduced motion: everything is shown in its final state. */
+  var PEN_UL = 800, PEN_MOVE = 190, PEN_SW = 250, PEN_AR = 380;
+
   function initSkills() {
     var sec = document.getElementById('skills');
-    if (!sec || reduce || !('IntersectionObserver' in window) || !sec.animate) return;
+    if (!sec) return;
+    if (reduce || !('IntersectionObserver' in window) || !sec.animate) {
+      var u = sec.querySelector('.hw-ul'); if (u) u.style.clipPath = 'none';
+      sec.querySelectorAll('.sk-arw path').forEach(function (p) { p.style.strokeDashoffset = '0'; });
+      return;
+    }
     sec.classList.add('sk-armed');
     var io = new IntersectionObserver(function (es) {
       if (es.some(function (e) { return e.isIntersecting; })) { io.disconnect(); playSkills(sec); }
-    }, { threshold: 0.4 });
+    }, { threshold: window.innerWidth < 768 ? 0.1 : 0.4 });
     io.observe(sec);
+  }
+
+  function visibleArrows() {
+    return Array.prototype.filter.call(document.querySelectorAll('.sk-board .sk-arw'),
+      function (s) { return s.getClientRects().length; }).length;
+  }
+  function penTotal() { return PEN_UL + 7 * (PEN_MOVE + PEN_SW) + visibleArrows() * (PEN_MOVE + PEN_AR); }
+
+  // The pen tip's resting point and the pose it ends on after the last arrow (shared with penButton).
+  var pen = { tip: null, end: null, anim: null };
+
+  function penMark(hwm) {
+    var board = hwm.closest('.sk-board'), pa = board && board.querySelector('.pen-a');
+    var ul = hwm.querySelector('.hw-ul');
+    var steps = board ? Array.prototype.slice.call(board.querySelectorAll('.sk-step')) : [];
+    var show = function (d, dl) { if (ul) ul.animate([{ clipPath: 'inset(0 100% 0 0)' }, { clipPath: 'inset(0 0 0 0)' }], { duration: d, delay: dl, easing: 'cubic-bezier(.4,.1,.4,1)', fill: 'both' }); };
+    var hlw = function (w, d, dl) { w.animate([{ backgroundSize: '0% 1.5px' }, { backgroundSize: '100% 1.5px' }], { duration: d, delay: dl, easing: 'linear', fill: 'both' }); };
+    var drawP = function (p, d, dl) { p.animate([{ strokeDashoffset: 1 }, { strokeDashoffset: 0 }], { duration: d, delay: dl, easing: 'linear', fill: 'both' }); };
+    if (!pa || !pa.offsetParent) {
+      // Board hidden (phones): show everything at once.
+      show(1, 0);
+      if (board) {
+        board.querySelectorAll('.hw-hl').forEach(function (w) { hlw(w, 1, 0); });
+        board.querySelectorAll('.sk-arw path').forEach(function (p) { drawP(p, 1, 0); });
+      }
+      return;
+    }
+    var r = ul.getBoundingClientRect();
+    var b = pa.getBoundingClientRect(), tx = b.left, ty = b.top + b.height / 2;
+    pen.tip = { x: tx, y: ty };
+    var mv = function (x, y) { return 'translate(' + (x - tx) + 'px,' + (y - ty) + 'px) rotate(-58deg)'; };
+    var y = r.top + r.height / 2;
+    var T = penTotal();
+    var pts = [[0, 'none'], [450, mv(r.left, y)], [PEN_UL, mv(r.right, y)]];
+    var t = PEN_UL, last = mv(r.right, y);
+    var scr = function (p, len) {
+      var pt = p.getPointAtLength(len), m = p.getScreenCTM();
+      return { x: m.a * pt.x + m.c * pt.y + m.e, y: m.b * pt.x + m.d * pt.y + m.f };
+    };
+    steps.forEach(function (st) {
+      st.querySelectorAll('.hw-hl').forEach(function (w) {
+        var rs = Array.prototype.filter.call(w.getClientRects(), function (q) { return q.width > 1; });
+        var tw = rs.reduce(function (s, q) { return s + q.width; }, 0) || 1;
+        t += PEN_MOVE; pts.push([t, mv(rs[0].left, rs[0].bottom - 1)]);
+        hlw(w, PEN_SW, t);
+        rs.forEach(function (q, qi) {
+          if (qi) pts.push([t, mv(q.left, q.bottom - 1)]);
+          t += PEN_SW * q.width / tw; last = mv(q.right, q.bottom - 1); pts.push([t, last]);
+        });
+      });
+      var svg = st.querySelector('.sk-arw');
+      var paths = svg && svg.getClientRects().length ? Array.prototype.slice.call(svg.querySelectorAll('path')) : [];
+      if (paths.length === 2) {
+        var shaft = paths[0], head = paths[1], L1 = shaft.getTotalLength(), L2 = head.getTotalLength();
+        var d1 = PEN_AR * .68, d2 = PEN_AR - d1 - 60, k, q;
+        var a0 = scr(shaft, 0); t += PEN_MOVE; pts.push([t, mv(a0.x, a0.y)]);
+        drawP(shaft, d1, t);
+        for (k = 1; k <= 6; k++) { q = scr(shaft, L1 * k / 6); pts.push([t + d1 * k / 6, mv(q.x, q.y)]); }
+        t += d1 + 60; var h0 = scr(head, 0); pts.push([t, mv(h0.x, h0.y)]);
+        drawP(head, d2, t);
+        for (k = 1; k <= 3; k++) { q = scr(head, L2 * k / 3); pts.push([t + d2 * k / 3, mv(q.x, q.y)]); }
+        t += d2; q = scr(head, L2); last = mv(q.x, q.y);
+      }
+    });
+    pen.end = last;
+    pen.anim = pa.animate(pts.map(function (p) { return { offset: Math.min(1, p[0] / T), transform: p[1] }; }),
+      { duration: T, easing: 'linear', fill: 'forwards' });
+    show(800, 450);
+  }
+
+  // Hand-writes the "Explore selected work ↓" link letter by letter, the pen following, then
+  // returns the pen to the tray.
+  function penButton(cta, B) {
+    var lb = cta.querySelector('.sk-out-lb'), pa = document.querySelector('.sk-board .pen-a');
+    cta.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1, delay: B, fill: 'both' });
+    if (!lb || !pa || !pa.offsetParent) return;
+    if (!lb.dataset.split) {
+      lb.dataset.split = '1';
+      var tn = Array.prototype.find.call(lb.childNodes, function (n) { return n.nodeType === 3; });
+      if (tn) {
+        var frag = document.createDocumentFragment();
+        Array.prototype.forEach.call(tn.textContent, function (ch) {
+          var s = document.createElement('span');
+          s.className = 'hw-ch'; s.setAttribute('aria-hidden', 'true');
+          s.style.display = 'inline-block'; s.style.whiteSpace = 'pre'; s.textContent = ch;
+          frag.appendChild(s);
+        });
+        lb.replaceChild(frag, tn);
+        lb.style.gap = '0';
+        var ar = lb.querySelector('.ar'); if (ar) ar.style.marginLeft = '.3em';
+      }
+    }
+    var chars = Array.prototype.slice.call(lb.querySelectorAll('.hw-ch')).concat([lb.querySelector('.ar')]).filter(Boolean);
+    var START = 300, t = START, times = [];
+    chars.forEach(function (c) { times.push(t); t += c.textContent.trim() ? 40 : 20; });
+    var END = t;
+    chars.forEach(function (c, i) {
+      c.animate([{ opacity: 0, transform: 'translateY(3px) scale(.92)', filter: 'blur(1.5px)' }, { opacity: 1, transform: 'none', filter: 'none' }],
+        { duration: 220, delay: B + times[i], easing: 'cubic-bezier(.2,.7,.3,1)', fill: 'backwards' });
+    });
+    setTimeout(function () {
+      var tx, ty;
+      if (pen.tip) { tx = pen.tip.x; ty = pen.tip.y; } else { var p = pa.getBoundingClientRect(); tx = p.left; ty = p.top + p.height / 2; }
+      var mv = function (x, y) { return 'translate(' + (x - tx) + 'px,' + (y - ty) + 'px) rotate(-52deg)'; };
+      var T = END + 500, kf = [{ transform: pen.end || 'none' }];
+      chars.forEach(function (c, i) {
+        var r = c.getBoundingClientRect();
+        kf.push({ offset: (times[i] + 40) / T, transform: mv(r.left + r.width * .7, r.top + r.height * (i % 2 ? .62 : .7)) });
+      });
+      kf[1] = { offset: START / T, transform: kf[1].transform };
+      kf.push({ transform: 'none' });
+      pa.animate(kf, { duration: T, easing: 'linear' });
+      if (pen.anim) { pen.anim.cancel(); pen.anim = null; }
+    }, B);
   }
 
   function playSkills(sec) {
@@ -97,7 +221,7 @@
     var narrow = window.innerWidth <= 900;
     var ex = narrow ? e.left - s.left + 40 : e.right - s.left - 24, ey = narrow ? e.bottom - s.top - 8 : e.top - s.top + 28;
     mq.style.left = fx + 'px'; mq.style.top = fy + 'px';
-    var OUT = 'cubic-bezier(.2,.7,.3,1)', DRAG = 'cubic-bezier(.45,0,.25,1)', T = 2600, D0 = 150;
+    var OUT = 'cubic-bezier(.2,.7,.3,1)', DRAG = 'cubic-bezier(.45,0,.25,1)', T = 1700, D0 = 100;
     var at = function (x, y, sc) { return 'translate(' + x + 'px,' + y + 'px)' + (sc ? ' scale(.88)' : ''); };
     edu.animate([{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }], { duration: 350, easing: OUT, fill: 'both' });
     var ca = cur.animate([
@@ -122,7 +246,8 @@
     var rel = D0 + T * .6;
     fr.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 260, delay: rel - 40, easing: OUT, fill: 'both' });
 
-    // Heading types in; the untyped remainder stays in place (hidden) so line breaks don't jump.
+    // Heading types in (36ms a letter, +24ms after spaces); the untyped remainder stays in place
+    // (hidden) so line breaks don't jump.
     var tn = Array.prototype.find.call(h.childNodes, function (n) { return n.nodeType === 3; });
     var full = tn ? tn.nodeValue : '';
     var caret = document.createElement('span'), rest = document.createElement('span');
@@ -132,8 +257,8 @@
     if (tn) { h.setAttribute('aria-label', full); tn.nodeValue = ''; rest.textContent = full; h.appendChild(caret); h.appendChild(rest); }
     h.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1, delay: rel, fill: 'both' });
     var blink = caret.animate([{ opacity: 1 }, { opacity: 1, offset: .5 }, { opacity: 0, offset: .51 }, { opacity: 0 }], { duration: 900, iterations: Infinity });
-    var CH = 58, t = 0, times = [];
-    for (var i = 0; i < full.length; i++) { t += CH + (full[i - 1] === ' ' ? 40 : 0) + ((i * 37) % 23) - 11; times.push(t); }
+    var CH = 36, t = 0, times = [];
+    for (var i = 0; i < full.length; i++) { t += CH + (full[i - 1] === ' ' ? 24 : 0) + ((i * 37) % 15) - 7; times.push(t); }
     var typeEnd = rel + 200 + t;
     setTimeout(function () {
       if (!tn) return;
@@ -154,23 +279,21 @@
 
     tags.forEach(function (el, i) {
       el.animate([{ opacity: 0, transform: 'translateY(6px) scale(.96)' }, { opacity: 1, transform: 'none' }],
-        { duration: 300, delay: typeEnd + 180 + i * 160, easing: OUT, fill: 'both' });
+        { duration: 300, delay: typeEnd + 120 + i * 100, easing: OUT, fill: 'both' });
     });
-    var howT = typeEnd + 180 + tags.length * 160 + 200;
-    var howL = q('.sk-how-l');
-    if (howL) howL.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 400, delay: howT, easing: OUT, fill: 'both' });
+    var howT = typeEnd + 120 + tags.length * 100 + 120;
     var hwm = q('.hw-mark');
-    if (hwm) {
-      hwm.style.backgroundSize = '0% 100%';
-      setTimeout(function () { hwm.style.backgroundSize = ''; hwm.classList.add('go'); }, howT + 350);
-    }
+    if (hwm) setTimeout(function () { penMark(hwm); }, howT + 350);
     sec.querySelectorAll('.sk-step').forEach(function (el, i) {
       el.animate([{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }],
         { duration: 450, delay: howT + 120 + i * 140, easing: OUT, fill: 'both' });
     });
     var cta = q('.sk-cta-wrap');
-    if (cta) cta.animate([{ opacity: 0, transform: 'translateY(14px)' }, { opacity: 1, transform: 'none' }],
-      { duration: 450, delay: howT + 120 + 3 * 140 + 200, easing: OUT, fill: 'both' });
+    if (cta) penButton(cta, howT + 350 + penTotal() + 150);
+    // Hand the hidden start state from the class to inline styles, so removing the class
+    // doesn't flash the marks before the pen draws them.
+    sec.querySelectorAll('.sk-arw path').forEach(function (p) { p.style.strokeDashoffset = '1'; });
+    sec.querySelectorAll('.hw-hl').forEach(function (w) { w.style.backgroundSize = '0% 1.5px'; });
     sec.classList.remove('sk-armed');
 
     var tick = function () {
@@ -185,4 +308,16 @@
   initTyper();
   initSkills();
   setTimeout(intro, 700);
+})();
+
+/* Phones: the lead and second-featured covers wipe in from the bottom, the photo settles from a
+   slight zoom and the title fades up, once each as they scroll into view. Not with reduced motion. */
+(function () {
+  if (!window.matchMedia('(max-width: 767px)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || !('IntersectionObserver' in window)) return;
+  var els = document.querySelectorAll('.lead-grid,.two-col');
+  var io = new IntersectionObserver(function (es) {
+    es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('m-in'); io.unobserve(e.target); } });
+  }, { threshold: 0.2 });
+  els.forEach(function (el) { el.classList.add('m-arm'); io.observe(el); });
 })();

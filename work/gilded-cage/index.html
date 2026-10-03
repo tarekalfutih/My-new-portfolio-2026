@@ -10,8 +10,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a32ab871">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=bf9f5ca4"></script>
+<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/case-phone.css?v=38175afe">
 <title>Gilded Cage — Tarek Alfutih</title>
 <meta name="description" content="A short game about a fairy trapped inside a glass terrarium. It looks calm and cosy on the surface. Underneath, it&#x27;s a lot darker.">
 <style>
@@ -56,16 +58,25 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
       <a class="cs-back" href="/My-new-portfolio-2026/work/" data-back>← All work</a>
       <nav class="cs-main" aria-label="Main"><a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work</a><a href="/My-new-portfolio-2026/about/">About</a><a href="/My-new-portfolio-2026/contact/">Contact</a></nav>
       <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+      <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </div>
+    <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
+      <a href="/My-new-portfolio-2026/work/" data-back>← All work</a>
+      <a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+    </nav>
     <script>
-      /* Arrived from Home (?from=home): back link goes Home and the Work link is shown.
-         Otherwise the back link already points to Work, so the Work nav link stays hidden. */
+      /* Arrived from Home (?from=home): back links go Home and the Work links are shown.
+         Otherwise the back links already point to Work, so the Work nav links stay hidden. */
       (function () {
         if (new URLSearchParams(location.search).get('from') !== 'home') return;
-        var back = document.querySelector('[data-back]');
-        back.href = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
-        back.textContent = '← Home';
-        document.querySelector('[data-work-link]').hidden = false;
+        var home = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
+        document.querySelectorAll('[data-back]').forEach(function (back) {
+          back.href = home;
+          back.textContent = '← Home';
+        });
+        document.querySelectorAll('[data-work-link]').forEach(function (a) { a.hidden = false; });
       })();
     </script>
     <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
@@ -208,6 +219,6 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 
 </div>
 <script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=6fba6335" defer></script>
 </body>
 </html>

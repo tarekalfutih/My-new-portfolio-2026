@@ -10,8 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a32ab871">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=bf9f5ca4"></script>
+<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
 <title>Touch &amp; Discover — Tarek Alfutih</title>
 <meta name="description" content="An interactive museum console for Idrottsmuseet, Gothenburg — connecting a touch-screen interface to the physical exhibits it describes.">
 <style>
@@ -39,6 +40,44 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
   .two,.three{grid-template-columns:1fr !important}
 }
+/* Phones (< 768px). Desktop and iPad are unchanged. */
+@media (max-width:767px){
+  .m-hide{display:none !important}
+  .pad{padding:36px 20px}
+  .lbl{font-size:11px !important;letter-spacing:.14em !important}
+  .pad>.lbl:first-child,.pad>div>.lbl:first-child{font-size:12px !important;margin-bottom:16px !important}
+  .facts{grid-template-columns:1fr !important}
+  .facts>div{padding:16px 0 !important;border-right:none !important;border-bottom:1px solid #dcd9d4}
+  .facts>div:last-child{border-bottom:none}
+  .facts>div>div:first-child{font-size:12px !important}
+  .facts>div>div:last-child{font-size:15px !important}
+  .td-hero{padding:0 !important}
+  .td-hero>div{max-width:none !important}
+  .pad p,.pad li{font-size:16px !important;line-height:1.55 !important;max-width:none !important}
+  .pad ul{padding-left:18px !important}
+  .two{grid-template-columns:minmax(0,1fr) !important}
+  .td-cards{grid-template-columns:minmax(0,1fr) !important;gap:32px !important;margin-bottom:36px !important}
+  .td-cards>div>div:first-child,.td-video>div:first-child{font-size:12px !important}
+  .td-cards>div>div:nth-child(2){width:calc(100% + 40px);margin:0 -20px !important}
+  .td-cards p{margin:0 !important}
+  .td-vframe{width:calc(100% + 40px);max-width:none !important;margin:0 -20px !important}
+  .td-video{margin-bottom:36px !important}
+  .td-result{font-size:12px !important}
+  #problem p:not(:first-of-type),#design>p,.td-cards p,.td-video p{display:none !important}
+  .facts>div.td-meth{display:block !important;grid-column:1 / -1;padding:14px 0 0 !important;border-top:1px solid #dcd9d4;border-bottom:0 !important}
+  .td-meth>.lbl{margin-bottom:6px !important}
+  .td-meth>.m-hide{display:block !important;font:400 14px/1.45 Archivo !important;color:#4a4744}
+  /* Hero image + title on the first screen: the hero moves above the intro. */
+  main{display:flex;flex-direction:column}
+  .td-hero{order:-1;border-bottom:0 !important}
+  .td-intro{padding-top:20px !important;padding-bottom:28px !important}
+  .td-intro>.lbl:first-child{margin-bottom:10px !important}
+  .td-intro h1.h1r{font-size:32px !important;margin-bottom:10px !important}
+  .td-intro .td-line{margin-bottom:14px !important}
+  .td-lead{font-size:16px !important;line-height:1.5 !important;margin-bottom:20px !important}
+  .td-intro .facts{grid-template-columns:1fr 1fr !important}
+  .td-intro .facts>div{padding:14px 12px 14px 0 !important;border-bottom:0 !important}
+}
 </style>
 </head>
 <body>
@@ -51,16 +90,25 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
       <a class="cs-back" href="/My-new-portfolio-2026/work/" data-back>← All work</a>
       <nav class="cs-main" aria-label="Main"><a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work</a><a href="/My-new-portfolio-2026/about/">About</a><a href="/My-new-portfolio-2026/contact/">Contact</a></nav>
       <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+      <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </div>
+    <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
+      <a href="/My-new-portfolio-2026/work/" data-back>← All work</a>
+      <a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+    </nav>
     <script>
-      /* Arrived from Home (?from=home): back link goes Home and the Work link is shown.
-         Otherwise the back link already points to Work, so the Work nav link stays hidden. */
+      /* Arrived from Home (?from=home): back links go Home and the Work links are shown.
+         Otherwise the back links already point to Work, so the Work nav links stay hidden. */
       (function () {
         if (new URLSearchParams(location.search).get('from') !== 'home') return;
-        var back = document.querySelector('[data-back]');
-        back.href = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
-        back.textContent = '← Home';
-        document.querySelector('[data-work-link]').hidden = false;
+        var home = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
+        document.querySelectorAll('[data-back]').forEach(function (back) {
+          back.href = home;
+          back.textContent = '← Home';
+        });
+        document.querySelectorAll('[data-work-link]').forEach(function (a) { a.hidden = false; });
       })();
     </script>
     <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
@@ -72,21 +120,21 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 
   <main id="main">
 
-  <section class="pad rule">
+  <section class="pad rule td-intro">
     <div class="lbl" style="margin-bottom:20px">Group project</div>
     <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;text-wrap:pretty">Touch &amp; Discover</h1>
-    <div style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
-    <p style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">An interactive museum console for Idrottsmuseet, Gothenburg — connecting a touch-screen interface to the physical exhibits it describes.</p>
+    <div class="td-line" style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
+    <p class="td-lead" style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">An interactive museum console for Idrottsmuseet, Gothenburg — connecting a touch-screen interface to the physical exhibits it describes.</p>
 
     <div class="facts" style="grid-template-columns:repeat(3,1fr)">
       <div><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Interaction Designer</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Team</div><div style="font:600 14px/1.35 Archivo">Tarek Alfutih, Ida Altenstedt, Dian Shi, Rasti Tengman &amp; Rebecka Willig — Chalmers University of Technology</div></div>
+      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Team</div><div style="font:600 14px/1.35 Archivo">5 people</div></div>
 
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div style="font:600 15px/1.35 Archivo">Sketching · Figma &amp; Intuiface prototyping · Arduino Wizard-of-Oz · user testing</div></div>
+      <div class="td-meth"><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div class="m-hide" style="font:600 15px/1.35 Archivo">Sketching · Figma &amp; Intuiface prototyping · Arduino Wizard-of-Oz · user testing</div></div>
     </div>
   </section>
 
-  <section class="rule" style="padding:32px 24px">
+  <section class="rule td-hero" style="padding:32px 24px">
     <div style="max-width:900px;margin:0 auto">
       <img class="slot" src="/My-new-portfolio-2026/assets/img/the-final-prototype-mockup.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 83vw, 900px" alt="Hero — the console and shelf display, in situ" decoding="async" style="object-fit:contain;width:100%;aspect-ratio:4730/4087;display:block">
     </div>
@@ -96,10 +144,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
     <div>
       <div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">01 · Problem &amp; purpose</div>
       <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 14px;text-wrap:pretty">Idrottsmuseet, the Gothenburg Sports Museum, holds over 15,000 items across three floors, with almost no room for information plaques. Exhibits are cluttered and unexplained, which favours visitors who already know the athletes — mostly middle-aged men — and shuts out everyone else.</p>
-      <p style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0 0 14px;text-wrap:pretty">The project used Ingemar Johansson, one of Sweden's most iconic boxers, as the test case: his artefacts were on display but told through static text that most visitors skipped past.</p>
+      <p class="m-hide" style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0 0 14px;text-wrap:pretty">The project used Ingemar Johansson, one of Sweden's most iconic boxers, as the test case: his artefacts were on display but told through static text that most visitors skipped past.</p>
       <p style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">The goal was a touch-screen console that guides visitors to relevant exhibits, tells their stories, and works without a guide standing beside it — while staying accessible to a broader, younger audience than the museum currently reaches.</p>
     </div>
-    <div style="border-top:1px solid #dcd9d4;padding-top:16px">
+    <div class="m-hide" style="border-top:1px solid #dcd9d4;padding-top:16px">
       <div class="lbl" style="font-size:11px;margin-bottom:10px">Related work</div>
       <p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0">Looked to Universeum and Världskulturmuseet in Gothenburg, and the Museum of London, where touch-screens and audio let visitors explore digital archives at their own pace, tied to the physical exhibits around them.</p>
     </div>
@@ -120,7 +168,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
     <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">02 · Design &amp; implementation</div>
     <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 24px;max-width:760px;text-wrap:pretty">Ideation started with paper sketches — each member sketching, writing or thinking through an idea in five-minute bursts — and converged on a touch-screen concept. From there the work split into a digital interface and a physical exhibit setup, developed in parallel.</p>
 
-    <div class="three" style="margin-bottom:32px">
+    <div class="three td-cards" style="margin-bottom:32px">
       <div>
         <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Ideation</div>
         <div style="background:#ececea;aspect-ratio:4/3;margin-bottom:10px"><img class="slot" src="/My-new-portfolio-2026/assets/img/screenshot-2025-06-02-at-16-28-42.png" srcset="/My-new-portfolio-2026/assets/img/opt/screenshot-2025-06-02-at-16-28-42-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/screenshot-2025-06-02-at-16-28-42-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/screenshot-2025-06-02-at-16-28-42-903.webp 903w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 29vw, 373px" alt="Initial paper sketches" decoding="async" style="object-fit:contain;"></div>
@@ -138,17 +186,17 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
       </div>
     </div>
 
-    <div style="margin-bottom:0">
+    <div class="td-video" style="margin-bottom:0">
       <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Video content</div>
-      <div style="background:#000;max-width:640px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin-bottom:10px"><video src="/My-new-portfolio-2026/assets/video/ingemar-project-my-creation-small-size.mp4?v=a7e728e8" poster="/My-new-portfolio-2026/assets/video/ingemar-project-my-creation-small-size-poster.webp?v=a1b1b429" controls="controls" playsinline="playsinline" preload="metadata" style="width:100%;height:100%;display:block;object-fit:contain"></video></div>
+      <div class="td-vframe" style="background:#000;max-width:640px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin-bottom:10px"><video src="/My-new-portfolio-2026/assets/video/ingemar-project-my-creation-small-size.mp4?v=a7e728e8" poster="/My-new-portfolio-2026/assets/video/ingemar-project-my-creation-small-size-poster.webp?v=a1b1b429" controls="controls" playsinline="playsinline" preload="metadata" style="width:100%;height:100%;display:block;object-fit:contain"></video></div>
       <p style="font:400 14px/1.5 Archivo;color:#4a4744;max-width:640px">A short video about Ingemar Johansson's life and career, made for the console's video carousel.</p>
     </div>
 
     <div>
       <div>
-        <div class="lbl" style="font-size:11px;margin-bottom:10px">Result</div>
+        <div class="lbl td-result" style="font-size:11px;margin-bottom:10px">Result</div>
         <p style="font:400 15px/1.6 Archivo;color:#1c1b1a;margin:0 0 12px;text-wrap:pretty">Set up at Idrottshögskolan for presentation: selecting a video or photo on screen lit a small bulb above the matching physical exhibit, linking the digital story to the object in front of the visitor.</p>
-        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">The manual light-control buttons were mounted too high to reach comfortably while using the screen — a limitation of the Wizard-of-Oz setup rather than the final concept.</p>
+        <p class="m-hide" style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">The manual light-control buttons were mounted too high to reach comfortably while using the screen — a limitation of the Wizard-of-Oz setup rather than the final concept.</p>
       </div>
     </div>
   </section>
@@ -156,7 +204,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   <section class="pad" id="reflection">
     <div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">03 · Reflection</div>
     <p style="font:400 16px/1.6 Archivo;color:#4a4744;margin:0 0 28px;max-width:760px;text-wrap:pretty">Visitors responded well: the link between digital content and physical exhibits made previously overlooked details more visible and easier to engage with. Clearer task-splitting within the group, and buttons placed within easy reach, are the two things worth doing differently next time.</p>
-    <a href="/My-new-portfolio-2026/assets/docs/touch-discover-report.pdf" download="Touch-and-Discover-Report.pdf" class="btn btn-secondary" style="display:inline-flex">Download full report (PDF)</a>
+    <a href="/My-new-portfolio-2026/assets/docs/touch-discover-report.pdf" download="Touch-and-Discover-Report.pdf" class="btn btn-secondary m-hide" style="display:inline-flex">Download full report (PDF)</a>
   </section>
 
   </main>
@@ -167,6 +215,6 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 
 </div>
 <script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=6fba6335" defer></script>
 </body>
 </html>

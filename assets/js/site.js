@@ -58,3 +58,47 @@
     else window.addEventListener('resize', function () { apply(img); });
   });
 })();
+
+/* Back links on pages reached from both Home and Work (Illustration): they point to Work by
+   default; arriving from Home (?from=home) they say "← Home" and go Home. The case-study bar has its
+   own copy of this in case-bar.html. */
+(function () {
+  if (!document.querySelector('.hd [data-back]')) return;
+  if (new URLSearchParams(location.search).get('from') !== 'home') return;
+  var home = document.querySelector('.hd .hd-logo').getAttribute('href'); // Home (respects base path)
+  document.querySelectorAll('.hd [data-back]').forEach(function (a) { a.href = home; a.textContent = '← Home'; });
+  document.querySelectorAll('.hd [data-from-home-hide]').forEach(function (a) { a.hidden = true; });
+  document.querySelectorAll('.hd [data-from-home-show]').forEach(function (a) { a.hidden = false; });
+})();
+
+/* Phone menu (< 768px): the header's hamburger opens a full-screen list of links.
+   Esc and link taps close it; opened from the keyboard, focus moves to the first link; the page
+   behind does not scroll. */
+(function () {
+  var btn = document.querySelector('[data-menu-btn]');
+  var menu = document.getElementById('m-menu');
+  if (!btn || !menu) return;
+  function set(open, refocus, keyboard) {
+    menu.hidden = !open;
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    document.documentElement.classList.toggle('m-open', open);
+    // Keyboard users go straight into the menu; a tap or click doesn't move focus (no focus ring).
+    if (open && keyboard) {
+      var first = menu.querySelector('a:not([hidden])');
+      if (first) first.focus();
+    } else if (!open && refocus) btn.focus();
+  }
+  // e.detail is 0 when the button is activated with Enter / Space.
+  btn.addEventListener('click', function (e) { set(menu.hidden, false, e.detail === 0); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !menu.hidden) set(false, true);
+  });
+  // Rotating or resizing past the phone layout closes the menu.
+  var mq = window.matchMedia('(min-width: 768px)');
+  function onChange() { if (mq.matches && !menu.hidden) set(false); }
+  if (mq.addEventListener) mq.addEventListener('change', onChange); else mq.addListener(onChange);
+  // Back/forward cache: never come back to an open menu.
+  window.addEventListener('pageshow', function () { if (!menu.hidden) set(false); });
+})();

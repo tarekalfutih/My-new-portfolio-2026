@@ -10,8 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a32ab871">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=bf9f5ca4"></script>
+<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
 <title>Work — Tarek Alfutih</title>
 <meta name="description" content="Selected work: product &amp; app UX, tangible &amp; installation, critical &amp; speculative, and game design.">
 <style>
@@ -54,6 +55,95 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 .wf-chip{font:600 12px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;cursor:pointer;background:#fff;color:#1c1b1a;border:1px solid #1c1b1a;border-radius:0;position:relative}
 .wf-chip::before{content:"";position:absolute;inset:-9px 0}
 .wf-chip[aria-pressed="true"]{background:#1b3ac4;color:#fff;border:none;padding:7px 12px}
+.f-sel,.m-cover-link,.ill-buy{display:none}
+/* Lead (3 Oct): thesis button hidden under 820px; 768–819px a step tighter. */
+@media (max-width:819px){.thesis-dl{display:none !important}}
+@media (min-width:768px) and (max-width:819px){
+  .lead-txt h2{font-size:24px !important}
+  .lead-txt p{font-size:14px !important;margin-bottom:12px !important}
+  .lead-txt .lead-tags{margin-bottom:16px !important}
+  .lead-txt>span:first-child{margin-bottom:10px !important}
+}
+/* Illustration section (3 Oct, >= 768px): intro on light cobalt, then the forest stage edge to edge. */
+@media (min-width:768px){
+  #illustration{--ipx:56px;--ipb:48px;padding-bottom:0 !important;background:#e5e9fb}
+  #illustration>.lbl,#illustration>.m-hide .lbl{color:#4a4744 !important}
+  #illustration .ill-role{margin-bottom:0 !important}
+  #illustration .ill-stage{position:relative;overflow:hidden;margin:32px calc(-1 * var(--ipx)) 0;padding:56px var(--ipx) 56px;background:#0b1a5c url(/My-new-portfolio-2026/assets/img/forest-bg.jpg) center 70%/cover no-repeat;color:#fff;border-top:2px solid #1c1b1a}
+  #illustration .ill-stage::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,92,.62) 0%,rgba(11,26,92,.74) 50%,rgba(11,26,92,.84) 100%);pointer-events:none}
+  #illustration .ill-stage>*{position:relative;z-index:1}
+  #illustration .ill-stage .lbl,#illustration .ill-meta,#illustration .ill-stage p,#illustration .ill-books>div>div:not(.gray){color:#e5e9fb !important}
+  #illustration .ill-books>div>div:not(.gray):nth-child(2){color:#fff !important}
+  #illustration .ill-hero-txt>div:not(.lbl):not(.ill-meta):not(.ill-btns){color:#7ee0b5 !important}
+  #illustration .ill-hero-txt h3{background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent !important;animation:illoShine 8s linear infinite;width:fit-content}
+  #illustration .ill-cover,#illustration .ill-books .gray{box-shadow:0 18px 44px rgba(0,0,0,.45)}
+  #illustration .ill-btns>a:first-child{background:#b9a6f0 !important;color:#0b1a5c !important}
+  #illustration .ill-btns>a:first-child:hover{background:#d2c6f7 !important}
+  #illustration .ill-btns>a:last-child{border-color:#ffe9a8 !important;color:#ffe9a8 !important}
+  #illustration .ill-btns>a:last-child:hover{background:#ffe9a8 !important;color:#0b1a5c !important}
+  #illustration .ill-books-lbl{border-top-color:rgba(255,255,255,.3) !important}
+  #illustration .ill-more{color:#7ee0b5 !important}
+}
+@media (min-width:768px) and (max-width:900px){#illustration{--ipx:24px}}
+/* Phones (< 768px). Desktop is unchanged. */
+@media (max-width:767px){
+  .m-hide,.wf-chip{display:none !important}
+  .secpad{padding:28px 20px !important}
+  .wrap>main>section:first-child h1{font-size:30px !important}
+  .filters{display:flex !important;padding:14px 20px !important;position:relative;z-index:3}
+  .f-sel{display:flex;width:100%;align-items:center;gap:12px}
+  .f-sel-lbl{font:600 12px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#75726e;flex:none}
+  .f-sel-box{position:relative;flex:1;min-width:0}
+  .f-sel select{-webkit-appearance:none;appearance:none;width:100%;height:44px;border:2px solid #1c1b1a;border-radius:0;background:#fff;padding:0 40px 0 14px;font:600 15px/1 Archivo;color:#1c1b1a;cursor:pointer}
+  .f-sel svg{position:absolute;right:14px;top:50%;margin-top:-8px;pointer-events:none}
+  .lbl{font-size:12px !important;letter-spacing:.14em !important}
+  .lead-row{position:relative;grid-template-columns:1fr !important;gap:0 !important;margin-bottom:24px !important;padding-bottom:0 !important;border-bottom:0 !important}
+  .idx-lead-img{position:relative;width:calc(100% + 40px) !important;margin:0 -20px}
+  .idx-lead-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,26,92,0) 55%,rgba(11,26,92,.6) 75%,rgba(11,26,92,.9) 100%);pointer-events:none}
+  .lead-txt{position:absolute;left:-20px;right:-20px;bottom:0;padding:20px;pointer-events:none;z-index:1;display:flex;flex-direction:column}
+  .lead-txt h2{font-size:24px !important;color:#fff !important;margin:0 !important}
+  .lead-txt .lead-meta{order:-1;color:#e5e9fb !important;font-size:14px !important;margin:0 0 8px !important}
+  .lead-txt>span:first-child,.lead-txt p,.lead-txt .lead-tags,.lead-txt>a,.lead-txt .lead-btns{display:none !important}
+  .m-cover-link{display:block;position:absolute;inset:0 -20px;z-index:2}
+  .m-cover-link:focus-visible{outline:2px solid #1b3ac4;outline-offset:-2px}
+  .grid3{grid-template-columns:1fr !important;gap:0 !important}
+  .grid3 article{position:relative;display:grid;grid-template-columns:132px minmax(0,1fr);gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid #dcd9d4}
+  .grid3 article:last-child{border-bottom:0}
+  .grid3 article>.gray{width:100%;margin:0 !important}
+  .grid3 article>a::after{content:"";position:absolute;inset:0}
+  .grid3 article a>div:first-child{font-size:17px !important;margin-bottom:3px !important}
+  .grid3 article a>div:last-child{font-size:14px !important}
+  #illustration{position:relative;overflow:hidden;background:#0b1a5c url(/My-new-portfolio-2026/assets/img/forest-bg.jpg) center 70%/cover no-repeat !important;color:#fff}
+  #illustration::before{content:"";position:absolute;inset:0;background:rgba(11,26,92,.74);pointer-events:none}
+  #illustration>*{position:relative;z-index:1}
+  #illustration .lbl{color:#e5e9fb !important}
+  #illustration .hl-line{background:#a9b6ee !important}
+  .ill-intro{font-size:15px !important;margin:0 0 20px !important;color:#e5e9fb !important}
+  .ill-hero{position:relative;display:block !important;margin-bottom:12px !important}
+  .ill-cover{position:relative;width:calc(100% + 40px);margin:0 -20px}
+  .ill-hero-txt{display:flex;flex-direction:column;padding-top:14px}
+  .ill-hero-txt .lbl{margin-bottom:6px !important}
+  .ill-hero-txt h3{font-size:22px !important;margin:0 0 4px !important;background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent !important;animation:illoShine 8s linear infinite;width:fit-content}
+  .ill-hero-txt .ill-meta{font-size:14px !important;margin:0 !important;color:#e5e9fb !important}
+  .ill-btns{display:none !important}
+  .ill-buy{display:flex !important;align-items:center;justify-content:space-between;min-height:46px;padding:0 16px;border:2px solid #b9a6f0;background:#b9a6f0;color:#0b1a5c;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;margin-bottom:28px}
+  .ill-buy:hover{color:#0b1a5c;text-decoration:none}
+  .ill-books-lbl{padding-top:20px !important;margin-bottom:12px !important;border-top-color:rgba(255,255,255,.3) !important}
+  .ill-books{display:flex !important;flex-wrap:nowrap !important;gap:8px !important;width:100% !important;margin-bottom:16px !important}
+  .ill-books>div>div:not(.gray){display:none !important}
+  .ill-books .gray{margin-bottom:0 !important}
+  .ill-more{min-height:44px;display:inline-flex !important;align-items:center;font-size:12px !important;color:#7ee0b5 !important}
+}
+@media (max-width:767px) and (max-height:860px){
+  .wrap>main>section:first-child.secpad{padding:18px 20px 16px !important}
+  .wrap>main>section:first-child h1{font-size:26px !important}
+  .filters{padding:10px 20px !important}
+  section.secpad:has(.lead-row){padding-top:18px !important}
+  section:has(.lead-row)>.lbl{margin-bottom:8px !important}
+  section:has(.lead-row)>.hl-line{margin-bottom:12px !important}
+}
+@keyframes illoShine{from{background-position:0% 50%}to{background-position:300% 50%}}
+@media (prefers-reduced-motion:reduce){.ill-hero-txt h3{animation:none !important}}
 </style>
 </head>
 <body>
@@ -62,20 +152,26 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 
   <header class="hd">
     <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
+    <a class="hd-home" href="/My-new-portfolio-2026/">← Home</a>
     <nav class="hd-nav" aria-label="Main">
       <a href="/My-new-portfolio-2026/work/" aria-current="page">Work</a>
       <a href="/My-new-portfolio-2026/about/">About</a>
       <a href="/My-new-portfolio-2026/contact/">Contact</a>
     </nav>
     <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
+      <a href="/My-new-portfolio-2026/">Home<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/work/" aria-current="page">Work<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+    </nav>
   </header>
 
   <main id="main">
 
-  <section class="secpad rule" style="padding:56px 56px 40px">
-    <div class="lbl" style="margin-bottom:16px;animation:heroFadeUp .5s ease-out both">All work</div>
-    <div style="width:56px;height:3px;background:#1b3ac4;margin:0 0 16px;transform-origin:left;animation:heroDrawLine .5s ease-out both;animation-delay:.15s"></div>
-    <h1 style="font:600 clamp(32px,4.4vw,52px)/1.05 Archivo;letter-spacing:-.03em;margin:0"><span style="display:inline-block;animation:heroWordUp .5s ease-out both;animation-delay:.25s">Selected</span> <span style="display:inline-block;animation:heroWordUp .5s ease-out both;animation-delay:.34s">work</span></h1>
+  <section class="secpad rule" style="padding:48px 56px 44px">
+    <h1 class="wi-h1" style="font:600 clamp(32px,4.4vw,52px)/1.05 Archivo;letter-spacing:-.03em;margin:0"><span style="display:inline-block;animation:heroWordUp .5s ease-out both;animation-delay:.25s">Selected</span> <span style="display:inline-block;animation:heroWordUp .5s ease-out both;animation-delay:.34s">work</span></h1>
   </section>
 
   <section class="filters secpad rule" aria-label="Filter work" data-reveal="1" style="padding:24px 56px;display:flex;gap:8px;flex-wrap:wrap">
@@ -84,6 +180,13 @@ a:hover{color:#1b3ac4;text-decoration:underline}
     <button type="button" class="wf-chip" data-filter="tangible" aria-pressed="false">Tangible &amp; installation</button>
     <button type="button" class="wf-chip" data-filter="critical" aria-pressed="false">Critical &amp; speculative</button>
     <button type="button" class="wf-chip" data-filter="games" aria-pressed="false">Game Design</button>
+    <label class="f-sel"><span class="f-sel-lbl">Show</span><span class="f-sel-box"><select data-filter-select aria-label="Filter projects">
+      <option value="all">All projects</option>
+      <option value="product">Digital Product UX/UI</option>
+      <option value="tangible">Tangible &amp; installation</option>
+      <option value="critical">Critical &amp; speculative</option>
+      <option value="games">Game Design</option>
+    </select><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2.5" stroke-linecap="square"><path d="M6 9l6 6 6-6"/></svg></span></label>
   </section>
 
   <div data-group="tangible">
@@ -91,18 +194,22 @@ a:hover{color:#1b3ac4;text-decoration:underline}
     <div class="lbl" style="margin-bottom:14px"><span class="hl-w" style="animation-delay:.1s">Tangible</span> <span class="hl-w" style="animation-delay:.18s">&amp;</span> <span class="hl-w" style="animation-delay:.26s">installation</span></div>
     <div class="hl-line" style="margin-bottom:24px"></div>
     <div class="lead-row" data-reveal="1" style="align-items:start;margin-bottom:32px;padding-bottom:32px;border-bottom:1px solid #dcd9d4">
+      <a href="/My-new-portfolio-2026/work/lego-alma/?from=work" class="m-cover-link" aria-label="Master's Thesis — LEGO ALMA case study"></a>
       <div class="idx-lead-img"><img class="slot" src="/My-new-portfolio-2026/assets/img/onsala-observatory.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/onsala-observatory-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-1290.webp 1290w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 29vw, 373px" alt="LEGO ALMA — Onsala Space Observatory" decoding="async" style="object-fit:contain;"></div>
-      <div>
+      <div class="lead-txt">
         <span style="display:inline-block;background:#e5e9fb;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;margin-bottom:14px">Lead project · 5 months</span>
         <h2 style="font:600 28px/1.1 Archivo;letter-spacing:-.02em;margin:0 0 6px">Master's Thesis — LEGO ALMA</h2>
-        <div style="font:400 13px/1.4 Archivo;color:#75726e;margin:0 0 12px">Onsala Space Observatory · 2026</div>
+        <div class="lead-meta" style="font:400 13px/1.4 Archivo;color:#75726e;margin:0 0 12px">Onsala Space Observatory · 2026</div>
         <p style="font:400 15px/1.5 Archivo;color:#1c1b1a;margin:0 0 16px;max-width:640px">Made the installation more accessible, engaging, and intuitive for visitors.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
+        <div class="lead-tags" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
           <span style="border:1px solid #122a8f;color:#122a8f;font:600 10px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px">Accessibility</span>
           <span style="border:1px solid #122a8f;color:#122a8f;font:600 10px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px">Tangible interaction</span>
           <span style="border:1px solid #122a8f;color:#122a8f;font:600 10px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px">Science communication</span>
         </div>
-        <a class="hv1" href="/My-new-portfolio-2026/work/lego-alma/?from=work" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Read the full case</a>
+        <div class="lead-btns" style="display:flex;gap:12px;flex-wrap:wrap">
+        <a class="hv1" href="/My-new-portfolio-2026/work/lego-alma/?from=work" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Read the case</a>
+        <a class="hv3 thesis-dl" href="/My-new-portfolio-2026/assets/docs/lego-alma-thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Download thesis (PDF)</a>
+        </div>
       </div>
     </div>
     <div class="grid3">
@@ -224,26 +331,29 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   <section class="secpad" data-reveal="1" style="padding:48px 56px;border-top:2px solid #1c1b1a;scroll-margin-top:90px" id="illustration">
     <div class="lbl" style="margin-bottom:14px"><span class="hl-w" style="animation-delay:.1s">Illustration</span> <span class="hl-w" style="animation-delay:.18s">&amp;</span> <span class="hl-w" style="animation-delay:.26s">Visual</span> <span class="hl-w" style="animation-delay:.34s">Storytelling</span></div>
     <div class="hl-line" style="margin-bottom:18px"></div>
-    <p style="font:400 15px/1.6 Archivo;color:#3a3835;margin:0 0 14px;max-width:600px;text-wrap:pretty">Alongside interaction design, I've worked professionally as an illustrator since 2008, illustrating more than 20 published children's books and educational materials.</p>
-    <div style="margin-bottom:32px"><span class="lbl" style="font-size:11px;margin-right:8px">Role</span><span style="font:600 15px/1.3 Archivo">Illustrator</span></div>
+    <p class="ill-intro" style="font:400 15px/1.6 Archivo;color:#3a3835;margin:0 0 14px;max-width:600px;text-wrap:pretty">Alongside interaction design, I've worked professionally as an illustrator since 2008, illustrating <mark style="font-weight:600;color:#1c1b1a;background:linear-gradient(100deg,rgba(255,210,63,0) 0,rgba(255,210,63,.85) 3%,rgba(255,210,63,.7) 96%,rgba(255,210,63,0) 100%) 0 62%/100% 62% no-repeat;padding:0 3px;margin:0 -1px;-webkit-box-decoration-break:clone;box-decoration-break:clone">more than 20 published</mark> children's books and educational materials.</p>
+    <div class="m-hide ill-role" style="margin-bottom:32px"><span class="lbl" style="font-size:11px;margin-right:8px">Role</span><span style="font:600 15px/1.3 Archivo">Illustrator</span></div>
 
+    <div class="ill-stage">
     <div class="ill-hero" data-reveal="1" style="display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center;margin-bottom:40px">
-      <div class="gray" style="aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-cover.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 38vw, 490px" alt="Skräphjältarna" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-      <div>
+      <a href="/My-new-portfolio-2026/illustration/?from=work" class="m-cover-link" aria-label="Skräphjältarna — read more"></a>
+      <div class="gray ill-cover" style="aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-cover.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 38vw, 490px" alt="Skräphjältarna" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+      <div class="ill-hero-txt">
         <div class="lbl" style="font-size:11px;margin-bottom:8px">Latest publication</div>
         <h3 style="font:600 26px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 4px">Skräphjältarna</h3>
-        <div style="font:400 14px/1.4 Archivo;color:#75726e;margin-bottom:16px">2023 · Olika Förlag</div>
-        <div style="font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f;margin-bottom:16px">6,000+ copies sold</div>
-        <p style="font:400 16px/1.55 Archivo;color:#3a3835;margin:0 0 8px;max-width:480px;text-wrap:pretty">An illustrated picture book that encourages children to discover recycling through playful characters who turn old things into something new.</p>
-        <p style="font:400 13px/1.4 Archivo;color:#75726e;margin:0 0 20px;max-width:480px;text-wrap:pretty">Created in collaboration with Rinkeby-Kista district administration in Stockholm.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <div class="ill-meta" style="font:400 14px/1.4 Archivo;color:#75726e;margin-bottom:16px">2023 · Olika Förlag</div>
+        <div class="m-hide" style="font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f;margin-bottom:16px">6,000+ copies sold</div>
+        <p class="m-hide" style="font:400 16px/1.55 Archivo;color:#3a3835;margin:0 0 8px;max-width:480px;text-wrap:pretty">An illustrated picture book that encourages children to discover recycling through playful characters who turn old things into something new.</p>
+        <p class="m-hide" style="font:400 13px/1.4 Archivo;color:#75726e;margin:0 0 20px;max-width:480px;text-wrap:pretty">Created in collaboration with Rinkeby-Kista district administration in Stockholm.</p>
+        <div class="ill-btns" style="display:flex;flex-wrap:wrap;gap:10px">
           <a class="hv2" href="https://olika.nu/products/skraphjaltarna" target="_blank" style="background:#1b3ac4;color:#fff;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 18px;text-decoration:none">Buy the book</a>
-          <a class="hv3" href="/My-new-portfolio-2026/illustration/" style="border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Read more</a>
+          <a class="hv3" href="/My-new-portfolio-2026/illustration/?from=work" style="border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Read more</a>
         </div>
       </div>
     </div>
 
-    <div class="lbl" style="font-size:11px;margin-bottom:16px;border-top:1px solid #dcd9d4;padding-top:24px">Selected children's books</div>
+    <a href="/My-new-portfolio-2026/illustration/?from=work" class="ill-buy">Read more <span aria-hidden="true">→</span></a>
+    <div class="lbl ill-books-lbl" style="font-size:11px;margin-bottom:16px;border-top:1px solid #dcd9d4;padding-top:24px">Selected children's books</div>
     <div class="ill-books" data-reveal="1" style="display:flex;gap:20px;align-items:start;margin-bottom:32px;width:56.25%">
       <div style="flex:1 1 0;min-width:0"><div class="gray" style="aspect-ratio:1/1;width:100%;margin-bottom:8px"><img class="slot" src="/My-new-portfolio-2026/assets/img/wicky-crocodile.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/wicky-crocodile-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/wicky-crocodile-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/wicky-crocodile-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/wicky-crocodile-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/wicky-crocodile-2400.webp 2400w" sizes="(max-width: 560px) 10vw, (max-width: 1280px) 13vw, 172px" alt="Wicky Crocodile" loading="lazy" decoding="async" style="object-fit:contain;"></div><div style="font:600 13px/1.3 Archivo">Wicky Crocodile</div><div style="font:400 12px/1.3 Archivo;color:#75726e">2012</div></div>
       <div style="flex:1 1 0;min-width:0"><div class="gray" style="aspect-ratio:1/1;width:100%;margin-bottom:8px"><img class="slot" src="/My-new-portfolio-2026/assets/img/the-happy-rabbit.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/the-happy-rabbit-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/the-happy-rabbit-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/the-happy-rabbit-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/the-happy-rabbit-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/the-happy-rabbit-2400.webp 2400w" sizes="(max-width: 560px) 10vw, (max-width: 1280px) 13vw, 172px" alt="The Happy Rabbit" loading="lazy" decoding="async" style="object-fit:contain;"></div><div style="font:600 13px/1.3 Archivo">The Happy Rabbit</div><div style="font:400 12px/1.3 Archivo;color:#75726e">2014</div></div>
@@ -251,7 +361,8 @@ a:hover{color:#1b3ac4;text-decoration:underline}
       <div style="flex:0.7305 1 0;min-width:0"><div class="gray" style="aspect-ratio:2362/3233;width:100%;margin-bottom:8px"><img class="slot" src="/My-new-portfolio-2026/assets/img/kalila-and-dimna-part-two.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/kalila-and-dimna-part-two-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/kalila-and-dimna-part-two-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/kalila-and-dimna-part-two-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/kalila-and-dimna-part-two-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/kalila-and-dimna-part-two-2362.webp 2362w" sizes="(max-width: 560px) 7vw, (max-width: 1280px) 10vw, 126px" alt="Kalila and Dimna — Part II" loading="lazy" decoding="async" style="object-fit:contain;"></div><div style="font:600 13px/1.3 Archivo">Kalila and Dimna — Part II</div><div style="font:400 12px/1.3 Archivo;color:#75726e">2015</div></div>
     </div>
 
-    <a href="https://tarekalfutih.se" target="_blank" style="display:inline-block;font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f">Explore my illustration portfolio →</a>
+    <a href="https://tarekalfutih.se" target="_blank" class="ill-more" style="display:inline-block;font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f">Explore my illustration portfolio →</a>
+    </div>
   </section>
 
   </main>
@@ -262,7 +373,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 
 </div>
 <script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/work.js?v=aff25a12" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=6fba6335" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/work.js?v=364225e9" defer></script>
 </body>
 </html>

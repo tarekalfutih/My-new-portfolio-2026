@@ -10,8 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a32ab871">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=bf9f5ca4"></script>
+<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
 <title>Illustration — Tarek Alfutih</title>
 <meta name="description" content="Alongside interaction design, I&#x27;ve illustrated 20+ children&#x27;s books. Latest: Skräphjältarna, 2023.">
 <style>
@@ -38,6 +39,24 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 }
 .hv1:hover{background:#122a8f !important;color:#fff !important}
 .hv2:hover{background:#1c1b1a !important;color:#fff !important}
+/* Phones (< 768px): MOBILE.md rules (no page-specific phone design). Desktop is unchanged. */
+@media (max-width:767px){
+  .m-hide{display:none !important}
+  .pad{padding:32px 20px !important}
+  .lbl{font-size:12px !important;letter-spacing:.14em !important}
+  .hero{gap:24px !important}
+  .hero-cover,.il-img{width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px;margin-right:-20px}
+  h1.h1r{font-size:30px !important}
+  .hero p,.pad>p{font-size:15px !important;line-height:1.5 !important}
+  .il-btns{flex-direction:column;gap:8px !important}
+  .il-btns a{display:flex;align-items:center;height:46px;padding:0 16px !important;font-size:13px !important}
+  .facts>div{padding:16px 20px}
+  .facts>div>div:last-child{font-size:13px !important}
+  .gallery{gap:28px}
+  .gallery>div>div:last-child,.pad>div[style*="margin-top:8px"]{font-size:12px !important}
+  .il-more{flex-direction:column;align-items:flex-start !important}
+  .il-more a{margin-left:0 !important;min-height:44px;display:inline-flex;align-items:center}
+}
 </style>
 </head>
 <body>
@@ -46,12 +65,21 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 
   <header class="hd">
     <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
+    <a class="hd-home" href="/My-new-portfolio-2026/work/" data-back>← Work</a>
     <nav class="hd-nav" aria-label="Main">
       <a href="/My-new-portfolio-2026/work/">Work</a>
       <a href="/My-new-portfolio-2026/about/">About</a>
       <a href="/My-new-portfolio-2026/contact/">Contact</a>
     </nav>
     <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
+      <a href="/My-new-portfolio-2026/work/" data-back>← Work</a>
+      <a href="/My-new-portfolio-2026/" data-from-home-hide>Home<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/work/" data-from-home-show hidden>Work<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+    </nav>
   </header>
 
   <main id="main">
@@ -64,7 +92,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
         <h1 class="h1r" style="font-size:clamp(30px,4.6vw,52px);line-height:1.05;letter-spacing:-.03em;margin:0 0 10px">Skräphjältarna</h1>
         <div style="font:400 17px/1.4 Archivo;color:#75726e;margin-bottom:20px">"The Trash Heroes" — a children's picture book, illustrated by Tarek Alfutih</div>
         <p style="font:400 18px/1.55 Archivo;color:#3a3835;margin:0 0 24px;max-width:520px;text-wrap:pretty">Encourages children to pick up litter and sort waste. Magical Metal, Glittery Glass, Peppy Plastic, Cuddly Cardboard and Cool Compost — they all turn old into new. A picture book that inspires recycling by celebrating everything fun and good that can be made from trash.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <div class="il-btns" style="display:flex;flex-wrap:wrap;gap:10px">
           <a class="hv1" href="https://olika.nu/products/skraphjaltarna" target="_blank" style="background:#1b3ac4;color:#fff;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 18px;text-decoration:none">Buy the book</a>
           <a class="hv2" href="https://cdn.shopify.com/s/files/1/0553/0694/4572/files/skraphjaltarna_PROVLAS.pdf" target="_blank" style="border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Read a preview</a>
         </div>
@@ -82,37 +110,37 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   <section class="pad rule" style="padding:48px 56px">
     <div class="lbl" style="margin-bottom:20px">The book</div>
     <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 14px;text-wrap:pretty">Skräphjältarna ("The Trash Heroes") follows five characters who live inside a talking recycling bin: Magical Metal, Glittery Glass, Peppy Plastic, Cuddly Cardboard and Cool Compost. Each one shows children how their kind of waste gets a second life.</p>
-    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">The book was created in collaboration with the Rinkeby-Tensta district administration in Stockholm, aimed at inspiring children and adults to sort their waste. It's printed on Nordic Swan-certified recycled paper.</p>
+    <p class="m-hide" style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">The book was created in collaboration with the Rinkeby-Tensta district administration in Stockholm, aimed at inspiring children and adults to sort their waste. It's printed on Nordic Swan-certified recycled paper.</p>
   </section>
 
   <section class="pad rule" style="padding:48px 56px">
     <div class="lbl" style="margin-bottom:20px">Illustrations</div>
     <div class="gallery">
       <div>
-        <div style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-playground.png" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-1343.webp 1343w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Children playing at a playground" decoding="async" style="object-fit:contain;"></div>
+        <div class="il-img" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-playground.png" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-1343.webp 1343w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Children playing at a playground" decoding="async" style="object-fit:contain;"></div>
         <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Children at play — one of the book's opening spreads</div>
       </div>
       <div>
-        <div style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-metal.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Magical Metal introduces herself" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div class="il-img" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-metal.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Magical Metal introduces herself" loading="lazy" decoding="async" style="object-fit:contain;"></div>
         <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Magical Metal introduces herself</div>
       </div>
       <div>
-        <div style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-compost.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Cool Compost introduces himself" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div class="il-img" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-compost.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Cool Compost introduces himself" loading="lazy" decoding="async" style="object-fit:contain;"></div>
         <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Cool Compost introduces himself</div>
       </div>
       <div>
-        <div style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-cycle.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="A cycle showing how waste becomes energy" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+        <div class="il-img" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-cycle.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="A cycle showing how waste becomes energy" loading="lazy" decoding="async" style="object-fit:contain;"></div>
         <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">The cycle of how waste becomes energy</div>
       </div>
     </div>
   </section>
 
   <section class="pad rule" style="padding:40px 56px">
-    <div style="background:#ececea;aspect-ratio:1/1;max-width:480px"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-farewell.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 63vw, (max-width: 1280px) 44vw, 480px" alt="The heroes say goodbye" loading="lazy" decoding="async" style="object-fit:contain;"></div>
+    <div class="il-img" style="background:#ececea;aspect-ratio:1/1;max-width:480px"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-farewell.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 63vw, (max-width: 1280px) 44vw, 480px" alt="The heroes say goodbye" loading="lazy" decoding="async" style="object-fit:contain;"></div>
     <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">"Come back soon! We'll be waiting" — the closing spread</div>
   </section>
 
-  <section class="pad" style="padding:40px 56px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+  <section class="pad il-more" style="padding:40px 56px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
     <div style="font:400 15px/1.5 Archivo;color:#75726e">Part of 10+ years in visual communication and children's book illustration.</div>
     <a href="https://tarekalfutih.se" target="_blank" style="margin-left:auto">More illustration work at tarekalfutih.se</a>
   </section>
@@ -125,6 +153,6 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 
 </div>
 <script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=6fba6335" defer></script>
 </body>
 </html>

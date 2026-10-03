@@ -10,8 +10,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a7da08a8">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
+<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=a32ab871">
+<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=bf9f5ca4"></script>
+<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
 <title>Contact — Tarek Alfutih</title>
 <meta name="description" content="Open to UX/UI, Interaction, Product Design and UX Research roles in Sweden.">
 <style>
@@ -55,6 +56,30 @@ a:focus-visible,button:focus-visible{outline:2px solid #1b3ac4;outline-offset:3p
   .cc-acts{grid-column:1 / -1 !important;justify-content:flex-start !important}
   .cc-v{font-size:18px !important}
 }
+/* Phones (< 768px). Desktop is unchanged. */
+@media (max-width:767px){
+  .c-gridbg,.c-badge{display:none !important}
+  main.pad{justify-content:flex-start !important;padding:36px 20px 44px !important}
+  .c-grid{gap:36px !important}
+  .c-grid>*{grid-column:1 / -1 !important}
+  .cc:nth-child(2) .cc-acts{display:none !important}
+  .cc:nth-child(2) .cc-link{grid-column:1 / -1 !important}
+  .c-h1{font-size:56px !important;margin-bottom:18px !important}
+  .c-lead{font-size:17px !important;line-height:1.5 !important}
+  .cc{grid-template-columns:minmax(0,1fr) auto !important;gap:12px !important;padding:16px !important}
+  .cc-link{grid-column:1 / 2 !important;grid-template-columns:44px minmax(0,1fr) !important;gap:14px !important;min-height:44px}
+  .cc-ico{width:44px !important;height:44px !important}
+  .cc-acts{grid-column:2 / 3 !important;justify-content:flex-end !important}
+  .cc-btn{min-width:64px !important;padding:0 10px !important;font-size:11px !important}
+  .cc-l{font-size:12px !important;margin-bottom:6px !important}
+  .cc-v{font-size:16px !important;line-height:1.3 !important;font-weight:600 !important;letter-spacing:0 !important;white-space:normal !important;overflow-wrap:anywhere}
+  .cc:first-child .cc-v{font-size:18px !important;font-weight:700 !important}
+  .c-info{margin-top:40px !important;gap:28px !important;padding-top:20px !important}
+  .c-info>*{grid-column:1 / -1 !important}
+  .c-info ul{flex-direction:column;gap:12px !important}
+  .c-info li{align-items:flex-start !important}
+  .c-info li svg{margin-top:2px}
+}
 </style>
 </head>
 <body>
@@ -63,30 +88,38 @@ a:focus-visible,button:focus-visible{outline:2px solid #1b3ac4;outline-offset:3p
 
   <header class="hd">
     <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
+    <a class="hd-home" href="/My-new-portfolio-2026/">← Home</a>
     <nav class="hd-nav" aria-label="Main">
       <a href="/My-new-portfolio-2026/work/">Work</a>
       <a href="/My-new-portfolio-2026/about/">About</a>
       <a href="/My-new-portfolio-2026/contact/" aria-current="page">Contact</a>
     </nav>
     <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
+      <a href="/My-new-portfolio-2026/">Home<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/work/">Work<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/My-new-portfolio-2026/contact/" aria-current="page">Contact<span aria-hidden="true">→</span></a>
+    </nav>
   </header>
 
   <main id="main" class="pad" data-screen-label="Contact" style="flex:1 0 auto;display:flex;flex-direction:column;justify-content:center;padding:clamp(40px,8vh,96px) 56px">
     <div class="c-grid" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:end">
 
       <div class="c-left" style="grid-column:1 / span 6;min-width:0;display:flex;flex-direction:column">
-        <div style="align-self:flex-start;display:inline-flex;align-items:center;gap:12px;font:600 12px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f;background:#e5e9fb;padding:10px 14px;margin-bottom:clamp(24px,4vh,40px);animation:cUp .6s cubic-bezier(.2,.7,.3,1) both">
+        <div class="c-badge" style="align-self:flex-start;display:inline-flex;align-items:center;gap:12px;font:600 12px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f;background:#e5e9fb;padding:10px 14px;margin-bottom:clamp(24px,4vh,40px);animation:cUp .6s cubic-bezier(.2,.7,.3,1) both">
           <span aria-hidden="true" style="position:relative;width:8px;height:8px;flex:none"><span class="c-ping" style="position:absolute;inset:0;border-radius:50%;background:#1b3ac4"></span><span style="position:absolute;inset:0;border-radius:50%;background:#1b3ac4"></span></span>Open to opportunities
         </div>
-        <h1 class="c-h1" aria-label="Let's talk." style="font:700 clamp(64px,8vw,112px)/.9 Archivo;letter-spacing:-.055em;margin:0 0 clamp(20px,3vh,32px);display:flex;flex-wrap:wrap;gap:0 .22em">
+        <h1 class="c-h1" aria-label="Let's talk" style="font:700 clamp(64px,8vw,112px)/.9 Archivo;letter-spacing:-.055em;margin:0 0 clamp(20px,3vh,32px);display:flex;flex-wrap:wrap;gap:0 .22em">
           <span aria-hidden="true" style="display:inline-block;animation:cUp .7s cubic-bezier(.2,.7,.3,1) .15s both">Let's</span>
-          <span aria-hidden="true" style="position:relative;display:inline-block;animation:cUp .7s cubic-bezier(.2,.7,.3,1) .28s both">talk.<svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none" style="position:absolute;left:0;right:.18em;bottom:-.1em;width:calc(100% - .2em);height:.2em;overflow:visible"><path d="M4 16C60 6 120 4 170 9s90 8 126-2" fill="none" stroke="#1b3ac4" stroke-width="7" stroke-linecap="round" style="stroke-dasharray:320;stroke-dashoffset:320;animation:cLoop 6s cubic-bezier(.6,0,.2,1) .9s infinite"></path></svg></span>
+          <span aria-hidden="true" style="position:relative;display:inline-block;animation:cUp .7s cubic-bezier(.2,.7,.3,1) .28s both">talk<svg aria-hidden="true" viewBox="0 0 300 24" preserveAspectRatio="none" style="position:absolute;left:0;right:.18em;bottom:-.1em;width:calc(100% - .2em);height:.2em;overflow:visible"><path d="M4 16C60 6 120 4 170 9s90 8 126-2" fill="none" stroke="#1b3ac4" stroke-width="7" stroke-linecap="round" style="stroke-dasharray:320;stroke-dashoffset:320;animation:cLoop 6s cubic-bezier(.6,0,.2,1) .9s infinite"></path></svg></span>
         </h1>
-        <p style="font:400 clamp(18px,1.6vw,21px)/1.5 Archivo;color:#4a4744;margin:0;max-width:520px;text-wrap:pretty;animation:cUp .6s cubic-bezier(.2,.7,.3,1) .45s both">Open to UX/UI, Interaction, Product Design and UX Research roles in Sweden.</p>
+        <p class="c-lead" style="font:400 clamp(18px,1.6vw,21px)/1.5 Archivo;color:#4a4744;margin:0;max-width:520px;text-wrap:pretty;animation:cUp .6s cubic-bezier(.2,.7,.3,1) .45s both">Open to UX/UI, Interaction, Product Design and UX Research roles in Sweden.</p>
       </div>
 
       <div class="c-right" style="grid-column:7 / span 6;min-width:0;position:relative">
-        <div aria-hidden="true" style="position:absolute;inset:-40px -56px -40px -40px;pointer-events:none;background-image:linear-gradient(#e2dfda 1px,transparent 1px),linear-gradient(90deg,#e2dfda 1px,transparent 1px);background-size:32px 32px;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 55% 50%,#000 30%,transparent 100%);mask-image:radial-gradient(ellipse 70% 70% at 55% 50%,#000 30%,transparent 100%)"></div>
+        <div class="c-gridbg" aria-hidden="true" style="position:absolute;inset:-40px -56px -40px -40px;pointer-events:none;background-image:linear-gradient(#e2dfda 1px,transparent 1px),linear-gradient(90deg,#e2dfda 1px,transparent 1px);background-size:32px 32px;-webkit-mask-image:radial-gradient(ellipse 70% 70% at 55% 50%,#000 30%,transparent 100%);mask-image:radial-gradient(ellipse 70% 70% at 55% 50%,#000 30%,transparent 100%)"></div>
         <div style="position:relative;background:#fff;border:2px solid #1c1b1a;display:flex;flex-direction:column">
 
           <div class="cc" style="position:relative;overflow:hidden;display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:14px 18px;align-items:center;padding:24px 22px;border-bottom:1px solid #dcd9d4;animation:cIn .6s cubic-bezier(.2,.7,.3,1) .5s both">
@@ -138,7 +171,7 @@ a:focus-visible,button:focus-visible{outline:2px solid #1b3ac4;outline-offset:3p
   </footer>
 </div>
 <script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=a996285e" defer></script>
+<script src="/My-new-portfolio-2026/assets/js/site.js?v=6fba6335" defer></script>
 <script src="/My-new-portfolio-2026/assets/js/contact.js?v=cb3329d7" defer></script>
 </body>
 </html>
