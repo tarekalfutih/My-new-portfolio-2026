@@ -53,8 +53,10 @@ def header(current):
     rows = [('home', '/', 'Home')] + NAV
     menu = ['<a href="%s">%s<span aria-hidden="true">→</span></a>' % (href, label)
             for key, href, label in rows if key != current]
+    # "← Home" beside the name on Work, About and Contact (hidden on phones).
+    home = ('\n    <a class="hd-home" href="/">← Home</a>' if current in ('work', 'about', 'contact') else '')
     return (partial('header').replace('{{nav}}', '\n      '.join(links))
-            .replace('{{menu}}', '\n      '.join(menu)))
+            .replace('{{menu}}', '\n      '.join(menu)).replace('{{home}}', home))
 
 
 def load_json(name):

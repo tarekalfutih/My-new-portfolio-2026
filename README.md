@@ -35,6 +35,8 @@ public/                  copied to dist/ as-is
   assets/js/site.js          scroll reveal + Claude Design image crops (every page)
   assets/js/video-controls.js  site video controls, no tint over the footage (every page)
   assets/js/video-behavior.js  pause off-screen, one video at a time, reset on back (every page)
+  assets/js/cv-viewer.js      CV links open the CV in a dialog (pdf.js from assets/js/pdfjs/, every page)
+  assets/js/pdfjs/           local copy of pdf.js 3.11.174 (Apache-2.0), loaded when the CV is opened
   assets/js/home.js, lego-alma.js, contact.js, work.js   page interactions
   assets/downloads/          downloadable builds (Gilded Cage macOS .dmg, 87 MB)
   assets/img|video|docs/     renamed assets (lowercase kebab-case); img/opt/ holds the WebP variants

@@ -59,6 +59,14 @@ button { font-family: inherit; }
   overflow-x: clip;
 }
 
+/* Wide screens. Laptop 15" (1281–1679px): the page stretches to full width on white, no grey side
+   margins or side borders. Desktop (>= 1680px) keeps the 1280px page on grey; <= 1280px is unchanged.
+   `html body` beats the pages' own body / .wrap rules. */
+@media (min-width: 1281px) and (max-width: 1679px) {
+  html body { background: #fff; }
+  html body .wrap { max-width: none; border-left: 0; border-right: 0; }
+}
+
 /* Header */
 .hd {
   position: sticky; top: 0; z-index: 5; background: #fff;
@@ -71,6 +79,8 @@ button { font-family: inherit; }
   white-space: nowrap; color: var(--ink);
 }
 .hd-logo:hover { color: var(--ink); text-decoration: none; }
+.hd-home { position: relative; font: 500 14px/1 Archivo, sans-serif; color: var(--body-2); white-space: nowrap; }
+.hd-home::before { content: ""; position: absolute; inset: -14px -8px; }
 .hd-nav { display: flex; gap: 28px; margin-left: auto; font: 500 15px/1 Archivo, sans-serif; }
 .hd-nav a, .cs-main a, .cs-back { position: relative; color: var(--body-2); }
 /* 44px hit area without changing the layout */
@@ -155,6 +165,42 @@ button { font-family: inherit; }
 .vc:-webkit-full-screen { background: #000; display: flex; align-items: center; width: 100%; height: 100%; }
 .vc:-webkit-full-screen > video { width: 100%; height: 100%; object-fit: contain; }
 
+/* CV dialog (cv-viewer.js): max 1200px wide, full screen on phones. */
+.cvv {
+  position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(11, 26, 92, .72);
+}
+.cvv-panel {
+  width: 100%; max-width: 1200px; height: 100%; display: flex; flex-direction: column;
+  background: #fff; border: 2px solid var(--ink);
+}
+.cvv-bar { display: flex; align-items: center; gap: 10px; padding: 12px 12px 12px 20px; border-bottom: 2px solid var(--ink); }
+.cvv-title { margin-right: auto; font: 700 17px/1 Archivo, sans-serif; letter-spacing: -.02em; color: var(--ink); white-space: nowrap; }
+.cvv-btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; box-sizing: border-box; cursor: pointer;
+  font: 600 12px/1 Archivo, sans-serif; letter-spacing: .06em; text-transform: uppercase; text-decoration: none;
+}
+.cvv-dl { background: var(--cobalt); color: #fff; border: 0; }
+.cvv-dl:hover { background: var(--cobalt-700); color: #fff; text-decoration: none; }
+.cvv-close { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
+.cvv-close:hover { background: var(--ink); color: #fff; }
+.cvv-pages {
+  flex: 1; min-height: 0; overflow: auto; -webkit-overflow-scrolling: touch; background: var(--ground);
+  padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.cvv-pages canvas { flex: none; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+.cvv-pages iframe { flex: 1; width: 100%; border: 0; }
+.cvv-msg { font: 500 14px/1.4 Archivo, sans-serif; color: var(--body-2); padding: 24px; }
+html.cvv-open { overflow: hidden; }
+@media (max-width: 767px) {
+  .cvv { padding: 0; }
+  .cvv-panel { max-width: none; border: 0; }
+  .cvv-bar { padding: 8px 8px 8px 16px; }
+  .cvv-title { font-size: 15px; }
+  .cvv-name, .cvv-dl { display: none; }
+  .cvv-pages { padding: 8px; }
+}
+
 /* Scroll reveal (triggered once by site.js) */
 [data-reveal] {
   opacity: 0; transform: translateY(24px);
@@ -192,7 +238,7 @@ button { font-family: inherit; }
   }
   .cs-bar { height: 56px; padding: 0 6px 0 20px; flex-wrap: nowrap; gap: 12px; border-bottom: 0; }
   .hd-logo { font-size: 17px; min-height: 44px; display: inline-flex; align-items: center; }
-  .hd-nav, .cs-main, .cs-back, .cs-nav, .btn-cv, .cv-link { display: none !important; }
+  .hd-nav, .hd-home, .cs-main, .cs-back, .cs-nav, .btn-cv, .cv-link { display: none !important; }
   .m-btn {
     display: flex; margin-left: auto; width: 44px; height: 44px; flex: none; align-items: center; justify-content: center;
     background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink);
