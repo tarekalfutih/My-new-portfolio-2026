@@ -251,7 +251,9 @@ html.cvv-open { overflow: hidden; }
     height: calc(100vh - 56px); height: calc(100dvh - 56px); overflow-y: auto;
     display: flex; flex-direction: column; background: #fff; border-top: 2px solid var(--ink);
   }
-  html.m-open, html.m-open body { overflow: hidden; }
+  /* Lock the page behind the open menu on <html> only: hiding body overflow too resets the scroll
+     position to the top. */
+  html.m-open { overflow: hidden; }
   .ft { padding: 16px 20px; }
   .ft-copy, .ft-nav a { font-size: 12px; }
   section[id] { scroll-margin-top: 64px; }
