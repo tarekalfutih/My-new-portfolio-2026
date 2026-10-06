@@ -35,7 +35,11 @@ DIST = os.path.join(ROOT, 'dist')
 BASE_PATH = os.environ.get('BASE_PATH', '').rstrip('/')          # '' when served at a domain root
 SITE_URL = os.environ.get('SITE_URL', 'https://tarekdesign.se').rstrip('/')  # canonical origin (+ base)
 
-NAV = [('work', '/work/', 'Work'), ('about', '/about/', 'About'), ('contact', '/contact/', 'Contact')]
+NAV = [('home', '/', 'Home'), ('work', '/work/', 'Work'), ('about', '/about/', 'About'), ('contact', '/contact/', 'Contact')]
+
+# "← Back" on detail pages (case studies, Illustration): nav-back.js goes to the previous page on this
+# site, otherwise follows href. On phones it is a chevron left of the name (base.css).
+BACK = ('<a class="cs-back" href="%s" data-back aria-label="Back"><span class="cs-back-a" aria-hidden="true">←</span><svg class="cs-back-c" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span class="cs-back-t" aria-hidden="true">&nbsp;Back</span></a>')
 
 
 def partial(name):
@@ -43,28 +47,27 @@ def partial(name):
         return f.read().strip()
 
 
-def header(current):
-    links = []
+def nav_links(current, row=False):
+    """Home · Work · About · Contact; the current page is marked (Work on detail pages)."""
+    out = []
     for key, href, label in NAV:
-        cur = ' aria-current="page"' if key == current else ''
-        links.append('<a href="%s"%s>%s</a>' % (href, cur, label))
-    # Phone menu (hamburger): all four pages in the same order on every page; the current one is marked.
-    rows = [('home', '/', 'Home')] + NAV
-    menu = ['<a href="%s"%s>%s<span aria-hidden="true">→</span></a>'
-            % (href, ' aria-current="page"' if key == current else '', label) for key, href, label in rows]
-    # "← Home" beside the name on Work, About and Contact (hidden on phones).
-    home = ('\n    <a class="hd-home" href="/">← Home</a>' if current in ('work', 'about', 'contact') else '')
-    if current == 'illustration':
-        # Back link: to Work by default, to Home when arriving from Home (?from=home, site.js).
-        # On phones it is the first menu row; the menu then offers the other of Home / Work.
-        home = '\n    <a class="hd-home" href="/work/" data-back>← Work</a>'
-        menu = ['<a href="/work/" data-back>← Work</a>',
-                '<a href="/" data-from-home-hide>Home<span aria-hidden="true">→</span></a>',
-                '<a href="/work/" data-from-home-show hidden>Work<span aria-hidden="true">→</span></a>',
-                '<a href="/about/">About<span aria-hidden="true">→</span></a>',
-                '<a href="/contact/">Contact<span aria-hidden="true">→</span></a>']
-    return (partial('header').replace('{{nav}}', '\n      '.join(links))
-            .replace('{{menu}}', '\n      '.join(menu)).replace('{{home}}', home))
+        cur = ' aria-current="page"' if key == current else (' aria-current="true"' if key == 'work' and current == 'detail' else '')
+        out.append(('<a href="%s"%s>%s<span aria-hidden="true">→</span></a>' if row else '<a href="%s"%s>%s</a>') % (href, cur, label))
+    return out
+
+
+def header(current):
+    # Illustration is a detail page: "← Back" (fallback Home) and Work marked in the nav.
+    detail = current == 'illustration'
+    key = 'detail' if detail else current
+    back = '\n    ' + BACK % '/' + '\n    <script src="/assets/js/nav-back.js" defer></script>' if detail else ''
+    return (partial('header').replace('{{nav}}', '\n      '.join(nav_links(key)))
+            .replace('{{menu}}', '\n      '.join(nav_links(key, row=True))).replace('{{back}}', back))
+
+
+def case_bar():
+    return (partial('case-bar').replace('{{back}}', BACK % '/work/')
+            .replace('{{nav}}', ''.join(nav_links('detail'))).replace('{{menu}}', '\n      '.join(nav_links('detail', row=True))))
 
 
 def load_json(name):
@@ -123,7 +126,7 @@ def render(text, route='/'):
     text = re.sub(r'<!--@head (\S+)-->',
                   lambda m: partial('head').replace('{{url}}', SITE_URL + m.group(1)), text)
     text = re.sub(r'<!--@header (\w+)-->', lambda m: header(m.group(1)), text)
-    text = text.replace('<!--@case-bar-->', partial('case-bar'))
+    text = text.replace('<!--@case-bar-->', case_bar())
     text = text.replace('<!--@footer email-->', partial('footer').replace('class="ft"', 'class="ft ft-home"')
                         .replace('{{extra}}', '\n    ' + partial('footer-email')))
     text = text.replace('<!--@footer-->', partial('footer').replace('{{extra}}', ''))

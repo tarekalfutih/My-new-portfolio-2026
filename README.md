@@ -27,14 +27,16 @@ src/partials/            head, header, case-study header bar, footer, scripts
 src/image-manifest.json  WebP variants per image (written by tools/optimize_images.py)
 src/image-sizes.json     measured display widths per page -> `sizes` attributes
 public/                  copied to dist/ as-is
-  cv.pdf
+  Tarek Alfutih - CV.pdf     protected: original name, byte-identical to the handoff
+  files/, documents/, uploads/  thesis and report PDFs, protected (original names and folders)
   CNAME                  tarekdesign.se (GitHub Pages custom domain)
   assets/css/modernist.css   design-system base (from the handoff's _ds/ folder)
   assets/css/base.css        tokens, page frame, header, footer, focus, shared motion, phone header + menu
   assets/css/case-phone.css  shared phone layer (< 768px) for the case studies that link it
   assets/js/site.js          scroll reveal + Claude Design image crops (every page)
-  assets/js/video-controls.js  site video controls, no tint over the footage (every page)
-  assets/js/video-behavior.js  pause off-screen, one video at a time, reset on back (every page)
+  assets/js/video-behavior.js  native controls, resume where left off, pause off-screen, one at a time (every page)
+  assets/js/nav-back.js        "← Back" goes to the previous page on this site (case studies, Illustration)
+  assets/js/section-spy.js     colours the section tab for the section in view (case studies)
   assets/js/cv-viewer.js      CV links open the CV in a dialog (pdf.js from assets/js/pdfjs/, every page)
   assets/js/pdfjs/           local copy of pdf.js 3.11.174 (Apache-2.0), loaded when the CV is opened
   assets/js/home.js, lego-alma.js, contact.js, work.js   page interactions
@@ -74,12 +76,15 @@ needed, so add an entry to `image-sizes.json` if it matters.
 
 ## Videos
 
-**Controls.** `assets/js/video-controls.js` replaces the browser's native controls on every
-`<video controls>` with site controls: a compact bar at the bottom with play/pause, seek, time, sound and
-full screen. It stays visible while paused and appears on hover, focus or tap while playing, with keyboard
-support (Space/K, ←/→, M, F). Native controls were dropped because Safari tints the whole video
-while they show, and pages can't turn that off. Without JavaScript the native controls remain.
-Keep writing `controls` on new `<video>` tags and the script takes over.
+**Playback.** Videos use the browser's native controls (picture-in-picture, full screen and AirPlay
+stay available), following Apple HIG "Playing video". `assets/js/video-behavior.js` never autoplays
+with sound, keeps the original aspect ratio, plays inline on iPhone, remembers the position per video
+for the session (resume where people left off), exits full screen at the end, pauses a video that is
+less than 25% visible and plays one video at a time.
+
+**Protected files.** The CV, the thesis/report PDFs, all videos, the video thumbnails (posters) and the
+Gilded Cage download are never edited, renamed, re-encoded or regenerated (see the handoff's
+CLAUDE.md). Change only the HTML/CSS around them.
 
 **Encoding.**
 

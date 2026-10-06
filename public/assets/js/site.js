@@ -59,18 +59,6 @@
   });
 })();
 
-/* Back links on pages reached from both Home and Work (Illustration): they point to Work by
-   default; arriving from Home (?from=home) they say "← Home" and go Home. The case-study bar has its
-   own copy of this in case-bar.html. */
-(function () {
-  if (!document.querySelector('.hd [data-back]')) return;
-  if (new URLSearchParams(location.search).get('from') !== 'home') return;
-  var home = document.querySelector('.hd .hd-logo').getAttribute('href'); // Home (respects base path)
-  document.querySelectorAll('.hd [data-back]').forEach(function (a) { a.href = home; a.textContent = '← Home'; });
-  document.querySelectorAll('.hd [data-from-home-hide]').forEach(function (a) { a.hidden = true; });
-  document.querySelectorAll('.hd [data-from-home-show]').forEach(function (a) { a.hidden = false; });
-})();
-
 /* Phone menu (< 768px): the header's hamburger opens a full-screen list of links.
    Esc and link taps close it; opened from the keyboard, focus moves to the first link; the page
    behind does not scroll. */

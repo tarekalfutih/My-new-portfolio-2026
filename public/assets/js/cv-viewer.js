@@ -1,4 +1,4 @@
-/* CV viewer — every link to the CV (/cv.pdf) opens an in-page dialog instead of downloading.
+/* CV viewer — every link to the CV ("Tarek Alfutih - CV.pdf") opens an in-page dialog instead of downloading.
    The dialog (max 1200px wide, full screen on phones) renders the PDF with a local copy of pdf.js
    (assets/js/pdfjs/, loaded on first open) and falls back to an <iframe>. Header: "Download CV"
    and "Close ✕". Esc closes, Tab stays inside, clicking outside does not close.
@@ -12,7 +12,9 @@
   var LIB = me ? me.replace(/[^/]*$/, '') + 'pdfjs/' : '/assets/js/pdfjs/';
   var box = null, lastFocus = null, libP = null;
 
-  function isCv(a) { return /\/cv\.pdf$/i.test(a.pathname || ''); }
+  function isCv(a) {
+    try { return /CV\.pdf$/.test(decodeURIComponent(a.pathname || '')); } catch (_) { return false; }
+  }
 
   function lib() {
     if (window.pdfjsLib) return Promise.resolve(window.pdfjsLib);
@@ -31,7 +33,7 @@
   }
 
   function open(link) {
-    var url = link.href, name = link.getAttribute('download') || 'Tarek-Alfutih-CV.pdf';
+    var url = link.href, name = 'Tarek Alfutih - CV.pdf';
     lastFocus = document.activeElement;
     box = document.createElement('div');
     box.className = 'cvv';
