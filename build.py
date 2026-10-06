@@ -89,7 +89,13 @@ def responsive_images(text, route):
     def repl(m):
         tag, src = m.group(0), m.group(1)
         entry = IMAGES.get(src)
-        if not entry or 'srcset=' in tag:
+        if not entry:
+            return tag
+        if entry.get('w') and not re.search(r'\swidth=', tag):
+            # Intrinsic size: the browser reserves the image's own shape before it loads (no layout
+            # shift; lazy images in carousels and grids get their box).
+            tag = tag.replace('<img', '<img width="%d" height="%d"' % (entry['w'], entry['h']), 1)
+        if 'srcset=' in tag:
             return tag
         if 'replace' in entry:
             return tag.replace('src="%s"' % src, 'src="%s"' % entry['replace'], 1)

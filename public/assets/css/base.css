@@ -114,6 +114,10 @@ button { font-family: inherit; }
 .ft-nav a { color: var(--ink); min-height: 44px; display: inline-flex; align-items: center; }
 .ft-nav a:hover { color: var(--cobalt-700); text-decoration: underline; }
 
+/* build.py adds each image's width/height (its own shape, reserved before load). Keep the height
+   automatic unless a rule sets one; :where() has no specificity, so any page rule still wins. */
+:where(img[width][height]) { height: auto; }
+
 /* Images that replaced the design tool's image slots: fill their sized wrapper. */
 .slot { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .slot-empty { background: var(--img-bg); }

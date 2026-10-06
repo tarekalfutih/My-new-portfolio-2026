@@ -1,4 +1,14 @@
 /* Shared behaviour for every page. */
+/* --hdr = the sticky header's height, so one-screen heroes can use calc(100svh - var(--hdr)). */
+(function () {
+  var h = document.querySelector('.cs-hd, .hd');
+  if (!h) return;
+  function set() { document.documentElement.style.setProperty('--hdr', Math.round(h.getBoundingClientRect().height) + 'px'); }
+  set();
+  window.addEventListener('resize', set);
+  window.addEventListener('load', set);
+})();
+
 (function () {
   // Scroll reveal: [data-reveal] fades up; [data-reveal-lead] staggers its children and
   // draws the heading line. Triggered once per element.

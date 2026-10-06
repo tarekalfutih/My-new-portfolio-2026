@@ -413,6 +413,24 @@
   "replace": "/assets/img/opt/bird.webp",
   "w": 880
  },
+ "/assets/img/bird.jpg": {
+  "h": 854,
+  "variants": [
+   [
+    "/assets/img/opt/bird-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/bird-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/bird-880.webp",
+    880
+   ]
+  ],
+  "w": 880
+ },
  "/assets/img/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8.png": {
   "h": 1245,
   "variants": [
@@ -1053,6 +1071,24 @@
   ],
   "w": 1166
  },
+ "/assets/img/helmet-sketch1.jpg": {
+  "h": 1535,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-sketch1-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-sketch1-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-sketch1-1151.webp",
+    1151
+   ]
+  ],
+  "w": 1151
+ },
  "/assets/img/helmet-sketch1.webp": {
   "h": 893,
   "variants": [
@@ -1071,6 +1107,28 @@
   ],
   "w": 1098
  },
+ "/assets/img/helmet-sketch2.jpg": {
+  "h": 1131,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-sketch2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-sketch2-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-sketch2-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/helmet-sketch2-1600.webp",
+    1600
+   ]
+  ],
+  "w": 1600
+ },
  "/assets/img/helmet-sketch2.webp": {
   "h": 776,
   "variants": [
@@ -1088,6 +1146,28 @@
    ]
   ],
   "w": 1098
+ },
+ "/assets/img/helmet-sketch3.jpg": {
+  "h": 1096,
+  "variants": [
+   [
+    "/assets/img/opt/helmet-sketch3-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/helmet-sketch3-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/helmet-sketch3-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/helmet-sketch3-1435.webp",
+    1435
+   ]
+  ],
+  "w": 1435
  },
  "/assets/img/helmet-sketch3.webp": {
   "h": 839,
@@ -1513,6 +1593,32 @@
   "replace": "/assets/img/opt/octopus.webp",
   "w": 4032
  },
+ "/assets/img/octotorg-illustration.png": {
+  "h": 1080,
+  "variants": [
+   [
+    "/assets/img/opt/octotorg-illustration-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/octotorg-illustration-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/octotorg-illustration-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/octotorg-illustration-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/octotorg-illustration-1920.webp",
+    1920
+   ]
+  ],
+  "w": 1920
+ },
  "/assets/img/onsala-observatory.jpg": {
   "h": 1510,
   "variants": [
@@ -1699,6 +1805,32 @@
   ],
   "w": 1236
  },
+ "/assets/img/playrent-logo.png": {
+  "h": 746,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-logo-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/playrent-logo-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/playrent-logo-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/playrent-logo-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/playrent-logo-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2441
+ },
  "/assets/img/playrent-publish.png": {
   "h": 2751,
   "variants": [
@@ -1720,6 +1852,16 @@
    ]
   ],
   "w": 1236
+ },
+ "/assets/img/playrent-publish.webp": {
+  "h": 560,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-publish-252.webp",
+    252
+   ]
+  ],
+  "w": 252
  },
  "/assets/img/playrent-search1.png": {
   "h": 917,
@@ -2005,6 +2147,54 @@
   ],
   "w": 757
  },
+ "/assets/img/rb-index-cover.jpg": {
+  "h": 1024,
+  "variants": [
+   [
+    "/assets/img/opt/rb-index-cover-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-index-cover-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-index-cover-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/rb-index-cover-1536.webp",
+    1536
+   ]
+  ],
+  "w": 1536
+ },
+ "/assets/img/rb-new-available-now.png": {
+  "h": 1964,
+  "variants": [
+   [
+    "/assets/img/opt/rb-new-available-now-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-new-available-now-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-new-available-now-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/rb-new-available-now-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/rb-new-available-now-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
+ },
  "/assets/img/rb-new-available-now.webp": {
   "h": 707,
   "variants": [
@@ -2022,6 +2212,32 @@
    ]
   ],
   "w": 1200
+ },
+ "/assets/img/rb-new-best-available-selected.png": {
+  "h": 1964,
+  "variants": [
+   [
+    "/assets/img/opt/rb-new-best-available-selected-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-new-best-available-selected-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-new-best-available-selected-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/rb-new-best-available-selected-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/rb-new-best-available-selected-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
  },
  "/assets/img/rb-new-best-available.webp": {
   "h": 714,
@@ -2046,6 +2262,32 @@
   "replace": "/assets/img/opt/rb-new-home-select-anim-4.webp",
   "w": 1304
  },
+ "/assets/img/rb-new-my-booking-2.png": {
+  "h": 1750,
+  "variants": [
+   [
+    "/assets/img/opt/rb-new-my-booking-2-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-new-my-booking-2-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-new-my-booking-2-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/rb-new-my-booking-2-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/rb-new-my-booking-2-2400.webp",
+    2400
+   ]
+  ],
+  "w": 2972
+ },
  "/assets/img/rb-new-my-booking.webp": {
   "h": 704,
   "variants": [
@@ -2063,6 +2305,32 @@
    ]
   ],
   "w": 1200
+ },
+ "/assets/img/rb-new-room-schedule.png": {
+  "h": 1964,
+  "variants": [
+   [
+    "/assets/img/opt/rb-new-room-schedule-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/rb-new-room-schedule-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/rb-new-room-schedule-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/rb-new-room-schedule-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/rb-new-room-schedule-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
  },
  "/assets/img/rb-new-schedule.webp": {
   "h": 707,
@@ -2265,6 +2533,54 @@
    ]
   ],
   "w": 1480
+ },
+ "/assets/img/signalling-helmet-cover.jpg": {
+  "h": 1086,
+  "variants": [
+   [
+    "/assets/img/opt/signalling-helmet-cover-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/signalling-helmet-cover-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/signalling-helmet-cover-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/signalling-helmet-cover-1448.webp",
+    1448
+   ]
+  ],
+  "w": 1448
+ },
+ "/assets/img/sketch.jpg": {
+  "h": 2861,
+  "variants": [
+   [
+    "/assets/img/opt/sketch-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/sketch-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/sketch-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/sketch-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/sketch-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3689
  },
  "/assets/img/skraphjaltarna-compost.jpg": {
   "h": 1800,
@@ -2876,6 +3192,24 @@
   ],
   "w": 1151
  },
+ "/assets/img/trailmate-idle-white.png": {
+  "h": 1130,
+  "variants": [
+   [
+    "/assets/img/opt/trailmate-idle-white-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/trailmate-idle-white-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/trailmate-idle-white-1130.webp",
+    1130
+   ]
+  ],
+  "w": 1130
+ },
  "/assets/img/trailmate-idle.jpg": {
   "h": 1130,
   "variants": [
@@ -2975,6 +3309,136 @@
    ]
   ],
   "w": 428
+ },
+ "/assets/img/universeum-5.jpg": {
+  "h": 5712,
+  "variants": [
+   [
+    "/assets/img/opt/universeum-5-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/universeum-5-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/universeum-5-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/universeum-5-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/universeum-5-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4284
+ },
+ "/assets/img/universeum-6.jpg": {
+  "h": 5712,
+  "variants": [
+   [
+    "/assets/img/opt/universeum-6-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/universeum-6-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/universeum-6-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/universeum-6-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/universeum-6-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4284
+ },
+ "/assets/img/universeum-7.jpg": {
+  "h": 5712,
+  "variants": [
+   [
+    "/assets/img/opt/universeum-7-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/universeum-7-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/universeum-7-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/universeum-7-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/universeum-7-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4284
+ },
+ "/assets/img/universeum-8.jpg": {
+  "h": 4032,
+  "variants": [
+   [
+    "/assets/img/opt/universeum-8-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/universeum-8-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/universeum-8-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/universeum-8-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/universeum-8-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
+ },
+ "/assets/img/universeum-9.jpg": {
+  "h": 5712,
+  "variants": [
+   [
+    "/assets/img/opt/universeum-9-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/universeum-9-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/universeum-9-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/universeum-9-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/universeum-9-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4284
  },
  "/assets/img/user-test-color-rotation-first-image.png": {
   "h": 1215,
