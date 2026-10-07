@@ -142,6 +142,9 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 @media (max-width:1024px){
   .wrap section .pr-vid{width:90vw !important;max-width:90vw !important;margin-left:50% !important;margin-right:0 !important;transform:translateX(-50%);aspect-ratio:auto !important;height:min(82svh,173vw) !important}
   .wrap section .pr-vid video{width:100% !important;height:100% !important;object-fit:contain !important}
+  /* the demo is landscape with the phone in the middle third: fill the tall frame (only the black sides are trimmed; full screen shows the whole video) */
+  .wrap section .pr-vid>.vc{width:100% !important;height:100% !important}
+  .wrap section .pr-vid .vc:not(:fullscreen)>video{object-fit:cover !important}
   .wrap section .pr-pub{width:min(90vw,calc(90svh * 9 / 19.5)) !important;max-width:none !important;margin:0 auto !important}
   .pr-track{touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
 }
