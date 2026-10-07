@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/about/">
-<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/about/">
+<link rel="canonical" href="https://tarekdesign.se/about/">
+<meta property="og:url" content="https://tarekdesign.se/about/">
 <meta property="og:site_name" content="Tarek Alfutih">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=320b78c2">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
-<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
+<link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/assets/css/base.css?v=dc6c07bf">
+<script src="/assets/js/video-behavior.js?v=dcfab542"></script>
+<script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>About — Tarek Alfutih</title>
 <meta name="description" content="I design digital and physical experiences that make complex things easier to understand and use. I work through research, prototyping and user testing, improving the design based on what I learn.">
 <style>
@@ -114,6 +114,15 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   .ab-open{font-size:20px !important}
   .ab-open>li{padding:14px 0 !important}
 }
+/* Tablet layouts from the 6 Oct reference. */
+@media (min-width:768px) and (max-width:1023px){
+  .about-hero{grid-template-columns:300px minmax(0,1fr) !important;column-gap:64px !important;padding-left:48px !important;padding-right:48px !important;align-items:center !important}
+  .about-photo,.about-text{grid-column:auto !important}
+  .about-photo{justify-self:start !important}
+  .ab-sec{grid-template-columns:1fr !important;gap:24px !important;padding:56px 40px !important}
+  .ab-l,.ab-r{grid-column:1 / -1 !important}
+  .ab-l p{max-width:520px !important}
+}
 </style>
 </head>
 <body>
@@ -121,20 +130,20 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 <div class="wrap">
 
   <header class="hd">
-    <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
-    <a class="hd-home" href="/My-new-portfolio-2026/">← Home</a>
+    <a class="hd-logo" href="/">Tarek Alfutih</a>
     <nav class="hd-nav" aria-label="Main">
-      <a href="/My-new-portfolio-2026/work/">Work</a>
-      <a href="/My-new-portfolio-2026/about/" aria-current="page">About</a>
-      <a href="/My-new-portfolio-2026/contact/">Contact</a>
+      <a href="/">Home</a>
+      <a href="/work/">Work</a>
+      <a href="/about/" aria-current="page">About</a>
+      <a href="/contact/">Contact</a>
     </nav>
-    <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    <a class="btn-cv" href="/Tarek%20Alfutih%20-%20CV.pdf" target="_blank">CV (PDF)</a>
     <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
-      <a href="/My-new-portfolio-2026/">Home<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/work/">Work<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/about/" aria-current="page">About<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+      <a href="/">Home<span aria-hidden="true">→</span></a>
+      <a href="/work/">Work<span aria-hidden="true">→</span></a>
+      <a href="/about/" aria-current="page">About<span aria-hidden="true">→</span></a>
+      <a href="/contact/">Contact<span aria-hidden="true">→</span></a>
     </nav>
   </header>
 
@@ -154,8 +163,8 @@ a:hover{color:#1b3ac4;text-decoration:underline}
       <svg style="position:absolute;inset:-15px;z-index:0;mix-blend-mode:multiply;opacity:.25;animation:blobDrift 15s ease-in-out infinite reverse" width="330" height="330" viewBox="0 0 300 300">
         <path fill="#1b3ac4" d="M150,20 C210,15 270,55 280,120 C290,180 260,235 200,270 C150,295 90,290 55,250 C15,205 10,140 35,90 C60,40 100,25 150,20 Z"></path>
       </svg>
-      <div style="position:relative;z-index:1;width:300px;height:300px;border-radius:50%;overflow:hidden;background:#ececea;animation:heroFadeUp .5s ease-out both">
-        <img class="slot" src="/My-new-portfolio-2026/assets/img/my-photo-ai.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/my-photo-ai-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-1244.webp 1244w" sizes="(max-width: 560px) 81vw, (max-width: 900px) 40vw, (max-width: 1280px) 28vw, 300px" alt="Portrait" decoding="async">
+      <div style="position:relative;z-index:1;width:300px;border-radius:50%;background:#ececea;animation:heroFadeUp .5s ease-out both;height:300px;overflow:hidden">
+        <img width="1244" height="1265" class="slot" src="/assets/img/my-photo-ai.jpg" srcset="/assets/img/opt/my-photo-ai-480.webp 480w, /assets/img/opt/my-photo-ai-800.webp 800w, /assets/img/opt/my-photo-ai-1200.webp 1200w, /assets/img/opt/my-photo-ai-1244.webp 1244w" sizes="(max-width: 560px) 64vw, (max-width: 900px) 40vw, (max-width: 1280px) 28vw, 300px" alt="Portrait" decoding="async" style="height:100%;object-fit:cover;width:100%;display:block">
       </div>
     </div>
     <div class="about-text" style="grid-column:6 / span 7">
@@ -170,6 +179,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
         <span style="background:#e5e9fb;border:1px solid #a9b6ee;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">Swedish</span>
         <span style="background:#e5e9fb;border:1px solid #a9b6ee;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">Arabic</span>
       </div>
+      <p class="ab-fluent" style="margin:8px 0 0;font:400 14px/1.4 Archivo;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.98s">Fluent (written &amp; spoken).</p>
     </div>
   </section>
 
@@ -180,43 +190,43 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 
     <div class="srow" style="border-top:2px solid #1c1b1a">
       <div style="font:600 16px/1.3 Archivo">Interaction design &amp; UX</div>
-      <div><a href="/My-new-portfolio-2026/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/My-new-portfolio-2026/work/smart-fishing/" class="tag" style="margin:0 6px 6px 0">Smart Fishing</a><a href="/My-new-portfolio-2026/work/octotorg/" class="tag" style="margin:0 6px 6px 0">Octotorg</a><a href="/My-new-portfolio-2026/work/touch-and-discover/" class="tag" style="margin:0 6px 6px 0">Touch &amp; Discover</a><a href="/My-new-portfolio-2026/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a><a href="/My-new-portfolio-2026/work/playrent/" class="tag" style="margin:0 6px 6px 0">PlayRent</a><a href="/My-new-portfolio-2026/work/signalling-helmet/" class="tag" style="margin:0 6px 6px 0">Signalling Helmet</a><a href="/My-new-portfolio-2026/work/resource-booking/" class="tag" style="margin:0 6px 6px 0">Resource Booking</a></div>
+      <div><a href="/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/work/smart-fishing/" class="tag" style="margin:0 6px 6px 0">Smart Fishing</a><a href="/work/octotorg/" class="tag" style="margin:0 6px 6px 0">Octotorg</a><a href="/work/touch-and-discover/" class="tag" style="margin:0 6px 6px 0">Touch &amp; Discover</a><a href="/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a><a href="/work/playrent/" class="tag" style="margin:0 6px 6px 0">PlayRent</a><a href="/work/signalling-helmet/" class="tag" style="margin:0 6px 6px 0">Signalling Helmet</a><a href="/work/resource-booking/" class="tag" style="margin:0 6px 6px 0">Resource Booking</a></div>
     </div>
     <div class="srow">
       <div style="font:600 16px/1.3 Archivo">User research &amp; usability testing</div>
-      <div><a href="/My-new-portfolio-2026/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/My-new-portfolio-2026/work/smart-fishing/" class="tag" style="margin:0 6px 6px 0">Smart Fishing</a><a href="/My-new-portfolio-2026/work/octotorg/" class="tag" style="margin:0 6px 6px 0">Octotorg</a><a href="/My-new-portfolio-2026/work/touch-and-discover/" class="tag" style="margin:0 6px 6px 0">Touch &amp; Discover</a><a href="/My-new-portfolio-2026/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a><a href="/My-new-portfolio-2026/work/signalling-helmet/" class="tag" style="margin:0 6px 6px 0">Signalling Helmet</a><a href="/My-new-portfolio-2026/work/resource-booking/" class="tag" style="margin:0 6px 6px 0">Resource Booking</a></div>
+      <div><a href="/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/work/smart-fishing/" class="tag" style="margin:0 6px 6px 0">Smart Fishing</a><a href="/work/octotorg/" class="tag" style="margin:0 6px 6px 0">Octotorg</a><a href="/work/touch-and-discover/" class="tag" style="margin:0 6px 6px 0">Touch &amp; Discover</a><a href="/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a><a href="/work/signalling-helmet/" class="tag" style="margin:0 6px 6px 0">Signalling Helmet</a><a href="/work/resource-booking/" class="tag" style="margin:0 6px 6px 0">Resource Booking</a></div>
     </div>
     <div class="srow">
       <div style="font:600 16px/1.3 Archivo">Research through Design</div>
-      <div><a href="/My-new-portfolio-2026/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/My-new-portfolio-2026/work/smart-fishing/" class="tag" style="margin:0 6px 6px 0">Smart Fishing</a><a href="/My-new-portfolio-2026/work/octotorg/" class="tag" style="margin:0 6px 6px 0">Octotorg</a><a href="/My-new-portfolio-2026/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a><a href="/My-new-portfolio-2026/work/signalling-helmet/" class="tag" style="margin:0 6px 6px 0">Signalling Helmet</a><a href="/My-new-portfolio-2026/work/resource-booking/" class="tag" style="margin:0 6px 6px 0">Resource Booking</a></div>
+      <div><a href="/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/work/smart-fishing/" class="tag" style="margin:0 6px 6px 0">Smart Fishing</a><a href="/work/octotorg/" class="tag" style="margin:0 6px 6px 0">Octotorg</a><a href="/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a><a href="/work/signalling-helmet/" class="tag" style="margin:0 6px 6px 0">Signalling Helmet</a><a href="/work/resource-booking/" class="tag" style="margin:0 6px 6px 0">Resource Booking</a></div>
     </div>
     <div class="srow">
       <div style="font:600 16px/1.3 Archivo">Research &amp; literature review</div>
-      <div><a href="/My-new-portfolio-2026/work/hello-heart/" class="tag" style="margin:0 6px 6px 0">Hello Heart</a><a href="/My-new-portfolio-2026/work/rel-ai-tionship/" class="tag" style="margin:0 6px 6px 0">Rel-AI-tionship</a><a href="/My-new-portfolio-2026/work/an-honest-interface/" class="tag" style="margin:0 6px 6px 0">An Honest Interface</a></div>
+      <div><a href="/work/hello-heart/" class="tag" style="margin:0 6px 6px 0">Hello Heart</a><a href="/work/rel-ai-tionship/" class="tag" style="margin:0 6px 6px 0">Rel-AI-tionship</a><a href="/work/an-honest-interface/" class="tag" style="margin:0 6px 6px 0">An Honest Interface</a></div>
     </div>
     <div class="srow">
       <div style="font:600 16px/1.3 Archivo">Mobile &amp; app UX/UI</div>
-      <div><a href="/My-new-portfolio-2026/work/smart-fishing/" class="tag" style="margin:0 6px 6px 0">Smart Fishing</a><a href="/My-new-portfolio-2026/work/playrent/" class="tag" style="margin:0 6px 6px 0">PlayRent</a><a href="/My-new-portfolio-2026/work/resource-booking/" class="tag" style="margin:0 6px 6px 0">Resource Booking</a></div>
+      <div><a href="/work/smart-fishing/" class="tag" style="margin:0 6px 6px 0">Smart Fishing</a><a href="/work/playrent/" class="tag" style="margin:0 6px 6px 0">PlayRent</a><a href="/work/resource-booking/" class="tag" style="margin:0 6px 6px 0">Resource Booking</a></div>
     </div>
     <div class="srow">
       <div style="font:600 16px/1.3 Archivo">Physical &amp; tangible prototyping</div>
-      <div><a href="/My-new-portfolio-2026/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/My-new-portfolio-2026/work/octotorg/" class="tag" style="margin:0 6px 6px 0">Octotorg</a><a href="/My-new-portfolio-2026/work/touch-and-discover/" class="tag" style="margin:0 6px 6px 0">Touch &amp; Discover</a><a href="/My-new-portfolio-2026/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a><a href="/My-new-portfolio-2026/work/signalling-helmet/" class="tag" style="margin:0 6px 6px 0">Signalling Helmet</a></div>
+      <div><a href="/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/work/octotorg/" class="tag" style="margin:0 6px 6px 0">Octotorg</a><a href="/work/touch-and-discover/" class="tag" style="margin:0 6px 6px 0">Touch &amp; Discover</a><a href="/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a><a href="/work/signalling-helmet/" class="tag" style="margin:0 6px 6px 0">Signalling Helmet</a></div>
     </div>
     <div class="srow">
       <div style="font:600 16px/1.3 Archivo">Critical &amp; speculative design</div>
-      <div><a href="/My-new-portfolio-2026/work/rel-ai-tionship/" class="tag" style="margin:0 6px 6px 0">Rel-AI-tionship</a><a href="/My-new-portfolio-2026/work/an-honest-interface/" class="tag" style="margin:0 6px 6px 0">An Honest Interface</a></div>
+      <div><a href="/work/rel-ai-tionship/" class="tag" style="margin:0 6px 6px 0">Rel-AI-tionship</a><a href="/work/an-honest-interface/" class="tag" style="margin:0 6px 6px 0">An Honest Interface</a></div>
     </div>
     <div class="srow">
       <div style="font:600 16px/1.3 Archivo">Illustration</div>
-      <div><a href="https://tarekalfutih.se/" target="_blank" class="tag" style="margin:0 6px 6px 0">Illustration portfolio ↗</a><a href="/My-new-portfolio-2026/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/My-new-portfolio-2026/work/rel-ai-tionship/" class="tag" style="margin:0 6px 6px 0">Rel-AI-tionship</a><a href="/My-new-portfolio-2026/work/gilded-cage/" class="tag" style="margin:0 6px 6px 0">Gilded Cage</a></div>
+      <div><a href="https://tarekalfutih.se/" target="_blank" class="tag" style="margin:0 6px 6px 0">Illustration portfolio ↗</a><a href="/work/lego-alma/" class="tag" style="margin:0 6px 6px 0">LEGO ALMA</a><a href="/work/rel-ai-tionship/" class="tag" style="margin:0 6px 6px 0">Rel-AI-tionship</a><a href="/work/gilded-cage/" class="tag" style="margin:0 6px 6px 0">Gilded Cage</a></div>
     </div>
     <div class="srow">
       <div style="font:600 16px/1.3 Archivo">Video editing</div>
-      <div><a href="/My-new-portfolio-2026/work/touch-and-discover/" class="tag" style="margin:0 6px 6px 0">Touch &amp; Discover</a><a href="/My-new-portfolio-2026/work/rel-ai-tionship/" class="tag" style="margin:0 6px 6px 0">Rel-AI-tionship</a><a href="/My-new-portfolio-2026/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a></div>
+      <div><a href="/work/touch-and-discover/" class="tag" style="margin:0 6px 6px 0">Touch &amp; Discover</a><a href="/work/rel-ai-tionship/" class="tag" style="margin:0 6px 6px 0">Rel-AI-tionship</a><a href="/work/trailmate/" class="tag" style="margin:0 6px 6px 0">TrailMate</a></div>
     </div>
     <div class="srow" style="border-bottom:none">
       <div style="font:600 16px/1.3 Archivo">Game &amp; interaction design</div>
-      <div><a href="/My-new-portfolio-2026/work/gilded-cage/" class="tag" style="margin:0 6px 6px 0">Gilded Cage</a><a href="/My-new-portfolio-2026/work/color-rotation/" class="tag" style="margin:0 6px 6px 0">Color Rotation</a></div>
+      <div><a href="/work/gilded-cage/" class="tag" style="margin:0 6px 6px 0">Gilded Cage</a><a href="/work/color-rotation/" class="tag" style="margin:0 6px 6px 0">Color Rotation</a></div>
     </div>
 
     <div style="margin-top:24px;padding-top:20px;border-top:1px solid #dcd9d4">
@@ -243,7 +253,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
     <div class="trow"><span style="width:150px;flex:none;font:600 13px/1.4 Archivo;color:#75726e">2008 – 2018<br>2020 – 2024</span><div><div style="font:600 15px/1.3 Archivo">Children's book illustrator, freelance</div><div style="font:400 13px/1.4 Archivo;color:#75726e">20+ published books — cover design, layout, illustration · break 2018–2020</div></div></div>
     <div class="trow"><span style="width:150px;flex:none;font:600 13px/1.4 Archivo;color:#75726e">Jan 2018 – Jul 2018</span><div><div style="font:600 15px/1.3 Archivo">Intern — graphic design &amp; teaching assistant</div><div style="font:400 13px/1.4 Archivo;color:#75726e">Akademin Valand, University of Gothenburg</div></div></div>
     <div class="trow" style="border-bottom:none"><span style="width:150px;flex:none;font:600 13px/1.4 Archivo;color:#75726e">2006 – 2011</span><div><div style="font:600 15px/1.3 Archivo">BA Visual Communication</div><div style="font:400 13px/1.4 Archivo;color:#75726e">Aleppo University</div></div></div>
-    <a class="hv1 cv-link" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf" style="display:inline-flex;align-items:center;min-height:44px;margin-top:28px;padding:0 20px;border:2px solid #1c1b1a;color:#1c1b1a;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">Full CV (PDF)</a>
+    <a class="hv1 cv-link" href="/Tarek%20Alfutih%20-%20CV.pdf" download="Tarek Alfutih - CV.pdf" style="display:inline-flex;align-items:center;min-height:44px;margin-top:28px;padding:0 20px;border:2px solid #1c1b1a;color:#1c1b1a;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">Full CV (PDF)</a>
     </div>
   </section>
 
@@ -252,7 +262,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
       <span style="width:8px;height:8px;border-radius:50%;background:#1b3ac4;flex:none"></span>
       <div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e">Open to</div>
     </div>
-    <ul class="ab-r ab-open" style="grid-column:4 / span 9;list-style:none;margin:0;padding:0;border-top:2px solid #1c1b1a;font:600 26px/1.3 Archivo;letter-spacing:-.01em;max-width:820px;color:#1c1b1a"><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.00s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.25s"></span>UX/UI Designer</li><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.12s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.37s"></span>Interaction Designer</li><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.24s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.49s"></span>Product Designer</li><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.36s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.61s"></span>UX Research</li></ul>
+    <ul class="ab-r ab-open" style="grid-column:4 / span 9;list-style:none;margin:0;padding:0;border-top:2px solid #1c1b1a;font:600 26px/1.3 Archivo;letter-spacing:-.01em;max-width:820px;color:#1c1b1a"><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.00s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.25s"></span>UX/UI Designer</li><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.12s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.37s"></span>Interaction Designer</li><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.24s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.49s"></span>Product Designer</li><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.36s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.61s"></span>UX Research</li><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.48s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.73s"></span>Freelance projects &amp; collaborations</li><li class="ot" style="display:flex;align-items:center;gap:12px;padding:14px 0;border-bottom:1px solid #dcd9d4;transition-delay:0.60s"><span class="ot-m" style="width:10px;height:10px;background:#122a8f;flex:none;transition-delay:0.85s"></span>Full-time opportunities</li></ul>
   </section>
 
   </main>
@@ -262,7 +272,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   </footer>
 
 </div>
-<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=224d3fa2" defer></script>
+<script src="/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/assets/js/site.js?v=b96d8d47" defer></script>
 </body>
 </html>

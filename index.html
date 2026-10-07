@@ -3,16 +3,16 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/">
-<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/">
+<link rel="canonical" href="https://tarekdesign.se/">
+<meta property="og:url" content="https://tarekdesign.se/">
 <meta property="og:site_name" content="Tarek Alfutih">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=320b78c2">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
-<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
+<link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/assets/css/base.css?v=dc6c07bf">
+<script src="/assets/js/video-behavior.js?v=dcfab542"></script>
+<script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap">
 <title>Tarek Alfutih — Interaction Designer</title>
 <meta name="description" content="Interaction Designer based in Gothenburg, Sweden. Turning complexity into intuitive experiences.">
@@ -178,7 +178,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 @media (min-width:768px){
   .sc-thumb{height:auto !important;aspect-ratio:16/10}
   .short-grid{align-items:start}
-  .feat-img{height:auto !important;width:100% !important;aspect-ratio:16/10}
+  .feat-img{height:auto !important;width:100% !important;aspect-ratio:1074/716}
 }
 /* Lead project (3 Oct). 768–900px: photo in columns 1–6, text in 7–12, vertically centred.
    768–819px (iPad mini): the thesis button is hidden and the type is a step smaller. */
@@ -228,7 +228,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .sk-steps{grid-template-columns:1fr !important;gap:16px !important}
   .sk-step p{font-size:15px !important}
   .sk-out{font-size:28px}
-  .sk-cta-wrap{padding-top:28px !important}
+  .sk-cta-wrap{display:none !important}
   .sec-pad{padding:32px 20px !important}
   .lead-grid,.two-col{grid-template-columns:1fr !important;gap:18px !important;position:relative}
   .lead-photo,.lead-text{grid-column:1 / -1 !important}
@@ -257,18 +257,42 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .short-grid h3{font-size:14px !important;margin-bottom:3px !important}
   .sc-dtxt{display:none}
   .sc-desc{font-size:12px !important}
-  .footnote{padding:32px 20px !important}
+  .footnote{padding:40px 20px !important}
   .illo-shade{background:rgba(11,26,92,.72) !important}
-  .illo-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:12px !important;align-items:stretch !important}
+  .illo-grid{grid-template-columns:120px minmax(0,1fr) !important;gap:20px !important;align-items:center !important}
   .illo-cover{grid-column:1 !important;grid-row:1 !important;width:100% !important;max-width:none !important;margin:0 !important;box-shadow:0 10px 24px rgba(0,0,0,.4) !important}
   .illo-text{grid-column:2 !important;grid-row:1 !important;display:flex !important;flex-direction:column !important;min-width:0}
   .illo-text>div[aria-hidden]{display:none !important}
-  .illo-text h3{font-size:18px !important;line-height:1.15 !important;margin:0 0 6px !important}
-  .illo-text p{font-size:13px !important;line-height:1.4 !important;margin:0 !important}
-  .illo-btns{flex-direction:column !important;gap:0 !important;margin-top:auto !important;padding-top:4px}
-  .illo-btns a{min-height:44px !important;padding:0 !important;border:0 !important;border-top:1px solid rgba(255,255,255,.35) !important;background:transparent !important;justify-content:space-between !important;font-size:11px !important;letter-spacing:.05em !important}
-  .illo-btns a:first-child{color:#d2c6f7 !important}
+  .illo-text h3{font-size:24px !important;line-height:1.1 !important;margin:0 0 4px !important}
+  .illo-text p{font-size:15px !important;line-height:1.4 !important;margin:0 !important}
+  .illo-btns{flex-direction:column !important;gap:0 !important;margin-top:4px !important;padding-top:0}
+  .illo-btns a{min-height:44px !important;padding:0 !important;border:0 !important;background:transparent !important;justify-content:flex-start !important;gap:6px !important;font-size:12px !important;letter-spacing:.06em !important}
+  .illo-btns a:first-child{display:none !important}
   .illo-btns a:last-child{color:#7ee0b5 !important}
+}
+.feat-shot{display:block;width:100%;height:100%;object-fit:cover}
+/* Tablet layouts from the 6 Oct reference. */
+@media (min-width:768px) and (max-width:900px){
+  .hero-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;margin-top:0 !important}
+  .hero-grid>div[data-sp="text"]{grid-column:1 / span 7 !important}
+  .hero-grid>.hero-photo,.hero-grid .hero-photo{grid-column:8 / span 5 !important;max-width:none !important;height:auto !important;aspect-ratio:3/4}
+  .hero-grid{align-items:center !important}
+  .h1-hero{font-size:clamp(48px,7vw,60px) !important}
+  .lead-photo{max-width:none !important}
+  .first-screen{min-height:0 !important}
+  .hero-pad{padding:72px 24px 104px !important}
+  .two-col{grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;gap:32px !important}
+  .footnote{padding:80px 24px 88px !important}
+  .illo-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;gap:24px !important;align-items:center !important}
+  .illo-cover{grid-column:1 / span 5 !important;max-width:none !important}
+  .illo-text{grid-column:6 / span 7 !important}
+}
+@media (min-width:901px) and (max-width:1100px) and (orientation:portrait){
+  .first-screen{min-height:0 !important}
+  .hero-pad{padding:120px 56px 136px !important}
+  .hero-photo{height:auto !important;aspect-ratio:3/4;max-width:310px !important;justify-self:end}
+  .hero-grid{align-items:center !important}
+  .footnote{padding:96px 56px 104px !important}
 }
 </style>
 </head>
@@ -277,19 +301,20 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 <div class="wrap">
 
   <header class="hd">
-    <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
+    <a class="hd-logo" href="/">Tarek Alfutih</a>
     <nav class="hd-nav" aria-label="Main">
-      <a href="/My-new-portfolio-2026/work/">Work</a>
-      <a href="/My-new-portfolio-2026/about/">About</a>
-      <a href="/My-new-portfolio-2026/contact/">Contact</a>
+      <a href="/" aria-current="page">Home</a>
+      <a href="/work/">Work</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
     </nav>
-    <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    <a class="btn-cv" href="/Tarek%20Alfutih%20-%20CV.pdf" target="_blank">CV (PDF)</a>
     <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
-      <a href="/My-new-portfolio-2026/" aria-current="page">Home<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/work/">Work<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+      <a href="/" aria-current="page">Home<span aria-hidden="true">→</span></a>
+      <a href="/work/">Work<span aria-hidden="true">→</span></a>
+      <a href="/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/contact/">Contact<span aria-hidden="true">→</span></a>
     </nav>
   </header>
 
@@ -301,10 +326,10 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
       <div data-sp="text" style="grid-column:1 / span 7;min-width:0">
         <div data-sp="role" class="hero-role" style="display:flex;align-items:center;gap:14px;margin:0 0 28px;animation:heroFadeUp .5s ease-out both"><span style="width:40px;height:3px;background:#1b3ac4;flex:none;transform-origin:left;animation:heroDrawLine .5s ease-out both"></span><span style="font:600 16px/1.2 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#1b3ac4">Interaction Designer</span></div>
         <h1 class="h1-hero" data-sp="h1" data-type-hero="1" aria-label="Turning complexity into intuitive experiences." style="font:700 clamp(56px, 7.5vw, 96px)/.98 Archivo;letter-spacing:-.045em;margin:0;text-wrap:pretty"><span style="display:inline-block">Turning</span> <span style="display:inline-block">complexity</span> <span style="display:inline-block">into</span> <span class="aurora-word" style="display:inline-block">intuitive</span> <span style="display:inline-block">experiences.</span></h1>
-        <p class="hero-typer" style="margin:40px 0 0;min-height:1.4em;display:flex;align-items:center;gap:14px;font:500 clamp(18px, 1.7vw, 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Based in Gothenburg, Sweden. Usability first, always. Turning feedback into better design. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true" style="display:inline-flex;align-items:center"><span data-typer-text="1">Based in Gothenburg, Sweden</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;background:#1b3ac4"></span></span></p>
+        <p class="hero-typer" style="margin:40px 0 0;min-height:2.8em;max-width:30em;display:flex;align-items:flex-start;gap:14px;text-wrap:pretty;font:500 clamp(18px, 1.7vw, 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none;margin-top:.55em"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Open to freelance projects and full-time opportunities. Based in Gothenburg, Sweden. Usability first, always. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true"><span data-typer-text="1">Open to freelance projects and full-time opportunities.</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;vertical-align:-.15em;background:#1b3ac4"></span></span></p>
       </div>
       <div data-sp="photo" class="hero-photo" style="grid-column:8 / span 5;width:100%;height:clamp(320px, calc(100svh - 260px), 600px);overflow:hidden;background:#ececea;animation:heroFadeUp .6s ease-out both;animation-delay:.2s">
-        <img src="/My-new-portfolio-2026/assets/img/my-photo-ai.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/my-photo-ai-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/my-photo-ai-1244.webp 1244w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 42vw, (max-width: 1280px) 37vw, 472px" alt="Tarek Alfutih" style="width:100%;height:100%;object-fit:cover;display:block">
+        <img width="1244" height="1265" src="/assets/img/my-photo-ai.jpg" srcset="/assets/img/opt/my-photo-ai-480.webp 480w, /assets/img/opt/my-photo-ai-800.webp 800w, /assets/img/opt/my-photo-ai-1200.webp 1200w, /assets/img/opt/my-photo-ai-1244.webp 1244w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 38vw, (max-width: 1280px) 37vw, 540px" alt="Tarek Alfutih" style="width:100%;height:100%;object-fit:cover;display:block">
       </div>
     </div>
     
@@ -375,8 +400,8 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
       <div><div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e"><span class="hl-w" style="animation-delay:0.10s">Lead</span> <span class="hl-w" style="animation-delay:0.18s">project</span></div><div class="hl-line" style="margin-top:12px"></div></div>
     </div>
     <div class="lead-grid" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center">
-      <div class="lead-photo" style="grid-column:1 / span 5;min-width:0;aspect-ratio:1290/1510;background:#ececea">
-        <a href="/My-new-portfolio-2026/work/lego-alma/?from=home" aria-label="Master's Thesis — LEGO ALMA case study" class="img-link" style="display:block;width:100%;height:100%"><img class="slot" src="/My-new-portfolio-2026/assets/img/onsala-observatory.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/onsala-observatory-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/onsala-observatory-1290.webp 1290w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 61vw, (max-width: 1280px) 37vw, 472px" alt="Onsala Space Observatory" decoding="async"></a>
+      <div class="lead-photo" style="grid-column:1 / span 5;min-width:0;background:#ececea;aspect-ratio:1290/1510;overflow:hidden">
+        <a href="/work/lego-alma/?from=home" aria-label="Master's Thesis — LEGO ALMA case study" class="img-link" style="display:block;width:100%;height:100%;overflow:hidden"><img width="1290" height="1510" class="slot" src="/assets/img/onsala-observatory.jpg" srcset="/assets/img/opt/onsala-observatory-480.webp 480w, /assets/img/opt/onsala-observatory-800.webp 800w, /assets/img/opt/onsala-observatory-1200.webp 1200w, /assets/img/opt/onsala-observatory-1290.webp 1290w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 46vw, (max-width: 1280px) 37vw, 540px" alt="Onsala Space Observatory" decoding="async" style="height:100%;object-fit:cover;width:100%;display:block"></a>
       </div>
       <div class="lead-text" style="grid-column:7 / span 6;min-width:0;display:flex;flex-direction:column">
         <div class="lead-chip" style="display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 20px"><span style="display:inline-flex;align-items:center;gap:8px;background:#e5e9fb;color:#122a8f;font:600 13px/1 Archivo;letter-spacing:.02em;padding:8px 12px"><span aria-hidden="true" style="width:6px;height:6px;background:#122a8f"></span>Onsala Space Observatory</span><span class="m-hide" style="font:500 13px/1 Archivo;color:#75726e">Jan – Jun 2026</span></div>
@@ -388,16 +413,16 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
           <span style="border:1px solid #122a8f;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">Science communication</span>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="hv2 btn-m" href="/My-new-portfolio-2026/work/lego-alma/?from=home" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:15px 22px;text-decoration:none">Read the case</a>
-          <a class="hv3 m-hide thesis-dl" href="/My-new-portfolio-2026/assets/docs/lego-alma-thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Download thesis (PDF)</a>
+          <a class="hv2 btn-m" href="/work/lego-alma/?from=home" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:15px 22px;text-decoration:none">Read the case</a>
+          <a class="hv3 m-hide thesis-dl" href="/files/LEGO-ALMA-Thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Download thesis (PDF)</a>
         </div>
       </div>
     </div>
   </section><section class="sec-pad" data-reveal-lead="1" style="padding:56px;border-bottom:2px solid #1c1b1a">
     <div style="margin-bottom:24px"><div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e"><span class="hl-w" style="animation-delay:0.10s">Second</span> <span class="hl-w" style="animation-delay:0.18s">featured</span></div><div class="hl-line" style="margin-top:12px"></div></div>
     <div class="two-col" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center">
-      <div class="feat-img" style="width:100%;height:340px;background:#ececea">
-        <a href="/My-new-portfolio-2026/work/smart-fishing/?from=home" aria-label="Smart Fishing case study" class="img-link" style="display:block;width:100%;height:100%"><img class="slot" src="/My-new-portfolio-2026/assets/img/home-fishing-hero.webp" srcset="/My-new-portfolio-2026/assets/img/opt/home-fishing-hero-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/home-fishing-hero-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/home-fishing-hero-1074.webp 1074w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 43vw, 559px" alt="Smart Fishing — app screens" decoding="async"></a>
+      <div class="feat-img" style="width:100%;height:340px;overflow:hidden">
+        <a href="/work/smart-fishing/?from=home" aria-label="Smart Fishing case study" class="img-link" style="display:block;width:100%;height:100%;overflow:hidden"><img width="1074" height="716" class="feat-shot" src="/assets/img/home-fishing-hero.webp" srcset="/assets/img/opt/home-fishing-hero-480.webp 480w, /assets/img/opt/home-fishing-hero-800.webp 800w, /assets/img/opt/home-fishing-hero-1074.webp 1074w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 45vw, (max-width: 1280px) 43vw, 640px" alt="Smart Fishing — app screens" decoding="async" style="height:100%;object-fit:cover;width:100%;display:block"></a>
       </div>
       <div class="feat-txt">
         <h2 class="feat-title" style="font:600 36px/1.08 Archivo;letter-spacing:-.03em;margin:0 0 8px">Smart Fishing</h2>
@@ -407,7 +432,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
           <span style="border:1px solid #122a8f;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">UX / UI</span>
           <span style="border:1px solid #122a8f;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 9px">Built in Flutter</span>
         </div>
-        <a class="hv4 btn-m" href="/My-new-portfolio-2026/work/smart-fishing/?from=home" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:15px 22px;text-decoration:none">Read the case</a>
+        <a class="hv4 btn-m" href="/work/smart-fishing/?from=home" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:15px 22px;text-decoration:none">Read the case</a>
       </div>
     </div>
   </section>
@@ -415,40 +440,40 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   <section class="sec-pad" data-reveal-lead="1" style="padding:56px;border-bottom:2px solid #1c1b1a">
     <div class="short-head" style="display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px">
       <div><div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e"><span class="hl-w" style="animation-delay:0.10s">Selected</span> <span class="hl-w" style="animation-delay:0.18s">short</span> <span class="hl-w" style="animation-delay:0.26s">cases</span></div><div class="hl-line" style="margin-top:12px"></div></div>
-      <a href="/My-new-portfolio-2026/work/" style="font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f">All selected work, grouped by kind →</a>
+      <a href="/work/" style="font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f">All selected work, grouped by kind →</a>
     </div>
     <div class="short-grid" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px">
       <article>
-        <a href="/My-new-portfolio-2026/work/playrent/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
-        <div class="sc-thumb" style="width:100%;height:190px;background:#ececea;margin-bottom:14px">
-          <img class="slot" src="/My-new-portfolio-2026/assets/img/idx-playrent.webp" srcset="/My-new-portfolio-2026/assets/img/opt/idx-playrent-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/idx-playrent-716.webp 716w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 271px" alt="PlayRent" loading="lazy" decoding="async" data-view="1 0 -6.25">
+        <a href="/work/playrent/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
+        <div class="sc-thumb" style="width:100%;background:#ececea;margin-bottom:14px;height:190px;overflow:hidden">
+          <img width="716" height="537" class="slot" src="/assets/img/idx-playrent.webp" srcset="/assets/img/opt/idx-playrent-480.webp 480w, /assets/img/opt/idx-playrent-716.webp 716w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 311px" alt="PlayRent" loading="lazy" decoding="async" data-view="1 0 -6.25" style="height:100%;object-fit:cover;width:100%;display:block">
         </div>
         <h3 style="font:600 19px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 6px">PlayRent</h3>
         <div class="sc-desc" style="font:400 14px/1.45 Archivo;color:#75726e"><span class="sc-dtxt">Instrument rental platform for musicians · </span>2025</div>
         </a>
       </article>
       <article>
-        <a href="/My-new-portfolio-2026/work/resource-booking/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
-        <div class="sc-thumb" style="width:100%;height:190px;background:#ececea;margin-bottom:14px">
-          <img class="slot" src="/My-new-portfolio-2026/assets/img/idx-booking.webp" srcset="/My-new-portfolio-2026/assets/img/opt/idx-booking-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/idx-booking-716.webp 716w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 271px" alt="Resource Booking Website" loading="lazy" decoding="async" data-view="1 0 -3.546">
+        <a href="/work/resource-booking/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
+        <div class="sc-thumb" style="width:100%;background:#ececea;margin-bottom:14px;height:190px;overflow:hidden">
+          <img width="716" height="537" class="slot" src="/assets/img/idx-booking.webp" srcset="/assets/img/opt/idx-booking-480.webp 480w, /assets/img/opt/idx-booking-716.webp 716w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 311px" alt="Resource Booking Website" loading="lazy" decoding="async" data-view="1 0 -3.54646" style="height:100%;object-fit:cover;width:100%;display:block">
         </div>
         <h3 style="font:600 19px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 6px">Resource Booking Website</h3>
         <div class="sc-desc" style="font:400 14px/1.45 Archivo;color:#75726e"><span class="sc-dtxt">Room booking system for teachers · </span>2024</div>
         </a>
       </article>
       <article>
-        <a href="/My-new-portfolio-2026/work/an-honest-interface/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
-        <div class="sc-thumb" style="width:100%;height:190px;background:#ececea;margin-bottom:14px">
-          <img class="slot" src="/My-new-portfolio-2026/assets/img/bird-on-the-big-screen-polestar.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/bird-on-the-big-screen-polestar-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 271px" alt="An Honest Interface" loading="lazy" decoding="async">
+        <a href="/work/an-honest-interface/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
+        <div class="sc-thumb" style="width:100%;background:#ececea;margin-bottom:14px;height:190px;overflow:hidden">
+          <img width="2480" height="1395" class="slot" src="/assets/img/bird-on-the-big-screen-polestar.jpg" srcset="/assets/img/opt/bird-on-the-big-screen-polestar-480.webp 480w, /assets/img/opt/bird-on-the-big-screen-polestar-800.webp 800w, /assets/img/opt/bird-on-the-big-screen-polestar-1200.webp 1200w, /assets/img/opt/bird-on-the-big-screen-polestar-1600.webp 1600w, /assets/img/opt/bird-on-the-big-screen-polestar-2400.webp 2400w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 311px" alt="An Honest Interface" loading="lazy" decoding="async" style="height:100%;object-fit:cover;width:100%;display:block">
         </div>
         <h3 style="font:600 19px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 6px">An Honest Interface</h3>
         <div class="sc-desc" style="font:400 14px/1.45 Archivo;color:#75726e"><span class="sc-dtxt">Critical design, Polestar EV interfaces · </span>2025</div>
         </a>
       </article>
       <article>
-        <a href="/My-new-portfolio-2026/work/gilded-cage/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
-        <div class="sc-thumb" style="width:100%;height:190px;background:#ececea;margin-bottom:14px">
-          <img class="slot" src="/My-new-portfolio-2026/assets/img/idx-gilded.webp" srcset="/My-new-portfolio-2026/assets/img/opt/idx-gilded-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/idx-gilded-576.webp 576w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 271px" alt="Gilded Cage" loading="lazy" decoding="async" data-view="1 7.026 0">
+        <a href="/work/gilded-cage/?from=home" class="sc-card" style="display:block;text-decoration:none;color:inherit">
+        <div class="sc-thumb" style="width:100%;background:#ececea;margin-bottom:14px;height:190px;overflow:hidden">
+          <img width="576" height="164" class="slot" src="/assets/img/idx-gilded.webp" srcset="/assets/img/opt/idx-gilded-480.webp 480w, /assets/img/opt/idx-gilded-576.webp 576w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 46vw, (max-width: 1280px) 21vw, 311px" alt="Gilded Cage" loading="lazy" decoding="async" data-view="1 7.02582 0" style="height:100%;object-fit:cover;width:100%;display:block">
         </div>
         <h3 style="font:600 19px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 6px">Gilded Cage</h3>
         <div class="sc-desc" style="font:400 14px/1.45 Archivo;color:#75726e"><span class="sc-dtxt">Digital game, built in Godot · </span>2025</div>
@@ -457,16 +482,16 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
     </div>
   </section>
 
-  <section class="footnote" data-reveal-lead="1" style="position:relative;overflow:hidden;padding:120px 56px 140px;border-top:2px solid #1c1b1a;background:#0b1a5c url(/My-new-portfolio-2026/assets/img/forest-bg.jpg) center 70%/cover no-repeat;color:#fff">
+  <section class="footnote" data-reveal-lead="1" style="position:relative;overflow:hidden;padding:120px 56px 140px;border-top:2px solid #1c1b1a;background:#0b1a5c url(/assets/img/forest-bg.jpg) center 70%/cover no-repeat;color:#fff">
     <div aria-hidden="true" class="illo-shade" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,92,.15) 0%,rgba(11,26,92,.55) 55%,rgba(11,26,92,.8) 100%)"></div><span class="ffly" aria-hidden="true" style="position:absolute;left:18%;top:62%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 0s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:27%;top:70%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 1.4s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:41%;top:58%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 2.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:55%;top:74%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 0.8s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:63%;top:64%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 3.1s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:72%;top:69%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 1.9s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:84%;top:60%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 0.3s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:90%;top:72%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 2.2s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:35%;top:78%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 3.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:48%;top:66%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 4.2s infinite"></span><div class="illo-grid" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center">
-      <div class="illo-cover" style="grid-column:2 / span 4;aspect-ratio:1/1;background:#ececea;box-shadow:0 24px 60px rgba(0,0,0,.45)">
-        <img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-cover.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 42vw, (max-width: 1280px) 29vw, 373px" alt="Skräphjältarna" loading="lazy" decoding="async">
+      <div class="illo-cover" style="grid-column:2 / span 4;background:#ececea;box-shadow:0 24px 60px rgba(0,0,0,.45);aspect-ratio:1/1;overflow:hidden">
+        <img width="1254" height="1254" class="slot" src="/assets/img/skraphjaltarna-cover.jpg" srcset="/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /assets/img/opt/skraphjaltarna-cover-800.webp 800w, /assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 32vw, (max-width: 900px) 38vw, (max-width: 1280px) 29vw, 427px" alt="Skräphjältarna" loading="lazy" decoding="async" style="height:100%;object-fit:cover;width:100%;display:block">
       </div>
       <div class="illo-text" style="grid-column:7 / span 5;display:flex;flex-direction:column">
-        <div aria-hidden="true" style="display:flex;gap:6px;margin:0 0 20px"><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #f26b3a"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #4cb867"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #ffd23f"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #a9b6ee"></span></div><h3 style="color:#fff;font:600 34px/1.1 Archivo;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance"><span class="illo-shine" style="background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite">Illustration &amp; Visual Storytelling</span></h3>
+        <div aria-hidden="true" style="display:flex;gap:6px;margin:0 0 20px"><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #f26b3a"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #4cb867"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #ffd23f"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #a9b6ee"></span></div><h3 style="color:#fff;font:600 34px/1.1 Archivo;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance"><span class="illo-shine" style="background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite">Illustration<span class="m-hide"> &amp; Visual Storytelling</span></span></h3>
         <p style="font:400 17px/1.6 Archivo;color:#e5e9fb;margin:0 0 32px;max-width:460px;text-wrap:pretty">Alongside interaction design, I've illustrated 20+ children's books. Latest: <em style="font-style:normal;font-weight:700;color:#fff">Skräphjältarna</em>, 2023.</p>
         <div class="illo-btns" style="display:flex;gap:12px;flex-wrap:wrap">
-          <a class="hv5" href="/My-new-portfolio-2026/illustration/?from=home" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #b9a6f0;background:#b9a6f0;color:#0b1a5c;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">Read about Skräphjältarna <span aria-hidden="true">→</span></a>
+          <a class="hv5" href="/illustration/?from=home" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #b9a6f0;background:#b9a6f0;color:#0b1a5c;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">Read about Skräphjältarna <span aria-hidden="true">→</span></a>
           <a class="hv6" href="https://tarekalfutih.se" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #7ee0b5;color:#7ee0b5;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">tarekalfutih.se <span aria-hidden="true">↗</span></a>
         </div>
       </div>
@@ -483,8 +508,8 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   </footer>
 
 </div>
-<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=224d3fa2" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/home.js?v=828ccadb" defer></script>
+<script src="/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/assets/js/site.js?v=b96d8d47" defer></script>
+<script src="/assets/js/home.js?v=54499a39" defer></script>
 </body>
 </html>

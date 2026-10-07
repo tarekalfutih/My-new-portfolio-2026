@@ -3,19 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/work/touch-and-discover/">
-<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/work/touch-and-discover/">
+<link rel="canonical" href="https://tarekdesign.se/work/touch-and-discover/">
+<meta property="og:url" content="https://tarekdesign.se/work/touch-and-discover/">
 <meta property="og:site_name" content="Tarek Alfutih">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=320b78c2">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
-<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
+<link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/assets/css/base.css?v=dc6c07bf">
+<script src="/assets/js/video-behavior.js?v=dcfab542"></script>
+<script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Touch &amp; Discover — Tarek Alfutih</title>
 <meta name="description" content="An interactive museum console for Idrottsmuseet, Gothenburg — connecting a touch-screen interface to the physical exhibits it describes.">
 <style>
+@media (min-width:1281px) and (max-width:1679px){html,body{background:#fff !important}.wrap,.pg{max-width:none !important;border-left:0 !important;border-right:0 !important}}
 body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#122a8f;text-decoration:none}
 a:hover{color:#1b3ac4;text-decoration:underline}
@@ -40,12 +41,23 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
   .two,.three{grid-template-columns:1fr !important}
 }
-/* Phones (< 768px). Desktop and iPad are unchanged. */
+.m-only{display:none}
+.m-menu a{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #dcd9d4;font:600 20px/1 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-decoration:none}
+.m-menu a:last-child{border-bottom:0}.m-menu a:active{background:#e5e9fb}.m-menu a:hover{text-decoration:none;color:#1c1b1a}
 @media (max-width:767px){
-  .m-hide{display:none !important}
+  html,body{overflow-x:clip;overscroll-behavior-x:none}
+  .cs-top{height:56px;padding:0 6px 0 20px !important;flex-wrap:nowrap !important;gap:12px !important;border-bottom:0 !important}
+  .cs-top>a:first-child{font-size:17px !important;min-height:44px;display:inline-flex;align-items:center}
+  .cs-links,.cs-tabs,.m-hide{display:none !important}
+  .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
+  .m-only{display:flex !important}
+  .m-inl{display:inline !important}
+  section[id]{scroll-margin-top:64px}
   .pad{padding:36px 20px}
   .lbl{font-size:11px !important;letter-spacing:.14em !important}
   .pad>.lbl:first-child,.pad>div>.lbl:first-child{font-size:12px !important;margin-bottom:16px !important}
+  h1.h1r{font-size:30px !important;margin-bottom:12px !important}
+  .td-lead{font-size:17px !important;margin-bottom:24px !important}
   .facts{grid-template-columns:1fr !important}
   .facts>div{padding:16px 0 !important;border-right:none !important;border-bottom:1px solid #dcd9d4}
   .facts>div:last-child{border-bottom:none}
@@ -55,20 +67,19 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .td-hero>div{max-width:none !important}
   .pad p,.pad li{font-size:16px !important;line-height:1.55 !important;max-width:none !important}
   .pad ul{padding-left:18px !important}
-  .two{grid-template-columns:minmax(0,1fr) !important}
-  .td-cards{grid-template-columns:minmax(0,1fr) !important;gap:32px !important;margin-bottom:36px !important}
+  .td-cards{gap:32px !important;margin-bottom:36px !important}
   .td-cards>div>div:first-child,.td-video>div:first-child{font-size:12px !important}
-  .td-cards>div>div:nth-child(2){width:calc(100% + 40px);margin:0 -20px !important}
+  .td-cards>div>div:nth-child(2){width:calc(100% + 40px);margin:0 -20px 12px !important}
   .td-cards p{margin:0 !important}
-  .td-vframe{width:calc(100% + 40px);max-width:none !important;margin:0 -20px !important}
+  .td-vframe{width:calc(100% + 40px);max-width:none !important;margin:0 -20px 12px !important}
   .td-video{margin-bottom:36px !important}
   .td-result{font-size:12px !important}
-  #problem p:not(:first-of-type),#design>p,.td-cards p,.td-video p{display:none !important}
+  .facts>div:nth-child(3),#problem p:not(:first-of-type),#design>p,.td-cards p,.td-video p{display:none !important}
   .facts>div.td-meth{display:block !important;grid-column:1 / -1;padding:14px 0 0 !important;border-top:1px solid #dcd9d4;border-bottom:0 !important}
   .td-meth>.lbl{margin-bottom:6px !important}
   .td-meth>.m-hide{display:block !important;font:400 14px/1.45 Archivo !important;color:#4a4744}
-  /* Hero image + title on the first screen: the hero moves above the intro. */
-  main{display:flex;flex-direction:column}
+  .wrap{display:flex;flex-direction:column}
+  .wrap>header{order:-2}
   .td-hero{order:-1;border-bottom:0 !important}
   .td-intro{padding-top:20px !important;padding-bottom:28px !important}
   .td-intro>.lbl:first-child{margin-bottom:10px !important}
@@ -77,144 +88,166 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .td-lead{font-size:16px !important;line-height:1.5 !important;margin-bottom:20px !important}
   .td-intro .facts{grid-template-columns:1fr 1fr !important}
   .td-intro .facts>div{padding:14px 12px 14px 0 !important;border-bottom:0 !important}
+  .td-cards>div>div:nth-child(2){margin-bottom:0 !important}
+  .td-vframe{margin-bottom:0 !important}
 }
+.wrap .td-fbar{margin:0 !important;padding:0 56px;background:#151109;border-top:1px solid rgba(255,210,122,.35) !important;border-bottom:0 !important}
+.wrap .td-fbar>div{padding:16px 24px 18px !important;border-right:1px solid rgba(255,255,255,.14) !important}
+.wrap .td-fbar>div:first-child{padding-left:0 !important}
+.wrap .td-fbar>div:last-child{border-right:0 !important}
+.wrap .td-fbar .lbl{color:#ffd27a !important}
+.wrap .td-fbar>div>div:last-child{color:#fff !important}
+@media (prefers-reduced-motion:reduce){.td-shelf animate{display:none}}
+@media (max-width:1024px){
+  .wrap section.td-hero2{height:auto !important;min-height:0 !important}
+  .wrap section.td-hero2 .td-stage{display:flex !important;flex-direction:column !important;background:radial-gradient(ellipse 90% 45% at 50% 70%,rgba(255,243,214,.14),transparent 70%) !important}
+  .wrap section.td-hero2 .td-text{flex:none;padding:56px 32px 40px !important;gap:14px !important;max-width:640px}
+  .wrap section.td-hero2 .td-lead{margin:0 0 12px !important;max-width:460px !important}
+  .wrap section.td-hero2 .td-shelf{max-width:460px !important}
+  .wrap section.td-hero2 .td-art{flex:none;padding:0 32px 48px !important;width:auto !important;margin:0 !important}
+  .wrap section.td-hero2 .td-art img{width:100% !important;max-width:100% !important;height:auto !important;max-height:none !important}
+  .wrap .td-fbar{padding:0 32px !important}
+}
+@media (max-width:767px){
+  .wrap section.td-hero2 .td-text{padding:36px 20px 32px !important;gap:12px !important}
+  .wrap section.td-hero2 h1.h1r{font-size:clamp(36px,10.5vw,44px) !important;margin:0 !important}
+  .wrap section.td-hero2 .td-lead{font-size:17px !important;line-height:1.45 !important;max-width:320px !important;margin:0 0 8px !important}
+  .wrap section.td-hero2 .td-shelf{max-width:none !important;width:100% !important}
+  .wrap section.td-hero2 .td-art{padding:0 !important}
+  .wrap section.td-hero2 .td-art img{box-shadow:none !important}
+  .wrap .td-fbar{grid-template-columns:1fr 1fr !important;padding:4px 20px 8px !important}
+  .wrap .td-fbar>div{padding:16px 12px 16px 0 !important;border-right:0 !important}
+  .wrap .td-fbar>div.td-meth{border-top:1px solid rgba(255,255,255,.18) !important;padding:16px 0 !important}
+}
+
+
+.hf-unused{display:grid !important;grid-template-columns:repeat(4,minmax(0,1fr)) !important;margin:0 !important;padding:0 var(--hf-x,56px) !important;border:0 !important;border-top:2px solid var(--hf-line,#1c1b1a) !important;background:var(--hf-bg,transparent) !important;position:relative;z-index:1;box-sizing:border-box}
+.hf.hf>div{display:block !important;min-width:0;padding:18px 24px 20px !important;border:0 !important;border-left:1px solid var(--hf-div,#dcd9d4) !important}
+.hf.hf>div:first-child{padding-left:0 !important;border-left:0 !important}
+.hf.hf>div:last-child{padding-right:0 !important}
+.hf.hf dt{font:600 11px/1 Archivo !important;letter-spacing:.16em !important;text-transform:uppercase;color:var(--hf-lbl,#75726e) !important;margin:0 0 10px !important}
+.hf.hf dd{margin:0 !important;font:600 15px/1.4 Archivo !important;color:var(--hf-ink,#1c1b1a) !important;text-wrap:pretty}
+.hf.hf dd+dd{margin-top:4px !important;font-weight:400 !important}
+@media (max-width:1024px){.hf.hf{padding:0 var(--hf-xt,32px) !important}}
+@media (max-width:767px){.hf.hf{grid-template-columns:repeat(2,minmax(0,1fr)) !important;padding:4px var(--hf-xm,20px) 8px !important}.hf.hf>div{padding:14px 12px 14px 0 !important;border-left:0 !important;border-bottom:1px solid var(--hf-div,#dcd9d4) !important}.hf.hf>div:nth-child(even){padding:14px 0 14px 12px !important;border-left:1px solid var(--hf-div,#dcd9d4) !important}.hf.hf>div:nth-child(n+3){border-bottom:0 !important}.hf.hf dd{font-size:14px !important}}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="wrap">
 
-  <header class="cs-hd">
+<header class="cs-hd">
     <div class="cs-bar">
-      <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
-      <a class="cs-back" href="/My-new-portfolio-2026/work/" data-back>← All work</a>
-      <nav class="cs-main" aria-label="Main"><a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work</a><a href="/My-new-portfolio-2026/about/">About</a><a href="/My-new-portfolio-2026/contact/">Contact</a></nav>
-      <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+      <a class="hd-logo" href="/">Tarek Alfutih</a>
+      <a class="cs-back" href="/work/" data-back aria-label="Back"><span class="cs-back-a" aria-hidden="true">←</span><svg class="cs-back-c" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span class="cs-back-t" aria-hidden="true">&nbsp;Back</span></a>
+      <nav class="cs-main" aria-label="Main"><a href="/">Home</a><a href="/work/" aria-current="true">Work</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+      <a class="btn-cv" href="/Tarek%20Alfutih%20-%20CV.pdf" target="_blank">CV (PDF)</a>
       <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </div>
     <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
-      <a href="/My-new-portfolio-2026/work/" data-back>← All work</a>
-      <a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+      <a href="/">Home<span aria-hidden="true">→</span></a>
+      <a href="/work/" aria-current="true">Work<span aria-hidden="true">→</span></a>
+      <a href="/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/contact/">Contact<span aria-hidden="true">→</span></a>
     </nav>
-    <script>
-      /* Arrived from Home (?from=home): back links go Home and the Work links are shown.
-         Otherwise the back links already point to Work, so the Work nav links stay hidden. */
-      (function () {
-        if (new URLSearchParams(location.search).get('from') !== 'home') return;
-        var home = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
-        document.querySelectorAll('[data-back]').forEach(function (back) {
-          back.href = home;
-          back.textContent = '← Home';
-        });
-        document.querySelectorAll('[data-work-link]').forEach(function (a) { a.hidden = false; });
-      })();
-    </script>
-    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
-      <a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Problem</a>
-      <a href="#design" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Design</a>
-      <a href="#reflection" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Reflection</a>
-    </nav>
+    <script src="/assets/js/nav-back.js?v=8f1349e7" defer></script>
+    <script src="/assets/js/section-spy.js?v=ce71177b" defer></script>
+    <nav aria-label="Sections" class="cs-nav cs-tabs" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+<a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Problem</a>
+<a href="#design" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Design</a>
+<a href="#reflection" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Reflection</a>
+</nav>
   </header>
 
   <main id="main">
 
-  <section class="pad rule td-intro">
-    <div class="lbl" style="margin-bottom:20px">Group project</div>
-    <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;text-wrap:pretty">Touch &amp; Discover</h1>
-    <div class="td-line" style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
-    <p class="td-lead" style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">An interactive museum console for Idrottsmuseet, Gothenburg — connecting a touch-screen interface to the physical exhibits it describes.</p>
-
-    <div class="facts" style="grid-template-columns:repeat(3,1fr)">
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Interaction Designer</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Team</div><div style="font:600 14px/1.35 Archivo">5 people</div></div>
-
-      <div class="td-meth"><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div class="m-hide" style="font:600 15px/1.35 Archivo">Sketching · Figma &amp; Intuiface prototyping · Arduino Wizard-of-Oz · user testing</div></div>
-    </div>
-  </section>
-
-  <section class="rule td-hero" style="padding:32px 24px">
-    <div style="max-width:900px;margin:0 auto">
-      <img class="slot" src="/My-new-portfolio-2026/assets/img/the-final-prototype-mockup.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/the-final-prototype-mockup-2400.webp 2400w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 83vw, 900px" alt="Hero — the console and shelf display, in situ" decoding="async" style="object-fit:contain;width:100%;aspect-ratio:4730/4087;display:block">
-    </div>
-  </section>
-
-  <section class="pad rule two" id="problem">
-    <div>
-      <div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">01 · Problem &amp; purpose</div>
-      <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 14px;text-wrap:pretty">Idrottsmuseet, the Gothenburg Sports Museum, holds over 15,000 items across three floors, with almost no room for information plaques. Exhibits are cluttered and unexplained, which favours visitors who already know the athletes — mostly middle-aged men — and shuts out everyone else.</p>
-      <p class="m-hide" style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0 0 14px;text-wrap:pretty">The project used Ingemar Johansson, one of Sweden's most iconic boxers, as the test case: his artefacts were on display but told through static text that most visitors skipped past.</p>
-      <p style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">The goal was a touch-screen console that guides visitors to relevant exhibits, tells their stories, and works without a guide standing beside it — while staying accessible to a broader, younger audience than the museum currently reaches.</p>
-    </div>
-    <div class="m-hide" style="border-top:1px solid #dcd9d4;padding-top:16px">
-      <div class="lbl" style="font-size:11px;margin-bottom:10px">Related work</div>
-      <p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0">Looked to Universeum and Världskulturmuseet in Gothenburg, and the Museum of London, where touch-screens and audio let visitors explore digital archives at their own pace, tied to the physical exhibits around them.</p>
-    </div>
-  </section>
-
-  <section class="pad rule">
-    <div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">My contribution</div>
-    <ul style="font:400 16px/1.7 Archivo;color:#4a4744;margin:0;padding-left:20px;max-width:700px">
-      <li>Contributed to the interaction design process from ideation to the final design.</li>
-      <li>Created the Figma prototype.</li>
-      <li>Created the video about Ingemar Johansson used in the installation.</li>
-      <li>Created the physical prototype.</li>
-      <li>Designed the image in Photoshop that was placed on the backboard behind the screen.</li>
-    </ul>
-  </section>
-
-  <section class="pad rule" id="design">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">02 · Design &amp; implementation</div>
-    <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 24px;max-width:760px;text-wrap:pretty">Ideation started with paper sketches — each member sketching, writing or thinking through an idea in five-minute bursts — and converged on a touch-screen concept. From there the work split into a digital interface and a physical exhibit setup, developed in parallel.</p>
-
-    <div class="three td-cards" style="margin-bottom:32px">
-      <div>
-        <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Ideation</div>
-        <div style="background:#ececea;aspect-ratio:4/3;margin-bottom:10px"><img class="slot" src="/My-new-portfolio-2026/assets/img/screenshot-2025-06-02-at-16-28-42.png" srcset="/My-new-portfolio-2026/assets/img/opt/screenshot-2025-06-02-at-16-28-42-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/screenshot-2025-06-02-at-16-28-42-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/screenshot-2025-06-02-at-16-28-42-903.webp 903w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 29vw, 373px" alt="Initial paper sketches" decoding="async" style="object-fit:contain;"></div>
-        <p style="font:400 14px/1.5 Archivo;color:#4a4744">Group sketching led to a digital Photoshop concept: Ingemar Johansson centered on screen, surrounded by icons for the information on offer.</p>
-      </div>
-      <div>
-        <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Digital interface</div>
-        <div style="background:#ececea;aspect-ratio:4/3;margin-bottom:10px"><img class="slot" src="/My-new-portfolio-2026/assets/img/final-prot.png" srcset="/My-new-portfolio-2026/assets/img/opt/final-prot-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/final-prot-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/final-prot-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/final-prot-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/final-prot-2000.webp 2000w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 29vw, 373px" alt="Figma prototype of the interface" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-        <p style="font:400 14px/1.5 Archivo;color:#4a4744">Built in Intuiface from a Figma concept: a video carousel, a scrollable photo grid with captions, and a map of award locations — each item tagged to a shelf number.</p>
-      </div>
-      <div>
-        <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Physical setup</div>
-        <div style="background:#ececea;aspect-ratio:4/3;margin-bottom:10px"><img class="slot" src="/My-new-portfolio-2026/assets/img/screenshot-2026-09-14-at-19-18-45.png" srcset="/My-new-portfolio-2026/assets/img/opt/screenshot-2026-09-14-at-19-18-45-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/screenshot-2026-09-14-at-19-18-45-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/screenshot-2026-09-14-at-19-18-45-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/screenshot-2026-09-14-at-19-18-45-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/screenshot-2026-09-14-at-19-18-45-2088.webp 2088w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 29vw, 373px" alt="Board with shelves, artefacts and lights" loading="lazy" decoding="async"></div>
-        <p style="font:400 14px/1.5 Archivo;color:#4a4744">A shelf board behind the screen, wired with six LED-lit, 3D-printed lightbulbs. Selecting an item on screen lit the matching physical exhibit — prototyped Wizard-of-Oz style with two Arduino Unos.</p>
-      </div>
-    </div>
-
-    <div class="td-video" style="margin-bottom:0">
-      <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Video content</div>
-      <div class="td-vframe" style="background:#000;max-width:640px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin-bottom:10px"><video src="/My-new-portfolio-2026/assets/video/ingemar-project-my-creation-small-size.mp4?v=a7e728e8" poster="/My-new-portfolio-2026/assets/video/ingemar-project-my-creation-small-size-poster.webp?v=a1b1b429" controls="controls" playsinline="playsinline" preload="metadata" style="width:100%;height:100%;display:block;object-fit:contain"></video></div>
-      <p style="font:400 14px/1.5 Archivo;color:#4a4744;max-width:640px">A short video about Ingemar Johansson's life and career, made for the console's video carousel.</p>
-    </div>
-
-    <div>
-      <div>
-        <div class="lbl td-result" style="font-size:11px;margin-bottom:10px">Result</div>
-        <p style="font:400 15px/1.6 Archivo;color:#1c1b1a;margin:0 0 12px;text-wrap:pretty">Set up at Idrottshögskolan for presentation: selecting a video or photo on screen lit a small bulb above the matching physical exhibit, linking the digital story to the object in front of the visitor.</p>
-        <p class="m-hide" style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">The manual light-control buttons were mounted too high to reach comfortably while using the screen — a limitation of the Wizard-of-Oz setup rather than the final concept.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="pad" id="reflection">
-    <div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">03 · Reflection</div>
-    <p style="font:400 16px/1.6 Archivo;color:#4a4744;margin:0 0 28px;max-width:760px;text-wrap:pretty">Visitors responded well: the link between digital content and physical exhibits made previously overlooked details more visible and easier to engage with. Clearer task-splitting within the group, and buttons placed within easy reach, are the two things worth doing differently next time.</p>
-    <a href="/My-new-portfolio-2026/assets/docs/touch-discover-report.pdf" download="Touch-and-Discover-Report.pdf" class="btn btn-secondary m-hide" style="display:inline-flex">Download full report (PDF)</a>
-  </section>
-
+<section class="rule td-hero2" id="overview" style="background:#1d1812;color:#fff;height:calc(100svh - var(--hdr,110px));min-height:600px;display:flex;flex-direction:column">
+<div class="td-stage" style="position:relative;flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);grid-template-rows:minmax(0,1fr);background:radial-gradient(ellipse 55% 70% at 72% 40%,rgba(255,243,214,.16),transparent 70%)">
+<div class="td-text" style="display:flex;flex-direction:column;justify-content:center;gap:16px;padding:32px 32px 32px 56px;min-width:0">
+<div class="lbl" style="color:#ffd27a">Case study · Sports museum · 2025</div>
+<h1 class="h1r" style="font-size:clamp(40px,5vw,68px);line-height:1.02;letter-spacing:-.04em;margin:0;color:#fff">Touch &amp; Discover</h1>
+<p class="td-lead" style="font:400 20px/1.45 Archivo;color:#efe6d6;margin:0 0 20px;max-width:440px;text-wrap:pretty">An interactive museum console for Idrottsmuseet, Gothenburg.</p>
+<svg aria-hidden="true" class="td-shelf" style="display:block;width:100%;max-width:520px;overflow:visible" viewbox="0 0 572 100"><defs><radialgradient id="tdGlow"><stop offset="0" stop-color="#ffd27a" stop-opacity=".55"></stop><stop offset="1" stop-color="#ffd27a" stop-opacity="0"></stop></radialgradient></defs><g transform="translate(0 0)"><circle cx="30" cy="34" fill="url(#tdGlow)" opacity="0" r="34"><animate attributename="opacity" begin="0s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle><g fill="none" stroke="#e9dcc4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"><path d="M14 32c0-11 7-18 17-18s16 7 16 16v9c0 6-4 10-10 10H23c-5 0-9-4-9-9z"></path><path d="M19 49v9h24v-9"></path><path d="M26 23c-4 0-7 3-7 7"></path></g><circle cx="30" cy="84" fill="#5a4a32" r="4.5"></circle><circle cx="30" cy="84" fill="#ffd27a" opacity="0" r="4.5"><animate attributename="opacity" begin="0s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle></g><g transform="translate(96 0)"><circle cx="30" cy="34" fill="url(#tdGlow)" opacity="0" r="34"><animate attributename="opacity" begin="1.5s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle><g fill="none" stroke="#e9dcc4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"><circle cx="30" cy="34" r="20"></circle><path d="M30 24l8 6-3 9h-10l-3-9z"></path><path d="M30 14v10M38 30l10-3M35 39l6 9M25 39l-6 9M22 30l-10-3"></path></g><circle cx="30" cy="84" fill="#5a4a32" r="4.5"></circle><circle cx="30" cy="84" fill="#ffd27a" opacity="0" r="4.5"><animate attributename="opacity" begin="1.5s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle></g><g transform="translate(192 0)"><circle cx="30" cy="34" fill="url(#tdGlow)" opacity="0" r="34"><animate attributename="opacity" begin="3s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle><g fill="none" stroke="#e9dcc4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"><path d="M19 12h22v12c0 9-5 14-11 14s-11-5-11-14z"></path><path d="M19 16h-7c0 7 3 10 8 10M41 16h7c0 7-3 10-8 10"></path><path d="M30 38v8M21 52h18v-6H21z"></path></g><circle cx="30" cy="84" fill="#5a4a32" r="4.5"></circle><circle cx="30" cy="84" fill="#ffd27a" opacity="0" r="4.5"><animate attributename="opacity" begin="3s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle></g><g transform="translate(288 0)"><circle cx="30" cy="34" fill="url(#tdGlow)" opacity="0" r="34"><animate attributename="opacity" begin="4.5s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle><g fill="none" stroke="#e9dcc4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"><path d="M21 8l9 17 9-17"></path><circle cx="30" cy="38" r="13"></circle><path d="M30 31l2.4 4.8 5.3.8-3.8 3.7.9 5.3-4.8-2.5-4.8 2.5.9-5.3-3.8-3.7 5.3-.8z"></path></g><circle cx="30" cy="84" fill="#5a4a32" r="4.5"></circle><circle cx="30" cy="84" fill="#ffd27a" opacity="0" r="4.5"><animate attributename="opacity" begin="4.5s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle></g><g transform="translate(384 0)"><circle cx="30" cy="34" fill="url(#tdGlow)" opacity="0" r="34"><animate attributename="opacity" begin="6s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle><g fill="none" stroke="#e9dcc4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"><ellipse cx="25" cy="24" rx="12" ry="16" transform="rotate(-30 25 24)"></ellipse><path d="M32 37l14 18"></path><path d="M19 15l12 18M15 23l18 4M17 32l16-14"></path><circle cx="46" cy="22" r="5"></circle></g><circle cx="30" cy="84" fill="#5a4a32" r="4.5"></circle><circle cx="30" cy="84" fill="#ffd27a" opacity="0" r="4.5"><animate attributename="opacity" begin="6s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle></g><g transform="translate(480 0)"><circle cx="30" cy="34" fill="url(#tdGlow)" opacity="0" r="34"><animate attributename="opacity" begin="7.5s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle><g fill="none" stroke="#e9dcc4" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2"><path d="M8 44c9 0 13-12 18-12l7 7c5 4 11 5 17 5 4 0 6 3 6 7H8z"></path><path d="M8 51h48"></path><path d="M30 35l4-3M34 39l4-3"></path></g><circle cx="30" cy="84" fill="#5a4a32" r="4.5"></circle><circle cx="30" cy="84" fill="#ffd27a" opacity="0" r="4.5"><animate attributename="opacity" begin="7.5s" dur="9s" keytimes="0;.06;.16;.24;1" repeatcount="indefinite" values="0;1;1;0;0"></animate></circle></g><path d="M0 72H572" stroke="#6b5a40" stroke-width="3"></path></svg>
+</div>
+<div class="td-art m-keep" style="display:flex;align-items:center;justify-content:center;padding:32px 56px 32px 16px;min-height:0;min-width:0"><img width="4730" height="4087" alt="The Touch &amp; Discover console and shelf display, in situ" src="/assets/img/the-final-prototype-mockup.jpg" srcset="/assets/img/opt/the-final-prototype-mockup-480.webp 480w, /assets/img/opt/the-final-prototype-mockup-800.webp 800w, /assets/img/opt/the-final-prototype-mockup-1200.webp 1200w, /assets/img/opt/the-final-prototype-mockup-1600.webp 1600w, /assets/img/opt/the-final-prototype-mockup-2400.webp 2400w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 92vw, (max-width: 1280px) 52vw, 768px" style="display:block;width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain;box-shadow:0 30px 60px rgba(0,0,0,.5)"/></div>
+</div>
+<div class="facts td-fbar" style="grid-template-columns:repeat(3,1fr)">
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Interaction Designer</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Team</div><div style="font:600 14px/1.35 Archivo">5 people</div></div>
+<div class="td-meth"><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div class="m-hide" style="font:600 15px/1.35 Archivo">Sketching · Figma &amp; Intuiface prototyping · Arduino Wizard-of-Oz · user testing</div></div>
+</div>
+</section>
+<section class="pad rule two" id="problem">
+<div>
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#b3200b"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#ec3013;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">01</span><span>Problem &amp; purpose</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">15,000 items, almost no room to show them</h2>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 14px;text-wrap:pretty">Idrottsmuseet, the Gothenburg Sports Museum, holds over 15,000 items across three floors, with almost no room for information plaques. Exhibits are cluttered and unexplained, which favours visitors who already know the athletes — mostly middle-aged men — and shuts out everyone else.</p>
+<p class="m-hide" style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0 0 14px;text-wrap:pretty">The project used Ingemar Johansson, one of Sweden's most iconic boxers, as the test case: his artefacts were on display but told through static text that most visitors skipped past.</p>
+<p style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">The goal was a touch-screen console that guides visitors to relevant exhibits, tells their stories, and works without a guide standing beside it — while staying accessible to a broader, younger audience than the museum currently reaches.</p>
+</div>
+<div class="m-hide" style="border-top:1px solid #dcd9d4;padding-top:16px">
+<div class="lbl" style="font-size:11px;margin-bottom:10px">Related work</div>
+<p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0">Looked to Universeum and Världskulturmuseet in Gothenburg, and the Museum of London, where touch-screens and audio let visitors explore digital archives at their own pace, tied to the physical exhibits around them.</p>
+</div>
+</section>
+<section class="pad rule">
+<div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">My contribution</div>
+<ul style="font:400 16px/1.7 Archivo;color:#4a4744;margin:0;padding-left:20px;max-width:700px">
+<li>Contributed to the interaction design process from ideation to the final design.</li>
+<li>Created the Figma prototype.</li>
+<li>Created the video about Ingemar Johansson used in the installation.</li>
+<li>Created the physical prototype.</li>
+<li>Designed the image in Photoshop that was placed on the backboard behind the screen.</li>
+</ul>
+</section>
+<section class="pad rule" id="design">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">02</span><span>Design &amp; implementation</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">From paper sketches to Intuiface</h2>
+<p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 24px;max-width:760px;text-wrap:pretty">Ideation started with paper sketches — each member sketching, writing or thinking through an idea in five-minute bursts — and converged on a touch-screen concept. From there the work split into a digital interface and a physical exhibit setup, developed in parallel.</p>
+<div class="three td-cards" style="margin-bottom:32px">
+<div>
+<div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Ideation</div>
+<div style="background:#ececea;margin-bottom:10px;aspect-ratio:4/3;overflow:hidden"><img width="903" height="577" alt="Initial paper sketches" decoding="async" loading="lazy" src="/assets/img/screenshot-2025-06-02-at-16-28-42.png" srcset="/assets/img/opt/screenshot-2025-06-02-at-16-28-42-480.webp 480w, /assets/img/opt/screenshot-2025-06-02-at-16-28-42-800.webp 800w, /assets/img/opt/screenshot-2025-06-02-at-16-28-42-903.webp 903w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 94vw, (max-width: 1280px) 29vw, 427px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+<p style="font:400 14px/1.5 Archivo;color:#4a4744">Group sketching led to a digital Photoshop concept: Ingemar Johansson centered on screen, surrounded by icons for the information on offer.</p>
+</div>
+<div>
+<div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Digital interface</div>
+<div style="background:#ececea;margin-bottom:10px;aspect-ratio:4/3;overflow:hidden"><img width="2000" height="1600" alt="Figma prototype of the interface" decoding="async" loading="lazy" src="/assets/img/final-prot.png" srcset="/assets/img/opt/final-prot-480.webp 480w, /assets/img/opt/final-prot-800.webp 800w, /assets/img/opt/final-prot-1200.webp 1200w, /assets/img/opt/final-prot-1600.webp 1600w, /assets/img/opt/final-prot-2000.webp 2000w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 94vw, (max-width: 1280px) 29vw, 427px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+<p style="font:400 14px/1.5 Archivo;color:#4a4744">Built in Intuiface from a Figma concept: a video carousel, a scrollable photo grid with captions, and a map of award locations — each item tagged to a shelf number.</p>
+</div>
+<div>
+<div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Physical setup</div>
+<div style="background:#ececea;margin-bottom:10px;aspect-ratio:4/3;overflow:hidden"><img width="2088" height="1573" alt="Board with shelves, artefacts and lights" decoding="async" loading="lazy" src="/assets/img/screenshot-2026-09-14-at-19-18-45.png" srcset="/assets/img/opt/screenshot-2026-09-14-at-19-18-45-480.webp 480w, /assets/img/opt/screenshot-2026-09-14-at-19-18-45-800.webp 800w, /assets/img/opt/screenshot-2026-09-14-at-19-18-45-1200.webp 1200w, /assets/img/opt/screenshot-2026-09-14-at-19-18-45-1600.webp 1600w, /assets/img/opt/screenshot-2026-09-14-at-19-18-45-2088.webp 2088w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 94vw, (max-width: 1280px) 29vw, 427px" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
+<p style="font:400 14px/1.5 Archivo;color:#4a4744">A shelf board behind the screen, wired with six LED-lit, 3D-printed lightbulbs. Selecting an item on screen lit the matching physical exhibit — prototyped Wizard-of-Oz style with two Arduino Unos.</p>
+</div>
+</div>
+<div class="td-video" style="margin-bottom:0">
+<div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Video content</div>
+<div class="td-vframe" style="background:#000;max-width:640px;aspect-ratio:16/9;display:flex;align-items:center;justify-content:center;margin-bottom:10px"><video controls="controls" playsinline="playsinline" poster="/assets/video/ingemar-project-my-creation-small-size-poster.webp?v=c58ddeee" preload="metadata" src="/assets/video/ingemar-project-my-creation-small-size.mp4?v=a7e728e8" style="width:100%;height:100%;display:block;object-fit:contain"></video></div>
+<p style="font:400 14px/1.5 Archivo;color:#4a4744;max-width:640px">A short video about Ingemar Johansson's life and career, made for the console's video carousel.</p>
+</div>
+<div>
+<div>
+<div class="lbl td-result" style="font-size:11px;margin-bottom:10px">Result</div>
+<p style="font:400 15px/1.6 Archivo;color:#1c1b1a;margin:0 0 12px;text-wrap:pretty">Set up at Idrottshögskolan for presentation: selecting a video or photo on screen lit a small bulb above the matching physical exhibit, linking the digital story to the object in front of the visitor.</p>
+<p class="m-hide" style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">The manual light-control buttons were mounted too high to reach comfortably while using the screen — a limitation of the Wizard-of-Oz setup rather than the final concept.</p>
+</div>
+</div>
+</section>
+<section class="pad" id="reflection" style="background:#e5e9fb">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">03</span><span>Reflection</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">How visitors responded</h2>
+<p style="font:400 16px/1.6 Archivo;color:#4a4744;margin:0 0 28px;max-width:760px;text-wrap:pretty">Visitors responded well: the link between digital content and physical exhibits made previously overlooked details more visible and easier to engage with. Clearer task-splitting within the group, and buttons placed within easy reach, are the two things worth doing differently next time.</p>
+<a class="btn btn-secondary m-hide" download="Touch_Discover_report.pdf" href="/uploads/Touch_Discover_report.pdf" style="display:inline-flex">Download full report (PDF)</a>
+</section>
   </main>
 
   <footer class="ft">
     <span class="ft-copy">© 2026 Tarek Alfutih</span>
   </footer>
-
 </div>
-<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=224d3fa2" defer></script>
+<script src="/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/assets/js/site.js?v=b96d8d47" defer></script>
+<script src="/assets/js/pages/touch-and-discover.js?v=0fe80130" defer></script>
 </body>
 </html>

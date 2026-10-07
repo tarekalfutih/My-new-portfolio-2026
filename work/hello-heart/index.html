@@ -3,20 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/work/hello-heart/">
-<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/work/hello-heart/">
+<link rel="canonical" href="https://tarekdesign.se/work/hello-heart/">
+<meta property="og:url" content="https://tarekdesign.se/work/hello-heart/">
 <meta property="og:site_name" content="Tarek Alfutih">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=320b78c2">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
-<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/case-phone.css?v=38175afe">
+<link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/assets/css/base.css?v=dc6c07bf">
+<script src="/assets/js/video-behavior.js?v=dcfab542"></script>
+<script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Hello Heart — Tarek Alfutih</title>
 <meta name="description" content="A dating app addressing loneliness with an ethical approach. Hello Heart improves on Tinder by enhancing ethical design and user safety.">
 <style>
+@media (min-width:1281px) and (max-width:1679px){html,body{background:#fff !important}.wrap,.pg{max-width:none !important;border-left:0 !important;border-right:0 !important}}
+
 body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#122a8f;text-decoration:none}
 a:hover{color:#1b3ac4;text-decoration:underline}
@@ -42,15 +43,9 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
   .two,.three,.g2{grid-template-columns:1fr !important}
 }
-@media (max-width:560px){
-  /* Tinder vs Hello Heart phone pairs: share the row instead of overflowing it */
-  div[style^="width:170px"]{flex:1 1 0;min-width:0;width:auto !important}
-  div[style*="width:170px;aspect-ratio"]{width:100% !important}
-}
-.hh-mhero,.hh-dhero{display:none}
-/* First screen (3 Oct, >= 768px): the cover beside the text, facts full width underneath. */
+
+.m-only{display:none}
 @media (min-width:768px){
-  .hh-dhero{display:block}
   .hh-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:clamp(32px,4vw,56px);align-items:center;margin-bottom:28px}
   .hh-txt .hh-lead{margin-bottom:0 !important}
 }
@@ -59,14 +54,47 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .hh-txt h1.h1r{font-size:40px !important}
   .hh-txt .hh-lead{font-size:17px !important}
 }
-/* Phones (< 768px), on top of case-phone.css. Desktop and iPad are unchanged. */
+.m-menu a{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #dcd9d4;font:600 20px/1 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-decoration:none}
+.m-menu a:last-child{border-bottom:0}.m-menu a:active{background:#e5e9fb}.m-menu a:hover{text-decoration:none;color:#1c1b1a}
 @media (max-width:767px){
-  /* Cover image first, then the title */
-  .hh-mhero{display:block}
+  html,body{overflow-x:clip;overscroll-behavior-x:none}
+  .wrap{border-left:0 !important;border-right:0 !important;overflow-x:clip}
+  .cs-top{height:56px;padding:0 6px 0 20px !important;flex-wrap:nowrap !important;gap:12px !important;border-bottom:0 !important}
+  .cs-top>a:first-child{font-size:17px !important;min-height:44px;display:inline-flex;align-items:center}
+  .cs-links,.cs-cv,.cs-tabs{display:none !important}
+  .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
+  .m-only{display:flex !important}
+  section[id]{scroll-margin-top:64px}
+  .wrap>:where(main)>section,.pad{padding-left:20px !important;padding-right:20px !important}
+  .pad{padding-top:36px !important;padding-bottom:36px !important}
+  .lbl{font-size:11px !important;letter-spacing:.14em !important}
+  h1.h1r{font-size:30px !important;line-height:1.08 !important;margin-bottom:12px !important}
+  .wrap h2{font-size:22px !important;line-height:1.2 !important}
+  .wrap h3{font-size:18px !important;line-height:1.25 !important}
+  .wrap p,.wrap li{font-size:16px !important;line-height:1.55 !important;max-width:none !important}
+  .wrap figcaption,.wrap .cap{font-size:13px !important}
+  .facts{grid-template-columns:1fr 1fr !important}
+  .facts>div{padding:16px 12px 16px 0 !important;border-right:none !important;border-bottom:1px solid #dcd9d4}
+  .facts>div>div:last-child{font-size:14px !important}
+  .wrap section [style*="grid-template-columns"]:not(.facts):not(.m-keep),.two,.three,.g2,.g3,.grid2,.grid3,.hero-split,.findings-grid{grid-template-columns:minmax(0,1fr) !important}
+  .wrap section [style*="grid-column"]{grid-column:auto !important}
+  .wrap section [style*="display:flex"]:not(.m-keep){flex-wrap:wrap}
+  .wrap section [style*="width:"]:not(.m-keep){max-width:100%}
+  .wrap img,.wrap video,.wrap img{max-width:100%}
+  .wrap section a[href$=".pdf"]{display:none !important}
+}
+@media (max-width:767px){
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> .vc > video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
+  .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
+}
+@media (max-width:767px){
+  .hh-mhero{display:block !important}
+  .hh-dhero{display:none !important}
   .hh-intro{padding-top:20px !important;padding-bottom:28px !important}
   .hh-txt>.lbl:first-child{margin-bottom:10px !important;line-height:1.4 !important}
-  html .hh-intro h1.h1r{font-size:32px !important;margin-bottom:10px !important}
-  .hh-txt>.hh-line{margin-bottom:14px !important}
+  .hh-intro h1.h1r{font-size:32px !important;margin-bottom:10px !important}
+  .hh-txt>div[style*="height:3px"]{margin-bottom:14px !important}
   .hh-lead{font-size:16px !important;line-height:1.5 !important;margin-bottom:20px !important}
   .hh-intro .facts>div{padding:14px 12px 14px 0 !important;border-bottom:0 !important}
   .hh-intro .facts>div.hh-role{grid-column:1 / -1;border-bottom:1px solid #dcd9d4 !important}
@@ -74,189 +102,259 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   #research blockquote{font-size:15px !important;margin-bottom:0 !important}
   #research>div{gap:18px !important}
   #concept>div{margin-bottom:24px !important;padding-top:18px !important}
-  /* Screenshots: pairs 2 per row (10px gap), the verification flow 3 per row, singles 50% wide */
   #concept .hh-row{display:grid !important;grid-template-columns:1fr 1fr;gap:10px !important}
   #concept .hh-trio{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
   #concept .hh-row>div{width:auto !important;min-width:0}
   #concept div:has(> img){width:100% !important;margin:0 !important;max-width:none !important;height:auto}
   #concept>div>div:has(> img){width:calc(50% - 5px) !important}
+  #concept div:has(> img)+.lbl{margin-top:28px !important}
 }
+
+.pr-slide{scroll-snap-stop:always}
+.pr-track::-webkit-scrollbar{display:none}
+.pr-nav:disabled{opacity:.35;cursor:default}
+.pr-nav:not(:disabled):hover{background:#1b3ac4 !important;border-color:#1b3ac4 !important;color:#fff !important}
+.pr-nav:not(:disabled):active{background:#122a8f !important;border-color:#122a8f !important;color:#fff !important}
+.pr-nav:focus-visible,.pr-track:focus-visible{outline:2px solid #1b3ac4;outline-offset:2px}
+@keyframes pcFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.pc-dot:not([aria-current="true"]):hover>span{background:#4561dc !important}.pc-dot:focus-visible,.pc-play:focus-visible{outline:2px solid #1b3ac4;outline-offset:-4px}
+.pc-play:hover>span{background:#a9b6ee !important}.pc-play:active>span{background:#122a8f !important;color:#fff !important}
+.wrap section .pr-count-dots{position:relative}
+@media (min-width:1024px){.wrap section .pr-car{display:block !important;margin:0 !important}.wrap section .pr-track{padding:0 !important;overflow:visible !important;scroll-snap-type:none !important;gap:24px !important;flex-wrap:wrap}.wrap section .pr-nav,.wrap section .pr-count-dots,.wrap section .pc-play{display:none !important}}
+@media (max-width:1024px){.wrap section .pr-nav{display:none !important}.wrap section .pr-car{margin:0 !important}.wrap section .pr-track{grid-column:1 / -1 !important}}
+@media (max-width:767px){.pr-slide{flex-basis:220px !important}.wrap section .pr-track{gap:14px !important;padding:0 calc(50% - 90px) !important;margin:0 -20px !important}.wrap section .pr-car{display:grid !important}.pr-track{touch-action:pan-x pan-y}}
+@media (prefers-reduced-motion:reduce){.pr-track{scroll-behavior:auto !important}}
+.hh-mhero{display:none !important}
+.wrap section.hh-hero{background:#111318;color:#fff;height:calc(100svh - var(--hdr,110px));min-height:560px;max-height:1400px;display:flex;flex-direction:column;border-bottom:0}
+.hh-stage{position:relative;flex:1;min-height:0;display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);grid-template-rows:minmax(0,1fr);overflow:hidden}
+.hh-ecg{position:absolute;left:50%;right:0;top:50%;width:50%;height:200px;transform:translateY(-50%);z-index:0;pointer-events:none}
+.hh-ecg-line{stroke-dasharray:1;stroke-dashoffset:1;animation:hhBeat 4.8s cubic-bezier(.45,0,.25,1) infinite}
+.hh-text{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:32px 32px 32px 56px;min-width:0}
+.hh-art{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:clamp(24px,4vh,48px) 56px clamp(24px,4vh,48px) 16px;min-width:0;min-height:0}
+.hh-phone{position:relative;height:100%;max-height:620px;aspect-ratio:400/867;max-width:100%;border:6px solid #ff5c86;border-radius:36px;overflow:hidden;background:#ff3f63;box-shadow:0 24px 70px rgba(255,61,110,.25)}
+.wrap .hh-phone img{display:block;width:100%;height:100%;object-fit:contain;max-width:none}
+.hh-flag{position:absolute;left:0;right:0;top:87.6%;height:7.4%;border:2px solid #ff3d5a;background:rgba(255,61,90,.12);opacity:0;animation:hhFlag 4.8s ease infinite}
+.hh-chip{position:absolute;left:50%;bottom:15%;transform:translate(-50%,8px);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;padding:7px 12px;border-radius:999px;background:#ff3d5a;color:#fff;font:600 11px/1 Archivo;letter-spacing:.02em;opacity:0;animation:hhChip 4.8s ease infinite}
+@keyframes hhBeat{0%{stroke-dashoffset:1;opacity:1}55%{stroke-dashoffset:0;opacity:1}85%{stroke-dashoffset:0;opacity:0}100%{stroke-dashoffset:1;opacity:0}}
+@keyframes hhFlag{0%,22%{opacity:0}28%{opacity:1}80%{opacity:1}90%,100%{opacity:0}}
+@keyframes hhChip{0%,26%{opacity:0;transform:translate(-50%,8px)}34%{opacity:1;transform:translate(-50%,0)}80%{opacity:1;transform:translate(-50%,0)}90%,100%{opacity:0;transform:translate(-50%,0)}}
+@media (prefers-reduced-motion:reduce){.hh-ecg-line,.hh-flag,.hh-chip{animation:none !important}.hh-ecg-line{stroke-dashoffset:0}.hh-flag,.hh-chip{opacity:1}.hh-chip{transform:translate(-50%,0)}}
+.wrap .hh-fbar{background:#111318;margin:0;padding:0 56px;border-top:2px solid #fff !important;border-bottom:0 !important;grid-template-columns:minmax(0,1.6fr) repeat(2,minmax(0,1fr))}
+.wrap .hh-fbar>div{padding:18px 24px 20px !important;border-right:1px solid rgba(255,255,255,.18) !important;border-bottom:0 !important}
+.wrap .hh-fbar>div:first-child{padding-left:0 !important}.wrap .hh-fbar>div:last-child{border-right:0 !important}
+.wrap .hh-fbar .lbl{color:#ff7aa2 !important}.wrap .hh-fbar>div>div:last-child{color:#fff !important}
+.hh-roll{font:700 clamp(48px,6.6vw,96px)/1 Archivo;letter-spacing:-.05em;height:1.04em;overflow:hidden}
+.hh-roll>div{display:flex;flex-direction:column;animation:hhRoll 7s cubic-bezier(.7,0,.2,1) infinite}
+.hh-roll span{display:block;height:1.04em;line-height:1.04em;white-space:nowrap}
+.hh-scr{position:absolute;left:0;right:0;top:0;height:200%;display:flex;flex-direction:column;animation:hhRoll 7s cubic-bezier(.7,0,.2,1) infinite;animation-delay:.08s}
+.wrap .hh-scr img{width:100%;height:50%;object-fit:cover;display:block;max-width:none}
+@keyframes hhRoll{0%,31%{transform:translateY(0)}41%,90%{transform:translateY(-50%)}100%{transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){.hh-roll>div,.hh-scr{animation:none !important;transform:translateY(-50%)}}
+.hh-hero ::selection{background:#ff7aa2;color:#111318}
+@media (max-width:1024px){
+  .wrap section.hh-hero{height:auto !important;min-height:0 !important;max-height:none !important}
+  .hh-stage{display:flex !important;flex-direction:column !important}
+  .hh-ecg{top:auto;bottom:240px;transform:none;left:0;width:100%}
+  .wrap section.hh-hero .hh-text{padding:56px 32px 40px !important;gap:14px !important;max-width:640px}
+  .wrap section.hh-hero .hh-art{padding:0 32px 48px !important}
+  .hh-phone{height:auto;width:260px;max-height:none}
+  .wrap .hh-fbar{padding:0 32px !important;grid-template-columns:1fr 1fr !important}
+  .wrap .hh-fbar>div{padding:16px 16px 16px 0 !important;border-right:0 !important;border-bottom:1px solid rgba(255,255,255,.18) !important}
+  .wrap .hh-fbar>div.hh-role{grid-column:1 / -1}
+  .wrap .hh-fbar>div:last-child,.wrap .hh-fbar>div:nth-last-child(2):not(.hh-role){border-bottom:0 !important}
+}
+@media (max-width:767px){
+  .wrap section.hh-hero{padding-left:0 !important;padding-right:0 !important}
+  .wrap section.hh-hero .hh-text{padding:36px 20px 32px !important;gap:12px !important}
+  .hh-roll{font-size:clamp(40px,11vw,48px) !important}
+  .wrap section.hh-hero .hh-lead{font-size:17px !important;max-width:320px !important}
+  .wrap section.hh-hero .hh-art{padding:0 20px 40px !important}
+  .hh-phone{width:220px;border-width:6px;border-radius:30px}
+  .hh-ecg{bottom:200px;height:140px}
+  .wrap .hh-fbar{padding:4px 20px 8px !important}
+}
+
+.hvx0:hover{background:#1c1b1a !important;color:#fff !important}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="wrap">
 
-  <header class="cs-hd">
+<header class="cs-hd">
     <div class="cs-bar">
-      <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
-      <a class="cs-back" href="/My-new-portfolio-2026/work/" data-back>← All work</a>
-      <nav class="cs-main" aria-label="Main"><a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work</a><a href="/My-new-portfolio-2026/about/">About</a><a href="/My-new-portfolio-2026/contact/">Contact</a></nav>
-      <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+      <a class="hd-logo" href="/">Tarek Alfutih</a>
+      <a class="cs-back" href="/work/" data-back aria-label="Back"><span class="cs-back-a" aria-hidden="true">←</span><svg class="cs-back-c" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span class="cs-back-t" aria-hidden="true">&nbsp;Back</span></a>
+      <nav class="cs-main" aria-label="Main"><a href="/">Home</a><a href="/work/" aria-current="true">Work</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+      <a class="btn-cv" href="/Tarek%20Alfutih%20-%20CV.pdf" target="_blank">CV (PDF)</a>
       <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </div>
     <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
-      <a href="/My-new-portfolio-2026/work/" data-back>← All work</a>
-      <a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+      <a href="/">Home<span aria-hidden="true">→</span></a>
+      <a href="/work/" aria-current="true">Work<span aria-hidden="true">→</span></a>
+      <a href="/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/contact/">Contact<span aria-hidden="true">→</span></a>
     </nav>
-    <script>
-      /* Arrived from Home (?from=home): back links go Home and the Work links are shown.
-         Otherwise the back links already point to Work, so the Work nav links stay hidden. */
-      (function () {
-        if (new URLSearchParams(location.search).get('from') !== 'home') return;
-        var home = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
-        document.querySelectorAll('[data-back]').forEach(function (back) {
-          back.href = home;
-          back.textContent = '← Home';
-        });
-        document.querySelectorAll('[data-work-link]').forEach(function (a) { a.hidden = false; });
-      })();
-    </script>
-    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
-      <a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Ethical question</a>
-      <a href="#research" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Research</a>
-      <a href="#concept" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Concept</a>
-      <a href="#reflection" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Reflection</a>
-    </nav>
+    <script src="/assets/js/nav-back.js?v=8f1349e7" defer></script>
+    <script src="/assets/js/section-spy.js?v=ce71177b" defer></script>
+    <nav aria-label="Sections" class="cs-nav cs-tabs" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+<a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Ethical question</a>
+<a href="#research" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Research</a>
+<a href="#concept" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Concept</a>
+<a href="#reflection" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Reflection</a>
+</nav>
   </header>
 
   <main id="main">
 
-  <div class="hh-mhero" style="aspect-ratio:1448/1086;background:#ececea"><img class="slot" src="/My-new-portfolio-2026/assets/img/hello-heart-cover.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/hello-heart-cover-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/hello-heart-cover-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/hello-heart-cover-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/hello-heart-cover-1448.webp 1448w" sizes="(max-width: 1280px) 100vw, 1280px" alt="Hello Heart" decoding="async"></div>
-
-  <section class="pad rule hh-intro">
-    <div class="hh-top">
-    <div class="hh-txt">
-    <div class="lbl" style="margin-bottom:20px">Individual project · Responsible Interaction, Chalmers</div>
-    <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;text-wrap:pretty">Hello Heart</h1>
-    <div class="hh-line" style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
-    <p class="hh-lead" style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">A dating app addressing loneliness with an ethical approach. Hello Heart improves on Tinder by enhancing ethical design and user safety.</p>
-    </div>
-    <div class="hh-dhero" style="aspect-ratio:1448/1086;background:#ececea"><img class="slot" src="/My-new-portfolio-2026/assets/img/hello-heart-cover.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/hello-heart-cover-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/hello-heart-cover-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/hello-heart-cover-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/hello-heart-cover-1448.webp 1448w" sizes="(max-width: 1280px) 100vw, 1280px" alt="Hello Heart" decoding="async"></div>
-    </div>
-    <div class="facts">
-      <div class="hh-role"><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Individual — literature review, ethical analysis and concept design</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Context</div><div style="font:600 15px/1.35 Archivo">Responsible Interaction, Chalmers · 2025</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div style="font:600 15px/1.35 Archivo">Literature review &amp; ethical analysis — no user testing</div></div>
-    </div>
-  </section>
-
-  <section class="pad rule two" id="problem">
-    <div>
-      <div class="lbl" style="margin-bottom:14px;color:#122a8f;font-size:13px">01 · The ethical question</div>
-      <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 16px;text-wrap:pretty">Tinder's platform helps people dealing with loneliness, or looking for a partner or friends. But this design also comes with ethical dilemmas.</p>
-      <ul class="hh-list" style="font:400 16px/1.7 Archivo;color:#4a4744;margin:0 0 16px;padding-left:20px;max-width:720px">
-        <li style="margin-bottom:8px">Many crimes have occurred through the use of dating platforms such as Tinder, including kidnapping, sexual assault and human trafficking (Pooley &amp; Boxall, 2020), and financial exploitation (Van der Linde, 2024).</li>
-        <li style="margin-bottom:8px">Tinder does not protect user data — especially exact location — which makes it easy for someone to track and locate a user in real life (Pooley &amp; Boxall, 2020).</li>
-        <li style="margin-bottom:8px">People can use harmful language when chatting on Tinder (Thompson, 2018).</li>
-        <li style="margin-bottom:8px">Tinder allows users to create profiles with no verification, making it easy for scammers to fake identities (Morris, 2022).</li>
-        <li>Tinder's app seems more focused on making money from users, making the platform less affordable for everyone (PYMNTS, n.d.).</li>
-      </ul>
-      <p style="font:600 15px/1.6 Archivo;color:#1c1b1a;margin:0;text-wrap:pretty">The question behind Hello Heart: how can a dating platform be designed to address these safety, privacy and fairness problems responsibly, instead of leaving them for users to deal with on their own?</p>
-    </div>
-    <div class="hh-about" style="border-top:1px solid #dcd9d4;padding-top:16px">
-      <div class="lbl" style="font-size:11px;margin-bottom:10px">About this project</div>
-      <p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0">A short, individual course project. The work is research and literature-based, built around ethical reflection rather than a full UX process — there was no prototyping stage or user testing.</p>
-    </div>
-  </section>
-
-  <section class="pad rule" id="research">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">02 · Research &amp; literature</div>
-    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 28px;text-wrap:pretty">Three ideas from the course literature shaped the analysis of Tinder and the direction for Hello Heart.</p>
-    <div style="display:flex;flex-direction:column;gap:24px">
-      <div style="border-top:1px solid #dcd9d4;padding-top:18px">
-        <p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Design justice — affordability as an ethical issue</p>
-        <blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Design justice impels us to consider whether a given affordance is equally available to all people." <span style="color:#75726e;font-size:13px">— Costanza-Chock, 2020, pp. 37–38</span></blockquote>
-        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder requires a monthly fee that is quite expensive, making the app less affordable to many users. Read through design justice, that is not just a pricing choice — it decides who gets to use a safer, better-designed platform at all.</p>
-      </div>
-      <div style="border-top:1px solid #dcd9d4;padding-top:18px">
-        <p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Invisible Women — gender data gaps in design</p>
-        <blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Before we even get to the more serious offenses like being assaulted, women are dealing on a daily basis with behaviours from men that make — and are often calculated to make — them feel uncomfortable." <span style="color:#75726e;font-size:13px">— Criado-Perez, 2020, p. 55</span></blockquote>
-        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 10px;max-width:700px">Tinder's app doesn't stop users from sending harmful messages, which mostly affect women. Criado-Perez's Chapter 1 example — a Karlskoga snow-clearing schedule built around men's commuting habits, without thinking about women's daily routines (p. 32) — shows the same pattern: designs built without gender data in mind end up putting women at a disadvantage.</p>
-        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder shares users' exact location, a feature that can put women at higher risk of stalking or kidnapping. A 22-year-old man was accused of using Snapchat's location-sharing feature to try to kidnap a woman on the Blue Ridge Parkway in North Carolina (ABC7 Chicago, 2023) — a real case of a location feature designed without women's safety in mind.</p>
-      </div>
-      <div style="border-top:1px solid #dcd9d4;padding-top:18px">
-        <p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Ethics for people who work in tech — privacy as a human right</p>
-        <blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Protecting privacy is not only protecting our data... it is protecting a human right including various values like justice, equality, freedom and more." <span style="color:#75726e;font-size:13px">— Steen, 2023, p. 51</span></blockquote>
-        <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder asks for photo verification only after several days, leaving a window where people can use stolen or fake photos — including a fake photo generated by ChatGPT, uploaded in a test that Tinder did not flag for verification right away.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="pad rule" id="concept">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">03 · The Hello Heart concept</div>
-    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">Hello Heart is a concept redesign of Tinder — each design response answers one of the ethical problems identified above. Before/after pairs below compare Tinder's real interface with the Hello Heart concept.</p>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
-      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Verify users with BankID</p>
-      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Signing in with BankID ensures every user has a verified identity, discouraging fake accounts and scams, and letting law enforcement identify a profile's owner when a crime is investigated (Husz, 2018).</p>
-      <div class="hh-row" style="display:flex;gap:16px">
-        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/tinder-log-in.png" srcset="/My-new-portfolio-2026/assets/img/opt/tinder-log-in-400.webp 400w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Tinder sign-in screen" decoding="async" style="object-fit:contain;"></div></div>
-        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/my-design-log-in.png" srcset="/My-new-portfolio-2026/assets/img/opt/my-design-log-in-400.webp 400w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Hello Heart sign-in with BankID" decoding="async" style="object-fit:contain;"></div></div>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
-      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Stop harmful messages</p>
-      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">AI automatically detects and blocks harmful language before it's sent. The sender is blocked right away, and the recipient is notified that a message was blocked for using inappropriate language.</p>
-      <div class="hh-row" style="display:flex;gap:16px">
-        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/stop-harmful-messages-tinder.png" srcset="/My-new-portfolio-2026/assets/img/opt/stop-harmful-messages-tinder-390.webp 390w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Tinder chat — harmful message sent" loading="lazy" decoding="async" style="object-fit:contain;"></div></div>
-        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/stop-harmful-messages-my-design.png" srcset="/My-new-portfolio-2026/assets/img/opt/stop-harmful-messages-my-design-390.webp 390w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Hello Heart chat — message blocked by AI" loading="lazy" decoding="async" style="object-fit:contain;"></div></div>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
-      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Fair, ethical pricing</p>
-      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0;max-width:700px">A more affordable price than Tinder's, so a safer platform isn't only available to people who can pay a high monthly fee — in line with design justice.</p>
-    </div>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
-      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Protect location privacy</p>
-      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Rethinking how exact location is shared, so the feature can't be used the way Tinder's has been, to track or locate a person in real life.</p>
-      <div class="hh-row" style="display:flex;gap:16px">
-        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/protect-privacy-and-location-security-tinder.png" srcset="/My-new-portfolio-2026/assets/img/opt/protect-privacy-and-location-security-tinder-403.webp 403w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Tinder profile screen" loading="lazy" decoding="async" style="object-fit:contain;"></div></div>
-        <div style="width:170px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/protect-privacy-and-location-security-my-design.png" srcset="/My-new-portfolio-2026/assets/img/opt/protect-privacy-and-location-security-my-design-390.webp 390w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Hello Heart profile screen" loading="lazy" decoding="async" style="object-fit:contain;"></div></div>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
-      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Verified photos</p>
-      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Users must verify their photos through a secure AI service before sharing them on the platform, protecting people's photos from being stolen and reused elsewhere.</p>
-      <div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder — a fake, AI-generated photo uploaded without being flagged for verification</div>
-      <div style="background:#0a0a0c;width:170px;aspect-ratio:390/874;margin-bottom:18px"><img class="slot" src="/My-new-portfolio-2026/assets/img/using-a-fake-photo-as-profile-picture-on-tinders-app.png" srcset="/My-new-portfolio-2026/assets/img/opt/using-a-fake-photo-as-profile-picture-on-tinders-app-403.webp 403w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Tinder profile with fake photo" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-      <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart — the verification flow</div>
-      <div class="hh-row hh-trio" style="display:flex;gap:16px;flex-wrap:wrap">
-        <div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/verified-users-photo-3.png" srcset="/My-new-portfolio-2026/assets/img/opt/verified-users-photo-3-390.webp 390w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Verified profile badge" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-        <div style="background:#0a0a0c;width:170px;aspect-ratio:405/877"><img class="slot" src="/My-new-portfolio-2026/assets/img/verified-users-photo-1.png" srcset="/My-new-portfolio-2026/assets/img/opt/verified-users-photo-1-390.webp 390w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Adding profile media" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-        <div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/verified-users-photo-2.png" srcset="/My-new-portfolio-2026/assets/img/opt/verified-users-photo-2-405.webp 405w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Selfie verification prompt" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:22px">
-      <p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Safety &amp; support</p>
-      <p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">A safety section with three options: block or report a person, read about rules and rights, or contact mental health support.</p>
-      <div style="background:#0a0a0c;width:170px;aspect-ratio:390/874"><img class="slot" src="/My-new-portfolio-2026/assets/img/enhancing-safety-and-users-support.png" srcset="/My-new-portfolio-2026/assets/img/opt/enhancing-safety-and-users-support-390.webp 390w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 23vw, (max-width: 1280px) 16vw, 170px" alt="Hello Heart safety panel" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-    </div>
-  </section>
-
-  <section class="pad" id="reflection">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f;font-size:13px">04 · Reflection &amp; outcome</div>
-    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:700px;margin:0 0 16px;text-wrap:pretty">Even with these changes, some problems remain open. Users can still take a screenshot of a profile photo and use a reverse image search to find information about that person — a limitation this concept doesn't solve.</p>
-    <blockquote style="border-left:3px solid #75726e;margin:0 0 16px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#4a4744;max-width:680px">"As long as you do not know exactly which data are being collected, by whom, to whom they are sold, and for what purposes they are used, you do in fact have something to hide." <span style="color:#75726e;font-size:13px">— Steen, 2023, p. 52</span></blockquote>
-    <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">Stardust et al. (2022) note that dating apps are under growing pressure from civil society, media and governments to address safety concerns — which has led to more safety features, but also raises a separate concern: some of those features add more surveillance, not less. That tension is left open here, and would need further study to design around properly.</p>
-    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:700px;margin:0;text-wrap:pretty">Hello Heart is a concept, not a built or tested product. The outcome of this project is the analysis itself: applying design justice, gender data gaps and privacy-as-a-human-right to an existing platform, and using that analysis to shape a more responsible alternative.</p>
-  </section>
-
+<div class="hh-mhero" style="display:none;background:#ececea;aspect-ratio:1448/1086;overflow:hidden"><img width="1448" height="1086" alt="Hello Heart" decoding="async" loading="lazy" src="/assets/img/hello-heart-cover.jpg" srcset="/assets/img/opt/hello-heart-cover-480.webp 480w, /assets/img/opt/hello-heart-cover-800.webp 800w, /assets/img/opt/hello-heart-cover-1200.webp 1200w, /assets/img/opt/hello-heart-cover-1448.webp 1448w" sizes="(max-width: 1280px) 100vw, 1280px" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
+<section class="rule hh-hero" id="overview">
+<div class="hh-stage">
+<div class="hh-text">
+<div style="display:flex;align-items:center;gap:14px"><span style="width:40px;height:3px;background:#ff5c86;flex:none"></span><span class="lbl" style="color:#ff8fab">Case study · Tinder redesign</span></div>
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);margin:0">Hello Heart</h1>
+<div aria-hidden="true" class="hh-roll"><div><span style="color:#6f717c">Tinder</span><span style="color:#fff">Hello Heart</span></div></div>
+<p class="hh-lead" style="font:400 20px/1.45 Archivo;color:#d9d6de;margin:0;max-width:440px;text-wrap:pretty">A dating app addressing loneliness with an ethical approach.</p>
+</div>
+<div class="hh-art m-keep">
+<div class="hh-phone m-keep">
+<div class="hh-scr m-keep">
+<img width="400" height="867" alt="Tinder sign-in screen with Apple, Facebook and phone number buttons" src="/assets/img/tinder-log-in.png" srcset="/assets/img/opt/tinder-log-in-400.webp 400w" sizes="(max-width: 560px) 56vw, (max-width: 900px) 34vw, (max-width: 1280px) 25vw, 271px"/>
+<img width="400" height="869" alt="Hello Heart sign-in screen with one Sign in with BankID button" src="/assets/img/my-design-log-in.png" srcset="/assets/img/opt/my-design-log-in-400.webp 400w" sizes="(max-width: 560px) 56vw, (max-width: 900px) 34vw, (max-width: 1280px) 25vw, 271px"/>
+</div>
+</div>
+</div>
+</div>
+<div class="facts hh-fbar">
+<div class="hh-role"><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Individual — literature review, ethical analysis and concept design</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Context</div><div style="font:600 15px/1.35 Archivo">Responsible Interaction, Chalmers · 2025</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div style="font:600 15px/1.35 Archivo">Literature review &amp; ethical analysis — no user testing</div></div>
+</div>
+</section>
+<section class="pad rule two" id="problem">
+<div>
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#b3200b"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#ec3013;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">01</span><span>The ethical question</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">When matching puts people at risk</h2>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 16px;text-wrap:pretty">Tinder's platform helps people dealing with loneliness, or looking for a partner or friends. But this design also comes with ethical dilemmas.</p>
+<ul class="hh-list" style="font:400 16px/1.7 Archivo;color:#4a4744;margin:0 0 16px;padding-left:20px;max-width:720px">
+<li style="margin-bottom:8px">Many crimes have occurred through the use of dating platforms such as Tinder, including kidnapping, sexual assault and human trafficking (Pooley &amp; Boxall, 2020), and financial exploitation (Van der Linde, 2024).</li>
+<li style="margin-bottom:8px">Tinder does not protect user data — especially exact location — which makes it easy for someone to track and locate a user in real life (Pooley &amp; Boxall, 2020).</li>
+<li style="margin-bottom:8px">People can use harmful language when chatting on Tinder (Thompson, 2018).</li>
+<li style="margin-bottom:8px">Tinder allows users to create profiles with no verification, making it easy for scammers to fake identities (Morris, 2022).</li>
+<li>Tinder's app seems more focused on making money from users, making the platform less affordable for everyone (PYMNTS, n.d.).</li>
+</ul>
+<p style="font:600 15px/1.6 Archivo;color:#1c1b1a;margin:0;text-wrap:pretty">The question behind Hello Heart: how can a dating platform be designed to address these safety, privacy and fairness problems responsibly, instead of leaving them for users to deal with on their own?</p>
+</div>
+<div class="hh-about" style="border-top:1px solid #dcd9d4;padding-top:16px">
+<div class="lbl" style="font-size:11px;margin-bottom:10px">About this project</div>
+<p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0">A short, individual course project. The work is research and literature-based, built around ethical reflection rather than a full UX process — there was no prototyping stage or user testing.</p>
+</div>
+</section>
+<section class="pad rule" id="research">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">02</span><span>Research &amp; literature</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Three ideas that shaped the analysis</h2>
+<p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 28px;text-wrap:pretty">Three ideas from the course literature shaped the analysis of Tinder and the direction for Hello Heart.</p>
+<div style="display:flex;flex-direction:column;gap:24px">
+<div style="border-top:1px solid #dcd9d4;padding-top:18px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Design justice — affordability as an ethical issue</p>
+<blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Design justice impels us to consider whether a given affordance is equally available to all people." <span style="color:#75726e;font-size:13px">— Costanza-Chock, 2020, pp. 37–38</span></blockquote>
+<p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder requires a monthly fee that is quite expensive, making the app less affordable to many users. Read through design justice, that is not just a pricing choice — it decides who gets to use a safer, better-designed platform at all.</p>
+</div>
+<div style="border-top:1px solid #dcd9d4;padding-top:18px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Invisible Women — gender data gaps in design</p>
+<blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Before we even get to the more serious offenses like being assaulted, women are dealing on a daily basis with behaviours from men that make — and are often calculated to make — them feel uncomfortable." <span style="color:#75726e;font-size:13px">— Criado-Perez, 2020, p. 55</span></blockquote>
+<p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 10px;max-width:700px">Tinder's app doesn't stop users from sending harmful messages, which mostly affect women. Criado-Perez's Chapter 1 example — a Karlskoga snow-clearing schedule built around men's commuting habits, without thinking about women's daily routines (p. 32) — shows the same pattern: designs built without gender data in mind end up putting women at a disadvantage.</p>
+<p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder shares users' exact location, a feature that can put women at higher risk of stalking or kidnapping. A 22-year-old man was accused of using Snapchat's location-sharing feature to try to kidnap a woman on the Blue Ridge Parkway in North Carolina (ABC7 Chicago, 2023) — a real case of a location feature designed without women's safety in mind.</p>
+</div>
+<div style="border-top:1px solid #dcd9d4;padding-top:18px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 8px">Ethics for people who work in tech — privacy as a human right</p>
+<blockquote style="border-left:3px solid #1b3ac4;margin:0 0 10px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Protecting privacy is not only protecting our data... it is protecting a human right including various values like justice, equality, freedom and more." <span style="color:#75726e;font-size:13px">— Steen, 2023, p. 51</span></blockquote>
+<p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0;max-width:700px">Tinder asks for photo verification only after several days, leaving a window where people can use stolen or fake photos — including a fake photo generated by ChatGPT, uploaded in a test that Tinder did not flag for verification right away.</p>
+</div>
+</div>
+</section>
+<section class="pad rule" id="concept">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">03</span><span>The Hello Heart concept</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Each problem gets a design response</h2>
+<p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">Hello Heart is a concept redesign of Tinder — each design response answers one of the ethical problems identified above. Before/after pairs below compare Tinder's real interface with the Hello Heart concept.</p>
+<div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Verify users with BankID</p>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Signing in with BankID ensures every user has a verified identity, discouraging fake accounts and scams, and letting law enforcement identify a profile's owner when a crime is investigated (Husz, 2018).</p>
+<div class="hh-row" style="display:flex;gap:24px">
+<div style="width:260px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:260px;aspect-ratio:390/874;overflow:hidden"><img width="400" height="867" alt="Tinder sign-in screen" decoding="async" loading="lazy" src="/assets/img/tinder-log-in.png" srcset="/assets/img/opt/tinder-log-in-400.webp 400w" sizes="(max-width: 560px) 56vw, (max-width: 900px) 34vw, (max-width: 1280px) 25vw, 271px" style="width:100%;display:block;height:100%;object-fit:contain"/></div></div>
+<div style="width:260px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:260px;aspect-ratio:390/874;overflow:hidden"><img width="400" height="869" alt="Hello Heart sign-in with BankID" decoding="async" loading="lazy" src="/assets/img/my-design-log-in.png" srcset="/assets/img/opt/my-design-log-in-400.webp 400w" sizes="(max-width: 560px) 56vw, (max-width: 900px) 34vw, (max-width: 1280px) 25vw, 271px" style="width:100%;display:block;height:100%;object-fit:contain"/></div></div>
+</div>
+</div>
+<div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Stop harmful messages</p>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">AI automatically detects and blocks harmful language before it's sent. The sender is blocked right away, and the recipient is notified that a message was blocked for using inappropriate language.</p>
+<div class="hh-row" style="display:flex;gap:24px">
+<div style="width:260px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:260px;aspect-ratio:390/874;overflow:hidden"><img width="390" height="874" alt="Tinder chat — harmful message sent" decoding="async" loading="lazy" src="/assets/img/stop-harmful-messages-tinder.png" srcset="/assets/img/opt/stop-harmful-messages-tinder-390.webp 390w" sizes="(max-width: 560px) 44vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div></div>
+<div style="width:260px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:260px;aspect-ratio:390/874;overflow:hidden"><img width="390" height="874" alt="Hello Heart chat — message blocked by AI" decoding="async" loading="lazy" src="/assets/img/stop-harmful-messages-my-design.png" srcset="/assets/img/opt/stop-harmful-messages-my-design-390.webp 390w" sizes="(max-width: 560px) 44vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div></div>
+</div>
+</div>
+<div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Fair, ethical pricing</p>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0;max-width:700px">A more affordable price than Tinder's, so a safer platform isn't only available to people who can pay a high monthly fee — in line with design justice.</p>
+</div>
+<div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Protect location privacy</p>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Rethinking how exact location is shared, so the feature can't be used the way Tinder's has been, to track or locate a person in real life.</p>
+<div class="hh-row" style="display:flex;gap:24px">
+<div style="width:260px"><div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder</div><div style="background:#0a0a0c;width:260px;aspect-ratio:390/874;overflow:hidden"><img width="403" height="873" alt="Tinder profile screen" decoding="async" loading="lazy" src="/assets/img/protect-privacy-and-location-security-tinder.png" srcset="/assets/img/opt/protect-privacy-and-location-security-tinder-403.webp 403w" sizes="(max-width: 560px) 44vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div></div>
+<div style="width:260px"><div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart</div><div style="background:#0a0a0c;width:260px;aspect-ratio:390/874;overflow:hidden"><img width="390" height="874" alt="Hello Heart profile screen" decoding="async" loading="lazy" src="/assets/img/protect-privacy-and-location-security-my-design.png" srcset="/assets/img/opt/protect-privacy-and-location-security-my-design-390.webp 390w" sizes="(max-width: 560px) 44vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div></div>
+</div>
+</div>
+<div style="border-top:1px solid #dcd9d4;padding-top:22px;margin-bottom:32px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Verified photos</p>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">Users must verify their photos through a secure AI service before sharing them on the platform, protecting people's photos from being stolen and reused elsewhere.</p>
+<div class="lbl" style="font-size:10px;margin-bottom:8px">Tinder — a fake, AI-generated photo uploaded without being flagged for verification</div>
+<div style="background:#0a0a0c;width:260px;margin-bottom:18px;aspect-ratio:390/874;overflow:hidden"><img width="403" height="873" alt="Tinder profile with fake photo" decoding="async" loading="lazy" src="/assets/img/using-a-fake-photo-as-profile-picture-on-tinders-app.png" srcset="/assets/img/opt/using-a-fake-photo-as-profile-picture-on-tinders-app-403.webp 403w" sizes="(max-width: 560px) 44vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+<div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">Hello Heart — the verification flow</div>
+<div class="pr-car m-keep" data-car="cv" data-car-unit="Screen" style="display:grid;grid-template-columns:44px minmax(0,1fr) 44px;column-gap:16px;align-items:start;margin:0 -44px">
+<div aria-label="Hello Heart photo verification screens" aria-roledescription="carousel" class="pr-track m-keep" data-car-track="" role="region" style="display:flex;gap:28px;padding:0 calc(50% - 130px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;grid-area:1 / 2" tabindex="0">
+<figure aria-label="1 of 3" class="pr-slide m-keep" style="flex:0 0 260px;min-width:0;scroll-snap-align:center;margin:0">
+<div class="m-keep" style="background:#0a0a0c;width:100%;aspect-ratio:390/874;overflow:hidden"><img width="390" height="874" alt="Verified profile badge" decoding="async" loading="lazy" src="/assets/img/verified-users-photo-3.png" srcset="/assets/img/opt/verified-users-photo-3-390.webp 390w" sizes="(max-width: 560px) 59vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+</figure>
+<figure aria-label="2 of 3" class="pr-slide m-keep" style="flex:0 0 260px;min-width:0;scroll-snap-align:center;margin:0">
+<div class="m-keep" style="background:#0a0a0c;width:100%;aspect-ratio:405/877;overflow:hidden"><img width="390" height="874" alt="Adding profile media" decoding="async" loading="lazy" src="/assets/img/verified-users-photo-1.png" srcset="/assets/img/opt/verified-users-photo-1-390.webp 390w" sizes="(max-width: 560px) 59vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+</figure>
+<figure aria-label="3 of 3" class="pr-slide m-keep" style="flex:0 0 260px;min-width:0;scroll-snap-align:center;margin:0">
+<div class="m-keep" style="background:#0a0a0c;width:100%;aspect-ratio:390/874;overflow:hidden"><img width="405" height="877" alt="Selfie verification prompt" decoding="async" loading="lazy" src="/assets/img/verified-users-photo-2.png" srcset="/assets/img/opt/verified-users-photo-2-405.webp 405w" sizes="(max-width: 560px) 59vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+</figure>
+</div>
+<button aria-label="Previous screen" class="pr-nav" data-car-prev="" style="align-self:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 1" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M15 18l-6-6 6-6"></path></svg></button>
+<button aria-label="Next screen" class="pr-nav" data-car-next="" style="align-self:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 3" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M9 6l6 6-6 6"></path></svg></button>
+<div aria-label="Choose a screen" class="pr-count-dots m-keep" data-car-dots="" role="group" style="margin-top:12px;display:flex;justify-content:center;align-items:center;gap:0;grid-area:2 / 2">
+<template data-car-dot=""><button aria-current="%cur%" aria-label="%label%" class="pc-dot" style="height:32px;min-width:22px;padding:0 4px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center" type="button"><span style="display:block;width:%w%;height:%h%;border-radius:4px;background:#a9b6ee;overflow:hidden;transition:width .3s ease,height .3s ease"><span data-car-fill="" style="display:block;width:100%;height:100%;background:#1b3ac4;transform-origin:left center;transform:scaleX(1);animation:%anim%;animation-play-state:%ps%"></span></span></button></template>
+<span aria-live="polite" data-car-count="" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></span>
+</div>
+<button aria-label="Pause slideshow" class="pc-play" data-car-toggle="" style="align-self:center;justify-self:end;margin-top:12px;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;grid-area:2 / 3" type="button"><span style="width:32px;height:32px;border-radius:50%;background:#e5e9fb;color:#122a8f;display:flex;align-items:center;justify-content:center;transition:background .15s"><span data-car-when="playing" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><rect fill="currentColor" height="9" width="2.6" x="2" y="1.5"></rect><rect fill="currentColor" height="9" width="2.6" x="7.4" y="1.5"></rect></svg></span><span data-car-when="paused" hidden="" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"></path></svg></span></span></button>
+</div>
+</div>
+<div style="border-top:1px solid #dcd9d4;padding-top:22px">
+<p style="font:600 14px/1.3 Archivo;margin:0 0 6px;color:#122a8f">Safety &amp; support</p>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:0 0 16px;max-width:700px">A safety section with three options: block or report a person, read about rules and rights, or contact mental health support.</p>
+<div style="background:#0a0a0c;width:260px;aspect-ratio:390/874;overflow:hidden"><img width="390" height="874" alt="Hello Heart safety panel" decoding="async" loading="lazy" src="/assets/img/enhancing-safety-and-users-support.png" srcset="/assets/img/opt/enhancing-safety-and-users-support-390.webp 390w" sizes="(max-width: 560px) 44vw, (max-width: 900px) 34vw, (max-width: 1280px) 24vw, 260px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+</div>
+</section>
+<section class="pad" id="reflection" style="background:#e5e9fb">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">04</span><span>Reflection &amp; outcome</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">What remains unsolved</h2>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:700px;margin:0 0 16px;text-wrap:pretty">Even with these changes, some problems remain open. Users can still take a screenshot of a profile photo and use a reverse image search to find information about that person — a limitation this concept doesn't solve.</p>
+<blockquote style="border-left:3px solid #75726e;margin:0 0 16px;padding:2px 0 2px 18px;font:400 16px/1.55 Archivo;color:#4a4744;max-width:680px">"As long as you do not know exactly which data are being collected, by whom, to whom they are sold, and for what purposes they are used, you do in fact have something to hide." <span style="color:#75726e;font-size:13px">— Steen, 2023, p. 52</span></blockquote>
+<p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:700px;margin:0 0 28px;text-wrap:pretty">Stardust et al. (2022) note that dating apps are under growing pressure from civil society, media and governments to address safety concerns — which has led to more safety features, but also raises a separate concern: some of those features add more surveillance, not less. That tension is left open here, and would need further study to design around properly.</p>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:700px;margin:0;text-wrap:pretty">Hello Heart is a concept, not a built or tested product. The outcome of this project is the analysis itself: applying design justice, gender data gaps and privacy-as-a-human-right to an existing platform, and using that analysis to shape a more responsible alternative.</p>
+</section>
   </main>
 
   <footer class="ft">
     <span class="ft-copy">© 2026 Tarek Alfutih</span>
   </footer>
-
 </div>
-<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=224d3fa2" defer></script>
+<script src="/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/assets/js/site.js?v=b96d8d47" defer></script>
+<script src="/assets/js/carousel.js?v=3d5d9896" defer></script>
+<script src="/assets/js/pages/hello-heart.js?v=13b235d7" defer></script>
 </body>
 </html>

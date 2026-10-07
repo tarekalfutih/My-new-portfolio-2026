@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/work/smart-fishing/">
-<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/work/smart-fishing/">
+<link rel="canonical" href="https://tarekdesign.se/work/smart-fishing/">
+<meta property="og:url" content="https://tarekdesign.se/work/smart-fishing/">
 <meta property="og:site_name" content="Tarek Alfutih">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=320b78c2">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
-<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
+<link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/assets/css/base.css?v=dc6c07bf">
+<script src="/assets/js/video-behavior.js?v=dcfab542"></script>
+<script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Smart Fishing — Tarek Alfutih</title>
 <meta name="description" content="Make fishing simpler, smarter, and more responsible.">
 <style>
+@media (min-width:1281px) and (max-width:1679px){html,body{background:#fff !important}.wrap,.pg{max-width:none !important;border-left:0 !important;border-right:0 !important}}
+
 body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#122a8f;text-decoration:none}
 a:hover{color:#1b3ac4;text-decoration:underline}
@@ -47,18 +49,38 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wl-top{padding-bottom:calc(var(--ph) * 1.1) !important}
   .wl-bot{min-height:0 !important}
   .wl-phone-col{order:-1;height:calc(var(--ph) * .9);margin:calc(var(--ph) * -1.2) auto 24px;width:var(--ph)}
-  /* The full-width phone (about 2x as tall as wide) covered the intro copy; shrink it and reserve room above the waterline. */
-  .wl-phone-col{width:calc(var(--ph) * .6)}
-  .wl-top{padding-bottom:calc(var(--ph) * 1.55) !important}
   .wl-fx{grid-template-columns:1fr 1fr !important}
   .wl-fx>div{padding:20px 16px 20px 0 !important}
 }
+@media (min-width:768px) and (max-width:860px){
+  section.wl{--ph:220px !important}
+  .wl-top,.wl-bot{grid-template-columns:minmax(0,1fr) var(--ph) !important;column-gap:40px !important}
+  .wl-spacer{display:block !important}
+  .wl-top{padding-bottom:40px !important}
+  .wl-bot{min-height:calc(var(--ph) * .95) !important;padding-top:28px !important}
+  .wl-phone-col{order:0 !important;height:auto !important;margin:0 !important;width:auto !important}
+}
 @media (max-width:520px){.wl-fx{grid-template-columns:1fr !important}}
+@media (min-width:861px) and (max-width:1100px) and (orientation:portrait){section.wl.first{min-height:0 !important}.wl .wl-top{padding-top:96px !important;padding-bottom:64px !important}}
+@media (max-width:767px) and (max-height:740px){
+  section.wl{--ph:160px !important}
+  .wl .wl-top{padding-top:20px !important;padding-bottom:calc(var(--ph) * .85) !important}
+  .wl .wl-top .lbl{margin-bottom:18px !important}
+  .wl .wl-top img{height:52px !important;margin-bottom:16px !important}
+  .wl .wl-top p.sf-lead{font-size:24px !important;max-width:300px !important}
+}
 @media (max-width:860px){
   .pad{padding:32px 24px}
   h1.h1r{font-size:34px !important}
   .journey{grid-template-columns:1fr}
   .journey>div{border-right:none;border-bottom:1px solid #dcd9d4}
+}
+@media (min-width:768px) and (max-width:860px){
+  .journey{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+  .journey>div{border-right:1px solid #dcd9d4;border-bottom:0}
+  .journey>div:last-child{border-right:none}
+}
+@media (max-width:860px){
   .first{min-height:0 !important}
   .hero-grid{grid-template-columns:minmax(0,1fr) !important;justify-items:center !important;text-align:center}
   .facts{grid-template-columns:1fr 1fr !important}
@@ -67,12 +89,72 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .findings-grid{grid-template-columns:1fr !important}
 }
 @media (max-width:520px){.facts{grid-template-columns:1fr !important}.facts>div{border-right:none !important}}
-.hv1:hover{background:#1c1b1a !important;color:#fff !important;text-decoration:none !important}
-/* Phones (< 768px). Desktop and iPad are unchanged. */
-.sf-cta2,.sf-note{display:none}
+@media (min-width:768px) and (max-width:1024px){
+  .cs-top{padding:20px 32px !important}
+  .cs-tabs{padding:2px 32px !important}
+  .cs-tabs a{min-height:40px;display:inline-flex !important;align-items:center}
+  section[id]{scroll-margin-top:120px}
+  .pad{padding:48px 32px}
+  .findings-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .findings-grid>div{padding:24px !important}
+  .findings-grid{grid-template-columns:minmax(0,1fr) !important}
+  .findings-grid>div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto auto auto 1fr;column-gap:32px;align-items:start}
+  .findings-grid>div>.lbl:first-child{grid-column:1 / -1}
+  .findings-grid>div>div:nth-child(2){grid-column:1;grid-row:2 / 7;margin-bottom:0 !important}
+  .findings-grid>div>div:nth-child(2) [style*="margin-bottom:16px"]{margin-bottom:0 !important}
+  .findings-grid>div>p,.findings-grid>div>span{grid-column:2;justify-self:start}
+  .findings-grid>div>p:first-of-type{margin-top:20px !important}
+  section.wl.first{min-height:0 !important}
+}
+@media (min-width:768px) and (max-width:1024px){
+  section.wl.first{--ph:clamp(220px,24svh,300px) !important;min-height:calc(100svh - 121px) !important}
+  .wl .wl-top{grid-template-columns:minmax(0,1fr) var(--ph) !important;column-gap:40px !important;align-items:end !important;padding-top:40px !important;padding-bottom:48px !important}
+  .wl .wl-spacer{display:block !important}
+  .wl .wl-top .lbl{margin-bottom:24px !important}
+  .wl .wl-top img{height:88px !important;margin-bottom:24px !important}
+  .wl .wl-top .sf-cta{margin-top:24px !important}
+  .wl .wl-top{flex:1 1 auto !important}
+  .wl .wl-bot{flex:1 1 auto !important;align-content:center !important;position:relative;grid-template-columns:minmax(0,1fr) !important;min-height:0 !important;padding-top:72px !important;padding-bottom:32px !important}
+  .wl .wl-phone-col{display:contents !important}
+  .wl .wl-phone{top:calc(56px - var(--ph) * 2.03) !important;bottom:auto !important;left:auto !important;right:32px !important;width:var(--ph) !important}
+  .wl .wl-fx{grid-template-columns:repeat(4,minmax(0,1fr)) !important;border-top:2px solid #a9b6ee !important}
+  .wl .wl-fx>div{padding:24px 14px 4px 16px !important;border:0 !important;border-left:1px solid rgba(169,182,238,.35) !important}
+  .wl .wl-fx>div:first-child{padding-left:0 !important;border-left:0 !important}
+  .wl .wl-fx>div>div:first-child{font-size:12px !important;margin-bottom:16px !important}
+  .wl .wl-fx>div>div:last-child,.wl .wl-fx li{font-size:16px !important;line-height:1.55 !important}
+  .wl .wl-fx li>span{font-size:12px !important}
+}
+@media (min-width:768px) and (max-width:1024px){
+  .sf-proto{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .sf-proto>div:nth-child(-n+2)>.gray{max-width:none !important}
+  .sf-proto>div:nth-child(2){border-right:none !important}
+  .sf-proto>div:nth-child(3){grid-column:1 / -1;border-right:none !important;border-top:1px solid #dcd9d4 !important;margin-top:8px}
+}
+@media (min-width:861px) and (max-width:1024px){
+  .wl .wl-top{column-gap:56px !important;flex-grow:.5 !important}
+  .wl .wl-fx>div{padding-left:24px !important;padding-right:20px !important}
+  .wl .wl-fx>div>div:last-child,.wl .wl-fx li{font-size:18px !important}
+  .wl .wl-top img{height:104px !important}
+  .wl .wl-top p.sf-lead{font-size:clamp(44px,5vw,52px) !important}
+  .wl .wl-top p.sf-sub{font-size:18px !important}
+}
+@media (max-width:400px){
+  .wl .wl-top{min-height:calc(100svh - 334px)}
+}
+@media (max-width:400px) and (max-height:740px){
+  .wl .wl-top{min-height:calc(100svh - 292px)}
+}
+.m-only{display:none}
+.m-menu a{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #dcd9d4;font:600 20px/1 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-decoration:none}
+.m-menu a:last-child{border-bottom:0}.m-menu a:active{background:#e5e9fb}.m-menu a:hover{text-decoration:none;color:#1c1b1a}
 @media (max-width:767px){
-  .sf-cta2{display:flex !important}
-  .pad p.sf-note{display:inline-flex !important}
+  html,body{overflow-x:clip;overscroll-behavior-x:none}
+  .cs-top{height:56px;padding:0 6px 0 20px !important;flex-wrap:nowrap !important;gap:12px !important;border-bottom:0 !important}
+  .cs-top>a:first-child{font-size:17px !important;min-height:44px;display:inline-flex;align-items:center}
+  .cs-links,.cs-cv,.cs-tabs{display:none !important}
+  .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
+  .m-only{display:flex !important}
+  section[id]{scroll-margin-top:64px}
   .pad{padding:36px 20px}
   .lbl{font-size:11px !important;letter-spacing:.14em !important}
   .pad>.lbl:first-child{font-size:12px !important;margin-bottom:16px !important}
@@ -88,6 +170,13 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wl>svg{height:56px !important}
   .wl-bot{padding-top:28px !important}
   .wl-phone-col{display:block !important;width:var(--ph) !important;height:calc(var(--ph) * .84) !important;margin:0 auto 24px !important}
+  .tm{display:grid;gap:14px}
+  .tm br,.tm-c{display:none}
+  .tm-p{display:flex;flex-direction:column-reverse;gap:3px}
+  .tm-n{font:600 15px/1.25 Archivo;color:#fff}
+  .tm-r{display:none !important}
+  .tm{gap:0}
+  .tm-n{font:500 13px/1.5 Archivo}
   .wl-top img{height:64px !important;margin-bottom:20px !important}
   .wl-top .lbl{margin-bottom:24px !important}
   .wl-top p.sf-lead{font-size:26px !important;line-height:1.1 !important;letter-spacing:-.03em !important}
@@ -103,17 +192,21 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   #film{padding:28px 20px !important}
   #film>div{max-width:220px !important}
   .pad{padding:44px 20px}
-  #film p,#journey1>div>p:nth-of-type(2),#journey1>div>div:last-child,#learn>p,#product>h2,#product>p:nth-of-type(2), #product>div:nth-last-child(2)>.lbl:first-child,#product>div:nth-last-child(2)>p:first-of-type,#product>div:last-child, #learned>p:nth-of-type(2),.findings-grid>div>p:nth-of-type(2),.findings-grid>div>span.lbl{display:none !important}
-  #product>div:nth-last-child(2){border-top:0 !important;padding-top:0 !important;margin-bottom:0 !important}
+  #film p,#journey1>div>p:nth-of-type(2),#journey1>div>div:last-child,#learn>p,#product>p:nth-of-type(2),
+  .sf-brand-cap,.sf-tech .sf-t-data,
+  #learned>p:nth-of-type(2),.findings-grid>div>p:nth-of-type(2),.findings-grid>div>span.lbl{display:none !important}
+  .sf-tech{display:block !important;border-bottom:0 !important;margin-bottom:0 !important}.sf-tech>div{padding:20px 0 !important;border-right:0 !important}
   #learned{background:#e5e9fb}
-  .sfn,#challenge,#journey1>p,#journey1 .sf-sum~p,#journey1 details,#journey2>p,#learn h2, #product>div:nth-last-child(2)>.lbl:nth-of-type(3),#product>div:nth-last-child(2)>p:last-of-type, .wl-fx>div:nth-child(3){display:none !important}
+  .sfn,#challenge,#journey1>p,#journey1 .sf-sum~p,#journey1 details,#journey2>p,#learn h2,
+  .sf-tech .sf-t-code,
+  .wl-fx>div:nth-child(3){display:none !important}
   .wl-fx>div:nth-child(4){grid-column:1 / -1;padding-left:0 !important;border-left:0 !important}
   #journey1 h2,#journey2 h2{margin-bottom:20px !important}
   #journey1>div{border-top:0 !important;padding-top:0 !important;margin-top:0 !important}
   #journey1 .sf-sum+div+div{margin-bottom:0 !important}
   .sf-sum{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px !important;align-items:stretch !important}
-  .sf-sum>.sf-plus{display:none !important}
-  .sf-sum>div:not(.sf-plus){padding:14px 6px !important;font-size:13px !important;display:flex;align-items:center;justify-content:center}
+  .sf-sum>div:not([style*="background"]){display:none !important}
+  .sf-sum>div[style*="background"]{padding:14px 6px !important;font-size:13px !important;display:flex;align-items:center;justify-content:center}
   details summary{min-height:44px;display:flex;align-items:center;font-size:15px !important}
   details p{font-size:15px !important}
   .sf-ba{max-width:none !important}
@@ -141,7 +234,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .sf-proto>div:nth-child(-n+2)>.gray{margin-top:0 !important}
   .sf-proto>div:nth-child(3){margin-top:12px}
   .sf-proto>div:nth-child(3) img:not([alt*="icon"]){height:32px !important}
-  #product>div:nth-last-child(2){margin-top:24px !important}
+  .sf-tech{margin-top:24px !important}
   .pad>.lbl:first-child{margin-bottom:12px !important}
   #journey1 h2,#journey2 h2{margin-bottom:24px !important}
   #product .sf-flow{margin-bottom:28px !important}
@@ -157,8 +250,8 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .sf-flow>div{position:relative;padding:9px 0 9px 20px !important;font-size:15px !important}
   .sf-flow>div::before{content:"";position:absolute;left:-7px;top:50%;width:12px;height:12px;margin-top:-6px;background:#fff;border:2px solid #1b3ac4;box-sizing:border-box}
   .sf-flow>div:last-child::before{background:#122a8f;border-color:#122a8f}
-  .sf-flow>.sf-next{border:0 !important;color:#75726e}
-  .sf-flow>.sf-next::before{background:#fff;border:2px dashed #b8b4ae}
+  .sf-flow>div:last-child[style*="dashed"]{border:0 !important;color:#75726e}
+  .sf-flow>div:last-child[style*="dashed"]::before{background:#fff;border:2px dashed #b8b4ae}
   .sf-proto{grid-template-columns:1fr !important;column-gap:12px;border-top:0 !important}
   .sf-proto>div>.gray{max-width:260px !important;margin-left:auto;margin-right:auto}
   .sf-proto>div{border:0 !important;padding:0 0 24px !important}
@@ -168,389 +261,448 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .pad ul li{font-size:15px !important}
   #film>div{max-width:min(300px,78vw) !important}
   .sf-proto>div>.gray{max-width:min(300px,78vw) !important}
-  html body .wl .wl-fx>div>div:last-child,html body .wl .wl-fx li{font-size:14px !important}
-  html body .sf-sum>div:not(.sf-plus){font-size:14px !important}
+}
+html body .wrap .lbl.lbl{font-size:12px !important}
+html body .wrap .cs-tabs a{font-size:12px !important}
+html body .wl .wl-fx>div>div:first-child{font-size:12px !important}
+html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],[style*="font-size:13px"]):not(.lbl):not([aria-hidden]):not([style*="uppercase"]){font-size:14px !important}
+@media (max-width:767px){
+  html body .wl .wl-fx>div>div:last-child,html body .wl .wl-fx li,html body .wl .tm-n{font-size:14px !important}
+  html body .sf-sum>div[style*="background"]{font-size:14px !important}
   html body .wrap .pad p.sf-note{font-size:12px !important}
   html body .wrap .findings-grid p,html body .wrap .pad ul li{font-size:15px !important}
 }
-@media (max-width:767px) and (max-height:740px){
-  section.wl{--ph:160px !important}
-  .wl .wl-top{padding-top:20px !important;padding-bottom:calc(var(--ph) * .85) !important}
-  .wl .wl-top .lbl{margin-bottom:18px !important}
-  .wl .wl-top img{height:52px !important;margin-bottom:16px !important}
-  .wl .wl-top p.sf-lead{font-size:24px !important;max-width:300px !important}
+@media (min-width:1025px){
+  section.wl.first{height:calc(100svh - var(--hdr,102px)) !important;min-height:0 !important}
+  .wl .wl-top{min-height:0 !important;padding-top:calc(var(--k,1) * clamp(40px,7vh,80px)) !important;padding-bottom:calc(var(--k,1) * clamp(24px,4vh,48px)) !important}
+  .wl .wl-top .lbl{margin-bottom:calc(var(--k,1) * clamp(24px,4vh,40px)) !important}
+  .wl .wl-top img{height:calc(var(--k,1) * clamp(72px,8vw,108px)) !important;margin-bottom:calc(var(--k,1) * clamp(20px,3.5vh,32px)) !important}
+  .wl .wl-top p.sf-lead{font-size:calc(var(--k,1) * clamp(32px,3.9vw,54px)) !important}
+  .wl .wl-top p.sf-sub{margin-top:calc(var(--k,1) * 20px) !important}
+  .wl .wl-top .sf-cta{margin-top:calc(var(--k,1) * 30px) !important}
+  .wl .wl-bot{min-height:0 !important;flex:none !important;padding-top:calc(var(--k,1) * clamp(20px,3vh,32px)) !important;padding-bottom:calc(var(--k,1) * clamp(28px,4.5vh,44px)) !important}
+  .wl .wl-fx>div{padding-top:calc(var(--k,1) * 22px) !important}
+  .wl .wl-fx>div>div:first-child{margin-bottom:calc(var(--k,1) * 14px) !important}
+  .wl .wl-fx>div>div:last-child,.wl .wl-fx li{line-height:calc(1.15 + var(--k,1) * .35) !important}
 }
-@media (max-width:400px){
-  .wl .wl-top{min-height:calc(100svh - 334px)}
+@media (max-width:767px){
+  .sf-flow .sf-mk,.sf-flow .sf-cn{display:none !important}
+  .sf-flow.sf-done>div.sf-st,.sf-flow.sf-plan>div.sf-st{display:flex !important}
+  .sf-flow .sf-st{gap:8px !important}
+  .sf-done.sf-flow>div::before{background:#1b3ac4 !important;border-color:#1b3ac4 !important}
+  .sf-plan.sf-flow{border-left:2px dashed #b8b4ae !important}
+  .sf-plan.sf-flow>div::before{background:#fff !important;border:2px solid #b8b4ae !important}
 }
-@media (max-width:400px) and (max-height:740px){
-  .wl .wl-top{min-height:calc(100svh - 292px)}
+@keyframes pcFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.sf-track::-webkit-scrollbar{display:none}
+.pr-nav:disabled{opacity:.35;cursor:default}.pr-nav:not(:disabled):hover{background:#1b3ac4 !important;border-color:#1b3ac4 !important;color:#fff !important}.pr-nav:not(:disabled):active{background:#122a8f !important;border-color:#122a8f !important;color:#fff !important}
+.pr-nav:focus-visible,.sf-track:focus-visible{outline:2px solid #1b3ac4;outline-offset:2px}
+.pc-dot:not([aria-current="true"]):hover>span{background:#4561dc !important}.pc-dot:focus-visible,.pc-play:focus-visible{outline:2px solid #1b3ac4;outline-offset:-4px}
+.pc-play:hover>span{background:#a9b6ee !important}.pc-play:active>span{background:#122a8f !important;color:#fff !important}
+.wrap section .sf-car{display:grid !important}.wrap section .sf-track{display:flex !important;flex-wrap:nowrap !important}.wrap section .sf-slide img{max-width:none !important;width:100% !important}
+@media (max-width:1024px){.wrap section .sf-car .pr-nav{display:none !important}.wrap section .sf-track{grid-column:1 / -1 !important}.wrap section .sf-dots{grid-column:1 / -1 !important}}
+@media (max-width:767px){.wrap section #learn .sf-car,#learn .sf-car{--sw:220px !important}.wrap section .sf-car{margin:0 -20px !important}.wrap section .sf-track{gap:14px !important}}
+#learn .sf-slide img{border:0 !important}
+@media (min-width:768px){
+  .wrap section .sf-car{display:block !important}
+  .wrap section .sf-car .pr-nav,.wrap section .sf-car .sf-dots,.wrap section .sf-car .pc-play{display:none !important}
+  .wrap section .sf-track{padding:0 !important;overflow:visible !important;scroll-snap-type:none !important}
+  #learn .sf-track{gap:24px !important}
+  #learn .sf-slide{flex:1 1 200px !important;max-width:220px}
+  #learn .sf-slide img{max-width:200px !important}
 }
+@media (min-width:1025px){
+  #learn .sf-track{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px !important;align-items:start}
+  #learn .sf-slide{max-width:none !important;flex:none !important}
+  #learn .sf-slide img{width:100% !important;max-width:min(100%,400px,calc((100svh - 220px) * 453 / 922)) !important}
+  #testing .sf-track{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px !important}
+  #testing .sf-slide{flex:none !important}
+}
+@media (min-width:1025px){
+  .findings-grid>div:nth-child(3),.findings-grid>div:nth-child(4){grid-column:1 / -1;display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto auto auto auto auto 1fr;column-gap:40px;align-items:start}
+  .findings-grid>div:nth-child(4){grid-template-columns:minmax(0,2fr) minmax(0,1fr)}
+  .findings-grid>div:nth-child(n+3)>.lbl:first-child{grid-column:1 / -1}
+  .findings-grid>div:nth-child(n+3)>div:nth-child(2){grid-column:1;grid-row:2 / 7;margin-bottom:0 !important}
+  .findings-grid>div:nth-child(n+3)>div:nth-child(2) [style*="margin-bottom:16px"]{margin-bottom:0 !important}
+  .findings-grid>div:nth-child(n+3)>p,.findings-grid>div:nth-child(n+3)>span{grid-column:2;justify-self:start}
+  .findings-grid>div:nth-child(n+3)>p:first-of-type{margin-top:20px !important}
+}
+@media (min-width:768px){
+  .wrap .findings-grid>div:nth-child(4){display:block !important}
+  .findings-grid>div:nth-child(4)>p:first-of-type{margin-top:24px !important}
+  .findings-grid>div:nth-child(4)>p{max-width:760px}
+  #testing .findings-grid>div:nth-child(4) .sf-track{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px !important;padding:0 !important;overflow:visible !important}
+  #testing .findings-grid>div:nth-child(4) .sf-slide{flex:none !important}
+  #testing .findings-grid>div:nth-child(4) .sf-slide img{max-width:453px !important;margin:0 auto}
+}
+@media (min-width:1025px){
+  .sf-proto{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .sf-proto>div:nth-child(2){border-right:none !important}
+  .sf-proto>div:nth-child(3){grid-column:1 / -1;border-right:none !important;border-top:1px solid #dcd9d4 !important;margin-top:8px}
+  .sf-proto>div:nth-child(-n+2){padding:28px 20px !important}
+  .sf-proto>div:nth-child(1)>.gray{max-width:min(100%,412px,calc((100svh - 200px) * 412 / 892)) !important;margin-left:auto;margin-right:auto}
+  .sf-proto>div:nth-child(2)>.gray{max-width:min(100%,412px,calc((100svh - 200px) * 645 / 1398)) !important;margin-left:auto;margin-right:auto}
+}
+@media (min-width:768px) and (max-width:1024px){
+  .sf-proto>div:nth-child(1)>.gray{max-width:min(100%,calc((100svh - 200px) * 412 / 892)) !important;margin-left:auto;margin-right:auto}
+  .sf-proto>div:nth-child(2)>.gray{max-width:min(100%,calc((100svh - 200px) * 645 / 1398)) !important;margin-left:auto;margin-right:auto}
+}
+@media (min-width:768px) and (max-width:1024px){.sf-tech{grid-template-columns:1fr 1fr !important}.sf-tech .sf-t-stack{grid-column:1 / -1;border-right:0 !important;border-bottom:1px solid #dcd9d4;padding-right:0 !important}.sf-tech .sf-t-data{padding-left:0 !important}}
+@media (prefers-reduced-motion:reduce){.sf-track{scroll-behavior:auto !important}}
+
+.hvx0:hover{background:#1c1b1a !important;color:#fff !important}
+.hvx1:hover{background:#1c1b1a !important;color:#fff !important;text-decoration:none !important}
+.hvx2:hover{background:#fff !important;color:#0b1a5c !important;text-decoration:none !important}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="wrap">
 
-  <header class="cs-hd">
+<header class="cs-hd">
     <div class="cs-bar">
-      <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
-      <a class="cs-back" href="/My-new-portfolio-2026/work/" data-back>← All work</a>
-      <nav class="cs-main" aria-label="Main"><a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work</a><a href="/My-new-portfolio-2026/about/">About</a><a href="/My-new-portfolio-2026/contact/">Contact</a></nav>
-      <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+      <a class="hd-logo" href="/">Tarek Alfutih</a>
+      <a class="cs-back" href="/work/" data-back aria-label="Back"><span class="cs-back-a" aria-hidden="true">←</span><svg class="cs-back-c" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span class="cs-back-t" aria-hidden="true">&nbsp;Back</span></a>
+      <nav class="cs-main" aria-label="Main"><a href="/">Home</a><a href="/work/" aria-current="true">Work</a><a href="/about/">About</a><a href="/contact/">Contact</a></nav>
+      <a class="btn-cv" href="/Tarek%20Alfutih%20-%20CV.pdf" target="_blank">CV (PDF)</a>
       <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     </div>
     <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
-      <a href="/My-new-portfolio-2026/work/" data-back>← All work</a>
-      <a href="/My-new-portfolio-2026/work/" data-work-link hidden>Work<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+      <a href="/">Home<span aria-hidden="true">→</span></a>
+      <a href="/work/" aria-current="true">Work<span aria-hidden="true">→</span></a>
+      <a href="/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/contact/">Contact<span aria-hidden="true">→</span></a>
     </nav>
-    <script>
-      /* Arrived from Home (?from=home): back links go Home and the Work links are shown.
-         Otherwise the back links already point to Work, so the Work nav links stay hidden. */
-      (function () {
-        if (new URLSearchParams(location.search).get('from') !== 'home') return;
-        var home = document.querySelector('.cs-bar .hd-logo').getAttribute('href'); // Home (respects base path)
-        document.querySelectorAll('[data-back]').forEach(function (back) {
-          back.href = home;
-          back.textContent = '← Home';
-        });
-        document.querySelectorAll('[data-work-link]').forEach(function (a) { a.hidden = false; });
-      })();
-    </script>
-    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
-      <a href="#overview" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Overview</a>
-      <a href="#challenge" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Challenge</a>
-      <a href="#journey1" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Journey 1</a>
-      <a href="#journey2" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Journey 2</a>
-      <a href="#learn" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Learn</a>
-      <a href="#testing" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 Testing</a>
-      <a href="#product" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Product</a>
-      <a href="#status" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">08 Status</a>
-      <a href="#learned" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">09 Learned</a>
-    </nav>
+    <script src="/assets/js/nav-back.js?v=8f1349e7" defer></script>
+    <script src="/assets/js/section-spy.js?v=ce71177b" defer></script>
+    <nav aria-label="Sections" class="cs-nav cs-tabs" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+<a href="#overview" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Overview</a>
+<a href="#challenge" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Challenge</a>
+<a href="#journey1" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Journey 1</a>
+<a href="#journey2" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Journey 2</a>
+<a href="#learn" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Learn</a>
+<a href="#testing" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 Testing</a>
+<a href="#product" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Product</a>
+<a href="#status" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">08 Status</a>
+<a href="#learned" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">09 Learned</a>
+</nav>
   </header>
 
   <main id="main">
 
-  <section class="rule first wl" id="overview" style="--ph:clamp(200px,28vh,280px);min-height:calc(100svh - 102px);display:flex;flex-direction:column;position:relative;overflow:hidden">
-    <div class="pad wl-top" style="flex:1;display:grid;grid-template-columns:minmax(0,1fr) var(--ph);column-gap:64px;align-items:center;padding-top:clamp(40px,7vh,80px);padding-bottom:clamp(24px,4vh,48px);background:#fff">
-      <div style="min-width:0">
-        <div class="lbl" style="color:#1c1b1a;margin-bottom:clamp(24px,4vh,40px)">Case study · 2025</div>
-        <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0">Smart Fishing</h1>
-        <img src="/My-new-portfolio-2026/assets/img/fish-logo-mtri0siz-lui5.png" srcset="/My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-2400.webp 2400w" sizes="(max-width: 560px) 33vw, (max-width: 900px) 16vw, (max-width: 1280px) 14vw, 180px" alt="Smart Fishing logo" style="display:block;height:clamp(72px,8vw,108px);width:auto;margin-bottom:clamp(20px,3.5vh,32px)">
-        <p class="sf-lead" style="font:600 clamp(32px,3.9vw,54px)/1.06 Archivo;letter-spacing:-.035em;color:#1c1b1a;margin:0;max-width:760px;text-wrap:balance">Anglers plan, fish and log a trip using several different apps and sources.</p>
-        <p class="sf-sub" style="font:400 18px/1.55 Archivo;color:#1c1b1a;max-width:560px;margin:20px 0 0;text-wrap:pretty">Smart Fishing brings location, weather and catch history into one app.</p>
-        <a class="hv1 sf-cta" href="#film" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;font:600 15px/1 Archivo;color:#1c1b1a;border:2px solid #1c1b1a;padding:13px 18px;text-decoration:none">See it in use <span aria-hidden="true">↓</span></a>
-      </div>
-      <div class="wl-spacer" aria-hidden="true"></div>
-    </div>
-    <svg class="sf-waves" aria-hidden="true" viewBox="0 0 1440 120" preserveAspectRatio="none" style="display:block;width:100%;height:clamp(40px,6vh,72px);margin-bottom:-1px;background:#fff">
-      <g><path d="M0 58 Q 180 32 360 58 Q 540 84 720 58 Q 900 32 1080 58 Q 1260 84 1440 58 Q 1620 32 1800 58 Q 1980 84 2160 58 Q 2340 32 2520 58 Q 2700 84 2880 58 V120 H0 Z" fill="#122a8f"></path><animateTransform attributeName="transform" type="translate" from="-720 0" to="0 0" dur="16s" repeatCount="indefinite"></animateTransform></g>
-      <g><path d="M0 72 Q 180 52 360 72 Q 540 92 720 72 Q 900 52 1080 72 Q 1260 92 1440 72 Q 1620 52 1800 72 Q 1980 92 2160 72 Q 2340 52 2520 72 Q 2700 92 2880 72 V120 H0 Z" fill="#0b1a5c"></path><animateTransform attributeName="transform" type="translate" from="0 0" to="-1440 0" dur="11s" repeatCount="indefinite"></animateTransform></g>
-    </svg>
-    <div class="pad wl-bot" style="display:grid;grid-template-columns:minmax(0,1fr) var(--ph);column-gap:64px;background:#0b1a5c;min-height:calc(var(--ph) * .95);padding-top:clamp(20px,3vh,32px);padding-bottom:clamp(28px,4.5vh,44px)">
-      <div class="wl-fx" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-self:start;border-top:2px solid #a9b6ee">
-        <div style="padding:22px 20px 0 0"><div style="font:600 11px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#a9b6ee;margin-bottom:14px">My role</div><div style="font:500 16px/1.5 Archivo;color:#fff">UX/UI Design<br>User Research<br>Prototyping<br>User Testing<br>AI-built app</div></div>
-        <div style="padding:22px 20px 0"><div style="font:600 11px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#a9b6ee;margin-bottom:14px">Team</div><div style="font:500 16px/1.5 Archivo;color:#fff">UX/UI: Tarek<br>Development: Rasti</div></div>
-        <div style="padding:22px 20px 0"><div style="font:600 11px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#a9b6ee;margin-bottom:14px">Process</div><ol style="list-style:none;margin:0;padding:0;display:grid;gap:0"><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">01</span>Concept</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">02</span>Research</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">03</span>Prototype</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">04</span>Testing</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">05</span>Iteration</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">06</span>Implementation</li></ol></div>
-        <div style="padding:22px 0 0 20px"><div style="font:600 11px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#a9b6ee;margin-bottom:14px">Status</div><div style="font:500 16px/1.5 Archivo;color:#fff">Functional Flutter app</div></div>
-      </div>
-      <a href="#film" class="sf-cta2" style="align-items:center;justify-content:space-between;width:100%;height:46px;padding:0 16px;margin-top:24px;box-sizing:border-box;font:600 13px/1 Archivo;color:#fff;border:2px solid #fff;text-decoration:none">See it in use <span aria-hidden="true">↓</span></a>
-      <div class="wl-phone-col" style="position:relative">
-        <img class="wl-phone" src="/My-new-portfolio-2026/assets/img/sf-map-after-mockup.png" srcset="/My-new-portfolio-2026/assets/img/opt/sf-map-after-mockup-415.webp 415w" sizes="(max-width: 560px) 41vw, (max-width: 900px) 20vw, (max-width: 1280px) 23vw, 251px" alt="Smart Fishing map screen" style="position:absolute;left:0;bottom:0;width:100%;height:auto;display:block;z-index:3">
-      </div>
-    </div>
-  </section>
-
-  <section class="rule" id="film" style="background:#0a0a0c;padding:32px 24px">
-    <div style="max-width:360px;margin:0 auto">
-      <div class="gray" style="aspect-ratio:9/19.5;background:#000;padding:2px"><video src="/My-new-portfolio-2026/assets/video/smart-fishing-hero.mp4?v=d99ee38a" poster="/My-new-portfolio-2026/assets/video/smart-fishing-hero-poster.webp?v=bb891c11" controls="controls" playsinline="playsinline" style="width:100%;height:100%;object-fit:contain;display:block"></video></div>
-      <p style="font:400 13px/1.4 Archivo;color:#8a8783;text-align:center;margin:14px 0 0">The working product — Smart Fishing in use.</p>
-    </div>
-  </section>
-
-  <section class="pad rule" id="challenge">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f"><span class="sfn">02 · </span>The challenge</div>
-    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0;text-wrap:pretty">Anglers often rely on multiple apps and sources to check fishing locations, weather, wind, water conditions, and regulations. Smart Fishing brings this information together to make planning a fishing trip simpler and more informed.</p>
-  </section>
-
-  <section class="pad rule" id="journey1">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f"><span class="sfn">03 · </span>Journey 1 — Where and when to fish</div>
-    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Where and when should I fish?</h2>
-    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">Smart Fishing brings location, weather, wind, water level, waves, and other marine conditions together to help anglers understand where and when conditions may be suitable for fishing.</p>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:28px;margin-top:32px">
-      <div class="lbl" style="margin-bottom:16px">How the recommendation works</div>
-      <div class="sf-sum" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px">
-        <div style="background:#ececea;padding:14px 18px;font:600 14px/1.3 Archivo;flex:1 1 160px;text-align:center">Fishing location</div>
-        <div class="sf-plus" style="font:400 20px Archivo;color:#b8b4ae">+</div>
-        <div style="background:#ececea;padding:14px 18px;font:600 14px/1.3 Archivo;flex:1 1 160px;text-align:center">Weather &amp; marine data</div>
-        <div class="sf-plus" style="font:400 20px Archivo;color:#b8b4ae">+</div>
-        <div style="background:#ececea;padding:14px 18px;font:600 14px/1.3 Archivo;flex:1 1 160px;text-align:center">Species-specific rules</div>
-      </div>
-      <div style="text-align:center;font:400 20px Archivo;color:#b8b4ae;margin-bottom:16px">↓</div>
-      <div style="background:#1b3ac4;color:#fff;padding:18px;text-align:center;margin-bottom:8px">
-        <div style="font:700 16px/1.3 Archivo;margin-bottom:4px">Fishing potential</div>
-        <div style="font:600 13px/1.3 Archivo;letter-spacing:.06em">Excellent · Good · Fair</div>
-      </div>
-      <p style="font:400 15px/1.6 Archivo;color:#4a4744;max-width:640px;margin:16px 0 20px">Smart Fishing does not detect where fish are. Instead, it uses fishing locations together with current weather and marine conditions to estimate how suitable the conditions are for fishing.</p>
-      <p style="font:400 15px/1.6 Archivo;color:#4a4744;max-width:640px;margin:0 0 20px">The app looks at information such as water temperature, wind, sea level, and waves, then applies different rules depending on the fish species. The result is simplified into three levels — Excellent, Good, Fair — so the user doesn't have to analyze all the raw data separately.</p>
-
-      <details style="margin-bottom:20px">
-        <summary style="font:600 13px/1.3 Archivo;color:#122a8f;cursor:pointer">How the score is calculated</summary>
-        <div style="margin-top:16px;max-width:640px">
-          <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:20px;font:600 12px/1.3 Archivo;color:#75726e">
-            <span>Fishing location</span><span style="color:#b8b4ae">→</span>
-            <span>Environmental conditions</span><span style="color:#b8b4ae">→</span>
-            <span>Species-specific rules</span><span style="color:#b8b4ae">→</span>
-            <span style="color:#122a8f">Fishing potential</span>
-          </div>
-          <p style="font:400 14px/1.6 Archivo;color:#4a4744;margin:0 0 16px">Each fishing location is tied to a species, and I check that species against live wind, water temperature, sea level, and wave height data from Open-Meteo.</p>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#dcd9d4;border:1px solid #dcd9d4;margin-bottom:16px">
-            <div style="background:#fff;padding:14px;text-align:center"><div style="font:600 13px Archivo;margin-bottom:4px">Sea Trout</div><div style="font:400 13px Archivo;color:#75726e">6–14°C</div></div>
-            <div style="background:#fff;padding:14px;text-align:center"><div style="font:600 13px Archivo;margin-bottom:4px">Garfish</div><div style="font:400 13px Archivo;color:#75726e">12–18°C</div></div>
-            <div style="background:#fff;padding:14px;text-align:center"><div style="font:600 13px Archivo;margin-bottom:4px">Mackerel</div><div style="font:400 13px Archivo;color:#75726e">11–19°C</div></div>
-          </div>
-          <p style="font:400 14px/1.6 Archivo;color:#4a4744;margin:0 0 16px">For Sea Trout and Garfish, wind direction and sea level also affect the score. At Hovås, two markers move between shallow and deeper spots depending on sea level.</p>
-          <div style="display:flex;gap:1px;background:#dcd9d4;border:1px solid #dcd9d4">
-            <div style="background:#fff;padding:12px;flex:1;text-align:center"><div style="font:700 14px Archivo">80+</div><div style="font:400 12px Archivo;color:#75726e">Excellent</div></div>
-            <div style="background:#fff;padding:12px;flex:1;text-align:center"><div style="font:700 14px Archivo">60–79</div><div style="font:400 12px Archivo;color:#75726e">Good</div></div>
-            <div style="background:#fff;padding:12px;flex:1;text-align:center"><div style="font:700 14px Archivo">&lt;60</div><div style="font:400 12px Archivo;color:#75726e">Fair</div></div>
-          </div>
-        </div>
-      </details>
-
-      <div style="border-top:1px solid #dcd9d4;padding-top:16px">
-        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Where it's headed</div>
-        <p style="font:400 14px/1.7 Archivo;color:#4a4744;margin:0 0 8px;max-width:640px">The recommendation is still a rule-based estimate and needs further development and testing. It doesn't yet learn from catch records, or use season, seabed depth, or real fish observations.</p>
-        <p style="font:400 14px/1.7 Archivo;color:#4a4744;margin:0;max-width:640px">I've also found some technical issues in the current version that I'm planning to fix.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="pad rule" id="journey2">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f"><span class="sfn">04 · </span>Journey 2 — Record a catch</div>
-    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">More than just a photo</h2>
-    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">User testing showed that anglers wanted to document more about their catches. The redesigned record lets users save and share details such as species, length, weight, bait or lure, location, and photos.</p>
-
-    <div class="sf-ba" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,3vw,24px);max-width:480px;margin-bottom:24px">
-      <div style="min-width:0">
-        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Before</div>
-        <div style="width:100%;aspect-ratio:453/922;overflow:hidden"><img src="/My-new-portfolio-2026/assets/img/sf-record-before.png" srcset="/My-new-portfolio-2026/assets/img/opt/sf-record-before-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/sf-record-before-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/sf-record-before-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/sf-record-before-1290.webp 1290w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 30vw, (max-width: 1280px) 21vw, 228px" alt="Catch record before — generic photo post" style="object-fit:cover;object-position:center;display:block;width:100%;height:100%"></div>
-      </div>
-      <div style="min-width:0">
-        <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#122a8f">After</div>
-        <div style="width:100%;aspect-ratio:453/922;overflow:hidden"><img src="/My-new-portfolio-2026/assets/img/record-section-after-mts8p0lk-foqw.png" srcset="/My-new-portfolio-2026/assets/img/opt/record-section-after-mts8p0lk-foqw-453.webp 453w" sizes="(max-width: 560px) 42vw, (max-width: 900px) 30vw, (max-width: 1280px) 21vw, 228px" alt="Catch record after — species, weight, length, gear detail" style="object-fit:cover;object-position:center;display:block;width:100%;height:100%" width="453" height="922"></div>
-      </div>
-    </div>
-
-  </section>
-
-  <section class="pad rule" id="learn">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f"><span class="sfn">05 · </span>Learn</div>
-    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Learning to fish, not just where to fish</h2>
-    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">Beyond location and conditions, Smart Fishing includes a Learn section covering topics such as weather and water temperature, tides, rods and reels, lures, live bait, knots, float fishing, fishing ethics, and fish species — so anglers can build fishing knowledge directly in the app.</p>
-    <div class="sf-learn" style="display:flex;gap:24px;flex-wrap:wrap;align-items:flex-start">
-      <div style="flex:1 1 200px;max-width:220px">
-        <div class="lbl" style="font-size:11px;margin-bottom:6px">Choose a topic</div>
-        <img src="/My-new-portfolio-2026/assets/img/choose-a-topic.png" srcset="/My-new-portfolio-2026/assets/img/opt/choose-a-topic-453.webp 453w" sizes="(max-width: 560px) 54vw, (max-width: 900px) 27vw, (max-width: 1280px) 19vw, 200px" alt="Learn about fishing main page with topic tiles" style="width:100%;max-width:200px;display:block">
-      </div>
-      <div style="flex:1 1 200px;max-width:220px">
-        <div class="lbl" style="font-size:11px;margin-bottom:6px">Learn a practical skill</div>
-        <img src="/My-new-portfolio-2026/assets/img/learn-a-practical-skill.png" srcset="/My-new-portfolio-2026/assets/img/opt/learn-a-practical-skill-453.webp 453w" sizes="(max-width: 560px) 54vw, (max-width: 900px) 27vw, (max-width: 1280px) 19vw, 200px" alt="Knots topic showing illustrated fishing knots" style="width:100%;max-width:200px;display:block">
-      </div>
-      <div style="flex:1 1 200px;max-width:220px">
-        <div class="lbl" style="font-size:11px;margin-bottom:6px">Explore fish species</div>
-        <img src="/My-new-portfolio-2026/assets/img/species-info.png" srcset="/My-new-portfolio-2026/assets/img/opt/species-info-453.webp 453w" sizes="(max-width: 560px) 54vw, (max-width: 900px) 27vw, (max-width: 1280px) 19vw, 200px" alt="Fish species reference list" style="width:100%;max-width:200px;display:block">
-      </div>
-    </div>
-  </section>
-
-  <section class="pad rule" id="testing">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f"><span class="sfn">06 · </span>Testing &amp; findings</div>
-    <p class="sf-note">Implemented — needs further user testing</p>
-    <div class="findings-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#dcd9d4;border:1px solid #dcd9d4">
-      <div style="background:#fff;padding:28px">
-        <div class="lbl" style="font-size:11px;margin-bottom:10px"><span class="sfn">01 — </span>Unclear map signals</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
-          <div>
-            <div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e">Before</div>
-            <img src="/My-new-portfolio-2026/assets/img/unclear-map-signals.png" srcset="/My-new-portfolio-2026/assets/img/opt/unclear-map-signals-428.webp 428w" sizes="(max-width: 560px) 35vw, (max-width: 900px) 43vw, (max-width: 1280px) 20vw, 259px" alt="Map markers before — unclear fish icons and arrows" style="width:100%;display:block;border:1px solid #dcd9d4">
-          </div>
-          <div>
-            <div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e">After</div>
-            <img src="/My-new-portfolio-2026/assets/img/unclear-map-signals-after-mtsbd7ta-1w64.png" srcset="/My-new-portfolio-2026/assets/img/opt/unclear-map-signals-after-mtsbd7ta-1w64-453.webp 453w" sizes="(max-width: 560px) 35vw, (max-width: 900px) 43vw, (max-width: 1280px) 20vw, 259px" alt="Map markers after — clear fishing potential badge" style="width:100%;display:block;border:1px solid #dcd9d4">
-          </div>
-        </div>
-        <p style="font:600 15px/1.5 Archivo;margin:0 0 4px">Users did not understand what 1, 2, or 3 fish markers meant.</p>
-        <p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 4px">Problem: Recommendation strength was unclear.</p>
-        <p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 12px">Response: Redesigned the markers and supporting information to communicate recommendations more clearly.</p>
-        <span class="lbl" style="font-size:10px;background:#ececea;padding:4px 8px;display:inline-block">Implemented — needs further user testing</span>
-      </div>
-      <div style="background:#fff;padding:28px">
-        <div class="lbl" style="font-size:11px;margin-bottom:10px"><span class="sfn">02 — </span>Catch records lacked detail</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
-          <div>
-            <div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e">Before</div>
-            <img src="/My-new-portfolio-2026/assets/img/catch-records-lacked-detai-before.png" srcset="/My-new-portfolio-2026/assets/img/opt/catch-records-lacked-detai-before-428.webp 428w" sizes="(max-width: 560px) 35vw, (max-width: 900px) 43vw, (max-width: 1280px) 20vw, 259px" alt="Catch record form before — minimal fields, weight, length, lure" style="width:100%;display:block;border:1px solid #dcd9d4">
-          </div>
-          <div>
-            <div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e">After</div>
-            <img src="/My-new-portfolio-2026/assets/img/catch-records-lacked-detai-after.png" srcset="/My-new-portfolio-2026/assets/img/opt/catch-records-lacked-detai-after-453.webp 453w" sizes="(max-width: 560px) 35vw, (max-width: 900px) 43vw, (max-width: 1280px) 20vw, 259px" alt="Catch record form after — richer caption and detail" style="width:100%;display:block;border:1px solid #dcd9d4">
-          </div>
-        </div>
-        <p style="font:600 15px/1.5 Archivo;margin:0 0 4px">Users wanted to share more information about their catches.</p>
-        <p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 4px">Problem: The original record was too limited.</p>
-        <p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 12px">Response: Added species, length, weight, bait/lure, location, photos, and catch details.</p>
-        <span class="lbl" style="font-size:10px;background:#ececea;padding:4px 8px;display:inline-block">Implemented — needs further user testing</span>
-      </div>
-      <div style="background:#fff;padding:28px">
-        <div class="lbl" style="font-size:11px;margin-bottom:10px"><span class="sfn">03 — </span>Forecast lacked fishing guidance</div>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
-          <div>
-            <div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e">Before</div>
-            <img src="/My-new-portfolio-2026/assets/img/forecast-lacked-fishing-guidance-before.png" srcset="/My-new-portfolio-2026/assets/img/opt/forecast-lacked-fishing-guidance-before-428.webp 428w" sizes="(max-width: 560px) 35vw, (max-width: 900px) 43vw, (max-width: 1280px) 20vw, 259px" alt="Forecast before — plain daily weather list" style="width:100%;display:block;border:1px solid #dcd9d4">
-          </div>
-          <div>
-            <div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e">After</div>
-            <img src="/My-new-portfolio-2026/assets/img/forecast-lacked-fishing-guidance-after.png" srcset="/My-new-portfolio-2026/assets/img/opt/forecast-lacked-fishing-guidance-after-453.webp 453w" sizes="(max-width: 560px) 35vw, (max-width: 900px) 43vw, (max-width: 1280px) 20vw, 259px" alt="Forecast after — fishing conditions summary with weather and marine data" style="width:100%;display:block;border:1px solid #dcd9d4">
-          </div>
-        </div>
-        <p style="font:600 15px/1.5 Archivo;margin:0 0 4px">A standard weather forecast did not clearly tell users whether it was a good fishing day or when to fish.</p>
-        <p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 4px">Problem: Users had to interpret weather data themselves.</p>
-        <p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 12px">Response: Redesigned the forecast around fishing suitability and suitable fishing times.</p>
-        <span class="lbl" style="font-size:10px;background:#ececea;padding:4px 8px;display:inline-block">Implemented — needs further user testing</span>
-      </div>
-      <div style="background:#fff;padding:28px">
-        <div class="lbl" style="font-size:11px;margin-bottom:10px"><span class="sfn">04 — </span>More water information</div>
-        <div>
-          <div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e">New</div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px">
-            <img src="/My-new-portfolio-2026/assets/img/more-water-information-1.png" srcset="/My-new-portfolio-2026/assets/img/opt/more-water-information-1-453.webp 453w" sizes="(max-width: 560px) 23vw, (max-width: 900px) 28vw, (max-width: 1280px) 13vw, 170px" alt="Water level card in forecast" style="width:100%;display:block;border:1px solid #dcd9d4">
-            <img src="/My-new-portfolio-2026/assets/img/more-water-information-2.png" srcset="/My-new-portfolio-2026/assets/img/opt/more-water-information-2-453.webp 453w" sizes="(max-width: 560px) 23vw, (max-width: 900px) 28vw, (max-width: 1280px) 13vw, 170px" alt="Water level trend chart" style="width:100%;display:block;border:1px solid #dcd9d4">
-            <img src="/My-new-portfolio-2026/assets/img/more-water-information-3.png" srcset="/My-new-portfolio-2026/assets/img/opt/more-water-information-3-453.webp 453w" sizes="(max-width: 560px) 23vw, (max-width: 900px) 28vw, (max-width: 1280px) 13vw, 170px" alt="Best expected fishing window and next hours" style="width:100%;display:block;border:1px solid #dcd9d4">
-          </div>
-        </div>
-        <p style="font:600 15px/1.5 Archivo;margin:0 0 4px">More detailed water conditions were needed.</p>
-        <p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 4px">Problem: The experience lacked useful marine context.</p>
-        <p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 12px">Response: Added water level and trends, wave height, water temperature, and other marine conditions.</p>
-        <span class="lbl" style="font-size:10px;background:#ececea;padding:4px 8px;display:inline-block">Implemented — needs further user testing</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="pad rule" id="product">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f"><span class="sfn">07 · </span>From prototype to product</div>
-    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">From prototype to product</h2>
-    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 10px;text-wrap:pretty">After testing and redesigning the Figma prototype, I moved the concept into a functional mobile app to explore the experience with real data and interactions.</p>
-    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">I used Flutter/Dart for the application and Codex as an AI-assisted development tool, while maintaining ownership of the UX, interaction design, requirements, review, and refinement. Methods throughout: design iteration, usability testing, and user interviews.</p>
-
-    <div class="sf-flow" style="display:flex;flex-wrap:wrap;align-items:center;gap:0;margin-bottom:36px;border-top:1px solid #dcd9d4;border-bottom:1px solid #dcd9d4;padding:20px 0">
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">Figma prototype</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">User testing</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">Design iteration</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">Implementation</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">Review &amp; refinement</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px;color:#122a8f">Working product</div>
-    </div>
-
-    <div class="journey sf-proto" style="margin-bottom:32px">
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Figma prototype</div><div class="gray" style="aspect-ratio:412/892;margin-top:8px;max-width:220px;background:#000;padding:2px"><video src="/My-new-portfolio-2026/assets/video/smart-fishing-figma-prototype.mp4?v=60eac72b" poster="/My-new-portfolio-2026/assets/video/smart-fishing-figma-prototype-poster.webp?v=6a3a3b99" controls="controls" playsinline="playsinline" style="width:100%;height:100%;object-fit:contain;display:block"></video></div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Working product</div><div class="gray" style="aspect-ratio:645/1398;margin-top:8px;max-width:220px;background:#000;padding:2px"><video src="/My-new-portfolio-2026/assets/video/smart-fishing-working-product.mp4?v=8e06c2f2" poster="/My-new-portfolio-2026/assets/video/smart-fishing-working-product-poster.webp?v=7a103c4c" controls="controls" playsinline="playsinline" style="width:100%;height:100%;object-fit:contain;display:block"></video></div></div>
-      <div>
-        <div class="lbl" style="font-size:11px;margin-bottom:10px">Branding</div>
-        <div style="display:flex;flex-wrap:wrap;gap:1px;background:#dcd9d4;border:1px solid #dcd9d4">
-          <div style="background:linear-gradient(160deg,#e5e9fb,#a9b6ee);padding:24px;display:flex;align-items:center;justify-content:center;flex:1 1 140px">
-            <img src="/My-new-portfolio-2026/assets/img/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic.png" srcset="/My-new-portfolio-2026/assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-1024.webp 1024w" sizes="(max-width: 560px) 18vw, (max-width: 900px) 9vw, (max-width: 1280px) 6vw, 64px" alt="Smart Fishing app icon" style="width:64px;height:64px;object-fit:contain;border-radius:14px">
-          </div>
-          <div style="background:#fff;padding:24px;display:flex;align-items:center;justify-content:center;flex:2 1 220px">
-            <img src="/My-new-portfolio-2026/assets/img/fish-logo-mtri0siz-lui5.png" srcset="/My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/fish-logo-mtri0siz-lui5-2400.webp 2400w" sizes="(max-width: 560px) 33vw, (max-width: 900px) 16vw, (max-width: 1280px) 14vw, 180px" alt="Smart Fishing logo, dark on light" style="height:44px;width:auto">
-          </div>
-          <div style="background:#21005d;padding:24px;display:flex;align-items:center;justify-content:center;flex:2 1 220px">
-            <img src="/My-new-portfolio-2026/assets/img/smart-fishing-logo-white.png" srcset="/My-new-portfolio-2026/assets/img/opt/smart-fishing-logo-white-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/smart-fishing-logo-white-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/smart-fishing-logo-white-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/smart-fishing-logo-white-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/smart-fishing-logo-white-2400.webp 2400w" sizes="(max-width: 560px) 20vw, (max-width: 900px) 10vw, (max-width: 1280px) 7vw, 73px" alt="Smart Fishing logo, white on dark" style="height:44px;width:auto">
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:20px;margin-bottom:32px">
-      <div class="lbl" style="font-size:11px;margin-bottom:6px">Branding</div>
-      <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 20px;max-width:600px">I designed the Smart Fishing logo and used it as the basis for the app icon.</p>
-      <div class="lbl" style="font-size:11px;margin-bottom:6px">Stack</div>
-      <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 20px;max-width:600px">Flutter · Dart · Firebase · APIs · AI-assisted development with Codex</p>
-      <div class="lbl" style="font-size:11px;margin-bottom:6px">Code</div>
-      <p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0">Private repository — code available on request</p>
-    </div>
-
-    <div style="border-top:1px solid #dcd9d4;padding-top:20px">
-      <div class="lbl" style="font-size:11px;margin-bottom:10px">Real data sources</div>
-      <ul style="font:400 14px/1.7 Archivo;color:#75726e;margin:0;padding-left:18px">
-        <li>Open-Meteo Weather</li>
-        <li>Open-Meteo Marine</li>
-        <li>OpenStreetMap</li>
-        <li>OpenSeaMap</li>
-        <li>Device GPS and geocoding</li>
-      </ul>
-    </div>
-  </section>
-
-  <section class="pad rule" id="status">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f"><span class="sfn">08 · </span>Current status &amp; next steps</div>
-    <div class="journey sf-status" style="border-top:none;margin-bottom:32px">
-      <div style="border-right:1px solid #dcd9d4;padding-right:20px">
-        <div class="lbl" style="font-size:11px;margin-bottom:6px">Current status</div>
-        <p style="font:400 16px/1.6 Archivo;color:#1c1b1a;margin:0">Smart Fishing is now a functional mobile app, but the redesigned experience still needs further validation.</p>
-      </div>
-      <div>
-        <div class="lbl" style="font-size:11px;margin-bottom:6px">Long-term goal</div>
-        <p style="font:400 16px/1.6 Archivo;color:#1c1b1a;margin:0">Prepare the app for potential publication on the App Store and Google Play.</p>
-      </div>
-    </div>
-
-    <div class="lbl" style="font-size:11px;margin-bottom:12px">Next steps</div>
-    <div class="sf-flow" style="display:flex;flex-wrap:wrap;align-items:center;gap:0;border-top:1px solid #dcd9d4;border-bottom:1px solid #dcd9d4;padding:20px 0">
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">User test</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">Analyze</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">Iterate</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">Validate</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div style="font:600 13px/1.3 Archivo;padding:6px 16px">Refine</div>
-      <div style="color:#b8b4ae;font:400 16px Archivo">→</div>
-      <div class="sf-next" style="font:600 13px/1.3 Archivo;padding:6px 16px;color:#75726e;border:1px dashed #b8b4ae">Release</div>
-    </div>
-  </section>
-
-  <section class="pad" id="learned">
-    <div class="lbl" style="margin-bottom:20px;color:#122a8f"><span class="sfn">09 · </span>What I learned</div>
-    <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">What I learned</h2>
-    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">Smart Fishing taught me how to take an idea past Figma and into a real product, through testing, iteration, and building it. I learned Material Design 3 and worked with AI-assisted development in Codex to turn my UX and interaction design decisions into a working app.</p>
-    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 32px;text-wrap:pretty">It also taught me a lot about how UX, real data, APIs, and technical limits all affect each other in a real product.</p>
-  </section>
-
+<section class="rule first wl" id="overview" style="--ph:clamp(200px,28vh,280px);min-height:calc(100svh - 102px);display:flex;flex-direction:column;position:relative;overflow:hidden">
+<div class="pad wl-top" style="flex:1;display:grid;grid-template-columns:minmax(0,1fr) var(--ph);column-gap:64px;align-items:center;padding-top:clamp(40px,7vh,80px);padding-bottom:clamp(24px,4vh,48px);background:#fff">
+<div style="min-width:0">
+<div class="lbl" style="color:#1c1b1a;margin-bottom:clamp(24px,4vh,40px)">Case study · 2025</div>
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0">Smart Fishing</h1>
+<img width="4111" height="2462" alt="Smart Fishing logo" src="/assets/img/fish-logo-mtri0siz-lui5.png" srcset="/assets/img/opt/fish-logo-mtri0siz-lui5-480.webp 480w, /assets/img/opt/fish-logo-mtri0siz-lui5-800.webp 800w, /assets/img/opt/fish-logo-mtri0siz-lui5-1200.webp 1200w, /assets/img/opt/fish-logo-mtri0siz-lui5-1600.webp 1600w, /assets/img/opt/fish-logo-mtri0siz-lui5-2400.webp 2400w" sizes="(max-width: 560px) 29vw, (max-width: 900px) 20vw, (max-width: 1280px) 13vw, 158px" style="display:block;height:clamp(72px,8vw,108px);width:auto;margin-bottom:clamp(20px,3.5vh,32px)"/>
+<p class="sf-lead" style="font:600 clamp(32px,3.9vw,54px)/1.06 Archivo;letter-spacing:-.035em;color:#1c1b1a;margin:0;max-width:760px;text-wrap:balance">Anglers plan, fish and log a trip using several different apps and sources.</p>
+<p class="sf-sub" style="font:400 18px/1.55 Archivo;color:#1c1b1a;max-width:560px;margin:20px 0 0;text-wrap:pretty">Smart Fishing brings location, weather and catch history into one app.</p>
+<a class="sf-cta hvx1" href="#film" style="display:inline-flex;align-items:center;gap:10px;margin-top:30px;font:600 15px/1 Archivo;color:#1c1b1a;border:2px solid #1c1b1a;padding:13px 18px;text-decoration:none">See it in use <span aria-hidden="true">↓</span></a>
+</div>
+<div aria-hidden="true" class="wl-spacer"></div>
+</div>
+<svg aria-hidden="true" data-ref="waves" preserveaspectratio="none" style="display:block;width:100%;height:clamp(40px,6vh,72px);margin-bottom:-1px;background:#fff" viewbox="0 0 1440 120">
+<g><path d="M0 58 Q 180 32 360 58 Q 540 84 720 58 Q 900 32 1080 58 Q 1260 84 1440 58 Q 1620 32 1800 58 Q 1980 84 2160 58 Q 2340 32 2520 58 Q 2700 84 2880 58 V120 H0 Z" fill="#122a8f"></path><animatetransform attributename="transform" dur="16s" from="-720 0" repeatcount="indefinite" to="0 0" type="translate"></animatetransform></g>
+<g><path d="M0 72 Q 180 52 360 72 Q 540 92 720 72 Q 900 52 1080 72 Q 1260 92 1440 72 Q 1620 52 1800 72 Q 1980 92 2160 72 Q 2340 52 2520 72 Q 2700 92 2880 72 V120 H0 Z" fill="#0b1a5c"></path><animatetransform attributename="transform" dur="11s" from="0 0" repeatcount="indefinite" to="-1440 0" type="translate"></animatetransform></g>
+</svg>
+<div class="pad wl-bot" style="display:grid;grid-template-columns:minmax(0,1fr) var(--ph);column-gap:64px;background:#0b1a5c;min-height:calc(var(--ph) * .95);padding-top:clamp(20px,3vh,32px);padding-bottom:clamp(28px,4.5vh,44px)">
+<div class="wl-fx" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-self:start;border-top:2px solid #a9b6ee">
+<div style="padding:22px 20px 0 0"><div style="font:600 11px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#a9b6ee;margin-bottom:14px">My role</div><div style="font:500 16px/1.5 Archivo;color:#fff">UX/UI Design<br/>User Research<br/>Prototyping<br/>User Testing<br/>AI-built app</div></div>
+<div style="padding:22px 20px 0"><div style="font:600 11px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#a9b6ee;margin-bottom:14px">Team</div><div style="font:500 16px/1.5 Archivo;color:#fff">Individual project</div></div>
+<div style="padding:22px 20px 0"><div style="font:600 11px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#a9b6ee;margin-bottom:14px">Process</div><ol style="list-style:none;margin:0;padding:0;display:grid;gap:0"><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">01</span>Concept</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">02</span>Research</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">03</span>Prototype</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">04</span>Testing</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">05</span>Iteration</li><li style="display:flex;align-items:baseline;gap:10px;font:500 16px/1.5 Archivo;color:#fff"><span aria-hidden="true" style="font:600 11px/1 Archivo;letter-spacing:.06em;color:#a9b6ee;width:18px;flex:none">06</span>Implementation</li></ol></div>
+<div style="padding:22px 0 0 20px"><div style="font:600 11px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#a9b6ee;margin-bottom:14px">Status</div><div style="font:500 16px/1.5 Archivo;color:#fff">Functional Flutter app</div></div>
+</div>
+<a class="m-only sf-cta2 hvx2" href="#film" style="display:none;align-items:center;justify-content:space-between;width:100%;height:46px;padding:0 16px;margin-top:24px;box-sizing:border-box;font:600 13px/1 Archivo;color:#fff;border:2px solid #fff;text-decoration:none">See it in use <span aria-hidden="true">↓</span></a>
+<div class="wl-phone-col" style="position:relative">
+<img width="415" height="843" alt="Smart Fishing map screen" class="wl-phone" src="/assets/img/sf-map-after-mockup.png" srcset="/assets/img/opt/sf-map-after-mockup-415.webp 415w" sizes="(max-width: 560px) 56vw, (max-width: 900px) 29vw, (max-width: 1280px) 23vw, 252px" style="position:absolute;left:0;bottom:0;width:100%;height:auto;display:block;z-index:3"/>
+</div>
+</div>
+</section>
+<section class="rule" id="film" style="background:#0a0a0c;padding:32px 24px">
+<div style="max-width:360px;margin:0 auto">
+<div class="gray" style="aspect-ratio:9/19.5;background:#000;padding:2px"><video controls="controls" playsinline="playsinline" poster="/assets/video/smart-fishing-hero-poster.webp?v=edd9cb91" src="/assets/video/smart-fishing-hero.mp4?v=d99ee38a" style="width:100%;height:100%;object-fit:contain;display:block"></video></div>
+<p style="font:400 13px/1.4 Archivo;color:#8a8783;text-align:center;margin:14px 0 0">The working product — Smart Fishing in use.</p>
+</div>
+</section>
+<section class="pad rule" id="challenge">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#b3200b"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#ec3013;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">02</span><span>The challenge</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Planning a trip means checking many sources</h2>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0;text-wrap:pretty">Anglers often rely on multiple apps and sources to check fishing locations, weather, wind, water conditions, and regulations. Smart Fishing brings this information together to make planning a fishing trip simpler and more informed.</p>
+</section>
+<section class="pad rule" id="journey1">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">03</span><span>Journey 1</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Where and when should I fish?</h2>
+<p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">Smart Fishing brings location, weather, wind, water level, waves, and other marine conditions together to help anglers understand where and when conditions may be suitable for fishing.</p>
+<div style="border-top:1px solid #dcd9d4;padding-top:28px;margin-top:32px">
+<div class="lbl" style="margin-bottom:16px">How the recommendation works</div>
+<div class="sf-sum" style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px">
+<div style="background:#ececea;padding:14px 18px;font:600 14px/1.3 Archivo;flex:1 1 160px;text-align:center">Fishing location</div>
+<div style="font:400 20px Archivo;color:#b8b4ae">+</div>
+<div style="background:#ececea;padding:14px 18px;font:600 14px/1.3 Archivo;flex:1 1 160px;text-align:center">Weather &amp; marine data</div>
+<div style="font:400 20px Archivo;color:#b8b4ae">+</div>
+<div style="background:#ececea;padding:14px 18px;font:600 14px/1.3 Archivo;flex:1 1 160px;text-align:center">Species-specific rules</div>
+</div>
+<div style="text-align:center;font:400 20px Archivo;color:#b8b4ae;margin-bottom:16px">↓</div>
+<div style="background:#1b3ac4;color:#fff;padding:18px;text-align:center;margin-bottom:8px">
+<div style="font:700 16px/1.3 Archivo;margin-bottom:4px">Fishing potential</div>
+<div style="font:600 13px/1.3 Archivo;letter-spacing:.06em">Excellent · Good · Fair</div>
+</div>
+<p style="font:400 15px/1.6 Archivo;color:#4a4744;max-width:640px;margin:16px 0 20px">Smart Fishing does not detect where fish are. Instead, it uses fishing locations together with current weather and marine conditions to estimate how suitable the conditions are for fishing.</p>
+<p style="font:400 15px/1.6 Archivo;color:#4a4744;max-width:640px;margin:0 0 20px">The app looks at information such as water temperature, wind, sea level, and waves, then applies different rules depending on the fish species. The result is simplified into three levels — Excellent, Good, Fair — so the user doesn't have to analyze all the raw data separately.</p>
+<details style="margin-bottom:20px">
+<summary style="font:600 13px/1.3 Archivo;color:#122a8f;cursor:pointer">How the score is calculated</summary>
+<div style="margin-top:16px;max-width:640px">
+<div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:20px;font:600 12px/1.3 Archivo;color:#75726e">
+<span>Fishing location</span><span style="color:#b8b4ae">→</span>
+<span>Environmental conditions</span><span style="color:#b8b4ae">→</span>
+<span>Species-specific rules</span><span style="color:#b8b4ae">→</span>
+<span style="color:#122a8f">Fishing potential</span>
+</div>
+<p style="font:400 14px/1.6 Archivo;color:#4a4744;margin:0 0 16px">Each fishing location is tied to a species, and I check that species against live wind, water temperature, sea level, and wave height data from Open-Meteo.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:#dcd9d4;border:1px solid #dcd9d4;margin-bottom:16px">
+<div style="background:#fff;padding:14px;text-align:center"><div style="font:600 13px Archivo;margin-bottom:4px">Sea Trout</div><div style="font:400 13px Archivo;color:#75726e">6–14°C</div></div>
+<div style="background:#fff;padding:14px;text-align:center"><div style="font:600 13px Archivo;margin-bottom:4px">Garfish</div><div style="font:400 13px Archivo;color:#75726e">12–18°C</div></div>
+<div style="background:#fff;padding:14px;text-align:center"><div style="font:600 13px Archivo;margin-bottom:4px">Mackerel</div><div style="font:400 13px Archivo;color:#75726e">11–19°C</div></div>
+</div>
+<p style="font:400 14px/1.6 Archivo;color:#4a4744;margin:0 0 16px">For Sea Trout and Garfish, wind direction and sea level also affect the score. At Hovås, two markers move between shallow and deeper spots depending on sea level.</p>
+<div style="display:flex;gap:1px;background:#dcd9d4;border:1px solid #dcd9d4">
+<div style="background:#fff;padding:12px;flex:1;text-align:center"><div style="font:700 14px Archivo">80+</div><div style="font:400 12px Archivo;color:#75726e">Excellent</div></div>
+<div style="background:#fff;padding:12px;flex:1;text-align:center"><div style="font:700 14px Archivo">60–79</div><div style="font:400 12px Archivo;color:#75726e">Good</div></div>
+<div style="background:#fff;padding:12px;flex:1;text-align:center"><div style="font:700 14px Archivo">&lt;60</div><div style="font:400 12px Archivo;color:#75726e">Fair</div></div>
+</div>
+</div>
+</details>
+<div style="border-top:1px solid #dcd9d4;padding-top:16px">
+<div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Where it's headed</div>
+<p style="font:400 14px/1.7 Archivo;color:#4a4744;margin:0 0 8px;max-width:640px">The recommendation is still a rule-based estimate and needs further development and testing. It doesn't yet learn from catch records, or use season, seabed depth, or real fish observations.</p>
+<p style="font:400 14px/1.7 Archivo;color:#4a4744;margin:0;max-width:640px">I've also found some technical issues in the current version that I'm planning to fix.</p>
+</div>
+</div>
+</section>
+<section class="pad rule" id="journey2">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">04</span><span>Journey 2 — Record a catch</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">More than just a photo</h2>
+<p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">User testing showed that anglers wanted to document more about their catches. The redesigned record lets users save and share details such as species, length, weight, bait or lure, location, and photos.</p>
+<div class="sf-ba" style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(12px,3vw,24px);max-width:480px;margin-bottom:24px">
+<div style="min-width:0">
+<div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" height="14" style="flex:none" viewbox="0 0 40 40" width="14"><path d="M14 2h6v12h-6a6 6 0 0 1 0-12z" fill="#F24E1E"></path><path d="M20 2h6a6 6 0 0 1 0 12h-6z" fill="#FF7262"></path><path d="M14 14h6v12h-6a6 6 0 0 1 0-12z" fill="#A259FF"></path><circle cx="26" cy="20" fill="#1ABCFE" r="6"></circle><path d="M14 26h6v6a6 6 0 1 1-6-6z" fill="#0ACF83"></path></svg><span>Before</span></div>
+<div style="width:100%;aspect-ratio:453/922;overflow:hidden"><img width="1290" height="2796" alt="Catch record before — generic photo post" src="/assets/img/sf-record-before.png" srcset="/assets/img/opt/sf-record-before-480.webp 480w, /assets/img/opt/sf-record-before-800.webp 800w, /assets/img/opt/sf-record-before-1200.webp 1200w, /assets/img/opt/sf-record-before-1290.webp 1290w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 30vw, (max-width: 1280px) 21vw, 228px" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center"/></div>
+</div>
+<div style="min-width:0">
+<div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" height="14" style="flex:none" viewbox="0 0 40 40" width="14"><defs><lineargradient gradientunits="userSpaceOnUse" id="cxg-ba1" x1="0" x2="0" y1="2" y2="38"><stop offset="0" stop-color="#b9a9f4"></stop><stop offset=".55" stop-color="#7f97fb"></stop><stop offset="1" stop-color="#3547f6"></stop></lineargradient></defs><g fill="url(#cxg-ba1)"><circle cx="20" cy="20.5" r="11"></circle><circle cx="22.7" cy="11.7" r="7.6"></circle><circle cx="28.6" cy="17.1" r="7.6"></circle><circle cx="28.0" cy="25.1" r="7.6"></circle><circle cx="21.4" cy="29.6" r="7.6"></circle><circle cx="13.7" cy="27.2" r="7.6"></circle><circle cx="10.8" cy="19.8" r="7.6"></circle><circle cx="14.8" cy="12.9" r="7.6"></circle></g><path d="M14.5 15.5l4 5-4 5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M22.5 25.5h6" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path></svg><span>After</span></div>
+<div style="width:100%;aspect-ratio:453/922;overflow:hidden"><img alt="Catch record after — species, weight, length, gear detail" height="922" src="/assets/img/record-section-after-mts8p0lk-foqw.png" srcset="/assets/img/opt/record-section-after-mts8p0lk-foqw-453.webp 453w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 30vw, (max-width: 1280px) 21vw, 228px" style="display:block;width:100%;height:100%;object-fit:cover;object-position:center" width="453"/></div>
+</div>
+</div>
+</section>
+<section class="pad rule" id="learn">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">05</span><span>Learn</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Knowing how to fish, not just where</h2>
+<p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">Beyond location and conditions, Smart Fishing includes a Learn section covering topics such as weather and water temperature, tides, rods and reels, lures, live bait, knots, float fishing, fishing ethics, and fish species — so anglers can build fishing knowledge directly in the app.</p>
+<div class="sf-car m-keep" data-car="lc" style="--sw:240px;display:grid;grid-template-columns:44px minmax(0,1fr) 44px;column-gap:12px;align-items:start">
+<div aria-label="Learn section screens" aria-roledescription="carousel" class="sf-track m-keep" data-car-track="" role="region" style="display:flex;gap:20px;padding:0 calc(50% - var(--sw) / 2);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;grid-area:1 / 2" tabindex="0">
+<figure aria-label="1 of 3" class="sf-slide m-keep" style="flex:0 0 var(--sw);min-width:0;scroll-snap-align:center;scroll-snap-stop:always;margin:0">
+<div class="lbl" style="font-size:11px;margin-bottom:8px">Choose a topic</div><img width="453" height="922" alt="Learn about fishing main page with topic tiles" src="/assets/img/choose-a-topic.png" srcset="/assets/img/opt/choose-a-topic-453.webp 453w" sizes="(max-width: 560px) 59vw, (max-width: 900px) 27vw, (max-width: 1280px) 28vw, 335px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</figure>
+<figure aria-label="2 of 3" class="sf-slide m-keep" style="flex:0 0 var(--sw);min-width:0;scroll-snap-align:center;scroll-snap-stop:always;margin:0">
+<div class="lbl" style="font-size:11px;margin-bottom:8px">Learn a practical skill</div><img width="453" height="922" alt="Knots topic showing illustrated fishing knots" src="/assets/img/learn-a-practical-skill.png" srcset="/assets/img/opt/learn-a-practical-skill-453.webp 453w" sizes="(max-width: 560px) 59vw, (max-width: 900px) 27vw, (max-width: 1280px) 28vw, 335px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</figure>
+<figure aria-label="3 of 3" class="sf-slide m-keep" style="flex:0 0 var(--sw);min-width:0;scroll-snap-align:center;scroll-snap-stop:always;margin:0">
+<div class="lbl" style="font-size:11px;margin-bottom:8px">Explore fish species</div><img width="453" height="922" alt="Fish species reference list" src="/assets/img/species-info.png" srcset="/assets/img/opt/species-info-453.webp 453w" sizes="(max-width: 560px) 59vw, (max-width: 900px) 27vw, (max-width: 1280px) 28vw, 335px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</figure>
+</div>
+<button aria-label="Previous screen" class="pr-nav" data-car-prev="" style="align-self:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 1" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<button aria-label="Next screen" class="pr-nav" data-car-next="" style="align-self:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 3" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M9 5l7 7-7 7"></path></svg></button>
+<div aria-label="Choose a screen" class="sf-dots m-keep" data-car-dots="" role="group" style="margin-top:12px;display:flex;justify-content:center;align-items:center;position:relative;grid-area:2 / 2">
+<template data-car-dot=""><button aria-current="%cur%" aria-label="%label%" class="pc-dot" style="height:32px;min-width:22px;padding:0 4px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center" type="button"><span style="display:block;width:%w%;height:%h%;border-radius:4px;background:#a9b6ee;overflow:hidden;transition:width .3s ease,height .3s ease"><span data-car-fill="" style="display:block;width:100%;height:100%;background:#1b3ac4;transform-origin:left center;animation:%anim%;animation-play-state:%ps%"></span></span></button></template>
+<span aria-live="polite" data-car-count="" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></span>
+</div>
+<button aria-label="Pause slideshow" class="pc-play" data-car-toggle="" style="align-self:center;justify-self:end;margin-top:12px;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;grid-area:2 / 3" type="button"><span style="width:32px;height:32px;border-radius:50%;background:#e5e9fb;color:#122a8f;display:flex;align-items:center;justify-content:center;transition:background .15s"><span data-car-when="playing" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><rect fill="currentColor" height="9" width="2.6" x="2" y="1.5"></rect><rect fill="currentColor" height="9" width="2.6" x="7.4" y="1.5"></rect></svg></span><span data-car-when="paused" hidden="" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"></path></svg></span></span></button>
+</div>
+</section>
+<section class="pad rule" id="testing">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">06</span><span>Testing &amp; findings</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 24px;text-wrap:pretty">What users showed us</h2>
+<p class="m-only sf-note" style="display:none">Implemented — needs further user testing</p>
+<div class="findings-grid" style="display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:#dcd9d4;border:1px solid #dcd9d4">
+<div style="background:#fff;padding:28px">
+<div class="lbl" style="font-size:11px;margin-bottom:10px"><span class="sfn">01 — </span>Unclear map signals</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
+<div>
+<div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" height="14" style="flex:none" viewbox="0 0 40 40" width="14"><path d="M14 2h6v12h-6a6 6 0 0 1 0-12z" fill="#F24E1E"></path><path d="M20 2h6a6 6 0 0 1 0 12h-6z" fill="#FF7262"></path><path d="M14 14h6v12h-6a6 6 0 0 1 0-12z" fill="#A259FF"></path><circle cx="26" cy="20" fill="#1ABCFE" r="6"></circle><path d="M14 26h6v6a6 6 0 1 1-6-6z" fill="#0ACF83"></path></svg><span>Before</span></div>
+<img width="428" height="908" alt="Map markers before — unclear fish icons and arrows" src="/assets/img/unclear-map-signals.png" srcset="/assets/img/opt/unclear-map-signals-428.webp 428w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 20vw, (max-width: 1280px) 20vw, 300px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</div>
+<div>
+<div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" height="14" style="flex:none" viewbox="0 0 40 40" width="14"><defs><lineargradient gradientunits="userSpaceOnUse" id="cxg-ba2" x1="0" x2="0" y1="2" y2="38"><stop offset="0" stop-color="#b9a9f4"></stop><stop offset=".55" stop-color="#7f97fb"></stop><stop offset="1" stop-color="#3547f6"></stop></lineargradient></defs><g fill="url(#cxg-ba2)"><circle cx="20" cy="20.5" r="11"></circle><circle cx="22.7" cy="11.7" r="7.6"></circle><circle cx="28.6" cy="17.1" r="7.6"></circle><circle cx="28.0" cy="25.1" r="7.6"></circle><circle cx="21.4" cy="29.6" r="7.6"></circle><circle cx="13.7" cy="27.2" r="7.6"></circle><circle cx="10.8" cy="19.8" r="7.6"></circle><circle cx="14.8" cy="12.9" r="7.6"></circle></g><path d="M14.5 15.5l4 5-4 5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M22.5 25.5h6" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path></svg><span>After</span></div>
+<img width="453" height="922" alt="Map markers after — clear fishing potential badge" src="/assets/img/unclear-map-signals-after-mtsbd7ta-1w64.png" srcset="/assets/img/opt/unclear-map-signals-after-mtsbd7ta-1w64-453.webp 453w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 20vw, (max-width: 1280px) 20vw, 300px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</div>
+</div>
+<p style="font:600 15px/1.5 Archivo;margin:0 0 4px">Users did not understand what 1, 2, or 3 fish markers meant.</p>
+<p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 4px">Problem: Recommendation strength was unclear.</p>
+<p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 12px">Response: Redesigned the markers and supporting information to communicate recommendations more clearly.</p>
+<span class="lbl" style="font-size:10px;background:#ececea;padding:4px 8px;display:inline-block">Implemented — needs further user testing</span>
+</div>
+<div style="background:#fff;padding:28px">
+<div class="lbl" style="font-size:11px;margin-bottom:10px"><span class="sfn">02 — </span>Catch records lacked detail</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
+<div>
+<div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" height="14" style="flex:none" viewbox="0 0 40 40" width="14"><path d="M14 2h6v12h-6a6 6 0 0 1 0-12z" fill="#F24E1E"></path><path d="M20 2h6a6 6 0 0 1 0 12h-6z" fill="#FF7262"></path><path d="M14 14h6v12h-6a6 6 0 0 1 0-12z" fill="#A259FF"></path><circle cx="26" cy="20" fill="#1ABCFE" r="6"></circle><path d="M14 26h6v6a6 6 0 1 1-6-6z" fill="#0ACF83"></path></svg><span>Before</span></div>
+<img width="428" height="908" alt="Catch record form before — minimal fields, weight, length, lure" src="/assets/img/catch-records-lacked-detai-before.png" srcset="/assets/img/opt/catch-records-lacked-detai-before-428.webp 428w" sizes="(max-width: 560px) 1vw, (max-width: 900px) 20vw, (max-width: 1280px) 20vw, 300px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</div>
+<div>
+<div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" height="14" style="flex:none" viewbox="0 0 40 40" width="14"><defs><lineargradient gradientunits="userSpaceOnUse" id="cxg-ba3" x1="0" x2="0" y1="2" y2="38"><stop offset="0" stop-color="#b9a9f4"></stop><stop offset=".55" stop-color="#7f97fb"></stop><stop offset="1" stop-color="#3547f6"></stop></lineargradient></defs><g fill="url(#cxg-ba3)"><circle cx="20" cy="20.5" r="11"></circle><circle cx="22.7" cy="11.7" r="7.6"></circle><circle cx="28.6" cy="17.1" r="7.6"></circle><circle cx="28.0" cy="25.1" r="7.6"></circle><circle cx="21.4" cy="29.6" r="7.6"></circle><circle cx="13.7" cy="27.2" r="7.6"></circle><circle cx="10.8" cy="19.8" r="7.6"></circle><circle cx="14.8" cy="12.9" r="7.6"></circle></g><path d="M14.5 15.5l4 5-4 5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M22.5 25.5h6" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path></svg><span>After</span></div>
+<img width="453" height="922" alt="Catch record form after — richer caption and detail" src="/assets/img/catch-records-lacked-detai-after.png" srcset="/assets/img/opt/catch-records-lacked-detai-after-453.webp 453w" sizes="(max-width: 560px) 1vw, (max-width: 900px) 20vw, (max-width: 1280px) 20vw, 300px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</div>
+</div>
+<p style="font:600 15px/1.5 Archivo;margin:0 0 4px">Users wanted to share more information about their catches.</p>
+<p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 4px">Problem: The original record was too limited.</p>
+<p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 12px">Response: Added species, length, weight, bait/lure, location, photos, and catch details.</p>
+<span class="lbl" style="font-size:10px;background:#ececea;padding:4px 8px;display:inline-block">Implemented — needs further user testing</span>
+</div>
+<div style="background:#fff;padding:28px">
+<div class="lbl" style="font-size:11px;margin-bottom:10px"><span class="sfn">03 — </span>Forecast lacked fishing guidance</div>
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
+<div>
+<div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" height="14" style="flex:none" viewbox="0 0 40 40" width="14"><path d="M14 2h6v12h-6a6 6 0 0 1 0-12z" fill="#F24E1E"></path><path d="M20 2h6a6 6 0 0 1 0 12h-6z" fill="#FF7262"></path><path d="M14 14h6v12h-6a6 6 0 0 1 0-12z" fill="#A259FF"></path><circle cx="26" cy="20" fill="#1ABCFE" r="6"></circle><path d="M14 26h6v6a6 6 0 1 1-6-6z" fill="#0ACF83"></path></svg><span>Before</span></div>
+<img width="428" height="908" alt="Forecast before — plain daily weather list" src="/assets/img/forecast-lacked-fishing-guidance-before.png" srcset="/assets/img/opt/forecast-lacked-fishing-guidance-before-428.webp 428w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 20vw, (max-width: 1280px) 20vw, 304px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</div>
+<div>
+<div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e;display:flex;align-items:center;gap:6px"><svg aria-hidden="true" height="14" style="flex:none" viewbox="0 0 40 40" width="14"><defs><lineargradient gradientunits="userSpaceOnUse" id="cxg-ba4" x1="0" x2="0" y1="2" y2="38"><stop offset="0" stop-color="#b9a9f4"></stop><stop offset=".55" stop-color="#7f97fb"></stop><stop offset="1" stop-color="#3547f6"></stop></lineargradient></defs><g fill="url(#cxg-ba4)"><circle cx="20" cy="20.5" r="11"></circle><circle cx="22.7" cy="11.7" r="7.6"></circle><circle cx="28.6" cy="17.1" r="7.6"></circle><circle cx="28.0" cy="25.1" r="7.6"></circle><circle cx="21.4" cy="29.6" r="7.6"></circle><circle cx="13.7" cy="27.2" r="7.6"></circle><circle cx="10.8" cy="19.8" r="7.6"></circle><circle cx="14.8" cy="12.9" r="7.6"></circle></g><path d="M14.5 15.5l4 5-4 5" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.6"></path><path d="M22.5 25.5h6" stroke="#fff" stroke-linecap="round" stroke-width="2.6"></path></svg><span>After</span></div>
+<img width="453" height="922" alt="Forecast after — fishing conditions summary with weather and marine data" src="/assets/img/forecast-lacked-fishing-guidance-after.png" srcset="/assets/img/opt/forecast-lacked-fishing-guidance-after-453.webp 453w" sizes="(max-width: 560px) 43vw, (max-width: 900px) 20vw, (max-width: 1280px) 20vw, 304px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</div>
+</div>
+<p style="font:600 15px/1.5 Archivo;margin:0 0 4px">A standard weather forecast did not clearly tell users whether it was a good fishing day or when to fish.</p>
+<p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 4px">Problem: Users had to interpret weather data themselves.</p>
+<p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 12px">Response: Redesigned the forecast around fishing suitability and suitable fishing times.</p>
+<span class="lbl" style="font-size:10px;background:#ececea;padding:4px 8px;display:inline-block">Implemented — needs further user testing</span>
+</div>
+<div style="background:#fff;padding:28px">
+<div class="lbl" style="font-size:11px;margin-bottom:10px"><span class="sfn">04 — </span>More water information</div>
+<div>
+<div class="lbl" style="font-size:10px;margin-bottom:6px;color:#75726e">New</div>
+<div style="margin-bottom:16px"><div class="sf-car m-keep" data-car="wc" style="--sw:180px;display:grid;grid-template-columns:44px minmax(0,1fr) 44px;column-gap:12px;align-items:start">
+<div aria-label="More water information screens" aria-roledescription="carousel" class="sf-track m-keep" data-car-track="" role="region" style="display:flex;gap:20px;padding:0 calc(50% - var(--sw) / 2);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;grid-area:1 / 2" tabindex="0">
+<figure aria-label="1 of 3" class="sf-slide m-keep" style="flex:0 0 var(--sw);min-width:0;scroll-snap-align:center;scroll-snap-stop:always;margin:0">
+<img width="453" height="922" alt="Water level card in forecast" src="/assets/img/more-water-information-1.png" srcset="/assets/img/opt/more-water-information-1-453.webp 453w" sizes="(max-width: 560px) 48vw, (max-width: 900px) 27vw, (max-width: 1280px) 27vw, 408px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</figure>
+<figure aria-label="2 of 3" class="sf-slide m-keep" style="flex:0 0 var(--sw);min-width:0;scroll-snap-align:center;scroll-snap-stop:always;margin:0">
+<img width="453" height="922" alt="Water level trend chart" src="/assets/img/more-water-information-2.png" srcset="/assets/img/opt/more-water-information-2-453.webp 453w" sizes="(max-width: 560px) 48vw, (max-width: 900px) 27vw, (max-width: 1280px) 27vw, 408px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</figure>
+<figure aria-label="3 of 3" class="sf-slide m-keep" style="flex:0 0 var(--sw);min-width:0;scroll-snap-align:center;scroll-snap-stop:always;margin:0">
+<img width="453" height="922" alt="Best expected fishing window and next hours" src="/assets/img/more-water-information-3.png" srcset="/assets/img/opt/more-water-information-3-453.webp 453w" sizes="(max-width: 560px) 48vw, (max-width: 900px) 27vw, (max-width: 1280px) 27vw, 408px" style="width:100%;display:block;border:1px solid #dcd9d4"/>
+</figure>
+</div>
+<button aria-label="Previous screen" class="pr-nav" data-car-prev="" style="align-self:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 1" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M15 5l-7 7 7 7"></path></svg></button>
+<button aria-label="Next screen" class="pr-nav" data-car-next="" style="align-self:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 3" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M9 5l7 7-7 7"></path></svg></button>
+<div aria-label="Choose a screen" class="sf-dots m-keep" data-car-dots="" role="group" style="margin-top:12px;display:flex;justify-content:center;align-items:center;position:relative;grid-area:2 / 2">
+<template data-car-dot=""><button aria-current="%cur%" aria-label="%label%" class="pc-dot" style="height:32px;min-width:22px;padding:0 4px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center" type="button"><span style="display:block;width:%w%;height:%h%;border-radius:4px;background:#a9b6ee;overflow:hidden;transition:width .3s ease,height .3s ease"><span data-car-fill="" style="display:block;width:100%;height:100%;background:#1b3ac4;transform-origin:left center;animation:%anim%;animation-play-state:%ps%"></span></span></button></template>
+<span aria-live="polite" data-car-count="" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></span>
+</div>
+<button aria-label="Pause slideshow" class="pc-play" data-car-toggle="" style="align-self:center;justify-self:end;margin-top:12px;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;grid-area:2 / 3" type="button"><span style="width:32px;height:32px;border-radius:50%;background:#e5e9fb;color:#122a8f;display:flex;align-items:center;justify-content:center;transition:background .15s"><span data-car-when="playing" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><rect fill="currentColor" height="9" width="2.6" x="2" y="1.5"></rect><rect fill="currentColor" height="9" width="2.6" x="7.4" y="1.5"></rect></svg></span><span data-car-when="paused" hidden="" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"></path></svg></span></span></button>
+</div></div>
+</div>
+<p style="font:600 15px/1.5 Archivo;margin:0 0 4px">More detailed water conditions were needed.</p>
+<p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 4px">Problem: The experience lacked useful marine context.</p>
+<p style="font:400 15px/1.5 Archivo;color:#4a4744;margin:0 0 12px">Response: Added water level and trends, wave height, water temperature, and other marine conditions.</p>
+<span class="lbl" style="font-size:10px;background:#ececea;padding:4px 8px;display:inline-block">Implemented — needs further user testing</span>
+</div>
+</div>
+</section>
+<section class="pad rule" id="product">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">07</span><span>Product</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">From prototype to product</h2>
+<p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 10px;text-wrap:pretty">After testing and redesigning the Figma prototype, I moved the concept into a functional mobile app to explore the experience with real data and interactions.</p>
+<p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 32px;text-wrap:pretty">I used Flutter/Dart for the application and Codex as an AI-assisted development tool, while maintaining ownership of the UX, interaction design, requirements, review, and refinement. Methods throughout: design iteration, usability testing, and user interviews.</p>
+<div class="lbl" style="font-size:11px;margin-bottom:12px">Completed</div>
+<div class="sf-flow sf-done" style="display:flex;flex-wrap:wrap;align-items:center;row-gap:10px;margin-bottom:36px;border-top:1px solid #dcd9d4;border-bottom:1px solid #dcd9d4;padding:20px 0">
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#1c1b1a"><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;background:#1b3ac4;color:#fff;font:700 9px/14px Archivo;text-align:center">✓</span>Figma prototype</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#1c1b1a"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:2px;background:#1b3ac4;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;background:#1b3ac4;color:#fff;font:700 9px/14px Archivo;text-align:center">✓</span>User testing</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#1c1b1a"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:2px;background:#1b3ac4;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;background:#1b3ac4;color:#fff;font:700 9px/14px Archivo;text-align:center">✓</span>Design iteration</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#1c1b1a"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:2px;background:#1b3ac4;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;background:#1b3ac4;color:#fff;font:700 9px/14px Archivo;text-align:center">✓</span>Implementation</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#1c1b1a"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:2px;background:#1b3ac4;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;background:#1b3ac4;color:#fff;font:700 9px/14px Archivo;text-align:center">✓</span>Review &amp; refinement</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#1c1b1a"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:2px;background:#1b3ac4;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;background:#1b3ac4;color:#fff;font:700 9px/14px Archivo;text-align:center">✓</span>Beta</div>
+</div>
+<div class="journey sf-proto" style="margin-bottom:32px">
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Figma prototype</div><div class="gray" style="aspect-ratio:412/892;margin-top:8px;max-width:220px;background:#000;padding:2px"><video controls="controls" playsinline="playsinline" poster="/assets/video/smart-fishing-figma-prototype-poster.webp?v=a26e4849" src="/assets/video/smart-fishing-figma-prototype.mp4?v=60eac72b" style="width:100%;height:100%;object-fit:contain;display:block"></video></div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Beta</div><div class="gray" style="aspect-ratio:645/1398;margin-top:8px;max-width:220px;background:#000;padding:2px"><video controls="controls" playsinline="playsinline" poster="/assets/video/smart-fishing-working-product-poster.webp?v=08d13cbb" src="/assets/video/smart-fishing-working-product.mp4?v=8e06c2f2" style="width:100%;height:100%;object-fit:contain;display:block"></video></div></div>
+<div>
+<div class="lbl" style="font-size:11px;margin-bottom:10px">Branding</div>
+<div style="display:flex;flex-wrap:wrap;gap:1px;background:#dcd9d4;border:1px solid #dcd9d4">
+<div style="background:linear-gradient(160deg,#e5e9fb,#a9b6ee);padding:24px;display:flex;align-items:center;justify-content:center;flex:1 1 0;min-width:0">
+<img width="1024" height="1024" alt="Smart Fishing app icon" src="/assets/img/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic.png" srcset="/assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-480.webp 480w, /assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-800.webp 800w, /assets/img/opt/smart-fishing-icon-2d-ios-default-1024x1-mtrhppn6-zoic-1024.webp 1024w" sizes="(max-width: 560px) 11vw, (max-width: 900px) 9vw, (max-width: 1280px) 6vw, 64px" style="width:64px;border-radius:14px;display:block;height:64px;object-fit:contain"/>
+</div>
+<div style="background:#fff;padding:24px;display:flex;align-items:center;justify-content:center;flex:1 1 0;min-width:0">
+<img width="4111" height="2462" alt="Smart Fishing logo, dark on light" src="/assets/img/fish-logo-mtri0siz-lui5.png" srcset="/assets/img/opt/fish-logo-mtri0siz-lui5-480.webp 480w, /assets/img/opt/fish-logo-mtri0siz-lui5-800.webp 800w, /assets/img/opt/fish-logo-mtri0siz-lui5-1200.webp 1200w, /assets/img/opt/fish-logo-mtri0siz-lui5-1600.webp 1600w, /assets/img/opt/fish-logo-mtri0siz-lui5-2400.webp 2400w" sizes="(max-width: 560px) 29vw, (max-width: 900px) 20vw, (max-width: 1280px) 13vw, 158px" style="height:44px;width:auto"/>
+</div>
+<div style="background:#21005d;padding:24px;display:flex;align-items:center;justify-content:center;flex:1 1 0;min-width:0">
+<img width="4111" height="2462" alt="Smart Fishing logo, white on dark" src="/assets/img/smart-fishing-logo-white.png" srcset="/assets/img/opt/smart-fishing-logo-white-480.webp 480w, /assets/img/opt/smart-fishing-logo-white-800.webp 800w, /assets/img/opt/smart-fishing-logo-white-1200.webp 1200w, /assets/img/opt/smart-fishing-logo-white-1600.webp 1600w, /assets/img/opt/smart-fishing-logo-white-2400.webp 2400w" sizes="(max-width: 560px) 15vw, (max-width: 900px) 10vw, (max-width: 1280px) 7vw, 74px" style="height:44px;width:auto"/>
+</div>
+</div>
+<p class="sf-brand-cap" style="font:400 15px/1.55 Archivo;color:#4a4744;margin:14px 0 0;max-width:600px">I designed the Smart Fishing logo and used it as the basis for the app icon.</p>
+</div>
+</div>
+<div class="sf-tech" style="display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr) minmax(0,1fr);border-top:2px solid #1c1b1a;border-bottom:1px solid #dcd9d4">
+<div class="sf-t-stack" style="padding:24px 24px 28px 0;border-right:1px solid #dcd9d4;min-width:0">
+<div class="lbl" style="font-size:11px;margin-bottom:14px">Stack</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px"><span style="display:inline-flex;align-items:center;padding:6px 12px;border:1px solid #a9b6ee;font:500 14px/1.2 Archivo;color:#122a8f">Flutter</span><span style="display:inline-flex;align-items:center;padding:6px 12px;border:1px solid #a9b6ee;font:500 14px/1.2 Archivo;color:#122a8f">Dart</span><span style="display:inline-flex;align-items:center;padding:6px 12px;border:1px solid #a9b6ee;font:500 14px/1.2 Archivo;color:#122a8f">Firebase</span><span style="display:inline-flex;align-items:center;padding:6px 12px;border:1px solid #a9b6ee;font:500 14px/1.2 Archivo;color:#122a8f">APIs</span><span style="display:inline-flex;align-items:center;padding:6px 12px;border:1px solid #a9b6ee;font:500 14px/1.2 Archivo;color:#122a8f">AI-assisted development with Codex</span></div>
+</div>
+<div class="sf-t-data" style="padding:24px 24px 28px;border-right:1px solid #dcd9d4;min-width:0">
+<div class="lbl" style="font-size:11px;margin-bottom:14px">Real data sources</div>
+<ul style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px;font:500 15px/1.35 Archivo;color:#1c1b1a">
+<li style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="flex:none;width:6px;height:6px;background:#1b3ac4"></span>Open-Meteo Weather</li>
+<li style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="flex:none;width:6px;height:6px;background:#1b3ac4"></span>Open-Meteo Marine</li>
+<li style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="flex:none;width:6px;height:6px;background:#1b3ac4"></span>OpenStreetMap</li>
+<li style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="flex:none;width:6px;height:6px;background:#1b3ac4"></span>OpenSeaMap</li>
+<li style="display:flex;align-items:center;gap:10px"><span aria-hidden="true" style="flex:none;width:6px;height:6px;background:#1b3ac4"></span>Device GPS and geocoding</li>
+</ul>
+</div>
+<div class="sf-t-code" style="padding:24px 0 28px 24px;min-width:0">
+<div class="lbl" style="font-size:11px;margin-bottom:14px">Code</div>
+<div style="display:flex;align-items:center;gap:14px">
+<span aria-label="GitHub, private" role="img" style="position:relative;flex:none;width:44px;height:44px;display:block"><svg aria-hidden="true" height="38" style="display:block" viewbox="0 0 24 24" width="38"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" fill="#1c1b1a"></path></svg><span style="position:absolute;right:0;bottom:0;width:22px;height:22px;background:#e5e9fb;color:#122a8f;border:2px solid #fff;display:flex;align-items:center;justify-content:center"><svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="square" stroke-width="2.6" viewbox="0 0 24 24" width="12"><rect height="10" width="14" x="5" y="11"></rect><path d="M8 11V7a4 4 0 0 1 8 0v4"></path></svg></span></span>
+<p style="font:500 15px/1.45 Archivo;color:#1c1b1a;margin:0">Private repository — code available on request</p>
+</div>
+</div>
+</div>
+</section>
+<section class="pad rule" id="status">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">08</span><span>Current status &amp; next steps</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 24px;text-wrap:pretty">A working app, not yet validated</h2>
+<div class="journey sf-status" style="border-top:none;margin-bottom:32px">
+<div style="border-right:1px solid #dcd9d4;padding-right:20px">
+<div class="lbl" style="font-size:11px;margin-bottom:6px">Current status</div>
+<p style="font:400 16px/1.6 Archivo;color:#1c1b1a;margin:0">Smart Fishing is now a functional mobile app, but the redesigned experience still needs further validation.</p>
+</div>
+<div>
+<div class="lbl" style="font-size:11px;margin-bottom:6px">Long-term goal</div>
+<p style="font:400 16px/1.6 Archivo;color:#1c1b1a;margin:0">Prepare the app for potential publication on the App Store and Google Play.</p>
+</div>
+</div>
+<div class="lbl" style="font-size:11px;margin-bottom:12px">Next steps</div>
+<div class="sf-flow sf-plan" style="display:flex;flex-wrap:wrap;align-items:center;row-gap:10px;border-top:1px solid #dcd9d4;border-bottom:1px solid #dcd9d4;padding:20px 0">
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#75726e"><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;box-sizing:border-box;border:2px solid #b8b4ae;background:#fff"></span>User test<span style="font:600 10px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#122a8f;background:#e5e9fb;padding:4px 6px">Next</span></div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#75726e"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:0;border-top:2px dashed #b8b4ae;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;box-sizing:border-box;border:2px solid #b8b4ae;background:#fff"></span>Analyze</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#75726e"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:0;border-top:2px dashed #b8b4ae;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;box-sizing:border-box;border:2px solid #b8b4ae;background:#fff"></span>Iterate</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#75726e"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:0;border-top:2px dashed #b8b4ae;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;box-sizing:border-box;border:2px solid #b8b4ae;background:#fff"></span>Validate</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#75726e"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:0;border-top:2px dashed #b8b4ae;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;box-sizing:border-box;border:2px solid #b8b4ae;background:#fff"></span>Refine</div>
+<div class="sf-st" style="display:flex;align-items:center;gap:8px;font:600 13px/1.3 Archivo;padding:6px 12px 6px 0;color:#75726e"><span aria-hidden="true" class="sf-cn" style="flex:none;width:24px;height:0;border-top:2px dashed #b8b4ae;margin-right:4px"></span><span aria-hidden="true" class="sf-mk" style="flex:none;width:14px;height:14px;box-sizing:border-box;border:2px solid #b8b4ae;background:#fff"></span>Release</div>
+</div>
+</section>
+<section class="pad" id="learned" style="background:#e5e9fb">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">09</span><span>Reflection</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">What I learned</h2>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">Smart Fishing taught me how to take an idea past Figma and into a real product, through testing, iteration, and building it. I learned Material Design 3 and worked with AI-assisted development in Codex to turn my UX and interaction design decisions into a working app.</p>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 32px;text-wrap:pretty">It also taught me a lot about how UX, real data, APIs, and technical limits all affect each other in a real product.</p>
+</section>
   </main>
 
   <footer class="ft">
     <span class="ft-copy">© 2026 Tarek Alfutih</span>
   </footer>
-
 </div>
-<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=224d3fa2" defer></script>
-<script>
-  // Reduced motion: freeze the SMIL wave animation.
-  if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.sf-waves').forEach(function (svg) { svg.pauseAnimations(); });
-  }
-</script>
+<script src="/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/assets/js/site.js?v=b96d8d47" defer></script>
+<script src="/assets/js/carousel.js?v=3d5d9896" defer></script>
+<script src="/assets/js/pages/smart-fishing.js?v=9ded75b0" defer></script>
 </body>
 </html>

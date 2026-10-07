@@ -79,13 +79,11 @@ button { font-family: inherit; }
   white-space: nowrap; color: var(--ink);
 }
 .hd-logo:hover { color: var(--ink); text-decoration: none; }
-.hd-home { position: relative; font: 500 14px/1 Archivo, sans-serif; color: var(--body-2); white-space: nowrap; }
-.hd-home::before { content: ""; position: absolute; inset: -14px -8px; }
 .hd-nav { display: flex; gap: 28px; margin-left: auto; font: 500 15px/1 Archivo, sans-serif; }
 .hd-nav a, .cs-main a, .cs-back { position: relative; color: var(--body-2); }
 /* 44px hit area without changing the layout */
 .hd-nav a::before, .cs-main a::before, .cs-back::before, .btn-cv::before { content: ""; position: absolute; inset: -14px -8px; }
-.hd-nav a[aria-current="page"] { color: var(--ink); font-weight: 700; }
+.hd-nav a[aria-current], .cs-main a[aria-current] { color: var(--ink); font-weight: 700; }
 .btn-cv {
   position: relative;
   border: 2px solid var(--ink); color: var(--ink); background: transparent;
@@ -101,6 +99,7 @@ button { font-family: inherit; }
   padding: 22px var(--pad-x); border-bottom: 1px solid var(--hairline);
 }
 .cs-back { font: 500 14px/1 Archivo, sans-serif; white-space: nowrap; }
+.cs-back-c { display: none; }
 .cs-main { display: flex; gap: 20px; margin-left: auto; font: 500 14px/1 Archivo, sans-serif; }
 .cs-nav { scrollbar-width: thin; }
 
@@ -115,6 +114,10 @@ button { font-family: inherit; }
 .ft-nav a { color: var(--ink); min-height: 44px; display: inline-flex; align-items: center; }
 .ft-nav a:hover { color: var(--cobalt-700); text-decoration: underline; }
 
+/* build.py adds each image's width/height (its own shape, reserved before load). Keep the height
+   automatic unless a rule sets one; :where() has no specificity, so any page rule still wins. */
+:where(img[width][height]) { height: auto; }
+
 /* Images that replaced the design tool's image slots: fill their sized wrapper. */
 .slot { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .slot-empty { background: var(--img-bg); }
@@ -127,6 +130,9 @@ button { font-family: inherit; }
 /* Site video controls (video-controls.js). Nothing tints the footage: a compact bar at the bottom,
    shown while paused and on hover / focus / tap while playing. */
 .vc { position: relative; display: block; width: 100%; }
+/* The wrapper always fills its frame. Page rules that run "div:has(> video)" edge to edge mean the
+   frame around the video, not this wrapper (it would be widened twice). */
+html body .wrap div.vc.vc { width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; }
 .vc > video { cursor: pointer; }
 .vc-btn {
   appearance: none; -webkit-appearance: none; border: 0; margin: 0; padding: 0; border-radius: 0;
@@ -201,6 +207,42 @@ html.cvv-open { overflow: hidden; }
   .cvv-pages { padding: 8px; }
 }
 
+/* CV dialog (cv-viewer.js): max 1200px wide, full screen on phones. */
+.cvv {
+  position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(11, 26, 92, .72);
+}
+.cvv-panel {
+  width: 100%; max-width: 1200px; height: 100%; display: flex; flex-direction: column;
+  background: #fff; border: 2px solid var(--ink);
+}
+.cvv-bar { display: flex; align-items: center; gap: 10px; padding: 12px 12px 12px 20px; border-bottom: 2px solid var(--ink); }
+.cvv-title { margin-right: auto; font: 700 17px/1 Archivo, sans-serif; letter-spacing: -.02em; color: var(--ink); white-space: nowrap; }
+.cvv-btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; box-sizing: border-box; cursor: pointer;
+  font: 600 12px/1 Archivo, sans-serif; letter-spacing: .06em; text-transform: uppercase; text-decoration: none;
+}
+.cvv-dl { background: var(--cobalt); color: #fff; border: 0; }
+.cvv-dl:hover { background: var(--cobalt-700); color: #fff; text-decoration: none; }
+.cvv-close { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
+.cvv-close:hover { background: var(--ink); color: #fff; }
+.cvv-pages {
+  flex: 1; min-height: 0; overflow: auto; -webkit-overflow-scrolling: touch; background: var(--ground);
+  padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.cvv-pages canvas { flex: none; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+.cvv-pages iframe { flex: 1; width: 100%; border: 0; }
+.cvv-msg { font: 500 14px/1.4 Archivo, sans-serif; color: var(--body-2); padding: 24px; }
+html.cvv-open { overflow: hidden; }
+@media (max-width: 767px) {
+  .cvv { padding: 0; }
+  .cvv-panel { max-width: none; border: 0; }
+  .cvv-bar { padding: 8px 8px 8px 16px; }
+  .cvv-title { font-size: 15px; }
+  .cvv-name, .cvv-dl { display: none; }
+  .cvv-pages { padding: 8px; }
+}
+
 /* Scroll reveal (triggered once by site.js) */
 [data-reveal] {
   opacity: 0; transform: translateY(24px);
@@ -231,7 +273,7 @@ html.cvv-open { overflow: hidden; }
 .m-menu a:hover { color: var(--ink); text-decoration: none; }
 .m-menu a:active { background: var(--cobalt-50); }
 .m-menu a span { font-size: 16px; }
-.m-menu a[aria-current="page"] { font-weight: 800; box-shadow: inset 3px 0 0 var(--ink); }
+.m-menu a[aria-current] { font-weight: 800; box-shadow: inset 3px 0 0 var(--ink); }
 @media (max-width: 767px) {
   html, body { overflow-x: clip; overscroll-behavior-x: none; }
   .hd {
@@ -239,7 +281,15 @@ html.cvv-open { overflow: hidden; }
   }
   .cs-bar { height: 56px; padding: 0 6px 0 20px; flex-wrap: nowrap; gap: 12px; border-bottom: 0; }
   .hd-logo { font-size: 17px; min-height: 44px; display: inline-flex; align-items: center; }
-  .hd-nav, .hd-home, .cs-main, .cs-back, .cs-nav, .btn-cv, .cv-link { display: none !important; }
+  .hd-nav, .cs-main, .cs-nav, .btn-cv, .cv-link { display: none !important; }
+  /* Back = chevron at the far left, before the name, with a thin divider; no word. */
+  .cs-back {
+    order: -1; display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px;
+    flex: none; margin-left: -12px; border-right: 1px solid var(--hairline); color: var(--ink);
+  }
+  .cs-back::before { content: none; }
+  .cs-back-t, .cs-back-a { display: none; }
+  .cs-back-c { display: block; }
   .m-btn {
     display: flex; margin-left: auto; width: 44px; height: 44px; flex: none; align-items: center; justify-content: center;
     background: none; border: 0; padding: 0; cursor: pointer; color: var(--ink);
@@ -268,6 +318,9 @@ html.cvv-open { overflow: hidden; }
      final state. Page rules that set animation:none keep priority (higher specificity). */
   *, *::before, *::after {
     animation-duration: .01ms !important; animation-delay: 0s !important;
-    animation-iteration-count: 1 !important; transition-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    /* No transitions at all (not a tiny one): scripts that measure right after a style change
+       (hero fitting) must read the new value. */
+    transition: none !important;
   }
 }

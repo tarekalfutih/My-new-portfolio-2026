@@ -3,19 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="canonical" href="https://tarekalfutih.github.io/My-new-portfolio-2026/illustration/">
-<meta property="og:url" content="https://tarekalfutih.github.io/My-new-portfolio-2026/illustration/">
+<link rel="canonical" href="https://tarekdesign.se/illustration/">
+<meta property="og:url" content="https://tarekdesign.se/illustration/">
 <meta property="og:site_name" content="Tarek Alfutih">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/My-new-portfolio-2026/assets/css/base.css?v=320b78c2">
-<script src="/My-new-portfolio-2026/assets/js/video-behavior.js?v=f2fe08a3"></script>
-<script src="/My-new-portfolio-2026/assets/js/cv-viewer.js?v=320f3657" defer></script>
+<link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
+<link rel="stylesheet" href="/assets/css/base.css?v=dc6c07bf">
+<script src="/assets/js/video-behavior.js?v=dcfab542"></script>
+<script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Illustration — Tarek Alfutih</title>
 <meta name="description" content="Alongside interaction design, I&#x27;ve illustrated 20+ children&#x27;s books. Latest: Skräphjältarna, 2023.">
 <style>
+@media (min-width:1281px) and (max-width:1679px){html,body{background:#fff !important}.wrap,.pg{max-width:none !important;border-left:0 !important;border-right:0 !important}}
+
 body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#122a8f;text-decoration:none}
 a:hover{color:#1b3ac4;text-decoration:underline}
@@ -37,122 +39,129 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   .hero-cover{width:min(340px,100%)}
   h1.h1r{font-size:34px !important}
 }
-.hv1:hover{background:#122a8f !important;color:#fff !important}
-.hv2:hover{background:#1c1b1a !important;color:#fff !important}
-/* Phones (< 768px): MOBILE.md rules (no page-specific phone design). Desktop is unchanged. */
-@media (max-width:767px){
-  .m-hide{display:none !important}
-  .pad{padding:32px 20px !important}
-  .lbl{font-size:12px !important;letter-spacing:.14em !important}
-  .hero{gap:24px !important}
-  .hero-cover,.il-img{width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px;margin-right:-20px}
-  h1.h1r{font-size:30px !important}
-  .hero p,.pad>p{font-size:15px !important;line-height:1.5 !important}
-  .il-btns{flex-direction:column;gap:8px !important}
-  .il-btns a{display:flex;align-items:center;height:46px;padding:0 16px !important;font-size:13px !important}
-  .facts>div{padding:16px 20px}
-  .facts>div>div:last-child{font-size:13px !important}
-  .gallery{gap:28px}
-  .gallery>div>div:last-child,.pad>div[style*="margin-top:8px"]{font-size:12px !important}
-  .il-more{flex-direction:column;align-items:flex-start !important}
-  .il-more a{margin-left:0 !important;min-height:44px;display:inline-flex;align-items:center}
-}
+@media (max-width:767px){.ext-d{display:none !important}}
+@media (max-width:767px){.il-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin:0 -24px 0 -12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.il-back-t,.il-back-a{display:none !important}.il-back-c{display:block !important}}
+
+
+.ih{position:relative;overflow:hidden;background:#0b1a5c;border-bottom:2px solid #1c1b1a;height:calc(100svh - 78px - 66px);min-height:600px;max-height:1100px}
+.ih-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ih-sh{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,92,.9) 0%,rgba(11,26,92,.72) 38%,rgba(11,26,92,0) 72%)}
+.ih-ff{position:absolute;width:6px;height:6px;border-radius:50%;background:#fff6b0;box-shadow:0 0 12px 4px rgba(255,240,150,.6);animation:ihFly 6s ease-in-out infinite}
+@keyframes ihFly{0%,100%{transform:translate(0,0);opacity:.2}50%{transform:translate(14px,-22px);opacity:1}}
+.ih-in{position:relative;height:100%;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;padding:40px 56px}
+.ih-tx{grid-column:1 / 6;display:flex;flex-direction:column;gap:22px;color:#e5e9fb}
+.ih-cv{grid-column:7 / 13;display:flex;justify-content:center}
+.ih-cv>div{width:min(100%,640px,calc(100svh - 300px));aspect-ratio:1/1;box-shadow:0 30px 60px rgba(0,0,0,.45);transform:rotate(-2deg);background:#ececea}
+.ih h1{font:700 clamp(48px,5.6vw,80px)/1 Archivo;letter-spacing:-.04em;margin:0;white-space:nowrap;background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite;width:fit-content;padding-bottom:.06em}
+@keyframes illoShine{from{background-position:0% 50%}to{background-position:300% 50%}}
+.ih-f{display:grid;grid-template-columns:repeat(4,1fr);padding:0 56px;border-bottom:2px solid #1c1b1a;background:#fff}
+.ih-f>div{padding:18px 20px;border-right:1px solid #dcd9d4}.ih-f>div:first-child{padding-left:0}.ih-f>div:last-child{border-right:0}
+@media (max-width:1024px){.ih{height:auto;min-height:0;max-height:none}.ih-in{display:flex;flex-direction:column;align-items:stretch;gap:40px;padding:56px 32px 56px}.ih-sh{background:linear-gradient(180deg,rgba(11,26,92,.9) 0%,rgba(11,26,92,.6) 45%,rgba(11,26,92,.25) 100%)}.ih-cv>div{width:min(100%,520px)}.ih-f{grid-template-columns:1fr 1fr;padding:0 32px}.ih-f>div{padding:16px 16px 16px 0;border-right:0;border-bottom:1px solid #dcd9d4}.ih-f>div:nth-last-child(-n+2){border-bottom:0}}
+@media (min-width:768px) and (max-width:1024px){.ih-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px;align-items:center;padding:64px 32px}.ih-tx{grid-column:auto;gap:20px}.ih-cv{grid-column:auto;justify-content:flex-end}.ih-cv>div{width:min(100%,400px)}.ih h1{font-size:clamp(36px,5.2vw,52px)}.ih-p{font-size:17px !important}.ih-lb{font-size:12px !important;white-space:nowrap}.ih-sh{background:linear-gradient(90deg,rgba(11,26,92,.92) 0%,rgba(11,26,92,.75) 45%,rgba(11,26,92,.2) 100%)}}
+@media (max-width:767px){.ih-in{padding:32px 20px 40px;gap:16px}.ih-tx{display:contents}.ih-cv{order:1;margin-top:12px}.ih-bt{order:2;margin-top:12px;justify-content:center}.ih h1{font-size:32px;letter-spacing:-.03em}.ih-lb{font-size:12px !important}.ih-ln{width:28px !important}.ih-p{font-size:16px !important}.ih-bt a{font-size:12px !important;padding:0 14px !important;min-height:44px;display:inline-flex;align-items:center;box-sizing:border-box}.ih-f{padding:4px 20px 8px}.ih-f>div>div:last-child{font-size:14px !important}.ih-cv>div{width:min(100%,280px)}}
+@media (prefers-reduced-motion:reduce){.ih-ff{animation:none}.ih h1{animation:none}}
+
+.hvx0:hover{background:#1c1b1a !important;color:#fff !important}
+.hvx1:hover{background:#d2c6f7 !important;color:#0b1a5c !important}
+.hvx2:hover{background:#ffe9a8 !important;color:#0b1a5c !important}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="wrap">
 
-  <header class="hd">
-    <a class="hd-logo" href="/My-new-portfolio-2026/">Tarek Alfutih</a>
-    <a class="hd-home" href="/My-new-portfolio-2026/work/" data-back>← Work</a>
+<header class="hd">
+    <a class="hd-logo" href="/">Tarek Alfutih</a>
+    <a class="cs-back" href="/" data-back aria-label="Back"><span class="cs-back-a" aria-hidden="true">←</span><svg class="cs-back-c" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.25" stroke-linecap="square" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg><span class="cs-back-t" aria-hidden="true">&nbsp;Back</span></a>
+    <script src="/assets/js/nav-back.js?v=8f1349e7" defer></script>
     <nav class="hd-nav" aria-label="Main">
-      <a href="/My-new-portfolio-2026/work/">Work</a>
-      <a href="/My-new-portfolio-2026/about/">About</a>
-      <a href="/My-new-portfolio-2026/contact/">Contact</a>
+      <a href="/">Home</a>
+      <a href="/work/" aria-current="true">Work</a>
+      <a href="/about/">About</a>
+      <a href="/contact/">Contact</a>
     </nav>
-    <a class="btn-cv" href="/My-new-portfolio-2026/cv.pdf" download="Tarek-Alfutih-CV.pdf">CV (PDF)</a>
+    <a class="btn-cv" href="/Tarek%20Alfutih%20-%20CV.pdf" target="_blank">CV (PDF)</a>
     <button type="button" class="m-btn" aria-label="Open menu" aria-expanded="false" aria-controls="m-menu" data-menu-btn><svg class="m-ic-open" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"/></svg><svg class="m-ic-close" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
     <nav id="m-menu" class="m-menu" aria-label="Menu" hidden>
-      <a href="/My-new-portfolio-2026/work/" data-back>← Work</a>
-      <a href="/My-new-portfolio-2026/" data-from-home-hide>Home<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/work/" data-from-home-show hidden>Work<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/about/">About<span aria-hidden="true">→</span></a>
-      <a href="/My-new-portfolio-2026/contact/">Contact<span aria-hidden="true">→</span></a>
+      <a href="/">Home<span aria-hidden="true">→</span></a>
+      <a href="/work/" aria-current="true">Work<span aria-hidden="true">→</span></a>
+      <a href="/about/">About<span aria-hidden="true">→</span></a>
+      <a href="/contact/">Contact<span aria-hidden="true">→</span></a>
     </nav>
   </header>
 
   <main id="main">
 
-  <section class="pad rule" style="padding:56px 56px 40px">
-    <div class="lbl" style="margin-bottom:16px">Illustration &amp; visual communication</div>
-    <div class="hero" style="display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:center">
-      <div class="hero-cover" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-cover.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 45vw, (max-width: 1280px) 38vw, 486px" alt="Skräphjältarna cover" decoding="async" style="object-fit:contain;"></div>
-      <div>
-        <h1 class="h1r" style="font-size:clamp(30px,4.6vw,52px);line-height:1.05;letter-spacing:-.03em;margin:0 0 10px">Skräphjältarna</h1>
-        <div style="font:400 17px/1.4 Archivo;color:#75726e;margin-bottom:20px">"The Trash Heroes" — a children's picture book, illustrated by Tarek Alfutih</div>
-        <p style="font:400 18px/1.55 Archivo;color:#3a3835;margin:0 0 24px;max-width:520px;text-wrap:pretty">Encourages children to pick up litter and sort waste. Magical Metal, Glittery Glass, Peppy Plastic, Cuddly Cardboard and Cool Compost — they all turn old into new. A picture book that inspires recycling by celebrating everything fun and good that can be made from trash.</p>
-        <div class="il-btns" style="display:flex;flex-wrap:wrap;gap:10px">
-          <a class="hv1" href="https://olika.nu/products/skraphjaltarna" target="_blank" style="background:#1b3ac4;color:#fff;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 18px;text-decoration:none">Buy the book</a>
-          <a class="hv2" href="https://cdn.shopify.com/s/files/1/0553/0694/4572/files/skraphjaltarna_PROVLAS.pdf" target="_blank" style="border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Read a preview</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="facts">
-    <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Illustrator</div><div style="font:600 15px/1.35 Archivo">Tarek Alfutih</div></div>
-    <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Authors</div><div style="font:600 15px/1.35 Archivo">Kristina Henkel &amp; Marie Tomičić</div></div>
-    <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Publisher</div><div style="font:600 15px/1.35 Archivo">OLIKA förlag, Sweden · 2023</div></div>
-    <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Format</div><div style="font:600 15px/1.35 Archivo">Hardcover · 20×20 cm · 36 pages</div></div>
-  </div>
-
-  <section class="pad rule" style="padding:48px 56px">
-    <div class="lbl" style="margin-bottom:20px">The book</div>
-    <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 14px;text-wrap:pretty">Skräphjältarna ("The Trash Heroes") follows five characters who live inside a talking recycling bin: Magical Metal, Glittery Glass, Peppy Plastic, Cuddly Cardboard and Cool Compost. Each one shows children how their kind of waste gets a second life.</p>
-    <p class="m-hide" style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">The book was created in collaboration with the Rinkeby-Tensta district administration in Stockholm, aimed at inspiring children and adults to sort their waste. It's printed on Nordic Swan-certified recycled paper.</p>
-  </section>
-
-  <section class="pad rule" style="padding:48px 56px">
-    <div class="lbl" style="margin-bottom:20px">Illustrations</div>
-    <div class="gallery">
-      <div>
-        <div class="il-img" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-playground.png" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-playground-1343.webp 1343w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Children playing at a playground" decoding="async" style="object-fit:contain;"></div>
-        <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Children at play — one of the book's opening spreads</div>
-      </div>
-      <div>
-        <div class="il-img" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-metal.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-metal-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Magical Metal introduces herself" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-        <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Magical Metal introduces herself</div>
-      </div>
-      <div>
-        <div class="il-img" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-compost.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-compost-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="Cool Compost introduces himself" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-        <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Cool Compost introduces himself</div>
-      </div>
-      <div>
-        <div class="il-img" style="background:#ececea;aspect-ratio:1/1"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-cycle.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-cycle-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 571px" alt="A cycle showing how waste becomes energy" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-        <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">The cycle of how waste becomes energy</div>
-      </div>
-    </div>
-  </section>
-
-  <section class="pad rule" style="padding:40px 56px">
-    <div class="il-img" style="background:#ececea;aspect-ratio:1/1;max-width:480px"><img class="slot" src="/My-new-portfolio-2026/assets/img/skraphjaltarna-farewell.jpg" srcset="/My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-480.webp 480w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-800.webp 800w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1200.webp 1200w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1600.webp 1600w, /My-new-portfolio-2026/assets/img/opt/skraphjaltarna-farewell-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 63vw, (max-width: 1280px) 44vw, 480px" alt="The heroes say goodbye" loading="lazy" decoding="async" style="object-fit:contain;"></div>
-    <div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">"Come back soon! We'll be waiting" — the closing spread</div>
-  </section>
-
-  <section class="pad il-more" style="padding:40px 56px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-    <div style="font:400 15px/1.5 Archivo;color:#75726e">Part of 10+ years in visual communication and children's book illustration.</div>
-    <a href="https://tarekalfutih.se" target="_blank" style="margin-left:auto">More illustration work at tarekalfutih.se</a>
-  </section>
-
+<section aria-labelledby="ih-title" class="ih">
+<img width="2400" height="1200" alt="" class="ih-bg" src="/assets/img/forest-bg.jpg" srcset="/assets/img/opt/forest-bg-480.webp 480w, /assets/img/opt/forest-bg-800.webp 800w, /assets/img/opt/forest-bg-1200.webp 1200w, /assets/img/opt/forest-bg-1600.webp 1600w, /assets/img/opt/forest-bg-2400.webp 2400w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 100vw, (max-width: 1280px) 100vw, 1440px"/>
+<div class="ih-sh"></div>
+<span class="ih-ff" style="left:58%;top:30%"></span><span class="ih-ff" style="left:66%;top:64%;animation-duration:6.5s;animation-delay:-2s"></span><span class="ih-ff" style="left:93%;top:38%;animation-duration:7s;animation-delay:-4s"></span>
+<div class="ih-in">
+<div class="ih-tx">
+<div style="display:flex;align-items:center;gap:14px"><span class="ih-ln" style="width:40px;height:3px;background:#e5e9fb;flex:none"></span><span class="ih-lb" style="font:700 15px/1 Archivo;letter-spacing:.16em;text-transform:uppercase">Illustration · Picture book</span></div>
+<h1 id="ih-title">Skräphjältarna</h1>
+<p class="ih-p" style="font:400 19px/1.5 Archivo;margin:0;max-width:440px;text-wrap:pretty;color:#e5e9fb">"The Trash Heroes" — a children's picture book, illustrated by Tarek Alfutih</p>
+<div class="ih-bt" style="display:flex;flex-wrap:wrap;gap:10px">
+<a class="hvx1" href="https://olika.nu/products/skraphjaltarna" rel="noopener" style="position:relative;background:#b9a6f0;color:#0b1a5c;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 18px;text-decoration:none" target="_blank">Buy the book<span aria-hidden="true" class="ext-d" style="margin-left:8px">↗</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"> (opens in new tab)</span></a>
+<a class="hvx2" href="https://cdn.shopify.com/s/files/1/0553/0694/4572/files/skraphjaltarna_PROVLAS.pdf" rel="noopener" style="position:relative;border:2px solid #ffe9a8;color:#ffe9a8;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none" target="_blank">Read a preview (PDF)<span aria-hidden="true" class="ext-d" style="margin-left:8px">↗</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"> (opens in new tab)</span></a>
+</div>
+</div>
+<div class="ih-cv"><div><img width="1254" height="1254" alt="Skräphjältarna cover" decoding="async" loading="lazy" src="/assets/img/skraphjaltarna-cover.jpg" srcset="/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /assets/img/opt/skraphjaltarna-cover-800.webp 800w, /assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 78vw, (max-width: 900px) 45vw, (max-width: 1280px) 46vw, 621px" style="width:100%;height:auto;display:block"/></div></div>
+</div>
+</section>
+<div class="ih-f">
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Illustrator</div><div style="font:600 15px/1.35 Archivo">Tarek Alfutih</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Authors</div><div style="font:600 15px/1.35 Archivo">Kristina Henkel &amp; Marie Tomičić</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Publisher</div><div style="font:600 15px/1.35 Archivo">OLIKA förlag, Sweden · 2023</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Format</div><div style="font:600 15px/1.35 Archivo">Hardcover · 20×20 cm · 36 pages</div></div>
+</div>
+<section class="pad rule" style="padding:48px 56px">
+<p style="font:400 18px/1.55 Archivo;color:#3a3835;margin:0;max-width:720px;text-wrap:pretty">Encourages children to pick up litter and sort waste. Magical Metal, Glittery Glass, Peppy Plastic, Cuddly Cardboard and Cool Compost — they all turn old into new. A picture book that inspires recycling by celebrating everything fun and good that can be made from trash.</p>
+</section>
+<section class="pad rule" style="padding:48px 56px">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">01</span><span>The book</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Five characters in a talking recycling bin</h2>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 14px;text-wrap:pretty">Skräphjältarna ("The Trash Heroes") follows five characters who live inside a talking recycling bin: Magical Metal, Glittery Glass, Peppy Plastic, Cuddly Cardboard and Cool Compost. Each one shows children how their kind of waste gets a second life.</p>
+<p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">The book was created in collaboration with the Rinkeby-Tensta district administration in Stockholm, aimed at inspiring children and adults to sort their waste. It's printed on Nordic Swan-certified recycled paper.</p>
+</section>
+<section class="pad rule" style="padding:48px 56px">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">02</span><span>Illustrations</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Pages from the story</h2>
+<div class="gallery">
+<div>
+<div style="background:#ececea;aspect-ratio:1/1;overflow:hidden"><img width="1343" height="1343" alt="Children playing at a playground" decoding="async" loading="lazy" src="/assets/img/skraphjaltarna-playground.png" srcset="/assets/img/opt/skraphjaltarna-playground-480.webp 480w, /assets/img/opt/skraphjaltarna-playground-800.webp 800w, /assets/img/opt/skraphjaltarna-playground-1200.webp 1200w, /assets/img/opt/skraphjaltarna-playground-1343.webp 1343w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 652px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+<div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Children at play — one of the book's opening spreads</div>
+</div>
+<div>
+<div style="background:#ececea;aspect-ratio:1/1;overflow:hidden"><img width="1800" height="1800" alt="Magical Metal introduces herself" decoding="async" loading="lazy" src="/assets/img/skraphjaltarna-metal.jpg" srcset="/assets/img/opt/skraphjaltarna-metal-480.webp 480w, /assets/img/opt/skraphjaltarna-metal-800.webp 800w, /assets/img/opt/skraphjaltarna-metal-1200.webp 1200w, /assets/img/opt/skraphjaltarna-metal-1600.webp 1600w, /assets/img/opt/skraphjaltarna-metal-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 652px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+<div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Magical Metal introduces herself</div>
+</div>
+<div>
+<div style="background:#ececea;aspect-ratio:1/1;overflow:hidden"><img width="1800" height="1800" alt="Cool Compost introduces himself" decoding="async" loading="lazy" src="/assets/img/skraphjaltarna-compost.jpg" srcset="/assets/img/opt/skraphjaltarna-compost-480.webp 480w, /assets/img/opt/skraphjaltarna-compost-800.webp 800w, /assets/img/opt/skraphjaltarna-compost-1200.webp 1200w, /assets/img/opt/skraphjaltarna-compost-1600.webp 1600w, /assets/img/opt/skraphjaltarna-compost-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 652px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+<div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Cool Compost introduces himself</div>
+</div>
+<div>
+<div style="background:#ececea;aspect-ratio:1/1;overflow:hidden"><img width="1800" height="1800" alt="A cycle showing how waste becomes energy" decoding="async" loading="lazy" src="/assets/img/skraphjaltarna-cycle.jpg" srcset="/assets/img/opt/skraphjaltarna-cycle-480.webp 480w, /assets/img/opt/skraphjaltarna-cycle-800.webp 800w, /assets/img/opt/skraphjaltarna-cycle-1200.webp 1200w, /assets/img/opt/skraphjaltarna-cycle-1600.webp 1600w, /assets/img/opt/skraphjaltarna-cycle-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 94vw, (max-width: 1280px) 44vw, 652px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+<div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">The cycle of how waste becomes energy</div>
+</div>
+</div>
+</section>
+<section class="pad rule" style="padding:40px 56px">
+<div style="background:#ececea;max-width:480px;aspect-ratio:1/1;overflow:hidden"><img width="1800" height="1800" alt="The heroes say goodbye" decoding="async" loading="lazy" src="/assets/img/skraphjaltarna-farewell.jpg" srcset="/assets/img/opt/skraphjaltarna-farewell-480.webp 480w, /assets/img/opt/skraphjaltarna-farewell-800.webp 800w, /assets/img/opt/skraphjaltarna-farewell-1200.webp 1200w, /assets/img/opt/skraphjaltarna-farewell-1600.webp 1600w, /assets/img/opt/skraphjaltarna-farewell-1800.webp 1800w" sizes="(max-width: 560px) 87vw, (max-width: 900px) 63vw, (max-width: 1280px) 44vw, 480px" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
+<div style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">"Come back soon! We'll be waiting" — the closing spread</div>
+</section>
+<section class="pad" style="padding:40px 56px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+<div style="font:400 15px/1.5 Archivo;color:#75726e">Part of 10+ years in visual communication and children's book illustration.</div>
+<a href="https://tarekalfutih.se" style="margin-left:auto" target="_blank">More illustration work at tarekalfutih.se</a>
+</section>
   </main>
 
   <footer class="ft">
     <span class="ft-copy">© 2026 Tarek Alfutih</span>
   </footer>
-
 </div>
-<script src="/My-new-portfolio-2026/assets/js/video-controls.js?v=da35a813" defer></script>
-<script src="/My-new-portfolio-2026/assets/js/site.js?v=224d3fa2" defer></script>
+<script src="/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/assets/js/site.js?v=b96d8d47" defer></script>
+<script src="/assets/js/pages/illustration.js?v=edb7e3df" defer></script>
 </body>
 </html>
