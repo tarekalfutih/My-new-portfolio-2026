@@ -209,6 +209,11 @@ def carousels(soup, wrap, js=''):
         if root is None: continue
         root['data-car'] = p
         um = re.search(r"%sCount:\s*'([A-Za-z]+) '" % p, js) or re.search(r"%sCount:[^,]*?'([A-Z][a-z]+) '" % p, js)
+        if not um:
+            um = re.search(r"_car\('%s', \d+, '([A-Za-z]+)'\)" % p, js)
+        if not um:
+            di = js.find(p + 'Dots')
+            um = re.search(r"label: '([A-Za-z]+) ' \+", js[di:di + 800]) if di >= 0 else None
         if um: root['data-car-unit'] = um.group(1)
         for k in ('ref', 'onscroll', 'onkeydown'):
             if k in track.attrs: del track[k]
@@ -327,8 +332,8 @@ def convert(ref, slug_route):
     # other element refs (heroRef, factsRef...) -> data-ref="hero" for the page script
     for el in wrap.find_all(attrs={'ref': True}):
         n = tok(el['ref'])
-        if n and n.endswith('Ref'):
-            el['data-ref'] = n[:-3]; del el['ref']
+        if n:
+            el['data-ref'] = n[:-3] if n.endswith('Ref') else n; del el['ref']
     # page-specific template placeholders
     for k, v in FILL.get(ref, {}).items():
         for node in wrap.find_all(string=re.compile(re.escape(k))):
