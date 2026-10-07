@@ -167,7 +167,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 @media (min-width:768px){
   .sc-thumb{height:auto !important;aspect-ratio:16/10}
   .short-grid{align-items:start}
-  .feat-img{height:auto !important;width:100% !important;aspect-ratio:3/4}
+  .feat-img{height:auto !important;width:100% !important;aspect-ratio:1074/716}
 }
 /* Lead project (3 Oct). 768–900px: photo in columns 1–6, text in 7–12, vertically centred.
    768–819px (iPad mini): the thesis button is hidden and the type is a step smaller. */
@@ -222,7 +222,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .lead-grid,.two-col{grid-template-columns:1fr !important;gap:18px !important;position:relative}
   .lead-photo,.lead-text{grid-column:1 / -1 !important}
   .lead-photo,.feat-img{width:calc(100% + 40px) !important;max-width:none !important;margin:0 -20px !important;position:relative;overflow:hidden}
-  .feat-img{height:auto !important;aspect-ratio:auto}
+  .feat-img{height:auto !important;aspect-ratio:1074/716}
   .lead-photo::after,.feat-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,26,92,0) 55%,rgba(11,26,92,.6) 75%,rgba(11,26,92,.9) 100%);pointer-events:none}
   .feat-img::after{background:linear-gradient(180deg,rgba(11,26,92,0) 35%,rgba(11,26,92,.6) 65%,rgba(11,26,92,.92) 100%)}
   .lead-chip{margin-bottom:12px !important}
@@ -259,8 +259,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .illo-btns a:first-child{display:none !important}
   .illo-btns a:last-child{color:#7ee0b5 !important}
 }
-.feat-shot{display:block;width:100%;height:100%;object-fit:contain}
-@media (max-width:767px){.feat-shot{height:auto}}
+.feat-shot{display:block;width:100%;height:100%;object-fit:cover}
 /* Tablet layouts from the 6 Oct reference. */
 @media (min-width:768px) and (max-width:900px){
   .hero-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;margin-top:0 !important}
@@ -396,7 +395,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
     <div style="margin-bottom:24px"><div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e"><span class="hl-w" style="animation-delay:0.10s">Second</span> <span class="hl-w" style="animation-delay:0.18s">featured</span></div><div class="hl-line" style="margin-top:12px"></div></div>
     <div class="two-col" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center">
       <div class="feat-img" style="width:100%;height:340px">
-        <a href="/work/smart-fishing/?from=home" aria-label="Smart Fishing case study" class="img-link" style="display:block;width:100%;height:100%"><img class="feat-shot" src="/assets/img/record-section-after-mts8p0lk-foqw.png" alt="Smart Fishing — app screens" decoding="async"></a>
+        <a href="/work/smart-fishing/?from=home" aria-label="Smart Fishing case study" class="img-link" style="display:block;width:100%;height:100%"><img class="feat-shot" src="/assets/img/home-fishing-hero.webp" alt="Smart Fishing — app screens" decoding="async"></a>
       </div>
       <div class="feat-txt">
         <h2 class="feat-title" style="font:600 36px/1.08 Archivo;letter-spacing:-.03em;margin:0 0 8px">Smart Fishing</h2>

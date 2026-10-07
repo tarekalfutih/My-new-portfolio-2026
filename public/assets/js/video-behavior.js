@@ -1,7 +1,8 @@
 /* Portfolio video behavior — loaded first in <head> on every page (from the 6 Oct handoff;
    the rotate prompt is left out at Tarek's request).
    Follows Apple HIG "Playing video" (developer.apple.com/design/human-interface-guidelines/playing-video):
-   - System (native) playback controls only; picture-in-picture, full screen and AirPlay stay available.
+   - Controls: the site control bar (video-controls.js) — native controls tint the video on hover in
+     Safari, which pages cannot turn off. Picture-in-picture and AirPlay stay available.
    - Never autoplays with sound. Muted, looping, control-less clips are ambient (pause off-screen, resume on-screen).
    - Content keeps its original aspect ratio (object-fit:contain enforced; letterbox, never crop).
    - Plays inline on iPhone (playsinline) — people choose full screen themselves.
@@ -15,7 +16,9 @@
   var THRESHOLD = 0.25, KEY = 'pfVideoPos:';
   var seen = new WeakSet();
 
-  function isAmbient(v) { return v.muted && v.loop && !v.controls; }
+  // Videos with the site controls (data-vc, video-controls.js) are never ambient, even though the
+  // script removed their native controls attribute.
+  function isAmbient(v) { return v.muted && v.loop && !v.controls && !v.hasAttribute('data-vc'); }
   function isFullscreen(v) {
     var fs = document.fullscreenElement || document.webkitFullscreenElement;
     return (!!fs && (fs === v || fs.contains(v))) || !!v.webkitDisplayingFullscreen;

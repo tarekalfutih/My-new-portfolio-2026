@@ -127,6 +127,86 @@ button { font-family: inherit; }
 .btn-primary:hover, .btn-primary:focus-visible { background: var(--cobalt-hover); color: #fff; text-decoration: none; }
 .btn-primary:active { background: var(--cobalt-700); color: #fff; }
 
+/* Site video controls (video-controls.js). Nothing tints the footage: a compact bar at the bottom,
+   shown while paused and on hover / focus / tap while playing. */
+.vc { position: relative; display: block; width: 100%; }
+/* The wrapper always fills its frame. Page rules that run "div:has(> video)" edge to edge mean the
+   frame around the video, not this wrapper (it would be widened twice). */
+html body .wrap div.vc.vc { width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; }
+.vc > video { cursor: pointer; }
+.vc-btn {
+  appearance: none; -webkit-appearance: none; border: 0; margin: 0; padding: 0; border-radius: 0;
+  background: transparent; color: #fff; cursor: pointer; flex: none;
+  width: 44px; height: 44px; display: inline-flex; align-items: center; justify-content: center;
+}
+.vc-btn svg { width: 20px; height: 20px; display: block; }
+.vc-bar {
+  position: absolute; left: 8px; right: 8px; bottom: 8px;
+  display: flex; align-items: center; padding: 0 2px;
+  background: rgba(28, 27, 26, .9); color: #fff;
+  opacity: 0; pointer-events: none; transition: opacity .2s;
+}
+.vc.is-paused .vc-bar, .vc.is-active .vc-bar, .vc:focus-within .vc-bar { opacity: 1; pointer-events: auto; }
+.vc-time {
+  font: 600 12px/1 Archivo, sans-serif; font-variant-numeric: tabular-nums;
+  white-space: nowrap; padding: 0 6px 0 4px;
+}
+.vc-narrow .vc-time { display: none; }
+.vc-seek {
+  flex: 1; min-width: 32px; height: 44px; margin: 0 6px;
+  -webkit-appearance: none; appearance: none; background: transparent; cursor: pointer;
+}
+.vc-seek::-webkit-slider-runnable-track {
+  height: 4px; background: linear-gradient(to right, #fff var(--p, 0%), rgba(255, 255, 255, .35) var(--p, 0%));
+}
+.vc-seek::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 12px; height: 12px; margin-top: -4px; background: #fff; border: 0; border-radius: 0;
+}
+.vc-seek::-moz-range-track { height: 4px; background: rgba(255, 255, 255, .35); }
+.vc-seek::-moz-range-progress { height: 4px; background: #fff; }
+.vc-seek::-moz-range-thumb { width: 12px; height: 12px; background: #fff; border: 0; border-radius: 0; }
+.vc-bar .vc-btn:focus-visible, .vc-seek:focus-visible { outline: 2px solid var(--cobalt-200); outline-offset: -2px; }
+.vc:fullscreen { background: #000; display: flex; align-items: center; }
+.vc:fullscreen > video { width: 100%; height: 100%; object-fit: contain; }
+.vc:-webkit-full-screen { background: #000; display: flex; align-items: center; width: 100%; height: 100%; }
+.vc:-webkit-full-screen > video { width: 100%; height: 100%; object-fit: contain; }
+
+/* CV dialog (cv-viewer.js): max 1200px wide, full screen on phones. */
+.cvv {
+  position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
+  padding: 16px; background: rgba(11, 26, 92, .72);
+}
+.cvv-panel {
+  width: 100%; max-width: 1200px; height: 100%; display: flex; flex-direction: column;
+  background: #fff; border: 2px solid var(--ink);
+}
+.cvv-bar { display: flex; align-items: center; gap: 10px; padding: 12px 12px 12px 20px; border-bottom: 2px solid var(--ink); }
+.cvv-title { margin-right: auto; font: 700 17px/1 Archivo, sans-serif; letter-spacing: -.02em; color: var(--ink); white-space: nowrap; }
+.cvv-btn {
+  display: inline-flex; align-items: center; gap: 8px; height: 44px; padding: 0 16px; box-sizing: border-box; cursor: pointer;
+  font: 600 12px/1 Archivo, sans-serif; letter-spacing: .06em; text-transform: uppercase; text-decoration: none;
+}
+.cvv-dl { background: var(--cobalt); color: #fff; border: 0; }
+.cvv-dl:hover { background: var(--cobalt-700); color: #fff; text-decoration: none; }
+.cvv-close { background: #fff; color: var(--ink); border: 2px solid var(--ink); }
+.cvv-close:hover { background: var(--ink); color: #fff; }
+.cvv-pages {
+  flex: 1; min-height: 0; overflow: auto; -webkit-overflow-scrolling: touch; background: var(--ground);
+  padding: 16px; display: flex; flex-direction: column; align-items: center; gap: 16px;
+}
+.cvv-pages canvas { flex: none; background: #fff; box-shadow: 0 1px 3px rgba(0, 0, 0, .12); }
+.cvv-pages iframe { flex: 1; width: 100%; border: 0; }
+.cvv-msg { font: 500 14px/1.4 Archivo, sans-serif; color: var(--body-2); padding: 24px; }
+html.cvv-open { overflow: hidden; }
+@media (max-width: 767px) {
+  .cvv { padding: 0; }
+  .cvv-panel { max-width: none; border: 0; }
+  .cvv-bar { padding: 8px 8px 8px 16px; }
+  .cvv-title { font-size: 15px; }
+  .cvv-name, .cvv-dl { display: none; }
+  .cvv-pages { padding: 8px; }
+}
+
 /* CV dialog (cv-viewer.js): max 1200px wide, full screen on phones. */
 .cvv {
   position: fixed; inset: 0; z-index: 1000; display: flex; align-items: center; justify-content: center;
