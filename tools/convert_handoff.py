@@ -29,8 +29,17 @@ PROTECTED_DOCS = ('files/', 'documents/', 'uploads/Touch_Discover_report.pdf', '
 
 warnings = []
 
+
+def captured(name, key):
+    """Markup the reference page renders from React.createElement (decorative SVGs), captured from
+    the live reference with cdp.py into <name>.json."""
+    try: return json.load(open(os.path.join(HERE, name + '.json')))[key]
+    except Exception: warnings.append('missing capture %s.%s' % (name, key)); return ''
+
+
 # Template placeholders filled with static markup (their DCLogic only rendered a fixed element).
 FILL = {
+    'Case Study - PlayRent': {'{{ logoNotes }}': captured('pr-capture', 'logo'), '{{ prInst }}': captured('pr-capture', 'inst')},
     'Case Study - LEGO ALMA': {'{{ obsHot }}': ''},
     'Case Study - Octotorg': {'{{ ocGlow }}': '<div class="oc-glow" aria-hidden="true" style="position:absolute;left:44%;top:22%;width:50%;height:70%;border-radius:50%;filter:blur(90px);pointer-events:none;animation:ocHue 12s ease-in-out infinite"></div>'},
 }
