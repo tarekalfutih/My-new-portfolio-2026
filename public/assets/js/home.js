@@ -7,7 +7,7 @@
   function initTyper() {
     var el = document.querySelector('[data-typer-text]');
     if (!el || reduce) return;
-    var P = ['Based in Gothenburg, Sweden', 'Usability first, always', 'Turning feedback into better design',
+    var P = ['Open to freelance projects and full-time opportunities.', 'Based in Gothenburg, Sweden', 'Usability first, always',
       'Accessible design for everyone', "Designer with an illustrator's eye"];
     var i = 0, n = 0, del = false;
     el.textContent = '';

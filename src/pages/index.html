@@ -167,7 +167,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 @media (min-width:768px){
   .sc-thumb{height:auto !important;aspect-ratio:16/10}
   .short-grid{align-items:start}
-  .feat-img{height:auto !important;width:100% !important;aspect-ratio:16/10}
+  .feat-img{height:auto !important;width:100% !important;aspect-ratio:3/4}
 }
 /* Lead project (3 Oct). 768–900px: photo in columns 1–6, text in 7–12, vertically centred.
    768–819px (iPad mini): the thesis button is hidden and the type is a step smaller. */
@@ -217,12 +217,12 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .sk-steps{grid-template-columns:1fr !important;gap:16px !important}
   .sk-step p{font-size:15px !important}
   .sk-out{font-size:28px}
-  .sk-cta-wrap{padding-top:28px !important}
+  .sk-cta-wrap{display:none !important}
   .sec-pad{padding:32px 20px !important}
   .lead-grid,.two-col{grid-template-columns:1fr !important;gap:18px !important;position:relative}
   .lead-photo,.lead-text{grid-column:1 / -1 !important}
   .lead-photo,.feat-img{width:calc(100% + 40px) !important;max-width:none !important;margin:0 -20px !important;position:relative;overflow:hidden}
-  .feat-img{height:auto !important;aspect-ratio:1074/716}
+  .feat-img{height:auto !important;aspect-ratio:auto}
   .lead-photo::after,.feat-img::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,26,92,0) 55%,rgba(11,26,92,.6) 75%,rgba(11,26,92,.9) 100%);pointer-events:none}
   .feat-img::after{background:linear-gradient(180deg,rgba(11,26,92,0) 35%,rgba(11,26,92,.6) 65%,rgba(11,26,92,.92) 100%)}
   .lead-chip{margin-bottom:12px !important}
@@ -246,19 +246,21 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .short-grid h3{font-size:14px !important;margin-bottom:3px !important}
   .sc-dtxt{display:none}
   .sc-desc{font-size:12px !important}
-  .footnote{padding:32px 20px !important}
+  .footnote{padding:40px 20px !important}
   .illo-shade{background:rgba(11,26,92,.72) !important}
-  .illo-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:12px !important;align-items:stretch !important}
+  .illo-grid{grid-template-columns:120px minmax(0,1fr) !important;gap:20px !important;align-items:center !important}
   .illo-cover{grid-column:1 !important;grid-row:1 !important;width:100% !important;max-width:none !important;margin:0 !important;box-shadow:0 10px 24px rgba(0,0,0,.4) !important}
   .illo-text{grid-column:2 !important;grid-row:1 !important;display:flex !important;flex-direction:column !important;min-width:0}
   .illo-text>div[aria-hidden]{display:none !important}
-  .illo-text h3{font-size:18px !important;line-height:1.15 !important;margin:0 0 6px !important}
-  .illo-text p{font-size:13px !important;line-height:1.4 !important;margin:0 !important}
-  .illo-btns{flex-direction:column !important;gap:0 !important;margin-top:auto !important;padding-top:4px}
-  .illo-btns a{min-height:44px !important;padding:0 !important;border:0 !important;border-top:1px solid rgba(255,255,255,.35) !important;background:transparent !important;justify-content:space-between !important;font-size:11px !important;letter-spacing:.05em !important}
-  .illo-btns a:first-child{color:#d2c6f7 !important}
+  .illo-text h3{font-size:24px !important;line-height:1.1 !important;margin:0 0 4px !important}
+  .illo-text p{font-size:15px !important;line-height:1.4 !important;margin:0 !important}
+  .illo-btns{flex-direction:column !important;gap:0 !important;margin-top:4px !important;padding-top:0}
+  .illo-btns a{min-height:44px !important;padding:0 !important;border:0 !important;background:transparent !important;justify-content:flex-start !important;gap:6px !important;font-size:12px !important;letter-spacing:.06em !important}
+  .illo-btns a:first-child{display:none !important}
   .illo-btns a:last-child{color:#7ee0b5 !important}
 }
+.feat-shot{display:block;width:100%;height:100%;object-fit:contain}
+@media (max-width:767px){.feat-shot{height:auto}}
 </style>
 </head>
 <body>
@@ -275,7 +277,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
       <div data-sp="text" style="grid-column:1 / span 7;min-width:0">
         <div data-sp="role" class="hero-role" style="display:flex;align-items:center;gap:14px;margin:0 0 28px;animation:heroFadeUp .5s ease-out both"><span style="width:40px;height:3px;background:#1b3ac4;flex:none;transform-origin:left;animation:heroDrawLine .5s ease-out both"></span><span style="font:600 16px/1.2 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#1b3ac4">Interaction Designer</span></div>
         <h1 class="h1-hero" data-sp="h1" data-type-hero="1" aria-label="Turning complexity into intuitive experiences." style="font:700 clamp(56px, 7.5vw, 96px)/.98 Archivo;letter-spacing:-.045em;margin:0;text-wrap:pretty"><span style="display:inline-block">Turning</span> <span style="display:inline-block">complexity</span> <span style="display:inline-block">into</span> <span class="aurora-word" style="display:inline-block">intuitive</span> <span style="display:inline-block">experiences.</span></h1>
-        <p class="hero-typer" style="margin:40px 0 0;min-height:1.4em;display:flex;align-items:center;gap:14px;font:500 clamp(18px, 1.7vw, 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Based in Gothenburg, Sweden. Usability first, always. Turning feedback into better design. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true" style="display:inline-flex;align-items:center"><span data-typer-text="1">Based in Gothenburg, Sweden</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;background:#1b3ac4"></span></span></p>
+        <p class="hero-typer" style="margin:40px 0 0;min-height:2.8em;max-width:30em;display:flex;align-items:flex-start;gap:14px;text-wrap:pretty;font:500 clamp(18px, 1.7vw, 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none;margin-top:.55em"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Open to freelance projects and full-time opportunities. Based in Gothenburg, Sweden. Usability first, always. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true"><span data-typer-text="1">Open to freelance projects and full-time opportunities.</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;vertical-align:-.15em;background:#1b3ac4"></span></span></p>
       </div>
       <div data-sp="photo" class="hero-photo" style="grid-column:8 / span 5;width:100%;height:clamp(320px, calc(100svh - 260px), 600px);overflow:hidden;background:#ececea;animation:heroFadeUp .6s ease-out both;animation-delay:.2s">
         <img src="/assets/img/my-photo-ai.jpg" alt="Tarek Alfutih" style="width:100%;height:100%;object-fit:cover;display:block">
@@ -370,8 +372,8 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   </section><section class="sec-pad" data-reveal-lead="1" style="padding:56px;border-bottom:2px solid #1c1b1a">
     <div style="margin-bottom:24px"><div style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#75726e"><span class="hl-w" style="animation-delay:0.10s">Second</span> <span class="hl-w" style="animation-delay:0.18s">featured</span></div><div class="hl-line" style="margin-top:12px"></div></div>
     <div class="two-col" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center">
-      <div class="feat-img" style="width:100%;height:340px;background:#ececea">
-        <a href="/work/smart-fishing/?from=home" aria-label="Smart Fishing case study" class="img-link" style="display:block;width:100%;height:100%"><img class="slot" src="/assets/img/home-fishing-hero.webp" alt="Smart Fishing — app screens" decoding="async"></a>
+      <div class="feat-img" style="width:100%;height:340px">
+        <a href="/work/smart-fishing/?from=home" aria-label="Smart Fishing case study" class="img-link" style="display:block;width:100%;height:100%"><img class="feat-shot" src="/assets/img/record-section-after-mts8p0lk-foqw.png" alt="Smart Fishing — app screens" decoding="async"></a>
       </div>
       <div class="feat-txt">
         <h2 class="feat-title" style="font:600 36px/1.08 Archivo;letter-spacing:-.03em;margin:0 0 8px">Smart Fishing</h2>
@@ -437,7 +439,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
         <img class="slot" src="/assets/img/skraphjaltarna-cover.jpg" alt="Skräphjältarna" loading="lazy" decoding="async">
       </div>
       <div class="illo-text" style="grid-column:7 / span 5;display:flex;flex-direction:column">
-        <div aria-hidden="true" style="display:flex;gap:6px;margin:0 0 20px"><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #f26b3a"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #4cb867"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #ffd23f"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #a9b6ee"></span></div><h3 style="color:#fff;font:600 34px/1.1 Archivo;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance"><span class="illo-shine" style="background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite">Illustration &amp; Visual Storytelling</span></h3>
+        <div aria-hidden="true" style="display:flex;gap:6px;margin:0 0 20px"><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #f26b3a"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #4cb867"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #ffd23f"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #a9b6ee"></span></div><h3 style="color:#fff;font:600 34px/1.1 Archivo;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance"><span class="illo-shine" style="background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite">Illustration<span class="m-hide"> &amp; Visual Storytelling</span></span></h3>
         <p style="font:400 17px/1.6 Archivo;color:#e5e9fb;margin:0 0 32px;max-width:460px;text-wrap:pretty">Alongside interaction design, I've illustrated 20+ children's books. Latest: <em style="font-style:normal;font-weight:700;color:#fff">Skräphjältarna</em>, 2023.</p>
         <div class="illo-btns" style="display:flex;gap:12px;flex-wrap:wrap">
           <a class="hv5" href="/illustration/?from=home" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #b9a6f0;background:#b9a6f0;color:#0b1a5c;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">Read about Skräphjältarna <span aria-hidden="true">→</span></a>
