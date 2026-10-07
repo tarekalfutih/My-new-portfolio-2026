@@ -34,7 +34,7 @@ public/                  copied to dist/ as-is
   assets/css/base.css        tokens, page frame, header, footer, focus, shared motion, phone header + menu
   assets/js/site.js          scroll reveal + Claude Design image crops (every page)
   assets/js/video-controls.js  site video controls: no shade over the video on hover (every page)
-  assets/js/video-behavior.js  resume where left off, pause off-screen, one at a time (every page)
+  assets/js/video-behavior.js  pause off screen, continue when back in view, one at a time (every page)
   assets/js/nav-back.js        "← Back" goes to the previous page on this site (case studies, Illustration)
   assets/js/section-spy.js     colours the section tab for the section in view (case studies)
   assets/js/carousel.js        swipe carousels ([data-car]): snap, pill dots with 5s auto-advance, play/pause
@@ -83,10 +83,11 @@ needed, so add an entry to `image-sizes.json` if it matters.
 paused and on hover / focus / tap while playing. Native controls shade the whole video on hover in
 Safari, and pages cannot turn that off. Without JavaScript the native controls stay.
 
-**Playback.** `assets/js/video-behavior.js` never autoplays with sound, keeps the original aspect
-ratio, plays inline on iPhone, remembers the position per video for the session (resume where people
-left off), exits full screen at the end, pauses a video that is less than 25% visible and plays one
-video at a time.
+**Playback.** `assets/js/video-behavior.js` follows Apple HIG "Playing video": never autoplays,
+original aspect ratio (never cropped), inline on iPhone, one video at a time, full screen exits at the
+end. Scrolling a playing video off screen (or hiding the tab) pauses it; when it is back in view it
+continues from the same frame without asking. A video the viewer paused stays paused. Leaving the page
+resets every video to 0:00 with its poster.
 
 **Protected files.** The CV, the thesis/report PDFs, all videos, the video thumbnails (posters) and the
 Gilded Cage download are never edited, renamed, re-encoded or regenerated (see the handoff's
