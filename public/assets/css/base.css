@@ -238,6 +238,9 @@ html.cvv-open { overflow: hidden; }
      final state. Page rules that set animation:none keep priority (higher specificity). */
   *, *::before, *::after {
     animation-duration: .01ms !important; animation-delay: 0s !important;
-    animation-iteration-count: 1 !important; transition-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    /* No transitions at all (not a tiny one): scripts that measure right after a style change
+       (hero fitting) must read the new value. */
+    transition: none !important;
   }
 }
