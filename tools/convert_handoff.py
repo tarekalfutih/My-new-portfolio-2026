@@ -9,8 +9,8 @@ import json, os, re, sys, urllib.parse
 from bs4 import BeautifulSoup, NavigableString
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-H = '/private/tmp/claude-501/-Users-tarek-Downloads-design-handoff-portfolio/b1f4b94c-085b-40c8-bda2-e6645ac20cbf/scratchpad/h1006/design_handoff_portfolio/'
-REPO = '/Users/tarek/Documents/GitHub/My-new-portfolio-2026/'
+H = os.path.join(HERE, 'h1006/design_handoff_portfolio/')
+REPO = os.path.dirname(HERE) + '/'
 IMGMAP = json.load(open(os.path.join(HERE, 'imgmap.json')))
 
 ROUTES = {
@@ -31,6 +31,7 @@ warnings = []
 
 # Template placeholders filled with static markup (their DCLogic only rendered a fixed element).
 FILL = {
+    'Case Study - LEGO ALMA': {'{{ obsHot }}': ''},
     'Case Study - Octotorg': {'{{ ocGlow }}': '<div class="oc-glow" aria-hidden="true" style="position:absolute;left:44%;top:22%;width:50%;height:70%;border-radius:50%;filter:blur(90px);pointer-events:none;animation:ocHue 12s ease-in-out infinite"></div>'},
 }
 
@@ -200,8 +201,8 @@ def carousels(soup, wrap, js=''):
         if not name or not name.endswith('Ref'): continue
         p = name[:-3]
         others = [x for x in wrap.find_all(True) if any(tok(v) in (p + 'Prev', p + 'Next', p + 'Dots', p + 'Toggle', p + 'Count') for k, v in x.attrs.items() if isinstance(v, str)) or (x.string and tok(x.string) == p + 'Count')]
-        if not others and not track.find_parent():
-            continue
+        if not others:
+            continue  # a plain element ref (hero, facts...), not a carousel
         root = track.parent
         while root is not None and not all(root in o.parents for o in others):
             root = root.parent
@@ -323,10 +324,18 @@ def convert(ref, slug_route):
         el['style'] = map_urls_in_css(el['style'])
     ci = t.find('class Component')
     carousels(soup, wrap, t[ci:t.find('</script>', ci)] if ci > 0 else '')
+    # other element refs (heroRef, factsRef...) -> data-ref="hero" for the page script
+    for el in wrap.find_all(attrs={'ref': True}):
+        n = tok(el['ref'])
+        if n and n.endswith('Ref'):
+            el['data-ref'] = n[:-3]; del el['ref']
     # page-specific template placeholders
     for k, v in FILL.get(ref, {}).items():
         for node in wrap.find_all(string=re.compile(re.escape(k))):
             node.replace_with(BeautifulSoup(node.replace(k, v), 'html.parser'))
+        for el in wrap.find_all(True):
+            for ak, av in list(el.attrs.items()):
+                if isinstance(av, str) and k in av: el[ak] = av.replace(k, v)
     # header -> shared bar + section tabs
     hd = soup.new_tag('header'); hd['class'] = 'cs-hd'
     hd.append(NavigableString('\n    <!--@case-bar-->\n    '))
