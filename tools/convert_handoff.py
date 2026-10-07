@@ -161,6 +161,18 @@ VIDEO_NAME = {  # design file -> repo file (repo videos are the real sources; ne
 }
 
 
+def grid_area(el):
+    """grid-column + grid-row -> grid-area, as the browser serialises them in the design tool, so
+    the references' [style*="grid-column"] rules match the same elements."""
+    st = style_dict(el.get('style'))
+    gc, gr = sget(st, 'grid-column'), sget(st, 'grid-row')
+    if not gc or not gr: return
+    c = [x.strip() for x in gc.split('/')]; r = [x.strip() for x in gr.split('/')]
+    parts = [r[0], c[0]] + ([r[1] if len(r) > 1 else 'auto', c[1]] if len(c) > 1 else ([r[1]] if len(r) > 1 else []))
+    st = sdel(st, 'grid-column', 'grid-row'); st.append(['grid-area', ' / '.join(parts)])
+    el['style'] = style_str(st)
+
+
 def natural_img(img):
     """No crop, no bands: the image keeps its own shape and the frame around it follows."""
     st = style_dict(img.get('style'))
@@ -256,6 +268,28 @@ def carousels(soup, wrap, js=''):
             sf.replace_with(tpl)
 
 
+def rb_schedule():
+    """Resource Booking hero: the booking grid, static (final state: 16-19 selected in Svea 221).
+    pages/resource-booking.js animates the selection (cells marked data-rb-h)."""
+    hrs = list(range(8, 21))
+    busy = {'Svea 200': [8, 9, 10, 11, 14, 16], 'Svea 221': [8, 9, 10, 11], 'Svea 119': [8, 9], 'Kuggen 104': [10, 11, 15, 16]}
+    hatch = 'repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px)'
+    out = []
+    for name, b in busy.items():
+        out.append('<span style="display:flex;align-items:center;font:500 11px/1 Archivo;color:#9fd6cf">%s</span>' % name)
+        for h in hrs:
+            sel = name == 'Svea 221' and 16 <= h < 19
+            bg = '#e61fbf' if sel else (hatch if h in b else 'rgba(98,169,174,.45)')
+            mark = ' data-rb-h="%d"' % h if name == 'Svea 221' and 16 <= h < 19 else ''
+            out.append('<span%s style="height:22px;background:%s;transition:background .6s"></span>' % (mark, bg))
+    return '\n'.join(out)
+
+
+PRE = {  # raw-markup replacements before parsing (template loops rendered statically)
+    'Case Study - Resource Booking': [(re.compile(r'<sc-for list="\{\{ sched \}\}".*?</sc-for>\s*</sc-for>', re.S), rb_schedule)],
+}
+
+
 def convert(ref, slug_route):
     t = open(H + ref + '.dc.html').read()
     helmet = t[t.find('<helmet>'):t.find('</helmet>')]
@@ -265,6 +299,9 @@ def convert(ref, slug_route):
     # image slots become <img>: CSS that targets the slot element targets the image instead
     css = re.sub(r'(?<![\w-])image-slot(?![\w-])', 'img', css)
     body = t[t.find('</helmet>') + 9:t.find('</x-dc>')]
+    for rx, fn in PRE.get(ref, []):
+        body, n = rx.subn(lambda m: fn(), body)
+        if not n: warnings.append('PRE pattern not found')
     soup = BeautifulSoup(body, 'html.parser')
     wrap = soup.find('div', class_='wrap')
     header = wrap.find('header')
@@ -328,6 +365,7 @@ def convert(ref, slug_route):
     for el in wrap.find_all(style=True):
         el['style'] = map_urls_in_css(el['style'])
     ci = t.find('class Component')
+    for el in wrap.find_all(style=True): grid_area(el)
     carousels(soup, wrap, t[ci:t.find('</script>', ci)] if ci > 0 else '')
     # other element refs (heroRef, factsRef...) -> data-ref="hero" for the page script
     for el in wrap.find_all(attrs={'ref': True}):

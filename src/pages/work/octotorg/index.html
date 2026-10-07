@@ -60,12 +60,12 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
   .wrap section [style*="grid-column"]{grid-column:auto !important}
   .wrap section [style*="display:flex"]:not(.m-keep){flex-wrap:wrap}
   .wrap section [style*="width:"]:not(.m-keep){max-width:100%}
-  .wrap img,.wrap video,.wrap image-slot{max-width:100%}
+  .wrap img,.wrap video,.wrap img{max-width:100%}
   .wrap section a[href$=".pdf"]{display:none !important}
 }
 @media (max-width:767px){
-  .wrap section div:has(> image-slot):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
-  .wrap section image-slot,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
   .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
 }
 .oc-hero .oc-art{max-width:none}

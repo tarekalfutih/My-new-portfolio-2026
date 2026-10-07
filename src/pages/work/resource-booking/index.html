@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
 <!--@head /work/resource-booking/-->
-<link rel="stylesheet" href="/assets/css/case-phone.css">
 <title>Resource Booking System for Teachers — Tarek Alfutih</title>
 <meta name="description" content="A web-based room booking system that helps teachers book multiple rooms for recurring sessions based on specific preferences.">
 <style>
+@media (min-width:1281px) and (max-width:1679px){html,body{background:#fff !important}.wrap,.pg{max-width:none !important;border-left:0 !important;border-right:0 !important}}
+
 body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#122a8f;text-decoration:none}
 a:hover{color:#1b3ac4;text-decoration:underline}
@@ -51,140 +52,306 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .facts{grid-template-columns:1fr 1fr}
   .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
 }
+
+.m-only{display:none}
+.m-menu a{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #dcd9d4;font:600 20px/1 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-decoration:none}
+.m-menu a:last-child{border-bottom:0}.m-menu a:active{background:#e5e9fb}.m-menu a:hover{text-decoration:none;color:#1c1b1a}
+@media (max-width:767px){
+  html,body{overflow-x:clip;overscroll-behavior-x:none}
+  .wrap{border-left:0 !important;border-right:0 !important;overflow-x:clip}
+  .cs-top{height:56px;padding:0 6px 0 20px !important;flex-wrap:nowrap !important;gap:12px !important;border-bottom:0 !important}
+  .cs-top>a:first-child{font-size:17px !important;min-height:44px;display:inline-flex;align-items:center}
+  .cs-links,.cs-cv,.cs-tabs{display:none !important}
+  .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
+  .m-only{display:flex !important}
+  section[id]{scroll-margin-top:64px}
+  .wrap>section,.pad{padding-left:20px !important;padding-right:20px !important}
+  .pad{padding-top:36px !important;padding-bottom:36px !important}
+  .lbl{font-size:11px !important;letter-spacing:.14em !important}
+  h1.h1r{font-size:30px !important;line-height:1.08 !important;margin-bottom:12px !important}
+  .wrap h2{font-size:22px !important;line-height:1.2 !important}
+  .wrap h3{font-size:18px !important;line-height:1.25 !important}
+  .wrap p,.wrap li{font-size:16px !important;line-height:1.55 !important;max-width:none !important}
+  .wrap figcaption,.wrap .cap{font-size:13px !important}
+  .facts{grid-template-columns:1fr 1fr !important}
+  .facts>div{padding:16px 12px 16px 0 !important;border-right:none !important;border-bottom:1px solid #dcd9d4}
+  .facts>div>div:last-child{font-size:14px !important}
+  .wrap section [style*="grid-template-columns"]:not(.facts):not(.m-keep),.two,.three,.g2,.g3,.grid2,.grid3,.hero-split,.findings-grid{grid-template-columns:minmax(0,1fr) !important}
+  .wrap section [style*="grid-column"]{grid-column:auto !important}
+  .wrap section [style*="display:flex"]:not(.m-keep){flex-wrap:wrap}
+  .wrap section [style*="width:"]:not(.m-keep){max-width:100%}
+  .wrap img,.wrap video,.wrap img{max-width:100%}
+  .wrap section a[href$=".pdf"]{display:none !important}
+}
+@media (max-width:767px){
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
+  .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
+}
+.pc-dot:hover span{background:#4561dc !important}.pc-dot:active span{background:#122a8f !important}.pc-dot:focus-visible{outline:2px solid #1b3ac4;outline-offset:-4px}
+@keyframes pcFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.pc-dot:not([aria-current="true"]):hover>span{background:#4561dc !important}.pc-dot:focus-visible,.pc-play:focus-visible{outline:2px solid #1b3ac4;outline-offset:-4px}
+.pc-play:hover>span{background:#a9b6ee !important}.pc-play:active>span{background:#122a8f !important;color:#fff !important}
+@media (max-width:1024px){.wrap section .pr-nav,.wrap section .rb-nav{display:none !important}.wrap section .pc-play{grid-column:3 !important;grid-row:2 !important}}
+.pr-slide,.rb-slide{scroll-snap-stop:always}
+.wrap section .pr-count-dots,.wrap section .rb-count-dots{grid-column:2 !important;grid-row:2 !important;align-self:center;position:relative}
+.rb-track::-webkit-scrollbar{display:none}
+.rb-hero .copy{color:#d6ece9 !important;max-width:none}
+.rb-hero .facts{border-top:2px solid #fff !important;border-bottom:2px solid #fff !important}
+.rb-hero .facts>div{border-color:rgba(255,255,255,.25) !important}
+.rb-hero .facts .lbl{color:#7fd1c7 !important}
+.rb-hero .facts>div>div:last-child{color:#fff !important}
+.rb-hero ::selection{background:#fff;color:#0f4f49}
+@media (max-width:1100px){.rb-hero .rb-htext,.rb-hero .rb-sched{grid-column:1 / -1 !important}.rb-hero .rb-htext{max-width:600px}.rb-hero .rb-sched{margin-top:40px;max-width:600px}.rb-hero .rb-hgrid{margin-bottom:48px !important}}
+@media (max-width:767px){.rb-hero .rb-sched{margin-top:32px !important;max-width:none !important}.rb-hero .rb-sgrid{grid-template-columns:52px repeat(13,minmax(0,1fr)) !important;gap:2px !important}.rb-hero .rb-sgrid>span:not([style*="height"]){font-size:10px !important}.rb-hero .rb-sgrid>span[style*="height"]{height:18px !important}.rb-hero .rb-hgrid{margin-bottom:36px !important}.rb-hero h1.h1r{font-size:clamp(30px,8.6vw,36px) !important}.rb-hero .rb-htext>div:last-of-type{font-size:17px !important}.rb-hero .lbl{color:#7fd1c7 !important}}
+.rb-nav:disabled{opacity:.35;cursor:default}
+.rb-nav:not(:disabled):hover{background:#1b3ac4 !important;border-color:#1b3ac4 !important;color:#fff !important}
+.rb-nav:not(:disabled):active{background:#122a8f !important;border-color:#122a8f !important;color:#fff !important}
+.rb-nav:focus-visible,.rb-track:focus-visible{outline:2px solid #1b3ac4;outline-offset:2px}
+@media (max-width:900px){
+  .rb-car{margin:0 !important;grid-template-columns:44px minmax(0,1fr) 44px !important;column-gap:12px !important}
+  .rb-track{grid-column:1 / -1 !important}
+  .rb-nav{grid-row:2 !important;margin-top:12px !important}
+  .rb-count{grid-row:2 !important;align-self:center;text-align:center;margin-top:12px !important}
+}
+@media (max-width:767px){.rb-track{padding:0 6% !important;scroll-padding:0 6% !important;gap:10px !important}.rb-slide{flex-basis:88% !important}.rb-car{display:grid !important;grid-template-columns:44px minmax(0,1fr) 44px !important}.rb-nav{flex-wrap:nowrap !important;max-width:none !important}}
+@media (prefers-reduced-motion:reduce){.rb-track{scroll-behavior:auto !important}}
+
+.hvx0:hover{background:#1c1b1a !important;color:#fff !important}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="wrap">
 
-  <header class="cs-hd">
+<header class="cs-hd">
     <!--@case-bar-->
-    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 64px;overflow-x:auto;white-space:nowrap">
-      <a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Problem</a>
-      <a href="#midfi" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Mid-fi</a>
-      <a href="#test1" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Test 1</a>
-      <a href="#decisions" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Decisions</a>
-      <a href="#hifi" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Hi-fi</a>
-      <a href="#ai" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 On AI</a>
-      <a href="#future" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Future</a>
-    </nav>
+    <nav aria-label="Sections" class="cs-nav cs-tabs" style="display:flex;gap:20px;padding:12px 64px;overflow-x:auto;white-space:nowrap">
+<a href="#problem" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Problem</a>
+<a href="#midfi" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 Mid-fi</a>
+<a href="#test1" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Test 1</a>
+<a href="#decisions" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Decisions</a>
+<a href="#hifi" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Hi-fi</a>
+<a href="#ai" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 On AI</a>
+<a href="#future" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Future</a>
+</nav>
   </header>
 
   <main id="main">
 
-  <!-- HERO -->
-  <section class="pad rule">
-    <div class="lbl" style="margin-bottom:22px">UX case study</div>
-    <h1 class="h1r" style="font-size:clamp(28px,4vw,50px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px">Resource Booking System for Teachers</h1>
-    <div style="font:400 19px/1.4 Archivo;color:#3a3835;margin-bottom:26px;max-width:600px">Making recurring room booking clearer, faster and more flexible.</div>
-    <p class="copy" style="margin:0 0 34px">A web-based room booking system that helps teachers book multiple rooms for recurring sessions based on specific preferences. The project was developed through low-, mid-, and high-fidelity prototypes and is currently paused after the first design iteration, ahead of a second user test.</p>
-    <div class="facts">
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Role</div><div style="font:600 15px/1.35 Archivo">UX/UI</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Tools</div><div style="font:600 15px/1.35 Archivo">Figma · Claude Design</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div style="font:600 15px/1.35 Archivo">User testing · iteration</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Duration</div><div style="font:600 15px/1.35 Archivo">Two weeks</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Status</div><div style="font:600 15px/1.35 Archivo">Preparing Test 2</div></div>
-    </div>
-  </section>
-
-  <!-- PROBLEM & REQUIREMENTS -->
-  <section class="pad rule" style="padding-top:120px" id="problem">
-    <div class="step"><span class="step-n">01</span>The problem</div>
-    <div class="grid2" style="margin-top:20px">
-      <p class="copy-lg" style="margin:0">Teachers often face challenges when booking classrooms and equipment for their courses. Existing booking systems can be time-consuming and require users to navigate multiple pages before finding a suitable room. This project explores a more efficient and user-friendly booking experience.</p>
-      <div class="card">
-        <div class="lbl" style="margin-bottom:14px">Requirements — scenario breakdown</div>
-        <ul style="margin:0;padding-left:20px;line-height:1.85;font:400 15px Archivo;color:#3a3835">
-          <li>Allow booking of three rooms.</li>
-          <li>Ensure each room accommodates a minimum of 20 participants.</li>
-          <li>Ensure all selected rooms are located within 500 meters of each other.</li>
-          <li>Allow the same rooms to be used for multiple exercises.</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- MID-FI -->
-  <section class="pad rule" id="midfi">
-    <div class="step"><span class="step-n">02</span>Mid-fidelity prototype — Figma</div>
-    <p class="copy-lg" style="margin:0 0 32px">Built to work out the booking logic first: search by room type, equipment, building, date, time and seats — with multiple rooms, multiple dates, system-suggested rooms, and managing bookings. All components in the Figma prototype were created from scratch. The logic starts by asking the user what, where, when.</p>
-    <div class="frame" style="aspect-ratio:16/9">
-      <video src="/assets/video/rb-lofi-walkthrough.mp4" poster="/assets/video/rb-lofi-walkthrough-poster.webp" controls="controls" playsinline="playsinline" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
-    </div>
-    <div class="cap">Walkthrough — mid-fidelity prototype (Figma)</div>
-  </section>
-
-  <!-- TEST 1 -->
-  <section class="pad rule" id="test1">
-    <div class="step"><span class="step-n">03</span>Usability Test 1 <span style="color:#75726e;text-transform:none;letter-spacing:0;font-weight:500">· 5 users</span></div>
-    <p class="copy-lg" style="margin:0 0 32px">I tested the mid-fidelity prototype with five users to understand how they used the room booking system and to identify where the experience became difficult or unclear.</p>
-
-    <div class="lbl" style="margin-bottom:16px">Direct usability findings</div>
-    <div class="grid2" style="margin-bottom:36px">
-      <div class="card"><div class="n">01</div><div class="t">The search bar required too many clicks.</div><div class="d">Users sometimes needed to click twice to select an option and move to the next field.</div></div>
-      <div class="card"><div class="n">02</div><div class="t">Time selection needed improvement</div><div class="d">Selecting a start/end time from the search bar wasn't smooth enough.</div></div>
-      <div class="card"><div class="n">03</div><div class="t">Users wanted recommendations before pressing Search</div><div class="d">Users expected recommendations while making their selections, not only after pressing Search.</div></div>
-      <div class="card"><div class="n">04</div><div class="t">Selecting time from the schedule needed visual improvement</div><div class="d">The old Room Schedule already showed rooms and their available/busy times, and selecting a booking time from it was functionally clear, but the visual presentation needed improvement.</div></div>
-    </div>
-
-    <div class="lbl" style="margin-bottom:16px">Gaps I identified while evaluating the prototype</div>
-    <div class="grid2">
-      <div class="card"><div class="n">05</div><div class="t">No quick way to find a room available now</div><div class="d">The prototype had no dedicated path for "which room can I use right now?"</div></div>
-      <div class="card"><div class="n">06</div><div class="t">No complete way to browse all rooms</div><div class="d">There was no catalogue experience for browsing rooms and comparing them.</div></div>
-      <div class="card"><div class="n">07</div><div class="t">Room Schedule was difficult to access</div><div class="d">It wasn't clearly available as one of the system's main destinations.</div></div>
-    </div>
-  </section>
-
-  <!-- FINDINGS -> DECISIONS -->
-  <section class="pad rule" id="decisions">
-    <div class="step"><span class="step-n">04</span>Design decisions</div>
-    <p class="copy" style="margin:0 0 24px">Each decision responds directly to a numbered finding or gap from Usability Test 1.</p>
-    <div style="margin-top:8px">
-      <div class="fd-row"><div class="fd-n">01</div><div class="fd-decision">Selecting an option now completes the step and moves to the next field</div></div>
-      <div class="fd-row"><div class="fd-n">02</div><div class="fd-decision">Redesigned time-selection interaction</div></div>
-      <div class="fd-row"><div class="fd-n">03</div><div class="fd-decision">Recommended rooms for you, shown below the search bar as requirements are selected</div></div>
-      <div class="fd-row"><div class="fd-n">04</div><div class="fd-decision">Clearer start/end time selection directly from a room's availability timeline</div></div>
-      <div class="fd-row"><div class="fd-n">05</div><div class="fd-decision">Adding Available Now page to the navigation bar</div></div>
-      <div class="fd-row"><div class="fd-n">06</div><div class="fd-decision">Adding Our Rooms — the full catalogue to the navigation bar</div></div>
-      <div class="fd-row"><div class="fd-n">07</div><div class="fd-decision">Added as its own top-level destination in navigation bar</div></div>
-    </div>
-  </section>
-
-  <!-- HI-FI -->
-  <section class="pad rule" id="hifi">
-    <div class="step"><span class="step-n">05</span>High-fidelity prototype — Claude Design</div>
-    <p class="copy-lg" style="margin:0 0 32px">Usability Test 1 surfaced both interaction problems and gaps in the booking experience. I used Claude Design to move quickly from those findings to this high-fidelity prototype — directing decisions, reviewing what it produced, and refining it. It includes the design responses above, but has not been tested yet.</p>
-    <div class="frame" style="aspect-ratio:16/9">
-      <video src="/assets/video/rb-hifi-walkthrough.mp4" poster="/assets/video/rb-hifi-walkthrough-poster.webp" controls="controls" playsinline="playsinline" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
-    </div>
-    <div class="cap" style="margin-bottom:36px">Walkthrough — high-fidelity prototype</div>
-    <div class="stack">
-      <div><div class="frame" style="aspect-ratio:1304/766"><img class="slot" src="/assets/img/rb-new-home-select-anim-4.gif" alt="Homepage — selecting what, where, when" decoding="async" style="object-fit:contain;"></div><div class="cap">Selecting requirements on the homepage</div></div>
-      <div><div class="frame" style="aspect-ratio:2980/1764"><img class="slot" src="/assets/img/rb-new-best-available.webp" alt="Best Available Rooms" decoding="async" data-view="1.0074 0.003 0.371" style="object-fit:contain;"></div><div class="cap">Search Result</div></div>
-      <div><div class="frame" style="aspect-ratio:2972/1750"><img class="slot" src="/assets/img/rb-new-my-booking.webp" alt="My Booking" loading="lazy" decoding="async" style="object-fit:contain;"></div><div class="cap">My Booking</div></div>
-      <div><div class="frame" style="aspect-ratio:2980/1764"><img class="slot" src="/assets/img/rb-new-available-now.webp" alt="Available Now" loading="lazy" decoding="async" style="object-fit:contain;"></div><div class="cap">Available Now</div></div>
-      <div><div class="frame" style="aspect-ratio:2980/1764"><img class="slot" src="/assets/img/rb-new-schedule.webp" alt="Room Schedule" loading="lazy" decoding="async" style="object-fit:contain;"></div><div class="cap">Room Schedule</div></div>
-    </div>
-  </section>
-
-  <!-- AI NOTE -->
-  <section class="pad dark rule" id="ai">
-    <div class="step"><span class="step-n">06</span>On using AI</div>
-    <p style="font:400 17px/1.65 Archivo;margin:0;max-width:640px;color:#d8d6d2">Claude Design shortened the distance between a usability finding and a testable interaction. I directed the decisions and refined the result — it didn't design the project for me.</p>
-  </section>
-
-  <!-- NEXT -->
-  <section class="pad" id="future">
-    <div class="step"><span class="step-n">07</span>Future work</div>
-    <p class="copy-lg" style="margin:0 0 22px">The project is paused here. I need to test whether these changes actually work better before making further iterations.</p>
-    <div style="font:600 15px/1.5 Archivo;color:#1b3ac4">Prototype 1 → Usability Test 1 (5 users) → Findings → Design iteration → High-fidelity Prototype 2 → Usability Test 2</div>
-  </section>
-
+<!-- HERO -->
+<section class="pad rule rb-hero" style="background:#0f4f49;color:#fff">
+<div class="rb-hgrid" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;margin-bottom:48px">
+<div class="rb-htext" style="grid-column:1 / 6;min-width:0">
+<div class="lbl" style="margin-bottom:22px;color:#7fd1c7">UX case study</div>
+<h1 class="h1r" style="font-size:clamp(28px,3.6vw,46px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;color:#fff">Resource Booking System for Teachers</h1>
+<div style="font:400 19px/1.4 Archivo;color:#d6ece9;margin-bottom:0">Making recurring room booking clearer, faster and more flexible.</div>
+</div>
+<div aria-hidden="true" class="rb-sched" style="grid-column:7 / 13;min-width:0;opacity:.9">
+<div class="rb-sgrid m-keep" style="display:grid;grid-template-columns:76px repeat(13,minmax(0,1fr));gap:3px">
+<span style="display:flex;align-items:center;font:500 11px/1 Archivo;color:#9fd6cf">Svea 200</span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="display:flex;align-items:center;font:500 11px/1 Archivo;color:#9fd6cf">Svea 221</span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span data-rb-h="16" style="height:22px;background:#e61fbf;transition:background .6s"></span>
+<span data-rb-h="17" style="height:22px;background:#e61fbf;transition:background .6s"></span>
+<span data-rb-h="18" style="height:22px;background:#e61fbf;transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="display:flex;align-items:center;font:500 11px/1 Archivo;color:#9fd6cf">Svea 119</span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="display:flex;align-items:center;font:500 11px/1 Archivo;color:#9fd6cf">Kuggen 104</span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.10) 0 3px,rgba(255,255,255,.04) 3px 6px);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+<span style="height:22px;background:rgba(98,169,174,.45);transition:background .6s"></span>
+</div>
+</div>
+</div>
+<div class="facts">
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Role</div><div style="font:600 15px/1.35 Archivo">UX/UI</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Tools</div><div style="font:600 15px/1.35 Archivo">Figma · Claude Design</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Methods</div><div style="font:600 15px/1.35 Archivo">User testing · iteration</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Duration</div><div style="font:600 15px/1.35 Archivo">Two weeks</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Status</div><div style="font:600 15px/1.35 Archivo">Preparing Test 2</div></div>
+</div>
+</section>
+<!-- PROBLEM & REQUIREMENTS -->
+<section class="pad rule" id="problem" style="padding-top:120px">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#b3200b"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#ec3013;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">01</span><span>The problem</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Booking a room shouldn't take this long</h2>
+<div class="grid2" style="margin-top:20px">
+<p class="copy-lg" style="margin:0">Teachers often face challenges when booking classrooms and equipment for their courses. Existing booking systems can be time-consuming and require users to navigate multiple pages before finding a suitable room. This project explores a more efficient and user-friendly booking experience.</p>
+<div class="card">
+<div class="lbl" style="margin-bottom:14px">Requirements — scenario breakdown</div>
+<ul style="margin:0;padding-left:20px;line-height:1.85;font:400 15px Archivo;color:#3a3835">
+<li>Allow booking of three rooms.</li>
+<li>Ensure each room accommodates a minimum of 20 participants.</li>
+<li>Ensure all selected rooms are located within 500 meters of each other.</li>
+<li>Allow the same rooms to be used for multiple exercises.</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- MID-FI -->
+<section class="pad rule" id="midfi">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">02</span><span>Mid-fidelity prototype — Figma</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Working out the booking logic first</h2>
+<p class="copy-lg" style="margin:0 0 32px">Built to work out the booking logic first: search by room type, equipment, building, date, time and seats — with multiple rooms, multiple dates, system-suggested rooms, and managing bookings. All components in the Figma prototype were created from scratch. The logic starts by asking the user what, where, when.</p>
+<div class="frame" style="aspect-ratio:16/9">
+<video controls="controls" playsinline="playsinline" poster="/assets/video/rb-lofi-walkthrough-poster.webp" src="/assets/video/rb-lofi-walkthrough.mp4" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
+</div>
+<div class="rb-tool" style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><path d="M14 2h6v12h-6a6 6 0 0 1 0-12z" fill="#F24E1E"></path><path d="M20 2h6a6 6 0 0 1 0 12h-6z" fill="#FF7262"></path><path d="M14 14h6v12h-6a6 6 0 0 1 0-12z" fill="#A259FF"></path><circle cx="26" cy="20" fill="#1ABCFE" r="6"></circle><path d="M14 26h6v6a6 6 0 1 1-6-6z" fill="#0ACF83"></path></svg><span>Figma</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span style="font-weight:500;color:#4a4744">Walkthrough — mid-fidelity prototype</span></div>
+</section>
+<!-- TEST 1 -->
+<section class="pad rule" id="test1">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">03</span><span>Usability Test 1 <span style="color:#75726e;text-transform:none;letter-spacing:0;font-weight:500">· 5 users</span></span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Where people got stuck</h2>
+<p class="copy-lg" style="margin:0 0 32px">I tested the mid-fidelity prototype with five users to understand how they used the room booking system and to identify where the experience became difficult or unclear.</p>
+<div class="lbl" style="margin-bottom:16px">Direct usability findings</div>
+<div class="grid2" style="margin-bottom:36px">
+<div class="card"><div class="n">01</div><div class="t">The search bar required too many clicks.</div><div class="d">Users sometimes needed to click twice to select an option and move to the next field.</div></div>
+<div class="card"><div class="n">02</div><div class="t">Time selection needed improvement</div><div class="d">Selecting a start/end time from the search bar wasn't smooth enough.</div></div>
+<div class="card"><div class="n">03</div><div class="t">Users wanted recommendations before pressing Search</div><div class="d">Users expected recommendations while making their selections, not only after pressing Search.</div></div>
+<div class="card"><div class="n">04</div><div class="t">Selecting time from the schedule needed visual improvement</div><div class="d">The old Room Schedule already showed rooms and their available/busy times, and selecting a booking time from it was functionally clear, but the visual presentation needed improvement.</div></div>
+</div>
+<div class="lbl" style="margin-bottom:16px">Gaps I identified while evaluating the prototype</div>
+<div class="grid2">
+<div class="card"><div class="n">05</div><div class="t">No quick way to find a room available now</div><div class="d">The prototype had no dedicated path for "which room can I use right now?"</div></div>
+<div class="card"><div class="n">06</div><div class="t">No complete way to browse all rooms</div><div class="d">There was no catalogue experience for browsing rooms and comparing them.</div></div>
+<div class="card"><div class="n">07</div><div class="t">Room Schedule was difficult to access</div><div class="d">It wasn't clearly available as one of the system's main destinations.</div></div>
+</div>
+</section>
+<!-- FINDINGS -> DECISIONS -->
+<section class="pad rule" id="decisions">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">04</span><span>Design decisions</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Every finding gets an answer</h2>
+<p class="copy" style="margin:0 0 24px">Each decision responds directly to a numbered finding or gap from Usability Test 1.</p>
+<div style="margin-top:8px">
+<div class="fd-row"><div class="fd-n">01</div><div class="fd-decision">Selecting an option now completes the step and moves to the next field</div></div>
+<div class="fd-row"><div class="fd-n">02</div><div class="fd-decision">Redesigned time-selection interaction</div></div>
+<div class="fd-row"><div class="fd-n">03</div><div class="fd-decision">Recommended rooms for you, shown below the search bar as requirements are selected</div></div>
+<div class="fd-row"><div class="fd-n">04</div><div class="fd-decision">Clearer start/end time selection directly from a room's availability timeline</div></div>
+<div class="fd-row"><div class="fd-n">05</div><div class="fd-decision">Adding Available Now page to the navigation bar</div></div>
+<div class="fd-row"><div class="fd-n">06</div><div class="fd-decision">Adding Our Rooms — the full catalogue to the navigation bar</div></div>
+<div class="fd-row"><div class="fd-n">07</div><div class="fd-decision">Added as its own top-level destination in navigation bar</div></div>
+</div>
+</section>
+<!-- HI-FI -->
+<section class="pad rule" id="hifi">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">05</span><span>High-fidelity prototype — Claude Design</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">From findings to a working interface</h2>
+<p class="copy-lg" style="margin:0 0 32px">Usability Test 1 surfaced both interaction problems and gaps in the booking experience. I used Claude Design to move quickly from those findings to this high-fidelity prototype — directing decisions, reviewing what it produced, and refining it. It includes the design responses above, but has not been tested yet.</p>
+<div class="frame" style="aspect-ratio:16/9">
+<video controls="controls" playsinline="playsinline" poster="/assets/video/rb-hifi-walkthrough-poster.webp" src="/assets/video/rb-hifi-walkthrough.mp4" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
+</div>
+<div class="rb-tool" style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;margin-bottom:40px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><g stroke="#D97757" stroke-linecap="round" stroke-width="3.2"><line x1="20.0" x2="20.0" y1="17.0" y2="8.0"></line><line x1="21.5" x2="28.0" y1="17.4" y2="6.1"></line><line x1="22.6" x2="31.3" y1="18.5" y2="13.5"></line><line x1="23.0" x2="37.0" y1="20.0" y2="20.0"></line><line x1="22.6" x2="30.4" y1="21.5" y2="26.0"></line><line x1="21.5" x2="27.5" y1="22.6" y2="33.0"></line><line x1="20.0" x2="20.0" y1="23.0" y2="33.0"></line><line x1="18.5" x2="11.5" y1="22.6" y2="34.7"></line><line x1="17.4" x2="9.6" y1="21.5" y2="26.0"></line><line x1="17.0" x2="4.0" y1="20.0" y2="20.0"></line><line x1="17.4" x2="7.9" y1="18.5" y2="13.0"></line><line x1="18.5" x2="12.5" y1="17.4" y2="7.0"></line></g></svg><span>Claude</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span style="font-weight:500;color:#4a4744">Walkthrough — high-fidelity prototype</span></div>
+<div class="rb-car m-keep" data-car="car" data-car-unit="Image" style="container-type:inline-size;display:grid;grid-template-columns:44px minmax(0,1fr) 44px;column-gap:20px;align-items:start;margin:0 -64px">
+<div aria-label="High-fidelity prototype screens" aria-roledescription="carousel" class="rb-track m-keep" data-car-track="" role="region" style="display:flex;gap:16px;padding:0 8%;scroll-padding:0 8%;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;grid-area:1 / 2" tabindex="0">
+<figure aria-label="1 of 5" class="rb-slide m-keep" style="flex:0 0 84%;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
+<div class="frame m-keep" style=""><img alt="Homepage — selecting what, where, when" decoding="async" loading="lazy" src="/assets/img/rb-new-home-select-anim-4.gif" style="width:100%;height:auto;display:block"/></div>
+<figcaption style="margin-top:12px">
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><g stroke="#D97757" stroke-linecap="round" stroke-width="3.2"><line x1="20.0" x2="20.0" y1="17.0" y2="8.0"></line><line x1="21.5" x2="28.0" y1="17.4" y2="6.1"></line><line x1="22.6" x2="31.3" y1="18.5" y2="13.5"></line><line x1="23.0" x2="37.0" y1="20.0" y2="20.0"></line><line x1="22.6" x2="30.4" y1="21.5" y2="26.0"></line><line x1="21.5" x2="27.5" y1="22.6" y2="33.0"></line><line x1="20.0" x2="20.0" y1="23.0" y2="33.0"></line><line x1="18.5" x2="11.5" y1="22.6" y2="34.7"></line><line x1="17.4" x2="9.6" y1="21.5" y2="26.0"></line><line x1="17.0" x2="4.0" y1="20.0" y2="20.0"></line><line x1="17.4" x2="7.9" y1="18.5" y2="13.0"></line><line x1="18.5" x2="12.5" y1="17.4" y2="7.0"></line></g></svg><span>Claude</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span>Selecting requirements on the homepage</span></div>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:6px 0 0;max-width:640px;text-wrap:pretty">Choosing an option completes the step and moves to the next field. Recommended rooms appear below the search bar as requirements are selected.</p>
+</figcaption>
+</figure>
+<figure aria-label="2 of 5" class="rb-slide m-keep" style="flex:0 0 84%;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
+<div class="frame m-keep" style=""><img alt="Best Available Rooms" decoding="async" loading="lazy" src="/assets/img/rb-new-best-available-selected.png" style="width:100%;height:auto;display:block"/></div>
+<figcaption style="margin-top:12px">
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><g stroke="#D97757" stroke-linecap="round" stroke-width="3.2"><line x1="20.0" x2="20.0" y1="17.0" y2="8.0"></line><line x1="21.5" x2="28.0" y1="17.4" y2="6.1"></line><line x1="22.6" x2="31.3" y1="18.5" y2="13.5"></line><line x1="23.0" x2="37.0" y1="20.0" y2="20.0"></line><line x1="22.6" x2="30.4" y1="21.5" y2="26.0"></line><line x1="21.5" x2="27.5" y1="22.6" y2="33.0"></line><line x1="20.0" x2="20.0" y1="23.0" y2="33.0"></line><line x1="18.5" x2="11.5" y1="22.6" y2="34.7"></line><line x1="17.4" x2="9.6" y1="21.5" y2="26.0"></line><line x1="17.0" x2="4.0" y1="20.0" y2="20.0"></line><line x1="17.4" x2="7.9" y1="18.5" y2="13.0"></line><line x1="18.5" x2="12.5" y1="17.4" y2="7.0"></line></g></svg><span>Claude</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span>Search Result</span></div>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:6px 0 0;max-width:640px;text-wrap:pretty">The best available rooms that match the selected requirements.</p>
+</figcaption>
+</figure>
+<figure aria-label="3 of 5" class="rb-slide m-keep" style="flex:0 0 84%;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
+<div class="frame m-keep" style=""><img alt="My Booking" decoding="async" loading="lazy" src="/assets/img/rb-new-my-booking-2.png" style="width:100%;height:auto;display:block"/></div>
+<figcaption style="margin-top:12px">
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><g stroke="#D97757" stroke-linecap="round" stroke-width="3.2"><line x1="20.0" x2="20.0" y1="17.0" y2="8.0"></line><line x1="21.5" x2="28.0" y1="17.4" y2="6.1"></line><line x1="22.6" x2="31.3" y1="18.5" y2="13.5"></line><line x1="23.0" x2="37.0" y1="20.0" y2="20.0"></line><line x1="22.6" x2="30.4" y1="21.5" y2="26.0"></line><line x1="21.5" x2="27.5" y1="22.6" y2="33.0"></line><line x1="20.0" x2="20.0" y1="23.0" y2="33.0"></line><line x1="18.5" x2="11.5" y1="22.6" y2="34.7"></line><line x1="17.4" x2="9.6" y1="21.5" y2="26.0"></line><line x1="17.0" x2="4.0" y1="20.0" y2="20.0"></line><line x1="17.4" x2="7.9" y1="18.5" y2="13.0"></line><line x1="18.5" x2="12.5" y1="17.4" y2="7.0"></line></g></svg><span>Claude</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span>My Booking</span></div>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:6px 0 0;max-width:640px;text-wrap:pretty">Where teachers see and manage the rooms they have booked.</p>
+</figcaption>
+</figure>
+<figure aria-label="4 of 5" class="rb-slide m-keep" style="flex:0 0 84%;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
+<div class="frame m-keep" style=""><img alt="Available Now" decoding="async" loading="lazy" src="/assets/img/rb-new-available-now.png" style="width:100%;height:auto;display:block"/></div>
+<figcaption style="margin-top:12px">
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><g stroke="#D97757" stroke-linecap="round" stroke-width="3.2"><line x1="20.0" x2="20.0" y1="17.0" y2="8.0"></line><line x1="21.5" x2="28.0" y1="17.4" y2="6.1"></line><line x1="22.6" x2="31.3" y1="18.5" y2="13.5"></line><line x1="23.0" x2="37.0" y1="20.0" y2="20.0"></line><line x1="22.6" x2="30.4" y1="21.5" y2="26.0"></line><line x1="21.5" x2="27.5" y1="22.6" y2="33.0"></line><line x1="20.0" x2="20.0" y1="23.0" y2="33.0"></line><line x1="18.5" x2="11.5" y1="22.6" y2="34.7"></line><line x1="17.4" x2="9.6" y1="21.5" y2="26.0"></line><line x1="17.0" x2="4.0" y1="20.0" y2="20.0"></line><line x1="17.4" x2="7.9" y1="18.5" y2="13.0"></line><line x1="18.5" x2="12.5" y1="17.4" y2="7.0"></line></g></svg><span>Claude</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span>Available Now</span></div>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:6px 0 0;max-width:640px;text-wrap:pretty">A new page in the navigation bar for finding a room that is free right now.</p>
+</figcaption>
+</figure>
+<figure aria-label="5 of 5" class="rb-slide m-keep" style="flex:0 0 84%;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
+<div class="frame m-keep" style=""><img alt="Room Schedule" decoding="async" loading="lazy" src="/assets/img/rb-new-room-schedule.png" style="width:100%;height:auto;display:block"/></div>
+<figcaption style="margin-top:12px">
+<div style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><g stroke="#D97757" stroke-linecap="round" stroke-width="3.2"><line x1="20.0" x2="20.0" y1="17.0" y2="8.0"></line><line x1="21.5" x2="28.0" y1="17.4" y2="6.1"></line><line x1="22.6" x2="31.3" y1="18.5" y2="13.5"></line><line x1="23.0" x2="37.0" y1="20.0" y2="20.0"></line><line x1="22.6" x2="30.4" y1="21.5" y2="26.0"></line><line x1="21.5" x2="27.5" y1="22.6" y2="33.0"></line><line x1="20.0" x2="20.0" y1="23.0" y2="33.0"></line><line x1="18.5" x2="11.5" y1="22.6" y2="34.7"></line><line x1="17.4" x2="9.6" y1="21.5" y2="26.0"></line><line x1="17.0" x2="4.0" y1="20.0" y2="20.0"></line><line x1="17.4" x2="7.9" y1="18.5" y2="13.0"></line><line x1="18.5" x2="12.5" y1="17.4" y2="7.0"></line></g></svg><span>Claude</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span>Room Schedule</span></div>
+<p style="font:400 15px/1.55 Archivo;color:#4a4744;margin:6px 0 0;max-width:640px;text-wrap:pretty">Rooms with their available and busy times. Start and end times are picked directly from a room's timeline.</p>
+</figcaption>
+</figure>
+</div>
+<button aria-label="Previous image" class="rb-nav rb-prev" data-car-prev="" style="align-self:start;margin-top:calc((100cqw - 128px) * .84 * .84 * 1764 / 2980 / 2 - 22px);width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 1" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M15 18l-6-6 6-6"></path></svg></button>
+<button aria-label="Next image" class="rb-nav rb-next" data-car-next="" style="align-self:start;margin-top:calc((100cqw - 128px) * .84 * .84 * 1764 / 2980 / 2 - 22px);width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 3" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M9 6l6 6-6 6"></path></svg></button>
+<div aria-label="Choose an image" class="rb-count-dots" data-car-dots="" role="group" style="margin-top:12px;display:flex;justify-content:center;align-items:center;gap:0;grid-area:2 / 2">
+<template data-car-dot=""><button aria-current="%cur%" aria-label="%label%" class="pc-dot" style="height:32px;min-width:22px;padding:0 4px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center" type="button"><span style="display:block;width:%w%;height:%h%;border-radius:4px;background:#a9b6ee;overflow:hidden;transition:width .3s ease,height .3s ease"><span data-car-fill="" style="display:block;width:100%;height:100%;background:#1b3ac4;transform-origin:left center;transform:scaleX(1);animation:%anim%;animation-play-state:%ps%"></span></span></button></template>
+<span aria-live="polite" data-car-count="" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></span>
+</div>
+<button aria-label="Pause slideshow" class="pc-play" data-car-toggle="" style="align-self:center;justify-self:end;margin-top:12px;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center;grid-area:2 / 3" type="button"><span style="width:32px;height:32px;border-radius:50%;background:#e5e9fb;color:#122a8f;display:flex;align-items:center;justify-content:center;transition:background .15s"><span data-car-when="playing" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><rect fill="currentColor" height="9" width="2.6" x="2" y="1.5"></rect><rect fill="currentColor" height="9" width="2.6" x="7.4" y="1.5"></rect></svg></span><span data-car-when="paused" hidden="" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"></path></svg></span></span></button>
+</div>
+</section>
+<!-- AI NOTE -->
+<section class="pad dark rule" id="ai">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f;color:#a9b6ee"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">06</span><span>On using AI</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d;color:#fff">Faster from insight to prototype</h2>
+<p style="font:400 17px/1.65 Archivo;margin:0;max-width:640px;color:#d8d6d2">Claude Design shortened the distance between a usability finding and a testable interaction. I directed the decisions and refined the result — it didn't design the project for me.</p>
+</section>
+<!-- NEXT -->
+<section class="pad" id="future" style="background:#e5e9fb">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">07</span><span>Future work</span></div>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Paused before the second test</h2>
+<p class="copy-lg" style="margin:0 0 22px">The project is paused here. I need to test whether these changes actually work better before making further iterations.</p>
+<div style="font:600 15px/1.5 Archivo;color:#1b3ac4">Prototype 1 → Usability Test 1 (5 users) → Findings → Design iteration → High-fidelity Prototype 2 → Usability Test 2</div>
+</section>
   </main>
 
   <!--@footer-->
-
 </div>
 <!--@scripts-->
+<script src="/assets/js/carousel.js" defer></script>
+<script src="/assets/js/pages/resource-booking.js" defer></script>
 </body>
 </html>
