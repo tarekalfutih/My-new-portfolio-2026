@@ -22,12 +22,26 @@
     var count = root.querySelector('[data-car-count]');
     var unit = (root.getAttribute('data-car-unit') || (count && count.getAttribute('data-unit')) || 'Screen');
     var cur = 0, target = null, targetT, play = !reduce, inView = false;
+    // data-car-align="start": slides line up with the track's scroll-padding-left (Work book covers);
+    // default: the current slide is centred.
+    var start = root.getAttribute('data-car-align') === 'start';
+    var fillAnim = root.getAttribute('data-car-anim') || 'pcFill';
 
     function left(i) {
       var el = slides[i];
-      return el ? el.offsetLeft - track.offsetLeft - (track.clientWidth - el.offsetWidth) / 2 : 0;
+      if (!el) return 0;
+      if (start) {
+        var pad = parseFloat(getComputedStyle(track).scrollPaddingLeft) || 0;
+        return Math.min(track.scrollWidth - track.clientWidth, Math.max(0, el.offsetLeft - track.offsetLeft - pad));
+      }
+      return el.offsetLeft - track.offsetLeft - (track.clientWidth - el.offsetWidth) / 2;
     }
     function nearest() {
+      if (start) {
+        var b = 0, bd = 1e9;
+        slides.forEach(function (el, k) { var m = Math.abs(left(k) - track.scrollLeft); if (m < bd) { bd = m; b = k; } });
+        return b;
+      }
       var c = track.scrollLeft + track.clientWidth / 2, best = 0, d = 1e9;
       slides.forEach(function (el, k) {
         var m = Math.abs(el.offsetLeft - track.offsetLeft + el.offsetWidth / 2 - c);
@@ -62,7 +76,7 @@
 
     function render() {
       var running = play && inView && active();
-      var anim = reduce && !play ? 'none' : 'pcFill 5s linear forwards';
+      var anim = reduce && !play ? 'none' : fillAnim + ' 5s linear forwards';
       dots.forEach(function (d, i) {
         var on = i === cur, far = Math.abs(i - cur) >= 2;
         var html = d.html
