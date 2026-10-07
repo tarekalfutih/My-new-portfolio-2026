@@ -182,6 +182,35 @@ def grid_area(el):
     el['style'] = style_str(st)
 
 
+def same_shape(img):
+    """True when the image's own aspect ratio equals its frame's aspect-ratio (within 1%)."""
+    from PIL import Image
+    src = img.get('src', '')
+    if not src.startswith('/assets/img/'): return False
+    try:
+        w, h = Image.open(REPO + 'public' + src).size
+    except Exception:
+        return False
+    p = img.parent
+    ar = sget(style_dict(p.get('style')), 'aspect-ratio') if p is not None else None
+    if not ar: return False
+    try:
+        a, b = [float(x) for x in ar.split('/')] if '/' in ar else (float(ar), 1.0)
+    except ValueError:
+        return False
+    return abs((w / h) - (a / b)) / (a / b) < .01
+
+
+def ahi_frames():
+    kmh = ['50 km/h', '60 km/h', '70 km/h', '80 km/h', '100 km/h']
+    out = []
+    for i, k in enumerate(kmh):
+        out.append('<div data-ahi-step style="display:flex;flex-direction:column;gap:8px"><div style="height:4px;background:%s;transition:background .4s"></div>'
+                   '<span style="font:600 12px/1 Archivo;letter-spacing:.06em;white-space:nowrap;color:%s">%s</span></div>'
+                   % ('#EC7406' if i == 0 else '#C8C9C7', '#000' if i == 0 else '#75787B', k))
+    return '\n'.join(out)
+
+
 def natural_img(img):
     """No crop, no bands: the image keeps its own shape and the frame around it follows."""
     st = style_dict(img.get('style'))
@@ -189,6 +218,8 @@ def natural_img(img):
     fit = sget(st, 'object-fit')
     if pos == 'absolute' and fit != 'cover':
         return  # decorative / hero art positioned in a stage (transparent PNGs): leave
+    if fit == 'cover' and same_shape(img):
+        return  # image already has its frame's shape: cover crops nothing (e.g. stacked crossfade frames)
     if fit in ('cover', 'contain') or sget(st, 'height') in ('100%',) or sget(st, 'aspect-ratio'):
         st = sdel(st, 'height', 'aspect-ratio', 'object-fit', 'object-position', 'max-height')
         if pos == 'absolute':
@@ -295,6 +326,13 @@ def rb_schedule():
 
 
 PRE = {  # raw-markup replacements before parsing (template loops rendered statically)
+    'Case Study - An Honest Interface': [
+        (re.compile(r'<sc-for list="\{\{ frames \}\}".*?</sc-for>', re.S), ahi_frames),
+        (re.compile(r'\{\{ f0op \}\}'), lambda: '1'),
+        (re.compile(r'\{\{ f[1-4]op \}\}'), lambda: '0'),
+        (re.compile(r'\{\{ f0alt \}\}'), lambda: 'Driver display at 50 km/h: as speed increases, the trees thin out'),
+        (re.compile(r'\{\{ f[1-4]alt \}\}'), lambda: ''),
+    ],
     'Case Study - Resource Booking': [(re.compile(r'<sc-for list="\{\{ sched \}\}".*?</sc-for>\s*</sc-for>', re.S), rb_schedule)],
 }
 
