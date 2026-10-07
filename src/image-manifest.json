@@ -592,6 +592,32 @@
   ],
   "w": 2534
  },
+ "/assets/img/discover-the-hidden-plant-no-preview.png": {
+  "h": 1964,
+  "variants": [
+   [
+    "/assets/img/opt/discover-the-hidden-plant-no-preview-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-no-preview-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-no-preview-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-no-preview-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/discover-the-hidden-plant-no-preview-2400.webp",
+    2400
+   ]
+  ],
+  "w": 3024
+ },
  "/assets/img/discover-the-hidden-plant.png": {
   "h": 1964,
   "variants": [
@@ -1761,6 +1787,16 @@
   ],
   "w": 1236
  },
+ "/assets/img/playrent-item-open.webp": {
+  "h": 424,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-item-open-190.webp",
+    190
+   ]
+  ],
+  "w": 190
+ },
  "/assets/img/playrent-item.png": {
   "h": 2751,
   "variants": [
@@ -1782,6 +1818,16 @@
    ]
   ],
   "w": 1236
+ },
+ "/assets/img/playrent-item.webp": {
+  "h": 560,
+  "variants": [
+   [
+    "/assets/img/opt/playrent-item-252.webp",
+    252
+   ]
+  ],
+  "w": 252
  },
  "/assets/img/playrent-login.png": {
   "h": 2751,
@@ -3309,6 +3355,32 @@
    ]
   ],
   "w": 428
+ },
+ "/assets/img/universeum-4.jpg": {
+  "h": 5712,
+  "variants": [
+   [
+    "/assets/img/opt/universeum-4-480.webp",
+    480
+   ],
+   [
+    "/assets/img/opt/universeum-4-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/universeum-4-1200.webp",
+    1200
+   ],
+   [
+    "/assets/img/opt/universeum-4-1600.webp",
+    1600
+   ],
+   [
+    "/assets/img/opt/universeum-4-2400.webp",
+    2400
+   ]
+  ],
+  "w": 4284
  },
  "/assets/img/universeum-5.jpg": {
   "h": 5712,

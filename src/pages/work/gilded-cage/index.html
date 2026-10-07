@@ -53,7 +53,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
   .m-only{display:flex !important}
   section[id]{scroll-margin-top:64px}
-  .wrap>section,.pad{padding-left:20px !important;padding-right:20px !important}
+  .wrap>:where(main)>section,.pad{padding-left:20px !important;padding-right:20px !important}
   .pad{padding-top:36px !important;padding-bottom:36px !important}
   .lbl{font-size:11px !important;letter-spacing:.14em !important}
   h1.h1r{font-size:30px !important;line-height:1.08 !important;margin-bottom:12px !important}
@@ -72,7 +72,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wrap section a[href$=".pdf"]{display:none !important}
 }
 @media (max-width:767px){
-  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> .vc > video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
   .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
   .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
 }
@@ -144,15 +144,15 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </div>
 <div class="loop-strip" style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:1px;background:#dcd9d4">
 <figure style="margin:0;background:#fff">
-<img alt="Fairy watering the flowers" src="/assets/img/watering-plants.png" style="width:100%;display:block;height:auto"/>
+<img alt="Fairy watering the flowers" src="/assets/img/watering-plants.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
 <figcaption style="font:600 12px/1 Archivo;letter-spacing:.05em;text-transform:uppercase;color:#75726e;padding:12px 16px">1 · Water</figcaption>
 </figure>
 <figure style="margin:0;background:#fff">
-<img alt="Fairy eating a fruit" src="/assets/img/eating-graps.png" style="width:100%;display:block;height:auto"/>
+<img alt="Fairy eating a fruit" src="/assets/img/eating-graps.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
 <figcaption style="font:600 12px/1 Archivo;letter-spacing:.05em;text-transform:uppercase;color:#75726e;padding:12px 16px">2 · Eat</figcaption>
 </figure>
 <figure style="margin:0;background:#fff">
-<img alt="Fairy finds the hidden flower" src="/assets/img/discover-the-hidden-plant.png" style="width:100%;display:block;height:auto"/>
+<img alt="Fairy finds the hidden flower" src="/assets/img/discover-the-hidden-plant.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
 <figcaption style="font:600 12px/1 Archivo;letter-spacing:.05em;text-transform:uppercase;color:#b8232f;padding:12px 16px">3 · Find the different one</figcaption>
 </figure>
 </div>
@@ -179,9 +179,9 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div>
 <div class="lbl" style="font-size:11px;margin-bottom:10px">Hand-drawn ground textures</div>
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px;background:#dcd9d4;border:1px solid #dcd9d4">
-<img alt="Grass texture, version 1" class="pixel" src="/assets/img/gras2.png" style="width:100%;display:block;height:auto"/>
-<img alt="Grass texture, version 2" class="pixel" src="/assets/img/grass-4.png" style="width:100%;display:block;height:auto"/>
-<img alt="Sand texture" class="pixel" src="/assets/img/sand-4.png" style="width:100%;display:block;grid-column:span 2;height:auto"/>
+<img alt="Grass texture, version 1" class="pixel" src="/assets/img/gras2.png" style="width:100%;display:block;height:auto;aspect-ratio:1/1;object-fit:cover"/>
+<img alt="Grass texture, version 2" class="pixel" src="/assets/img/grass-4.png" style="width:100%;display:block;height:auto;aspect-ratio:1/1;object-fit:cover"/>
+<img alt="Sand texture" class="pixel" src="/assets/img/sand-4.png" style="width:100%;display:block;grid-column:span 2;height:auto;aspect-ratio:1/1;object-fit:cover"/>
 </div>
 <p style="font:400 13px/1.5 Archivo;color:#75726e;margin:10px 0 0">Ground tiles I drew and tuned by hand — small details, but they set the whole cosy feel.</p>
 </div>

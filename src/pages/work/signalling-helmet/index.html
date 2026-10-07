@@ -19,7 +19,7 @@
   .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
   .m-only{display:flex !important}
   section[id]{scroll-margin-top:64px}
-  .wrap>section,.pad{padding-left:20px !important;padding-right:20px !important}
+  .wrap>:where(main)>section,.pad{padding-left:20px !important;padding-right:20px !important}
   .pad{padding-top:36px !important;padding-bottom:36px !important}
   .lbl{font-size:11px !important;letter-spacing:.14em !important}
   h1.h1r{font-size:30px !important;line-height:1.08 !important;margin-bottom:12px !important}
@@ -38,7 +38,7 @@
   .wrap section a[href$=".pdf"]{display:none !important}
 }
 @media (max-width:767px){
-  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> .vc > video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
   .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
   .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
 }
@@ -120,7 +120,7 @@ section[id]{scroll-margin-top:96px}
   .shx-facts>div.shx-meth{border-bottom:0}
 }
 @media (max-width:767px){
-  .wrap>section.shx{padding:0 !important}
+  .wrap>:where(main)>section.shx{padding:0 !important}
   .shx-main{padding:36px 20px 0 !important;row-gap:32px}
   .shx-text{gap:16px !important}
   .wrap .shx-h1{font-size:56px !important}
@@ -183,7 +183,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty">Signalling shouldn't cost cyclists control of their bike</h2>
 <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 16px;text-wrap:pretty">Most bicycles, especially older ones, have no built-in turn indicators. Cyclists rely on arm signals, raising a hand from the handlebars to alert others — reducing control and increasing risk, particularly for older cyclists who find it hard to release the handlebar and turn to look behind before turning.</p>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">Swedish cyclists face a significantly higher risk than car occupants — 10 times greater chance of a fatal accident and 20 times higher likelihood of an injury requiring hospital treatment, per million kilometres travelled.</p>
-<div class="gray" style="max-width:420px"><img alt="Figure 2 — cyclist signalling before turning" decoding="async" loading="lazy" src="/assets/img/helmet-signal.jpg" style="width:100%;height:auto;display:block"/></div>
+<div class="gray" style="max-width:420px;aspect-ratio:1166/1349;overflow:hidden"><img alt="Figure 2 — cyclist signalling before turning" decoding="async" loading="lazy" src="/assets/img/helmet-signal.jpg" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </section>
 <section class="pad rule" id="research">
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">03</span><span>Research &amp; ideation</span></div>
@@ -193,11 +193,11 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div class="g2" style="margin-bottom:20px">
 <div>
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 1a — Initial ideas</div>
-<div class="gray" style=""><img alt="Brainstorming sketches" decoding="async" loading="lazy" src="/assets/img/helmet-sketch1.jpg" style="width:100%;height:auto;display:block"/></div>
+<div class="gray" style="aspect-ratio:4/3;overflow:hidden"><img alt="Brainstorming sketches" decoding="async" loading="lazy" src="/assets/img/helmet-sketch1.webp" style="width:100%;display:block;height:100%;object-fit:cover" data-view="1.01057 -0.528611 -0.573224"/></div>
 </div>
 <div>
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 1b — The chosen initial idea</div>
-<div class="gray" style=""><img alt="Solar hat concept" decoding="async" loading="lazy" src="/assets/img/helmet-sketch2.jpg" style="width:100%;height:auto;display:block"/></div>
+<div class="gray" style="aspect-ratio:1600/1131;overflow:hidden"><img alt="Solar hat concept" decoding="async" loading="lazy" src="/assets/img/helmet-sketch2.webp" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </div>
 </div>
 <div style="border-top:1px solid #dcd9d4;padding-top:24px">
@@ -216,20 +216,20 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </div>
 <div style="margin-bottom:24px">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3a — Sketch of the signalling helmet</div>
-<div style="position:relative"><img alt="Helmet sketch: step 1 press the thumb, step 2 extend the index finger, then the helmet light turns on" decoding="async" loading="lazy" src="/assets/img/helmet-sketch3.jpg" style="width:100%;height:auto;display:block"/><div aria-hidden="true" class="sk-n sk1" style="position:absolute;left:45.4%;top:63.4%;width:clamp(26px,3.4vw,42px);aspect-ratio:1;border-radius:50%;background:#0a6fb8;color:#fff;font:700 clamp(13px,1.6vw,20px)/1 Archivo;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff;pointer-events:none">1</div><div aria-hidden="true" class="sk-n sk2" style="position:absolute;left:8.5%;top:43.6%;width:clamp(26px,3.4vw,42px);aspect-ratio:1;border-radius:50%;background:#0f7a52;color:#fff;font:700 clamp(13px,1.6vw,20px)/1 Archivo;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff;pointer-events:none">2</div><div aria-hidden="true" class="sk3" style="position:absolute;left:68.6%;top:32%;width:60%;height:18%;transform:translate(-50%,-50%) rotate(4deg);background:radial-gradient(ellipse at center,rgba(255,190,80,.7) 0%,rgba(255,160,30,.3) 40%,rgba(255,140,0,0) 70%);mix-blend-mode:multiply;pointer-events:none"></div></div>
+<div style="position:relative;aspect-ratio:1435/1096;overflow:hidden"><img alt="Helmet sketch: step 1 press the thumb, step 2 extend the index finger, then the helmet light turns on" decoding="async" loading="lazy" src="/assets/img/helmet-sketch3.webp" style="width:100%;display:block;height:100%;object-fit:cover"/><div aria-hidden="true" class="sk-n sk1" style="position:absolute;left:45.4%;top:63.4%;width:clamp(26px,3.4vw,42px);aspect-ratio:1;border-radius:50%;background:#0a6fb8;color:#fff;font:700 clamp(13px,1.6vw,20px)/1 Archivo;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff;pointer-events:none">1</div><div aria-hidden="true" class="sk-n sk2" style="position:absolute;left:8.5%;top:43.6%;width:clamp(26px,3.4vw,42px);aspect-ratio:1;border-radius:50%;background:#0f7a52;color:#fff;font:700 clamp(13px,1.6vw,20px)/1 Archivo;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff;pointer-events:none">2</div><div aria-hidden="true" class="sk3" style="position:absolute;left:68.6%;top:32%;width:60%;height:18%;transform:translate(-50%,-50%) rotate(4deg);background:radial-gradient(ellipse at center,rgba(255,190,80,.7) 0%,rgba(255,160,30,.3) 40%,rgba(255,140,0,0) 70%);mix-blend-mode:multiply;pointer-events:none"></div></div>
 </div>
 <div style="margin-bottom:24px">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3b — Circuit built in Tinkercad</div>
-<div style=""><img alt="Tinkercad circuit" decoding="async" loading="lazy" src="/assets/img/helmet-tinkercad-circuit.png" style="width:100%;height:auto;display:block"/></div>
+<div style="aspect-ratio:930/850;overflow:hidden"><img alt="Tinkercad circuit" decoding="async" loading="lazy" src="/assets/img/helmet-tinkercad-circuit.png" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 </div>
 <div class="sh-pair m-keep" style="display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px">
 <div>
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3c — Prototype, back</div>
-<div style=""><img alt="Prototype, back" decoding="async" loading="lazy" src="/assets/img/helmet-prototype-front.jpg" style="width:100%;height:auto;display:block"/></div>
+<div style="aspect-ratio:4284/5712;overflow:hidden"><img alt="Prototype, back" decoding="async" loading="lazy" src="/assets/img/helmet-prototype-front.jpg" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 </div>
 <div>
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3d — Prototype, side</div>
-<div style=""><img alt="Prototype, side" decoding="async" loading="lazy" src="/assets/img/helmet-prototype-side.jpg" style="width:100%;height:auto;display:block"/></div>
+<div style="aspect-ratio:5712/4284;overflow:hidden"><img alt="Prototype, side" decoding="async" loading="lazy" src="/assets/img/helmet-prototype-side.jpg" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 </div>
 </div>
 <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">The first build used an Arduino UNO, a breadboard, wires, resistors, two flex sensors, two pressure sensors, and two LED strips. Sensors were tested on the breadboard first to measure resistance and set an activation threshold, then wired to the LED strips and attached to the helmet. Sensors were initially sewn into the gloves with conductive thread, but connections were unstable — we switched to soldering and gluing wires directly to the sensors, secured to the outside of the gloves for stability, and tuned the threshold repeatedly to avoid over-sensitivity.</p>
@@ -263,7 +263,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <p class="sh-r2" style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 16px;text-wrap:pretty">Cyclists couldn't see the LED from their own helmet and asked for confirmation that a signal had activated — a vibration or sound was suggested, along with different colours, blinking patterns, and more LEDs for visibility. Opinions were split on whether the signal should switch off automatically or need manual deactivation.</p>
 <div style="max-width:680px;margin:0 0 24px">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 4 — Visual feedback on the glove during signalling</div>
-<div style="position:relative"><img alt="Visual feedback on glove" decoding="async" loading="lazy" src="/assets/img/helmet-glove-feedback.jpg" style="width:100%;height:auto;display:block"/><div aria-hidden="true" class="shx-press" style="position:absolute;left:48%;top:67%;width:9%;aspect-ratio:1;border:3px solid #ffa31a;border-radius:50%;pointer-events:none"></div><div aria-hidden="true" class="shx-press-dot" style="position:absolute;left:48%;top:67%;width:2.6%;aspect-ratio:1;background:#ffa31a;border-radius:50%;pointer-events:none"></div><div aria-hidden="true" class="shx-blink" style="position:absolute;left:50.5%;top:43.6%;width:30%;height:13%;transform:translate(-50%,-50%) rotate(-2deg);background:radial-gradient(ellipse at center,rgba(255,190,80,.8) 0%,rgba(255,150,20,.34) 32%,rgba(255,140,0,0) 68%);mix-blend-mode:screen;pointer-events:none"></div></div>
+<div style="position:relative;aspect-ratio:5184/3456;overflow:hidden"><img alt="Visual feedback on glove" decoding="async" loading="lazy" src="/assets/img/helmet-glove-feedback.jpg" style="width:100%;display:block;height:100%;object-fit:cover"/><div aria-hidden="true" class="shx-press" style="position:absolute;left:48%;top:67%;width:9%;aspect-ratio:1;border:3px solid #ffa31a;border-radius:50%;pointer-events:none"></div><div aria-hidden="true" class="shx-press-dot" style="position:absolute;left:48%;top:67%;width:2.6%;aspect-ratio:1;background:#ffa31a;border-radius:50%;pointer-events:none"></div><div aria-hidden="true" class="shx-blink" style="position:absolute;left:50.5%;top:43.6%;width:30%;height:13%;transform:translate(-50%,-50%) rotate(-2deg);background:radial-gradient(ellipse at center,rgba(255,190,80,.8) 0%,rgba(255,150,20,.34) 32%,rgba(255,140,0,0) 68%);mix-blend-mode:screen;pointer-events:none"></div></div>
 </div>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 16px;text-wrap:pretty">Left for future development: a vibration or synchronized light on the glove to confirm activation, colour/brightness customization, and a wireless (Bluetooth) link between glove and helmet to remove the wired connection. Gloves also proved uncomfortable in hot weather, limiting appeal for some users.</p>
 <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 28px;text-wrap:pretty">Turning a sustainability-themed brief into a road-safety product made the project more concrete and grounded it in a real-world problem. By improving communication between cyclists, pedestrians, and other road users, the system points toward safer streets for everyone.</p>

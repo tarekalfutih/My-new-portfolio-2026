@@ -3,22 +3,22 @@
 #
 #   sh tools/deploy_pages.sh
 #
-# The site is served at https://tarekalfutih.github.io/My-new-portfolio-2026/ , so it is built
-# with BASE_PATH=/My-new-portfolio-2026 (every root-relative URL gets the prefix, CNAME is left
-# out). GitHub Pages serves the gh-pages branch as-is (.nojekyll turns Jekyll off).
+# The site is served at https://tarekdesign.se (custom domain on GitHub Pages), so it is built for
+# the domain root: BASE_PATH is empty, root URLs are kept and public/CNAME is published.
+# GitHub Pages serves the gh-pages branch as-is (.nojekyll turns Jekyll off).
 #
 # The commit is made from this repository's own object store, so images and videos that are
 # already on GitHub (same files as on main) are not uploaded again: a deploy only sends what
 # changed. No GitHub Actions workflow, so no `workflow` token scope is needed.
 #
-# When tarekdesign.se points to GitHub: set BASE_PATH= (empty) and SITE_URL=https://tarekdesign.se
-# below, so the build keeps public/CNAME and root URLs.
+# To publish under https://tarekalfutih.github.io/My-new-portfolio-2026/ instead (no custom domain),
+# set BASE_PATH="/$REPO_NAME" and SITE_URL="https://tarekalfutih.github.io/$REPO_NAME" below.
 set -e
 cd "$(dirname "$0")/.."
 
 REPO_NAME=My-new-portfolio-2026
-BASE_PATH="/$REPO_NAME"
-SITE_URL="https://tarekalfutih.github.io/$REPO_NAME"
+BASE_PATH=""
+SITE_URL="https://tarekdesign.se"
 
 BASE_PATH="$BASE_PATH" SITE_URL="$SITE_URL" python3 build.py
 touch dist/.nojekyll
@@ -44,4 +44,4 @@ else
   COMMIT=$(git commit-tree "$TREE" -m "$MSG")
 fi
 git push origin "$COMMIT:refs/heads/gh-pages"
-echo "Deployed $COMMIT → https://tarekalfutih.github.io/$REPO_NAME/ (live in about a minute)"
+echo "Deployed $COMMIT → $SITE_URL/ (live in about a minute)"

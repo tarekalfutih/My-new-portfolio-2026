@@ -19,7 +19,7 @@
   .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
   .m-only{display:flex !important}
   section[id]{scroll-margin-top:64px}
-  .wrap>section,.pad{padding-left:20px !important;padding-right:20px !important}
+  .wrap>:where(main)>section,.pad{padding-left:20px !important;padding-right:20px !important}
   .pad{padding-top:36px !important;padding-bottom:36px !important}
   .lbl{font-size:11px !important;letter-spacing:.14em !important}
   h1.h1r{font-size:30px !important;line-height:1.08 !important;margin-bottom:12px !important}
@@ -38,7 +38,7 @@
   .wrap section a[href$=".pdf"]{display:none !important}
 }
 @media (max-width:767px){
-  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> .vc > video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
   .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
   .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
 }
@@ -192,7 +192,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </div>
 <div class="pr-art m-keep" style="position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 55% at 50% 50%,#8a6fd0 0%,#6750a4 55%,#4f378b 100%);min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;padding:clamp(28px,5vh,56px) 24px">
 <div aria-hidden="true" class="pr-inst" style="position: absolute; inset: 0px; pointer-events: none; opacity: 0.5;"><svg style="position: absolute; left: 9%; top: 10%; --r: -14deg; transform: rotate(-14deg); animation: 9s ease-in-out 0s infinite normal none running prFloat; overflow: visible;" viewbox="0 -16 68 90" width="78"><g fill="none" stroke="#f3edff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M34 70c-9 0-16-6-16-15 0-6 4-9 4-13 0-4-3-6-3-11 0-8 6-13 13-13s13 5 13 13c0 5-3 7-3 11 0 4 4 7 4 13 0 9-7 15-16 15z"></path><circle cx="34" cy="46" r="5"></circle><path d="M34 18V-14M30 -14h8M28 60h12"></path></g></svg><svg style="position: absolute; left: 74%; top: 14%; --r: 6deg; transform: rotate(6deg); animation: 11s ease-in-out 1.5s infinite normal none running prFloat; overflow: visible;" viewbox="0 0 80 62" width="104"><g fill="none" stroke="#f3edff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><ellipse cx="40" cy="18" rx="32" ry="10"></ellipse><path d="M8 18v30c0 6 14 10 32 10s32-4 32-10V18M8 26l16 30M72 26L56 56M40 28v30"></path><path d="M18 4l20 12M62 4L44 16"></path></g></svg><svg style="position: absolute; left: 6%; top: 68%; --r: -8deg; transform: rotate(-8deg); animation: 10s ease-in-out 3s infinite normal none running prFloat; overflow: visible;" viewbox="0 0 100 44" width="130"><g fill="none" stroke="#f3edff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect height="40" width="96" x="2" y="2"></rect><path d="M14 2v40M26 2v40M38 2v40M50 2v40M62 2v40M74 2v40M86 2v40"></path><path d="M10 2v22M22 2v22M46 2v22M58 2v22M70 2v22" stroke-width="5"></path></g></svg><svg style="position: absolute; left: 80%; top: 62%; --r: 12deg; transform: rotate(12deg); animation: 12s ease-in-out 2s infinite normal none running prFloat; overflow: visible;" viewbox="0 0 60 70" width="60"><g fill="none" stroke="#f3edff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M44 4c-6 0-8 4-8 8v38c0 10-6 16-14 16s-14-5-14-12c0-4 3-6 6-6s5 2 5 5"></path><path d="M44 4l8-2M36 22h-4M36 32h-4M36 42h-4"></path></g></svg></div>
-<div class="pr-pwrap m-keep" style="position:relative;z-index:1;max-width:100%;border:8px solid #2b2930;border-radius:36px;background:#141218;box-shadow:0 30px 80px rgba(27,9,66,.45)"><img alt="PlayRent log in screen" data-frame="1" src="/assets/img/playrent-login.png" style="display:block;width:100%;height:auto"/></div>
+<div class="pr-pwrap m-keep" style="position:relative;z-index:1;max-width:100%;border:8px solid #2b2930;border-radius:36px;background:#141218;box-shadow:0 30px 80px rgba(27,9,66,.45);aspect-ratio:412/917;height:100%;max-height:640px;overflow:hidden"><img alt="PlayRent log in screen" src="/assets/img/playrent-login.png" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"/></div>
 </div>
 </section>
 <section class="pad rule" id="concept">
@@ -227,23 +227,23 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div aria-label="Finding an instrument screens" aria-roledescription="carousel" class="pr-track m-keep" data-car-track="" role="region" style="display:flex;gap:28px;padding:0 calc(50% - 140px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;grid-area:1 / 2" tabindex="0">
 <figure aria-label="1 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Log in</div>
-<div class="gray m-keep" style=""><img alt="Log in" decoding="async" loading="lazy" src="/assets/img/playrent-login.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Log in" decoding="async" loading="lazy" src="/assets/img/playrent-login.png" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 <figure aria-label="2 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Create an account</div>
-<div class="gray m-keep" style=""><img alt="Create an account" decoding="async" loading="lazy" src="/assets/img/playrent-signup.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Create an account" decoding="async" loading="lazy" src="/assets/img/playrent-signup.png" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 <figure aria-label="3 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Category</div>
-<div class="gray m-keep" style=""><img alt="Category" decoding="async" loading="lazy" src="/assets/img/playrent-search1.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Category" decoding="async" loading="lazy" src="/assets/img/playrent-search1.png" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 <figure aria-label="4 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Sub-category</div>
-<div class="gray m-keep" style=""><img alt="Sub-category" decoding="async" loading="lazy" src="/assets/img/playrent-search2.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Sub-category" decoding="async" loading="lazy" src="/assets/img/playrent-search2.png" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 <figure aria-label="5 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Choosing an item</div>
-<div class="gray m-keep" style=""><img alt="Choosing an item" decoding="async" loading="lazy" src="/assets/img/playrent-item.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Choosing an item" decoding="async" loading="lazy" src="/assets/img/playrent-item.webp" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 </div>
 <button aria-label="Previous screens" class="pr-nav pr-prev" data-car-prev="" style="align-self:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 1" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M15 18l-6-6 6-6"></path></svg></button>
@@ -263,23 +263,23 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div aria-label="Booking flow screens" aria-roledescription="carousel" class="pr-track m-keep" data-car-track="" role="region" style="display:flex;gap:28px;padding:0 calc(50% - 140px);overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;grid-area:1 / 2" tabindex="0">
 <figure aria-label="1 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">1 · Open the instrument</div>
-<div class="gray m-keep" style=""><img alt="Digital Drums" decoding="async" loading="lazy" src="/assets/img/playrent-item-open.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Digital Drums" decoding="async" loading="lazy" src="/assets/img/playrent-item-open.webp" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 <figure aria-label="2 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">2 · Select the days</div>
-<div class="gray m-keep" style=""><img alt="Select the days" decoding="async" loading="lazy" src="/assets/img/playrent-dates.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Select the days" decoding="async" loading="lazy" src="/assets/img/playrent-dates.png" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 <figure aria-label="3 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">3 · Instrument details</div>
-<div class="gray m-keep" style=""><img alt="Digital Drums — Book" decoding="async" loading="lazy" src="/assets/img/playrent-item-book.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Digital Drums — Book" decoding="async" loading="lazy" src="/assets/img/playrent-item-book.png" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 <figure aria-label="4 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">4 · Booking details</div>
-<div class="gray m-keep" style=""><img alt="Booking details" decoding="async" loading="lazy" src="/assets/img/playrent-confirm.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Booking details" decoding="async" loading="lazy" src="/assets/img/playrent-confirm.png" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 <figure aria-label="5 of 5" class="pr-slide m-keep" style="flex:0 0 280px;min-width:0;scroll-snap-align:center;margin:0;transition:opacity .3s">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">5 · Booking successful</div>
-<div class="gray m-keep" style=""><img alt="Booking successful" decoding="async" loading="lazy" src="/assets/img/playrent-success.png" style="width:100%;height:auto;display:block"/></div>
+<div class="gray m-keep" style="aspect-ratio:9/19.5;overflow:hidden"><img alt="Booking successful" decoding="async" loading="lazy" src="/assets/img/playrent-success.png" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </figure>
 </div>
 <button aria-label="Previous screens" class="pr-nav pr-prev" data-car-prev="" style="align-self:center;width:44px;height:44px;border-radius:50%;background:#fff;color:#122a8f;border:1px solid #a9b6ee;display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer;transition:background .15s,color .15s,border-color .15s;grid-area:1 / 1" type="button"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="square" stroke-width="2.25" viewbox="0 0 24 24" width="20"><path d="M15 18l-6-6 6-6"></path></svg></button>
@@ -295,7 +295,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">07</span><span>Publishing an instrument</span></div>
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Musicians can lend their own gear</h2>
 <p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 24px;text-wrap:pretty">PlayRent works both ways. A musician can also publish an instrument they own for others to rent.</p>
-<div class="gray pr-pub m-keep" style="max-width:280px"><img alt="Upload — Publish an instrument" decoding="async" loading="lazy" src="/assets/img/playrent-publish.webp" style="width:100%;height:auto;display:block"/></div>
+<div class="gray pr-pub m-keep" style="max-width:280px;aspect-ratio:9/19.5;overflow:hidden"><img alt="Upload — Publish an instrument" decoding="async" loading="lazy" src="/assets/img/playrent-publish.webp" style="width:100%;display:block;height:100%;object-fit:contain"/></div>
 </section>
 <section class="pad rule" id="components">
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">08</span><span>Material Design components</span></div>

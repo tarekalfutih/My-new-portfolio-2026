@@ -54,7 +54,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .ra-ft>div{border-bottom:1px solid #dcd9d4}
 }
 @media (max-width:767px){
-  .wrap>section.ra-hero{padding-left:0 !important;padding-right:0 !important}
+  .wrap>:where(main)>section.ra-hero{padding-left:0 !important;padding-right:0 !important}
   .ra-hb{gap:24px;padding:28px 20px 32px !important}
   .ra-title{font-size:clamp(34px,10.4vw,44px) !important}
   .ra-kick{font-size:11px !important;letter-spacing:.14em !important}
@@ -79,7 +79,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
   .m-only{display:flex !important}
   section[id]{scroll-margin-top:64px}
-  .wrap>section,.pad{padding-left:20px !important;padding-right:20px !important}
+  .wrap>:where(main)>section,.pad{padding-left:20px !important;padding-right:20px !important}
   .pad{padding-top:36px !important;padding-bottom:36px !important}
   .lbl{font-size:11px !important;letter-spacing:.14em !important}
   h1.h1r{font-size:30px !important;line-height:1.08 !important;margin-bottom:12px !important}
@@ -98,7 +98,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wrap section a[href$=".pdf"]{display:none !important}
 }
 @media (max-width:767px){
-  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> .vc > video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
   .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
   .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
 }
@@ -198,7 +198,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </section>
 <section class="rule ra-film" style="padding:32px 24px">
 <div style="max-width:900px;margin:0 auto">
-<video controls="controls" playsinline="true" src="/assets/video/relaitionship-small-size-file.mp4" style="width:100%;aspect-ratio:16/9;background:#191919;display:block"></video>
+<video controls="controls" playsinline="true" poster="/assets/video/relaitionship-small-size-file-poster.webp" src="/assets/video/relaitionship-small-size-file.mp4" style="width:100%;aspect-ratio:16/9;background:#191919;display:block"></video>
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:8px 0 0">The final animation.</p>
 </div>
 </section>
@@ -209,19 +209,19 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </section>
 <div class="ra-stw" data-car="st" data-car-unit="Still"><div aria-label="Story stills" aria-roledescription="carousel" class="strip ra-track" data-car-track="" role="region" tabindex="0">
 <div>
-<div style=""><img alt="Steve waking up, reaching for his phone" decoding="async" loading="lazy" src="/assets/img/ad8f2213-6e1a-45ed-b33a-1678b7872901-rw-1920.png" style="width:100%;height:auto;display:block"/></div>
+<div style="aspect-ratio:16/9;overflow:hidden"><img alt="Steve waking up, reaching for his phone" decoding="async" loading="lazy" src="/assets/img/ad8f2213-6e1a-45ed-b33a-1678b7872901-rw-1920.png" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 <div style="padding:14px 16px"><div style="font:600 11px/1 Archivo;color:#1b3ac4;margin-bottom:4px">01</div><div style="font:400 13px/1.4 Archivo;color:#4a4744">Steve wakes up and asks his AI app what to eat</div></div>
 </div>
 <div>
-<div style=""><img alt="Steve tired after a poor breakfast" decoding="async" loading="lazy" src="/assets/img/96b09752-3ead-48ec-a95f-f343b27904cb.png" style="width:100%;height:auto;display:block"/></div>
+<div style="aspect-ratio:16/9;overflow:hidden"><img alt="Steve tired after a poor breakfast" decoding="async" loading="lazy" src="/assets/img/96b09752-3ead-48ec-a95f-f343b27904cb.png" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 <div style="padding:14px 16px"><div style="font:600 11px/1 Archivo;color:#1b3ac4;margin-bottom:4px">02</div><div style="font:400 13px/1.4 Archivo;color:#4a4744">A poor, AI-suggested breakfast leaves him tired all day</div></div>
 </div>
 <div>
-<div style=""><img alt="The girlfriend, chatting with AI-written replies" decoding="async" loading="lazy" src="/assets/img/his-girlfriend-chats-with-him-unaware-ai-is-answering.png" style="width:100%;height:auto;display:block"/></div>
+<div style="aspect-ratio:16/9;overflow:hidden"><img alt="The girlfriend, chatting with AI-written replies" decoding="async" loading="lazy" src="/assets/img/his-girlfriend-chats-with-him-unaware-ai-is-answering.png" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 <div style="padding:14px 16px"><div style="font:600 11px/1 Archivo;color:#1b3ac4;margin-bottom:4px">03</div><div style="font:400 13px/1.4 Archivo;color:#4a4744">His girlfriend chats with him, unaware AI is answering</div></div>
 </div>
 <div>
-<div style=""><img alt="Infatuation - hearts with robot logos over her eyes" decoding="async" loading="lazy" src="/assets/img/8686222f-516d-4c30-b48d-0fb3f2d42f7b-rw-1920.png" style="width:100%;height:auto;display:block"/></div>
+<div style="aspect-ratio:16/9;overflow:hidden"><img alt="Infatuation - hearts with robot logos over her eyes" decoding="async" loading="lazy" src="/assets/img/8686222f-516d-4c30-b48d-0fb3f2d42f7b-rw-1920.png" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 <div style="padding:14px 16px"><div style="font:600 11px/1 Archivo;color:#1b3ac4;margin-bottom:4px">04</div><div style="font:400 13px/1.4 Archivo;color:#4a4744">She realises the truth, and feels infatuation with the AI</div></div>
 </div>
 </div>
@@ -235,22 +235,22 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Storyboard and planning</div>
 <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 12px;max-width:760px">A storyboard planned the story's structure, timing and flow. Each scene was placed on a timeline to organise the narrative, assign tasks, and prepare voice and sound elements before production.</p>
 <div class="ra-msb m-keep" data-ref="pbBox" style="display:none"><div class="m-keep" data-ref="pbInner" style="position:absolute;top:0;bottom:0;left:0;width:100%"><img alt="Storyboard with every scene placed on a timeline" src="/assets/img/the-planning.png" style="position:absolute;inset:0;width:100%;height:100%;display:block;max-width:none"/><div aria-hidden="true" data-ref="pbShade" style="position:absolute;top:0;bottom:0;left:38.24%;width:0;background:rgba(28,27,26,.06)"></div><div aria-hidden="true" data-ref="pbHead" style="position:absolute;top:0;bottom:0;left:38.24%;width:2px;margin-left:-1px;background:#1c1b1a"><span style="position:absolute;top:0;left:-6px;width:14px;height:10px;background:#1c1b1a"></span></div></div></div>
-<div class="ra-dsb" style="background:#ececea"><img alt="Storyboard and shot-by-shot timeline" decoding="async" loading="lazy" src="/assets/img/the-planning.png" style="width:100%;height:auto;display:block"/></div>
+<div class="ra-dsb" style="background:#ececea"><img alt="Storyboard and shot-by-shot timeline" decoding="async" loading="lazy" src="/assets/img/the-planning.png" style="width:100%;display:block;aspect-ratio:1896/380;height:auto;object-fit:contain"/></div>
 </div>
 <div data-car="sk" data-car-unit="Sketch" style="margin-bottom:36px">
 <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">From sketch to final</div>
 <p style="font:400 15px/1.6 Archivo;color:#4a4744;margin:0 0 16px;max-width:760px">Sketches were drawn by hand on paper, sometimes referencing photos, then divided across the team. Drawings and animation were produced in Krita and Photoshop; the finished work was collected and edited into the final video in After Effects.</p>
 <div class="ra-sk ra-track m-keep" data-car-track="" style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px">
 <div>
-<div style="background:#ececea"><img alt="Hand-drawn sketch - Steve waking to the alarm" decoding="async" loading="lazy" src="/assets/img/character-wakes-up-edited.jpg" style="width:100%;height:auto;display:block"/></div>
+<div style="background:#ececea;aspect-ratio:4/3;overflow:hidden"><img alt="Hand-drawn sketch - Steve waking to the alarm" decoding="async" loading="lazy" src="/assets/img/character-wakes-up-edited.jpg" style="width:100%;display:block;height:100%;object-fit:cover" data-view="1.01699 1.99371 0.849609"/></div>
 <div style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Sketch on paper - waking to the alarm</div>
 </div>
 <div>
-<div style="background:#ececea"><img alt="Hand-drawn sketch - alarm clock detail" decoding="async" loading="lazy" src="/assets/img/clock.jpg" style="width:100%;height:auto;display:block"/></div>
+<div style="background:#ececea;aspect-ratio:4/3;overflow:hidden"><img alt="Hand-drawn sketch - alarm clock detail" decoding="async" loading="lazy" src="/assets/img/clock.jpg" style="width:100%;display:block;height:100%;object-fit:cover" data-view="1 0 0.75523"/></div>
 <div style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Sketch on paper - alarm clock detail</div>
 </div>
 <div>
-<div style="background:#ececea"><img alt="Redrawn line art in Krita and Photoshop" decoding="async" loading="lazy" src="/assets/img/knak-the-door-2.png" style="width:100%;height:auto;display:block"/></div>
+<div style="background:#ececea;aspect-ratio:4/3;overflow:hidden"><img alt="Redrawn line art in Krita and Photoshop" decoding="async" loading="lazy" src="/assets/img/knak-the-door-2.png" style="width:100%;display:block;height:100%;object-fit:cover" data-view="1 4.9682 0"/></div>
 <div style="font:400 12px/1.4 Archivo;color:#75726e;margin-top:6px">Redrawn in Krita and Photoshop</div>
 </div>
 </div>

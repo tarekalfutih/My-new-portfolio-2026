@@ -45,7 +45,7 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
   .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
   .m-only{display:flex !important}
   section[id]{scroll-margin-top:64px}
-  .wrap>section,.pad{padding-left:20px !important;padding-right:20px !important}
+  .wrap>:where(main)>section,.pad{padding-left:20px !important;padding-right:20px !important}
   .pad{padding-top:36px !important;padding-bottom:36px !important}
   .lbl{font-size:11px !important;letter-spacing:.14em !important}
   h1.h1r{font-size:30px !important;line-height:1.08 !important;margin-bottom:12px !important}
@@ -64,7 +64,7 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
   .wrap section a[href$=".pdf"]{display:none !important}
 }
 @media (max-width:767px){
-  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> .vc > video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
   .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
   .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
 }
@@ -171,11 +171,11 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
 <div class="lbl" style="font-size:11px;margin-bottom:14px">Observation, analysis &amp; ideation</div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
 <div>
-<img alt="Two people sitting on a bench at Vågmästareplatsen during on-site observation" src="/assets/img/people-sitting.png" style="width:100%;display:block;height:auto"/>
+<img alt="Two people sitting on a bench at Vågmästareplatsen during on-site observation" src="/assets/img/people-sitting.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">People sitting</p>
 </div>
 <div>
-<img alt="A pedestrian bridge and crossing at Vågmästareplatsen during on-site observation" src="/assets/img/observing-the-area.png" style="width:100%;display:block;height:auto"/>
+<img alt="A pedestrian bridge and crossing at Vågmästareplatsen during on-site observation" src="/assets/img/observing-the-area.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Observing the area</p>
 </div>
 <div>
@@ -183,11 +183,11 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Thematic analysis of observation and interview notes</p>
 </div>
 <div>
-<img alt="Team members spreading and discussing brainwriting sketches on a table" src="/assets/img/ideation.png" style="width:100%;display:block;height:auto"/>
+<img alt="Team members spreading and discussing brainwriting sketches on a table" src="/assets/img/ideation.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Brainwriting 6-3-5 ideation</p>
 </div>
 <div>
-<img alt="The five favoured ideation sketches, top left to bottom right" src="/assets/img/top-left-to-bottom-right-favoured-ideas-1-5.png" style="width:100%;display:block;height:auto"/>
+<img alt="The five favoured ideation sketches, top left to bottom right" src="/assets/img/top-left-to-bottom-right-favoured-ideas-1-5.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">The five favoured sketches</p>
 </div>
 </div>
@@ -200,22 +200,22 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
 <div class="three" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-bottom:32px">
 <div>
 <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Prototype 1</div>
-<div style="background:#ececea;margin-bottom:10px"><img alt="Prototype 1 — a clay octopus figure on a paper set of Vågmästareplatsen" data-frame="1" src="/assets/img/prototype-1.png" style="width:100%;display:block;height:auto"/></div>
+<div style="background:#ececea;margin-bottom:10px;aspect-ratio:4/3;overflow:hidden"><img alt="Prototype 1 — a clay octopus figure on a paper set of Vågmästareplatsen" src="/assets/img/prototype-1.png" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 <p style="font:400 14px/1.5 Archivo;color:#4a4744">A paper set of the square with a clay octopus, tested against a written scenario and storyboard.</p>
 </div>
 <div>
 <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Prototype 2</div>
-<div style="background:#ececea;margin-bottom:10px"><img alt="Prototype 2 — clay and LEGO combined, with miniature figures on the tentacles and benches" data-frame="1" src="/assets/img/prototype-2-1.png" style="width:100%;display:block;height:auto"/></div>
+<div style="background:#ececea;margin-bottom:10px;aspect-ratio:4/3;overflow:hidden"><img alt="Prototype 2 — clay and LEGO combined, with miniature figures on the tentacles and benches" src="/assets/img/prototype-2-1.png" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 <p style="font:400 14px/1.5 Archivo;color:#4a4744">Clay and LEGO combined, adding rubber flooring, benches around the head, adjustable tentacle difficulty, and a colour sensor reading up to five people's clothing at once.</p>
 </div>
 <div>
 <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Colour-scanning tentacles</div>
-<div style="background:#ececea;margin-bottom:10px"><img alt="Concept: tentacles scanning clothing colour" decoding="async" loading="lazy" src="/assets/img/octopus.gif" style="width:100%;height:auto;display:block"/></div>
+<div style="background:#ececea;margin-bottom:10px;aspect-ratio:4/3;overflow:hidden"><img alt="Concept: tentacles scanning clothing colour" decoding="async" loading="lazy" src="/assets/img/octopus.gif" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 <p style="font:400 14px/1.5 Archivo;color:#4a4744">Tentacles scan the colours of people's clothing as they pass beneath and project the colour back across the structure — the feature that gives Octotorg its name.</p>
 </div>
 <div>
 <div style="font:600 10px Archivo;letter-spacing:.08em;text-transform:uppercase;color:#122a8f;margin-bottom:8px">Final iteration</div>
-<div style="background:#ececea;margin-bottom:10px"><img alt="Final prototype at the pitch presentation" decoding="async" loading="lazy" src="/assets/img/final-iteration.jpg" style="width:100%;height:auto;display:block"/></div>
+<div style="background:#ececea;margin-bottom:10px;aspect-ratio:4/3;overflow:hidden"><img alt="Final prototype at the pitch presentation" decoding="async" loading="lazy" src="/assets/img/final-iteration.jpg" style="width:100%;display:block;height:100%;object-fit:cover"/></div>
 <p style="font:400 14px/1.5 Archivo;color:#4a4744">The third round added tables at the tentacle ends, a fence at the lowest level, and touch-reactive ripples — overlapping touches create colour "explosions" where they meet.</p>
 </div>
 </div>
@@ -224,20 +224,20 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
 <p style="font:400 15px/1.6 Archivo;color:#1c1b1a;margin:0 0 12px;text-wrap:pretty">Across the three rounds of testing, scores on the semantic differential scale improved in almost every category, most clearly boring–social. Feedback stayed consistently positive about climbing and seating; safety remained a concern for some participants even after the fence and rubber flooring were added.</p>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin:20px 0 16px">
 <div>
-<div style="background:#fff;border:1px solid #dcd9d4;display:flex;align-items:center;justify-content:center">
-<img alt="Dot plot of individual responses for prototype 1 (blue) and prototype 2 (green) across five semantic differential scale pairs" data-frame="1" src="/assets/img/results-from-the-semantic-differential-scale-12739c96.png" style="width:100%;display:block;height:auto"/>
+<div style="background:#fff;border:1px solid #dcd9d4;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;overflow:hidden">
+<img alt="Dot plot of individual responses for prototype 1 (blue) and prototype 2 (green) across five semantic differential scale pairs" src="/assets/img/results-from-the-semantic-differential-scale-12739c96.png" style="width:100%;display:block;height:100%;object-fit:contain"/>
 </div>
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:8px 0 0">Individual responses, prototype 1 vs. prototype 2.</p>
 </div>
 <div>
-<div style="background:#fff;border:1px solid #dcd9d4;display:flex;align-items:center;justify-content:center">
-<img alt="Line graph of mean points for prototype 1 and prototype 2 on a 6-point Likert scale, across the five category pairs" data-frame="1" src="/assets/img/graph-displaying-the-comparison-of-mean-points-9d9acb4e.png" style="width:100%;display:block;height:auto"/>
+<div style="background:#fff;border:1px solid #dcd9d4;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;overflow:hidden">
+<img alt="Line graph of mean points for prototype 1 and prototype 2 on a 6-point Likert scale, across the five category pairs" src="/assets/img/graph-displaying-the-comparison-of-mean-points-9d9acb4e.png" style="width:100%;display:block;height:100%;object-fit:contain"/>
 </div>
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:8px 0 0">Mean scores, prototype 1 vs. prototype 2.</p>
 </div>
 <div>
-<div style="background:#fff;border:1px solid #dcd9d4;display:flex;align-items:center;justify-content:center">
-<img alt="Boxplot comparing prototype 1, 2 and 3 across boring–social, useless–useful, rejecting–inviting, boring–playful and isolated–interactive on the semantic differential scale" data-frame="1" src="/assets/img/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8.png" style="width:100%;display:block;height:auto"/>
+<div style="background:#fff;border:1px solid #dcd9d4;display:flex;align-items:center;justify-content:center;aspect-ratio:4/3;overflow:hidden">
+<img alt="Boxplot comparing prototype 1, 2 and 3 across boring–social, useless–useful, rejecting–inviting, boring–playful and isolated–interactive on the semantic differential scale" src="/assets/img/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8.png" style="width:100%;display:block;height:100%;object-fit:contain"/>
 </div>
 <p style="font:400 12px/1.4 Archivo;color:#75726e;margin:8px 0 0">All three prototypes compared.</p>
 </div>
@@ -254,7 +254,7 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">What three rounds of testing showed</h2>
 <p style="font:400 16px/1.6 Archivo;color:#4a4744;margin:0 0 28px;max-width:760px;text-wrap:pretty">Octotorg's climbing, seating and colour-changing tentacles were well received across all three rounds of testing — participants repeatedly said they wanted to climb it and sit on top. Two things stayed unresolved: people couldn't always tell that their own presence caused the colour change, and the design scored close to neutral on usefulness. Weatherproofing and a higher-fidelity, to-scale prototype were the clearest next steps.</p>
 <figure style="margin:0;max-width:900px">
-<img alt="Hero — Octotorg concept render at Vågmästareplatsen" decoding="async" loading="lazy" src="/assets/img/octopus-gif.gif" style="width:100%;height:auto;display:block"/>
+<img alt="Hero — Octotorg concept render at Vågmästareplatsen" decoding="async" loading="lazy" src="/assets/img/octopus-gif.gif" style="width:100%;display:block;aspect-ratio:16/9;height:auto;object-fit:cover"/>
 <figcaption style="font:400 13px/1.4 Archivo;color:#75726e;margin-top:8px">Octotorg concept at Vågmästareplatsen.</figcaption>
 </figure>
 </section>
