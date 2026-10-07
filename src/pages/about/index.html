@@ -103,6 +103,15 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   .ab-open{font-size:20px !important}
   .ab-open>li{padding:14px 0 !important}
 }
+/* Tablet layouts from the 6 Oct reference. */
+@media (min-width:768px) and (max-width:1023px){
+  .about-hero{grid-template-columns:300px minmax(0,1fr) !important;column-gap:64px !important;padding-left:48px !important;padding-right:48px !important;align-items:center !important}
+  .about-photo,.about-text{grid-column:auto !important}
+  .about-photo{justify-self:start !important}
+  .ab-sec{grid-template-columns:1fr !important;gap:24px !important;padding:56px 40px !important}
+  .ab-l,.ab-r{grid-column:1 / -1 !important}
+  .ab-l p{max-width:520px !important}
+}
 </style>
 </head>
 <body>

@@ -261,6 +261,29 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 }
 .feat-shot{display:block;width:100%;height:100%;object-fit:contain}
 @media (max-width:767px){.feat-shot{height:auto}}
+/* Tablet layouts from the 6 Oct reference. */
+@media (min-width:768px) and (max-width:900px){
+  .hero-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;margin-top:0 !important}
+  .hero-grid>div[data-sp="text"]{grid-column:1 / span 7 !important}
+  .hero-grid>.hero-photo,.hero-grid .hero-photo{grid-column:8 / span 5 !important;max-width:none !important;height:auto !important;aspect-ratio:3/4}
+  .hero-grid{align-items:center !important}
+  .h1-hero{font-size:clamp(48px,7vw,60px) !important}
+  .lead-photo{max-width:none !important}
+  .first-screen{min-height:0 !important}
+  .hero-pad{padding:72px 24px 104px !important}
+  .two-col{grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;gap:32px !important}
+  .footnote{padding:80px 24px 88px !important}
+  .illo-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;gap:24px !important;align-items:center !important}
+  .illo-cover{grid-column:1 / span 5 !important;max-width:none !important}
+  .illo-text{grid-column:6 / span 7 !important}
+}
+@media (min-width:901px) and (max-width:1100px) and (orientation:portrait){
+  .first-screen{min-height:0 !important}
+  .hero-pad{padding:120px 56px 136px !important}
+  .hero-photo{height:auto !important;aspect-ratio:3/4;max-width:310px !important;justify-self:end}
+  .hero-grid{align-items:center !important}
+  .footnote{padding:96px 56px 104px !important}
+}
 </style>
 </head>
 <body>
