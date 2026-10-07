@@ -32,11 +32,12 @@ public/                  copied to dist/ as-is
   CNAME                  tarekdesign.se (GitHub Pages custom domain)
   assets/css/modernist.css   design-system base (from the handoff's _ds/ folder)
   assets/css/base.css        tokens, page frame, header, footer, focus, shared motion, phone header + menu
-  assets/css/case-phone.css  shared phone layer (< 768px) for the case studies that link it
   assets/js/site.js          scroll reveal + Claude Design image crops (every page)
   assets/js/video-behavior.js  native controls, resume where left off, pause off-screen, one at a time (every page)
   assets/js/nav-back.js        "← Back" goes to the previous page on this site (case studies, Illustration)
   assets/js/section-spy.js     colours the section tab for the section in view (case studies)
+  assets/js/carousel.js        swipe carousels ([data-car]): snap, pill dots with 5s auto-advance, play/pause
+  assets/js/pages/<page>.js    page behaviour (heroes, demos), one file per page
   assets/js/cv-viewer.js      CV links open the CV in a dialog (pdf.js from assets/js/pdfjs/, every page)
   assets/js/pdfjs/           local copy of pdf.js 3.11.174 (Apache-2.0), loaded when the CV is opened
   assets/js/home.js, lego-alma.js, contact.js, work.js   page interactions

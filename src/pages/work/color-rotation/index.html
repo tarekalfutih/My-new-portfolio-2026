@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
 <!--@head /work/color-rotation/-->
-<link rel="stylesheet" href="/assets/css/case-phone.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap">
 <title>Color Rotation — Tarek Alfutih</title>
 <meta name="description" content="A board game about racing to complete colour sequences on a rotating, three-layer board.">
 <style>
+@media (min-width:1281px) and (max-width:1679px){html,body{background:#fff !important}.wrap,.pg{max-width:none !important;border-left:0 !important;border-right:0 !important}}
+
 body{margin:0;background:#f3f2f2;color:#1c1b1a;font-family:Archivo,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
 a{color:#122a8f;text-decoration:none}
 a:hover{color:#1b3ac4;text-decoration:underline}
@@ -37,285 +39,681 @@ ul.plain li{font:400 16px/1.55 Archivo;color:#4a4744;margin-bottom:6px}
   .facts{grid-template-columns:1fr 1fr}
   .facts>div{border-right:none;border-bottom:1px solid #dcd9d4}
 }
+
+.m-only{display:none}
+.m-menu a{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #dcd9d4;font:600 20px/1 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-decoration:none}
+.m-menu a:last-child{border-bottom:0}.m-menu a:active{background:#e5e9fb}.m-menu a:hover{text-decoration:none;color:#1c1b1a}
+@media (max-width:767px){
+  html,body{overflow-x:clip;overscroll-behavior-x:none}
+  .wrap{border-left:0 !important;border-right:0 !important;overflow-x:clip}
+  .cs-top{height:56px;padding:0 6px 0 20px !important;flex-wrap:nowrap !important;gap:12px !important;border-bottom:0 !important}
+  .cs-top>a:first-child{font-size:17px !important;min-height:44px;display:inline-flex;align-items:center}
+  .cs-links,.cs-cv,.cs-tabs{display:none !important}
+  .cs-back{order:-1;display:inline-flex !important;align-items:center;justify-content:center;width:44px;height:44px;flex:none;margin-left:-12px;border-right:1px solid #dcd9d4;color:#1c1b1a !important}.cs-back-t,.cs-back-a{display:none !important}.cs-back-c{display:block !important}
+  .m-only{display:flex !important}
+  section[id]{scroll-margin-top:64px}
+  .wrap>section,.pad{padding-left:20px !important;padding-right:20px !important}
+  .pad{padding-top:36px !important;padding-bottom:36px !important}
+  .lbl{font-size:11px !important;letter-spacing:.14em !important}
+  h1.h1r{font-size:30px !important;line-height:1.08 !important;margin-bottom:12px !important}
+  .wrap h2{font-size:22px !important;line-height:1.2 !important}
+  .wrap h3{font-size:18px !important;line-height:1.25 !important}
+  .wrap p,.wrap li{font-size:16px !important;line-height:1.55 !important;max-width:none !important}
+  .wrap figcaption,.wrap .cap{font-size:13px !important}
+  .facts{grid-template-columns:1fr 1fr !important}
+  .facts>div{padding:16px 12px 16px 0 !important;border-right:none !important;border-bottom:1px solid #dcd9d4}
+  .facts>div>div:last-child{font-size:14px !important}
+  .wrap section [style*="grid-template-columns"]:not(.facts):not(.m-keep),.two,.three,.g2,.g3,.grid2,.grid3,.hero-split,.findings-grid{grid-template-columns:minmax(0,1fr) !important}
+  .wrap section [style*="grid-column"]{grid-column:auto !important}
+  .wrap section [style*="display:flex"]:not(.m-keep){flex-wrap:wrap}
+  .wrap section [style*="width:"]:not(.m-keep){max-width:100%}
+  .wrap img,.wrap video,.wrap img{max-width:100%}
+  .wrap section a[href$=".pdf"]{display:none !important}
+}
+@media (max-width:767px){
+  .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
+  .wrap section img,.wrap section video,.wrap section img{width:100% !important;max-width:none !important}
+  .wrap section p[style*="#75726e"],.wrap section p[style*="#4a4744"]:not(:first-of-type){display:none !important}
+}
+
+
+.crb{position:relative;aspect-ratio:1/1;container-type:inline-size}
+.crw{position:absolute;inset:0}
+.crc{position:absolute;left:50%;top:50%;aspect-ratio:1/1;transform:translate(-50%,-50%);border-radius:50%;box-shadow:0 .7cqw 0 #a88c6c,0 0 0 .25cqw rgba(0,0,0,.12)}
+.crt{position:absolute;left:44.6%;top:44.6%;width:10.8%;aspect-ratio:1/1;border-radius:50%;display:flex;align-items:center;justify-content:center;font:500 5.4cqw/1 Archivo;box-shadow:0 .5cqw 0 rgba(0,0,0,.28),inset 0 0 0 .3cqw rgba(0,0,0,.08)}
+.crl{position:absolute;left:45.5%;top:45.5%;width:9%;height:9%;display:grid;grid-template-columns:1fr 1fr;gap:.3cqw;filter:drop-shadow(0 .5cqw 0 rgba(0,0,0,.3))}.crl i,.crp i{display:block;position:relative;border-radius:.2cqw;box-shadow:inset .15cqw .15cqw 0 rgba(255,255,255,.35),inset -.2cqw -.25cqw 0 rgba(0,0,0,.25)}.crl i,.crp i{background-image:radial-gradient(circle at 26% 24%,rgba(255,255,255,.5) 0 5%,rgba(255,255,255,.14) 6% 15%,transparent 16%),radial-gradient(circle at 74% 24%,rgba(255,255,255,.5) 0 5%,rgba(255,255,255,.14) 6% 15%,transparent 16%),radial-gradient(circle at 26% 72%,rgba(255,255,255,.5) 0 5%,rgba(255,255,255,.14) 6% 15%,transparent 16%),radial-gradient(circle at 74% 72%,rgba(255,255,255,.5) 0 5%,rgba(255,255,255,.14) 6% 15%,transparent 16%),radial-gradient(circle at 27% 30%,rgba(0,0,0,.32) 0 16%,transparent 17%),radial-gradient(circle at 75% 30%,rgba(0,0,0,.32) 0 16%,transparent 17%),radial-gradient(circle at 27% 78%,rgba(0,0,0,.32) 0 16%,transparent 17%),radial-gradient(circle at 75% 78%,rgba(0,0,0,.32) 0 16%,transparent 17%)!important}
+.crh{position:absolute;left:47%;top:48.8%;width:6%;height:2.4%;background:linear-gradient(90deg,#fbfaf8 0 44%,#e2ded6 44% 47%,transparent 47% 53%,#e2ded6 53% 56%,#f4f2ee 56%);box-shadow:0 .2cqw .4cqw rgba(0,0,0,.18)}
+.crh::after{content:"";position:absolute;left:46%;width:8%;top:-60%;height:200%;background:linear-gradient(90deg,#fff 0 45%,#cfcac1 45% 55%,#ebe8e2 55%);border-radius:.2cqw .2cqw .1cqw .1cqw;box-shadow:.5cqw .4cqw .5cqw rgba(0,0,0,.3)}
+.crfl{animation:crFl 7s ease-in-out infinite}
+@keyframes crFl{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+.crp{filter:drop-shadow(0 .5cqw 0 rgba(0,0,0,.3))}.crp i{position:absolute;left:50%;top:50%;width:4.35cqw;height:4.35cqw;margin:-2.175cqw 0 0 -2.175cqw}
+.crp i:nth-child(1){transform:rotate(-45deg) translateY(-3.3cqw) rotate(45deg)}
+.crp i:nth-child(2){transform:rotate(45deg) translateY(-3.3cqw) rotate(-45deg)}
+.crp i:nth-child(3){transform:rotate(135deg) translateY(-3.3cqw) rotate(-135deg)}
+.crp i:nth-child(4){transform:rotate(225deg) translateY(-3.3cqw) rotate(-225deg)}
+@media (prefers-reduced-motion:reduce){.crw,.crfl,.crp i{animation:none !important}}
+.wrap section.cr-hero{background:#f3f2f2;height:calc(100svh - var(--hdr,110px));min-height:560px;max-height:1400px;display:flex;flex-direction:column;border-bottom:2px solid #1c1b1a;padding:0}
+.cr-stage{flex:1;min-height:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;padding:32px 56px}
+.cr-text{grid-column:1 / span 6;display:flex;flex-direction:column;gap:22px;min-width:0}
+.cr-art{grid-column:7 / span 6;min-width:0;min-height:0;height:100%;display:flex;justify-content:center;align-items:center}
+.wrap .cr-artin{width:min(100%,470px,calc(100svh - var(--hdr,110px) - 260px));display:flex;flex-direction:column;gap:14px;flex:none}
+.cr-artin .crb{width:100%}
+.crw{transition:none}.crw.hl>.crc:first-child{box-shadow:0 0 0 .9cqw #1b3ac4 !important}
+.crt.tgt{box-shadow:0 0 0 .9cqw #1b3ac4 !important}
+.hr-cap{display:flex;justify-content:space-between;align-items:center;gap:10px 12px;flex-wrap:wrap}
+.hr-steps{display:flex;gap:6px}
+.hr-step{display:inline-flex;align-items:center;gap:8px;padding:5px 10px 5px 5px;border:2px solid #dcd9d4;background:#fff;font:600 13px/1 Archivo;color:#4a4744;transition:border-color .25s,background .25s,color .25s}
+.hr-step b{width:20px;height:20px;background:#1c1b1a;color:#fff;font:700 11px/20px Archivo;text-align:center;transition:background .25s}
+.hr-step.on{border-color:#1b3ac4;background:#e5e9fb;color:#122a8f}.hr-step.on b{background:#1b3ac4}
+.hr-sq{display:flex;align-items:center;gap:8px}
+.hr-l{font:600 10px/1.15 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#4a4744;text-align:right}
+.hr-seq{display:grid;grid-template-columns:repeat(5,24px);gap:4px;padding:4px;border:2px solid #1c1b1a;background:#fff}
+.hr-seq i{display:block;width:24px;height:24px;outline:1.5px dashed #b5b2ad;outline-offset:-1.5px}
+.hr-seq .cb{--s:24px}
+.wrap .cr-fbar{background:#fff;margin:0;padding:0 56px;border-top:2px solid #1c1b1a !important;border-bottom:0 !important;grid-template-columns:1.2fr 1fr 1.4fr .6fr}
+.wrap .cr-fbar>div{padding:18px 20px !important;border-right:1px solid #dcd9d4 !important;border-bottom:0 !important}
+.wrap .cr-fbar>div:first-child{padding-left:0 !important}.wrap .cr-fbar>div:last-child{border-right:0 !important}
+@media (min-width:1025px){.wrap section.cr-hero{background:#fff}}
+@media (max-width:1024px){
+  .wrap section.cr-hero{height:auto;min-height:0;max-height:none}
+  .cr-stage{display:flex;flex-direction:column;align-items:stretch;gap:40px;padding:56px 32px 48px}
+  .cr-text{gap:18px}
+  .wrap section.cr-hero h1.cr-h1{font-size:clamp(44px,8vw,72px) !important;line-height:.95 !important;margin:0 !important}
+  .wrap .cr-artin{width:min(440px,86vw)}
+  .wrap .cr-fbar{padding:0 32px !important;grid-template-columns:1fr 1fr !important}
+  .wrap .cr-fbar>div{padding:16px 16px 16px 0 !important;border-right:0 !important;border-bottom:1px solid #dcd9d4 !important}
+  .wrap .cr-fbar>div.cr-role{grid-column:1 / -1}
+  .wrap .cr-fbar>div:last-child{border-bottom:0 !important}
+}
+@media (min-width:768px) and (max-width:1024px){
+  .wrap .cr-fbar>div.cr-role{grid-column:auto}
+  .wrap .cr-fbar>div:nth-child(2){order:3}.wrap .cr-fbar>div:nth-child(3){order:4}.wrap .cr-fbar>div:nth-child(4){order:2}
+  .wrap .cr-fbar>div:nth-child(2),.wrap .cr-fbar>div:nth-child(3){border-bottom:0 !important}
+  .wrap .cr-fbar>div:nth-child(4){border-bottom:1px solid #dcd9d4 !important}
+}
+@media (max-width:767px){
+  .cr-stage{padding:32px 20px 36px !important;gap:32px}
+  .wrap section.cr-hero{padding:0 !important}
+  .cr-text{gap:14px}
+  .wrap section.cr-hero h1.cr-h1{font-size:clamp(38px,11vw,48px) !important}
+  .wrap section.cr-hero .cr-lead{font-size:17px !important}
+  .wrap .cr-artin{width:min(340px,100%)}
+  .wrap .cr-fbar{padding:4px 20px 8px !important}
+}
+
+
+.sr{position:absolute !important;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.cb{--s:36px;position:relative;width:var(--s);height:var(--s);flex:none;display:inline-flex;align-items:center;justify-content:center;font:700 calc(var(--s)*.44)/1 Archivo;color:#1c1b1a;box-shadow:inset 0 calc(var(--s)*-.1) 0 rgba(0,0,0,.16),0 1px 1px rgba(0,0,0,.18)}
+.cb{color:transparent !important}.cB{background:#1f6fd1;color:#fff}.cG{background:#3cb44a}.cR{background:#ff6b2c}.cP{background:#f0559c}.cD{background:#5b3a2a;color:#fff}.cW{background:#fff;color:#1f6fd1;box-shadow:inset 0 0 0 1px #b5b2ad,inset 0 calc(var(--s)*-.1) 0 rgba(0,0,0,.07)}
+.tok{position:relative;display:inline-block;flex:none;width:22px;height:30px;border-radius:11px/5px;background:linear-gradient(90deg,#d9a900,#ffd21f 40%,#ffe680 58%,#e0b000);box-shadow:0 1px 1px rgba(0,0,0,.3)}
+.tok::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;border-radius:50%;background:#ffe680;box-shadow:inset 0 0 0 1px rgba(0,0,0,.14)}
+.ctx{font:400 18px/1.6 Archivo;color:#1c1b1a;max-width:640px;margin:0 0 12px;text-wrap:pretty}
+.mini{font:600 11px/1.2 Archivo;letter-spacing:.12em;text-transform:uppercase;color:#4a4744}
+.pg-h{display:flex;align-items:center;gap:14px;margin:64px 0 10px;padding-top:28px;border-top:1px solid #dcd9d4}
+.pg-h h3{font:700 24px/1.2 Archivo;letter-spacing:-.01em;margin:0}
+.pg-n{width:32px;height:32px;flex:none;background:#1c1b1a;color:#fff;font:700 14px/32px Archivo;text-align:center}
+.pg-sub{font:400 17px/1.55 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 28px;text-wrap:pretty}
+.part{margin:88px 0 0;padding-top:16px;border-top:4px solid #1c1b1a;display:flex;align-items:baseline;gap:6px 14px;flex-wrap:wrap}
+.part b{font:700 13px/1 Archivo;letter-spacing:.16em;text-transform:uppercase}
+.part span{font:400 15px/1.4 Archivo;color:#4a4744}
+.part+.pg-h{margin-top:16px;border-top:0;padding-top:12px}
+.pmap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:2px solid #1c1b1a;margin-top:28px}
+.pmap a{display:flex;flex-direction:column;gap:6px;padding:16px 18px;border-right:1px solid #dcd9d4;color:#1c1b1a;text-decoration:none}
+.pmap a:last-child{border-right:0}.pmap a:hover{background:#e5e9fb;color:#1c1b1a;text-decoration:none}
+.pmap b{font:700 17px/1.2 Archivo}.pmap small{font:400 14px/1.45 Archivo;color:#4a4744}
+.htp{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,4fr) minmax(0,2fr);border:2px solid #1c1b1a;margin-top:28px;background:#fff}
+.htp-c{display:flex;flex-direction:column;border-right:2px solid #1c1b1a}.htp-c:last-child{border-right:0}.htp-r{background:#e5e9fb}
+.htp-h{display:flex;flex-direction:column;gap:6px;padding:16px 20px 14px;border-bottom:1px solid #1c1b1a}.htp-h b{font:700 20px/1.2 Archivo;letter-spacing:-.01em}.htp-h .mini{color:#122a8f}
+.htp-l{list-style:none;margin:0;padding:6px 20px 18px;display:flex;flex-direction:column}
+.htp-l li{display:grid;grid-template-columns:32px minmax(0,1fr);gap:14px;padding:14px 0;border-bottom:1px solid #dcd9d4}.htp-l li:last-child{border-bottom:0}.htp-r .htp-l li{border-color:#b9c3ee}
+.htp-l li>i{width:32px;height:32px;background:#1c1b1a;color:#fff;font:700 14px/32px Archivo;font-style:normal;text-align:center}
+.htp-l b{display:block;font:700 17px/1.25 Archivo;margin-bottom:4px}.htp-l p{font:400 15px/1.5 Archivo;color:#1c1b1a;margin:0;text-wrap:pretty}
+.htp-l b.c1{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin:0;background:#1b3ac4;color:#fff;font:700 11px/1 Archivo;vertical-align:1px}
+.acts{list-style:none;margin:10px 0 0;padding:0;border-top:1px solid #b9c3ee}.acts li{display:grid !important;grid-template-columns:28px minmax(0,1fr) auto;gap:10px;align-items:center;padding:8px 0 !important;border-bottom:1px solid #b9c3ee;font:500 15px/1.3 Archivo}.acts .ai{display:flex;align-items:center;justify-content:center}.acts .cb{--s:20px}.acts .tok{width:16px;height:22px}.acts em{font:700 13px/1 Archivo;font-style:normal;color:#fff;background:#1b3ac4;padding:4px 7px;white-space:nowrap}.htp-l p.ex{margin-top:10px;font-size:14px;color:#4a4744}
+.htp-l a{display:inline-block;margin-top:6px;font:600 13px/1.3 Archivo;color:#122a8f;text-decoration:underline;text-underline-offset:3px}.htp-l a:hover{color:#1b3ac4}
+
+.htp-fig{display:flex;align-items:center;gap:8px;min-height:46px;margin-bottom:10px;flex-wrap:wrap}.htp-fig .cb{--s:26px}.htp-fig .qk .cb{--s:22px}.htp-fig .qrow em{font-size:12px}.htp-fig .ar{font:700 15px/1 Archivo;color:#4a4744}.htp-fig svg{flex:none}.htp-fig .pp i{width:12px;height:12px}
+@media (max-width:1024px){.htp{grid-template-columns:minmax(0,1fr)}.htp-c{border-right:0;border-bottom:2px solid #1c1b1a}.htp-c:last-child{border-bottom:0}}
+.pmap a>span.mini{display:flex;justify-content:space-between;gap:8px}.pmap a>span.mini em{font-style:normal;color:#122a8f;letter-spacing:.06em}
+.key{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin-top:18px}
+.key>span{display:inline-flex;align-items:center;gap:8px;font:500 14px/1 Archivo}.key .cb{--s:24px}
+.goal{display:grid;grid-template-columns:auto minmax(0,1fr);gap:48px;align-items:center}
+.qk{display:inline-flex;flex-direction:column;gap:12px;padding:14px 16px 16px;background:#fff;border:2px solid #1c1b1a;box-shadow:4px 4px 0 #dcd9d4}
+.qk .mini{color:#1c1b1a}.qk .cb{--s:32px}
+.qrow{display:flex;align-items:center;gap:6px}.qrow em{font:700 14px/1 Archivo;font-style:normal;color:#4a4744}
+.chain{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.chain>div{padding:14px 16px;border:2px solid #1c1b1a;margin-left:-2px;display:flex;flex-direction:column;gap:6px;min-width:0;background:#fff}
+.chain>div:first-child{margin-left:0}
+.chain i{font:700 12px/1 Archivo;font-style:normal;color:#122a8f}.chain b{font:700 16px/1.25 Archivo}
+.chain>div.w{background:#e5e9fb}
+.tbox,.sbx{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:center}
+.tf,.sbf{position:relative;width:100%;aspect-ratio:2/1;container-type:inline-size;background:#f3f2f2;overflow:hidden}
+.tf>.crb,.sbf>.crb{position:absolute;left:1cqw;top:1cqw;width:48cqw}
+.tf .crc,.sbf .crc{box-shadow:0 .5cqw 0 #a88c6c}.tf .crt,.sbf .crt{box-shadow:none}
+.pc{position:absolute;left:50%;top:50%;width:7cqw;height:7cqw;margin:-3.5cqw 0 0 -3.5cqw;z-index:3;background-color:#e8262b;background-image:radial-gradient(circle at 28% 28%,rgba(255,255,255,.55) 0 11%,transparent 12%),radial-gradient(circle at 72% 28%,rgba(255,255,255,.55) 0 11%,transparent 12%),radial-gradient(circle at 28% 72%,rgba(255,255,255,.55) 0 11%,transparent 12%),radial-gradient(circle at 72% 72%,rgba(255,255,255,.55) 0 11%,transparent 12%);box-shadow:0 0 0 .7cqw #fff,0 1.2cqw 1.2cqw rgba(0,0,0,.35)}
+.pc.blue{background-color:#1f5fd1}
+.gh{position:absolute;left:50%;top:50%;width:7cqw;height:7cqw;margin:-3.5cqw 0 0 -3.5cqw;z-index:2;border:.6cqw dashed #1c1b1a;background:rgba(255,255,255,.55)}
+.ring{position:absolute;left:50%;top:50%;width:14cqw;height:14cqw;margin:-7cqw 0 0 -7cqw;border-radius:50%;border:1cqw solid #1b3ac4;z-index:2;pointer-events:none}
+.ovl{position:absolute;inset:0;width:100%;height:100%;z-index:2;pointer-events:none;overflow:visible}
+.tf .a-yel{transform:rotate(90deg)}
+.tf .yring{width:73cqw;height:73cqw;margin:-36.5cqw 0 0 -36.5cqw;border-width:1cqw;opacity:0}
+.tf .nb{opacity:0}
+.tf .pc{transform:translateY(-28.6cqw)}
+.tf .gh{transform:translateY(-14.4cqw)}
+.tseq{position:absolute;left:52cqw;top:24cqw;width:41cqw;height:9cqw;border:.4cqw solid #1c1b1a;background:#fff}
+.tseq i{position:absolute;top:.6cqw;width:7cqw;height:7cqw;outline:.25cqw dashed #b5b2ad;outline-offset:-.25cqw}
+.tf>.cb{--s:7cqw;position:absolute;top:25cqw}
+.tlab{position:absolute;left:52cqw;top:18cqw;white-space:nowrap;font:600 max(10px,1.7cqw)/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#4a4744}
+.apm{display:flex;align-items:center;gap:14px;padding:14px 16px;border:2px solid #1c1b1a;background:#fff}
+.pips{display:flex;gap:6px}.pips i{width:22px;height:22px;border:2px solid #1b3ac4;background:#1b3ac4}
+.apt{display:grid;font:700 16px/1.2 Archivo}.apt span{grid-area:1/1}.apt .t0,.apt .t1{opacity:0}
+.tsteps{display:flex;flex-direction:column;gap:10px;margin-top:10px}
+.tst{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;padding:14px 16px;border:2px solid #dcd9d4;background:#fff}
+.tst>span{width:30px;height:30px;background:#1c1b1a;color:#fff;font:700 14px/30px Archivo;text-align:center}
+.tst b{display:block;font:700 17px/1.25 Archivo;margin:4px 0}.tst p{font:400 15px/1.5 Archivo;color:#4a4744;margin:0;text-wrap:pretty}
+.cost{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font:600 13px/1 Archivo;color:#122a8f}.cost i{width:12px;height:12px;background:#1b3ac4}
+.dmbar{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;flex-wrap:wrap}
+.tagx{display:inline-flex;align-items:center;gap:8px;padding:0;border:0;font:600 11px/1 Archivo;letter-spacing:.12em;text-transform:uppercase;color:#4a4744}
+.tagx::before{content:"";width:16px;height:2px;background:#4a4744;flex:none}
+.rp{display:inline-flex;align-items:center;gap:8px;height:36px;padding:0 12px;border:2px solid #1c1b1a;background:#fff;font:600 13px/1 Archivo;color:#1c1b1a;cursor:pointer}
+.rp:hover{background:#1c1b1a;color:#fff}.rp:active{background:#122a8f;border-color:#122a8f;color:#fff}.rp:focus-visible{outline:2px solid #1b3ac4;outline-offset:2px}
+.rp-row{display:none}
+@media (max-width:1024px){.rp-row{display:flex;justify-content:flex-start;margin-top:12px}.rp-row .rp{height:44px;padding:0 14px}}
+.note{font:400 15px/1.5 Archivo;color:#1c1b1a;margin:16px 0 0;padding-left:14px;border-left:3px solid #1c1b1a;max-width:640px;text-wrap:pretty}
+.sqg{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.sqc{border:2px solid #1c1b1a;background:#fff;display:flex;flex-direction:column}
+.sqc-fig{background:#f3f2f2;border-bottom:1px solid #dcd9d4;padding:24px;display:flex;flex-direction:column;gap:16px;flex:1}
+.sqc-t{padding:16px 20px 20px}.sqc-t b{display:block;font:700 18px/1.25 Archivo;margin-bottom:6px}.sqc-t p{font:400 15px/1.5 Archivo;color:#4a4744;margin:0;text-wrap:pretty}
+.sqr{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+.sq5{--s:34px;--g:6px;position:relative;display:inline-grid;grid-template-columns:repeat(5,var(--s));gap:var(--g);padding:6px;background:#fff;border:2px solid #1c1b1a}
+.sq5>i{display:block;width:var(--s);height:var(--s);outline:1.5px dashed #b5b2ad;outline-offset:-1.5px}
+.sq5 .cb{--s:inherit;position:absolute;top:6px;left:calc(6px + var(--i,0)*calc(var(--s) + var(--g)))}
+.newb{display:flex;align-items:center;gap:10px;font:600 14px/1.3 Archivo}.newb .cb{--s:34px}
+.c2 .sq5{margin-left:calc(var(--s) + 14px)}
+.c2 .out{opacity:.45;transform:translate(6px,12px) rotate(12deg)}
+.outtag{position:absolute;top:calc(var(--s) + 26px);left:calc(6px + 5*calc(var(--s) + var(--g)) - 10px);font:600 12px/1.2 Archivo;white-space:nowrap}
+.c2 .sqr.after{padding-bottom:22px}
+.qd{display:grid;grid-template-columns:auto minmax(0,1fr);gap:40px;align-items:start}
+.qcards{display:flex;gap:16px;align-items:flex-start}
+.qslot{display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+.qold{opacity:.45;transform:translateY(6px)}
+.qflag{font:600 13px/1.3 Archivo;color:#1c1b1a}
+.mt{position:absolute;top:2px;left:calc(2px + calc(var(--s) + var(--g)));width:calc(3*var(--s) + 2*var(--g) + 8px);height:calc(var(--s) + 8px);outline:3px solid #1b3ac4;transform-origin:left center}
+.qres{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.ok{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;background:#1c1b1a;color:#fff;font:700 14px/1 Archivo}
+.pts{display:inline-flex;align-items:center;padding:8px 12px;border:2px solid #1b3ac4;color:#122a8f;font:700 14px/1 Archivo;background:#fff}
+.qsteps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:28px;border-top:2px solid #1c1b1a}
+.qsteps>div{padding:12px 16px 0 0;font:400 15px/1.45 Archivo;color:#1c1b1a}.qsteps b{display:block;font:700 13px/1 Archivo;color:#122a8f;margin-bottom:6px}
+.loop{display:flex;align-items:stretch;flex-wrap:wrap;margin-top:56px;border:2px solid #1c1b1a;background:#fff}
+.loop-h{flex:0 0 auto;display:flex;align-items:center;padding:16px 18px;background:#1c1b1a;color:#fff;font:700 12px/1.2 Archivo;letter-spacing:.14em;text-transform:uppercase}
+.loop>div:not(.loop-h){flex:1 1 150px;display:flex;align-items:center;gap:10px;padding:16px 18px;border-left:1px solid #dcd9d4;font:700 16px/1.25 Archivo}
+.loop .cb{--s:18px}.loop em{font-style:normal;font-weight:700;color:#4a4744;margin-left:auto}
+.loop-t{font:400 16px/1.5 Archivo;color:#1c1b1a;margin:12px 0 0}
+.win7{display:grid;grid-template-columns:auto minmax(0,1fr);gap:28px;align-items:center;padding:28px;background:#e5e9fb}
+.w7{display:flex;align-items:center;gap:14px;padding:12px 22px;background:#1b3ac4;color:#fff}
+.w7 b{font:700 72px/1 Archivo;letter-spacing:-.04em}.w7 span{font:700 15px/1.15 Archivo;letter-spacing:.14em;text-transform:uppercase}
+.win7 h4{font:700 24px/1.2 Archivo;margin:0 0 6px}.win7 p{font:400 16px/1.5 Archivo;color:#122a8f;margin:0}
+.costs{display:grid;grid-template-columns:2fr 1fr 1fr;border:2px solid #1c1b1a;background:#fff}
+.cost-c{border-right:1px solid #dcd9d4;display:flex;flex-direction:column}.cost-c:last-child{border-right:0}
+.cost-h{display:flex;align-items:center;gap:10px;padding:14px 18px;border-bottom:2px solid #1c1b1a;background:#f3f2f2;font:700 15px/1.2 Archivo}
+.pp{display:flex;gap:4px}.pp i{width:14px;height:14px;border:2px solid #1b3ac4;background:#1b3ac4}.pp i.e{background:#fff}
+.cost-l{list-style:none;margin:0;padding:0;display:grid}
+.cost-c:first-child .cost-l{grid-template-columns:repeat(3,minmax(0,1fr))}
+.cost-l li{padding:14px 18px;border-bottom:1px solid #dcd9d4}.cost-c:first-child .cost-l li{border-bottom:0;border-right:1px solid #e6e3df}.cost-c:first-child .cost-l li:last-child{border-right:0}
+.cost-l b{display:block;font:700 16px/1.3 Archivo;margin-bottom:4px}.cost-l span{display:block;font:400 15px/1.5 Archivo;color:#4a4744}
+.ways{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:20px;font:600 14px/1.3 Archivo}
+.ways>span{padding:8px 12px;border:1.5px solid #1c1b1a;background:#fff}
+.yp{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:32px;align-items:start}
+.crop{position:relative;overflow:hidden;aspect-ratio:1/1;background:#3a2a24}
+.crop img{position:absolute;max-width:none !important;display:block}
+.cropcap{display:flex;align-items:center;gap:10px;margin-top:10px;font:700 15px/1.3 Archivo}
+.vs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border:2px solid #1c1b1a;background:#fff}
+.vs>div{padding:20px;display:flex;flex-direction:column;gap:12px}.vs>div+div{border-left:2px solid #1c1b1a}
+.vs-h{display:flex;align-items:center;gap:12px;font:700 19px/1.2 Archivo}.vs-h .cb{--s:22px}
+.vs ul{margin:0;padding:0;list-style:none}
+.vs li{position:relative;padding:7px 0 7px 18px;border-top:1px solid #e6e3df;font:400 15px/1.45 Archivo}
+.vs li::before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;background:#1c1b1a}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:auto;padding-top:8px}
+.flow span{padding:6px 9px;background:#f3f2f2;font:600 13px/1 Archivo}.flow em{font-style:normal;font-weight:700;color:#4a4744}
+.sum{padding:16px 20px;border:2px solid #1c1b1a;border-top:0;font:700 17px/1.4 Archivo;background:#fff}
+.sbf .pc{transform:none}
+.sbf .gh{transform:translate(29.91cqw,-29.91cqw)}
+.sbf .opr{transform:translate(29.91cqw,-29.91cqw);opacity:0}
+.sbf .str{width:18cqw;height:18cqw;margin:-9cqw 0 0 -9cqw}
+.stt{position:absolute;left:50%;top:calc(50% + 10cqw);transform:translateX(-50%);z-index:3;padding:.8cqw 1.6cqw;background:#1c1b1a;color:#fff;font:700 max(11px,3.6cqw)/1 Archivo}
+.spc{position:absolute;left:62cqw;top:6cqw;width:22cqw;height:30.8cqw;background:#fff;border:.5cqw solid #1b3ac4;box-shadow:1cqw 1cqw 0 #dcd9d4;padding:2cqw;display:flex;flex-direction:column;justify-content:space-between;z-index:3}
+.spc small{font:600 max(10px,1.6cqw)/1.1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#4a4744}
+.spc b{font:700 max(14px,3.2cqw)/1.05 Archivo;letter-spacing:-.01em}
+.spc svg{width:6cqw;height:6cqw}
+.opl{position:absolute;left:47cqw;top:2cqw;z-index:3;padding:.7cqw 1.2cqw;background:#fff;border:.3cqw solid #1c1b1a;font:700 max(11px,1.8cqw)/1 Archivo}
+.pos{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:48px}
+.sim{display:grid;grid-template-columns:auto minmax(0,1fr);border-top:2px solid #1c1b1a}
+.sim>*{padding:10px 16px 10px 0;border-bottom:1px solid #b9c3ee;font:400 15px/1.4 Archivo}.sim b{font-weight:700}
+.azul{margin-top:20px;padding:18px 20px;background:#fff;border:2px solid #1c1b1a}
+.azul b{display:block;font:700 18px/1.25 Archivo;margin-bottom:6px}.azul p{font:400 15px/1.55 Archivo;margin:0 0 6px;text-wrap:pretty}
+.diff{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border:2px solid #1c1b1a;background:#fff}
+.diff>div{padding:18px 20px;border-bottom:1px solid #dcd9d4;border-right:1px solid #dcd9d4}
+.diff>div:nth-child(2n){border-right:0}.diff>div:nth-last-child(-n+2){border-bottom:0}
+.diff b{display:block;font:700 18px/1.25 Archivo;margin-bottom:6px}.diff p{font:400 15px/1.5 Archivo;color:#4a4744;margin:0}
+.h3x{font:700 20px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px}
+.role{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;padding-bottom:40px;margin-bottom:40px;border-bottom:1px solid #dcd9d4}
+.role p{font:400 16px/1.6 Archivo;color:#1c1b1a;margin:8px 0 0;max-width:520px;text-wrap:pretty}
+.role .rt{font:700 22px/1.2 Archivo;margin-top:8px}
+.ticks{list-style:none;margin:10px 0 0;padding:0}.ticks li{position:relative;padding:6px 0 6px 18px;font:400 16px/1.5 Archivo}
+.ticks li::before{content:"";position:absolute;left:0;top:14px;width:7px;height:7px;background:#1c1b1a}
+.proc{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.proc>div{border:2px solid #1c1b1a;padding:20px;display:grid;grid-template-columns:36px minmax(0,1fr);gap:14px}
+.proc span{width:36px;height:36px;background:#1b3ac4;color:#fff;font:700 16px/36px Archivo;text-align:center}
+.proc b{display:block;font:700 19px/1.25 Archivo;margin:6px 0}.proc p{font:400 15px/1.55 Archivo;color:#4a4744;margin:0;text-wrap:pretty}
+.prog{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:20px 0 6px}
+.prog>div{position:relative;padding:12px 28px 12px 14px;background:#e5e9fb;border-right:3px solid #fff;font:700 15px/1.2 Archivo;color:#122a8f}
+.prog>div:not(:last-child)::after{content:"→";position:absolute;right:8px;top:50%;transform:translateY(-50%);font-weight:700}
+.prog>div:last-child{background:#1b3ac4;color:#fff}
+.days{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.day{border:2px solid #1c1b1a;background:#fff;display:flex;flex-direction:column}
+.day-h{padding:14px 18px;border-bottom:1px solid #dcd9d4}
+.day-h b{display:block;font:700 18px/1.25 Archivo;margin-top:6px}
+.day-b{padding:14px 18px;display:flex;flex-direction:column;gap:10px;flex:1}
+.day-q{font:500 15px/1.45 Archivo;font-style:italic;margin:0}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips span{padding:5px 8px;background:#f3f2f2;font:500 13px/1.2 Archivo}
+.day details{border-top:1px solid #dcd9d4;margin-top:auto}
+.day summary{cursor:pointer;padding:12px 18px;font:600 14px/1.2 Archivo;color:#122a8f;list-style-position:inside}
+.day summary:focus-visible{outline:2px solid #1b3ac4;outline-offset:-2px}
+.day details ul{margin:0;padding:0 18px 14px 34px}.day details li{font:400 14px/1.5 Archivo;color:#1c1b1a;margin-bottom:6px}
+.ba{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:32px;padding:32px 0;border-top:1px solid #dcd9d4}
+.ba:first-of-type{border-top:2px solid #1c1b1a}
+.ba h3{font:700 20px/1.25 Archivo;letter-spacing:-.01em;margin:0}
+.ba-pair{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:14px;align-items:stretch}
+.ba-b,.ba-a{padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.ba-b{background:#f3f2f2;border:2px solid #c8c6c2}.ba-a{background:#fff;border:2px solid #1c1b1a}
+.ba-pair>em{align-self:center;font:700 22px/1 Archivo;font-style:normal}
+.ba p{font:400 15px/1.5 Archivo;margin:0;text-wrap:pretty}
+.ba ul{margin:0;padding:0 0 0 18px}.ba li{font:400 15px/1.5 Archivo;margin-bottom:4px}
+.big{font:700 56px/1 Archivo;letter-spacing:-.04em}.big small{font:600 15px/1.2 Archivo;letter-spacing:0;margin-left:8px}
+.guide3{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px;align-items:start}
+.guide3 .crop{aspect-ratio:4/3}
+.gl{list-style:none;margin:0;padding:0;border-top:2px solid #1c1b1a}
+.gl li{padding:12px 0;border-bottom:1px solid #dcd9d4}.gl b{display:block;font:700 16px/1.3 Archivo;margin-bottom:4px}.gl span{display:block;font:400 15px/1.5 Archivo;color:#4a4744}
+.cap{font:400 13px/1.4 Archivo;color:#4a4744;margin-top:8px}
+.nx{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:8px}
+.nx>div{border-top:2px solid #1c1b1a;padding-top:14px}.nx b{display:block;font:700 18px/1.25 Archivo;margin-bottom:8px}
+.les{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:2px solid #1c1b1a}
+.les>div{padding:20px 24px 20px 0;border-bottom:1px solid #b9c3ee}.les b{display:block;font:700 18px/1.25 Archivo;margin-bottom:6px}.les p{font:400 15px/1.55 Archivo;color:#1c1b1a;margin:0;text-wrap:pretty}
+.pg-box{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:32px;align-items:start}
+.pg-photo{position:relative;margin:0}.wrap .pg-photo img{display:block;width:100%;height:auto}
+.pin{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;border:2px solid #fff;box-shadow:0 0 0 1.5px #1c1b1a,inset 0 0 0 1.5px #1c1b1a;font-size:0;color:transparent}
+.pin::before{content:"";position:absolute;left:50%;bottom:100%;width:2px;height:22px;margin-left:-1px;background:#1c1b1a;box-shadow:0 0 0 1px #fff}
+.pin::after{content:attr(data-n);position:absolute;left:50%;bottom:calc(100% + 22px);transform:translateX(-50%);width:24px;height:24px;border-radius:50%;background:#1c1b1a;color:#fff;font:700 13px/24px Archivo;text-align:center;box-shadow:0 0 0 2px #fff}
+.pin-area{margin:0;border-radius:0}
+.pin-lt::before,.pin-rt::before{bottom:auto;top:50%;width:22px;height:2px;margin:-1px 0 0}
+.pin-lt::before{left:auto;right:100%}.pin-rt::before{left:100%}
+.pin-lt::after,.pin-rt::after{bottom:auto;top:50%;transform:translateY(-50%)}
+.pin-lt::after{left:auto;right:calc(100% + 22px)}.pin-rt::after{left:calc(100% + 22px)}
+.pg-list .pin{position:static;margin:0;width:30px;height:30px;border:0;border-radius:50%;background:#1c1b1a;color:#fff;font:700 14px/30px Archivo;text-align:center;box-shadow:none}.pg-list .pin::before,.pg-list .pin::after{display:none}
+.pin-s{position:static;margin:0;flex:none;box-shadow:none}
+.pg-list{list-style:none;margin:0;padding:0;border-top:1px solid #dcd9d4}
+.pg-list li{display:grid;grid-template-columns:30px 132px minmax(0,1fr);gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid #dcd9d4}
+.pg-list b{display:block;font:600 15px/1.3 Archivo}.pg-list small{display:block;font:400 13px/1.4 Archivo;color:#4a4744;margin-top:2px}
+.pg-ill{display:flex;align-items:center}
+.row4{display:inline-flex;align-items:center;gap:5px;flex-wrap:nowrap}
+.lg{display:inline-block;position:relative;flex:none;aspect-ratio:1/.72;height:auto !important;margin-top:6px;border-radius:1px;background-image:linear-gradient(180deg,rgba(255,255,255,.22) 0 14%,transparent 14% 100%),linear-gradient(90deg,transparent 0 78%,rgba(0,0,0,.18) 78%);box-shadow:inset 0 0 0 1px rgba(0,0,0,.22),0 1px 1px rgba(0,0,0,.25)}
+.lg::before,.lg::after{content:"";position:absolute;top:-24%;width:26%;height:26%;background-color:inherit;border-radius:1px 1px 0 0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.22)}
+.lg::before{left:14%}.lg::after{right:14%}
+.gt{display:inline-flex;align-items:center;justify-content:center;border-radius:50%;font-family:Archivo;font-weight:700;flex:none}
+.qm{display:inline-flex;align-items:center;justify-content:center;width:26px;height:32px;background:#fff;border:1px solid #c8c6c2;box-shadow:2px 2px 0 #dcd9d4;font:400 16px/1 'Caveat',Archivo;color:#4a4744}
+.cb-mini{position:relative;width:44px;height:44px;flex:none}.cb-mini span{position:absolute;border-radius:50%;left:50%;top:50%;transform:translate(-50%,-50%)}.cb-mini span:nth-child(1){width:44px;height:44px}.cb-mini span:nth-child(2){width:30px;height:30px}.cb-mini span:nth-child(3){width:17px;height:17px}
+.mat{display:grid;grid-template-columns:3fr 2fr;grid-template-areas:"tl cl" "tk cb" "rl rl" "rs rs";column-gap:5px;width:124px;padding:5px 6px 11px;background:#fff;border:1px solid #c8c6c2;box-shadow:2px 2px 0 #dcd9d4}
+.mat-l{font:500 10px/1.1 'Caveat',Archivo;color:#4a4744;margin-bottom:2px}
+.mat-tk{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #3a4a8a;height:22px}.mat-tk i{border-right:1px solid #3a4a8a}.mat-tk i:last-child{border-right:0}
+.mat-cb{border:1px solid #3a4a8a;height:22px}
+.mat-rs{display:grid;grid-template-columns:repeat(5,1fr);border:1px solid #3a4a8a;height:18px}.mat-rs i{position:relative;border-right:1px solid #3a4a8a}.mat-rs i:last-child{border-right:0}
+.mat-rs i::after{content:attr(data-n);position:absolute;left:0;right:0;top:100%;text-align:center;font:500 8px/1.2 'Caveat',Archivo;color:#4a4744;font-style:normal}
+.dm.armed:not(.run) *{animation-play-state:paused !important}
+.dm.armed .a-yel{animation:kYel 8s both}.dm.armed .yring{animation:kYring 8s both}.dm.armed .a-deg{animation:kDeg 8s both}.dm.armed .nb{animation:kNb 8s both}
+.dm.armed .tf .pc{animation:kTp 8s ease-in-out both}.dm.armed .tf .gh{animation:kGh 8s both}.dm.armed .fly{animation:kFly 8s cubic-bezier(.3,0,.2,1) both}
+.dm.armed .pips i:nth-child(1){animation:kPip1 8s both}.dm.armed .pips i:nth-child(2){animation:kPip2 8s both}
+.dm.armed .apt .t0{animation:kT0 8s both}.dm.armed .apt .t1{animation:kT1 8s both}.dm.armed .apt .t2{animation:kT2 8s both}
+.dm.armed .st1{animation:kSt1 8s both}.dm.armed .st2{animation:kSt2 8s both}
+@keyframes kYel{0%,12%{transform:rotate(0)}32%,100%{transform:rotate(90deg)}}
+@keyframes kYring{0%,8%{opacity:0}12%,32%{opacity:1}38%,100%{opacity:0}}
+@keyframes kDeg{0%,12%{opacity:0}18%,100%{opacity:1}}
+@keyframes kNb{0%,40%{opacity:0}44%{opacity:1}48%{opacity:.35}52%{opacity:1}57%,100%{opacity:0}}
+@keyframes kTp{0%,56%{transform:translateY(-14.4cqw) scale(1)}61%{transform:translateY(-21.5cqw) scale(1.3)}66%,100%{transform:translateY(-28.6cqw) scale(1)}}
+@keyframes kGh{0%,58%{opacity:0}64%,100%{opacity:1}}
+@keyframes kFly{0%,64%{opacity:0;transform:translate(-47.5cqw,-17.2cqw) scale(.74)}66%{opacity:1;transform:translate(-47.5cqw,-17.2cqw) scale(.74)}80%,100%{opacity:1;transform:none}}
+@keyframes kPip1{0%,30%{background:#fff}34%,100%{background:#1b3ac4}}
+@keyframes kPip2{0%,78%{background:#fff}82%,100%{background:#1b3ac4}}
+@keyframes kT0{0%,30%{opacity:1}34%,100%{opacity:0}}
+@keyframes kT1{0%,30%{opacity:0}34%,78%{opacity:1}82%,100%{opacity:0}}
+@keyframes kT2{0%,78%{opacity:0}82%,100%{opacity:1}}
+@keyframes kSt1{0%,6%,38%,100%{border-color:#dcd9d4;background:#fff}10%,34%{border-color:#1b3ac4;background:#e5e9fb}}
+@keyframes kSt2{0%,38%,86%,100%{border-color:#dcd9d4;background:#fff}42%,82%{border-color:#1b3ac4;background:#e5e9fb}}
+.dm.armed .shr{animation:kShr 4s both}.dm.armed .dropin{animation:kDrop 4s both}
+@keyframes kShr{0%,15%{transform:translateX(calc(-1*calc(var(--s) + var(--g))))}40%,100%{transform:none}}
+@keyframes kDrop{0%,35%{opacity:0;transform:translateY(-28px)}60%,100%{opacity:1;transform:none}}
+.dm.armed .c2in{animation:kC2in 6s both}.dm.armed .c2sh{animation:kC2sh 6s both}.dm.armed .out{animation:kC2out 6s both}.dm.armed .outtag{animation:kC2tag 6s both}
+@keyframes kC2in{0%,10%{opacity:0;transform:translateX(calc(-1.3*calc(var(--s) + var(--g))))}22%,40%{opacity:1;transform:translateX(calc(-1.3*calc(var(--s) + var(--g))))}60%,100%{opacity:1;transform:none}}
+@keyframes kC2sh{0%,40%{transform:translateX(calc(-1*calc(var(--s) + var(--g))))}60%,100%{transform:none}}
+@keyframes kC2out{0%,40%{opacity:1;transform:translateX(calc(-1*calc(var(--s) + var(--g))))}60%{opacity:1;transform:none}75%,100%{opacity:.45;transform:translate(6px,12px) rotate(12deg)}}
+.dm.armed .c2inR{animation:kC2inR 6s both}.dm.armed .c2shR{animation:kC2shR 6s both}.dm.armed .outR{animation:kC2outR 6s both}
+@keyframes kC2inR{0%,10%{opacity:0;transform:translateX(calc(1.3*calc(var(--s) + var(--g))))}22%,40%{opacity:1;transform:translateX(calc(1.3*calc(var(--s) + var(--g))))}60%,100%{opacity:1;transform:none}}
+@keyframes kC2shR{0%,40%{transform:translateX(calc(var(--s) + var(--g)))}60%,100%{transform:none}}
+@keyframes kC2outR{0%,40%{opacity:1;transform:translateX(calc(var(--s) + var(--g)))}60%{opacity:1;transform:none}75%,100%{opacity:.45;transform:translate(-6px,12px) rotate(-12deg)}}
+@keyframes kC2tag{0%,70%{opacity:0}80%,100%{opacity:1}}
+.dm.armed .mt{animation:kMt 10s both}.dm.armed .qold{animation:kQold 10s both}.dm.armed .ok{animation:kOk 10s both}.dm.armed .pts{animation:kPts 10s both}.dm.armed .qflag{animation:kQflag 10s both}.dm.armed .qnew{animation:kQnew 10s both}
+.dm.armed .qrm{animation:kQrm 10s both}.dm.armed .qwsh{animation:kQwsh 10s both}.dm.armed .qnow{animation:kQnow 10s both}
+.dm .qrm,.dm .mt{opacity:0}.dm .qwsh{transform:translateX(calc(-3*calc(var(--s) + var(--g))))}
+@keyframes kMt{0%,10%{opacity:0;transform:scaleX(0)}12%{opacity:1;transform:scaleX(0)}24%,50%{opacity:1;transform:scaleX(1)}58%,100%{opacity:0;transform:scaleX(1)}}
+@keyframes kQold{0%,10%{opacity:1;transform:none;border-color:#1c1b1a}14%,72%{opacity:1;transform:none;border-color:#1b3ac4}80%,100%{opacity:.45;transform:translateY(6px);border-color:#1c1b1a}}
+@keyframes kOk{0%,28%{opacity:0;transform:scale(.85)}33%,100%{opacity:1;transform:none}}
+@keyframes kPts{0%,36%{opacity:0;transform:translateY(8px)}41%,100%{opacity:1;transform:none}}
+@keyframes kQrm{0%,48%{opacity:1;transform:none}58%,100%{opacity:0;transform:translateY(-18px) scale(.85)}}
+@keyframes kQwsh{0%,60%{transform:none}68%,100%{transform:translateX(calc(-3*calc(var(--s) + var(--g))))}}
+@keyframes kQnow{0%,66%{opacity:0}72%,100%{opacity:1}}
+@keyframes kQflag{0%,78%{opacity:0}83%,100%{opacity:1}}
+@keyframes kQnew{0%,84%{opacity:0;transform:translateX(24px)}94%,100%{opacity:1;transform:none}}
+.dm.armed .spc{animation:kSpc 7s both}.dm.armed .a-arr{animation:kDash 7s both}.dm.armed .a-arrh{animation:kArrh 7s both}.dm.armed .opr{animation:kOpr 7s both}
+.dm.armed .sbf .pc{animation:kOp 7s ease-in-out both}.dm.armed .sbf .gh{animation:kOpg 7s both}.dm.armed .a-path{animation:kPath 7s both}.dm.armed .a-pathh{animation:kPathh 7s both}.dm.armed .str{animation:kStr 7s both}
+.dm.armed .sb1{animation:kSb1 7s both}.dm.armed .sb2{animation:kSb2 7s both}.dm.armed .sb3{animation:kSb3 7s both}
+@keyframes kSpc{0%{transform:translateY(10cqw) rotate(5deg);border-color:#1c1b1a}16%,100%{transform:none;border-color:#1b3ac4}}
+@keyframes kDash{0%,18%{stroke-dashoffset:100}34%,100%{stroke-dashoffset:0}}
+@keyframes kArrh{0%,32%{opacity:0}35%,100%{opacity:1}}
+@keyframes kOpr{0%,30%{opacity:0}34%{opacity:1}38%{opacity:.4}42%{opacity:1}50%,100%{opacity:0}}
+@keyframes kOp{0%,48%{transform:translate(29.91cqw,-29.91cqw) scale(1)}54%{transform:translate(29.91cqw,-29.91cqw) scale(1.25)}72%{transform:translate(0,0) scale(1.25)}78%,100%{transform:none}}
+@keyframes kOpg{0%,50%{opacity:0}56%,100%{opacity:1}}
+@keyframes kPath{0%,52%{stroke-dashoffset:100}72%,100%{stroke-dashoffset:0}}
+@keyframes kPathh{0%,70%{opacity:0}73%,100%{opacity:1}}
+@keyframes kStr{0%,74%{opacity:0}80%,100%{opacity:1}}
+@keyframes kSb1{0%,2%,22%,100%{border-color:#dcd9d4;background:#fff}5%,20%{border-color:#1b3ac4;background:#e5e9fb}}
+@keyframes kSb2{0%,22%,50%,100%{border-color:#dcd9d4;background:#fff}25%,48%{border-color:#1b3ac4;background:#e5e9fb}}
+@keyframes kSb3{0%,50%,88%,100%{border-color:#dcd9d4;background:#fff}53%,84%{border-color:#1b3ac4;background:#e5e9fb}}
+.wrap .crop img,.wrap section .crop img{width:var(--w) !important;max-width:none !important;height:auto !important}
+@media (prefers-reduced-motion:reduce){.dm *{animation:none !important}.rp{display:none !important}}
+@media (max-width:1024px){
+  .tbox,.sbx,.yp,.goal,.pg-box,.pos,.ba,.qd,.guide3{grid-template-columns:minmax(0,1fr)}
+  .costs{grid-template-columns:minmax(0,1fr)}.cost-c{border-right:0;border-bottom:2px solid #1c1b1a}.cost-c:last-child{border-bottom:0}
+  .sqg,.days{grid-template-columns:minmax(0,1fr)}
+  .les,.nx{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .chain{grid-template-columns:repeat(2,minmax(0,1fr))}.chain>div{margin:0 0 -2px -2px}.chain>div:nth-child(odd){margin-left:0}
+  .yp .crop{max-width:240px}
+  .guide3 figure{max-width:480px}
+}
+@media (max-width:767px){
+  .pmap{grid-template-columns:minmax(0,1fr)}.pmap a{border-right:0;border-bottom:1px solid #dcd9d4}.pmap a:last-child{border-bottom:0}
+  .sq5{--s:28px;--g:5px}.qk .cb{--s:26px}
+  .vs{grid-template-columns:minmax(0,1fr)}.vs>div+div{border-left:0;border-top:2px solid #1c1b1a}
+  .les,.nx,.proc,.diff,.role{grid-template-columns:minmax(0,1fr)}
+  .diff>div{border-right:0 !important;border-bottom:1px solid #dcd9d4 !important}.diff>div:last-child{border-bottom:0 !important}
+  .cost-c:first-child .cost-l{grid-template-columns:minmax(0,1fr)}.cost-c:first-child .cost-l li{border-right:0;border-bottom:1px solid #e6e3df}
+  .ba-pair{grid-template-columns:minmax(0,1fr)}.ba-pair>em{transform:rotate(90deg);justify-self:start;margin-left:12px}
+  .win7{grid-template-columns:minmax(0,1fr);padding:20px}.w7 b{font-size:56px}
+  .qsteps{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 12px}
+  .prog{grid-template-columns:repeat(2,minmax(0,1fr));gap:3px}.prog>div{border-right:0}.prog>div:nth-child(2)::after{content:"↓"}
+  .loop>div:not(.loop-h){flex-basis:45%}.loop-h{flex-basis:100%}
+  .pg-h{margin-top:48px}.pg-h h3{font-size:20px !important}.part{margin-top:64px}
+  .key [role="table"]{grid-template-columns:repeat(6,minmax(0,1fr)) !important;gap:8px 6px !important;font-size:12px !important;text-align:center}
+  .key [role="table"]>span:nth-child(1),.key [role="table"]>span:nth-child(8){grid-column:1 / -1;margin-top:4px}
+  .key [role="table"]>span:nth-child(15){display:none}
+  .pg-list li{grid-template-columns:30px minmax(0,1fr)}.pg-list .pg-ill{display:none}
+  .chain{grid-template-columns:minmax(0,1fr)}.chain>div{margin:0 0 -2px 0 !important}
+  .qcards{gap:12px}.qd{gap:24px}
+  .rp{height:44px}
+  .tlab{letter-spacing:.04em;top:16cqw}
+  .big{font-size:44px}
+}
+
+.hvx0:hover{background:#1c1b1a !important;color:#fff !important}
 </style>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 <div class="wrap">
 
-  <header class="cs-hd">
+<header class="cs-hd">
     <!--@case-bar-->
-    <nav class="cs-nav" aria-label="Sections" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
-      <a href="#intro" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Intro</a>
-      <a href="#concept" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Concept</a>
-      <a href="#play" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 How it plays</a>
-      <a href="#position" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Positioning</a>
-      <a href="#process" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Process</a>
-      <a href="#iteration" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Iteration</a>
-      <a href="#learned" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 Learned</a>
-    </nav>
+    <nav aria-label="Sections" class="cs-nav cs-tabs" style="display:flex;gap:20px;padding:12px 56px;overflow-x:auto;white-space:nowrap">
+<a href="#intro" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">Intro</a>
+<a href="#concept" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">01 Overview</a>
+<a href="#play" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">02 How it plays</a>
+<a href="#position" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">03 Positioning</a>
+<a href="#process" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">04 Process</a>
+<a href="#iteration" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">05 Iteration</a>
+<a href="#next" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">06 Next steps</a>
+<a href="#learned" style="font:600 11px/1 Archivo;letter-spacing:.1em;text-transform:uppercase;color:#75726e">07 Learned</a>
+</nav>
   </header>
 
   <main id="main">
 
-  <section class="pad rule" id="intro">
-    <div class="lbl" style="margin-bottom:20px">Game design · Board game</div>
-    <h1 class="h1r" style="font-size:clamp(30px,4.6vw,54px);line-height:1.05;letter-spacing:-.03em;margin:0 0 14px;color:#1c1b1a;text-wrap:pretty">Color Rotation</h1>
-    <div style="width:56px;height:3px;background:#1b3ac4;margin:0 0 18px"></div>
-    <p style="font:400 18px/1.5 Archivo;color:#4a4744;max-width:640px;margin:0 0 28px;text-wrap:pretty">A board game about racing to complete colour sequences on a rotating, three-layer board.</p>
-
-    <div class="facts">
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Interaction &amp; game design<br><span style="font-weight:400;color:#75726e">Every stage — conceptualization, prototyping, playtesting, iteration.</span></div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Team</div><div style="font:600 15px/1.35 Archivo">Tarek Alfutih, Louis Mercier, Anh Nguyen, Nadia Papa</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Course</div><div style="font:600 15px/1.35 Archivo">Gameplay Design<br><span style="font-weight:400;color:#75726e">Chalmers University, Nov–Dec 2024</span></div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:6px">Status</div><div style="font:600 15px/1.35 Archivo">Prototype, project concluded<br><span style="font-weight:400;color:#75726e">9 playtests during 3 days — work ended when the course did</span></div></div>
-    </div>
-  </section>
-
-  <section class="rule" style="background:#0a0a0c;padding:32px 24px">
-    <div style="max-width:700px;margin:0 auto">
-      <img src="/assets/img/color-rotation-hero.jpg" alt="The Color Rotation board: three rotating cardboard layers of colour-coded tiles, with resource boxes, quest cards and player mats laid out beside it" style="width:100%;display:block;border:none;outline:none">
-      <p style="font:400 13px/1.4 Archivo;color:#8a8783;text-align:center;margin:14px 0 0">The board: three rotatable floors of colour tiles, plus resource boxes, quest cards and player mats.</p>
-    </div>
-  </section>
-
-  <section class="pad rule" id="concept">
-    <div class="lbl" style="color:#122a8f">01 · Game description</div>
-    <h2 class="sh">The premise</h2>
-    <p style="font:400 18px/1.6 Archivo;color:#1c1b1a;max-width:720px;margin:16px 0 28px;font-style:italic;text-wrap:pretty">In Color Rotation, players navigate a rotating circular platform loaded with colourful tiles. Their goal is to collect colour blocks and complete challenging sequences to earn points, all while competing with each other. The race is on, with each turn bringing new obstacles and challenges as the board shifts beneath them.</p>
-    <div class="grid3" style="gap:24px">
-      <div><div class="lbl" style="font-size:11px;margin-bottom:8px">Theme &amp; setting</div><div style="font:400 16px/1.5 Archivo;color:#4a4744">Colours, rotation, sequence alignment.</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:8px">Target audience</div><div style="font:400 16px/1.5 Archivo;color:#4a4744">Players with an interest in strategy and puzzle-based games.</div></div>
-      <div><div class="lbl" style="font-size:11px;margin-bottom:8px">Goal</div><div style="font:400 16px/1.5 Archivo;color:#4a4744">Complete the quests and gain enough points to win.</div></div>
-    </div>
-  </section>
-
-  <section class="pad rule" id="play">
-    <div class="lbl" style="color:#122a8f">02 · How it plays</div>
-    <h2 class="sh">Setup &amp; the core loop</h2>
-    <p style="font:400 16px/1.55 Archivo;color:#4a4744;max-width:760px;margin:16px 0 28px;text-wrap:pretty">To set up, players randomly place the colour tiles across the board's three rotatable floors, take a player mat, and draw one easy, one medium and one hard sequence card. Each turn, a player rotates the floor they're standing on and moves to a neighbouring tile — on the same floor or a different one — to collect its colour block.</p>
-    <div class="grid2">
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 10px">Components</h3>
-        <ul class="plain">
-          <li>4 playing pieces</li>
-          <li>1 board with rotating layers</li>
-          <li>28 coloured tiles</li>
-          <li>120 resources (20 × 6)</li>
-          <li>4 playing mats</li>
-          <li>12 tokens</li>
-          <li>8 special cards</li>
-          <li>36 quest cards (12 × 3)</li>
-        </ul>
-        <img src="/assets/img/screenshot-2026-09-16-at-20-26-38.png" alt="A later set of pie-shaped special cards laid out on the table" style="width:100%;display:block;border:1px solid #dcd9d4;margin-top:16px">
-        <div style="font:400 12px/1.5 Archivo;color:#75726e;margin-top:6px;padding-top:6px;border-top:1px solid #dcd9d4">Refined through playtesting: Steal, Take an extra quest, Swap a card, See another player's cards, Discard 2 resources, Duplicate a resource, Swap adjacent.</div>
-      </div>
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 10px">Mechanics</h3>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:6px">Move, rotate, collect resources</div>
-        <ul class="plain" style="margin-bottom:16px">
-          <li>Move to adjacent tiles</li>
-          <li>Collect resources from tiles</li>
-          <li>Rotate the layer</li>
-        </ul>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:6px">Resources &amp; sequences</div>
-        <ul class="plain" style="margin-bottom:16px">
-          <li>Resources are stored as a sequence, maximum 5 slots</li>
-          <li>A newly gained resource can be placed on the left or the right of the current sequence</li>
-          <li>If the queue is already full, the block furthest from the side it was added to gets removed</li>
-        </ul>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:6px">Tokens &amp; special cards</div>
-        <ul class="plain">
-          <li>Players can take a token when skipping their turn</li>
-          <li>Tokens can be exchanged for special cards</li>
-          <li>The original design's four card types: stealing from another player, swapping with another player, receiving a bonus block already owned, or moving a player back to the initial position</li>
-        </ul>
-      </div>
-    </div>
-    <div class="rule" style="margin:32px 0 0;border-bottom:1px solid #dcd9d4"></div>
-    <div style="padding-top:32px" class="grid2">
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 10px">Turn structure</h3>
-        <div style="font:400 16px/1.55 Archivo;color:#4a4744;margin-bottom:10px">Each player has 2 action points per turn.</div>
-        <ul class="plain">
-          <li><strong style="color:#1c1b1a">2 points</strong> — take a token</li>
-          <li><strong style="color:#1c1b1a">1 point</strong> — move to an adjacent tile, rotate a layer 90°, or remove a resource</li>
-          <li><strong style="color:#1c1b1a">0 points</strong> — spend tokens, or complete a quest</li>
-        </ul>
-      </div>
-      <div style="position:relative;border:1px solid #dcd9d4;padding:20px 20px 20px 32px"><div class="tab">7</div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 10px">Winning</h3>
-        <div style="font:400 16px/1.55 Archivo;color:#4a4744">Complete quests with sequences to gain points. <strong style="color:#122a8f">7 points to win.</strong></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="pad rule" id="position" style="background:#e5e9fb">
-    <div class="lbl" style="color:#122a8f">03 · Positioning</div>
-    <h2 class="sh">Where it sits in the market</h2>
-    <div class="grid2" style="margin-top:16px">
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 14px">Competitors</h3>
-        <ul class="plain">
-          <li><strong style="color:#1c1b1a">Resource management:</strong> Catan, Splendor</li>
-          <li><strong style="color:#1c1b1a">Complete the sequence:</strong> Azul, Sagrada</li>
-          <li><strong style="color:#1c1b1a">Gathering colours:</strong> Hexa Sort, Rainbow Balls, Candy Crush</li>
-          <li><strong style="color:#1c1b1a">Interactive board:</strong> Centrix, Hungry Turtle</li>
-        </ul>
-        <div style="font:400 14px/1.6 Archivo;color:#4a4744;margin-top:14px;max-width:440px">Closest in spirit to <strong style="color:#122a8f">Azul</strong>, where players also build sequences to score — though here resources come from moving around the board and slot into a limited, rearrangeable queue while other players can interfere. <strong style="color:#122a8f">Catan</strong> shares the resources-to-score loop, but its builds only need a quantity of resources, not an exact order.</div>
-      </div>
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 14px">Unique selling points</h3>
-        <ul class="plain">
-          <li>Colourful game components</li>
-          <li>Interactive, reconfigurable game board</li>
-          <li>Strategic gameplay with a puzzle element</li>
-          <li>Diverse strategies and replayability</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="pad rule" id="process">
-    <div class="lbl" style="color:#122a8f">04 · Design process</div>
-    <h2 class="sh">Two stages, Jones' model reapplied</h2>
-    <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:720px;margin:16px 0 24px;text-wrap:pretty">Conceptualization first, then prototyping — each carried through its own cycle of brainstorm, refine, choose.</p>
-    <div class="grid2" style="margin-bottom:36px">
-      <div>
-        <div class="lbl" style="font-size:11px;margin-bottom:8px">Conceptualization</div>
-        <ul class="plain">
-          <li>Brainstorming, discussing different ideas, identifying promising ideas</li>
-          <li>Creating different game suggestions from the identified ideas, refining them, choosing the most promising suggestion</li>
-        </ul>
-      </div>
-      <div>
-        <div class="lbl" style="font-size:11px;margin-bottom:8px">Prototyping</div>
-        <ul class="plain">
-          <li>Brainstorming and testing different constructions, continuing on the best versions</li>
-          <li>Identifying issues through playtests, testing ways to remedy them, choosing the best remedy</li>
-        </ul>
-      </div>
-    </div>
-
-    <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 16px">Playtesting — 9 sessions over 3 days</h3>
-    <div class="grid3" style="gap:16px">
-      <div class="daycard"><div class="tab">1</div>
-        <div class="lbl" style="font-size:11px;margin-bottom:10px;color:#122a8f;padding-left:16px">Day 1 — 5/12/24</div>
-        <ul class="plain" style="font-size:14px">
-          <li><strong style="color:#1c1b1a">Session 1:</strong> first impressions on mechanics — no objective or special cards.</li>
-          <li><strong style="color:#1c1b1a">Session 2:</strong> resource shifting and quest mechanics.</li>
-          <li><strong style="color:#1c1b1a">Session 3:</strong> rotation and shifting feedback, altered instructions, no quests or special cards.</li>
-          <li><strong style="color:#1c1b1a">Session 4:</strong> basic actions with quests included, altered instructions.</li>
-        </ul>
-      </div>
-      <div class="daycard"><div class="tab">2</div>
-        <div class="lbl" style="font-size:11px;margin-bottom:10px;color:#122a8f;padding-left:16px">Day 2 — 6/12/24</div>
-        <ul class="plain" style="font-size:14px">
-          <li><strong style="color:#1c1b1a">Session 5:</strong> special cards, given out free every 2 turns.</li>
-          <li><strong style="color:#1c1b1a">Session 6:</strong> quest timing across difficulties — players had to finish quests with increasing difficulty.</li>
-          <li><strong style="color:#1c1b1a">Session 7:</strong> quest balance, 2-player — one player only played hard quests, one only easy and medium.</li>
-        </ul>
-      </div>
-      <div class="daycard"><div class="tab">3</div>
-        <div class="lbl" style="font-size:11px;margin-bottom:10px;color:#122a8f;padding-left:16px">Day 3 — 10/12/24</div>
-        <ul class="plain" style="font-size:14px">
-          <li><strong style="color:#1c1b1a">Session 8:</strong> full 4-player game, testing overall length.</li>
-          <li><strong style="color:#1c1b1a">Session 9:</strong> co-op setup — 4 players in 2 teams, each sharing a mat, tokens and quests.</li>
-        </ul>
-      </div>
-    </div>
-    <div class="grid3" style="gap:8px;margin-top:16px">
-      <img src="/assets/img/user-test-color-rotation-first-image.png" alt="Two testers seated around the board mid-session, with sequence cards and resource boxes on the table" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
-      <img src="/assets/img/user-test-color-rotation-second-image.png" alt="Testers reviewing an attendance form beside the board during a playtesting session" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
-      <img src="/assets/img/user-test-color-rotation-third-image.png" alt="Two testers taking notes on cards next to the board during a session" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block">
-    </div>
-  </section>
-
-  <section class="pad rule" id="iteration">
-    <div class="lbl" style="color:#122a8f">05 · Iteration</div>
-    <h2 class="sh">From first concept to current prototype</h2>
-    <div class="grid2" style="margin-top:16px">
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 14px">Changes since the first concept</h3>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">Action point system revamp</div>
-        <ul class="plain" style="margin-bottom:14px">
-          <li>Changed from set actions taken each turn to a points-based system</li>
-          <li>More possible player actions</li>
-        </ul>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">Prototype board refinement</div>
-        <ul class="plain" style="margin-bottom:14px">
-          <li>Coloured board tiles</li>
-          <li>Double coding on some game elements</li>
-          <li>An action point cheat sheet</li>
-        </ul>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">Special card &amp; token refinement</div>
-        <ul class="plain" style="margin-bottom:14px">
-          <li>Altered special cards and their costs</li>
-        </ul>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">Win condition</div>
-        <ul class="plain">
-          <li>Dropped from 12 points in the first concept to 7 points in the current prototype</li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 4px">Next steps</h3>
-        <div style="font:400 13px/1.5 Archivo;color:#75726e;margin-bottom:14px">Identified at the end of the course. The project stopped here and wasn't carried further.</div>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">Refine the prototype</div>
-        <ul class="plain" style="margin-bottom:14px">
-          <li>Use double coding on all game elements</li>
-          <li>Accentuate the roads between layers on the board</li>
-        </ul>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">Design a rule book</div>
-        <ul class="plain" style="margin-bottom:14px">
-          <li>Refine player rules and examples</li>
-        </ul>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">Refine mechanics &amp; design</div>
-        <ul class="plain">
-          <li>Balance the special cards' effect and cost</li>
-          <li>Add information-sharing mechanics</li>
-          <li>Add illustrations and expand on the aesthetics</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="pad" id="learned" style="background:#e5e9fb">
-    <div class="lbl" style="color:#122a8f">06 · What we learned</div>
-    <h2 class="sh">Takeaways from nine playtests</h2>
-    <div class="grid2" style="margin-top:16px">
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 14px">Main takeaways</h3>
-        <ul class="plain">
-          <li>Keep the prototype simple and easy to adjust before adding complexity.</li>
-          <li>Designing a game is an iterative process — start iterating.</li>
-          <li>Experiment with ideas outside your comfort zone.</li>
-          <li>Listen to feedback from players with diverse playstyles and experiences.</li>
-          <li>Understand how game mechanisms shape different experiences and interactions.</li>
-          <li>Focus on specific audiences; you can't please everyone.</li>
-          <li>Making a game fun is a challenge.</li>
-        </ul>
-      </div>
-      <div>
-        <h3 style="font:700 18px/1.3 Archivo;letter-spacing:-.01em;margin:0 0 14px">How the team worked together</h3>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">Making the game</div>
-        <ul class="plain" style="margin-bottom:14px">
-          <li>Everyone contributed ideas during the planning phase</li>
-          <li>We designed and tested the game together, with active participation from all</li>
-        </ul>
-        <div style="font:600 15px/1.4 Archivo;margin-bottom:4px">During playtesting</div>
-        <ul class="plain">
-          <li>We built the prototype and split into groups for testing sessions</li>
-          <li>We rotated roles during sessions, making it a fully collaborative effort</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
+<section class="cr-hero" id="intro">
+<div class="cr-stage">
+<div class="cr-text">
+<div aria-hidden="true" style="display:flex;gap:8px"><span style="width:18px;height:18px;border-radius:50%;background:#1f6fd1"></span><span style="width:18px;height:18px;border-radius:50%;background:#3cb44a"></span><span style="width:18px;height:18px;border-radius:50%;background:#ff6b2c"></span><span style="width:18px;height:18px;border-radius:50%;background:#f0559c"></span><span style="width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px #c8c6c2"></span><span style="width:18px;height:18px;border-radius:50%;background:#5b3a2a"></span></div>
+<h1 class="h1r cr-h1" style="font:700 clamp(48px,6vw,84px)/.95 Archivo;letter-spacing:-.05em;margin:0;white-space:nowrap;color:#1c1b1a">Color Rotation</h1>
+<p class="cr-lead" style="font:400 20px/1.45 Archivo;color:#4a4744;margin:0;max-width:460px;text-wrap:pretty">Collect colors. Complete sequences. Outsmart your opponents.</p>
+<div style="display:flex;align-items:center;gap:14px"><span style="width:40px;height:3px;background:#1c1b1a;flex:none"></span><span style="font:700 15px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#1c1b1a">Game design · Board game</span></div>
+</div>
+<div class="cr-art m-keep"><div class="cr-artin"><div aria-label="The Color Rotation board. A layer turns 90 degrees, then the red player moves to a neighbouring tile and collects its Colour Block into a sequence of up to 5." class="crb" role="img"><div class="crw"><span class="crc" style="width:100%;background:#d8c4a8"></span></div><div class="crw r1"><span class="crc" style="width:99%;background:#3fb4e8"></span><span class="crh" style="transform:rotate(11.25deg) translateY(-47.6cqw)"></span><span class="crh" style="transform:rotate(101.25deg) translateY(-47.6cqw)"></span><span class="crh" style="transform:rotate(191.25deg) translateY(-47.6cqw)"></span><span class="crh" style="transform:rotate(281.25deg) translateY(-47.6cqw)"></span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(0deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#fff;color:#1f6fd1;transform:rotate(22.5deg) translateY(-42.3cqw)">W</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(45deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(67.5deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(90deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#5b3a2a;color:#fff;transform:rotate(112.5deg) translateY(-42.3cqw)">D</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(135deg) translateY(-42.3cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(157.5deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(180deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#5b3a2a;color:#fff;transform:rotate(202.5deg) translateY(-42.3cqw)">D</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(225deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(247.5deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#fff;color:#1f6fd1;transform:rotate(270deg) translateY(-42.3cqw)">W</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(292.5deg) translateY(-42.3cqw)">B</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(315deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(337.5deg) translateY(-42.3cqw)">B</span></div><div class="crw r2"><span class="crc" style="width:70%;background:#ffd62e"></span><span class="crh" style="transform:rotate(22.5deg) translateY(-33.4cqw)"></span><span class="crh" style="transform:rotate(112.5deg) translateY(-33.4cqw)"></span><span class="crh" style="transform:rotate(202.5deg) translateY(-33.4cqw)"></span><span class="crh" style="transform:rotate(292.5deg) translateY(-33.4cqw)"></span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(0deg) translateY(-28.6cqw)">P</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(45deg) translateY(-28.6cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(90deg) translateY(-28.6cqw)">R</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(135deg) translateY(-28.6cqw)">P</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(180deg) translateY(-28.6cqw)">G</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(225deg) translateY(-28.6cqw)">R</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(270deg) translateY(-28.6cqw)">B</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(315deg) translateY(-28.6cqw)">G</span></div><div class="crw r3"><span class="crc" style="width:42%;background:#3db84a"></span><span class="crh" style="transform:rotate(45deg) translateY(-19.4cqw)"></span><span class="crh" style="transform:rotate(135deg) translateY(-19.4cqw)"></span><span class="crh" style="transform:rotate(225deg) translateY(-19.4cqw)"></span><span class="crh" style="transform:rotate(315deg) translateY(-19.4cqw)"></span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(0deg) translateY(-14.4cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(90deg) translateY(-14.4cqw)">R</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(180deg) translateY(-14.4cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(270deg) translateY(-14.4cqw)">R</span></div><div class="crw"><span class="crc" style="width:15%;background:#fff;box-shadow:0 .4cqw 0 #b9a68d"></span></div><div class="crw crp"><i style="background:#e8262b"></i><i style="background:#1c1b1a"></i><i style="background:#ffd21f"></i><i style="background:#1f5fd1"></i></div></div><div aria-hidden="true" class="hr-cap"><div class="hr-steps"><span class="hr-step"><b>1</b>Rotate</span><span class="hr-step"><b>2</b>Move &amp; Collect</span></div><div class="hr-sq"><span class="hr-l">Colour<br/>Sequence</span><span class="hr-seq"><i></i><i></i><i></i><i></i><i></i></span></div></div></div></div>
+</div>
+<div class="facts cr-fbar">
+<div class="cr-role"><div class="lbl" style="font-size:11px;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">Interaction &amp; game design</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Team</div><div style="font:600 15px/1.35 Archivo">4 people</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Status</div><div style="font:600 15px/1.35 Archivo">Prototype, 9 playtests</div></div>
+<div><div class="lbl" style="font-size:11px;margin-bottom:6px">Year</div><div style="font:600 15px/1.35 Archivo">2024</div></div>
+</div>
+</section>
+<section class="rule" style="background:#0a0a0c;padding:32px 24px">
+<div style="max-width:700px;margin:0 auto">
+<img alt="The Color Rotation prototype: a board with three rotating layers of lettered colour tiles, boxes of Colour Blocks, Quest Cards, Tokens and Player Mats" src="/assets/img/color-rotation-hero.jpg" style="width:100%;display:block;border:none;outline:none"/>
+<p style="font:400 13px/1.4 Archivo;color:#8a8783;text-align:center;margin:14px 0 0">The prototype: a board with three rotating layers, Colour Blocks, Quest Cards, Tokens and Player Mats.</p>
+</div>
+</section>
+<section class="pad rule" id="concept">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">01</span><span>Overview</span></div>
+<h2 class="sh">What is it?</h2>
+<div class="pos" style="margin-top:20px;align-items:end">
+<div><p class="ctx">Color Rotation is a competitive board game about movement, colour and strategy.</p><p class="ctx" style="margin-bottom:0">Players move across a rotating board, collect Colour Blocks and arrange them in the right order to complete Quests.</p></div>
+<div style="border-top:4px solid #1c1b1a;padding-top:16px"><div class="mini" style="margin-bottom:10px">The objective</div><div style="font:700 clamp(26px,3vw,36px)/1.15 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-wrap:balance">Collect colours. Complete quests. Reach 7 points first.</div></div>
+</div>
+<div class="grid3" style="gap:24px;margin-top:36px;border-top:1px solid #dcd9d4;padding-top:20px">
+<div><div class="mini" style="margin-bottom:8px">Players</div><div style="font:500 16px/1.5 Archivo">2 to 4</div></div>
+<div style="grid-column:span 2"><div class="mini" style="margin-bottom:8px">Who it is for</div><div style="font:500 16px/1.5 Archivo">Designed for players who enjoy strategy and puzzle-based board games.</div></div>
+</div>
+<div class="pg-h"><h3>What’s in the box</h3></div>
+<p class="pg-sub">The full prototype, for reference.</p>
+<div class="pg-box">
+<figure class="pg-photo"><img alt="The Color Rotation prototype: board, Quest Cards, Colour Blocks, Tokens, Special Cards and two Player Mats" src="/assets/img/color-rotation-hero.jpg"/><span class="pin" data-n="1" style="left:33.1%;top:26.2%">1</span><span class="pin" data-n="2" style="left:27.1%;top:57.8%">2</span><span class="pin" data-n="3" style="left:14.4%;top:19%">3</span><span class="pin pin-area pin-rt" data-n="4" style="left:62.3%;top:19.9%;width:24.3%;height:19.9%">4</span><span class="pin" data-n="5" style="left:25.3%;top:71.8%">5</span><span class="pin" data-n="6" style="left:62.6%;top:50.6%">6</span><span class="pin" data-n="7" style="left:72.5%;top:51.9%">7</span><span class="pin pin-lt" data-n="8" style="left:73.2%;top:9.9%">8</span><figcaption class="cap">The prototype, with each component numbered.</figcaption></figure>
+<ol class="pg-list">
+<li><span class="pin pin-s">1</span><span class="pg-ill"><span class="row4"><span class="lg" style="width:20px;height:20px;background-color:#e8262b"></span><span class="lg" style="width:20px;height:20px;background-color:#1c1b1a"></span><span class="lg" style="width:20px;height:20px;background-color:#1f5fd1"></span><span class="lg" style="width:20px;height:20px;background-color:#ffd21f"></span></span></span><span><b>4 Player Pieces</b><small>LEGO pieces. Everyone starts in the centre.</small></span></li>
+<li><span class="pin pin-s">2</span><span class="pg-ill"><span class="cb-mini"><span style="background:#3fb4e8"></span><span style="background:#ffd62e"></span><span style="background:#3db84a"></span></span></span><span><b>1 Board with 3 rotating layers</b><small>Blue, yellow and green layers turn on their own.</small></span></li>
+<li><span class="pin pin-s">3</span><span class="pg-ill"><span class="row4" style="gap:4px"><span class="gt" style="width:18px;height:18px;font-size:10px;background:#1f6fd1;color:#fff">B</span><span class="gt" style="width:18px;height:18px;font-size:10px;background:#3cb44a;color:#1c1b1a">G</span><span class="gt" style="width:18px;height:18px;font-size:10px;background:#f0559c;color:#1c1b1a">P</span><span class="gt" style="width:18px;height:18px;font-size:10px;background:#ff6b2c;color:#1c1b1a">R</span><span class="gt" style="width:18px;height:18px;font-size:10px;background:#fff;color:#1c1b1a;box-shadow:inset 0 0 0 1.5px #b5b2ad">W</span><span class="gt" style="width:18px;height:18px;font-size:10px;background:#5b3a2a;color:#fff">D</span></span></span><span><b>28 coloured Tiles</b><small>16 on blue, 8 on yellow, 4 on green.</small></span></li>
+<li><span class="pin pin-s">4</span><span class="pg-ill"><span class="row4" style="--s:18px"><span class="cb cB" style="--s:18px">B</span><span class="cb cG" style="--s:18px">G</span><span class="cb cP" style="--s:18px">P</span><span class="cb cR" style="--s:18px">R</span><span class="cb cW" style="--s:18px">W</span><span class="cb cD" style="--s:18px">D</span></span></span><span><b>120 Colour Blocks</b><small>20 in each of the 6 colours. Colour only, no letters.</small></span></li>
+<li><span class="pin pin-s">5</span><span class="pg-ill"><span aria-hidden="true" class="mat"><span class="mat-l" style="grid-area:tl">Tokens</span><span class="mat-l" style="grid-area:cl;text-align:right">Combo Cards</span><span class="mat-tk" style="grid-area:tk"><i></i><i></i><i></i></span><span class="mat-cb" style="grid-area:cb"></span><span class="mat-l" style="grid-area:rl">Resources</span><span class="mat-rs" style="grid-area:rs"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i data-n="4"></i><i data-n="5"></i></span></span></span><span><b>4 Player Mats</b><small>Space for Tokens, cards and your 5-block sequence.</small></span></li>
+<li><span class="pin pin-s">6</span><span class="pg-ill"><span class="row4"><span class="tok"></span><span class="tok"></span><span class="tok"></span></span></span><span><b>12 yellow Tokens</b><small>Used to get Special Cards. Not Colour Blocks.</small></span></li>
+<li><span class="pin pin-s">7</span><span class="pg-ill"><span class="row4"><span class="qm">S</span></span></span><span><b>8 Special Cards</b><small>Extra abilities.</small></span></li>
+<li><span class="pin pin-s">8</span><span class="pg-ill"><span class="row4"><span class="qm">E</span><span class="qm">M</span><span class="qm">H</span></span></span><span><b>36 Quest Cards</b><small>12 Easy, 12 Medium and 12 Hard.</small></span></li>
+</ol>
+</div>
+</section>
+<section class="pad rule" id="play">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">02</span><span>How it plays</span></div>
+<h2 class="sh">From first move to 7 points</h2>
+<p class="pg-sub" style="margin:16px 0 0">How a game goes, from the first step to the last.</p>
+<div aria-label="How to play, start to finish" class="htp" role="group">
+<div class="htp-c"><div class="htp-h"><span class="mini">Before the game</span><b>Set up</b></div><ol class="htp-l">
+<li><i>1</i><div><div aria-hidden="true" class="htp-fig"><span class="cb-mini"><span style="background:#3fb4e8"></span><span style="background:#ffd62e"></span><span style="background:#3db84a"></span></span><span class="row4"><span class="gt" style="width:24px;height:24px;font-size:12px;background:#1f6fd1;color:#fff">B</span><span class="gt" style="width:24px;height:24px;font-size:12px;background:#3cb44a;color:#1c1b1a">G</span><span class="gt" style="width:24px;height:24px;font-size:12px;background:#ff6b2c;color:#1c1b1a">R</span><span class="gt" style="width:24px;height:24px;font-size:12px;background:#f0559c;color:#1c1b1a">P</span><span class="gt" style="width:24px;height:24px;font-size:12px;background:#fff;color:#1f6fd1;box-shadow:inset 0 0 0 1px #b5b2ad">W</span><span class="gt" style="width:24px;height:24px;font-size:12px;background:#5b3a2a;color:#fff">D</span></span></div><b>Place the tiles</b><p>Place the colour tiles randomly across the three layers.</p></div></li>
+<li><i>2</i><div><div aria-hidden="true" class="htp-fig" style="gap:20px;align-items:flex-end"><span style="display:flex;flex-direction:column;gap:6px"><span class="mat"><span class="mat-l" style="grid-area:tl">Tokens</span><span class="mat-l" style="grid-area:cl;text-align:right">Combo Cards</span><span class="mat-tk" style="grid-area:tk"><i></i><i></i><i></i></span><span class="mat-cb" style="grid-area:cb"></span><span class="mat-l" style="grid-area:rl">Resources</span><span class="mat-rs" style="grid-area:rs"><i data-n="1"></i><i data-n="2"></i><i data-n="3"></i><i data-n="4"></i><i data-n="5"></i></span></span><span class="mini" style="font-size:10px">Player Mat</span></span><span class="ar" style="font-size:18px;align-self:center">+</span><span style="display:flex;flex-direction:column;align-items:center;gap:6px"><span class="lg" style="width:30px;height:30px;background-color:#e8262b"></span><span class="mini" style="font-size:10px">LEGO piece</span></span></div><b>Take a mat and a player piece</b><p>Each player takes a Player Mat and places their piece on the centre tile, where everyone starts.</p></div></li>
+<li><i>3</i><div><div aria-hidden="true" class="htp-fig"><span class="row4"><span class="qm">E</span><span class="qm">M</span><span class="qm">H</span></span></div><b>Take your Quest Cards</b><p>Each player starts by taking one Easy, one Medium and one Hard Quest Card.</p></div></li>
+</ol></div>
+<div class="htp-c htp-r"><div class="htp-h"><span class="mini">Players take turns · repeat ↺</span><b>On your turn</b></div><ol class="htp-l">
+<li><i>4</i><div><div aria-hidden="true" class="htp-fig"><span class="pp"><i></i><i></i></span></div><b>Spend 2 Action Points</b><p>Choose what to do. Each action costs Action Points:</p><ul class="acts"><li><span class="ai"><svg aria-hidden="true" fill="none" height="20" stroke="#1c1b1a" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8"></path><path d="M21 3v5h-5"></path></svg></span><span>Rotate your layer</span><em>1 Action Point</em></li><li><span class="ai"><svg aria-hidden="true" fill="none" height="20" stroke="#1c1b1a" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span><span>Move one tile</span><em>1 Action Point</em></li><li><span class="ai"><span class="cb cP">P</span></span><span>Remove a Colour Block</span><em>1 Action Point</em></li><li><span class="ai"><span class="tok"></span></span><span>Take a Token</span><em>2 Action Points</em></li></ul><p class="ex">For example: Rotate + Move, or Move + Move.</p><a href="#demo-turn">See an example turn</a></div></li>
+<li><i>5</i><div><div aria-hidden="true" class="htp-fig" style="gap:10px;align-items:flex-end"><span style="display:flex;flex-direction:column;align-items:center;gap:6px"><span class="gt" style="width:26px;height:26px;font-size:13px;background:#1f6fd1;color:#fff">B</span><span style="font:600 11px/1.2 Archivo;color:#1c1b1a;white-space:nowrap">Tile</span></span><span class="ar" style="align-self:center;margin-top:-16px">→</span><span style="display:flex;flex-direction:column;align-items:flex-start;gap:6px"><span style="display:flex;gap:4px;padding:3px;border:2px solid #1c1b1a;background:#fff"><span class="cb cG" style="--s:20px"></span><span class="cb cR" style="--s:20px"></span><span class="cb cB" style="--s:20px;outline:2px solid #1b3ac4;outline-offset:2px"></span><span style="width:20px;height:20px;outline:1.5px dashed #9a978f;outline-offset:-1.5px;flex:none"></span><span style="width:20px;height:20px;outline:1.5px dashed #9a978f;outline-offset:-1.5px;flex:none"></span></span><span style="font:600 11px/1.2 Archivo;color:#1c1b1a;white-space:nowrap">Your row: blue added</span></span></div><b>Collect a Colour Block</b><p>Moving onto a tile gives you its Colour Block. Add it to either the start or the end of your row.</p><a href="#step-c">See how the sequence works</a></div></li>
+<li><i>6</i><div><div aria-hidden="true" class="htp-fig"><span class="qk" style="padding:6px 8px;gap:0;box-shadow:2px 2px 0 #dcd9d4"><span class="qrow"><span class="cb cR">R</span><em>→</em><span class="cb cB">B</span><em>→</em><span class="cb cP">P</span></span></span><span class="ok" style="padding:6px 10px;font-size:13px">✓</span></div><b>Complete a Quest</b><p>Each Quest Card shows a short colour sequence. When your row contains those colours next to each other, in the same order, you complete the Quest and score its points. The matched blocks leave your row. This costs no action points.</p><a href="#step-d">See a Quest completed</a></div></li>
+<li><i>7</i><div><div aria-hidden="true" class="htp-fig" style="gap:10px;align-items:flex-end"><span style="display:flex;flex-direction:column;align-items:center;gap:5px;"><span class="lg" style="width:24px;height:24px;background-color:#e8262b"></span><span style="font:600 11px/1 Archivo;color:#1c1b1a">You</span></span><span class="ar" style="align-self:center;margin-top:-14px">→</span><span style="display:flex;flex-direction:column;align-items:center;gap:5px;"><span class="lg" style="width:24px;height:24px;background-color:#1f5fd1"></span><span style="font:600 11px/1 Archivo;color:#1c1b1a;white-space:nowrap">Next player</span></span><span style="display:flex;flex-direction:column;align-items:center;gap:5px;opacity:.4"><span class="lg" style="width:24px;height:24px;background-color:#ffd21f"></span><span style="font:600 11px/1 Archivo;color:#1c1b1a"></span></span><span style="display:flex;flex-direction:column;align-items:center;gap:5px;opacity:.4"><span class="lg" style="width:24px;height:24px;background-color:#1c1b1a"></span><span style="font:600 11px/1 Archivo;color:#1c1b1a"></span></span></div><b>Pass the turn</b><p>Your turn ends. The next player takes their turn.</p></div></li>
+</ol></div>
+<div class="htp-c"><div class="htp-h"><span class="mini">End of the game</span><b>Win</b></div><ol class="htp-l htp-win">
+<li><i>8</i><div><div aria-hidden="true" class="htp-fig"><span class="w7" style="padding:6px 12px;gap:8px"><b style="font-size:30px">7</b><span style="font-size:10px">points</span></span></div><b>Reach 7 points</b><p>The first player to 7 points wins.</p></div></li>
+</ol></div>
+</div>
+<div class="key" style="display:block">
+<span class="mini" style="display:block;margin-bottom:12px">Tiles show a letter and a colour. Colour Blocks show colour only.</span>
+<div aria-label="Tiles compared with Colour Blocks, by colour" class="m-keep" role="table" style="display:grid;grid-template-columns:max-content repeat(6,72px);gap:10px 12px;align-items:center;justify-items:center;font:500 14px/1.2 Archivo">
+<span role="cell" style="justify-self:start;font:600 12px/1.2 Archivo;letter-spacing:.08em;text-transform:uppercase;color:#4a4744">Tile</span>
+<span class="gt" role="cell" style="width:28px;height:28px;font-size:13px;background:#1f6fd1;color:#fff">B</span>
+<span class="gt" role="cell" style="width:28px;height:28px;font-size:13px;background:#3cb44a;color:#1c1b1a">G</span>
+<span class="gt" role="cell" style="width:28px;height:28px;font-size:13px;background:#f0559c;color:#1c1b1a">P</span>
+<span class="gt" role="cell" style="width:28px;height:28px;font-size:13px;background:#ff6b2c;color:#1c1b1a">R</span>
+<span class="gt" role="cell" style="width:28px;height:28px;font-size:13px;background:#fff;color:#1c1b1a;box-shadow:inset 0 0 0 1.5px #b5b2ad">W</span>
+<span class="gt" role="cell" style="width:28px;height:28px;font-size:13px;background:#5b3a2a;color:#fff">D</span>
+<span role="cell" style="justify-self:start;font:600 12px/1.2 Archivo;letter-spacing:.08em;text-transform:uppercase;color:#4a4744">Colour Block</span>
+<span class="cb cB" role="cell" style="--s:28px"></span>
+<span class="cb cG" role="cell" style="--s:28px"></span>
+<span class="cb cP" role="cell" style="--s:28px"></span>
+<span class="cb cR" role="cell" style="--s:28px"></span>
+<span class="cb cW" role="cell" style="--s:28px"></span>
+<span class="cb cD" role="cell" style="--s:28px"></span>
+<span role="cell"></span>
+<span role="cell">Blue</span><span role="cell">Green</span><span role="cell">Pink</span><span role="cell">Orange</span><span role="cell">White</span><span role="cell">Dark brown</span>
+</div>
+</div>
+<div class="part" style="margin-top:72px"><b>See it in action</b><span>Three short examples</span></div>
+<div class="pg-h" id="demo-turn" style="scroll-margin-top:110px"><span class="pg-n">A</span><h3>One turn</h3></div>
+<p class="pg-sub">Rotate, then move and collect. 2 Action Points used.</p>
+<div class="dm" id="dmB"><div class="tbox">
+<div><div aria-label="One possible turn. The red player stands on the green layer. The yellow layer turns 90 degrees, so a blue tile moves next to the player instead of a pink one. The player moves onto the blue tile, and a blue Colour Block joins the end of their sequence, which now reads green, orange, blue." class="tf" role="img"><div aria-hidden="true" class="crb"><div class="crw"><span class="crc" style="width:100%;background:#d8c4a8"></span></div><div class="crw"><span class="crc" style="width:99%;background:#3fb4e8"></span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(0deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#fff;color:#1f6fd1;transform:rotate(22.5deg) translateY(-42.3cqw)">W</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(45deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(67.5deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(90deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#5b3a2a;color:#fff;transform:rotate(112.5deg) translateY(-42.3cqw)">D</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(135deg) translateY(-42.3cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(157.5deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(180deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#5b3a2a;color:#fff;transform:rotate(202.5deg) translateY(-42.3cqw)">D</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(225deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(247.5deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#fff;color:#1f6fd1;transform:rotate(270deg) translateY(-42.3cqw)">W</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(292.5deg) translateY(-42.3cqw)">B</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(315deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(337.5deg) translateY(-42.3cqw)">B</span></div><div class="crw a-yel"><span class="crc" style="width:70%;background:#ffd62e"></span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(0deg) translateY(-28.6cqw)">P</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(45deg) translateY(-28.6cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(90deg) translateY(-28.6cqw)">R</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(135deg) translateY(-28.6cqw)">P</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(180deg) translateY(-28.6cqw)">G</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(225deg) translateY(-28.6cqw)">R</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(270deg) translateY(-28.6cqw)">B</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(315deg) translateY(-28.6cqw)">G</span></div><div class="crw"><span class="crc" style="width:42%;background:#3db84a"></span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(0deg) translateY(-14.4cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(90deg) translateY(-14.4cqw)">R</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(180deg) translateY(-14.4cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(270deg) translateY(-14.4cqw)">R</span></div><div class="crw"><span class="crc" style="width:15%;background:#fff"></span></div><span class="ring yring"></span><svg class="ovl a-deg" viewbox="0 0 100 100"><path d="M14.5 50 A35.5 35.5 0 0 1 50 14.5" fill="none" stroke="#1c1b1a" stroke-width="1.4"></path><path d="M46.5 11.5 L50.5 14.5 L46.5 17.5" fill="none" stroke="#1c1b1a" stroke-width="1.4"></path><rect fill="#fff" height="9" width="15" x="17" y="17"></rect><text fill="#1c1b1a" font-family="Archivo" font-size="7" font-weight="700" x="18.6" y="24.2">90°</text></svg><span class="ring nb" style="transform:translateX(14.4cqw)"></span><span class="ring nb" style="transform:translateX(-14.4cqw)"></span><span class="ring nb" style="transform:translateY(-28.6cqw)"></span><span class="gh"></span><span class="pc"></span></div><span class="tlab">Your Colour Sequence</span><span class="tseq"><i style="left:0.6cqw"></i><i style="left:8.6cqw"></i><i style="left:16.6cqw"></i><i style="left:24.6cqw"></i><i style="left:32.6cqw"></i></span><span class="cb cG" style="left:53cqw">G</span><span class="cb cR" style="left:61cqw">R</span><span class="cb cB fly" style="left:69cqw">B</span></div></div>
+<div>
+<div class="apm"><div aria-hidden="true" class="pips"><i></i><i></i></div><div class="apt"><span aria-hidden="true" class="t0">0 / 2 Action Points used</span><span aria-hidden="true" class="t1">1 / 2 Action Points used</span><span class="t2">2 / 2 Action Points used</span></div></div>
+<div class="tsteps">
+<div class="tst st1"><span>1</span><div><b>Rotate</b><p>Turn a layer 90°. Here the yellow layer turns, and a blue tile moves next to you.</p><span class="cost"><i></i>1 Action Point</span></div></div>
+<div class="tst st2"><span>2</span><div><b>Move &amp; Collect</b><p>Move to a neighbouring tile and collect its Colour Block. Collecting costs nothing extra.</p><span class="cost"><i></i>1 Action Point</span></div></div>
+</div>
+<div class="dmbar"><span class="tagx">Example turn</span><button aria-label="Replay animation" class="rp" data-replay="dmB" type="button"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>Replay</button></div>
+</div>
+</div></div>
+<div class="pg-h" id="step-c" style="scroll-margin-top:110px"><span class="pg-n">B</span><h3>Your row of 5</h3></div>
+<p class="pg-sub">Keep up to 5 Colour Blocks in a row on your Player Mat.</p>
+<div class="sqg">
+<div class="sqc dm" id="dmC1"><div aria-label="Your sequence is orange, blue, green. A new pink block can go on the left end, making pink, orange, blue, green, or on the right end, making orange, blue, green, pink." class="sqc-fig" role="img">
+<div class="sqr"><span class="mini">Your sequence</span><div class="sq5"><i></i><i></i><i></i><i></i><i></i><span class="cb cR" style="--i:0">R</span><span class="cb cB" style="--i:1">B</span><span class="cb cG" style="--i:2">G</span></div></div>
+<div class="newb"><span class="cb cP">P</span><span>New block</span></div>
+<div class="sqr"><span class="mini">← Added to the left end</span><div class="sq5"><i></i><i></i><i></i><i></i><i></i><span class="cb cP dropin" style="--i:0">P</span><span class="cb cR shr" style="--i:1">R</span><span class="cb cB shr" style="--i:2">B</span><span class="cb cG shr" style="--i:3">G</span></div></div>
+<div style="font:700 14px/1 Archivo;color:#122a8f;text-transform:uppercase;letter-spacing:.12em">or</div><div class="sqr"><span class="mini">Added to the right end →</span><div class="sq5"><i></i><i></i><i></i><i></i><i></i><span class="cb cR" style="--i:0">R</span><span class="cb cB" style="--i:1">B</span><span class="cb cG" style="--i:2">G</span><span class="cb cP dropin" style="--i:3">P</span></div></div>
+</div><div class="sqc-t"><b>Add to either end</b><p>Each new Colour Block goes on the left end or the right end of your sequence. You choose.</p></div></div>
+<div class="sqc dm" id="dmC2"><div aria-label="A full sequence: orange, blue, green, pink, white. Adding dark brown on the left end pushes white out of the right end. The new sequence is dark brown, orange, blue, green, pink." class="sqc-fig c2" role="img">
+<div class="sqr"><span class="mini">Full: 5 of 5</span><div class="sq5"><i></i><i></i><i></i><i></i><i></i><span class="cb cR" style="--i:0">R</span><span class="cb cB" style="--i:1">B</span><span class="cb cG" style="--i:2">G</span><span class="cb cP" style="--i:3">P</span><span class="cb cW" style="--i:4">W</span></div></div>
+<div class="sqr after"><span class="mini">Add dark brown on the left end</span><div class="sq5"><i></i><i></i><i></i><i></i><i></i><span class="cb cD c2in" style="--i:0">D</span><span class="cb cR c2sh" style="--i:1">R</span><span class="cb cB c2sh" style="--i:2">B</span><span class="cb cG c2sh" style="--i:3">G</span><span class="cb cP c2sh" style="--i:4">P</span><span class="cb cW out" style="--i:5">W</span><span class="outtag">White leaves</span></div></div><div style="font:700 14px/1 Archivo;color:#122a8f;text-transform:uppercase;letter-spacing:.12em">or</div><div class="sqr after"><span class="mini">Add dark brown on the right end</span><div class="sq5"><i></i><i></i><i></i><i></i><i></i><span class="cb cR outR" style="--i:-1;opacity:.45;transform:translate(-6px,12px) rotate(-12deg)">R</span><span class="cb cB c2shR" style="--i:0">B</span><span class="cb cG c2shR" style="--i:1">G</span><span class="cb cP c2shR" style="--i:2">P</span><span class="cb cW c2shR" style="--i:3">W</span><span class="cb cD c2inR" style="--i:4">D</span><span class="outtag" style="left:-30px">Orange leaves</span></div></div>
+</div><div class="sqc-t"><b>When all 5 slots are full</b><p>Adding a block on one end pushes out the block on the opposite end.</p></div></div>
+</div>
+<div class="dmbar" style="justify-content:flex-end"><button aria-label="Replay animation" class="rp" data-replay="dmC1 dmC2" type="button"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>Replay</button></div>
+<div class="pg-h" id="step-d" style="scroll-margin-top:110px"><span class="pg-n">C</span><h3>Complete a Quest</h3></div>
+<p class="pg-sub">Match the card’s colours in order, score, and the matched blocks leave.</p>
+<div class="dm" id="dmQ">
+<div class="qd">
+<div aria-label="The Quest Card asks for orange, then blue, then pink. After it is completed it leaves, and a new Quest Card asking for white, then green, arrives." class="qcards" role="img">
+<div class="qslot"><div class="qk qold"><span class="mini">Quest Card</span><div class="qrow"><span class="cb cR">R</span><em>→</em><span class="cb cB">B</span><em>→</em><span class="cb cP">P</span></div></div><span class="qflag">✓ Completed, leaves</span></div>
+<div class="qslot qnew"><div class="qk"><span class="mini">New Quest Card</span><div class="qrow"><span class="cb cW">W</span><em>→</em><span class="cb cG">G</span></div></div><span style="font:600 13px/1.3 Archivo">New Quest arrives</span></div>
+</div>
+<div>
+<span class="mini">Your Colour Sequence</span>
+<div aria-label="Your sequence green, orange, blue, pink, white. orange, blue, pink match the Quest Card and are removed. Your sequence becomes green, white." role="img" style="margin-top:8px"><div class="sq5"><i></i><i></i><i></i><i></i><i></i><span class="cb cG" style="--i:0">G</span><span class="cb cR qrm" style="--i:1">R</span><span class="cb cB qrm" style="--i:2">B</span><span class="cb cP qrm" style="--i:3">P</span><span class="cb cW qwsh" style="--i:4">W</span><span class="mt"></span></div></div>
+<div class="qres"><span class="ok">✓ Quest complete</span><span class="pts">+ points</span></div>
+<p class="note qnow">Orange, blue and pink are removed. <b>Green and white stay.</b></p>
+</div>
+</div>
+<div class="qsteps"><div><b>1 · Match</b>Your sequence shows orange, blue, pink in the card’s order.</div><div><b>2 · Score</b>You earn the Quest’s points. This costs 0 Action Points.</div><div><b>3 · Remove match</b>The Colour Blocks used for the Quest are removed. The other blocks stay.</div><div><b>4 · New Quest</b>The completed Quest leaves. You get a new one.</div></div>
+<div class="dmbar"><span class="tagx">Example</span><button aria-label="Replay animation" class="rp" data-replay="dmQ" type="button"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>Replay</button></div>
+</div>
+<div class="part" style="margin-top:72px"><b>Extras</b><span>Tokens and Special Cards</span></div>
+<div class="pg-h"><span class="pg-n">D</span><h3>Tokens and Special Cards</h3></div>
+<p class="pg-sub">Yellow Tokens are not Colour Blocks. Collect Tokens to get Special Cards, which can disrupt other players.</p>
+<div class="dm" id="dmS"><div class="sbx">
+<div><div aria-label="A player plays the Special Card Send back. An arrow points from the card to an opponent's blue piece on the outer layer. The opponent's piece then moves back to the start in the centre of the board." class="sbf" role="img"><div aria-hidden="true" class="crb"><div class="crw"><span class="crc" style="width:100%;background:#d8c4a8"></span></div><div class="crw"><span class="crc" style="width:99%;background:#3fb4e8"></span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(0deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#fff;color:#1f6fd1;transform:rotate(22.5deg) translateY(-42.3cqw)">W</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(45deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(67.5deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(90deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#5b3a2a;color:#fff;transform:rotate(112.5deg) translateY(-42.3cqw)">D</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(135deg) translateY(-42.3cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(157.5deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(180deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#5b3a2a;color:#fff;transform:rotate(202.5deg) translateY(-42.3cqw)">D</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(225deg) translateY(-42.3cqw)">R</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(247.5deg) translateY(-42.3cqw)">G</span><span class="crt" style="background:#fff;color:#1f6fd1;transform:rotate(270deg) translateY(-42.3cqw)">W</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(292.5deg) translateY(-42.3cqw)">B</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(315deg) translateY(-42.3cqw)">P</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(337.5deg) translateY(-42.3cqw)">B</span></div><div class="crw"><span class="crc" style="width:70%;background:#ffd62e"></span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(0deg) translateY(-28.6cqw)">P</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(45deg) translateY(-28.6cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(90deg) translateY(-28.6cqw)">R</span><span class="crt" style="background:#f0559c;color:#1c1b1a;transform:rotate(135deg) translateY(-28.6cqw)">P</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(180deg) translateY(-28.6cqw)">G</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(225deg) translateY(-28.6cqw)">R</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(270deg) translateY(-28.6cqw)">B</span><span class="crt" style="background:#3cb44a;color:#1c1b1a;transform:rotate(315deg) translateY(-28.6cqw)">G</span></div><div class="crw"><span class="crc" style="width:42%;background:#3db84a"></span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(0deg) translateY(-14.4cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(90deg) translateY(-14.4cqw)">R</span><span class="crt" style="background:#1f6fd1;color:#fff;transform:rotate(180deg) translateY(-14.4cqw)">B</span><span class="crt" style="background:#ff6b2c;color:#1c1b1a;transform:rotate(270deg) translateY(-14.4cqw)">R</span></div><div class="crw"><span class="crc" style="width:15%;background:#fff"></span></div><span class="gh"></span><span class="ring opr"></span><span class="ring str"></span><svg class="ovl" viewbox="0 0 100 100"><path class="a-path" d="M79.9 20.1 L54 46" fill="none" pathlength="100" stroke="#1c1b1a" stroke-dasharray="100" stroke-width="1.6"></path><path class="a-pathh" d="M58.9 45.3 L54 46 L54.7 41" fill="none" stroke="#1c1b1a" stroke-width="1.6"></path></svg><span class="pc blue"></span><span class="stt">Start</span></div><svg class="ovl" preserveaspectratio="none" viewbox="0 0 100 50"><path class="a-arr" d="M61.5 14 C 56 3, 50 3, 44.8 8.2" fill="none" pathlength="100" stroke="#1b3ac4" stroke-dasharray="100" stroke-width=".6"></path><path class="a-arrh" d="M47.5 7.8 L44.8 8.2 L45.2 5.5" fill="none" stroke="#1b3ac4" stroke-width=".6"></path></svg><div class="spc"><small>Special Card</small><b>Send back</b><svg aria-hidden="true" fill="none" stroke="#1c1b1a" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24"><path d="M9 14 4 9l5-5"></path><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"></path></svg></div><span class="opl">Opponent</span></div></div>
+<div>
+<div class="tsteps" style="margin-top:0">
+<div class="tst sb1"><span>1</span><div><b>A Special Card is played</b><p>A player uses Send back.</p></div></div>
+<div class="tst sb2"><span>2</span><div><b>An opponent is affected</b><p>The card targets another player’s piece.</p></div></div>
+<div class="tst sb3"><span>3</span><div><b>The opponent returns to start</b><p>Their piece goes back to the starting position in the centre.</p></div></div>
+</div>
+<div class="dmbar"><span class="tagx">Example card</span><button aria-label="Replay animation" class="rp" data-replay="dmS" type="button"><svg aria-hidden="true" fill="none" height="16" stroke="currentColor" stroke-linecap="square" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"></path><path d="M3 3v5h5"></path></svg>Replay</button></div>
+</div>
+</div></div>
+<p class="note">Send back was in the first set of Special Cards. The set changed after playtesting (see <a href="#iteration">Iteration</a>).</p>
+</section>
+<section class="pad rule" id="position" style="background:#e5e9fb">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">03</span><span>Positioning</span></div>
+<h2 class="sh">What makes it different</h2>
+<div class="pos" style="margin-top:24px">
+<div>
+<h3 class="h3x">Similar games</h3>
+<div class="sim"><b>Resource management</b><span>Catan · Splendor</span><b>Sequence building</b><span>Azul · Sagrada</span><b>Colour collection</b><span>Hexa Sort · Rainbow Balls · Candy Crush</span><b>Interactive board</b><span>Centrix · Hungry Turtle</span></div>
+<div class="azul"><b>Closest in spirit: Azul</b><p>Both games involve collecting pieces and building sequences to score.</p><p style="margin:0">Color Rotation adds movement across a changing board, a limited 5-block sequence and direct player interaction.</p></div>
+</div>
+<div>
+<h3 class="h3x">How Color Rotation stands out</h3>
+<div class="diff">
+<div><div aria-hidden="true" style="display:flex;align-items:center;gap:8px;height:44px;margin-bottom:12px"><span class="cb-mini"><span style="background:#3fb4e8"></span><span style="background:#ffd62e"></span><span style="background:#3db84a"></span></span><span style="font:700 22px/1 Archivo;color:#1b3ac4">↻</span></div><b>A board that keeps changing</b><p>Rotating layers change available paths.</p></div>
+<div><div aria-hidden="true" style="display:flex;align-items:center;gap:6px;height:44px;margin-bottom:12px"><span class="cb cR" style="--s:22px"></span><span style="font:600 14px/1 Archivo;color:#75726e">→</span><span class="cb cB" style="--s:22px"></span><span style="font:600 14px/1 Archivo;color:#75726e">→</span><span class="cb cP" style="--s:22px"></span></div><b>Order matters</b><p>Players need the right colours in the right order.</p></div>
+<div><div aria-hidden="true" style="display:flex;align-items:center;height:44px;margin-bottom:12px"><span style="display:flex;gap:4px;padding:3px;border:2px solid #1c1b1a;background:#fff"><span class="cb cG" style="--s:18px"></span><span class="cb cR" style="--s:18px"></span><span class="cb cB" style="--s:18px"></span><span class="cb cW" style="--s:18px"></span><span class="cb cD" style="--s:18px"></span></span><span style="font:600 12px/1 Archivo;color:#4a4744;margin-left:10px">5 / 5</span></div><b>Space is limited</b><p>Players can keep only 5 Colour Blocks.</p></div>
+<div><div aria-hidden="true" style="display:flex;align-items:center;gap:10px;height:44px;margin-bottom:12px"><span class="lg" style="width:22px;background-color:#e8262b"></span><span style="font:700 18px/1 Archivo;color:#1b3ac4">⇄</span><span class="lg" style="width:22px;background-color:#1f6fd1"></span></div><b>Players affect each other</b><p>Board rotation and Special Cards can disrupt another player’s plan.</p></div>
+</div>
+</div>
+</div>
+</section>
+<section class="pad rule" id="process">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">04</span><span>Design process</span></div>
+<h2 class="sh">From idea to playable prototype</h2>
+<div class="role" style="margin-top:28px">
+<div><span class="mini">My role</span><div class="rt">Interaction &amp; Game Design</div><p>I contributed throughout the full design process — from early ideas and prototyping to playtesting and iteration — as part of a collaborative team.</p></div>
+<div><span class="mini">How we worked</span><ul class="ticks"><li>Everyone contributed ideas during planning.</li><li>We designed and tested the game together.</li><li>During playtesting, we split into groups and rotated roles.</li></ul></div>
+</div>
+<div class="proc">
+<div><span>1</span><div><b>Explore</b><p>We brainstormed different ideas, discussed their strengths and weaknesses, and developed the strongest direction.</p></div></div>
+<div><span>2</span><div><b>Build &amp; test</b><p>We created prototypes, tested them, identified problems and tried different solutions.</p></div></div>
+</div>
+<div class="cap" style="margin-top:12px">Both stages followed the same cycle from Jones’ design model: brainstorm, refine, choose.</div>
+<h3 class="h3x" style="margin-top:56px">9 playtests across 3 days</h3>
+<div aria-label="Progression across the playtests: basics, then Quests, then balance, then the full game" class="prog" role="img"><div>Basics</div><div>Quests</div><div>Balance</div><div>Full game</div></div>
+<div class="days">
+<div class="day m-keep"><img alt="Two testers seated around the board mid-session, with Quest Cards and boxes of Colour Blocks on the table" class="day-img" src="/assets/img/user-test-color-rotation-first-image.png" style="width:100%;height:auto;display:block;border-bottom:1px solid #dcd9d4"/><div class="day-h"><span class="mini">Day 1 · 5 Dec 2024 · Sessions 1–4</span><b>Understand the basics</b></div><div class="day-b"><p class="day-q">Can players understand the core game?</p><span class="mini">We explored</span><div class="chips"><span>Movement</span><span>Rotation</span><span>Colour collection</span><span>Quests</span><span>Instructions</span></div></div><details><summary>Session notes</summary><ul><li><b>Session 1:</b> first impressions of the basic actions. No goal and no Special Cards yet.</li><li><b>Session 2:</b> shifting Colour Blocks in the sequence, and Quests.</li><li><b>Session 3:</b> feedback on rotation and shifting. New instructions. No Quests or Special Cards.</li><li><b>Session 4:</b> basic actions with Quests. New instructions.</li></ul></details></div>
+<div class="day m-keep"><img alt="Testers reviewing an attendance form beside the board during a playtesting session" class="day-img" src="/assets/img/user-test-color-rotation-second-image.png" style="width:100%;height:auto;display:block;border-bottom:1px solid #dcd9d4"/><div class="day-h"><span class="mini">Day 2 · 6 Dec 2024 · Sessions 5–7</span><b>Balance the game</b></div><div class="day-b"><p class="day-q">Are the systems balanced?</p><span class="mini">We explored</span><div class="chips"><span>Special Cards</span><span>Quest difficulty</span><span>Different strategies</span></div></div><details><summary>Session notes</summary><ul><li><b>Session 5:</b> Special Cards, given out free every 2 turns.</li><li><b>Session 6:</b> Quest timing. Players had to complete Quests in order of difficulty.</li><li><b>Session 7:</b> Quest balance with 2 players. One played only Hard Quests, the other only Easy and Medium.</li></ul></details></div>
+<div class="day m-keep"><img alt="Two testers taking notes on cards next to the board during a session" class="day-img" src="/assets/img/user-test-color-rotation-third-image.png" style="width:100%;height:auto;display:block;border-bottom:1px solid #dcd9d4"/><div class="day-h"><span class="mini">Day 3 · 10 Dec 2024 · Sessions 8–9</span><b>Test the full experience</b></div><div class="day-b"><p class="day-q">Does the complete game work?</p><span class="mini">We explored</span><div class="chips"><span>Full 4-player gameplay</span><span>Game length</span><span>2-vs-2 play</span></div></div><details><summary>Session notes</summary><ul><li><b>Session 8:</b> a full 4-player game, to test game length.</li><li><b>Session 9:</b> team play. 4 players in 2 teams, each team sharing a Player Mat, Tokens and Quests.</li></ul></details></div>
+</div>
+</section>
+<section class="pad rule" id="iteration">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">05</span><span>Iteration</span></div>
+<h2 class="sh">What we saw, and what we changed</h2>
+<p class="ctx" style="margin:16px 0 28px">Playtesting shaped the game. These are the main changes from the first concept to the final prototype.</p>
+<div class="ba"><h3>Turns needed more flexibility</h3><div class="ba-pair"><div class="ba-b"><span class="mini">Before</span><p>Players took a fixed set of actions every turn.</p></div><em aria-hidden="true">→</em><div class="ba-a"><span class="mini">After</span><p>A 2-Action-Point system. Players choose how to spend each turn, with more actions to choose from.</p></div></div></div>
+<div class="ba"><h3>A shorter win condition</h3><div class="ba-pair"><div class="ba-b"><span class="mini">Before · first concept</span><div class="big">12<small>points to win</small></div></div><em aria-hidden="true">→</em><div class="ba-a"><span class="mini">After · final prototype</span><div class="big" style="color:#1b3ac4">7<small style="color:#1c1b1a">points to win</small></div></div></div></div>
+<div class="ba"><h3>Clearer guidance on the prototype</h3><div class="guide3">
+<figure style="margin:0"><div class="crop m-keep"><img alt="Close-up of the board: each coloured tile also shows a letter, such as B, P, W and G" src="/assets/img/color-rotation-hero.jpg" style="--w:323%;left:-34.1%;top:-9.1%"/></div><figcaption class="cap">Final prototype: every tile shows a colour and a letter.</figcaption></figure>
+<ul class="gl"><li><b>Coloured board tiles</b><span>Each tile shows the colour of the Colour Block you collect there.</span></li><li><b>Double coding</b><span>We added another visual cue alongside colour on some game elements. For example, each tile shows a letter as well as a colour: B for blue, G for green. This use of double coding reduced reliance on colour alone.</span></li><li><b>Action Point reference</b><span>A cheat sheet showing what each action costs.</span></li></ul>
+</div></div>
+<div class="ba"><h3>Special Cards changed through testing</h3><div>
+<div class="ba-pair"><div class="ba-b"><span class="mini">First version · 4 card types</span><ul><li>Steal from another player</li><li>Swap with another player</li><li>Get a bonus Colour Block you already own</li><li>Send another player back to start</li></ul></div><em aria-hidden="true">→</em><div class="ba-a"><span class="mini">After playtesting · 7 cards</span><ul><li>Steal</li><li>Take an extra Quest</li><li>Swap a card</li><li>See another player’s cards</li><li>Discard 2 Colour Blocks</li><li>Duplicate a Colour Block</li><li>Swap adjacent</li></ul><p>We also changed what the cards cost.</p></div></div>
+<div style="margin-top:16px;max-width:560px"><img alt="The refined Special Cards laid out on the table beside the board" src="/assets/img/screenshot-2026-09-16-at-20-26-38.png" style="width:100%;display:block;border:1px solid #dcd9d4"/></div>
+</div></div>
+</section>
+<section class="pad rule" id="next">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">06</span><span>Next steps</span></div>
+<h2 class="sh">What we would improve next</h2>
+<p class="ctx" style="margin:16px 0 24px">The course ended at this prototype stage. These improvements were identified but not implemented.</p>
+<div class="nx">
+<div><b>Prototype</b><ul class="ticks"><li>Refine the physical prototype</li><li>Apply double coding consistently</li><li>Make paths between layers clearer</li></ul></div>
+<div><b>Rulebook</b><ul class="ticks"><li>Create a clearer rulebook</li><li>Refine rules and examples</li></ul></div>
+<div><b>Game design</b><ul class="ticks"><li>Continue balancing Special Cards</li><li>Explore information-sharing mechanics</li><li>Develop the illustrations and visual style</li></ul></div>
+</div>
+</section>
+<section class="pad" id="learned" style="background:#e5e9fb">
+<div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">07</span><span>Reflection</span></div>
+<h2 class="sh">What we learned</h2>
+<div class="les" style="margin-top:24px"><div><b>Start simple</b><p>Early prototypes should be easy to change.</p></div><div><b>Test early</b><p>Playtesting revealed problems we could not see while designing.</p></div><div><b>Different players reveal different problems</b><p>Different play styles gave us different perspectives.</p></div><div><b>Mechanics shape behaviour</b><p>Small rule changes changed how players planned and interacted.</p></div><div><b>Design for a clear audience</b><p>Trying to satisfy everyone can weaken the experience.</p></div><div><b>Fun needs testing too</b><p>A game can be understandable without being enjoyable. Both need testing.</p></div></div>
+</section>
   </main>
 
   <!--@footer-->
-
 </div>
 <!--@scripts-->
+<script src="/assets/js/pages/color-rotation.js" defer></script>
 </body>
 </html>
