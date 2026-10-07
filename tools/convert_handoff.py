@@ -211,6 +211,16 @@ def ahi_frames():
     return '\n'.join(out)
 
 
+def gc_steps():
+    labels = ['1 · Water', '2 · Eat', '3 · Find the different one']
+    out = []
+    for i, l in enumerate(labels):
+        out.append('<div data-gc-step style="display:flex;flex-direction:column;gap:8px"><div style="height:4px;background:%s;transition:background .4s"></div>'
+                   '<span style="font:600 12px/1.2 Archivo;letter-spacing:.06em;text-transform:uppercase;color:%s;transition:color .4s">%s</span></div>'
+                   % ('#8e7fc8' if i == 0 else '#2a2824', '#fff' if i == 0 else '#8b8880', l))
+    return '\n'.join(out)
+
+
 def natural_img(img):
     """No crop, no bands: the image keeps its own shape and the frame around it follows."""
     st = style_dict(img.get('style'))
@@ -326,6 +336,11 @@ def rb_schedule():
 
 
 PRE = {  # raw-markup replacements before parsing (template loops rendered statically)
+    'Case Study - Gilded Cage': [
+        (re.compile(r'<sc-for list="\{\{ heroSteps \}\}".*?</sc-for>', re.S), gc_steps),
+        (re.compile(r'\{\{ h0 \}\}'), lambda: '1'),
+        (re.compile(r'\{\{ h[12] \}\}'), lambda: '0'),
+    ],
     'Case Study - An Honest Interface': [
         (re.compile(r'<sc-for list="\{\{ frames \}\}".*?</sc-for>', re.S), ahi_frames),
         (re.compile(r'\{\{ f0op \}\}'), lambda: '1'),
@@ -449,11 +464,18 @@ def write(ref):
     path = REPO + PAGE_FILE[route]
     old = open(path).read()
     title = re.search(r'<title>.*?</title>', old, re.S).group(0)
+    # extra Google fonts the reference loads (beyond Archivo, which the head partial has)
+    ref_t = open(H + ref + '.dc.html').read()
+    fams = []
+    for href in re.findall(r'<link href="(https://fonts\.googleapis\.com/css2\?[^"]+)"', ref_t[:ref_t.find('</helmet>')]):
+        fams += [f for f in re.findall(r'family=([^&]+)', href.replace('&amp;', '&')) if not f.startswith('Archivo')]
+    fonts = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?%s&display=swap">\n' % '&'.join('family=' + f for f in fams)) if fams else ''
+
     desc = re.search(r'<meta name="description"[^>]*>', old).group(0)
     css, page = convert(ref, route)
     slug = route.strip('/').split('/')[-1] or 'home'
     js = '/assets/js/pages/%s.js' % slug
-    out = ('<!doctype html>\n<html lang="en">\n<head>\n<!--@head %s-->\n%s\n%s\n<style>\n%s\n</style>\n</head>\n<body>\n'
+    out = ('<!doctype html>\n<html lang="en">\n<head>\n<!--@head %s-->\n' + fonts + '%s\n%s\n<style>\n%s\n</style>\n</head>\n<body>\n'
            '<a class="skip-link" href="#main">Skip to content</a>\n<div class="wrap">\n%s</div>\n<!--@scripts-->\n'
            '%s<script src="%s" defer></script>\n</body>\n</html>\n') % (route, title, desc, css.strip(), page,
            '<script src="/assets/js/carousel.js" defer></script>\n' if 'data-car=' in page else '', js)
