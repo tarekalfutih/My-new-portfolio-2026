@@ -441,19 +441,24 @@ def convert(ref, slug_route):
         for el in wrap.find_all(True):
             for ak, av in list(el.attrs.items()):
                 if isinstance(av, str) and k in av: el[ak] = av.replace(k, v)
-    # header -> shared bar + section tabs
-    hd = soup.new_tag('header'); hd['class'] = 'cs-hd'
-    hd.append(NavigableString('\n    <!--@case-bar-->\n    '))
-    if tabs:
-        tabs['class'] = ['cs-nav', 'cs-tabs']; tabs['aria-label'] = 'Sections'
-        hd.append(tabs)
-    hd.append(NavigableString('\n  '))
-    header.replace_with(hd)
+    if header is not None and 'hd' in (header.get('class') or []):
+        # site-header page (Illustration): the shared header partial, marker kept as text
+        header.replace_with(NavigableString('@@SITEHEADER@@'))
+    else:
+        hd = soup.new_tag('header'); hd['class'] = 'cs-hd'
+        hd.append(NavigableString('\n    <!--@case-bar-->\n    '))
+        if tabs:
+            tabs['class'] = ['cs-nav', 'cs-tabs']; tabs['aria-label'] = 'Sections'
+            hd.append(tabs)
+        hd.append(NavigableString('\n  '))
+        header.replace_with(hd)
     inner = wrap.decode_contents()
     # main element around the content after the header
+    if '@@SITEHEADER@@' in inner:
+        inner = inner.replace('@@SITEHEADER@@', '<!--@header illustration--></header>')
     hpos = inner.find('</header>') + len('</header>')
     page = inner[:hpos] + '\n\n  <main id="main">\n' + inner[hpos:].rstrip() + '\n  </main>\n\n  <!--@footer-->\n'
-    page = page.replace('&lt;!--@case-bar--&gt;', '<!--@case-bar-->')
+    page = page.replace('&lt;!--@case-bar--&gt;', '<!--@case-bar-->').replace('<!--@header illustration--></header>', '<!--@header illustration-->')
     left = sorted(set(re.findall(r'\{\{[^}]*\}\}|<sc-(?:if|for)\b[^>]*>|onClick="[^"]*"|onclick="[^"]*"', page)))
     for l in left: warnings.append('TEMPLATE: ' + l[:120])
     return css + '\n' + '\n'.join(hover_css), page
