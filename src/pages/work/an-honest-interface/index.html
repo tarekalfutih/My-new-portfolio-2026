@@ -112,6 +112,9 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .ahi-half{max-width:70% !important}
   .ahi-half-760{max-width:532px !important}
 }
+/* Section 02 "Range and speed on screen, impact on paper": the three screen images 20% smaller
+   than the design on iPad and desktop (owner's request); phones keep the full width. */
+@media (min-width:768px){.wrap section div.ahi-ctx{max-width:80%}}
 @media (min-width:1025px){.wrap section div.ahi-ctx{grid-template-columns:minmax(0,1fr) minmax(0,.95fr) !important;column-gap:32px !important;row-gap:28px !important}.ahi-ctx>figure:nth-child(3){grid-column:2;grid-row:1 / span 2}}
 @media (max-width:767px){
   .wrap section div.ahi-one{grid-template-columns:minmax(0,1fr) !important;row-gap:32px !important}
