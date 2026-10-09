@@ -22,6 +22,7 @@ build.py                 build + dev server (Python 3.8+, stdlib only)
 tools/optimize_images.py responsive WebP variants (run when images change; needs Pillow)
 tools/encode_video.swift re-encode a video to web H.264/AAC MP4 at a set size/bitrate (macOS)
 tools/video_frame.swift  print video info + save the exact frame at a time (for posters)
+tools/trim_video.swift   cut the start off a video without re-encoding (owner request only)
 src/pages/               one index.html per route (/, /work/, /work/lego-alma/, …)
 src/partials/            head, header, case-study header bar, footer, scripts
 src/image-manifest.json  WebP variants per image (written by tools/optimize_images.py)
