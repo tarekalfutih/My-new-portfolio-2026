@@ -106,11 +106,16 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 }
 
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
-/* Sections 03 and 04: the tobacco-packaging and dialogue images at half size on iPad and desktop
-   (phones keep the full screen width). */
+/* Sections 03 and 04: the tobacco-packaging image at 70% and the dialogue image at most 532px wide
+   on iPad and desktop, as in the 9 Oct design (phones keep the full screen width). */
 @media (min-width:768px){
-  .ahi-half{max-width:50% !important}
-  .ahi-half-760{max-width:min(50%,380px) !important}
+  .ahi-half{max-width:70% !important}
+  .ahi-half-760{max-width:532px !important}
+}
+@media (min-width:1025px){.wrap section div.ahi-ctx{grid-template-columns:minmax(0,1fr) minmax(0,.95fr) !important;column-gap:32px !important;row-gap:28px !important}.ahi-ctx>figure:nth-child(3){grid-column:2;grid-row:1 / span 2}}
+@media (max-width:767px){
+  .wrap section div.ahi-one{grid-template-columns:minmax(0,1fr) !important;row-gap:32px !important}
+  .wrap section div.ahi-uni .gray,.wrap section div.ahi-uni img{aspect-ratio:3/2 !important;height:auto !important}
 }
 </style>
 </head>
@@ -172,7 +177,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 20px;text-wrap:pretty">I used a Critical Design approach because it helps question what already exists and creates space for reflection and new perspectives.</p>
 <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:760px;margin:0 0 20px;text-wrap:pretty">Polestar shares information about the environmental impact of its electric vehicles in its sustainability report, but this information is not visible in its in-car interfaces. The center display, driver display, and head-up display mainly focus on information such as driving, navigation, speed, and range.</p>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 28px;text-wrap:pretty">For example, when planning a trip from Gothenburg to Stockholm, the navigation interface does not show information about the environmental impact of the trip or encourage the driver to consider another way of travelling. This became the starting point for asking: what if the car interface also showed the environmental impact we usually don't see?</p>
-<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start">
+<div class="ahi-one ahi-ctx m-keep" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start">
 <figure style="margin:0;display:flex;flex-direction:column;gap:10px;min-width:0">
 <div class="lbl" style="font-size:11px;color:#53565A">Center display — comfort &amp; speed</div>
 <div class="gray" style="width:100%;aspect-ratio:1190/669;overflow:hidden"><img alt="Polestar center display" decoding="async" loading="lazy" src="/assets/img/polestar-center-display.jpg" style="width:100%;display:block;aspect-ratio:1190/669;height:auto;object-fit:contain"/></div>
@@ -197,7 +202,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </div>
 <blockquote style="border-left:3px solid #1b3ac4;margin:0 0 24px;padding:4px 0 4px 20px;font:400 17px/1.55 Archivo;color:#1c1b1a;max-width:680px">"Polestar 4 isn't just our fastest car to date, with a 0–100 acceleration of 3.8 seconds, it also has the lowest carbon footprint of any Polestar car." <span style="color:#75726e;font-size:14px">— Polestar, 2024</span></blockquote>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:760px;margin:0 0 24px;text-wrap:pretty">Even with Polestar's transparency and its efforts to build greener cars, the company still makes vehicles built for fast driving — and fast driving increases tire wear, particle emissions like microplastics, and air pollution. The same report shows that making EV batteries releases toxic chemicals and heavy metals during cobalt, lithium and nickel mining, and that EVs also produce emissions from brake dust and tire wear, not just from the exhaust.</p>
-<div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start">
+<div class="ahi-one ahi-uni m-keep" style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start">
 <figure style="margin:0;display:flex;flex-direction:column;gap:10px;min-width:0">
 <div class="lbl" style="font-size:11px;color:#53565A">Mining pollution</div>
 <div class="gray" style="width:100%;aspect-ratio:1024/1024;overflow:hidden"><img alt="Frog near a mining site" decoding="async" loading="lazy" src="/assets/img/image-frog.png" style="width:100%;display:block;aspect-ratio:1024/1024;height:auto;object-fit:contain" data-view="1.07925 0 -3.96249"/></div>
@@ -261,7 +266,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </figure>
 <figure style="margin:0;display:flex;flex-direction:column;gap:10px;min-width:0">
 <div class="lbl" style="font-size:11px;color:#53565A">Fish</div>
-<div class="gray" style="width:100%;aspect-ratio:5184/3456;overflow:hidden"><img alt="Fish" decoding="async" loading="lazy" src="/assets/img/fish.jpg" style="width:100%;display:block;aspect-ratio:5184/3456;height:auto;object-fit:contain"/></div>
+<div class="gray" style="width:100%;aspect-ratio:880/854;overflow:hidden"><img alt="Fish" decoding="async" loading="lazy" src="/assets/img/ahi-fish-crop.png" style="width:100%;display:block;aspect-ratio:880/854;height:auto;object-fit:contain"/></div>
 <figcaption style="font:400 15px/1.5 Archivo;color:#4a4744">Pollution is killing the fish.</figcaption>
 </figure>
 </div>
@@ -269,9 +274,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div style="display:grid;grid-template-columns:minmax(0,480px) minmax(0,1fr);gap:40px;align-items:center;margin-bottom:28px">
 <div class="gray" style="width:100%;aspect-ratio:3689/2861;overflow:hidden"><img alt="Sketches — environment symbols, deer" decoding="async" loading="lazy" src="/assets/img/ahi-sketches.webp" style="width:100%;display:block;aspect-ratio:3689/2861;height:auto;object-fit:contain"/></div>
 <div class="ahi-cap" style="display:flex;flex-direction:column;gap:18px;max-width:360px">
-<p style="font:400 16px/1.55 Archivo;color:#4a4744;margin:0;text-wrap:pretty">Early sketches of environment symbols — a planet and a leaf, on paper.</p>
-<p style="font:400 16px/1.55 Archivo;color:#4a4744;margin:0;text-wrap:pretty">A deer breathing with a mask and an oxygen supply.</p>
-<p style="font:400 16px/1.55 Archivo;color:#4a4744;margin:0;text-wrap:pretty">Digital driver display in the Polestar.</p>
+<p style="font:400 16px/1.55 Archivo;color:#4a4744;margin:0;text-wrap:pretty">Early sketches of environment symbols — a planet and a leaf, on paper. A deer breathing with a mask and an oxygen supply. Digital driver display in the Polestar.</p>
 </div>
 </div>
 </section>
