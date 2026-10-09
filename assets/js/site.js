@@ -106,3 +106,24 @@
   // Back/forward cache: never come back to an open menu.
   window.addEventListener('pageshow', function () { if (!menu.hidden) set(false); });
 })();
+
+/* Same-page links ("↑ Back to Top", the section tabs) scroll without adding a history entry, so the
+   browser's Back button leaves the page at once instead of first stepping back through "#" jumps. */
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var a = e.target.closest('a[data-top], .cs-tabs a[href^="#"]');
+    if (!a) return;
+    var id = a.getAttribute('href').slice(1);
+    var target = id ? document.getElementById(id) : null;
+    if (id && !target) return;
+    e.preventDefault();
+    // Smooth unless reduced motion is on (or the page is hidden, where browsers don't animate).
+    var behavior = reduce || document.hidden ? 'auto' : 'smooth';
+    if (target) target.scrollIntoView({ behavior: behavior, block: 'start' });
+    else window.scrollTo({ top: 0, behavior: behavior });
+    // Keep the address bar in step (section anchor, or no "#" at the top) without a new entry.
+    history.replaceState(history.state, '', location.pathname + location.search + (target ? '#' + id : ''));
+  });
+})();
