@@ -2,7 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, viewport-fit=cover">
+		<meta name="theme-color" content="#0b1a5c">
 		<title>Gilded Cage — play in the browser</title>
 		<style>
 html, body, #canvas {
@@ -12,10 +13,12 @@ html, body, #canvas {
 }
 
 body {
-	color: white;
-	background-color: black;
+	color: #fff;
+	background: #000;
 	overflow: hidden;
 	touch-action: none;
+	font-family: Archivo, system-ui, -apple-system, 'Segoe UI', sans-serif;
+	-webkit-font-smoothing: antialiased;
 }
 
 #canvas {
@@ -26,68 +29,212 @@ body {
 	outline: none;
 }
 
-#status, #status-splash, #status-progress {
-	position: absolute;
-	left: 0;
-	right: 0;
-}
-
-#status, #status-splash {
-	top: 0;
-	bottom: 0;
-}
-
-#status {
-	background-color: #242424;
+/* Start screen: shown until the visitor presses Play (a click also lets the browser play sound). */
+#start {
+	position: fixed;
+	inset: 0;
+	z-index: 3;
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
 	align-items: center;
-	visibility: hidden;
+	justify-content: center;
+	padding: 24px;
+	background: linear-gradient(180deg, #07103a 0%, #0b1a5c 100%);
+	overflow: auto;
 }
 
-#status-splash {
-	max-height: 100%;
-	max-width: 100%;
-	margin: auto;
-}
-
-#status-splash.show-image--false {
-	display: none;
-}
-
-#status-splash.fullsize--true {
-	height: 100%;
+#start .box {
 	width: 100%;
-	object-fit: contain;
+	max-width: 560px;
+	text-align: center;
 }
 
-#status-splash.use-filter--false {
-	image-rendering: pixelated;
+#start img {
+	display: block;
+	width: min(100%, 440px);
+	height: auto;
+	margin: 0 auto;
+	box-shadow: 0 18px 44px rgba(0, 0, 0, .45);
 }
 
-#status-progress, #status-notice {
+#start h1 {
+	font: 700 clamp(34px, 6vw, 52px)/1.05 Archivo, system-ui, sans-serif;
+	letter-spacing: -.02em;
+	margin: 22px 0 10px;
+}
+
+#start p {
+	font: 400 17px/1.5 Archivo, system-ui, sans-serif;
+	color: #e5e9fb;
+	margin: 0 auto 26px;
+	max-width: 440px;
+}
+
+#play {
+	appearance: none;
+	border: 0;
+	border-radius: 0;
+	cursor: pointer;
+	background: #b9a6f0;
+	color: #0b1a5c;
+	font: 700 17px/1 Archivo, system-ui, sans-serif;
+	letter-spacing: .04em;
+	text-transform: uppercase;
+	padding: 18px 40px;
+	min-height: 56px;
+}
+
+#play:hover, #play:focus-visible {
+	background: #d2c6f7;
+	outline: none;
+}
+
+#play:focus-visible {
+	box-shadow: 0 0 0 3px #fff;
+}
+
+.keys {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 10px 22px;
+	margin: 26px 0 0;
+	padding: 0;
+	list-style: none;
+	font: 400 14px/1.4 Archivo, system-ui, sans-serif;
+	color: #e5e9fb;
+}
+
+.keys kbd {
+	display: inline-block;
+	min-width: 22px;
+	padding: 3px 6px;
+	margin-right: 4px;
+	border: 1px solid rgba(255, 255, 255, .5);
+	font: 600 12px/1.2 Archivo, system-ui, sans-serif;
+	color: #fff;
+}
+
+.touch-only {
 	display: none;
+}
+
+@media (pointer: coarse) {
+	.touch-only { display: block; }
+	.mouse-only { display: none; }
+}
+
+/* Small buttons over the game: back to the portfolio, full screen. */
+.bar {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 4;
+	display: flex;
+	gap: 8px;
+}
+
+.bar a, .bar button {
+	appearance: none;
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	min-height: 36px;
+	padding: 0 12px;
+	border: 1px solid rgba(255, 255, 255, .35);
+	border-radius: 0;
+	background: rgba(7, 16, 58, .72);
+	color: #fff;
+	font: 600 13px/1 Archivo, system-ui, sans-serif;
+	text-decoration: none;
+	cursor: pointer;
+	-webkit-backdrop-filter: blur(6px);
+	backdrop-filter: blur(6px);
+}
+
+.bar a:hover, .bar button:hover, .bar a:focus-visible, .bar button:focus-visible {
+	background: #1b3ac4;
+	outline: none;
+}
+
+.playing .bar {
+	opacity: .55;
+	transition: opacity .2s;
+}
+
+.playing .bar:hover, .playing .bar:focus-within {
+	opacity: 1;
+}
+
+#fs[hidden] {
+	display: none;
+}
+
+/* Loading */
+#status {
+	position: fixed;
+	inset: 0;
+	z-index: 2;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
+	background: linear-gradient(180deg, #07103a 0%, #0b1a5c 100%);
+	font: 600 15px/1.3 Archivo, system-ui, sans-serif;
+	color: #e5e9fb;
 }
 
 #status-progress {
-	bottom: 10%;
-	width: 50%;
-	margin: 0 auto;
+	width: min(320px, 70vw);
+	height: 6px;
+	appearance: none;
+	-webkit-appearance: none;
+	border: 0;
+	background: rgba(255, 255, 255, .2);
 }
 
+#status-progress::-webkit-progress-bar { background: rgba(255, 255, 255, .2); }
+#status-progress::-webkit-progress-value { background: #b9a6f0; }
+#status-progress::-moz-progress-bar { background: #b9a6f0; }
+
 #status-notice {
-	background-color: #5b3943;
-	border-radius: 0.5rem;
-	border: 1px solid #9b3943;
-	color: #e0e0e0;
-	font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
-	line-height: 1.3;
-	margin: 0 2rem;
-	overflow: hidden;
-	padding: 1rem;
+	display: none;
+	max-width: 460px;
+	margin: 0 24px;
+	padding: 16px;
+	border: 1px solid #ff6fb5;
 	text-align: center;
-	z-index: 1;
+	line-height: 1.4;
+}
+
+/* Phones held upright: the game is wide, so ask for landscape. */
+#rotate {
+	position: fixed;
+	inset: 0;
+	z-index: 5;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	padding: 24px;
+	text-align: center;
+	background: #07103a;
+	font: 600 18px/1.4 Archivo, system-ui, sans-serif;
+}
+
+#rotate span {
+	font-size: 44px;
+	line-height: 1;
+}
+
+@media (orientation: portrait) and (pointer: coarse) {
+	.playing #rotate { display: flex; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+	#rotate span { animation: tilt 2.4s ease-in-out infinite; }
+	@keyframes tilt { 0%, 30% { transform: rotate(0); } 60%, 100% { transform: rotate(-90deg); } }
 }
 		</style>
 		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
@@ -95,110 +242,108 @@ body {
 
 	</head>
 	<body>
-		<canvas id="canvas">
+		<canvas id="canvas" tabindex="0" aria-label="Gilded Cage game">
 			Your browser does not support the canvas tag.
 		</canvas>
 
 		<noscript>
-			Your browser does not support JavaScript.
+			<p style="padding:24px">Gilded Cage needs JavaScript to run in the browser.</p>
 		</noscript>
 
-		<div id="status">
-			<img id="status-splash" class="show-image--true fullsize--true use-filter--true" src="index.png" alt="">
+		<div class="bar">
+			<a href="/work/gilded-cage/" id="back">← Case study</a>
+			<button type="button" id="fs" hidden>Full screen</button>
+		</div>
+
+		<div id="start">
+			<div class="box">
+				<img src="/assets/img/idx-gilded.webp" alt="">
+				<h1>Gilded Cage</h1>
+				<p>A short game about a fairy trapped inside a glass terrarium. It looks calm and cosy on the surface. Underneath, it's a lot darker.</p>
+				<button type="button" id="play">Play</button>
+				<ul class="keys mouse-only" aria-label="Controls">
+					<li><kbd>←</kbd><kbd>→</kbd><kbd>↑</kbd><kbd>↓</kbd> or <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> move</li>
+					<li><kbd>E</kbd> interact</li>
+					<li><kbd>Esc</kbd> pause</li>
+				</ul>
+				<ul class="keys touch-only" aria-label="Controls">
+					<li>Turn your phone sideways. Use the on-screen arrows to move, <b>E</b> to interact and <b>II</b> to pause.</li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="status" role="status" aria-live="polite">
+			<div id="status-text">Loading the game…</div>
 			<progress id="status-progress"></progress>
 			<div id="status-notice"></div>
 		</div>
 
+		<div id="rotate" aria-hidden="true"><span>📱</span>Turn your phone sideways to play</div>
+
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":12423520,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":12434532,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
 (function () {
-	const statusOverlay = document.getElementById('status');
+	const start = document.getElementById('start');
+	const playBtn = document.getElementById('play');
+	const status = document.getElementById('status');
+	const statusText = document.getElementById('status-text');
 	const statusProgress = document.getElementById('status-progress');
 	const statusNotice = document.getElementById('status-notice');
+	const fsBtn = document.getElementById('fs');
+	const canvas = document.getElementById('canvas');
 
-	let initializing = true;
-	let statusMode = '';
+	// Start downloading the game in the background while the visitor reads the start screen,
+	// so it is (partly) cached when they press Play.
+	const base = GODOT_CONFIG['executable'];
+	[base + '.wasm', GODOT_CONFIG['mainPack'] || (base + '.pck')].forEach(function (f) {
+		fetch(f).catch(function () {});
+	});
 
-	function setStatusMode(mode) {
-		if (statusMode === mode || !initializing) {
-			return;
-		}
-		if (mode === 'hidden') {
-			statusOverlay.remove();
-			initializing = false;
-			return;
-		}
-		statusOverlay.style.visibility = 'visible';
-		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
-		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
-		statusMode = mode;
+	function fail(err) {
+		console.error(err);
+		statusText.textContent = 'The game could not start.';
+		statusProgress.style.display = 'none';
+		statusNotice.textContent = (err && err.message) || String(err || 'Unknown error');
+		statusNotice.style.display = 'block';
 	}
 
-	function setStatusNotice(text) {
-		while (statusNotice.lastChild) {
-			statusNotice.removeChild(statusNotice.lastChild);
-		}
-		const lines = text.split('\n');
-		lines.forEach((line) => {
-			statusNotice.appendChild(document.createTextNode(line));
-			statusNotice.appendChild(document.createElement('br'));
+	const missing = Engine.getMissingFeatures({ threads: GODOT_THREADS_ENABLED });
+	if (missing.length !== 0) {
+		playBtn.disabled = true;
+		playBtn.textContent = 'Not supported in this browser';
+		status.style.display = 'flex';
+		fail(new Error('This browser is missing: ' + missing.join(', ') + '. Try a recent Chrome, Edge, Firefox or Safari.'));
+		return;
+	}
+
+	// Full screen (only where the browser supports it, e.g. not on iPhone).
+	const root = document.documentElement;
+	if (root.requestFullscreen || root.webkitRequestFullscreen) {
+		fsBtn.hidden = false;
+		fsBtn.addEventListener('click', function () {
+			if (document.fullscreenElement || document.webkitFullscreenElement) {
+				(document.exitFullscreen || document.webkitExitFullscreen).call(document);
+			} else {
+				(root.requestFullscreen || root.webkitRequestFullscreen).call(root);
+			}
+			canvas.focus();
+		});
+		document.addEventListener('fullscreenchange', function () {
+			fsBtn.textContent = document.fullscreenElement ? 'Exit full screen' : 'Full screen';
 		});
 	}
 
-	function displayFailureNotice(err) {
-		console.error(err);
-		if (err instanceof Error) {
-			setStatusNotice(err.message);
-		} else if (typeof err === 'string') {
-			setStatusNotice(err);
-		} else {
-			setStatusNotice('An unknown error occurred.');
-		}
-		setStatusMode('notice');
-		initializing = false;
-	}
-
-	const missing = Engine.getMissingFeatures({
-		threads: GODOT_THREADS_ENABLED,
-	});
-
-	if (missing.length !== 0) {
-		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
-			let serviceWorkerRegistrationPromise;
-			try {
-				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
-			} catch (err) {
-				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
-			}
-			// There's a chance that installing the service worker would fix the issue
-			Promise.race([
-				serviceWorkerRegistrationPromise.then((registration) => {
-					if (registration != null) {
-						return Promise.reject(new Error('Service worker already exists.'));
-					}
-					return registration;
-				}).then(() => engine.installServiceWorker()),
-				// For some reason, `getRegistration()` can stall
-				new Promise((resolve) => {
-					setTimeout(() => resolve(), 2000);
-				}),
-			]).then(() => {
-				// Reload if there was no error.
-				window.location.reload();
-			}).catch((err) => {
-				console.error('Error while registering service worker:', err);
-			});
-		} else {
-			// Display the message as usual
-			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
-			displayFailureNotice(missingMsg + missing.join('\n'));
-		}
-	} else {
-		setStatusMode('progress');
+	let started = false;
+	playBtn.addEventListener('click', function () {
+		if (started) return;
+		started = true;
+		start.remove();
+		status.style.display = 'flex';
+		document.body.classList.add('playing');
 		engine.startGame({
 			'onProgress': function (current, total) {
 				if (current > 0 && total > 0) {
@@ -209,10 +354,17 @@ const engine = new Engine(GODOT_CONFIG);
 					statusProgress.removeAttribute('max');
 				}
 			},
-		}).then(() => {
-			setStatusMode('hidden');
-		}, displayFailureNotice);
-	}
+		}).then(function () {
+			status.remove();
+			canvas.focus();
+			// Godot renames the tab after the project ("Gilded_Cage"); keep the page title.
+			const title = 'Gilded Cage — play in the browser';
+			const keep = function () { if (document.title !== title) document.title = title; };
+			keep();
+			new MutationObserver(keep).observe(document.querySelector('title'), { childList: true });
+		}, fail);
+	});
+	playBtn.focus();
 }());
 		</script>
 	</body>

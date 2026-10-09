@@ -112,15 +112,14 @@ Figma prototype 576×1248 @ 1.2 Mbps (poster at 0:01), working product 480×1040
 
 ## Gilded Cage in the browser
 
-`public/play/gilded-cage/` is a Godot 4.5 web export of the game project
-(`~/Documents/GitHub/Gilded_cage`, github.com/Phozel/Gilded_Cage). It is the single-threaded
-("nothreads") build, so it runs on GitHub Pages without the cross-origin-isolation headers the
-threaded build needs. To rebuild: copy the game project, add a "Web" export preset with
-`variant/thread_support=false`, then run
-`Godot --headless --path <copy> --export-release "Web" <out>/index.html` and copy `<out>/*` here.
-The game's own repository is not changed. The case study's "Play Gilded Cage in your browser"
-button opens it in a new tab; the macOS .dmg stays in assets/downloads/ but is no longer linked
-(it is not notarized, so macOS blocks it).
+`public/play/gilded-cage/` is the browser version of the game, a Godot 4.5 web export (single-threaded,
+so it runs on GitHub Pages without cross-origin-isolation headers). It is built from a private copy of
+the game, kept apart from the team repository: `~/Documents/GitHub/Gilded_cage-web`, branch `web`,
+github.com/tarekalfutih/Gilded-Cage-web (private). That copy adds touch controls for phones and tablets,
+a start screen with a Play button, a back link and a full-screen button, and hides the Exit/Quit buttons
+in the browser; its WEB.md explains the changes and the export command. After rebuilding, copy the
+export's files here. The case study's "Play Gilded Cage in your browser" button opens it in a new tab.
+The macOS .dmg stays in assets/downloads/ but is no longer linked (it is not notarized, so macOS blocks it).
 
 ## Case-study back link
 
