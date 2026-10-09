@@ -324,3 +324,8 @@ html.cvv-open { overflow: hidden; }
     transition: none !important;
   }
 }
+
+/* "↑ Back to Top" at the end of case studies and the Illustration page */
+.btt { display: flex; justify-content: center; padding: 40px 20px 48px; }
+.btt a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font: 600 15px/1 Archivo, system-ui, sans-serif; letter-spacing: .01em; color: #122a8f; text-decoration: underline; text-decoration-color: #a9b6ee; text-decoration-thickness: 2px; text-underline-offset: 6px; }
+.btt a:hover { color: #1b3ac4; text-decoration-color: #1b3ac4; }
