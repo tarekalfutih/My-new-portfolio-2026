@@ -148,7 +148,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   .bk-ctl{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;margin:0 0 24px}
 }
 @media (max-width:767px){
-  #illustration .ill-books{--bh:min(52vw,200px);--bx:0px;gap:16px !important;padding-bottom:16px !important}
+  #illustration .ill-books{--bh:min(40vw,150px);--bx:0px;gap:16px !important;padding-bottom:16px !important}
   .bk-ctl{margin-bottom:16px}
 }
 @media (prefers-reduced-motion:reduce){
@@ -198,7 +198,7 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   html body .wrap .filters>.wf-chip{display:none !important}
 }
 
-/* Site rules: filter buttons (+ phone select), hover states, phone-only links. */
+/* Site rules: filter buttons (+ phone "Show" field), hover states, phone-only links. */
 .hv1:hover{background:#122a8f !important;color:#fff !important}
 .hv2:hover{background:#122a8f !important;color:#fff !important}
 .hv3:hover{background:#1c1b1a !important;color:#fff !important}
@@ -210,11 +210,24 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
 @media (max-width:767px){
   .wf-chip{display:none !important}
   .filters{display:flex !important}
-  .f-sel{display:flex;width:100%;align-items:center;gap:12px}
-  .f-sel-lbl{font:600 12px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#75726e;flex:none}
-  .f-sel-box{position:relative;flex:1;min-width:0}
-  .f-sel select{-webkit-appearance:none;appearance:none;width:100%;height:44px;border:2px solid #1c1b1a;border-radius:0;background:#fff;padding:0 40px 0 14px;font:600 15px/1 Archivo;color:#1c1b1a;cursor:pointer}
-  .f-sel svg{position:absolute;right:14px;top:50%;margin-top:-8px;pointer-events:none}
+  .f-sel{display:block;position:relative;width:100%}
+  .f-sel-btn{width:100%;height:60px;display:flex;align-items:center;justify-content:space-between;gap:12px;border:2px solid #1c1b1a;border-radius:0;background:#fff;padding:0 16px;cursor:pointer;text-align:left;color:#1c1b1a}
+  .f-sel-btn:active{background:#f3f2f2}
+  .f-sel-btn svg{flex:none}
+  .f-sel-btn[aria-expanded="true"] svg{transform:rotate(180deg)}
+  .f-sel-txt{display:flex;flex-direction:column;gap:6px;min-width:0}
+  .f-sel-lbl{font:600 11px/1 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#75726e}
+  .f-sel-cur{font:600 17px/1.1 Archivo;color:#1c1b1a;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .f-sel-shade{position:fixed;inset:0;z-index:3;background:transparent}
+  .f-sel-list{position:absolute;left:0;right:0;top:100%;background:#fff;border:2px solid #1c1b1a;border-top:0;z-index:4;display:flex;flex-direction:column;box-shadow:0 16px 32px rgba(28,27,26,.14)}
+  .f-sel-list[hidden],.f-sel-shade[hidden]{display:none}
+  .f-sel-list>button{min-height:48px;display:flex;align-items:center;gap:12px;padding:0 16px;border:0;border-top:1px solid #dcd9d4;background:#fff;font:400 16px/1.2 Archivo;color:#1c1b1a;text-align:left;cursor:pointer}
+  .f-sel-list>button:active{background:#e5e9fb}
+  .f-sel-list>button[aria-selected="true"]{background:#e5e9fb;font-weight:600;color:#0b1a5c}
+  .f-sel-mark{width:8px;height:8px;flex:none;background:transparent}
+  .f-sel-list>button[aria-selected="true"] .f-sel-mark{background:#1b3ac4}
+  html body .wrap .filters.is-in{transform:none !important}
+  .wrap .ill-hero .ill-cover{width:min(320px,86vw) !important;margin:0 !important}
   .m-cover-link{display:block}
   .ill-buy{display:flex !important}
 }
@@ -238,13 +251,20 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
     <button type="button" class="wf-chip" data-filter="tangible" aria-pressed="false">Tangible &amp; installation</button>
     <button type="button" class="wf-chip" data-filter="critical" aria-pressed="false">Critical &amp; speculative</button>
     <button type="button" class="wf-chip" data-filter="games" aria-pressed="false">Game Design</button>
-    <label class="f-sel"><span class="f-sel-lbl">Show</span><span class="f-sel-box"><select data-filter-select aria-label="Filter projects">
-      <option value="all">All projects</option>
-      <option value="product">Digital Product UX/UI</option>
-      <option value="tangible">Tangible &amp; installation</option>
-      <option value="critical">Critical &amp; speculative</option>
-      <option value="games">Game Design</option>
-    </select><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2.5" stroke-linecap="square"><path d="M6 9l6 6 6-6"/></svg></span></label>
+    <div class="f-sel" data-fsel>
+      <button type="button" class="f-sel-btn" aria-haspopup="listbox" aria-expanded="false" aria-controls="f-list" aria-labelledby="f-show f-cur">
+        <span class="f-sel-txt"><span id="f-show" class="f-sel-lbl">Show</span><span id="f-cur" class="f-sel-cur">All projects</span></span>
+        <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1c1b1a" stroke-width="2.5" stroke-linecap="square"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="f-sel-shade" aria-hidden="true" hidden></div>
+      <div class="f-sel-list" id="f-list" role="listbox" aria-label="Filter projects" hidden>
+        <button type="button" role="option" data-value="all" aria-selected="true"><span class="f-sel-mark" aria-hidden="true"></span>All projects</button>
+        <button type="button" role="option" data-value="product" aria-selected="false"><span class="f-sel-mark" aria-hidden="true"></span>Digital Product UX/UI</button>
+        <button type="button" role="option" data-value="tangible" aria-selected="false"><span class="f-sel-mark" aria-hidden="true"></span>Tangible &amp; installation</button>
+        <button type="button" role="option" data-value="critical" aria-selected="false"><span class="f-sel-mark" aria-hidden="true"></span>Critical &amp; speculative</button>
+        <button type="button" role="option" data-value="games" aria-selected="false"><span class="f-sel-mark" aria-hidden="true"></span>Game Design</button>
+      </div>
+    </div>
   </section>
 
   <div data-group="tangible">

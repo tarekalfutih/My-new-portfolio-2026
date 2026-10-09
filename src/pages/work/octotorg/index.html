@@ -103,6 +103,8 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
 }
 .wrap section.td-hero2,.wrap section.pr-hero,.wrap section.oc-hero{max-height:1400px}
 
+.oc-step-one{width:calc(50% - 6px)}
+@media (max-width:767px){.wrap .oc-steps{gap:14px !important}.wrap .oc-step span[style*="22px"]{font-size:19px !important}.wrap .oc-pair{grid-template-columns:1fr !important}.wrap .oc-step-one{width:100% !important}}
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
 </style>
 </head>
@@ -123,13 +125,12 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
 
 <section class="rule oc-hero" id="overview" style="background:#f1effa;height:calc(100svh - var(--hdr,110px));min-height:600px;display:flex;flex-direction:column">
 <div class="oc-stage" style="position:relative;overflow:hidden;flex:1;min-height:0">
-<div aria-hidden="true" class="oc-glow" style="position:absolute;left:44%;top:22%;width:50%;height:70%;border-radius:50%;filter:blur(90px);pointer-events:none;animation:ocHue 12s ease-in-out infinite"></div>
 <div class="oc-text" style="position:absolute;left:56px;top:clamp(36px,7vh,72px);z-index:2;max-width:440px;display:flex;flex-direction:column;gap:16px">
 <div style="display:flex;flex-wrap:wrap;align-items:center;gap:10px"><span class="lbl">Group project</span><span style="display:inline-flex;align-items:center;padding:4px 10px;border:1px solid #1b3ac4;font:600 11px Archivo;letter-spacing:.06em;text-transform:uppercase;color:#122a8f">Course · Interaction Design Methodology</span></div>
 <h1 class="h1r" style="font-size:clamp(44px,6vw,80px);line-height:1;letter-spacing:-.04em;margin:0;color:#1c1b1a">Octotorg</h1>
 <p style="font:400 20px/1.45 Archivo;color:#1c1b1a;margin:0;text-wrap:pretty">An octopus-shaped climbing and seating structure for a transit square in Gothenburg.</p>
 </div>
-<img alt="Illustration of Octotorg: people climbing the tentacles, sitting on the head, eating at the tentacle tables and children playing under the colour light" class="oc-art" src="/assets/img/octotorg-illustration.png" style="position:absolute;right:0;bottom:0;width:80%;height:92%;object-fit:contain;object-position:right bottom;z-index:1"/>
+<img alt="Illustration of Octotorg: people climbing the tentacles, sitting on the head, eating at the tentacle tables and children playing under the colour light" class="oc-art" src="/assets/img/octotorg-anim-1.png" style="position:absolute;right:0;bottom:0;width:80%;height:92%;object-fit:contain;object-position:right bottom;z-index:1"/>
 </div>
 <div class="facts oc-fbar" style="background:#fff;margin:0;padding:0 56px;border-bottom:0">
 <div>
@@ -154,41 +155,36 @@ blockquote{margin:0;padding:14px 18px;border-left:3px solid #1b3ac4;background:#
 </div>
 </section>
 <section class="pad rule two" id="problem">
-<div>
+<div style="grid-column:1/-1;max-width:760px">
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#b3200b"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#ec3013;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">01</span><span>Problem &amp; purpose</span></div>
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Vågmästareplatsen, Hisingen</h2>
 <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 14px;text-wrap:pretty">Our group, named Space, was assigned Vågmästareplatsen — a square in Hisingen, Gothenburg, that connects Hisingen to the city centre. On-site observation and interviews with workers and locals found the square worked mainly as a transit route: most people passed through rushed, without a reason to stop, and even some locals only noticed the market held there after living nearby for years.</p>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0 0 14px;text-wrap:pretty">A thematic analysis sorted our notes by importance and by how enjoyable or boring the underlying problem felt, grouping them into four categories: reputation, accessibility, activity and aesthetics. Aesthetics and activity came out as the square's clearest gaps.</p>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0;text-wrap:pretty">That led to our research question: <em>how can we inspire social interactions through creating a reason to stop at Vågmästareplatsen?</em> The aim was to turn the square into a meeting point people gather at, rather than just cross.</p>
 </div>
-<div style="border-top:1px solid #dcd9d4;padding-top:16px">
-<div class="lbl" style="font-size:11px;margin-bottom:10px">Method</div>
-<p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0 0 12px">On-site observation and semi-structured interviews with workers and locals at the square.</p>
-<p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0 0 12px">Thematic analysis, clustering sticky-note needs by importance and enjoyment.</p>
-<p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0">Ideation with a modified Brainwriting 6-3-5: four people sketching one idea every five minutes, over five rounds.</p>
+<div style="grid-column:1/-1;border-top:1px solid #dcd9d4;margin-top:16px;padding-top:24px">
+<div class="lbl" style="font-size:11px;margin-bottom:18px">Method — three steps</div>
+<div class="oc-steps m-keep" style="display:flex;flex-direction:column;gap:40px">
+<div class="oc-step m-keep" style="border-top:2px solid #1c1b1a;padding-top:18px;display:flex;flex-direction:column;gap:14px;min-width:0">
+<div style="display:flex;align-items:baseline;gap:10px"><span style="font:700 13px/1 Archivo;letter-spacing:.12em;text-transform:uppercase;color:#122a8f">Step 1</span><span style="font:700 22px/1.25 Archivo;letter-spacing:-.01em;color:#1c1b1a">Observe &amp; interview</span></div>
+<p style="font:400 16px/1.6 Archivo;color:#4a4744;margin:0;max-width:640px">On-site observation and semi-structured interviews with workers and locals at the square.</p>
+<div class="m-keep oc-pair" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="m-keep"><img alt="Two people sitting on a bench at Vågmästareplatsen during on-site observation" src="/assets/img/people-sitting.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/><p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">People sitting</p></div>
+<div class="m-keep"><img alt="A pedestrian bridge and crossing at Vågmästareplatsen during on-site observation" src="/assets/img/observing-the-area.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/><p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Observing the area</p></div>
 </div>
-<div style="grid-column:1/-1;border-top:1px solid #dcd9d4;margin-top:32px;padding-top:24px">
-<div class="lbl" style="font-size:11px;margin-bottom:14px">Observation, analysis &amp; ideation</div>
-<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px">
-<div>
-<img alt="Two people sitting on a bench at Vågmästareplatsen during on-site observation" src="/assets/img/people-sitting.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
-<p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">People sitting</p>
 </div>
-<div>
-<img alt="A pedestrian bridge and crossing at Vågmästareplatsen during on-site observation" src="/assets/img/observing-the-area.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
-<p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Observing the area</p>
+<div class="oc-step m-keep" style="border-top:2px solid #1c1b1a;padding-top:18px;display:flex;flex-direction:column;gap:14px;min-width:0">
+<div style="display:flex;align-items:baseline;gap:10px"><span style="font:700 13px/1 Archivo;letter-spacing:.12em;text-transform:uppercase;color:#122a8f">Step 2</span><span style="font:700 22px/1.25 Archivo;letter-spacing:-.01em;color:#1c1b1a">Analyse</span></div>
+<p style="font:400 16px/1.6 Archivo;color:#4a4744;margin:0;max-width:640px">Thematic analysis, clustering sticky-note needs by importance and enjoyment.</p>
+<div class="m-keep oc-step-one"><img alt="Sticky notes clustered on a board by theme — reputation, accessibility, activity and aesthetics" src="/assets/img/thematic-analys.png" style="width:100%;height:auto;display:block"/><p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Thematic analysis of observation and interview notes</p></div>
 </div>
-<div>
-<img alt="Sticky notes clustered on a board by theme — reputation, accessibility, activity and aesthetics" src="/assets/img/thematic-analys.png" style="width:100%;height:auto;display:block"/>
-<p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Thematic analysis of observation and interview notes</p>
+<div class="oc-step m-keep" style="border-top:2px solid #1c1b1a;padding-top:18px;display:flex;flex-direction:column;gap:14px;min-width:0">
+<div style="display:flex;align-items:baseline;gap:10px"><span style="font:700 13px/1 Archivo;letter-spacing:.12em;text-transform:uppercase;color:#122a8f">Step 3</span><span style="font:700 22px/1.25 Archivo;letter-spacing:-.01em;color:#1c1b1a">Ideate</span></div>
+<p style="font:400 16px/1.6 Archivo;color:#4a4744;margin:0;max-width:640px">Ideation with a modified Brainwriting 6-3-5: four people sketching one idea every five minutes, over five rounds.</p>
+<div class="m-keep oc-pair" style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+<div class="m-keep"><img alt="Team members spreading and discussing brainwriting sketches on a table" src="/assets/img/ideation.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/><p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Brainwriting 6-3-5 ideation</p></div>
+<div class="m-keep"><img alt="The five favoured ideation sketches, top left to bottom right" src="/assets/img/top-left-to-bottom-right-favoured-ideas-1-5.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/><p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">The five favoured sketches</p></div>
 </div>
-<div>
-<img alt="Team members spreading and discussing brainwriting sketches on a table" src="/assets/img/ideation.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
-<p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">Brainwriting 6-3-5 ideation</p>
-</div>
-<div>
-<img alt="The five favoured ideation sketches, top left to bottom right" src="/assets/img/top-left-to-bottom-right-favoured-ideas-1-5.png" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
-<p style="font:400 12px/1.4 Archivo;color:#75726e;margin:6px 0 0">The five favoured sketches</p>
 </div>
 </div>
 </div>
