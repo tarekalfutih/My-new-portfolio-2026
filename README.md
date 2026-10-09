@@ -44,6 +44,7 @@ public/                  copied to dist/ as-is
   assets/js/pdfjs/           local copy of pdf.js 3.11.174 (Apache-2.0), loaded when the CV is opened
   assets/js/home.js, lego-alma.js, contact.js, work.js   page interactions
   assets/downloads/          downloadable builds (Gilded Cage macOS .dmg, 87 MB)
+  play/gilded-cage/          Gilded Cage playable in the browser (Godot web export, see below)
   assets/img|video|docs/     renamed assets (lowercase kebab-case); img/opt/ holds the WebP variants
 tools/deploy_pages.sh    builds for GitHub Pages and publishes dist/ to the gh-pages branch
 ```
@@ -108,6 +109,18 @@ Save the poster as WebP (same size as the video) next to it in `public/assets/vi
 `poster="…"` to the `<video>`. Smart Fishing uses: hero 720×1560 @ 2 Mbps (poster at 0:10),
 Figma prototype 576×1248 @ 1.2 Mbps (poster at 0:01), working product 480×1040 @ 0.8 Mbps
 (poster at 0:02). LEGO ALMA: final outcome 720×1280 @ 1.1 Mbps (poster at 0:01), idle loop 640×360 @ 0.55 Mbps (poster at 0:04).
+
+## Gilded Cage in the browser
+
+`public/play/gilded-cage/` is a Godot 4.5 web export of the game project
+(`~/Documents/GitHub/Gilded_cage`, github.com/Phozel/Gilded_Cage). It is the single-threaded
+("nothreads") build, so it runs on GitHub Pages without the cross-origin-isolation headers the
+threaded build needs. To rebuild: copy the game project, add a "Web" export preset with
+`variant/thread_support=false`, then run
+`Godot --headless --path <copy> --export-release "Web" <out>/index.html` and copy `<out>/*` here.
+The game's own repository is not changed. The case study's "Play Gilded Cage in your browser"
+button opens it in a new tab; the macOS .dmg stays in assets/downloads/ but is no longer linked
+(it is not notarized, so macOS blocks it).
 
 ## Case-study back link
 
