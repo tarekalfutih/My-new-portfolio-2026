@@ -81,6 +81,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wrap section [style*="width:"]:not(.m-keep){max-width:100%}
   .wrap img,.wrap video,.wrap img{max-width:100%}
   .wrap section a[href$=".pdf"]{display:none !important}
+  .dl-row{display:none !important}.dl-note{display:block !important}
 }
 @media (max-width:767px){
   .wrap section div:has(> img):not(.m-keep),.wrap section div:has(> video):not(.m-keep),.wrap section div:has(> .vc > video):not(.m-keep),.wrap section div:has(> img):not(.m-keep){width:calc(100% + 40px) !important;max-width:none !important;margin-left:-20px !important;margin-right:-20px !important}
@@ -89,6 +90,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 }
 
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
+/* Game download (macOS app). Phones get the dl-note instead, as in the design. */
+.gc-play:hover,.gc-play:focus-visible{background:#1b3ac4 !important;color:#fff !important;border-style:solid !important;text-decoration:none !important}
+.gc-play:active{background:#122a8f !important;color:#fff !important}
+.wrap section .gc-fit{width:100% !important;margin:0 !important}.wrap section .gc-fit img{width:97.72% !important;max-width:none !important}
 </style>
 </head>
 <body>
@@ -148,7 +153,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </div>
 <div class="m-keep gc-facts" id="facts" style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));border-top:1px solid #3a3833;padding:0 36px">
 <div><div style="font:600 11px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#8b8880;margin-bottom:6px">My role</div><div style="font:600 15px/1.35 Archivo">UX, illustration &amp; visual design</div></div>
-<div><div style="font:600 11px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#8b8880;margin-bottom:6px">Team</div><div style="font:600 15px/1.35 Archivo">6 people, 8 weeks</div></div>
+<div><div style="font:600 11px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#8b8880;margin-bottom:6px">Team &amp; time</div><div style="font:600 15px/1.35 Archivo">6 people, 8 weeks</div></div>
 <div><div style="font:600 11px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#8b8880;margin-bottom:6px">Process</div><div style="font:600 15px/1.35 Archivo">Triple diamond, MoSCoW, Scrum</div></div>
 <div><div style="font:600 11px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#8b8880;margin-bottom:6px">Tools</div><div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><span style="display:flex;align-items:center;gap:8px;font:600 15px/1 Archivo"><svg aria-label="Godot Engine logo" height="24" role="img" style="flex:none" viewbox="0 0 24 24" width="24"><path d="M9.5598.683c-1.096.244-2.1812.5831-3.1983 1.0951.023.8981.081 1.7582.199 2.6323-.395.253-.81.47-1.178.766-.375.288-.7581.564-1.0971.9011-.6781-.448-1.3962-.869-2.1352-1.2411C1.3532 5.6934.608 6.6186 0 7.6546c.458.7411.936 1.4352 1.4521 2.0942h.014v6.3565c.012 0 .023 0 .035.003l3.8963.376c.204.02.364.184.378.3891l.12 1.7201 3.3994.242.234-1.587c.03-.206.207-.358.415-.358h4.1114c.208 0 .385.152.415.358l.234 1.587 3.3993-.242.12-1.72a.4196.4196 0 01.378-.3891l3.8954-.376c.012 0 .023-.003.035-.003v-.5071h.002V9.7498h.014c.516-.659.994-1.3531 1.4521-2.0942-.608-1.036-1.3541-1.9611-2.1512-2.8192-.739.372-1.4571.793-2.1352 1.2411-.339-.337-.721-.613-1.096-.901-.369-.296-.7841-.5131-1.1781-.7661.117-.8741.175-1.7342.199-2.6323-1.0171-.512-2.1012-.851-3.1983-1.095-.438.736-.838 1.533-1.1871 2.3121-.414-.069-.829-.094-1.2461-.099h-.016c-.417.005-.832.03-1.2461.099-.349-.779-.749-1.576-1.1881-2.3121l.001-.001zM6.4765 9.9889c1.2971 0 2.3492 1.0511 2.3492 2.3482s-1.052 2.3482-2.3492 2.3482c-1.296 0-2.3482-1.051-2.3482-2.3482 0-1.297 1.0511-2.3482 2.3482-2.3482zm11.049 0c1.296 0 2.3482 1.0511 2.3482 2.3482s-1.0511 2.3482-2.3482 2.3482-2.3492-1.051-2.3492-2.3482c0-1.297 1.051-2.3482 2.3492-2.3482zm-10.824.9301c-.861 0-1.559.698-1.559 1.5591s.698 1.5582 1.559 1.5582c.8611 0 1.5592-.698 1.5592-1.5582 0-.86-.697-1.559-1.5591-1.559zm10.598 0c-.8611 0-1.5582.698-1.5582 1.5591s.697 1.5582 1.5581 1.5582c.8611 0 1.5592-.698 1.5592-1.5582 0-.86-.697-1.559-1.5592-1.559zm-5.2985.453c.417 0 .757.308.757.6871v2.1622c0 .379-.339.687-.757.687s-.756-.308-.756-.687V12.059c0-.379.339-.687.756-.687zM1.4601 16.9464c.002.377.006.789.006.871 0 3.7014 4.6944 5.4795 10.5269 5.5005h.014c5.8325-.02 10.5259-1.7991 10.5259-5.5004 0-.084.005-.495.007-.871l-3.5023.338-.121 1.729a.421.421 0 01-.389.3901l-4.1814.296a.4203.4203 0 01-.415-.358l-.238-1.6141h-3.3863l-.238 1.6141a.4192.4192 0 01-.4451.357l-4.1513-.296c-.208-.015-.375-.181-.389-.389l-.12-1.7292-3.5044-.337z" fill="#478CBF"></path></svg>Godot</span><span style="display:flex;align-items:center;gap:8px;font:600 15px/1 Archivo"><svg aria-label="Aseprite logo" height="22" role="img" style="flex:none" viewbox="0 0 24 24" width="22"><path d="M4.006 0v1.6h15.988V0zm15.988 1.6v1.6h1.6V1.6zm1.6 1.6v14.4h-1.6v1.6H4.006v-1.6h-1.6V3.2H.809v17.6h1.599v1.6h1.599V24h15.988v-1.6h1.6v-1.6h1.598V3.2zm-19.187 0h1.599V1.6h-1.6zm4.796 3.2v6.4h1.6V6.4zm7.995 0v6.4h1.599V6.4z" fill="#9fb3bf"></path></svg>Aseprite</span></div></div>
 <div><div style="font:600 11px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#8b8880;margin-bottom:6px">Year</div><div style="font:600 15px/1.35 Archivo">2025</div></div>
@@ -177,7 +182,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <figcaption style="font:600 12px/1 Archivo;letter-spacing:.05em;text-transform:uppercase;color:#75726e;padding:12px 16px">2 · Eat</figcaption>
 </figure>
 <figure style="margin:0;background:#fff">
-<img width="3024" height="1964" alt="Fairy finds the hidden flower" src="/assets/img/discover-the-hidden-plant.png" srcset="/assets/img/opt/discover-the-hidden-plant-480.webp 480w, /assets/img/opt/discover-the-hidden-plant-800.webp 800w, /assets/img/opt/discover-the-hidden-plant-1200.webp 1200w, /assets/img/opt/discover-the-hidden-plant-1600.webp 1600w, /assets/img/opt/discover-the-hidden-plant-2400.webp 2400w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 100vw, (max-width: 1280px) 34vw, 480px" style="width:100%;display:block;height:auto;aspect-ratio:4/3;object-fit:cover"/>
+<div class="gc-fit m-keep" style="position:relative;width:100%;aspect-ratio:4/3;background:#000;overflow:hidden"><img width="2534" height="1600" alt="Fairy finds the hidden flower" src="/assets/img/discover-the-hidden-plant-4ebf7c9c.png" srcset="/assets/img/opt/discover-the-hidden-plant-4ebf7c9c-480.webp 480w, /assets/img/opt/discover-the-hidden-plant-4ebf7c9c-800.webp 800w, /assets/img/opt/discover-the-hidden-plant-4ebf7c9c-1200.webp 1200w, /assets/img/opt/discover-the-hidden-plant-4ebf7c9c-1600.webp 1600w, /assets/img/opt/discover-the-hidden-plant-4ebf7c9c-2400.webp 2400w" sizes="(max-width: 560px) 111vw, (max-width: 900px) 92vw, (max-width: 1280px) 52vw, 765px" style="position:absolute;left:1.12%;top:10.85%;width:97.72%;height:81.65%;object-fit:cover;display:block;max-width:none"/></div>
 <figcaption style="font:600 12px/1 Archivo;letter-spacing:.05em;text-transform:uppercase;color:#b8232f;padding:12px 16px">3 · Find the different one</figcaption>
 </figure>
 </div>
@@ -235,8 +240,9 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">06</span><span>Play it / read it</span></div>
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">The game and its report</h2>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:640px;margin:0 0 24px;text-wrap:pretty">Gilded Cage is a finished, playable game.</p>
-<div style="display:flex;gap:16px;flex-wrap:wrap">
-<span style="display:inline-block;background:#e5e9fb;color:#122a8f;font:600 14px/1 Archivo;letter-spacing:.02em;padding:16px 28px;border:1px dashed #1b3ac4">Download Gilded Cage — coming soon</span>
+<p class="dl-note" style="display:none;margin:0;background:#e5e9fb;color:#122a8f;font:500 15px/1.5 Archivo;padding:14px 16px">The game file and the full report are available on larger screens — tablet, laptop or desktop.</p>
+<div class="dl-row" style="display:flex;gap:16px;flex-wrap:wrap">
+<a class="gc-play" href="/assets/downloads/gilded-cage.dmg" download="Gilded-Cage.dmg" style="display:inline-block;background:#e5e9fb;color:#122a8f;font:600 14px/1 Archivo;letter-spacing:.02em;padding:16px 28px;border:1px dashed #1b3ac4;text-decoration:none">Download Gilded Cage (macOS) <span aria-hidden="true">↓</span></a>
 <a download="" href="/files/DAT375_ProjectReport.pdf" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.02em;padding:16px 28px;text-decoration:none">Download the full report (PDF)</a>
 </div>
 </section>
