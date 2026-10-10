@@ -27,53 +27,8 @@ body {
 	font-family: 'PixelOperator8', monospace;
 }
 
-/* Black strip above the game (like the black margins around it) holding the "Menu" button, so the
-   button never covers the game picture. The page sizes the canvas to the space below it. */
-#top {
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 40px;
-	display: flex;
-	align-items: center;
-	padding: 0 10px;
-	background: #000;
-	z-index: 1;
-}
-
-#menu {
-	appearance: none;
-	visibility: hidden;
-	height: 26px;
-	padding: 0 12px;
-	border: 2px solid rgba(240, 255, 247, .75);
-	border-radius: 5px;
-	background: transparent;
-	color: #f0fff7;
-	font: 12px/1 'PixelOperator8', monospace;
-	cursor: pointer;
-}
-
-#menu.on {
-	visibility: visible;
-}
-
-#menu:hover, #menu:focus-visible {
-	border-color: #f0fff7;
-	box-shadow: 0 0 6px rgba(250, 250, 250, .25);
-	outline: none;
-}
-
-#menu:active {
-	background: rgba(240, 255, 247, .12);
-}
-
 #canvas {
 	display: block;
-	position: fixed;
-	left: 0;
-	top: 40px;
 }
 
 #canvas:focus {
@@ -166,7 +121,6 @@ body {
 
 	</head>
 	<body>
-		<div id="top"><button type="button" id="menu">Menu</button></div>
 		<canvas id="canvas" tabindex="0" aria-label="Gilded Cage game">
 			Your browser does not support the canvas tag.
 		</canvas>
@@ -192,7 +146,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":0,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":12425828,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":12425188,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -227,27 +181,6 @@ const engine = new Engine(GODOT_CONFIG);
 		document.getElementById('device').style.display = 'flex';
 		return;
 	}
-
-	// Game area = the window below the black strip (canvas resize policy "None": the page sizes it).
-	const TOP = 40;
-	function fit() {
-		const dpr = window.devicePixelRatio || 1;
-		const w = window.innerWidth, h = Math.max(1, window.innerHeight - TOP);
-		canvas.style.width = w + 'px';
-		canvas.style.height = h + 'px';
-		canvas.width = Math.floor(w * dpr);
-		canvas.height = Math.floor(h * dpr);
-	}
-	fit();
-	window.addEventListener('resize', fit);
-
-	// "Menu" button: shown while playing (the game calls gcSetPlaying), goes back to the main menu.
-	const menuBtn = document.getElementById('menu');
-	window.gcSetPlaying = function (on) { menuBtn.classList.toggle('on', !!on); };
-	menuBtn.addEventListener('click', function () {
-		if (window.gcToMenu) window.gcToMenu();
-		canvas.focus();
-	});
 
 	const missing = Engine.getMissingFeatures({ threads: GODOT_THREADS_ENABLED });
 	if (missing.length !== 0) {
