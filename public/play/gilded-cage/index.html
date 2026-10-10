@@ -45,8 +45,25 @@ body {
 	align-items: center;
 	justify-content: center;
 	gap: 14px;
-	background: #1b2a12 url('loading-bg.webp') center / cover no-repeat;
+	background: #000;
+}
+
+/* The menu artwork drawn like the game draws it: the whole picture in a centred 16:9 area, black
+   around it, so the loading screen turns into the game's menu without a jump. */
+#status::before, #device::before {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	width: min(100vw, calc(100vh * 16 / 9));
+	aspect-ratio: 16 / 9;
+	transform: translate(-50%, -50%);
+	background: url('loading-bg.webp') center / 100% 100% no-repeat;
 	image-rendering: pixelated;
+}
+
+#status .panel, #device .panel {
+	position: relative;
 }
 
 .panel {
@@ -105,7 +122,7 @@ body {
 	align-items: center;
 	justify-content: center;
 	padding: 24px;
-	background: #1b2a12 url('loading-bg.webp') center / cover no-repeat;
+	background: #000;
 }
 
 #device a {
