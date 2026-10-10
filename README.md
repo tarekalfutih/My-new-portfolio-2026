@@ -116,8 +116,7 @@ Figma prototype 576×1248 @ 1.2 Mbps (poster at 0:01), working product 480×1040
 so it runs on GitHub Pages without cross-origin-isolation headers). It is built from a private copy of
 the game, kept apart from the team repository: `~/Documents/GitHub/Gilded_cage-web`, branch `web`,
 github.com/tarekalfutih/Gilded-Cage-web (private). The browser version is for laptops and desktops only
-(phones and tablets get a short message instead); it adds a Full screen button to the menus, Exit/Quit go
-back to the case study and Esc returns to the main menu; its WEB.md explains the changes and the export command. After rebuilding, copy the
+(phones and tablets get a short message instead); Exit/Quit go back to the case study and Esc returns to the main menu; its WEB.md explains the changes and the export command. After rebuilding, copy the
 export's files here. The case study's "Play Gilded Cage in your browser" button opens it in a new tab.
 The macOS .dmg stays in assets/downloads/ but is no longer linked (it is not notarized, so macOS blocks it).
 
