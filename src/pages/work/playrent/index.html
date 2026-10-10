@@ -142,19 +142,14 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 @media (max-width:767px){.pr-slide{flex-basis:220px !important}.pr-track{gap:14px !important;padding:0 calc(50% - 110px) !important}.wrap section .pr-car{display:grid !important}.pr-nav{max-width:none !important}}
 @media (prefers-reduced-motion:reduce){.pr-track{scroll-behavior:auto !important}}
 @media (max-width:1024px){
-  .wrap section .pr-vid{width:90vw !important;max-width:90vw !important;margin-left:50% !important;margin-right:0 !important;transform:translateX(-50%);aspect-ratio:auto !important;height:min(82svh,173vw) !important}
-  .wrap section .pr-vid video{width:100% !important;height:100% !important;object-fit:contain !important}
-  /* the demo is landscape with the phone in the middle third: fill the tall frame (only the black sides are trimmed; full screen shows the whole video) */
-  .wrap section .pr-vid>.vc{width:100% !important;height:100% !important}
-  .wrap section .pr-vid .vc:not(:fullscreen)>video{object-fit:cover !important}
+  /* Section 03 video: 72vw wide and centred; frame keeps the video's shape (2382/1654) */
+  .wrap section .pr-vid{width:72vw !important;max-width:none !important;margin:0 auto !important}
+  .wrap section .pr-vid-intro{margin-bottom:28px !important;font-size:17px !important}
   .wrap section .pr-pub{width:min(90vw,calc(90svh * 9 / 19.5)) !important;max-width:none !important;margin:0 auto !important}
   .pr-track{touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
 }
-/* Laptops and desktops: the walkthrough frame always fits the screen height (header bar + some air
-   above and below), never wider than 88% of the column. iPads and phones use the rules above. */
-@media (min-width:1025px){
-  .wrap section .pr-vid{width:min(88%,calc((100svh - 190px) * 4 / 3)) !important}
-}
+/* Section 03 video: the site's video controls wrap the <video>; the wrapper fills the frame. */
+.wrap section .pr-vid>.vc{width:100%;height:100%}
 .wrap section.td-hero2,.wrap section.pr-hero,.wrap section.oc-hero{max-height:1400px}
 
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
@@ -211,12 +206,12 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <p style="font:400 17px/1.6 Archivo;color:#1c1b1a;max-width:680px;margin:0 0 14px;text-wrap:pretty">PlayRent was a home exam for the course Mobile Computing — Design and Implementation at Chalmers. The task was to design a mobile app in Figma by applying Material Design 3 (MD3) principles and components correctly and consistently.</p>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0;text-wrap:pretty">I designed PlayRent, a platform where musicians rent, lend, or trade instruments instead of buying gear they'll only need for a while. The flows cover browsing and searching for an instrument, checking availability, booking it, and publishing an instrument to lend out.</p>
 </section>
-<section class="pad rule" id="action" style="background:#f3f2f2;text-align:center">
+<section class="pad rule" id="action" style="background:#f3f2f2">
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">03</span><span>PlayRent in action</span></div>
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">A walkthrough from browsing to booking</h2>
-<p style="font:400 16px/1.6 Archivo;color:#4a4744;max-width:520px;margin:0 auto 28px;text-wrap:pretty">A walkthrough of the full app, from browsing an instrument to booking it.</p>
-<div class="pr-vid m-keep" style="aspect-ratio:4/3;width:88%;margin:0 auto;position:relative;background:#000;display:flex;align-items:center;justify-content:center">
-<video controls="controls" id="playrent-video" playsinline="playsinline" poster="/assets/video/playrent-walkthrough-poster.webp" src="/assets/video/playrent-demo.mp4" style="width:90%;height:90%;object-fit:contain;display:block">
+<p class="pr-vid-intro" style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:680px;margin:0 0 32px;text-wrap:pretty">A walkthrough of the full app, from browsing an instrument to booking it.</p>
+<div class="pr-vid m-keep" style="aspect-ratio:2382/1654;width:80%;max-width:944px;margin:0;position:relative;background:#fff">
+<video controls="controls" id="playrent-video" playsinline="playsinline" poster="/assets/video/playrent-poster.jpg" src="/assets/video/playrent-demo.mp4" style="width:100%;height:100%;object-fit:contain;display:block">
 
 </video>
 <div style="display:none;position:absolute;inset:0;border:2px dashed #b8b4ae;align-items:center;justify-content:center;padding:24px;background:#ececea">
