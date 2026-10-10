@@ -129,6 +129,14 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 @media (prefers-reduced-motion:reduce){.rb-track{scroll-behavior:auto !important}}
 
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
+/* Walkthrough videos (#midfi, #hifi): the frame has each video's own shape, so the video fills it with
+   no black bars and nothing cropped (object-fit: contain). The shape is measured inside the 2px border.
+   Laptop/desktop: full content width up to 1180px, flush left. iPads: full content width.
+   Phones: edge to edge, side borders off. */
+.rb-vframe{box-sizing:content-box;max-width:1176px;margin:0}  /* 1176 + 2×2px border = 1180px */
+@media (max-width:767px){
+  .wrap section .rb-vframe{width:calc(100% + 40px) !important;max-width:none !important;margin:0 -20px !important;border-left:0 !important;border-right:0 !important}
+}
 </style>
 </head>
 <body>
@@ -263,8 +271,8 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">02</span><span>Mid-fidelity prototype — Figma</span></div>
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Working out the booking logic first</h2>
 <p class="copy-lg" style="margin:0 0 32px">Built to work out the booking logic first: search by room type, equipment, building, date, time and seats — with multiple rooms, multiple dates, system-suggested rooms, and managing bookings. All components in the Figma prototype were created from scratch. The logic starts by asking the user what, where, when.</p>
-<div class="frame" style="aspect-ratio:1920/1134;box-sizing:content-box">
-<video controls="controls" playsinline="playsinline" poster="/assets/video/rb-lofi-walkthrough-poster.webp?v=d45f52ec" src="/assets/video/rb-lofi-walkthrough.mp4?v=f22f670f" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
+<div class="frame rb-vframe" style="aspect-ratio:3024/1786">
+<video controls="controls" playsinline="playsinline" src="/assets/video/rb-lofi-walkthrough.mp4?v=f22f670f" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
 </div>
 <div class="rb-tool" style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><path d="M14 2h6v12h-6a6 6 0 0 1 0-12z" fill="#F24E1E"></path><path d="M20 2h6a6 6 0 0 1 0 12h-6z" fill="#FF7262"></path><path d="M14 14h6v12h-6a6 6 0 0 1 0-12z" fill="#A259FF"></path><circle cx="26" cy="20" fill="#1ABCFE" r="6"></circle><path d="M14 26h6v6a6 6 0 1 1-6-6z" fill="#0ACF83"></path></svg><span>Figma</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span style="font-weight:500;color:#4a4744">Walkthrough — mid-fidelity prototype</span></div>
 </section>
@@ -307,8 +315,8 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">05</span><span>High-fidelity prototype — Claude Design</span></div>
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">From findings to a working interface</h2>
 <p class="copy-lg" style="margin:0 0 32px">Usability Test 1 surfaced both interaction problems and gaps in the booking experience. I used Claude Design to move quickly from those findings to this high-fidelity prototype — directing decisions, reviewing what it produced, and refining it. It includes the design responses above, but has not been tested yet.</p>
-<div class="frame" style="aspect-ratio:1920/1138;box-sizing:content-box">
-<video controls="controls" playsinline="playsinline" poster="/assets/video/rb-hifi-walkthrough-poster.webp?v=ed5a7a75" src="/assets/video/rb-hifi-walkthrough.mp4?v=12ce8e74" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
+<div class="frame rb-vframe" style="aspect-ratio:2976/1764">
+<video controls="controls" playsinline="playsinline" src="/assets/video/rb-hifi-walkthrough.mp4?v=12ce8e74" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video>
 </div>
 <div class="rb-tool" style="display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:12px;margin-bottom:40px;font:600 13px/1.3 Archivo;color:#1c1b1a"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><g stroke="#D97757" stroke-linecap="round" stroke-width="3.2"><line x1="20.0" x2="20.0" y1="17.0" y2="8.0"></line><line x1="21.5" x2="28.0" y1="17.4" y2="6.1"></line><line x1="22.6" x2="31.3" y1="18.5" y2="13.5"></line><line x1="23.0" x2="37.0" y1="20.0" y2="20.0"></line><line x1="22.6" x2="30.4" y1="21.5" y2="26.0"></line><line x1="21.5" x2="27.5" y1="22.6" y2="33.0"></line><line x1="20.0" x2="20.0" y1="23.0" y2="33.0"></line><line x1="18.5" x2="11.5" y1="22.6" y2="34.7"></line><line x1="17.4" x2="9.6" y1="21.5" y2="26.0"></line><line x1="17.0" x2="4.0" y1="20.0" y2="20.0"></line><line x1="17.4" x2="7.9" y1="18.5" y2="13.0"></line><line x1="18.5" x2="12.5" y1="17.4" y2="7.0"></line></g></svg><span>Claude</span><span aria-hidden="true" style="color:#b8b4ae">·</span><span style="font-weight:500;color:#4a4744">Walkthrough — high-fidelity prototype</span></div>
 <div class="rb-car m-keep" data-car="car" data-car-unit="Image" style="container-type:inline-size;display:grid;grid-template-columns:44px minmax(0,1fr) 44px;column-gap:20px;align-items:start;margin:0 -64px">
