@@ -48,17 +48,13 @@ body {
 	background: #000;
 }
 
-/* The menu artwork drawn like the game draws it: the whole picture in a centred 16:9 area, black
-   around it, so the loading screen turns into the game's menu without a jump. */
+/* The menu artwork fills the whole window behind the loading box. loading-bg.webp is the art at 16:9,
+   the shape the game draws it in, so it matches the menu that follows. */
 #status::before, #device::before {
 	content: "";
 	position: absolute;
-	left: 50%;
-	top: 50%;
-	width: min(100vw, calc(100vh * 16 / 9));
-	aspect-ratio: 16 / 9;
-	transform: translate(-50%, -50%);
-	background: url('loading-bg.webp') center / 100% 100% no-repeat;
+	inset: 0;
+	background: #1b2a12 url('loading-bg.webp') center / cover no-repeat;
 	image-rendering: pixelated;
 }
 
