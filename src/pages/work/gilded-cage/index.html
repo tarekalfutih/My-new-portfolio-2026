@@ -79,7 +79,11 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 }
 
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
-/* Browser version of the game (Godot web export in /play/gilded-cage/), playable on computers (keyboard) and phones/tablets (touch buttons). */
+/* Browser version of the game (Godot web export in /play/gilded-cage/): laptops and desktops only
+   (keyboard). Tablets see a short note instead of the Play button; phones see the dl-note. */
+.gc-only-note{display:none;margin:0 0 16px;background:#e5e9fb;color:#122a8f;font:500 15px/1.5 Archivo;padding:14px 16px;max-width:640px}
+@media (max-width:1024px),(hover:none) and (pointer:coarse){.gc-play{display:none !important}.gc-only-note{display:block}}
+@media (max-width:767px){.gc-only-note{display:none !important}}
 .gc-play:hover,.gc-play:focus-visible{background:#1b3ac4 !important;color:#fff !important;border-style:solid !important;text-decoration:none !important}
 .gc-play:active{background:#122a8f !important;color:#fff !important}
 .wrap section .gc-fit{width:100% !important;margin:0 !important}.wrap section .gc-fit img{width:97.72% !important;max-width:none !important}
@@ -215,7 +219,8 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">06</span><span>Play it / read it</span></div>
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">The game and its report</h2>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;max-width:640px;margin:0 0 24px;text-wrap:pretty">Gilded Cage is a finished, playable game.</p>
-<p class="dl-note" style="display:none;margin:0;background:#e5e9fb;color:#122a8f;font:500 15px/1.5 Archivo;padding:14px 16px">The full report (PDF) is available on larger screens — tablet, laptop or desktop.</p>
+<p class="dl-note" style="display:none;margin:0;background:#e5e9fb;color:#122a8f;font:500 15px/1.5 Archivo;padding:14px 16px">Play the game and read the full report on a laptop or desktop.</p>
+<p class="gc-only-note">Play Gilded Cage on a laptop or desktop.</p>
 <div class="dl-row" style="display:flex;gap:16px;flex-wrap:wrap">
 <a class="gc-play" href="/play/gilded-cage/" style="display:inline-block;background:#e5e9fb;color:#122a8f;font:600 14px/1 Archivo;letter-spacing:.02em;padding:16px 28px;border:1px dashed #1b3ac4;text-decoration:none">Play Gilded Cage in your browser <span aria-hidden="true">→</span></a>
 <a download="" href="/files/DAT375_ProjectReport.pdf" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 14px/1 Archivo;letter-spacing:.02em;padding:16px 28px;text-decoration:none">Download the full report (PDF)</a>
