@@ -146,7 +146,7 @@ body {
 
 		<script src="index.js"></script>
 		<script>
-const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":12425188,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":12425252,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
 const GODOT_THREADS_ENABLED = false;
 const engine = new Engine(GODOT_CONFIG);
 
@@ -181,6 +181,19 @@ const engine = new Engine(GODOT_CONFIG);
 		document.getElementById('device').style.display = 'flex';
 		return;
 	}
+
+	// Exit / Quit in the game: back to the case study without leaving the game in the browser history,
+	// so the case study's "← Back" goes to the page before it. Came from the case study: step back.
+	// Opened the game directly: replace this page with the case study.
+	window.gcExit = function () {
+		let fromCaseStudy = false;
+		try {
+			const ref = document.referrer ? new URL(document.referrer) : null;
+			fromCaseStudy = !!ref && ref.origin === location.origin && /\/work\/gilded-cage\/?$/.test(ref.pathname);
+		} catch (e) {}
+		if (fromCaseStudy && history.length > 1) history.back();
+		else location.replace(back);
+	};
 
 	const missing = Engine.getMissingFeatures({ threads: GODOT_THREADS_ENABLED });
 	if (missing.length !== 0) {
