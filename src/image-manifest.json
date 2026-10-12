@@ -1318,18 +1318,22 @@
   "w": 716
  },
  "/assets/img/idx-gilded.webp": {
-  "h": 164,
+  "h": 600,
   "variants": [
    [
     "/assets/img/opt/idx-gilded-480.webp",
     480
    ],
    [
-    "/assets/img/opt/idx-gilded-576.webp",
-    576
+    "/assets/img/opt/idx-gilded-800.webp",
+    800
+   ],
+   [
+    "/assets/img/opt/idx-gilded-847.webp",
+    847
    ]
   ],
-  "w": 576
+  "w": 847
  },
  "/assets/img/idx-helmet.webp": {
   "h": 537,
