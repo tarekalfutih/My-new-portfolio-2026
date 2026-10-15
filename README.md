@@ -120,6 +120,12 @@ github.com/tarekalfutih/Gilded-Cage-web (private). The browser version is for la
 export's files here. The case study's "Play Gilded Cage in your browser" button opens it in a new tab.
 The macOS .dmg stays in assets/downloads/ but is no longer linked (it is not notarized, so macOS blocks it).
 
+**HEVC videos.** Three owner videos are HEVC (H.265), which many Chrome/Firefox setups cannot play
+(they show only the still image): LEGO ALMA final outcome (`IMG_3708 2.mp4`), Touch & Discover and
+Rel-AI-tionship. Each keeps its original file, listed first as `<source … type='video/mp4; codecs="hvc1"'>`,
+followed by an H.264 copy (`*-h264.mp4`, 1280×720, made with tools/encode_video.swift). Browsers that
+can play HEVC use the original; the others skip it and use the copy. Do the same for any new HEVC video.
+
 ## Case-study back link
 
 Home links to case studies with `?from=home` and the Work index links with `?from=work`. With
