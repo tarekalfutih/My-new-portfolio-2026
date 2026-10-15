@@ -123,9 +123,14 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .tm-dots{grid-column:2}.tm-swc .pc-play{grid-column:3}
 }
 @media (prefers-reduced-motion:reduce){.tm-sw{scroll-behavior:auto !important}}
-/* Overview video: on laptops and desktops the whole frame fits on screen below the sticky header
-   (no scrolling to see the top and bottom); it is centred, and its caption lines up with it. */
-@media (min-width:768px){.wrap .tm-vid{width:min(100%, calc((100svh - var(--hdr,110px) - 48px) * 16 / 9));margin-left:auto;margin-right:auto}}
+/* Overview video (16:9, never cropped): the column width, at most 1168px, and never taller than the
+   screen below the sticky header and the "01 · Hero" label, so the whole video and its controls are
+   visible without scrolling. Flush left like the rest of the page; the caption keeps the same width.
+   Phones: edge to edge (the mobile rule above), caption inside the 20px gutter. */
+#hero .tm-video,#hero .tm-cap{width:min(100%, 1168px, calc((100svh - var(--hdr,118px) - 42px) * 16 / 9))}
+#hero .tm-video{aspect-ratio:16/9;margin:0 0 12px 0;background:#000}
+#hero .tm-video video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
+@media (max-width:767px){#hero .tm-cap{width:auto}}
 </style>
 </head>
 <body>
@@ -178,8 +183,8 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </section>
 <section class="pad rule" id="hero">
 <div class="lbl" style="margin-bottom:20px;color:#1b3ac4">01 · Hero</div>
-<div class="gray tm-vid" style="aspect-ratio:16/9;margin-bottom:12px"><video data-gain="8" controls="true" playsinline="true" poster="/assets/video/trailmate-hero.jpg" src="/assets/video/trailmate-hero.mp4" style="width:100%;height:100%;object-fit:contain;display:block;background:#000"></video></div>
-<div class="tm-vid" style="font:400 14px/1.4 Archivo;color:#75726e;margin-bottom:20px">Project overview video explaining the full TrailMate concept, how it works, and the key interactions.</div>
+<div class="tm-video"><video data-gain="8" controls="true" playsinline="true" poster="/assets/video/trailmate-hero.jpg" src="/assets/video/trailmate-hero.mp4"></video></div>
+<div class="tm-cap" style="font:400 14px/1.4 Archivo;color:#75726e;margin-bottom:20px">Project overview video explaining the full TrailMate concept, how it works, and the key interactions.</div>
 <p style="font:400 20px/1.5 Archivo;color:#4a4744;max-width:760px;margin:0;text-wrap:pretty">Solo hiking is often avoided out of fear of harassment, injury, or getting lost — a barrier that falls disproportionately on women and other minority groups. TrailMate is a two-way bracelet system, one for the hiker and one for a trusted partner at home, that keeps both sides quietly aware of each other and lets either one raise an alert.</p>
 </section>
 <section class="pad rule two" id="problem">
