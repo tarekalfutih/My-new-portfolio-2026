@@ -11,7 +11,9 @@
      Same when the browser tab is hidden and shown again. A video the viewer paused stays paused.
    - Only one video plays at a time (no mixed audio); starting another cancels any pending resume.
    - Leaving the page resets every video: coming back (reload, back / forward) starts at 0:00 with
-     the poster showing. */
+     the poster showing.
+   - Sound is on by default. Quiet recordings get a fixed boost (data-gain, in dB) so they play at a
+     normal level without the visitor turning the volume up. */
 (function () {
   if (window.__pfVideo) return;
   window.__pfVideo = true;
@@ -131,6 +133,34 @@
   });
   // Clear positions saved by the previous version of this script.
   try { Object.keys(sessionStorage).forEach(function (k) { if (k.indexOf('pfVideoPos:') === 0) sessionStorage.removeItem(k); }); } catch (_) {}
+
+  // Quiet recordings (data-gain="<dB>" on the <video>): boost the sound while it plays, without touching
+  // the file. The element's own volume and mute still apply before the boost. The audio context can
+  // only start after a click/tap/key, so it is created on the visitor's first press and resumed on each.
+  var actx = null;
+  function boost(v) {
+    var db = parseFloat(v.getAttribute('data-gain'));
+    if (!db || v.__gain) return;
+    try {
+      actx = actx || new (window.AudioContext || window.webkitAudioContext)();
+      var src = actx.createMediaElementSource(v), g = actx.createGain();
+      g.gain.value = Math.pow(10, db / 20);
+      src.connect(g); g.connect(actx.destination);
+      v.__gain = g;
+    } catch (_) { v.__gain = true; }   // not supported: plays at its normal level
+    if (actx && actx.state === 'suspended') actx.resume().catch(function () {});
+  }
+  ['pointerdown', 'keydown'].forEach(function (ev) {
+    document.addEventListener(ev, function (e) {
+      var w = e.target && e.target.closest && e.target.closest('.vc, video');
+      var v = w && (w.tagName === 'VIDEO' ? w : w.querySelector('video'));
+      if (v && v.hasAttribute('data-gain')) boost(v);
+      else if (actx && actx.state === 'suspended') actx.resume().catch(function () {});
+    }, true);
+  });
+  document.addEventListener('play', function (e) {
+    if (e.target && e.target.tagName === 'VIDEO' && e.target.hasAttribute('data-gain')) boost(e.target);
+  }, true);
 
   function start() {
     scan(document.body);
