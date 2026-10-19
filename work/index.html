@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=2f280e74">
+<link rel="stylesheet" href="/assets/css/base.css?v=27ff53e8">
 <script src="/assets/js/video-behavior.js?v=0e0c9364"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Work — Tarek Alfutih</title>
@@ -139,8 +139,6 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   #illustration .ill-meta{color:#e5e9fb !important}
   #illustration .ill-buy{background:#b9a6f0;border-color:#b9a6f0;color:#0b1a5c}
   #illustration .ill-books-lbl{border-top-color:rgba(255,255,255,.3) !important}
-  #illustration .ill-more{color:#7ee0b5 !important}
-  .ill-more{min-height:44px;display:inline-flex !important;align-items:center;font-size:12px !important}
   .ext-d{display:none !important}
 }
 .bk-ctl{display:none}
@@ -189,7 +187,6 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   #illustration .ill-btns>a:last-child{border-color:#ffe9a8 !important;color:#ffe9a8 !important}
   #illustration .ill-btns>a:last-child:hover{background:#ffe9a8 !important;color:#0b1a5c !important}
   #illustration .ill-books-lbl{border-top-color:rgba(255,255,255,.3) !important}
-  #illustration .ill-more{color:#7ee0b5 !important}
   #illustration .m-hide[style*="margin-bottom:32px"]{margin-bottom:0 !important}
 }
 @media (min-width:768px) and (max-width:900px){
@@ -243,6 +240,9 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   .m-cover-link{display:block}
   .ill-buy{display:flex !important}
 }
+/* "Explore my illustration portfolio": mint outline button (18 Oct). */
+.ill-more{display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #7ee0b5;color:#7ee0b5;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.ill-more:hover{background:#7ee0b5;color:#0b1a5c;text-decoration:none}
 </style>
 </head>
 <body>
@@ -303,15 +303,15 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
       <a href="/work/lego-alma/?from=work" class="m-cover-link" aria-label="Master's Thesis — LEGO ALMA case study"></a>
       <div class="idx-lead-img"><a href="/work/lego-alma/?from=work" tabindex="-1" aria-hidden="true" style="display:block;width:100%;height:100%;cursor:pointer"><img width="1290" height="1510" class="slot" src="/assets/img/onsala-observatory.jpg" srcset="/assets/img/opt/onsala-observatory-480.webp 480w, /assets/img/opt/onsala-observatory-800.webp 800w, /assets/img/opt/onsala-observatory-1200.webp 1200w, /assets/img/opt/onsala-observatory-1290.webp 1290w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 38vw, (max-width: 1280px) 29vw, 425px" alt="LEGO ALMA — Onsala Space Observatory" decoding="async" style="object-fit:contain;"></a></div>
       <div class="lead-txt">
-        <span style="display:inline-block;background:#e5e9fb;color:#122a8f;font:600 11px/1 Archivo;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;margin-bottom:14px">Lead project · 5 months</span>
+        <span class="hl-label" style="margin-bottom:14px;align-self:flex-start">Lead project · 5 months</span>
         <h2 style="font:600 28px/1.1 Archivo;letter-spacing:-.02em;margin:0 0 6px">Master's Thesis — LEGO ALMA</h2>
         <div class="lead-meta" style="font:400 13px/1.4 Archivo;color:#75726e;margin:0 0 12px">Onsala Space Observatory · 2026</div>
         <p style="font:400 15px/1.5 Archivo;color:#1c1b1a;margin:0 0 16px;max-width:640px">Made the installation more accessible, engaging, and intuitive for visitors.</p>
-        <div class="lead-tags" style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px">
-          <span style="border:1px solid #122a8f;color:#122a8f;font:600 10px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px">Accessibility</span>
-          <span style="border:1px solid #122a8f;color:#122a8f;font:600 10px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px">Tangible interaction</span>
-          <span style="border:1px solid #122a8f;color:#122a8f;font:600 10px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px">Science communication</span>
-        </div>
+        <ul class="lead-tags kw kw-sm" style="margin-bottom:20px">
+          <li>Accessibility</li>
+          <li>Tangible interaction</li>
+          <li>Science communication</li>
+        </ul>
         <div class="lead-btns" style="display:flex;gap:12px;flex-wrap:wrap">
         <a class="hv1" href="/work/lego-alma/?from=work" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Read the case</a>
         <a class="hv3 thesis-dl" href="/files/LEGO-ALMA-Thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Download thesis (PDF)</a>
@@ -437,8 +437,7 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   <section class="secpad" data-reveal="1" style="padding:48px 56px;border-top:2px solid #1c1b1a;scroll-margin-top:90px" id="illustration" data-car="bk" data-car-unit="Book" data-car-align="start" data-car-anim="bkFill">
     <div class="lbl" style="margin-bottom:14px"><span class="hl-w" style="animation-delay:.1s">Illustration</span> <span class="hl-w" style="animation-delay:.18s">&amp;</span> <span class="hl-w" style="animation-delay:.26s">Visual</span> <span class="hl-w" style="animation-delay:.34s">Storytelling</span></div>
     <div class="hl-line" style="margin-bottom:18px"></div>
-    <p class="ill-intro" style="font:400 15px/1.6 Archivo;color:#3a3835;margin:0 0 14px;max-width:600px;text-wrap:pretty">Alongside interaction design, I've worked professionally as an illustrator since 2008, illustrating <mark style="font-weight:600;color:#1c1b1a;background:linear-gradient(100deg,rgba(255,210,63,0) 0,rgba(255,210,63,.85) 3%,rgba(255,210,63,.7) 96%,rgba(255,210,63,0) 100%) 0 62%/100% 62% no-repeat;padding:0 3px;margin:0 -1px;-webkit-box-decoration-break:clone;box-decoration-break:clone">more than 20 published</mark> children's books and educational materials.</p>
-    <div class="m-hide ill-role" style="margin-bottom:32px;display:flex;align-items:center;gap:12px"><span class="lbl" style="font-size:11px">Role</span><span style="font:700 17px/1 Archivo;letter-spacing:-.01em;color:#1c1b1a">Illustrator</span></div>
+    <p class="ill-intro" style="font:400 15px/1.6 Archivo;color:#3a3835;margin:0 0 32px;max-width:600px;text-wrap:pretty">Alongside interaction design, I've worked professionally as an illustrator since 2008, illustrating <mark style="font-weight:600;color:#1c1b1a;background:linear-gradient(100deg,rgba(255,182,214,0) 0,rgba(255,182,214,.85) 3%,rgba(255,182,214,.7) 96%,rgba(255,182,214,0) 100%) 0 62%/100% 62% no-repeat;padding:0 3px;margin:0 -1px;-webkit-box-decoration-break:clone;box-decoration-break:clone">more than 20 published</mark> children's books and educational materials.</p>
 
     <div class="ill-stage"><span class="ffly" aria-hidden="true" style="position:absolute;left:3%;top:12%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 0.0s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:4%;top:48%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 0.7s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:2%;top:80%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 1.4s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:45%;top:10%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 2.1s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:44%;top:38%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6.5s ease-in-out 2.8s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:46%;top:58%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7.5s ease-in-out 3.5s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:92%;top:8%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8.5s ease-in-out 4.2s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:96%;top:30%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 4.9s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:94%;top:52%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 0.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:97%;top:74%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 1.3s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:20%;top:4%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 2.0s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:60%;top:4%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 2.7s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:78%;top:46%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 3.4s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:70%;top:58%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 4.1s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:30%;top:64%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6.5s ease-in-out 4.8s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:55%;top:64%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7.5s ease-in-out 0.5s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:12%;top:97%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8.5s ease-in-out 1.2s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:38%;top:96%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 1.9s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:64%;top:97%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 2.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:86%;top:95%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 3.3s infinite"></span>
     <div class="ill-hero" data-reveal="1" style="display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center;margin-bottom:40px">
@@ -474,14 +473,17 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
 <button aria-label="Pause slideshow" class="bk-play" data-car-toggle="" style="grid-column:3;justify-self:end;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center" type="button"><span style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .15s"><span data-car-when="playing" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><rect fill="currentColor" height="9" width="2.6" x="2" y="1.5"></rect><rect fill="currentColor" height="9" width="2.6" x="7.4" y="1.5"></rect></svg></span><span data-car-when="paused" hidden="" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"></path></svg></span></span></button>
 </div>
 
-    <a href="https://tarekalfutih.se" target="_blank" class="ill-more" style="display:inline-block;font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f">Explore my illustration portfolio →</a>
+    <a href="https://tarekalfutih.se" target="_blank" rel="noopener" class="ill-more">Explore my illustration portfolio <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
   </main>
 
-  <footer class="ft">
+  <footer class="ft ft-home">
     <span class="ft-copy">© 2026 Tarek Alfutih</span>
+    <nav class="ft-nav" aria-label="Contact">
+      <a href="mailto:tarek.alfutih@hotmail.com">tarek.alfutih@hotmail.com</a>
+    </nav>
   </footer>
 
 </div>

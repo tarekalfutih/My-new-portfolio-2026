@@ -48,7 +48,9 @@
     io.observe(p);
   }
 
-  // Meteor trail following the pointer inside the night-sky sections. Fine pointers only.
+  // Meteor trail following the pointer inside the night-sky sections. Fine pointers only. It never
+  // draws over text: every rendered text line, link and button (padded 4px) is a no-trail zone; the
+  // trail still draws in the empty sky right around them.
   function trailFor(cv) {
     var sec = cv.closest('section');
     if (!sec || reduce || !matchMedia('(pointer: fine)').matches) return;
@@ -57,8 +59,28 @@
       var r = sec.getBoundingClientRect(); dpr = Math.min(devicePixelRatio || 1, 2);
       W = r.width; H = r.height; cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
-    size();
-    if ('ResizeObserver' in window) new ResizeObserver(size).observe(sec);
+    var PAD = 4, zones = [];
+    var mapText = function () {
+      var r = sec.getBoundingClientRect(), out = [], rg = document.createRange();
+      var add = function (b) {
+        if (b.width && b.height) out.push({ l: b.left - r.left - PAD, t: b.top - r.top - PAD, r: b.right - r.left + PAD, b: b.bottom - r.top + PAD });
+      };
+      var tw = document.createTreeWalker(sec, NodeFilter.SHOW_TEXT,
+        { acceptNode: function (n) { return n.textContent.trim() ? NodeFilter.FILTER_ACCEPT : NodeFilter.FILTER_REJECT; } });
+      for (var n = tw.nextNode(); n; n = tw.nextNode()) {
+        rg.selectNodeContents(n);
+        Array.prototype.forEach.call(rg.getClientRects(), add);
+      }
+      sec.querySelectorAll('a,button').forEach(function (el) { add(el.getBoundingClientRect()); });
+      zones = out;
+    };
+    var inText = function (x, y) {
+      return zones.some(function (z) { return x >= z.l && x <= z.r && y >= z.t && y <= z.b; });
+    };
+    size(); mapText();
+    if ('ResizeObserver' in window) new ResizeObserver(function () { size(); mapText(); }).observe(sec);
+    addEventListener('load', mapText);
+    sec.addEventListener('pointerenter', mapText);
     var pts = [], sparks = [], raf = 0, LIFE = 420;
     var draw = function (now) {
       raf = 0; ctx.clearRect(0, 0, W, H);
@@ -88,6 +110,7 @@
     };
     sec.addEventListener('pointermove', function (e) {
       var r = sec.getBoundingClientRect(), x = e.clientX - r.left, y = e.clientY - r.top;
+      if (inText(x, y)) { pts.length = 0; sparks.length = 0; ctx.clearRect(0, 0, W, H); return; }
       pts.push({ x: x, y: y, t: performance.now() });
       var p0 = pts[pts.length - 2];
       if (p0) {

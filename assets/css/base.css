@@ -114,6 +114,19 @@ button { font-family: inherit; }
 .ft-nav a { color: var(--ink); min-height: 44px; display: inline-flex; align-items: center; }
 .ft-nav a:hover { color: var(--cobalt-700); text-decoration: underline; }
 
+/* Component rules (18 Oct). Buttons are the only framed or filled things, and only clickable things
+   are buttons. Keyword = a topic in a list: small navy square + ink text, no frame. Highlight label =
+   context such as a place or role: short navy line + navy caps, no frame. */
+.kw { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 20px; }
+.kw > li { display: inline-flex; align-items: center; gap: 8px; font: 500 15px/1.4 Archivo, sans-serif; color: var(--ink); }
+.kw > li::before { content: ""; width: 6px; height: 6px; flex: none; background: var(--cobalt-700); }
+.kw-sm > li { font-size: 14px; }
+.hl-label {
+  display: inline-flex; align-items: center; gap: 12px;
+  font: 600 13px/1.2 Archivo, sans-serif; letter-spacing: .14em; text-transform: uppercase; color: var(--cobalt-700);
+}
+.hl-label::before { content: ""; width: 28px; height: 2px; flex: none; background: currentColor; }
+
 /* build.py adds each image's width/height (its own shape, reserved before load). Keep the height
    automatic unless a rule sets one; :where() has no specificity, so any page rule still wins. */
 :where(img[width][height]) { height: auto; }
