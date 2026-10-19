@@ -34,6 +34,11 @@ body {
 a { color: var(--cobalt-700); text-decoration: none; }
 a:hover { color: var(--cobalt); text-decoration: underline; }
 button { font-family: inherit; }
+/* Everything clickable shows the hand cursor, site-wide (browsers give buttons, summaries and
+   form controls the arrow by default). Disabled controls keep their own cursor. */
+a[href], button:not(:disabled), summary, label[for], select, [role="button"], [role="option"], [role="tab"],
+input[type="checkbox"], input[type="radio"], input[type="range"], input[type="submit"], input[type="button"],
+video[controls], [data-replay], [data-top], [data-filter] { cursor: pointer; }
 [hidden] { display: none !important; }
 
 /* Visible focus on every interactive element — never the browser default. */
