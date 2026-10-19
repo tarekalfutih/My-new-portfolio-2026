@@ -66,7 +66,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   h1.h1r{font-size:clamp(40px,5.4vw,52px) !important;margin-bottom:20px !important}
   .night-lead{font-size:18px !important;margin-bottom:32px !important}
   .night-loc{margin-bottom:20px !important}
-  .night-loc span:last-child{font-size:11px !important;letter-spacing:.14em !important}
+  .night-loc .loc-link{font-size:11px !important;letter-spacing:.14em !important}
   .night-facts>div>span:last-child{font-size:14px !important}
   .two{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:32px}
   .universeum-row{flex-wrap:nowrap !important}
@@ -140,6 +140,11 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 @media (max-width:767px){.pad p.alma-final-p{font-size:15px !important;line-height:1.55 !important}.obs2-img{margin:0 -20px}.obs2-list{grid-template-columns:minmax(0,1fr) !important}.orig,.flow6{grid-template-columns:minmax(0,1fr) !important;gap:20px !important}.objs{gap:12px !important}.lv-big{margin-left:-20px;margin-right:-20px;max-width:none !important}.lv-r .lv-img{justify-self:stretch !important;width:auto !important;max-width:none !important}}
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
 .hvx1:hover{background:#1c1b1a !important;color:#fff !important}
+/* 19 Oct: external links. In text: cobalt, thin underline. Hero location: light-blue caps, no underline. */
+.ext-link{color:#1b3ac4;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:3px}
+.ext-link:hover{color:#122a8f;text-decoration-thickness:2px}
+.loc-link{font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#a9b6ee;text-decoration:none}
+.loc-link:hover{color:#fff;text-decoration:none}
 </style>
 </head>
 <body>
@@ -170,7 +175,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div aria-hidden="true" style="position:absolute;right:60px;top:50%;width:420px;height:420px;margin-top:-210px;border:1px solid rgba(169,182,238,.28);border-radius:50%"></div>
 <div class="night-grid" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;padding:80px 56px 72px;align-items:center">
 <div class="night-text" style="grid-column:1 / span 6;display:flex;flex-direction:column">
-<div class="night-loc" style="display:flex;align-items:center;gap:10px;margin-bottom:28px"><span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:#a9b6ee;box-shadow:0 0 0 4px rgba(169,182,238,.2)"></span><span style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#a9b6ee">Onsala Space Observatory · Onsala, Sweden</span></div>
+<div class="night-loc" style="display:flex;align-items:center;gap:10px;margin-bottom:28px"><span aria-hidden="true" style="width:8px;height:8px;border-radius:50%;background:#a9b6ee;box-shadow:0 0 0 4px rgba(169,182,238,.2)"></span><a class="loc-link" href="https://www.chalmers.se/en/research/infrastructure/oso/" target="_blank" rel="noopener">Onsala Space Observatory · Onsala, Sweden <span aria-hidden="true">↗</span></a></div>
 <h1 class="h1r" style="font:700 64px/1 Archivo;letter-spacing:-.045em;margin:0 0 28px;color:#fff;text-wrap:balance">Master's Thesis — LEGO ALMA</h1>
 <p class="night-lead" style="font:500 22px/1.45 Archivo;margin:0 0 48px;max-width:480px;color:#fff;text-wrap:pretty">Made the installation more accessible, engaging, and intuitive for visitors.</p>
 <div class="night-facts" style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border-top:1px solid rgba(169,182,238,.45)">
@@ -190,7 +195,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div>
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#b3200b"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#ec3013;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">01</span><span>Problem &amp; brief</span></div>
 <h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">An installation that needed a guide</h2>
-<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 14px;text-wrap:pretty">LEGO ALMA is a LEGO model of the ALMA radio telescope at Onsala Space Observatory, built to demonstrate radio interferometry. Its original design relied on a guide standing beside it to explain the unintuitive on-screen graphs, so visitors exploring on their own — especially the 12–18 age group the center wanted to reach — struggled to understand what it was showing or what to do.</p>
+<p style="font:400 17px/1.6 Archivo;color:#1c1b1a;margin:0 0 14px;text-wrap:pretty">LEGO ALMA is a LEGO model of the ALMA radio telescope at Onsala Space Observatory, built to demonstrate <a class="ext-link" href="https://en.wikipedia.org/wiki/Astronomical_interferometer" target="_blank" rel="noopener">radio interferometry</a>. Its original design relied on a guide standing beside it to explain the unintuitive on-screen graphs, so visitors exploring on their own — especially the 12–18 age group the center wanted to reach — struggled to understand what it was showing or what to do.</p>
 <p style="font:400 17px/1.6 Archivo;color:#4a4744;margin:0 0 14px;text-wrap:pretty">The brief: redesign the installation so a broader, unsupervised audience could use it on its own, without losing the complexity of what it teaches.</p>
 <div class="rq" style="background:#e5e9fb;padding:20px 24px 22px;margin-top:6px;display:flex;flex-direction:column;gap:10px">
 <div class="lbl" style="font-size:11px;color:#122a8f;display:flex;align-items:center;gap:8px"><span aria-hidden="true" style="width:6px;height:6px;background:#1b3ac4"></span>Research question</div>
@@ -347,7 +352,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </div>
 <div style="margin-bottom:0">
 <div class="lbl" style="font-size:12px;color:#a9b6ee;margin-bottom:12px;padding-top:24px;border-top:1px solid #2a2a28">Final outcome</div>
-<h3 style="font:700 22px/1.25 Archivo;letter-spacing:-.01em;color:#fff;margin:0 0 8px">The installation in action</h3>
+<h3 style="font:700 22px/1.25 Archivo;letter-spacing:-.01em;color:#fff;margin:0 0 8px">Video: The installation in action</h3>
 <p class="alma-final-p" style="font:400 15px/1.55 Archivo;color:#d6d4d0;max-width:760px;margin:0 0 16px">A demonstration recorded after completing the thesis, showing me interacting with the redesigned LEGO ALMA installation.</p>
 <div class="cs-vid" style="background:#000;aspect-ratio:16/9;max-width:1100px;display:flex;align-items:center;justify-content:center;border:1px solid #2a2a28">
 <video data-gain="18" aria-label="Video: final outcome — a visitor using the completed LEGO ALMA installation" controls="controls" playsinline="playsinline" poster="/assets/video/alma-final-outcome-2-poster.webp" preload="metadata" style="width:100%;height:100%;display:block;object-fit:contain">
@@ -360,7 +365,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </section>
 <section class="pad rule" id="idle">
 <div class="lbl sec-lbl" style="display:flex;align-items:center;gap:12px;margin:0 0 14px;font:600 12px/1.3 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#122a8f"><span class="sec-n" style="flex:none;width:26px;height:26px;border-radius:50%;background:#1b3ac4;color:#fff;font:700 12px/1 Archivo;letter-spacing:0;display:inline-flex;align-items:center;justify-content:center">07</span><span>Idle / attract mode</span></div>
-<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Introducing the ALMA radio telescope</h2>
+<h2 style="font:700 26px/1.25 Archivo;letter-spacing:-.01em;margin:0 0 14px;text-wrap:pretty;color:#201e1d">Video: Introducing the ALMA radio telescope</h2>
 <p style="font:400 14px/1.6 Archivo;color:#75726e;margin:0 0 16px;max-width:760px">A video that plays on the installation’s screen when not in use, introducing the ALMA radio telescope and encouraging visitors to explore the installation.</p>
 <div class="cs-vid" style="background:#000;aspect-ratio:640/360;max-width:1100px">
 <video aria-label="Video: idle / attract mode loop shown when nobody is using the installation" controls="controls" loop="loop" playsinline="playsinline" poster="/assets/video/alma-idle-loop-poster.webp" preload="metadata" src="/assets/video/alma-idle-loop.mp4" style="width:100%;height:100%;display:block;object-fit:contain"></video>
@@ -382,7 +387,6 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   <div class="btt"><a href="#" data-top="1">↑ Back to Top</a></div>
   </main>
 
-  <!--@footer-->
 </div>
 <!--@scripts-->
 <script src="/assets/js/pages/lego-alma.js" defer></script>
