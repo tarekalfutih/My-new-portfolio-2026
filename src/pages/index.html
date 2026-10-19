@@ -243,7 +243,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .m-in .lead-text>*,.m-in .feat-txt>*{animation:mUp .6s cubic-bezier(.2,.7,.3,1) .75s forwards}
   .m-in .lead-text>*:nth-child(2),.m-in .feat-txt>*:nth-child(1){animation-delay:.9s}
   .short-head{margin-bottom:20px !important}
-  .see-all{min-height:48px !important;margin-top:28px !important;font-size:13px !important}
+  .see-all{min-height:48px !important;margin-top:28px !important;padding:0 16px !important;font-size:13px !important}
   .short-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:20px 12px !important}
   .sc-thumb{height:auto !important;aspect-ratio:4/3;margin-bottom:8px !important}
   .short-grid h3{font-size:14px !important;margin-bottom:3px !important}
@@ -287,10 +287,20 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .hero-grid{align-items:center !important}
   .footnote{padding:96px 56px 104px !important}
 }
-/* "See all projects": full-width bar link under the short cases (18 Oct). */
-.see-all{display:flex;align-items:center;justify-content:space-between;gap:16px;box-sizing:border-box;min-height:56px;margin-top:40px;padding:0 20px;background:#e5e9fb;border:2px solid #a9b6ee;color:#122a8f;font:600 15px/1.2 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
-.see-all:hover{background:#a9b6ee;border-color:#a9b6ee;color:#0b1a5c;text-decoration:none}
-.see-all:active{background:#122a8f;border-color:#122a8f;color:#fff}
+/* "See all projects": full-width button under the short cases (19 Oct). A small wave runs through the
+   letters and ends on the arrow every 3s while the button is in view (home.js adds .sa-go); it stops
+   on hover/focus and for reduced motion. */
+.see-all{display:flex;align-items:center;justify-content:space-between;gap:16px;box-sizing:border-box;min-height:56px;margin-top:40px;padding:0 24px;overflow:hidden;background:#fff;border:2px solid #101112;color:#101112;font:600 15px/1.2 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.see-all:hover{background:#101112;border-color:#101112;color:#fff;text-decoration:none}
+.see-all:active{background:#2a2a28;border-color:#2a2a28;color:#fff}
+.see-all:focus-visible{outline:2px solid #1b3ac4;outline-offset:2px}
+.see-all .sa-l{display:inline-flex;gap:.45em}.see-all .sa-w{display:inline-flex}
+.see-all i{font-style:normal;display:inline-block}.see-all .sa-ar{display:inline-block;font-size:20px;line-height:1}
+.see-all.sa-go i{animation:saWave 3s ease-in-out infinite both;animation-delay:calc(var(--i)*.045s)}
+.see-all.sa-go .sa-ar{animation:saWave 3s ease-in-out infinite both;animation-delay:.68s}
+@keyframes saWave{0%,32%,100%{transform:none}10%{transform:translateY(-6px)}20%{transform:none}}
+.see-all:hover *,.see-all:focus-visible *{animation:none !important}
+@media (prefers-reduced-motion:reduce){.see-all *{animation:none !important}}
 </style>
 </head>
 <body>
@@ -460,7 +470,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
         </a>
       </article>
     </div>
-    <a class="see-all" href="/work/">See all projects <span aria-hidden="true">→</span></a>
+    <a class="see-all" href="/work/" aria-label="See all projects"><span class="sa-l" aria-hidden="true"><span class="sa-w"><i style="--i:0">S</i><i style="--i:1">e</i><i style="--i:2">e</i></span><span class="sa-w"><i style="--i:3">a</i><i style="--i:4">l</i><i style="--i:5">l</i></span><span class="sa-w"><i style="--i:6">p</i><i style="--i:7">r</i><i style="--i:8">o</i><i style="--i:9">j</i><i style="--i:10">e</i><i style="--i:11">c</i><i style="--i:12">t</i><i style="--i:13">s</i></span></span><span class="sa-ar" aria-hidden="true">→</span></a>
   </section>
 
   <section class="footnote" data-reveal-lead="1" style="position:relative;overflow:hidden;padding:120px 56px 140px;border-top:2px solid #1c1b1a;background:#0b1a5c url(/assets/img/forest-bg.jpg) center 70%/cover no-repeat;color:#fff">
