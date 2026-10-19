@@ -321,3 +321,13 @@
   }, { threshold: 0.2 });
   els.forEach(function (el) { el.classList.add('m-arm'); io.observe(el); });
 })();
+
+/* "See all projects": the letter wave runs (every 3s, forever) only while the button is at least 90%
+   in view, so it pauses off-screen. Hover/focus and reduced motion stop it in CSS. */
+(function () {
+  var sa = document.querySelector('.see-all');
+  if (!sa || !('IntersectionObserver' in window)) return;
+  new IntersectionObserver(function (es) {
+    es.forEach(function (e) { sa.classList.toggle('sa-go', e.isIntersecting); });
+  }, { threshold: 0.9 }).observe(sa);
+})();
