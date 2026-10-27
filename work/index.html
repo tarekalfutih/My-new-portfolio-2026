@@ -15,6 +15,7 @@
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Work — Tarek Alfutih</title>
 <meta name="description" content="Selected work: product &amp; app UX, tangible &amp; installation, critical &amp; speculative, and game design.">
+<link rel="stylesheet" href="/assets/css/illustration.css?v=ea541ac6">
 <style>
 @media (min-width:1281px) and (max-width:1679px){
   html,body{background:#fff !important}
@@ -52,17 +53,10 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 @media (max-width:560px){
   .grid3{grid-template-columns:1fr !important}
 }
-@media (max-width:900px){
-  .ill-hero{grid-template-columns:1fr !important}
-}
 @media (min-width:768px) and (max-width:900px){
   .lead-row{display:grid !important;grid-template-columns:minmax(0,5fr) minmax(0,7fr) !important;gap:32px !important;align-items:center !important}
   .grid3{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:20px !important}
   .grid3:has(>article:nth-child(4)),.grid3:has(>article:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr)) !important}
-  .ill-hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr) !important;gap:32px !important}
-}
-@media (max-width:560px){
-  .ill-books{flex-wrap:wrap !important}
 }
 @media (min-width:768px) and (max-width:819px){
   .thesis-dl{display:none !important}
@@ -72,7 +66,6 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   .lead-txt>span:first-child{margin-bottom:10px !important}
 }
 @media (min-width:768px) and (max-width:900px), (min-width:901px) and (max-width:1100px) and (orientation:portrait){
-  .ill-books{width:100% !important}
   .filters>.wf-chip{flex:1 1 auto}
 }
 @media (min-width:768px) and (max-width:900px){
@@ -81,13 +74,6 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 @media (min-width:901px) and (max-width:1100px) and (orientation:portrait){
   .grid3:has(>article:nth-child(4)),.grid3:has(>article:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr)) !important}
 }
-@keyframes ffly{0%,100%{opacity:0;transform:translate(0,0)}20%{opacity:.9}50%{opacity:.35;transform:translate(14px,-18px)}80%{opacity:.85}}
-.ffly{pointer-events:none;z-index:0 !important}
-@media (prefers-reduced-motion:reduce){
-  .ffly{animation:none !important;opacity:.6 !important}
-}
-.ffly{width:7px !important;height:7px !important;background:#fff3c4 !important;box-shadow:0 0 18px 6px rgba(255,220,130,.75),0 0 4px 1px #fff !important}
-@keyframes illoShine{from{background-position:0% 50%}to{background-position:300% 50%}}
 @media (max-width:767px){
   .m-hide{display:none !important}
   .secpad{padding:28px 20px !important}
@@ -116,52 +102,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   .grid3 article>a::after{inset:0}
   .grid3 article a>div:first-child{font-size:17px !important;margin-bottom:3px !important}
   .grid3 article a>div:last-child{font-size:13px !important}
-  .ill-intro{font-size:14px !important;margin:0 0 20px !important}
-  .ill-hero{position:relative;display:block !important;margin-bottom:12px !important}
-  .ill-cover{position:relative;width:calc(100% + 40px);margin:0 -20px}
-  .ill-hero-txt{display:flex;flex-direction:column;padding-top:14px}
-  .ill-hero-txt .lbl{margin-bottom:6px !important}
-  .ill-hero-txt h3{font-size:22px !important;margin:0 0 4px !important}
-  .ill-hero-txt .ill-meta{font-size:12px !important;margin:0 !important}
-  .ill-btns{display:none !important}
-  .ill-buy{display:flex !important;align-items:center;justify-content:space-between;min-height:46px;padding:0 16px;border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;margin-bottom:28px}
-  .ill-books-lbl{padding-top:20px !important;margin-bottom:12px !important}
-  .ill-books{display:flex !important;gap:8px !important;width:100% !important;margin-bottom:16px !important}
-  .ill-books>div>div:not(.gray){display:none !important}
-  .ill-books .gray{margin-bottom:0 !important}
-  #illustration{position:relative;overflow:hidden;background:#0b1a5c url(/assets/img/forest-bg.jpg) center 70%/cover no-repeat !important;color:#fff}
-  #illustration::before{content:"";position:absolute;inset:0;background:rgba(11,26,92,.74);pointer-events:none}
-  #illustration>*{position:relative;z-index:1}
-  #illustration .lbl{color:#e5e9fb !important}
-  #illustration .hl-line{background:#a9b6ee !important}
-  #illustration .ill-intro{color:#e5e9fb !important}
-  #illustration .ill-hero-txt h3{background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent !important;animation:illoShine 8s linear infinite;width:fit-content}
-  #illustration .ill-meta{color:#e5e9fb !important}
-  #illustration .ill-buy{background:#b9a6f0;border-color:#b9a6f0;color:#0b1a5c}
-  #illustration .ill-books-lbl{border-top-color:rgba(255,255,255,.3) !important}
   .ext-d{display:none !important}
-}
-.bk-ctl{display:none}
-@keyframes bkFill{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-.bk-dot:not([aria-current="true"]):hover>span{background:#fff !important}
-.bk-dot:focus-visible,.bk-play:focus-visible,#illustration .ill-books:focus-visible{outline:2px solid #fff;outline-offset:-4px}
-.bk-play:hover>span{background:rgba(255,255,255,.3) !important}
-@media (min-width:901px){
-  #illustration .ill-books{width:100% !important}
-}
-@media (max-width:900px){
-  #illustration .ill-books{--bh:220px;display:flex !important;flex-wrap:nowrap !important;gap:24px !important;width:100vw !important;margin:0 0 0 calc(50% - 50vw) !important;--bx:24px;padding:6px calc(100vw - var(--bx) - var(--bh) * .7305) 24px var(--bx) !important;scroll-padding-left:var(--bx);box-sizing:border-box;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;scrollbar-width:none;align-items:flex-start !important;touch-action:pan-x pan-y;scroll-behavior:smooth}
-  #illustration .ill-books::-webkit-scrollbar{display:none}
-  #illustration .ill-books>div{flex:0 0 var(--bh) !important;scroll-snap-align:start;scroll-snap-stop:always}
-  #illustration .ill-books>div.bk-pt{flex-basis:calc(var(--bh) * .7305) !important}
-  .bk-ctl{display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;margin:0 0 24px}
-}
-@media (max-width:767px){
-  #illustration .ill-books{--bh:min(40vw,150px);--bx:0px;gap:16px !important;padding-bottom:16px !important}
-  .bk-ctl{margin-bottom:16px}
-}
-@media (prefers-reduced-motion:reduce){
-  #illustration .ill-books{scroll-behavior:auto}
 }
 @media (max-width:767px) and (max-height:860px){
   .wrap main>section:first-of-type.secpad{padding:18px 20px 16px !important}
@@ -171,38 +112,12 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   .wrap main>section:has(.lead-row)>.lbl{margin-bottom:8px !important}
   .wrap main>section:has(.lead-row)>.hl-line{margin-bottom:12px !important}
 }
-@media (min-width:768px){
-  #illustration{--ipx:56px;--ipb:48px;padding-bottom:0 !important;background:#e5e9fb}
-  #illustration>.lbl,#illustration>.m-hide .lbl{color:#4a4744 !important}
-  #illustration .ill-stage{position:relative;overflow:hidden;margin:32px calc(-1 * var(--ipx)) 0;padding:56px var(--ipx) 56px;background:#0b1a5c url(/assets/img/forest-bg.jpg) center 70%/cover no-repeat;color:#fff;border-top:2px solid #1c1b1a}
-  #illustration .ill-stage::before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,92,.62) 0%,rgba(11,26,92,.74) 50%,rgba(11,26,92,.84) 100%);pointer-events:none}
-  #illustration .ill-stage>*{position:relative;z-index:1}
-  #illustration .ill-stage .lbl,#illustration .ill-meta,#illustration .ill-stage p,#illustration .ill-books>div>div:not(.gray){color:#e5e9fb !important}
-  #illustration .ill-books>div>div:not(.gray):nth-child(2){color:#fff !important}
-  #illustration .ill-hero-txt>div:not(.lbl):not(.ill-meta):not(.ill-btns){color:#7ee0b5 !important}
-  #illustration .ill-hero-txt h3{background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent !important;animation:illoShine 8s linear infinite;width:fit-content}
-  #illustration .ill-cover,#illustration .ill-books .gray{box-shadow:0 18px 44px rgba(0,0,0,.45)}
-  #illustration .ill-btns>a:first-child{background:#b9a6f0 !important;color:#0b1a5c !important}
-  #illustration .ill-btns>a:first-child:hover{background:#d2c6f7 !important}
-  #illustration .ill-btns>a:last-child{border-color:#ffe9a8 !important;color:#ffe9a8 !important}
-  #illustration .ill-btns>a:last-child:hover{background:#ffe9a8 !important;color:#0b1a5c !important}
-  #illustration .ill-books-lbl{border-top-color:rgba(255,255,255,.3) !important}
-  #illustration .m-hide[style*="margin-bottom:32px"]{margin-bottom:0 !important}
-}
-@media (min-width:768px) and (max-width:900px){
-  #illustration{--ipx:24px}
-  .ill-hero{grid-template-columns:280px minmax(0,1fr) !important;gap:32px !important}
-}
-@media (prefers-reduced-motion:reduce){
-  #illustration .ill-hero-txt h3{animation:none !important}
-}
 html body .wrap .lbl.lbl{font-size:max(12px,1em)}
 html body .wrap :is([style*=" 10px"],[style*=" 11px"],[style*="font-size:10px"],[style*="font-size:11px"]):not([aria-hidden]){font-size:12px !important}
 html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],[style*="font-size:13px"]):not(.lbl):not([aria-hidden]):not([style*="uppercase"]){font-size:14px !important}
 @media (max-width:767px){
   html body .wrap .grid3 article a>div:last-child{font-size:14px !important}
-  html body .wrap .lead-txt .lead-meta,html body .wrap .ill-hero-txt .ill-meta{font-size:14px !important}
-  html body .wrap .ill-intro{font-size:15px !important}
+  html body .wrap .lead-txt .lead-meta{font-size:14px !important}
   html body .wrap .filters{padding:14px 20px !important;position:relative;z-index:3}
   html body .wrap .filters>.wf-chip{display:none !important}
 }
@@ -214,7 +129,6 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
 .wf-chip{font:600 12px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;cursor:pointer;background:#fff;color:#1c1b1a;border:1px solid #1c1b1a;border-radius:0;position:relative}
 .wf-chip::before{content:"";position:absolute;inset:-9px 0}
 .wf-chip[aria-pressed="true"]{background:#1b3ac4;color:#fff;border:none;padding:7px 12px}
-.f-sel,.m-cover-link,.ill-buy{display:none}
 @media (max-width:819px){.thesis-dl{display:none !important}}
 @media (max-width:767px){
   .wf-chip{display:none !important}
@@ -236,13 +150,8 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   .f-sel-mark{width:8px;height:8px;flex:none;background:transparent}
   .f-sel-list>button[aria-selected="true"] .f-sel-mark{background:#1b3ac4}
   html body .wrap .filters.is-in{transform:none !important}
-  .wrap .ill-hero .ill-cover{width:min(320px,86vw) !important;margin:0 !important}
   .m-cover-link{display:block}
-  .ill-buy{display:flex !important}
 }
-/* "Explore my illustration portfolio": mint outline button (18 Oct). */
-.ill-more{display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #7ee0b5;color:#7ee0b5;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
-.ill-more:hover{background:#7ee0b5;color:#0b1a5c;text-decoration:none}
 </style>
 </head>
 <body>
@@ -434,46 +343,23 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   </section>
   </div>
 
-  <section class="secpad" data-reveal="1" style="padding:48px 56px;border-top:2px solid #1c1b1a;scroll-margin-top:90px" id="illustration" data-car="bk" data-car-unit="Book" data-car-align="start" data-car-anim="bkFill">
-    <div class="lbl" style="margin-bottom:14px"><span class="hl-w" style="animation-delay:.1s">Illustration</span> <span class="hl-w" style="animation-delay:.18s">&amp;</span> <span class="hl-w" style="animation-delay:.26s">Visual</span> <span class="hl-w" style="animation-delay:.34s">Storytelling</span></div>
-    <div class="hl-line" style="margin-bottom:18px"></div>
-    <p class="ill-intro" style="font:400 15px/1.6 Archivo;color:#3a3835;margin:0 0 32px;max-width:600px;text-wrap:pretty">Alongside interaction design, I've worked professionally as an illustrator since 2008, illustrating <mark style="font-weight:600;color:#1c1b1a;background:linear-gradient(100deg,rgba(255,182,214,0) 0,rgba(255,182,214,.85) 3%,rgba(255,182,214,.7) 96%,rgba(255,182,214,0) 100%) 0 62%/100% 62% no-repeat;padding:0 3px;margin:0 -1px;-webkit-box-decoration-break:clone;box-decoration-break:clone">more than 20 published</mark> children's books and educational materials.</p>
-
-    <div class="ill-stage"><span class="ffly" aria-hidden="true" style="position:absolute;left:3%;top:12%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 0.0s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:4%;top:48%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 0.7s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:2%;top:80%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 1.4s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:45%;top:10%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 2.1s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:44%;top:38%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6.5s ease-in-out 2.8s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:46%;top:58%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7.5s ease-in-out 3.5s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:92%;top:8%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8.5s ease-in-out 4.2s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:96%;top:30%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 4.9s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:94%;top:52%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 0.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:97%;top:74%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 1.3s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:20%;top:4%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 2.0s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:60%;top:4%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 2.7s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:78%;top:46%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 3.4s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:70%;top:58%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 4.1s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:30%;top:64%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6.5s ease-in-out 4.8s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:55%;top:64%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7.5s ease-in-out 0.5s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:12%;top:97%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8.5s ease-in-out 1.2s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:38%;top:96%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 1.9s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:64%;top:97%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 2.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:86%;top:95%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 3.3s infinite"></span>
-    <div class="ill-hero" data-reveal="1" style="display:grid;grid-template-columns:1fr 1.3fr;gap:40px;align-items:center;margin-bottom:40px">
-      <a href="/illustration/?from=work" class="m-cover-link" aria-label="Skräphjältarna — read more"></a>
-      <div class="gray ill-cover" style="aspect-ratio:1/1"><a href="/illustration/?from=work" aria-label="Skräphjältarna — read more" style="display:block;width:100%;height:100%;cursor:pointer"><img width="1254" height="1254" class="slot" src="/assets/img/skraphjaltarna-cover.jpg" srcset="/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /assets/img/opt/skraphjaltarna-cover-800.webp 800w, /assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 38vw, (max-width: 1280px) 38vw, 560px" alt="Skräphjältarna" loading="lazy" decoding="async" style="object-fit:contain;"></a></div>
-      <div class="ill-hero-txt">
-        <div class="lbl" style="font-size:11px;margin-bottom:8px">Latest publication</div>
-        <h3 style="font:600 26px/1.15 Archivo;letter-spacing:-.02em;margin:0 0 4px">Skräphjältarna</h3>
-        <div class="ill-meta" style="font:400 14px/1.4 Archivo;color:#75726e;margin-bottom:16px">2023 · Olika Förlag</div>
-        <div class="m-hide" style="font:600 13px/1 Archivo;letter-spacing:.04em;text-transform:uppercase;color:#122a8f;margin-bottom:16px">6,000+ copies sold</div>
-        <p class="m-hide" style="font:400 16px/1.55 Archivo;color:#3a3835;margin:0 0 8px;max-width:480px;text-wrap:pretty">An illustrated picture book that encourages children to discover recycling through playful characters who turn old things into something new.</p>
-        <p class="m-hide" style="font:400 13px/1.4 Archivo;color:#75726e;margin:0 0 20px;max-width:480px;text-wrap:pretty">Created in collaboration with Rinkeby-Kista district administration in Stockholm.</p>
-        <div class="ill-btns" style="display:flex;flex-wrap:wrap;gap:10px">
-          <a class="hv2" href="https://olika.nu/products/skraphjaltarna" target="_blank" rel="noopener" style="position:relative;background:#1b3ac4;color:#fff;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 18px;text-decoration:none">Buy the book<span class="ext-d" aria-hidden="true" style="margin-left:8px">↗</span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap"> (opens in new tab)</span></a>
-          <a class="hv3" href="/illustration/?from=work" style="border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Read more</a>
+  <!-- Illustration section, shared by Home and Work (27 Oct handoff). Styles: assets/css/illustration.css. -->
+<section class="footnote" id="illustration" data-reveal="1" style="scroll-margin-top:90px;position:relative;overflow:hidden;padding:120px 56px 140px;border-top:2px solid #1c1b1a;background:#0b1a5c url(/assets/img/forest-bg.jpg) center 70%/cover no-repeat;color:#fff">
+    <div aria-hidden="true" class="illo-shade" style="position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,92,.15) 0%,rgba(11,26,92,.55) 55%,rgba(11,26,92,.8) 100%)"></div><span class="ffly" aria-hidden="true" style="position:absolute;left:18%;top:62%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 0s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:27%;top:70%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 1.4s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:41%;top:58%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 2.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:55%;top:74%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 0.8s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:63%;top:64%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 3.1s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:72%;top:69%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 1.9s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:84%;top:60%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 8s ease-in-out 0.3s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:90%;top:72%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 9s ease-in-out 2.2s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:35%;top:78%;width:4px;height:4px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 6s ease-in-out 3.6s infinite"></span><span class="ffly" aria-hidden="true" style="position:absolute;left:48%;top:66%;width:5px;height:5px;border-radius:50%;background:#ffe9a8;box-shadow:0 0 10px 3px rgba(255,220,130,.55);opacity:0;animation:ffly 7s ease-in-out 4.2s infinite"></span><div class="illo-grid" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center">
+      <div class="illo-cover" style="grid-column:2 / span 4;background:#ececea;box-shadow:0 24px 60px rgba(0,0,0,.45);aspect-ratio:1/1;overflow:hidden">
+        <a class="illo-link" href="/illustration/?from=work" aria-label="Skräphjältarna — read more" style="display:block;width:100%;height:100%;cursor:pointer"><img width="1254" height="1254" class="slot" src="/assets/img/skraphjaltarna-cover.jpg" srcset="/assets/img/opt/skraphjaltarna-cover-480.webp 480w, /assets/img/opt/skraphjaltarna-cover-800.webp 800w, /assets/img/opt/skraphjaltarna-cover-1200.webp 1200w, /assets/img/opt/skraphjaltarna-cover-1254.webp 1254w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 38vw, (max-width: 1280px) 38vw, 560px" alt="Skräphjältarna" loading="lazy" decoding="async" style="height:100%;object-fit:cover;width:100%;display:block"></a>
+      </div>
+      <div class="illo-text" style="grid-column:7 / span 5;display:flex;flex-direction:column">
+        <div aria-hidden="true" style="display:flex;gap:6px;margin:0 0 20px"><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #f26b3a"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #4cb867"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #ffd23f"></span><span style="width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid #a9b6ee"></span></div><h3 style="color:#fff;font:600 34px/1.1 Archivo;letter-spacing:-.025em;margin:0 0 16px;text-wrap:balance"><a class="illo-link" href="/illustration/?from=work" style="color:inherit;text-decoration:none"><span class="illo-shine" style="background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite">Illustration<span class="m-hide"> &amp; Visual Storytelling</span></span></a></h3>
+        <p style="font:400 17px/1.6 Archivo;color:#e5e9fb;margin:0 0 4px;max-width:460px;text-wrap:pretty"><span class="m-hide">Alongside interaction design, I've illustrated 20+ children's books.</span><span class="m-inl">20+ children's books.</span></p>
+        <div class="illo-latest" style="display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;max-width:460px;margin:0 0 32px">
+          <span style="font:400 17px/1.5 Archivo;color:#e5e9fb;text-wrap:pretty">Personal Favourite: <strong style="font-weight:700;color:#fff">Skräphjältarna</strong>, 2023<br><strong style="font-weight:700;color:#7ee0b5">6,000+ copies sold.</strong></span>
+        </div>
+        <div class="illo-btns" style="display:flex;gap:12px;flex-wrap:wrap">
+          <a class="hv5" href="/illustration/?from=work" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #b9a6f0;background:#b9a6f0;color:#0b1a5c;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none">Read about Skräphjältarna <span aria-hidden="true">→</span></a>
+          <a class="hv6" href="https://tarekalfutih.se" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;min-height:44px;box-sizing:border-box;padding:0 20px;border:2px solid #7ee0b5;color:#7ee0b5;font:600 14px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none"><span>View Illustration Portfolio</span> <span aria-hidden="true">↗</span></a>
         </div>
       </div>
-    </div>
-
-    <a href="/illustration/?from=work" class="ill-buy">Read more <span aria-hidden="true">→</span></a>
-    <div class="lbl ill-books-lbl" style="font-size:11px;margin-bottom:16px;border-top:1px solid #dcd9d4;padding-top:24px">Selected children's books</div>
-    <div class="ill-books" data-reveal="1" data-car-track tabindex="0" role="region" aria-roledescription="carousel" aria-label="Selected children's books" style="display:flex;gap:20px;align-items:start;margin-bottom:32px;width:56.25%">
-      <div aria-label="1 of 4" style="flex:1 1 0;min-width:0"><div class="gray" style="aspect-ratio:1/1;width:100%;margin-bottom:8px"><img width="2400" height="2400" class="slot" src="/assets/img/wicky-crocodile.jpg" srcset="/assets/img/opt/wicky-crocodile-480.webp 480w, /assets/img/opt/wicky-crocodile-800.webp 800w, /assets/img/opt/wicky-crocodile-1200.webp 1200w, /assets/img/opt/wicky-crocodile-1600.webp 1600w, /assets/img/opt/wicky-crocodile-2400.webp 2400w" sizes="(max-width: 560px) 52vw, (max-width: 900px) 29vw, (max-width: 1280px) 25vw, 367px" alt="Wicky Crocodile" loading="lazy" decoding="async" style="object-fit:contain;"></div><div style="font:600 13px/1.3 Archivo">Wicky Crocodile</div><div style="font:400 12px/1.3 Archivo;color:#75726e">2012</div></div>
-      <div aria-label="2 of 4" style="flex:1 1 0;min-width:0"><div class="gray" style="aspect-ratio:1/1;width:100%;margin-bottom:8px"><img width="2400" height="2400" class="slot" src="/assets/img/the-happy-rabbit.jpg" srcset="/assets/img/opt/the-happy-rabbit-480.webp 480w, /assets/img/opt/the-happy-rabbit-800.webp 800w, /assets/img/opt/the-happy-rabbit-1200.webp 1200w, /assets/img/opt/the-happy-rabbit-1600.webp 1600w, /assets/img/opt/the-happy-rabbit-2400.webp 2400w" sizes="(max-width: 560px) 52vw, (max-width: 900px) 29vw, (max-width: 1280px) 25vw, 367px" alt="The Happy Rabbit" loading="lazy" decoding="async" style="object-fit:contain;"></div><div style="font:600 13px/1.3 Archivo">The Happy Rabbit</div><div style="font:400 12px/1.3 Archivo;color:#75726e">2014</div></div>
-      <div class="bk-pt" aria-label="3 of 4" style="flex:0.7305 1 0;min-width:0"><div class="gray" style="aspect-ratio:2362/3233;width:100%;margin-bottom:8px"><img width="2362" height="3233" class="slot" src="/assets/img/kalila-and-dimna-part-one.jpg" srcset="/assets/img/opt/kalila-and-dimna-part-one-480.webp 480w, /assets/img/opt/kalila-and-dimna-part-one-800.webp 800w, /assets/img/opt/kalila-and-dimna-part-one-1200.webp 1200w, /assets/img/opt/kalila-and-dimna-part-one-1600.webp 1600w, /assets/img/opt/kalila-and-dimna-part-one-2362.webp 2362w" sizes="(max-width: 560px) 38vw, (max-width: 900px) 21vw, (max-width: 1280px) 18vw, 268px" alt="Kalila and Dimna — Part I" loading="lazy" decoding="async" style="object-fit:contain;"></div><div style="font:600 13px/1.3 Archivo">Kalila and Dimna — Part I</div><div style="font:400 12px/1.3 Archivo;color:#75726e">2015</div></div>
-      <div class="bk-pt" aria-label="4 of 4" style="flex:0.7305 1 0;min-width:0"><div class="gray" style="aspect-ratio:2362/3233;width:100%;margin-bottom:8px"><img width="2362" height="3233" class="slot" src="/assets/img/kalila-and-dimna-part-two.jpg" srcset="/assets/img/opt/kalila-and-dimna-part-two-480.webp 480w, /assets/img/opt/kalila-and-dimna-part-two-800.webp 800w, /assets/img/opt/kalila-and-dimna-part-two-1200.webp 1200w, /assets/img/opt/kalila-and-dimna-part-two-1600.webp 1600w, /assets/img/opt/kalila-and-dimna-part-two-2362.webp 2362w" sizes="(max-width: 560px) 38vw, (max-width: 900px) 21vw, (max-width: 1280px) 18vw, 268px" alt="Kalila and Dimna — Part II" loading="lazy" decoding="async" style="object-fit:contain;"></div><div style="font:600 13px/1.3 Archivo">Kalila and Dimna — Part II</div><div style="font:400 12px/1.3 Archivo;color:#75726e">2015</div></div>
-    </div>
-    <div class="bk-ctl">
-<div aria-label="Choose a book" data-car-dots="" role="group" style="grid-column:2;display:flex;justify-content:center;align-items:center;position:relative">
-<template data-car-dot=""><button aria-current="%cur%" aria-label="%label%" class="bk-dot" style="height:44px;min-width:22px;padding:0 4px;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center" type="button"><span style="display:block;width:%w%;height:%h%;border-radius:4px;background:rgba(229,233,251,.55);overflow:hidden;transition:width .3s ease,height .3s ease"><span data-car-fill="" style="display:block;width:100%;height:100%;background:#fff;transform-origin:left center;animation:%anim%;animation-play-state:%ps%"></span></span></button></template>
-<span aria-live="polite" data-car-count="" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></span>
-</div>
-<button aria-label="Pause slideshow" class="bk-play" data-car-toggle="" style="grid-column:3;justify-self:end;width:44px;height:44px;padding:0;border:0;background:transparent;cursor:pointer;display:flex;align-items:center;justify-content:center" type="button"><span style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;display:flex;align-items:center;justify-content:center;transition:background .15s"><span data-car-when="playing" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><rect fill="currentColor" height="9" width="2.6" x="2" y="1.5"></rect><rect fill="currentColor" height="9" width="2.6" x="7.4" y="1.5"></rect></svg></span><span data-car-when="paused" hidden="" style="display:contents"><svg aria-hidden="true" height="12" viewbox="0 0 12 12" width="12"><path d="M3 1.5v9l7.5-4.5z" fill="currentColor"></path></svg></span></span></button>
-</div>
-
-    <a href="https://tarekalfutih.se" target="_blank" rel="noopener" class="ill-more">Explore my illustration portfolio <span aria-hidden="true">↗</span></a>
     </div>
   </section>
 
@@ -489,7 +375,6 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
 </div>
 <script src="/assets/js/video-controls.js?v=da35a813" defer></script>
 <script src="/assets/js/site.js?v=969609fd" defer></script>
-<script src="/assets/js/carousel.js?v=3d5d9896" defer></script>
 <script src="/assets/js/work.js?v=0f51601e" defer></script>
 </body>
 </html>
