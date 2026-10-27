@@ -270,6 +270,10 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 @keyframes saWave{0%,32%,100%{transform:none}10%{transform:translateY(-6px)}20%{transform:none}}
 .see-all:hover *,.see-all:focus-visible *{animation:none !important}
 @media (prefers-reduced-motion:reduce){.see-all *{animation:none !important}}
+/* Short cases on iPads (27 Oct responsive refresh): 2 per row. */
+@media (min-width:768px) and (max-width:1024px){
+  .short-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:32px 24px !important}
+}
 </style>
 </head>
 <body>

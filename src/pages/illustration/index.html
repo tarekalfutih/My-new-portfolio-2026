@@ -55,6 +55,22 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
 .hvx1:hover{background:#d2c6f7 !important;color:#0b1a5c !important}
 .hvx2:hover{background:#ffe9a8 !important;color:#0b1a5c !important}
+/* Skräphjältarna hero layout v2 (27 Oct) */
+@media (min-width:768px) and (max-width:1024px){
+  .ih-bt{display:grid !important;grid-template-columns:max-content;justify-content:start;gap:10px !important}
+  .ih-bt a{display:flex;justify-content:space-between;align-items:center;gap:24px}
+}
+@media (max-width:767px){
+  .ih-in{padding:36px 20px 44px !important;gap:18px !important}
+  .ih-ln{display:none !important}
+  .ih-lb{font-size:12px !important;letter-spacing:.1em !important;white-space:nowrap}
+  .ih h1{font-size:clamp(40px,11.5vw,52px) !important}
+  .ih-cv{justify-content:flex-start !important;margin-top:8px !important}
+  .ih-cv>div{width:min(100%,320px) !important}
+  .ih-bt{display:grid !important;grid-template-columns:minmax(0,1fr);justify-content:stretch !important;gap:10px !important;margin-top:12px !important}
+  .ih-bt a{display:flex !important;justify-content:space-between;align-items:center;min-height:48px !important;box-sizing:border-box;font-size:13px !important;padding:0 18px !important}
+  .ih-bt .ext-d{display:inline !important}
+}
 </style>
 </head>
 <body>
