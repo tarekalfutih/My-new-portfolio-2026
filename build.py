@@ -145,6 +145,9 @@ def render(text, route='/'):
     text = re.sub(r'<!--@head (\S+)-->',
                   lambda m: partial('head').replace('{{url}}', SITE_URL + m.group(1)), text)
     text = re.sub(r'<!--@header (\w+)-->', lambda m: header(m.group(1)), text)
+    # data-ref for reference/check.js (IMPLEMENT-EXACTLY-ILLUSTRATION); harmless in production
+    if route == '/illustration/':
+        text = text.replace('<header class="hd"', '<header data-ref="sk-header" class="hd"', 1)
     text = text.replace('<!--@case-bar-->', case_bar())
     text = text.replace('<!--@footer email-->', partial('footer').replace('class="ft"', 'class="ft ft-home"')
                         .replace('{{extra}}', '\n    ' + partial('footer-email')))
