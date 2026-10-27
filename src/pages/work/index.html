@@ -97,9 +97,9 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   .wrap main>section:first-of-type.secpad{padding:18px 20px 16px !important}
   .wi-h1{font-size:26px !important}
   .filters{padding:10px 20px !important}
-  .wrap main>section.secpad:has(.lead-row){padding-top:18px !important}
-  .wrap main>section:has(.lead-row)>.lbl{margin-bottom:8px !important}
-  .wrap main>section:has(.lead-row)>.hl-line{margin-bottom:12px !important}
+  .wrap main section.secpad:has(.lead-row){padding-top:18px !important}
+  .wrap main section:has(.lead-row)>.lbl{margin-bottom:8px !important}
+  .wrap main section:has(.lead-row)>.hl-line{margin-bottom:12px !important}
 }
 html body .wrap .lbl.lbl{font-size:max(12px,1em)}
 html body .wrap :is([style*=" 10px"],[style*=" 11px"],[style*="font-size:10px"],[style*="font-size:11px"]):not([aria-hidden]){font-size:12px !important}
@@ -118,6 +118,7 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
 .wf-chip{font:600 12px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;cursor:pointer;background:#fff;color:#1c1b1a;border:1px solid #1c1b1a;border-radius:0;position:relative}
 .wf-chip::before{content:"";position:absolute;inset:-9px 0}
 .wf-chip[aria-pressed="true"]{background:#1b3ac4;color:#fff;border:none;padding:7px 12px}
+.f-sel,.m-cover-link{display:none}
 @media (max-width:819px){.thesis-dl{display:none !important}}
 @media (max-width:767px){
   .wf-chip{display:none !important}
@@ -196,7 +197,7 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
         </ul>
         <div class="lead-btns" style="display:flex;gap:12px;flex-wrap:wrap">
         <a class="hv1" href="/work/lego-alma/?from=work" style="display:inline-block;background:#1b3ac4;color:#fff;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:13px 20px;text-decoration:none">Read the case</a>
-        <a class="hv3 thesis-dl" href="/files/LEGO-ALMA-Thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Download thesis (PDF)</a>
+        <a class="hv3 thesis-dl" href="/files/LEGO-ALMA-Thesis.pdf" download="LEGO-ALMA-Thesis.pdf" style="display:inline-block;border:2px solid #1c1b1a;color:#1c1b1a;font:600 13px/1 Archivo;letter-spacing:.06em;text-transform:uppercase;padding:11px 18px;text-decoration:none">Download full thesis (PDF)</a>
         </div>
       </div>
     </div>
