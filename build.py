@@ -128,6 +128,19 @@ def with_base(text):
     return text
 
 
+# Illustration section (shared by Home and Work): per page link source, section attributes, extra style.
+ILLUSTRATION = {
+    'home': ('home', ' data-reveal-lead="1"', ''),
+    'work': ('work', ' id="illustration" data-reveal="1"', 'scroll-margin-top:90px;'),
+}
+
+
+def illustration(key):
+    src, attrs, style = ILLUSTRATION[key]
+    return (partial('illustration').replace('{{from}}', src)
+            .replace('{{attrs}}', attrs).replace('{{style}}', style))
+
+
 def render(text, route='/'):
     text = re.sub(r'<!--@head (\S+)-->',
                   lambda m: partial('head').replace('{{url}}', SITE_URL + m.group(1)), text)
@@ -137,6 +150,7 @@ def render(text, route='/'):
                         .replace('{{extra}}', '\n    ' + partial('footer-email')))
     text = text.replace('<!--@footer-->', partial('footer').replace('{{extra}}', ''))
     text = text.replace('<!--@scripts-->', partial('scripts'))
+    text = re.sub(r'<!--@illustration (\w+)-->', lambda m: illustration(m.group(1)), text)
     text = responsive_images(text, route)
     text = cache_bust(text)
     text = with_base(text)
