@@ -15,6 +15,13 @@
   .illo-cover,.illo-text{grid-column:1 / -1 !important}
   .illo-cover{max-width:320px}
 }
+/* Tablets 768–900px (27 Oct, as in Portfolio Home.dc.html): cover beside the text, not stacked. */
+@media (min-width:768px) and (max-width:900px){
+  .footnote{padding:80px 24px 88px !important}
+  .illo-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;gap:24px !important;align-items:center !important}
+  .illo-cover{grid-column:1 / span 5 !important;max-width:none !important}
+  .illo-text{grid-column:6 / span 7 !important}
+}
 @media (max-width:767px){
   .footnote .m-hide{display:none !important}
   .footnote .m-inl{display:inline !important}
