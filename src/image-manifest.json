@@ -266,56 +266,6 @@
   ],
   "w": 646
  },
- "/assets/img/alma-universeum-1.webp": {
-  "h": 436,
-  "variants": [
-   [
-    "/assets/img/opt/alma-universeum-1-327.webp",
-    327
-   ]
-  ],
-  "w": 327
- },
- "/assets/img/alma-universeum-2.webp": {
-  "h": 630,
-  "variants": [
-   [
-    "/assets/img/opt/alma-universeum-2-473.webp",
-    473
-   ]
-  ],
-  "w": 473
- },
- "/assets/img/alma-universeum-3.webp": {
-  "h": 630,
-  "variants": [
-   [
-    "/assets/img/opt/alma-universeum-3-473.webp",
-    473
-   ]
-  ],
-  "w": 473
- },
- "/assets/img/alma-universeum-4.webp": {
-  "h": 340,
-  "variants": [
-   [
-    "/assets/img/opt/alma-universeum-4-255.webp",
-    255
-   ]
-  ],
-  "w": 255
- },
- "/assets/img/alma-universeum-5.webp": {
-  "h": 340,
-  "variants": [
-   [
-    "/assets/img/opt/alma-universeum-5-255.webp",
-    255
-   ]
-  ],
-  "w": 255
- },
  "/assets/img/before-design-1.jpg": {
   "h": 1080,
   "variants": [
@@ -591,32 +541,6 @@
    ]
   ],
   "w": 2534
- },
- "/assets/img/discover-the-hidden-plant-no-preview.png": {
-  "h": 1964,
-  "variants": [
-   [
-    "/assets/img/opt/discover-the-hidden-plant-no-preview-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/discover-the-hidden-plant-no-preview-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/discover-the-hidden-plant-no-preview-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/discover-the-hidden-plant-no-preview-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/discover-the-hidden-plant-no-preview-2400.webp",
-    2400
-   ]
-  ],
-  "w": 3024
  },
  "/assets/img/discover-the-hidden-plant.png": {
   "h": 1964,
@@ -1725,28 +1649,6 @@
   ],
   "w": 1236
  },
- "/assets/img/playrent-home.png": {
-  "h": 2751,
-  "variants": [
-   [
-    "/assets/img/opt/playrent-home-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/playrent-home-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/playrent-home-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/playrent-home-1236.webp",
-    1236
-   ]
-  ],
-  "w": 1236
- },
  "/assets/img/playrent-item-book.png": {
   "h": 2751,
   "variants": [
@@ -1791,16 +1693,6 @@
   ],
   "w": 1236
  },
- "/assets/img/playrent-item-open.webp": {
-  "h": 424,
-  "variants": [
-   [
-    "/assets/img/opt/playrent-item-open-190.webp",
-    190
-   ]
-  ],
-  "w": 190
- },
  "/assets/img/playrent-item.png": {
   "h": 2751,
   "variants": [
@@ -1822,16 +1714,6 @@
    ]
   ],
   "w": 1236
- },
- "/assets/img/playrent-item.webp": {
-  "h": 560,
-  "variants": [
-   [
-    "/assets/img/opt/playrent-item-252.webp",
-    252
-   ]
-  ],
-  "w": 252
  },
  "/assets/img/playrent-login.png": {
   "h": 2751,
@@ -2197,28 +2079,6 @@
   ],
   "w": 757
  },
- "/assets/img/rb-index-cover.jpg": {
-  "h": 1024,
-  "variants": [
-   [
-    "/assets/img/opt/rb-index-cover-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/rb-index-cover-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/rb-index-cover-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/rb-index-cover-1536.webp",
-    1536
-   ]
-  ],
-  "w": 1536
- },
  "/assets/img/rb-new-available-now.png": {
   "h": 1964,
   "variants": [
@@ -2583,28 +2443,6 @@
    ]
   ],
   "w": 1480
- },
- "/assets/img/signalling-helmet-cover.jpg": {
-  "h": 1086,
-  "variants": [
-   [
-    "/assets/img/opt/signalling-helmet-cover-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/signalling-helmet-cover-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/signalling-helmet-cover-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/signalling-helmet-cover-1448.webp",
-    1448
-   ]
-  ],
-  "w": 1448
  },
  "/assets/img/sketch.jpg": {
   "h": 2861,
@@ -3255,24 +3093,6 @@
    ],
    [
     "/assets/img/opt/trailmate-idle-white-1130.webp",
-    1130
-   ]
-  ],
-  "w": 1130
- },
- "/assets/img/trailmate-idle.jpg": {
-  "h": 1130,
-  "variants": [
-   [
-    "/assets/img/opt/trailmate-idle-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/trailmate-idle-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/trailmate-idle-1130.webp",
     1130
    ]
   ],
