@@ -128,17 +128,16 @@ def with_base(text):
     return text
 
 
-# Illustration section (shared by Home and Work): per page link source, section attributes, extra style.
+# Illustration section (shared by Home and Work): per page link source and section attributes.
 ILLUSTRATION = {
-    'home': ('home', ' data-reveal-lead="1"', ''),
-    'work': ('work', ' id="illustration" data-reveal="1"', 'scroll-margin-top:90px;'),
+    'home': ('home', ' data-page="home" data-reveal-lead="1"'),
+    'work': ('work', ' data-page="work" id="illustration" data-reveal="1" style="scroll-margin-top:90px"'),
 }
 
 
 def illustration(key):
-    src, attrs, style = ILLUSTRATION[key]
-    return (partial('illustration').replace('{{from}}', src)
-            .replace('{{attrs}}', attrs).replace('{{style}}', style))
+    src, attrs = ILLUSTRATION[key]
+    return partial('illustration').replace('{{from}}', src).replace('{{attrs}}', attrs)
 
 
 def render(text, route='/'):

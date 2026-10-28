@@ -1,96 +1,119 @@
-/* Illustration section, shared by Home and Work. Markup: src/partials/illustration.html
-   (<!--@illustration home--> / <!--@illustration work-->). Values copied 1:1 from
-   reference/illustration-section.html; only the hover class names differ (illo-link/hv5/hv6 for
-   the reference's hv1/hv2/hv3, which already mean other hovers on Home and Work).
-   Fireflies come from assets/js/fireflies.js (data-fireflies / data-ff-avoid on the section). */
-/* ===== Shared illustration section — values copied 1:1 from the design ===== */
-/* Base text as on the reference page (browser default 16px/normal; the site body is 15px/1.55). */
-.footnote{font-size:16px;line-height:normal}
+/* Markup: src/partials/illustration.html (<!--@illustration home--> / <!--@illustration work-->).
+   Copied from the 28 Oct handoff (design_handoff_illustration_sections/code/illustration-section.css). */
+/* =====================================================================
+   "Illustration & Visual Storytelling" section — Home + Work
+   FINAL (28 Oct 2026). Replaces every older .footnote / .illo-* rule.
+   No !important needed: delete the old rules and inline styles first.
+   Breakpoints: phones ≤767 · iPad mini 768–900 · iPad Pro 901–1024 · laptop/desktop ≥1025
+   ===================================================================== */
+
+.illo{position:relative;overflow:hidden;box-sizing:border-box;border-top:2px solid #1c1b1a;background:#0b1a5c url(/assets/img/forest-bg.jpg) center 70%/cover no-repeat;color:#fff;font-family:Archivo,sans-serif}
+.illo *{box-sizing:border-box}
+.illo-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,26,92,.15) 0%,rgba(11,26,92,.55) 55%,rgba(11,26,92,.8) 100%);pointer-events:none}
+.illo-grid{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:center}
+
+/* cover (square, colour image, zero radius) */
+.illo-cover{aspect-ratio:1/1;background:#ececea;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.illo-cover a{display:block;width:100%;height:100%}
+.illo-cover img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* text column */
+.illo-text{display:flex;flex-direction:column;align-items:flex-start;min-width:0}
+.illo-tri{display:flex;gap:8px}
+.illo-tri span{width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid}
+.illo-tri span:nth-child(1){border-top-color:#f26b3a}
+.illo-tri span:nth-child(2){border-top-color:#4cb867}
+.illo-tri span:nth-child(3){border-top-color:#ffd23f}
+.illo-tri span:nth-child(4){border-top-color:#a9b6ee}
+.illo-title{margin:0;font-weight:600;line-height:1.1;letter-spacing:-.025em;text-wrap:balance}
+.illo-title a{color:inherit;text-decoration:none}
+.illo-shine{background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite}
 @keyframes illoShine{from{background-position:0% 50%}to{background-position:300% 50%}}
-@media (prefers-reduced-motion:reduce){.illo-shine{animation:none !important}}
-@media (min-width:901px) and (max-width:1100px) and (orientation:portrait){.footnote{padding:96px 56px 104px !important}}
-@media (max-width:900px){
-  .footnote{padding:56px 24px 64px !important}
-  .illo-grid{grid-template-columns:1fr !important;gap:32px !important}
-  .illo-cover,.illo-text{grid-column:1 / -1 !important}
-  .illo-cover{max-width:320px}
+.illo-p,.illo-latest{margin:0;font-weight:400;color:#e5e9fb;max-width:460px;text-wrap:pretty}
+.illo-latest strong{font-weight:700;color:#fff}
+.illo-latest strong.illo-mint{color:#7ee0b5}
+
+/* buttons: stacked, equal width (= widest label), label flush left, arrow right */
+.illo-btns{display:grid;grid-template-columns:max-content;justify-content:start;gap:12px}
+.illo-btn{display:flex;align-items:center;justify-content:space-between;border:2px solid;font-family:Archivo,sans-serif;font-weight:600;line-height:1;text-transform:uppercase;letter-spacing:.08em;text-decoration:none;border-radius:0}
+.illo-btn--primary{background:#b9a6f0;border-color:#b9a6f0;color:#0b1a5c}
+.illo-btn--primary:hover,.illo-btn--primary:active{background:#d2c6f7;border-color:#d2c6f7;color:#0b1a5c}
+.illo-btn--secondary{background:transparent;border-color:#7ee0b5;color:#7ee0b5}
+.illo-btn--secondary:hover,.illo-btn--secondary:active{background:#7ee0b5;border-color:#7ee0b5;color:#0b1a5c}
+.illo-btn:focus-visible{outline:2px solid #1b3ac4;outline-offset:2px}
+
+/* ---------- Laptop / Desktop ≥1025 ---------- */
+@media (min-width:1025px){
+  .illo{padding:clamp(72px,6.3vw,120px) 56px clamp(96px,9.3vw,170px)}
+  .illo-cover{grid-column:2 / span 4}
+  .illo-text{grid-column:7 / span 6}
+  .illo-tri{margin-bottom:24px}
+  .illo-title{font-size:clamp(28px,2.4vw,34px);margin-bottom:20px}   /* one line */
+  .illo-p,.illo-latest{font-size:17px;line-height:1.6}
+  .illo-latest{margin-bottom:40px}
+  .illo-btn{min-height:48px;padding:0 24px;gap:32px;font-size:14px}
 }
-@media (max-width:767px){
-  .footnote .m-hide{display:none !important}
-  .footnote .m-inl{display:inline !important}
-  .footnote{padding:40px 20px !important}
-  .illo-shade{background:rgba(11,26,92,.72) !important}
-  .illo-grid{grid-template-columns:120px minmax(0,1fr) !important;gap:20px !important;align-items:center !important}
-  .illo-cover{grid-column:1 !important;grid-row:1 !important;width:100% !important;max-width:none !important;margin:0 !important;box-shadow:0 10px 24px rgba(0,0,0,.4) !important}
-  .illo-text{grid-column:2 !important;grid-row:1 !important;display:flex !important;flex-direction:column !important;min-width:0}
-  .illo-text>div[aria-hidden]{display:none !important}
-  .illo-text h3{font-size:24px !important;line-height:1.1 !important;margin:0 0 4px !important}
-  .illo-text p{font-size:15px !important;line-height:1.4 !important;margin:0 !important}
-  .illo-latest{margin:2px 0 4px !important}
-  .illo-latest>span{font-size:15px !important;line-height:1.4 !important}
-  .illo-btns{flex-direction:column !important;gap:0 !important;margin-top:4px !important;padding-top:0}
-  .illo-btns a{min-height:44px !important;padding:0 !important;border:0 !important;background:transparent !important;justify-content:flex-start !important;gap:6px !important;font-size:12px !important;letter-spacing:.06em !important}
-  .illo-btns a:first-child{display:none !important}
-  .illo-btns a:last-child{color:#7ee0b5 !important}
-  .illo-btns a:hover,.illo-btns a:active{background:transparent !important;border:0 !important;color:#7ee0b5 !important;text-decoration:underline !important;text-underline-offset:4px}
-}
-.illo-link:hover{color:inherit !important;text-decoration:none !important}
-.hv5:hover{background:#d2c6f7 !important;border-color:#d2c6f7 !important;color:#0b1a5c !important;text-decoration:none !important}
-.hv6:hover{background:#7ee0b5 !important;color:#0b1a5c !important;text-decoration:none !important}
-/* Illustration section layout v2 (27 Oct, responsive refresh) — same on Home + Work */
-.illo-text{grid-column:7 / span 6 !important}
-.illo-btns{display:grid !important;grid-template-columns:max-content;justify-content:start;gap:12px !important}
-.illo-btns a{justify-content:space-between !important;gap:24px !important}
+
+/* ---------- iPads 768–1024 (shared) ---------- */
 @media (min-width:768px) and (max-width:1024px){
-  .footnote{padding:64px 40px 72px !important}
-  .illo-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;gap:24px !important;align-items:center !important}
-  .illo-cover{grid-column:2 / span 4 !important;max-width:none !important}
-  .illo-text{grid-column:7 / span 6 !important}
-  .illo-text>div[aria-hidden]{margin-bottom:16px !important}
-  .illo-text h3{font-size:28px !important;margin-bottom:12px !important}
-  .illo-text p,.illo-latest>span{font-size:16px !important;line-height:1.5 !important}
-  .illo-latest{margin-bottom:24px !important}
-  .illo-btns{gap:8px !important}
-  .illo-btns a{min-height:44px !important;font-size:12px !important}
+  .illo-cover{grid-column:1 / span 5}
+  .illo-title{font-size:clamp(24px,2.6vw,28px)}
+  .illo-p,.illo-latest{font-size:16px;line-height:1.5}
+  .illo-btn{min-height:44px;font-size:13px}
 }
+
+/* ---------- iPad Pro 901–1024: text + buttons one group, centred on the cover (like laptop) ---------- */
+@media (min-width:901px) and (max-width:1024px){
+  .illo{padding:72px 56px 96px}
+  .illo-text{grid-column:7 / span 6}
+  .illo-tri{margin-bottom:20px}
+  .illo-title{margin-bottom:16px}
+  .illo-latest{margin-bottom:32px}
+  .illo-btn{padding:0 20px;gap:24px}
+}
+
+/* ---------- iPad mini 768–900: text block = exactly the cover height ---------- */
+/* triangles top = cover top, buttons bottom = cover bottom */
 @media (min-width:768px) and (max-width:900px){
-  .footnote{padding:44px 32px 48px !important}
-  .illo-grid{grid-template-rows:1fr auto auto auto auto 1fr auto !important;gap:0 24px !important;align-items:start !important}
-  .illo-cover{grid-column:1 / span 5 !important;grid-row:1 / span 6 !important}
-  .illo-text{display:contents !important}
-  .illo-text>div[aria-hidden]{grid-column:6 / span 7;grid-row:2;margin-bottom:12px !important}
-  .illo-text>div[aria-hidden] span{border-left-width:8px !important;border-right-width:8px !important;border-top-width:13px !important}
-  .illo-text h3{grid-column:6 / span 7;grid-row:3;font-size:24px !important;line-height:1.15 !important;margin:0 0 10px !important}
-  .illo-text p{grid-column:6 / span 7;grid-row:4;font-size:16px !important;line-height:1.5 !important;margin:0 0 4px !important}
-  .illo-latest{grid-column:6 / span 7;grid-row:5;margin:0 !important}
-  .illo-latest>span{font-size:16px !important;line-height:1.5 !important}
-  .illo-btns{grid-column:1 / -1;grid-row:7;grid-template-columns:repeat(12,minmax(0,1fr)) !important;justify-content:stretch;gap:24px !important;margin-top:24px !important}
-  .illo-btns a:first-child{grid-column:1 / span 5}
-  .illo-btns a:last-child{grid-column:6 / span 7}
-  .illo-btns a{min-height:48px !important;padding:0 16px !important;font-size:12px !important;gap:16px !important}
+  .illo{padding:56px 24px 72px}
+  .illo-grid{align-items:stretch}
+  .illo-cover{align-self:start}
+  .illo-text{grid-column:6 / span 7}
+  .illo-tri{margin-bottom:14px}
+  .illo-title{margin-bottom:12px}
+  .illo-latest{margin-bottom:16px}
+  .illo-btns{margin-top:auto}
+  .illo-btn{padding:0 16px;gap:16px}
 }
+
+/* ---------- Phones ≤767: title → sentence → big cover → latest → buttons ---------- */
 @media (max-width:767px){
-  .footnote{padding:40px 20px 44px !important}
-  .illo-grid{grid-template-columns:minmax(0,1fr) !important;gap:0 !important;align-items:start !important}
-  .illo-cover{grid-column:1 !important;grid-row:auto !important;width:100% !important;max-width:360px !important;margin:0 0 24px !important}
-  .illo-text{grid-column:1 !important;grid-row:auto !important;display:flex !important;flex-direction:column !important}
-  .illo-text>div[aria-hidden]{display:none !important}
-  .illo-text .m-hide{display:inline !important}.illo-text .m-inl{display:none !important}
-  .illo-text h3{font-size:26px !important;line-height:1.15 !important;margin:0 0 10px !important}
-  .illo-text p{font-size:16px !important;line-height:1.45 !important;margin:0 !important}
-  .illo-latest{margin:0 0 20px !important}
-  .illo-latest>span{font-size:16px !important;line-height:1.45 !important}
-  .illo-btns{grid-template-columns:minmax(0,1fr) !important;justify-content:stretch;gap:8px !important;margin:0 !important}
-  .illo-btns a{min-height:48px !important;padding:0 16px !important;font-size:12px !important;letter-spacing:.06em !important;text-decoration:none !important}
-  .illo-btns a:first-child{display:flex !important;background:#b9a6f0 !important;border:2px solid #b9a6f0 !important;color:#0b1a5c !important}
-  .illo-btns a:last-child{display:flex !important;background:transparent !important;border:2px solid #7ee0b5 !important;color:#7ee0b5 !important}
-  .illo-btns a:first-child:hover,.illo-btns a:first-child:active{background:#d2c6f7 !important;border-color:#d2c6f7 !important;color:#0b1a5c !important;text-decoration:none !important}
-  .illo-btns a:last-child:hover,.illo-btns a:last-child:active{background:#7ee0b5 !important;border-color:#7ee0b5 !important;color:#0b1a5c !important;text-decoration:none !important}
+  .illo{display:flex;flex-direction:column;justify-content:center;padding:20px}
+  /* fill the last screen: viewport − 56px header − footer (− "See all projects" bar on Home) */
+  .illo[data-page="home"]{min-height:calc(100svh - 56px - 78px - 62px)}
+  .illo[data-page="work"]{min-height:calc(100svh - 56px - 94px)}
+  .illo-shade{background:rgba(11,26,92,.72)}
+  .illo-grid{width:100%;grid-template-columns:minmax(0,1fr);gap:0;align-items:start}
+  .illo-text{display:contents}
+  .illo-tri{display:none}
+  .illo-title{order:1;font-size:24px;line-height:1.15;margin:0 0 6px}
+  .illo-p{order:2;font-size:16px;line-height:1.45;margin:0 0 14px;max-width:none}
+  .illo-cover{order:3;width:75vw;justify-self:start;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+  .illo-latest{order:4;font-size:15px;line-height:1.45;margin:10px 0 0;max-width:none}
+  .illo-btns{order:5;grid-template-columns:minmax(0,1fr);justify-content:stretch;gap:10px;margin:14px 0 0}
+  .illo-btn{min-height:48px;padding:0 16px;gap:16px;font-size:12px;letter-spacing:.06em}
 }
 @media (max-width:389px){
-  .footnote{padding:32px 20px 36px !important}
-  .illo-cover{max-width:240px !important;margin:0 0 20px !important}
-  .illo-text h3{font-size:24px !important;margin:0 0 8px !important}
-  .illo-text p,.illo-latest>span{font-size:15px !important;line-height:1.45 !important}
-  .illo-latest{margin:0 0 18px !important}
+  .illo-title{font-size:22px}
+  .illo-p{font-size:15px}
+  .illo-latest{font-size:14px}
 }
+@media (min-width:414px) and (max-width:767px){
+  .illo-title{font-size:26px}
+}
+
+@media (prefers-reduced-motion:reduce){.illo-shine{animation:none}}
+
+/* ---------- Site adapter (not in the handoff): base.css underlines every a:hover and turns it cobalt ---------- */
+.illo a:hover{text-decoration:none}
+.illo-title a:hover,.illo-cover a:hover{color:inherit}
