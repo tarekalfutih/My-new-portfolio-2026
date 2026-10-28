@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "site",
+      "runtimeExecutable": ".work/venv/bin/python",
+      "runtimeArgs": ["build.py", "--serve"],
+      "port": 8010,
+      "autoPort": true
+    }
+  ]
+}
