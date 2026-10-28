@@ -117,3 +117,5 @@
 /* ---------- Site adapter (not in the handoff): base.css underlines every a:hover and turns it cobalt ---------- */
 .illo a:hover{text-decoration:none}
 .illo-title a:hover,.illo-cover a:hover{color:inherit}
+/* The design file wraps the latest line normally; Safari's text-wrap:pretty broke it after "Personal Favourite:" */
+.illo-latest{text-wrap:wrap}
