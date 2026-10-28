@@ -1,0 +1,103 @@
+/* Markup: the .ih hero + .ih-f facts in src/pages/illustration/index.html.
+   Copied from the 28 Oct handoff (design_handoff_illustration_sections/code/skraphjaltarna-hero.css). */
+/* =====================================================================
+   Skräphjältarna hero + facts strip — Illustration page
+   FINAL (28 Oct 2026). Replaces every older .ih / .ih-* rule.
+   Breakpoints: phones ≤767 · iPads 768–1024 · laptop/desktop ≥1025
+   ===================================================================== */
+
+.ih{position:relative;overflow:hidden;background:#0b1a5c;border-bottom:2px solid #1c1b1a;font-family:Archivo,sans-serif;color:#e5e9fb}
+.ih *{box-sizing:border-box}
+.ih-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ih-sh{position:absolute;inset:0;pointer-events:none}
+.ih-in{position:relative;height:100%}
+.ih-tx{display:flex;flex-direction:column}
+.ih-label{display:flex;align-items:center;gap:14px}
+.ih-ln{flex:none;width:40px;height:3px;background:#e5e9fb}
+.ih-lb{font-weight:700;line-height:1;letter-spacing:.16em;text-transform:uppercase;color:#e5e9fb}
+.ih-titles{display:flex;flex-direction:column;gap:10px}
+.ih h1{margin:0;font-weight:700;line-height:1;letter-spacing:-.04em;white-space:nowrap;width:fit-content;padding-bottom:.06em;
+  background:linear-gradient(90deg,#ffe9a8,#7ee0b5,#ff6fb5,#a9b6ee,#ffe9a8);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:illoShine 8s linear infinite}
+@keyframes illoShine{from{background-position:0% 50%}to{background-position:300% 50%}}
+.ih-p{margin:0;font-weight:400;line-height:1.3;color:#e5e9fb}
+.ih-stat{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 12px;margin:0;max-width:440px}
+.ih-stat-n{font-weight:700;font-size:40px;line-height:1;letter-spacing:-.02em;color:#7ee0b5}
+.ih-stat-t{font-weight:600;font-size:13px;line-height:1.3;letter-spacing:.12em;text-transform:uppercase;color:#e5e9fb}
+.ih-bt{display:flex;flex-wrap:wrap;gap:10px}
+.ih-btn{position:relative;display:inline-flex;align-items:center;font-family:Archivo,sans-serif;font-weight:600;font-size:13px;line-height:1;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;border-radius:0}
+.ih-btn .arr{margin-left:8px}
+.ih-btn--buy{background:#b9a6f0;color:#0b1a5c;padding:13px 18px}
+.ih-btn--buy:hover,.ih-btn--buy:active{background:#d2c6f7;color:#0b1a5c}
+.ih-btn--pdf{border:2px solid #ffe9a8;color:#ffe9a8;padding:11px 18px}
+.ih-btn--pdf:hover,.ih-btn--pdf:active{background:#ffe9a8;color:#0b1a5c}
+.ih-btn:focus-visible{outline:2px solid #1b3ac4;outline-offset:2px}
+.ih .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ih-cv{display:flex}
+.ih-cv>div{aspect-ratio:1/1;background:#ececea;box-shadow:0 30px 60px rgba(0,0,0,.45);transform:rotate(-2deg)}
+.ih-cv img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* facts strip */
+.ih-f{display:grid;background:#fff;border-bottom:2px solid #1c1b1a;font-family:Archivo,sans-serif;color:#1c1b1a}
+.ih-f-l{font-weight:600;font-size:11px;line-height:1;letter-spacing:.18em;text-transform:uppercase;color:#75726e;margin-bottom:6px}
+.ih-f-v{font-weight:600;font-size:15px;line-height:1.35}
+
+/* ---------- Laptop / Desktop ≥1025: hero + facts fill the first screen ---------- */
+@media (min-width:1025px){
+  .ih{height:calc(100svh - 78px - 66px);min-height:600px;max-height:1100px}
+  .ih-sh{background:linear-gradient(90deg,rgba(11,26,92,.9) 0%,rgba(11,26,92,.72) 38%,rgba(11,26,92,0) 72%)}
+  .ih-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;padding:40px 56px}
+  .ih-tx{grid-column:1 / 6;gap:22px}
+  .ih-lb{font-size:15px}
+  .ih h1{font-size:clamp(48px,5.6vw,80px)}
+  .ih-p{font-size:21px}
+  .ih-cv{grid-column:7 / 13;justify-content:center}
+  .ih-cv>div{width:min(100%,640px,calc(100svh - 300px))}
+  .ih-f{grid-template-columns:repeat(4,1fr);padding:0 56px}
+  .ih-f>div{padding:18px 20px;border-right:1px solid #dcd9d4}
+  .ih-f>div:first-child{padding-left:0}
+  .ih-f>div:last-child{border-right:0}
+}
+
+/* ---------- iPads 768–1024 ---------- */
+@media (min-width:768px) and (max-width:1024px){
+  .ih-sh{background:linear-gradient(90deg,rgba(11,26,92,.92) 0%,rgba(11,26,92,.75) 45%,rgba(11,26,92,.2) 100%)}
+  .ih-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px;align-items:center;padding:64px 32px}
+  .ih-tx{gap:20px}
+  .ih-lb{font-size:12px;white-space:nowrap}
+  .ih h1{font-size:clamp(36px,5.2vw,52px)}
+  .ih-p{font-size:17px}
+  .ih-bt{display:grid;grid-template-columns:max-content;justify-content:start;gap:10px}
+  .ih-btn{display:flex;justify-content:space-between;gap:24px}
+  .ih-cv{justify-content:flex-end}
+  .ih-cv>div{width:min(100%,400px)}
+}
+
+/* ---------- iPads + phones: facts 2×2 ---------- */
+@media (max-width:1024px){
+  .ih-f{grid-template-columns:1fr 1fr;padding:0 32px}
+  .ih-f>div{padding:16px 16px 16px 0;border-bottom:1px solid #dcd9d4}
+  .ih-f>div:nth-last-child(-n+2){border-bottom:0}
+}
+
+/* ---------- Phones ≤767: label → title → stat → cover → buttons ---------- */
+@media (max-width:767px){
+  .ih-sh{background:linear-gradient(180deg,rgba(11,26,92,.9) 0%,rgba(11,26,92,.6) 45%,rgba(11,26,92,.25) 100%)}
+  .ih-in{display:flex;flex-direction:column;align-items:stretch;gap:18px;padding:36px 20px 44px}
+  .ih-tx{display:contents}
+  .ih-ln{display:none}
+  .ih-lb{font-size:12px;letter-spacing:.1em;white-space:nowrap}
+  .ih h1{font-size:clamp(40px,11.5vw,52px);letter-spacing:-.03em}
+  .ih-p{font-size:17px}
+  .ih-stat-n{font-size:30px}
+  .ih-cv{order:1;justify-content:flex-start;margin-top:8px}
+  .ih-cv>div{width:calc(100% - 8px);margin-left:4px}   /* room for the −2deg rotation */
+  .ih-bt{order:2;display:grid;grid-template-columns:minmax(0,1fr);gap:10px;margin-top:12px}
+  .ih-btn{display:flex;justify-content:space-between;min-height:48px;padding:0 18px}
+  .ih-f{padding:4px 20px 8px}
+  .ih-f-v{font-size:14px}
+}
+
+@media (prefers-reduced-motion:reduce){.ih h1{animation:none}}
+
+/* ---------- Site adapter (not in the handoff): the page underlines every a:hover ---------- */
+.ih a:hover{text-decoration:none}
