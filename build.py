@@ -128,15 +128,32 @@ def with_base(text):
     return text
 
 
+# Illustration section (shared by Home and Work): per page link source, section attributes, extra style.
+ILLUSTRATION = {
+    'home': ('home', ' data-reveal-lead="1"', ''),
+    'work': ('work', ' id="illustration" data-reveal="1"', 'scroll-margin-top:90px;'),
+}
+
+
+def illustration(key):
+    src, attrs, style = ILLUSTRATION[key]
+    return (partial('illustration').replace('{{from}}', src)
+            .replace('{{attrs}}', attrs).replace('{{style}}', style))
+
+
 def render(text, route='/'):
     text = re.sub(r'<!--@head (\S+)-->',
                   lambda m: partial('head').replace('{{url}}', SITE_URL + m.group(1)), text)
     text = re.sub(r'<!--@header (\w+)-->', lambda m: header(m.group(1)), text)
+    # data-ref for reference/check.js (IMPLEMENT-EXACTLY-ILLUSTRATION); harmless in production
+    if route == '/illustration/':
+        text = text.replace('<header class="hd"', '<header data-ref="sk-header" class="hd"', 1)
     text = text.replace('<!--@case-bar-->', case_bar())
     text = text.replace('<!--@footer email-->', partial('footer').replace('class="ft"', 'class="ft ft-home"')
                         .replace('{{extra}}', '\n    ' + partial('footer-email')))
     text = text.replace('<!--@footer-->', partial('footer').replace('{{extra}}', ''))
     text = text.replace('<!--@scripts-->', partial('scripts'))
+    text = re.sub(r'<!--@illustration (\w+)-->', lambda m: illustration(m.group(1)), text)
     text = responsive_images(text, route)
     text = cache_bust(text)
     text = with_base(text)
