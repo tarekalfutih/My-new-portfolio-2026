@@ -142,10 +142,17 @@
     var db = parseFloat(v.getAttribute('data-gain'));
     if (!db || v.__gain) return;
     try {
+      // iPhone: Web Audio counts as "ambient" sound and goes silent with the ringer switch off,
+      // while a plain video still plays. As media playback it keeps sounding like other videos.
+      if (navigator.audioSession) navigator.audioSession.type = 'playback';
       actx = actx || new (window.AudioContext || window.webkitAudioContext)();
       var src = actx.createMediaElementSource(v), g = actx.createGain();
       g.gain.value = Math.pow(10, db / 20);
-      src.connect(g); g.connect(actx.destination);
+      // Limiter after the boost, so loud moments don't clip and crackle.
+      var lim = actx.createDynamicsCompressor();
+      lim.threshold.value = -1; lim.knee.value = 0; lim.ratio.value = 20;
+      lim.attack.value = 0.003; lim.release.value = 0.25;
+      src.connect(g); g.connect(lim); lim.connect(actx.destination);
       v.__gain = g;
     } catch (_) { v.__gain = true; }   // not supported: plays at its normal level
     if (actx && actx.state === 'suspended') actx.resume().catch(function () {});
