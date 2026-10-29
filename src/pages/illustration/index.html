@@ -38,6 +38,17 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 
 
 .hvx0:hover{background:#1c1b1a !important;color:#fff !important}
+/* "More illustration work" link: an outline button so it reads as a link; the arrow nudges toward
+   the corner every few seconds while it is on screen (stops on hover and for reduced motion). */
+.il-more{margin-left:auto;display:inline-flex;align-items:center;justify-content:space-between;gap:16px;min-height:48px;padding:0 20px;border:2px solid #1c1b1a;background:#fff;color:#1c1b1a;font:600 13px/1.2 Archivo;letter-spacing:.06em;text-transform:uppercase;text-decoration:none}
+.il-more:hover,.il-more:focus-visible{background:#4561dc;border-color:#4561dc;color:#fff;text-decoration:none}
+.il-more:active{background:#122a8f;border-color:#122a8f;color:#fff}
+.il-more:focus-visible{outline:2px solid #1b3ac4;outline-offset:2px}
+.il-more-ar{display:inline-block;font-size:18px;line-height:1;animation:ilNudge 2.4s ease-in-out infinite}
+.il-more:hover .il-more-ar,.il-more:focus-visible .il-more-ar{animation:none;transform:translate(2px,-2px)}
+@keyframes ilNudge{0%,60%,100%{transform:none}70%{transform:translate(4px,-4px)}80%{transform:none}88%{transform:translate(2px,-2px)}}
+@media (max-width:767px){.il-more{margin-left:0;width:100%;padding:0 16px;font-size:12px}}
+@media (prefers-reduced-motion:reduce){.il-more-ar{animation:none}}
 </style>
 </head>
 <body>
@@ -112,7 +123,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 </section>
 <section class="pad" style="padding:40px 56px;display:flex;align-items:center;gap:12px;flex-wrap:wrap">
 <div style="font:400 15px/1.5 Archivo;color:#75726e">Part of 10+ years in visual communication and children's book illustration.</div>
-<a href="https://tarekalfutih.se" style="margin-left:auto" target="_blank">More illustration work at tarekalfutih.se</a>
+<a class="il-more" href="https://tarekalfutih.se" target="_blank" rel="noopener"><span>More illustration work at tarekalfutih.se</span><span class="il-more-ar" aria-hidden="true">↗︎</span><span class="sr-only"> (opens in new tab)</span></a>
 </section>
   <div class="btt"><a href="#" data-top="1">↑ Back to Top</a></div>
   </main>
