@@ -109,6 +109,24 @@ body {
 	color: #040112;
 }
 
+/* "Click to start": browsers only allow sound after a click, so the menu music needs one before the menu. */
+#status-start {
+	display: none;
+	padding: 8px 18px;
+	font: inherit;
+	color: #040112;
+	background: transparent;
+	border: 2px solid #040112;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+#status-start:hover, #status-start:focus-visible {
+	background: #040112;
+	color: #f0fff7;
+	outline: none;
+}
+
 /* Phones and tablets: the browser version is for laptops and desktops (keyboard). */
 #device {
 	position: fixed;
@@ -147,6 +165,7 @@ body {
 				<div id="status-text">Loading Gilded Cage…</div>
 				<div id="status-bar" class="waiting"><div id="status-fill"></div></div>
 				<div id="status-notice"></div>
+				<button id="status-start" type="button">Click to start</button>
 			</div>
 		</div>
 
@@ -157,6 +176,18 @@ body {
 			</div>
 		</div>
 
+		<script>
+// Keep every audio context the game creates, so the start click can unlock its sound.
+(function () {
+	const AC = window.AudioContext || window.webkitAudioContext;
+	if (!AC) return;
+	window.__gcAudio = [];
+	const Wrapped = function (opts) { const c = new AC(opts); window.__gcAudio.push(c); return c; };
+	Wrapped.prototype = AC.prototype;
+	window.AudioContext = Wrapped;
+	if (window.webkitAudioContext) window.webkitAudioContext = Wrapped;
+}());
+		</script>
 		<script src="index.js"></script>
 		<script>
 const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":12425252,"index.wasm":38057390},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
@@ -222,8 +253,17 @@ const engine = new Engine(GODOT_CONFIG);
 			}
 		},
 	}).then(function () {
-		status.remove();
-		canvas.focus();
+		// Loaded: one click (or Enter / Space) starts it, so the menu music can play from the first screen.
+		const start = document.getElementById('status-start');
+		statusText.textContent = 'Gilded Cage is ready.';
+		bar.style.display = 'none';
+		start.style.display = 'block';
+		start.focus();
+		start.addEventListener('click', function () {
+			(window.__gcAudio || []).forEach(function (c) { if (c.state === 'suspended') c.resume().catch(function () {}); });
+			status.remove();
+			canvas.focus();
+		}, { once: true });
 		// Godot renames the tab after the project ("Gilded_Cage"); keep the page title.
 		const title = 'Gilded Cage — play in the browser';
 		const keep = function () { if (document.title !== title) document.title = title; };
