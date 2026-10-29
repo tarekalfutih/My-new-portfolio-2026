@@ -12,3 +12,4 @@ Only this site lives here. The illustration portfolio (tarekalfutih.se) is a sep
 - Never swap or re-encode video/image files unless asked; layout fixes are CSS/markup only.
 - Use `↗︎` (with U+FE0E) for the ↗ arrow, or iPhone Safari draws an emoji.
 - Last tested state: tag `tested-2026-10-28`.
+- Some files are only named in JS: `octotorg.js` builds `octotorg-anim-2/3.png` from frame 1. Grep `public/assets/js` before calling an asset unused.

@@ -198,74 +198,6 @@
   ],
   "w": 2299
  },
- "/assets/img/alma-initial-observations.jpg": {
-  "h": 4085,
-  "variants": [
-   [
-    "/assets/img/opt/alma-initial-observations-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/alma-initial-observations-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/alma-initial-observations-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/alma-initial-observations-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/alma-initial-observations-2400.webp",
-    2400
-   ]
-  ],
-  "w": 4284
- },
- "/assets/img/alma-proto-1.webp": {
-  "h": 539,
-  "variants": [
-   [
-    "/assets/img/opt/alma-proto-1-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/alma-proto-1-722.webp",
-    722
-   ]
-  ],
-  "w": 722
- },
- "/assets/img/alma-proto-2.webp": {
-  "h": 401,
-  "variants": [
-   [
-    "/assets/img/opt/alma-proto-2-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/alma-proto-2-722.webp",
-    722
-   ]
-  ],
-  "w": 722
- },
- "/assets/img/alma-proto-3.webp": {
-  "h": 722,
-  "variants": [
-   [
-    "/assets/img/opt/alma-proto-3-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/alma-proto-3-646.webp",
-    646
-   ]
-  ],
-  "w": 646
- },
  "/assets/img/before-design-1.jpg": {
   "h": 1080,
   "variants": [
@@ -361,24 +293,6 @@
  "/assets/img/bird.gif": {
   "h": 854,
   "replace": "/assets/img/opt/bird.webp",
-  "w": 880
- },
- "/assets/img/bird.jpg": {
-  "h": 854,
-  "variants": [
-   [
-    "/assets/img/opt/bird-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/bird-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/bird-880.webp",
-    880
-   ]
-  ],
   "w": 880
  },
  "/assets/img/boxplot-comparing-the-prototypes-across-the-five-categories-cb0d7af8.png": {
@@ -542,32 +456,6 @@
   ],
   "w": 2534
  },
- "/assets/img/discover-the-hidden-plant.png": {
-  "h": 1964,
-  "variants": [
-   [
-    "/assets/img/opt/discover-the-hidden-plant-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/discover-the-hidden-plant-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/discover-the-hidden-plant-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/discover-the-hidden-plant-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/discover-the-hidden-plant-2400.webp",
-    2400
-   ]
-  ],
-  "w": 3024
- },
  "/assets/img/eating-graps.png": {
   "h": 1964,
   "variants": [
@@ -681,32 +569,6 @@
    ]
   ],
   "w": 4111
- },
- "/assets/img/fish.jpg": {
-  "h": 3456,
-  "variants": [
-   [
-    "/assets/img/opt/fish-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/fish-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/fish-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/fish-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/fish-2400.webp",
-    2400
-   ]
-  ],
-  "w": 5184
  },
  "/assets/img/forecast-lacked-fishing-guidance-after.png": {
   "h": 922,
@@ -1021,24 +883,6 @@
   ],
   "w": 1166
  },
- "/assets/img/helmet-sketch1.jpg": {
-  "h": 1535,
-  "variants": [
-   [
-    "/assets/img/opt/helmet-sketch1-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/helmet-sketch1-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/helmet-sketch1-1151.webp",
-    1151
-   ]
-  ],
-  "w": 1151
- },
  "/assets/img/helmet-sketch1.webp": {
   "h": 893,
   "variants": [
@@ -1057,28 +901,6 @@
   ],
   "w": 1098
  },
- "/assets/img/helmet-sketch2.jpg": {
-  "h": 1131,
-  "variants": [
-   [
-    "/assets/img/opt/helmet-sketch2-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/helmet-sketch2-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/helmet-sketch2-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/helmet-sketch2-1600.webp",
-    1600
-   ]
-  ],
-  "w": 1600
- },
  "/assets/img/helmet-sketch2.webp": {
   "h": 776,
   "variants": [
@@ -1096,28 +918,6 @@
    ]
   ],
   "w": 1098
- },
- "/assets/img/helmet-sketch3.jpg": {
-  "h": 1096,
-  "variants": [
-   [
-    "/assets/img/opt/helmet-sketch3-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/helmet-sketch3-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/helmet-sketch3-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/helmet-sketch3-1435.webp",
-    1435
-   ]
-  ],
-  "w": 1435
  },
  "/assets/img/helmet-sketch3.webp": {
   "h": 839,
@@ -1355,58 +1155,6 @@
   ],
   "w": 721
  },
- "/assets/img/kalila-and-dimna-part-one.jpg": {
-  "h": 3233,
-  "variants": [
-   [
-    "/assets/img/opt/kalila-and-dimna-part-one-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/kalila-and-dimna-part-one-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/kalila-and-dimna-part-one-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/kalila-and-dimna-part-one-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/kalila-and-dimna-part-one-2362.webp",
-    2362
-   ]
-  ],
-  "w": 2362
- },
- "/assets/img/kalila-and-dimna-part-two.jpg": {
-  "h": 3233,
-  "variants": [
-   [
-    "/assets/img/opt/kalila-and-dimna-part-two-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/kalila-and-dimna-part-two-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/kalila-and-dimna-part-two-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/kalila-and-dimna-part-two-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/kalila-and-dimna-part-two-2362.webp",
-    2362
-   ]
-  ],
-  "w": 2362
- },
  "/assets/img/knak-the-door-2.png": {
   "h": 1080,
   "variants": [
@@ -1546,32 +1294,6 @@
   "h": 3024,
   "replace": "/assets/img/opt/octopus.webp",
   "w": 4032
- },
- "/assets/img/octotorg-illustration.png": {
-  "h": 1080,
-  "variants": [
-   [
-    "/assets/img/opt/octotorg-illustration-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/octotorg-illustration-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/octotorg-illustration-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/octotorg-illustration-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/octotorg-illustration-1920.webp",
-    1920
-   ]
-  ],
-  "w": 1920
  },
  "/assets/img/onsala-observatory.jpg": {
   "h": 1510,
@@ -1784,16 +1506,6 @@
    ]
   ],
   "w": 1236
- },
- "/assets/img/playrent-publish.webp": {
-  "h": 560,
-  "variants": [
-   [
-    "/assets/img/opt/playrent-publish-252.webp",
-    252
-   ]
-  ],
-  "w": 252
  },
  "/assets/img/playrent-search1.png": {
   "h": 917,
@@ -2079,32 +1791,6 @@
   ],
   "w": 757
  },
- "/assets/img/rb-new-available-now.png": {
-  "h": 1964,
-  "variants": [
-   [
-    "/assets/img/opt/rb-new-available-now-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/rb-new-available-now-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/rb-new-available-now-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/rb-new-available-now-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/rb-new-available-now-2400.webp",
-    2400
-   ]
-  ],
-  "w": 3024
- },
  "/assets/img/rb-new-available-now.webp": {
   "h": 707,
   "variants": [
@@ -2122,32 +1808,6 @@
    ]
   ],
   "w": 1200
- },
- "/assets/img/rb-new-best-available-selected.png": {
-  "h": 1964,
-  "variants": [
-   [
-    "/assets/img/opt/rb-new-best-available-selected-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/rb-new-best-available-selected-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/rb-new-best-available-selected-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/rb-new-best-available-selected-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/rb-new-best-available-selected-2400.webp",
-    2400
-   ]
-  ],
-  "w": 3024
  },
  "/assets/img/rb-new-best-available.webp": {
   "h": 714,
@@ -2172,32 +1832,6 @@
   "replace": "/assets/img/opt/rb-new-home-select-anim-4.webp",
   "w": 1304
  },
- "/assets/img/rb-new-my-booking-2.png": {
-  "h": 1750,
-  "variants": [
-   [
-    "/assets/img/opt/rb-new-my-booking-2-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/rb-new-my-booking-2-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/rb-new-my-booking-2-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/rb-new-my-booking-2-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/rb-new-my-booking-2-2400.webp",
-    2400
-   ]
-  ],
-  "w": 2972
- },
  "/assets/img/rb-new-my-booking.webp": {
   "h": 704,
   "variants": [
@@ -2215,32 +1849,6 @@
    ]
   ],
   "w": 1200
- },
- "/assets/img/rb-new-room-schedule.png": {
-  "h": 1964,
-  "variants": [
-   [
-    "/assets/img/opt/rb-new-room-schedule-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/rb-new-room-schedule-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/rb-new-room-schedule-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/rb-new-room-schedule-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/rb-new-room-schedule-2400.webp",
-    2400
-   ]
-  ],
-  "w": 3024
  },
  "/assets/img/rb-new-schedule.webp": {
   "h": 707,
@@ -2443,32 +2051,6 @@
    ]
   ],
   "w": 1480
- },
- "/assets/img/sketch.jpg": {
-  "h": 2861,
-  "variants": [
-   [
-    "/assets/img/opt/sketch-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/sketch-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/sketch-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/sketch-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/sketch-2400.webp",
-    2400
-   ]
-  ],
-  "w": 3689
  },
  "/assets/img/skraphjaltarna-compost.jpg": {
   "h": 1800,
@@ -2717,32 +2299,6 @@
    ]
   ],
   "w": 4730
- },
- "/assets/img/the-happy-rabbit.jpg": {
-  "h": 2400,
-  "variants": [
-   [
-    "/assets/img/opt/the-happy-rabbit-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/the-happy-rabbit-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/the-happy-rabbit-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/the-happy-rabbit-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/the-happy-rabbit-2400.webp",
-    2400
-   ]
-  ],
-  "w": 2400
  },
  "/assets/img/the-menu-shot.png": {
   "h": 1606,
@@ -3098,32 +2654,6 @@
   ],
   "w": 1130
  },
- "/assets/img/trailmate-interaction-table.jpg": {
-  "h": 1595,
-  "variants": [
-   [
-    "/assets/img/opt/trailmate-interaction-table-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/trailmate-interaction-table-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/trailmate-interaction-table-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/trailmate-interaction-table-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/trailmate-interaction-table-1711.webp",
-    1711
-   ]
-  ],
-  "w": 1711
- },
  "/assets/img/trailmate-lofi-prototype.jpg": {
   "h": 1534,
   "variants": [
@@ -3283,32 +2813,6 @@
    ]
   ],
   "w": 4284
- },
- "/assets/img/universeum-8.jpg": {
-  "h": 4032,
-  "variants": [
-   [
-    "/assets/img/opt/universeum-8-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/universeum-8-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/universeum-8-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/universeum-8-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/universeum-8-2400.webp",
-    2400
-   ]
-  ],
-  "w": 3024
  },
  "/assets/img/universeum-9.jpg": {
   "h": 5712,
@@ -3489,31 +2993,5 @@
    ]
   ],
   "w": 3024
- },
- "/assets/img/wicky-crocodile.jpg": {
-  "h": 2400,
-  "variants": [
-   [
-    "/assets/img/opt/wicky-crocodile-480.webp",
-    480
-   ],
-   [
-    "/assets/img/opt/wicky-crocodile-800.webp",
-    800
-   ],
-   [
-    "/assets/img/opt/wicky-crocodile-1200.webp",
-    1200
-   ],
-   [
-    "/assets/img/opt/wicky-crocodile-1600.webp",
-    1600
-   ],
-   [
-    "/assets/img/opt/wicky-crocodile-2400.webp",
-    2400
-   ]
-  ],
-  "w": 2400
  }
 }

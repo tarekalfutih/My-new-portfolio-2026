@@ -52,16 +52,23 @@ def still(name, path):
     return {'w': w, 'h': h, 'variants': variants}
 
 
+ANIM_MAX = 1600   # px; animated images are shown at most ~800 CSS px wide
+
+
 def animated(name, path):
-    """Animated GIF -> animated WebP at the same size; used only when it is smaller."""
+    """Animated GIF -> animated WebP, at most ANIM_MAX px wide; used only when it is smaller.
+    Every frame stays decoded while it plays, so a full-size camera GIF (4032 px, 4 frames
+    ~ 195 MB) makes iPhone Safari run out of memory and reload the page."""
     stem = os.path.splitext(name)[0]
     out = os.path.join(OPT, stem + '.webp')
     with Image.open(path) as im:
         w, h = im.size
+        size = (ANIM_MAX, round(h * ANIM_MAX / w)) if w > ANIM_MAX else None
         if not fresh(out, path):
             frames, durations = [], []
             for fr in ImageSequence.Iterator(im):
-                frames.append(fr.convert('RGBA'))
+                fr = fr.convert('RGBA')
+                frames.append(fr.resize(size, Image.LANCZOS) if size else fr)
                 durations.append(fr.info.get('duration', 100))
             frames[0].save(out, 'WEBP', save_all=True, append_images=frames[1:], duration=durations,
                            loop=im.info.get('loop', 0), quality=QUALITY, method=4, minimize_size=True)
