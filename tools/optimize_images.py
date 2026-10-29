@@ -52,7 +52,7 @@ def still(name, path):
     return {'w': w, 'h': h, 'variants': variants}
 
 
-ANIM_MAX = 1600   # px; animated images are shown at most ~800 CSS px wide
+ANIM_MAX = 1200   # px; animated images are shown at most ~600 CSS px wide
 
 
 def animated(name, path):
