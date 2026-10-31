@@ -148,6 +148,16 @@ video[controls], [data-replay], [data-top], [data-filter] { cursor: pointer; }
 /* Site video controls (video-controls.js). Nothing tints the footage: a compact bar at the bottom,
    shown while paused and on hover / focus / tap while playing. */
 .vc { position: relative; display: block; width: 100%; }
+/* Phone layout on wider screens (600–767px wide that aren't tall and narrow, e.g. 766×761, a small
+   tablet or a narrow window): the phone layout would stretch every image to the full width, so a
+   single photo or cover gets taller than the screen. The content keeps a phone-sized column instead;
+   section backgrounds still run full width (only the side padding grows). Phones are unaffected. */
+@media (min-width: 600px) and (max-width: 767px) and (min-aspect-ratio: 2/3) {
+  html body #main section, html body #main section.pad {
+    padding-left: max(20px, calc((100% - 540px) / 2)) !important;
+    padding-right: max(20px, calc((100% - 540px) / 2)) !important;
+  }
+}
 /* Share of the height under the header a video may take (video-controls.js caps each video's width
    with it): laptops and desktops keep room around it; phones and tablets get a little more. */
 :root { --vfit: .85; }
