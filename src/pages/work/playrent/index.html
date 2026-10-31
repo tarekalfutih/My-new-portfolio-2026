@@ -141,11 +141,11 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 }
 @media (max-width:767px){.pr-slide{flex-basis:220px !important}.pr-track{gap:14px !important;padding:0 calc(50% - 110px) !important}.wrap section .pr-car{display:grid !important}.pr-nav{max-width:none !important}}
 @media (prefers-reduced-motion:reduce){.pr-track{scroll-behavior:auto !important}}
-@media (max-width:767px){.wrap section .pr-vid{height:min(78svh,calc(92vw * 25 / 12)) !important}}
+@media (max-width:767px){.wrap section .pr-vid{height:min(calc((100svh - var(--hdr, 56px)) * var(--vfit, .85)), calc(92vw * 25 / 12)) !important;width:calc(min(calc((100svh - var(--hdr, 56px)) * var(--vfit, .85)), calc(92vw * 25 / 12)) * 12 / 25) !important}}
 @media (max-width:1024px){
   /* Section 03 video, iPads and phones: a tall phone-shaped frame (12/25), centred; the wide video is
      cropped to the phone in its middle (the black sides are trimmed). Tall poster: pages/playrent.js. */
-  .wrap section .pr-vid{aspect-ratio:12/25 !important;height:min(80svh,900px) !important;width:calc(min(80svh,900px) * 12 / 25) !important;max-width:92vw !important;margin:0 0 0 50% !important;transform:translateX(-50%)}
+  .wrap section .pr-vid{aspect-ratio:12/25 !important;height:min(calc((100svh - var(--hdr, 80px)) * var(--vfit, .85)), 900px) !important;width:calc(min(calc((100svh - var(--hdr, 80px)) * var(--vfit, .85)), 900px) * 12 / 25) !important;max-width:92vw !important;margin:0 0 0 50% !important;transform:translateX(-50%)}
   /* The phone in the recording sits at x 649–1228 of 1920 (580 px wide, a little left of centre), which
      is narrower than the frame's 640 px window: centre the crop on the phone (48.3%) and zoom 1.104 so
      the phone fills the width, with no black bands (only ~20 px of the phone's dark bezel is trimmed). */

@@ -43,6 +43,30 @@
     v.parentNode.insertBefore(wrap, v);
     wrap.appendChild(v);
 
+    // Fit the screen: the video's box (its own frame when the video fills one) is never wider than
+    // what keeps the video within --vfit of the height under the header (base.css). Its own max-width
+    // still applies, so large screens keep the full size. Important, so page rules can't undo it.
+    // (The wrapper itself is forced to full width in base.css, so the cap goes on the element around it.)
+    var box = wrap.parentElement;
+    if (box && !/^(SECTION|MAIN|ARTICLE|BODY)$/.test(box.tagName)) {
+      var own = getComputedStyle(box).maxWidth;
+      // Shape: the frame's own aspect-ratio when it has one (it can change per screen size), else the video's.
+      var shape = function () {
+        var m = String(getComputedStyle(box).aspectRatio || '').match(/([\d.]+)\s*\/\s*([\d.]+)/);
+        if (m && +m[2]) return m[1] / m[2];
+        return v.videoWidth && v.videoHeight ? v.videoWidth / v.videoHeight : 0;
+      };
+      var fit = function () {
+        var r = shape();
+        if (!r) return;
+        var cap = 'calc((100svh - var(--hdr, 80px)) * var(--vfit, .8) * ' + r.toFixed(4) + ')';
+        box.style.setProperty('max-width', own && own !== 'none' ? 'min(' + own + ', ' + cap + ')' : cap, 'important');
+      };
+      fit();
+      v.addEventListener('loadedmetadata', fit);
+      window.addEventListener('resize', fit);
+    }
+
     var bar = document.createElement('div');
     bar.className = 'vc-bar';
     var play = button('vc-play', 'Play', ICON.play);

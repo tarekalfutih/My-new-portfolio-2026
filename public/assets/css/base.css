@@ -148,6 +148,10 @@ video[controls], [data-replay], [data-top], [data-filter] { cursor: pointer; }
 /* Site video controls (video-controls.js). Nothing tints the footage: a compact bar at the bottom,
    shown while paused and on hover / focus / tap while playing. */
 .vc { position: relative; display: block; width: 100%; }
+/* Share of the height under the header a video may take (video-controls.js caps each video's width
+   with it): laptops and desktops keep room around it; phones and tablets get a little more. */
+:root { --vfit: .85; }
+@media (min-width: 1024px) and (orientation: landscape) { :root { --vfit: .75; } }
 /* The wrapper always fills its frame. Page rules that run "div:has(> video)" edge to edge mean the
    frame around the video, not this wrapper (it would be widened twice). */
 html body .wrap div.vc.vc { width: 100% !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; }

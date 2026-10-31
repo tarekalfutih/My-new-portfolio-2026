@@ -154,6 +154,28 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .sk-step>div p{font-size:clamp(16px, 1.15vw, 19px) !important}
   .sk-board{padding-top:clamp(28px, 4.4vh, 52px) !important;padding-bottom:clamp(36px, 5.4vh, 64px) !important;gap:clamp(24px, 3.6vh, 40px) !important}
 }
+/* Short laptop screens (≤820px tall in the browser, e.g. 1366×768 or 1536×864 laptops): the same
+   "How I work" section with tighter spacing, so "Explore selected work ↓" fits on the screen with it. */
+@media (min-width:901px) and (max-height:820px) and (orientation:landscape){
+  #skills{padding-top:24px !important;padding-bottom:16px !important}
+  #skills .sk-edu{padding-top:14px !important}
+  #skills .sk-frame{padding:18px 28px 20px !important}
+  #skills .sk-how{margin-top:24px !important}
+  #skills .sk-board{padding-top:16px !important;padding-bottom:20px !important;gap:14px !important}
+  #skills .sk-step>div{padding:16px 18px 18px !important;gap:10px !important}
+  #skills .sk-step>div p{font-size:15px !important;line-height:1.4 !important}
+  #skills .sk-cta-wrap{padding-top:14px !important}
+}
+@media (min-width:901px) and (max-height:680px) and (orientation:landscape){
+  #skills{padding-top:10px !important;padding-bottom:6px !important}
+  #skills .sk-edu{padding-top:6px !important}
+  #skills .sk-frame{padding:14px 24px 16px !important}
+  #skills .sk-how{margin-top:14px !important}
+  #skills .sk-board{padding-top:12px !important;padding-bottom:14px !important;gap:10px !important}
+  #skills .sk-step>div{padding:12px 16px 14px !important}
+  #skills .sk-step>div p{font-size:14px !important}
+  #skills .sk-cta-wrap{padding-top:6px !important}
+}
 /* 16:10 covers (2 Oct): short-case covers and the Smart Fishing frame, images fill the frame. */
 @media (min-width:768px){
   .sc-thumb{height:auto !important;aspect-ratio:16/10}
