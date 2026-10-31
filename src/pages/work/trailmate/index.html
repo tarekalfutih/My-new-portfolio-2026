@@ -97,7 +97,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .tm-stage{display:flex;flex-direction:column}
   .tm-text{padding:56px 32px 40px;gap:16px;align-self:stretch}
   .wrap section.tm-hero h1.tm-h1{font-size:clamp(48px,7vw,72px) !important;line-height:.95 !important}
-  .tm-photo{aspect-ratio:16/9;width:100%;flex:none}
+  .tm-photo{aspect-ratio:16/9;width:100%;flex:none;max-width:calc((100svh - var(--hdr, 80px)) * var(--ifit, .85) * 16 / 9);margin-inline:auto}
   .tm-fade{background:linear-gradient(180deg,#121a15 0%,rgba(18,26,21,0) 22%)}
   .wrap .tm-fbar{padding:0 32px !important;grid-template-columns:1fr 1fr !important}
   .wrap .tm-fbar>div{padding:16px 16px 16px 0 !important;border-right:0 !important;border-bottom:1px solid #2c3a31 !important}
