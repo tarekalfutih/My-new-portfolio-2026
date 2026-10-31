@@ -60,3 +60,24 @@
   else scan();
   window.addEventListener('load', scan);
 })();
+
+/* Minimum text size — every page. Visible text set below 12px (the small uppercase labels, section
+   tabs, fact labels) is lifted to 12px, the practical minimum for reading on phones. Text at 12px or
+   larger is never touched. Skipped: decorative text (aria-hidden), drawings (svg), [data-keep-size].
+   Runs again after a resize, since some labels only get small at narrow widths. */
+(function () {
+  var MIN = 12;
+  function lift() {
+    document.querySelectorAll('body *').forEach(function (e) {
+      if (e.closest('svg, [aria-hidden="true"], [data-keep-size], .sr-only')) return;
+      var text = false;
+      for (var n = e.firstChild; n; n = n.nextSibling) if (n.nodeType === 3 && n.textContent.trim()) { text = true; break; }
+      if (!text) return;
+      if (parseFloat(getComputedStyle(e).fontSize) < MIN) e.style.setProperty('font-size', MIN + 'px', 'important');
+    });
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lift);
+  else lift();
+  var t;
+  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(lift, 150); });
+})();
