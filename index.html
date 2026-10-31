@@ -165,27 +165,25 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .sk-step>div p{font-size:clamp(16px, 1.15vw, 19px) !important}
   .sk-board{padding-top:clamp(28px, 4.4vh, 52px) !important;padding-bottom:clamp(36px, 5.4vh, 64px) !important;gap:clamp(24px, 3.6vh, 40px) !important}
 }
-/* Short laptop screens (≤820px tall in the browser, e.g. 1366×768 or 1536×864 laptops): the same
-   "How I work" section with tighter spacing, so "Explore selected work ↓" fits on the screen with it. */
-@media (min-width:901px) and (max-height:820px) and (orientation:landscape){
-  #skills{padding-top:24px !important;padding-bottom:16px !important}
-  #skills .sk-edu{padding-top:14px !important}
-  #skills .sk-frame{padding:18px 28px 20px !important}
-  #skills .sk-how{margin-top:24px !important}
-  #skills .sk-board{padding-top:16px !important;padding-bottom:20px !important;gap:14px !important}
-  #skills .sk-step>div{padding:16px 18px 18px !important;gap:10px !important}
-  #skills .sk-step>div p{font-size:15px !important;line-height:1.4 !important}
-  #skills .sk-cta-wrap{padding-top:14px !important}
+/* "How I work" on laptops and desktops: spacing and note text follow the screen height. At ~600px
+   tall it is at its tightest and it grows back to the full design by ~950px, so the section and
+   "Explore selected work ↓" fit the screen at every height in between. Same layout and design.
+   Shorter than ~640px it can't fit at a readable size: the button then stays stuck to the bottom of
+   the screen while the section shows. */
+@media (min-width:901px) and (orientation:landscape){
+  #skills{padding-top:clamp(6px, calc(6px + (100vh - 600px) * 0.1), 56px) !important;padding-bottom:clamp(4px, calc(4px + (100vh - 600px) * 0.1), 40px) !important;overflow:hidden !important;overflow:clip !important}
+  #skills .sk-edu{padding-top:clamp(4px, calc(4px + (100vh - 600px) * 0.07), 26px) !important}
+  #skills .sk-frame{padding:clamp(10px, calc(10px + (100vh - 600px) * 0.05), 28px) 28px clamp(12px, calc(12px + (100vh - 600px) * 0.05), 30px) !important}
+  #skills .sk-how{margin-top:clamp(8px, calc(8px + (100vh - 600px) * 0.1), 64px) !important}
+  #skills .sk-board{padding-top:clamp(8px, calc(8px + (100vh - 600px) * 0.08), 52px) !important;padding-bottom:clamp(10px, calc(10px + (100vh - 600px) * 0.1), 64px) !important;gap:clamp(8px, calc(8px + (100vh - 600px) * 0.08), 40px) !important}
+  #skills .sk-step>div{padding:clamp(10px, calc(10px + (100vh - 600px) * 0.05), 34px) clamp(16px, 1.8vw, 30px) !important;gap:clamp(6px, calc(6px + (100vh - 600px) * 0.02), 14px) !important}
+  /* The notes are square, so on wide-but-short screens their size also follows the height. */
+  #skills .sk-step>div{max-width:max(200px, calc(50vh - 100px)) !important;margin-inline:auto !important}
+  #skills .sk-step>div p{font-size:min(clamp(14px, calc(14px + (100vh - 600px) * 0.015), 19px), max(14px, 1.15vw)) !important;line-height:1.4 !important}
+  #skills .sk-cta-wrap{padding-top:clamp(4px, calc(4px + (100vh - 600px) * 0.1), 40px) !important}
 }
-@media (min-width:901px) and (max-height:680px) and (orientation:landscape){
-  #skills{padding-top:10px !important;padding-bottom:6px !important}
-  #skills .sk-edu{padding-top:6px !important}
-  #skills .sk-frame{padding:14px 24px 16px !important}
-  #skills .sk-how{margin-top:14px !important}
-  #skills .sk-board{padding-top:12px !important;padding-bottom:14px !important;gap:10px !important}
-  #skills .sk-step>div{padding:12px 16px 14px !important}
-  #skills .sk-step>div p{font-size:14px !important}
-  #skills .sk-cta-wrap{padding-top:6px !important}
+@media (min-width:901px) and (orientation:landscape) and (max-height:640px){
+  #skills .sk-cta-wrap{position:sticky !important;bottom:0;z-index:5;background:#fff}
 }
 /* 16:10 covers (2 Oct): short-case covers and the Smart Fishing frame, images fill the frame. */
 @media (min-width:768px){
