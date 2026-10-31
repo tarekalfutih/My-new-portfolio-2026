@@ -112,9 +112,9 @@
 @media (min-width:768px) and (max-width:1366px){
   .ih-btn{display:flex;justify-content:space-between;align-items:center;gap:24px;min-height:44px;padding-top:0;padding-bottom:0}
 }
-/* side by side (landscape iPads, small laptops): two equal columns, as wide as the longer label */
+/* landscape iPads (and laptops up to 1366px): stacked like portrait, equal width */
 @media (min-width:1025px) and (max-width:1366px){
-  .ih-bt{display:grid;grid-auto-flow:column;grid-auto-columns:1fr;width:max-content;gap:10px}
+  .ih-bt{display:grid;grid-template-columns:max-content;justify-content:start;gap:10px}
 }
 @media (min-width:768px) and (max-width:1024px){
   .ih-in{padding:40px 32px}
