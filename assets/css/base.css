@@ -158,6 +158,10 @@ video[controls], [data-replay], [data-top], [data-filter] { cursor: pointer; }
     padding-right: max(20px, calc((100% - 540px) / 2)) !important;
   }
 }
+/* Carousel dots on touch screens: a 44px-tall tap area (Apple's minimum); the visible dot is unchanged. */
+@media (hover: none) and (pointer: coarse) {
+  [data-car-dots] button { height: 44px !important; }
+}
 /* Share of the height under the header a video may take (video-controls.js caps each video's width
    with it): laptops and desktops keep room around it; phones and tablets get a little more. */
 :root { --vfit: .85; }
