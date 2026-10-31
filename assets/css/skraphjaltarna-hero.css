@@ -117,6 +117,9 @@
   .ih-bt{display:grid;grid-template-columns:max-content;justify-content:start;gap:10px}
 }
 @media (min-width:768px) and (max-width:1024px){
+  .ih-label{align-items:flex-start}
+  .ih-ln{margin-top:5px}
+  .ih-lb{white-space:normal;line-height:1.4}   /* the text column is narrow here: wrap instead of running under the cover */
   .ih-in{padding:40px 32px}
   .ih-cv>div{width:min(100%, 340px)}
 }
