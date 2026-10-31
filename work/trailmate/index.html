@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=54846ad3">
+<link rel="stylesheet" href="/assets/css/base.css?v=ff065eb7">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>TrailMate — Tarek Alfutih</title>
@@ -126,7 +126,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
    screen below the sticky header and the "01 · Hero" label, so the whole video and its controls are
    visible without scrolling. Flush left like the rest of the page; the caption keeps the same width.
    Phones: edge to edge (the mobile rule above), caption inside the 20px gutter. */
-#hero .tm-video,#hero .tm-cap{width:min(100%, 1168px, calc((100svh - var(--hdr,118px) - 42px) * 16 / 9))}
+#hero .tm-video,#hero .tm-cap{width:min(100%, 1168px, calc((100svh - var(--hdr,118px)) * var(--vfit, .8) * 16 / 9))}
 #hero .tm-video{aspect-ratio:16/9;margin:0 0 12px 0;background:#000}
 #hero .tm-video video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
 @media (max-width:767px){#hero .tm-cap{width:auto}}
@@ -349,7 +349,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=da35a813" defer></script>
+<script src="/assets/js/video-controls.js?v=232012c5" defer></script>
 <script src="/assets/js/site.js?v=969609fd" defer></script>
 <script src="/assets/js/pages/trailmate.js?v=e3094c55" defer></script>
 </body>
