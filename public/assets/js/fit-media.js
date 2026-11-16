@@ -89,6 +89,7 @@
   }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', lift);
   else lift();
+  window.addEventListener('load', lift);   // again after legacy.js has rewritten any fonts on load
   var t;
   window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(lift, 150); });
 })();
