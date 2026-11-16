@@ -2,15 +2,12 @@
    - Container units (cqw/cqh, Chromium 105+): the numbered badges on images, the TrailMate hero photo
      and the Color Rotation board are sized relative to their frame. Here every declaration that uses
      them (inline, or in the page's <style> blocks) is worked out in px from the frame's real size.
-   - aspect-ratio (Chromium 88+): frames that get their height from it get it from their width here.
-   Re-run on load and resize. ?legacy (or ?legacy=cq / ?legacy=ar) forces it on, for testing. */
+   Re-run on load and resize. ?legacy in the address bar forces it on, for testing.
+   (aspect-ratio isn't faked: TV browsers that lack these units still support it, and copying
+   height = width can't reproduce frames that the grid shrinks.) */
 (function () {
-  var m = location.search.match(/[?&]legacy(?:=(\w+))?/);   // ?legacy, ?legacy=cq or ?legacy=ar
-  var force = m ? (m[1] || 'all') : '';
-  var S = window.CSS && CSS.supports;
-  var needCQ = /all|cq/.test(force) || !(S && CSS.supports('width', '1cqw'));
-  var needAR = /all|ar/.test(force) || !(S && CSS.supports('aspect-ratio', '1 / 1'));
-  if (!needCQ && !needAR) return;
+  var force = /[?&]legacy\b/.test(location.search);
+  if (!force && window.CSS && CSS.supports && CSS.supports('width', '1cqw')) return;
 
   var CQ = /(-?[\d.]+)cq([whib])\b/;
 
@@ -60,7 +57,7 @@
 
   // Every element + declaration that uses container units: [{el, prop, value, important}]
   var cqItems = [];
-  if (needCQ) {
+  {
     document.querySelectorAll('[style*="cq"]').forEach(function (el) {
       decls(el.getAttribute('style')).forEach(function (d) {
         if (CQ.test(d[1])) cqItems.push({ el: el, prop: d[0], value: d[1].replace(/!important/, '').trim(), media: null });
@@ -76,23 +73,6 @@
     });
   }
 
-  // Every frame whose height comes from aspect-ratio: [{el, ratio, media}]
-  var arItems = [];
-  if (needAR) {
-    var AR = /aspect-ratio\s*:\s*([\d.]+)\s*(?:\/\s*([\d.]+))?/;
-    document.querySelectorAll('[style*="aspect-ratio"]').forEach(function (el) {
-      var m = (el.getAttribute('style') || '').match(AR);
-      if (m) arItems.push({ el: el, ratio: m[1] / (m[2] || 1), media: null });
-    });
-    RULES.forEach(function (r) {
-      var m = r.decls.match(AR);
-      if (!m) return;
-      var els;
-      try { els = document.querySelectorAll(r.sel); } catch (e) { return; }
-      els.forEach(function (el) { arItems.push({ el: el, ratio: m[1] / (m[2] || 1), media: r.media }); });
-    });
-  }
-
   function active(item) { return !item.media || matchMedia(item.media).matches; }
   function units() {
     cqItems.forEach(function (it) {
@@ -100,17 +80,7 @@
       it.el.style.setProperty(it.prop, px(it.value, container(it.el)), 'important');
     });
   }
-  // Container units can set a frame's width, aspect-ratio then its height, and units inside it need
-  // that height: units, heights, units again.
-  function run() {
-    units();
-    arItems.forEach(function (it) {
-      if (!active(it)) return;
-      var w = it.el.offsetWidth;   // layout width, not the outline of a rotated/scaled box
-      if (w) it.el.style.setProperty('height', (w / it.ratio).toFixed(2) + 'px', 'important');
-    });
-    units();
-  }
+  var run = units;
   run();
   window.addEventListener('load', run);
   var t;
