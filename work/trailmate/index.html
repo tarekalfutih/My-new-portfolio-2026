@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=c8b609ed">
+<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>TrailMate — Tarek Alfutih</title>
@@ -84,7 +84,7 @@ nav a:hover{color:#1b3ac4}
 nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:#1b3ac4}
 
 
-.wrap section.tm-hero{background:#121a15;color:#fff;height:calc(100svh - var(--hdr,110px));min-height:560px;max-height:1400px;display:flex;flex-direction:column;border-bottom:2px solid #1c1b1a}
+.wrap section.tm-hero{background:#121a15;color:#fff;height:calc(calc(100 * var(--svh, 1vh)) - var(--hdr,110px));min-height:560px;max-height:1400px;display:flex;flex-direction:column;border-bottom:2px solid #1c1b1a}
 .tm-stage{flex:1;min-height:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
 .tm-text{grid-column:1 / span 5;align-self:center;display:flex;flex-direction:column;gap:20px;padding:40px 0 40px 56px;min-width:0;position:relative;z-index:1}
 .tm-photo{grid-column:6 / span 7;position:relative;overflow:hidden;container-type:size;min-height:0}
@@ -108,7 +108,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .tm-stage{display:flex;flex-direction:column}
   .tm-text{padding:56px 32px 40px;gap:16px;align-self:stretch}
   .wrap section.tm-hero h1.tm-h1{font-size:clamp(48px,7vw,72px) !important;line-height:.95 !important}
-  .tm-photo{aspect-ratio:16/9;width:100%;flex:none;max-width:calc((100svh - var(--hdr, 80px)) * var(--ifit, .85) * 16 / 9);margin-inline:auto}
+  .tm-photo{aspect-ratio:16/9;width:100%;flex:none;max-width:calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 80px)) * var(--ifit, .85) * 16 / 9);margin-inline:auto}
   .tm-fade{background:linear-gradient(180deg,#121a15 0%,rgba(18,26,21,0) 22%)}
   .wrap .tm-fbar{padding:0 32px !important;grid-template-columns:1fr 1fr !important}
   .wrap .tm-fbar>div{padding:16px 16px 16px 0 !important;border-right:0 !important;border-bottom:1px solid #2c3a31 !important}
@@ -126,7 +126,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
    screen below the sticky header and the "01 · Hero" label, so the whole video and its controls are
    visible without scrolling. Flush left like the rest of the page; the caption keeps the same width.
    Phones: edge to edge (the mobile rule above), caption inside the 20px gutter. */
-#hero .tm-video,#hero .tm-cap{width:min(100%, 1168px, calc((100svh - var(--hdr,118px)) * var(--vfit, .8) * 16 / 9))}
+#hero .tm-video,#hero .tm-cap{width:min(100%, 1168px, calc((calc(100 * var(--svh, 1vh)) - var(--hdr,118px)) * var(--vfit, .8) * 16 / 9))}
 #hero .tm-video{aspect-ratio:16/9;margin:0 0 12px 0;background:#000}
 #hero .tm-video video{width:100%;height:100%;object-fit:contain;display:block;background:#000}
 @media (max-width:767px){#hero .tm-cap{width:auto}}
@@ -349,9 +349,9 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=232012c5" defer></script>
+<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
 <script src="/assets/js/site.js?v=969609fd" defer></script>
-<script src="/assets/js/fit-media.js?v=96c79502" defer></script>
+<script src="/assets/js/fit-media.js?v=981c4c5b" defer></script>
 <script src="/assets/js/pages/trailmate.js?v=e3094c55" defer></script>
 </body>
 </html>

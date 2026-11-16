@@ -90,15 +90,15 @@
 @media (max-width:767px){
   .illo{display:flex;flex-direction:column;justify-content:center;padding:20px}
   /* fill the last screen: viewport − 56px header − footer (− "See all projects" bar on Home) */
-  .illo[data-page="home"]{min-height:calc(100svh - 56px - 78px - 62px)}
-  .illo[data-page="work"]{min-height:calc(100svh - 56px - 94px)}
+  .illo[data-page="home"]{min-height:calc(calc(100 * var(--svh, 1vh)) - 56px - 78px - 62px)}
+  .illo[data-page="work"]{min-height:calc(calc(100 * var(--svh, 1vh)) - 56px - 94px)}
   .illo-shade{background:rgba(11,26,92,.72)}
   .illo-grid{width:100%;grid-template-columns:minmax(0,1fr);gap:0;align-items:start}
   .illo-text{display:contents}
   .illo-tri{display:none}
   .illo-title{order:1;font-size:24px;line-height:1.15;margin:0 0 6px}
   .illo-p{order:2;font-size:16px;line-height:1.45;margin:0 0 14px;max-width:none}
-  .illo-cover{order:3;width:min(75vw, 50svh);justify-self:start;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+  .illo-cover{order:3;width:min(75vw, calc(50 * var(--svh, 1vh)));justify-self:start;box-shadow:0 10px 24px rgba(0,0,0,.4)}
   .illo-latest{order:4;font-size:15px;line-height:1.45;margin:10px 0 0;max-width:none}
   .illo-btns{order:5;grid-template-columns:minmax(0,1fr);justify-content:stretch;gap:10px;margin:14px 0 0}
   .illo-btn{min-height:48px;padding:0 16px;gap:16px;font-size:12px;letter-spacing:.06em}

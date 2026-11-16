@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=c8b609ed">
+<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap">
@@ -331,15 +331,15 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 
   <main id="main">
 
-  <div class="first-screen" style="display:flex;flex-direction:column;min-height:calc(100svh - 86px)">
-  <section class="sec-pad hero-pad" data-sp-hero="1" style="padding:48px 56px 96px;flex:1;display:flex;flex-direction:column;justify-content:center;position:relative">
+  <div class="first-screen" style="display:flex;flex-direction:column;min-height:calc(calc(100 * var(--svh, 1vh)) - 86px)">
+  <section class="sec-pad hero-pad" data-sp-hero="1" style="padding:clamp(16px, 5vh, 48px) 56px clamp(72px, 10vh, 96px);flex:1;display:flex;flex-direction:column;justify-content:center;position:relative">
     <div class="hero-grid" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start">
       <div data-sp="text" style="grid-column:1 / span 7;min-width:0">
         <div data-sp="role" class="hero-role" style="display:flex;align-items:center;gap:14px;margin:0 0 28px;animation:heroFadeUp .5s ease-out both"><span style="width:40px;height:3px;background:#1b3ac4;flex:none;transform-origin:left;animation:heroDrawLine .5s ease-out both"></span><span style="font:600 16px/1.2 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#1b3ac4">Interaction Designer</span></div>
-        <h1 class="h1-hero" data-sp="h1" data-type-hero="1" aria-label="Turning complexity into intuitive experiences." style="font:700 clamp(56px, 7.5vw, 96px)/.98 Archivo;letter-spacing:-.045em;margin:0;text-wrap:pretty"><span style="display:inline-block">Turning</span> <span style="display:inline-block">complexity</span> <span style="display:inline-block">into</span> <span class="aurora-word" style="display:inline-block">intuitive</span> <span style="display:inline-block">experiences.</span></h1>
-        <p class="hero-typer" style="margin:40px 0 0;min-height:2.8em;max-width:30em;display:flex;align-items:flex-start;gap:14px;text-wrap:pretty;font:500 clamp(18px, 1.7vw, 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none;margin-top:.55em"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Open to freelance projects and full-time opportunities. Based in Gothenburg, Sweden. Usability first, always. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true"><span data-typer-text="1">Open to freelance projects and full-time opportunities.</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;vertical-align:-.15em;background:#1b3ac4"></span></span></p>
+        <h1 class="h1-hero" data-sp="h1" data-type-hero="1" aria-label="Turning complexity into intuitive experiences." style="font:700 clamp(40px, min(7.5vw, 11vh), 96px)/.98 Archivo;letter-spacing:-.045em;margin:0;text-wrap:pretty"><span style="display:inline-block">Turning</span> <span style="display:inline-block">complexity</span> <span style="display:inline-block">into</span> <span class="aurora-word" style="display:inline-block">intuitive</span> <span style="display:inline-block">experiences.</span></h1>
+        <p class="hero-typer" style="margin:clamp(16px, 4vh, 40px) 0 0;min-height:2.8em;max-width:30em;display:flex;align-items:flex-start;gap:14px;text-wrap:pretty;font:500 clamp(18px, 1.7vw, 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none;margin-top:.55em"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Open to freelance projects and full-time opportunities. Based in Gothenburg, Sweden. Usability first, always. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true"><span data-typer-text="1">Open to freelance projects and full-time opportunities.</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;vertical-align:-.15em;background:#1b3ac4"></span></span></p>
       </div>
-      <div data-sp="photo" class="hero-photo" style="grid-column:8 / span 5;width:100%;height:clamp(320px, calc(100svh - 260px), 600px);overflow:hidden;background:#ececea;animation:heroFadeUp .6s ease-out both;animation-delay:.2s">
+      <div data-sp="photo" class="hero-photo" style="grid-column:8 / span 5;width:100%;height:clamp(240px, calc(calc(100 * var(--svh, 1vh)) - 260px), 600px);overflow:hidden;background:#ececea;animation:heroFadeUp .6s ease-out both;animation-delay:.2s">
         <img width="1244" height="1265" src="/assets/img/my-photo-ai.jpg" srcset="/assets/img/opt/my-photo-ai-480.webp 480w, /assets/img/opt/my-photo-ai-800.webp 800w, /assets/img/opt/my-photo-ai-1200.webp 1200w, /assets/img/opt/my-photo-ai-1244.webp 1244w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 38vw, (max-width: 1280px) 37vw, 540px" alt="Tarek Alfutih" style="width:100%;height:100%;object-fit:cover;display:block">
       </div>
     </div>
@@ -349,7 +349,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 
   </div>
 
-  <section id="skills" class="sec-pad sk" style="position:relative;min-height:calc(100svh - 66px);display:flex;flex-direction:column;justify-content:center;padding:48px 56px 40px;overflow:hidden;scroll-margin-top:66px">
+  <section id="skills" class="sec-pad sk" style="position:relative;min-height:calc(calc(100 * var(--svh, 1vh)) - 66px);display:flex;flex-direction:column;justify-content:center;padding:48px 56px 40px;overflow:hidden;scroll-margin-top:66px">
     <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 88%,transparent 100%)"><div style="position:absolute;inset:0;background-color:#f5f5f5;background-image:radial-gradient(circle,#c7c7c7 1.2px,transparent 1.6px);background-size:24px 24px;background-position:12px 12px;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%)"></div></div>
     <div class="sk-row" style="position:relative;isolation:isolate;margin:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start">
       <div class="sk-edu" style="grid-column:2 / span 3;border-top:3px solid #1c1b1a;padding-top:26px;display:flex;flex-direction:column;gap:14px">
@@ -524,9 +524,9 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   </footer>
 
 </div>
-<script src="/assets/js/video-controls.js?v=232012c5" defer></script>
+<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
 <script src="/assets/js/site.js?v=969609fd" defer></script>
-<script src="/assets/js/fit-media.js?v=96c79502" defer></script>
+<script src="/assets/js/fit-media.js?v=981c4c5b" defer></script>
 <script src="/assets/js/home.js?v=c9f2e883" defer></script>
 <script src="/assets/js/fireflies.js?v=4842aaa7" defer></script>
 </body>

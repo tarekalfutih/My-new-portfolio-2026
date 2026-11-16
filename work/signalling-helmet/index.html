@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=c8b609ed">
+<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Signalling Helmet — Tarek Alfutih</title>
@@ -121,7 +121,7 @@ section[id]{scroll-margin-top:96px}
 @keyframes sk3{0%,55%{opacity:0}63%,85%{opacity:1}100%{opacity:0}}
 @keyframes shBlink{0%,42%{opacity:1}52%,100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.shx-blink,.shx-press,.shx-press-dot,.gx,.sk1,.sk2,.sk3{animation:none !important;opacity:1}}
-@media (min-width:1025px){.shx{height:calc(100svh - var(--hdr,110px));min-height:560px}.shx-art{width:min(100%, calc((100svh - var(--hdr,110px) - var(--fh,120px) - 2 * clamp(32px,6vh,64px)) * 1.3333)) !important}}
+@media (min-width:1025px){.shx{height:calc(calc(100 * var(--svh, 1vh)) - var(--hdr,110px));min-height:560px}.shx-art{width:min(100%, calc((calc(100 * var(--svh, 1vh)) - var(--hdr,110px) - var(--fh,120px) - 2 * clamp(32px,6vh,64px)) * 1.3333)) !important}}
 @media (max-width:1024px){
   .shx-main{grid-template-columns:minmax(0,1fr) !important;row-gap:40px;padding:56px 32px 48px !important}
   .shx-text,.shx-art{grid-column:auto !important}
@@ -301,9 +301,9 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=232012c5" defer></script>
+<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
 <script src="/assets/js/site.js?v=969609fd" defer></script>
-<script src="/assets/js/fit-media.js?v=96c79502" defer></script>
+<script src="/assets/js/fit-media.js?v=981c4c5b" defer></script>
 <script src="/assets/js/pages/signalling-helmet.js?v=92fbcd79" defer></script>
 </body>
 </html>

@@ -43,7 +43,7 @@
 
 /* ---------- Laptop / Desktop ≥1025: hero + facts fill the first screen ---------- */
 @media (min-width:1025px){
-  .ih{height:calc(100svh - 78px - 66px);min-height:600px;max-height:1100px}
+  .ih{height:calc(calc(100 * var(--svh, 1vh)) - 78px - 66px);min-height:600px;max-height:1100px}
   .ih-sh{background:linear-gradient(90deg,rgba(11,26,92,.9) 0%,rgba(11,26,92,.72) 38%,rgba(11,26,92,0) 72%)}
   .ih-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;padding:40px 56px}
   .ih-tx{grid-column:1 / 6;gap:22px}
@@ -51,7 +51,7 @@
   .ih h1{font-size:clamp(48px,5.6vw,80px)}
   .ih-p{font-size:21px}
   .ih-cv{grid-column:7 / 13;justify-content:center}
-  .ih-cv>div{width:min(100%,640px,calc(100svh - 300px))}
+  .ih-cv>div{width:min(100%,640px,calc(calc(100 * var(--svh, 1vh)) - 300px))}
   .ih-f{grid-template-columns:repeat(4,1fr);padding:0 56px}
   .ih-f>div{padding:18px 20px;border-right:1px solid #dcd9d4}
   .ih-f>div:first-child{padding-left:0}
@@ -106,7 +106,7 @@
 /* Phones: the cover's size also follows the screen height, so label → title → stat → cover → buttons
    fit one screen (the rest of the hero is ~390px tall). */
 @media (max-width:767px){
-  .ih-cv>div{width:max(110px, min(calc(100% - 8px), calc(100svh - var(--hdr, 56px) - 410px)))}
+  .ih-cv>div{width:max(110px, min(calc(100% - 8px), calc(calc(100 * var(--svh, 1vh)) - var(--hdr, 56px) - 410px)))}
 }
 /* Tablets, laptops and desktops: the buttons sit side by side and only move under each other (same
    width) when the second one would come close to the cover (pages/illustration.js measures it).

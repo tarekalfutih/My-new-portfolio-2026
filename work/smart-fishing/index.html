@@ -10,7 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=c8b609ed">
+<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Smart Fishing — Tarek Alfutih</title>
@@ -107,7 +107,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   section.wl.first{min-height:0 !important}
 }
 @media (min-width:768px) and (max-width:1024px){
-  section.wl.first{--ph:clamp(220px,24svh,300px) !important;min-height:calc(100svh - 121px) !important}
+  section.wl.first{--ph:clamp(220px,calc(24 * var(--svh, 1vh)),300px) !important;min-height:calc(calc(100 * var(--svh, 1vh)) - 121px) !important}
   .wl .wl-top{grid-template-columns:minmax(0,1fr) var(--ph) !important;column-gap:40px !important;align-items:end !important;padding-top:40px !important;padding-bottom:48px !important}
   .wl .wl-spacer{display:block !important}
   .wl .wl-top .lbl{margin-bottom:24px !important}
@@ -139,10 +139,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wl .wl-top p.sf-sub{font-size:18px !important}
 }
 @media (max-width:400px){
-  .wl .wl-top{min-height:calc(100svh - 334px)}
+  .wl .wl-top{min-height:calc(calc(100 * var(--svh, 1vh)) - 334px)}
 }
 @media (max-width:400px) and (max-height:740px){
-  .wl .wl-top{min-height:calc(100svh - 292px)}
+  .wl .wl-top{min-height:calc(calc(100 * var(--svh, 1vh)) - 292px)}
 }
 .m-only{display:none}
 .m-menu a{height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 20px;border-bottom:1px solid #dcd9d4;font:600 20px/1 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-decoration:none}
@@ -273,7 +273,7 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   html body .wrap .findings-grid p,html body .wrap .pad ul li{font-size:15px !important}
 }
 @media (min-width:1025px){
-  section.wl.first{height:calc(100svh - var(--hdr,102px)) !important;min-height:0 !important}
+  section.wl.first{height:calc(calc(100 * var(--svh, 1vh)) - var(--hdr,102px)) !important;min-height:0 !important}
   .wl .wl-top{min-height:0 !important;padding-top:calc(var(--k,1) * clamp(40px,7vh,80px)) !important;padding-bottom:calc(var(--k,1) * clamp(24px,4vh,48px)) !important}
   .wl .wl-top .lbl{margin-bottom:calc(var(--k,1) * clamp(24px,4vh,40px)) !important}
   .wl .wl-top img{height:calc(var(--k,1) * clamp(72px,8vw,108px)) !important;margin-bottom:calc(var(--k,1) * clamp(20px,3.5vh,32px)) !important}
@@ -315,13 +315,13 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
 @media (min-width:1025px){
   #learn .sf-track{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px !important;align-items:start}
   #learn .sf-slide{max-width:none !important;flex:none !important}
-  #learn .sf-slide img{width:100% !important;max-width:min(100%,400px,calc((100svh - 220px) * 453 / 922)) !important}
+  #learn .sf-slide img{width:100% !important;max-width:min(100%,400px,calc((calc(100 * var(--svh, 1vh)) - 220px) * 453 / 922)) !important}
   #testing .sf-track{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px !important}
   #testing .sf-slide{flex:none !important}
 }
 @media (min-width:1025px){
   .findings-grid{grid-template-columns:minmax(0,1fr) !important}
-  .findings-grid>div:nth-child(-n+3){--pw:min(560px,calc((100svh - 260px) * .98 + 8px));grid-column:1 / -1;display:grid !important;grid-template-columns:var(--pw) minmax(0,480px);grid-template-rows:auto 1fr auto auto auto auto 1fr;column-gap:64px;align-items:start}
+  .findings-grid>div:nth-child(-n+3){--pw:min(560px,calc((calc(100 * var(--svh, 1vh)) - 260px) * .98 + 8px));grid-column:1 / -1;display:grid !important;grid-template-columns:var(--pw) minmax(0,480px);grid-template-rows:auto 1fr auto auto auto auto 1fr;column-gap:64px;align-items:start}
   .findings-grid>div:nth-child(-n+3)>.lbl:first-child{grid-column:1 / -1}
   .findings-grid>div:nth-child(-n+3)>div:nth-child(2){grid-column:1;grid-row:2 / -1;margin-bottom:0 !important}
   .findings-grid>div:nth-child(-n+3)>p,.findings-grid>div:nth-child(-n+3)>span{grid-column:2;justify-self:start}
@@ -337,19 +337,19 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   #film>div{max-width:288px !important}
 }
 @media (min-width:1025px){
-  #journey2{display:grid;grid-template-columns:min(560px,calc((100svh - 260px) * .98 + 8px)) minmax(0,480px);column-gap:64px;align-items:center}
+  #journey2{display:grid;grid-template-columns:min(560px,calc((calc(100 * var(--svh, 1vh)) - 260px) * .98 + 8px)) minmax(0,480px);column-gap:64px;align-items:center}
   #journey2>.lbl,#journey2>h2{grid-column:1 / -1}
   #journey2>h2{margin-bottom:24px !important}
   #journey2 .sf-ba{grid-column:1;grid-row:3;margin-bottom:0 !important;max-width:none !important;gap:8px !important}
   #journey2>p{grid-column:2;grid-row:3;margin:0 !important}
 }
 @media (min-width:1025px) and (max-width:1679px){
-  #learn .sf-slide img{max-width:calc(min(100%,400px,(100svh - 220px) * 453 / 922) * .7) !important}
+  #learn .sf-slide img{max-width:calc(min(100%,400px,(calc(100 * var(--svh, 1vh)) - 220px) * 453 / 922) * .7) !important}
   html body #testing .findings-grid>div:nth-child(4) .sf-slide img{max-width:calc(min(100%,453px) * .6) !important}
 }
 @media (min-width:1680px){
-  #learn .sf-slide img{max-width:min(100%,400px,calc((100svh - 460px) * 453 / 922)) !important}
-  html body #testing .findings-grid>div:nth-child(4) .sf-slide img{max-width:min(100%,453px,calc((100svh - 440px) * 453 / 922)) !important}
+  #learn .sf-slide img{max-width:min(100%,400px,calc((calc(100 * var(--svh, 1vh)) - 460px) * 453 / 922)) !important}
+  html body #testing .findings-grid>div:nth-child(4) .sf-slide img{max-width:min(100%,453px,calc((calc(100 * var(--svh, 1vh)) - 440px) * 453 / 922)) !important}
 }
 @media (min-width:1680px){
   #film>div{max-width:360px !important}
@@ -367,12 +367,12 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   .sf-proto>div:nth-child(2){border-right:none !important}
   .sf-proto>div:nth-child(3){grid-column:1 / -1;border-right:none !important;border-top:1px solid #dcd9d4 !important;margin-top:8px}
   .sf-proto>div:nth-child(-n+2){padding:28px 20px !important}
-  .sf-proto>div:nth-child(1)>.gray{max-width:min(100%,412px,calc((100svh - 200px) * 412 / 892)) !important;margin-left:auto;margin-right:auto}
-  .sf-proto>div:nth-child(2)>.gray{max-width:min(100%,412px,calc((100svh - 200px) * 645 / 1398)) !important;margin-left:auto;margin-right:auto}
+  .sf-proto>div:nth-child(1)>.gray{max-width:min(100%,412px,calc((calc(100 * var(--svh, 1vh)) - 200px) * 412 / 892)) !important;margin-left:auto;margin-right:auto}
+  .sf-proto>div:nth-child(2)>.gray{max-width:min(100%,412px,calc((calc(100 * var(--svh, 1vh)) - 200px) * 645 / 1398)) !important;margin-left:auto;margin-right:auto}
 }
 @media (min-width:768px) and (max-width:1024px){
-  .sf-proto>div:nth-child(1)>.gray{max-width:min(100%,calc((100svh - 200px) * 412 / 892)) !important;margin-left:auto;margin-right:auto}
-  .sf-proto>div:nth-child(2)>.gray{max-width:min(100%,calc((100svh - 200px) * 645 / 1398)) !important;margin-left:auto;margin-right:auto}
+  .sf-proto>div:nth-child(1)>.gray{max-width:min(100%,calc((calc(100 * var(--svh, 1vh)) - 200px) * 412 / 892)) !important;margin-left:auto;margin-right:auto}
+  .sf-proto>div:nth-child(2)>.gray{max-width:min(100%,calc((calc(100 * var(--svh, 1vh)) - 200px) * 645 / 1398)) !important;margin-left:auto;margin-right:auto}
 }
 @media (min-width:768px) and (max-width:1024px){.sf-tech{grid-template-columns:1fr 1fr !important}.sf-tech .sf-t-stack{grid-column:1 / -1;border-right:0 !important;border-bottom:1px solid #dcd9d4;padding-right:0 !important}.sf-tech .sf-t-data{padding-left:0 !important}}
 @media (prefers-reduced-motion:reduce){.sf-track{scroll-behavior:auto !important}}
@@ -431,7 +431,7 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
 
   <main id="main">
 
-<section class="rule first wl" id="overview" style="--ph:clamp(200px,28vh,280px);min-height:calc(100svh - 102px);display:flex;flex-direction:column;position:relative;overflow:hidden">
+<section class="rule first wl" id="overview" style="--ph:clamp(200px,28vh,280px);min-height:calc(calc(100 * var(--svh, 1vh)) - 102px);display:flex;flex-direction:column;position:relative;overflow:hidden">
 <div class="pad wl-top" style="flex:1;display:grid;grid-template-columns:minmax(0,1fr) var(--ph);column-gap:64px;align-items:center;padding-top:clamp(40px,7vh,80px);padding-bottom:clamp(24px,4vh,48px);background:#fff">
 <div style="min-width:0">
 <div class="lbl" style="color:#1c1b1a;margin-bottom:clamp(24px,4vh,40px)">Case study · 2025</div>
@@ -749,9 +749,9 @@ html body .wrap :is([style*=" 12px"],[style*=" 13px"],[style*="font-size:12px"],
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=232012c5" defer></script>
+<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
 <script src="/assets/js/site.js?v=969609fd" defer></script>
-<script src="/assets/js/fit-media.js?v=96c79502" defer></script>
+<script src="/assets/js/fit-media.js?v=981c4c5b" defer></script>
 <script src="/assets/js/carousel.js?v=3d5d9896" defer></script>
 <script src="/assets/js/pages/smart-fishing.js?v=9ded75b0" defer></script>
 </body>

@@ -5,6 +5,8 @@
    Without JavaScript the native controls stay (the attribute is only removed here).
    Loaded deferred, so it runs before video-behavior.js scans videos on DOMContentLoaded. */
 (function () {
+  // svh where supported (ignores the mobile toolbar); vh on older browsers such as TV browsers
+  var VH = window.CSS && CSS.supports && CSS.supports('height', '100svh') ? 'svh' : 'vh';
   var videos = document.querySelectorAll('video[controls]');
   if (!videos.length) return;
 
@@ -59,7 +61,7 @@
       var fit = function () {
         var r = shape();
         if (!r) return;
-        var cap = 'calc((100svh - var(--hdr, 80px)) * var(--vfit, .8) * ' + r.toFixed(4) + ')';
+        var cap = 'calc((100' + VH + ' - var(--hdr, 80px)) * var(--vfit, .8) * ' + r.toFixed(4) + ')';
         box.style.setProperty('max-width', own && own !== 'none' ? 'min(' + own + ', ' + cap + ')' : cap, 'important');
       };
       fit();
