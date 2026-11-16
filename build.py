@@ -117,6 +117,22 @@ def cache_bust(text):
     return re.sub(r'"(/assets/(?:css|js|video)/[^"?]+)"', repl, text)
 
 
+# Older browsers (e.g. TV browsers built on Chromium before 108) don't know the svh unit. A duplicate
+# vh declaration isn't enough: most of these values also use var(), and a var() value that turns out
+# invalid resets the property instead of falling back. So every Nsvh becomes calc(N * var(--svh, 1vh)):
+# base.css sets --svh to 1svh where supported; older browsers use the 1vh fallback.
+SVH = re.compile(r'(?<![\w.-])(\d+(?:\.\d+)?)svh\b')
+
+
+def svh_fallback(text):
+    def repl(m):
+        before = text[max(0, m.start() - 24):m.start()]
+        if '--svh:' in before or '@supports' in before:   # the definition in base.css stays as is
+            return m.group(0)
+        return 'calc(%s * var(--svh, 1vh))' % m.group(1)
+    return SVH.sub(repl, text)
+
+
 def with_base(text):
     """Prefix root-relative URLs (href/src/poster, srcset entries, CSS url()) with BASE_PATH."""
     if not BASE_PATH:
@@ -154,6 +170,7 @@ def render(text, route='/'):
     text = text.replace('<!--@scripts-->', partial('scripts'))
     text = re.sub(r'<!--@illustration (\w+)-->', lambda m: illustration(m.group(1)), text)
     text = responsive_images(text, route)
+    text = svh_fallback(text)
     text = cache_bust(text)
     text = with_base(text)
     left = re.findall(r'<!--@[^>]*-->', text)
@@ -166,6 +183,15 @@ def build():
     if os.path.isdir(DIST):
         shutil.rmtree(DIST)
     shutil.copytree(PUBLIC, DIST)
+    for dirpath, _, files in os.walk(os.path.join(DIST, 'assets', 'css')):
+        for name in files:
+            if name.endswith('.css'):
+                path = os.path.join(dirpath, name)
+                with open(path, encoding='utf-8') as f:
+                    css = f.read()
+                if 'svh' in css:
+                    with open(path, 'w', encoding='utf-8') as f:
+                        f.write(svh_fallback(css))
     if BASE_PATH and os.path.exists(os.path.join(DIST, 'CNAME')):
         os.remove(os.path.join(DIST, 'CNAME'))   # custom domain only applies to a root build
     pages_dir = os.path.join(SRC, 'pages')

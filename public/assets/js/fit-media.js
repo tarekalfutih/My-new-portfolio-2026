@@ -5,6 +5,8 @@
    on purpose (larger than the box that clips them), very tall infographics (meant to be scrolled),
    positioned / background art, and anything inside [data-nofit]. Videos: video-controls.js. */
 (function () {
+  // svh where supported (ignores the mobile toolbar); vh on older browsers such as TV browsers
+  var VH = window.CSS && CSS.supports && CSS.supports('height', '100svh') ? 'svh' : 'vh';
   var MIN = 160;          // px: small images never need it
   var TALLEST = 2.5;      // height / width: taller than this is a long graphic to scroll through
 
@@ -12,10 +14,19 @@
     var x = a.getBoundingClientRect(), y = b.getBoundingClientRect();
     return Math.abs(x.width - y.width) < 3 && Math.abs(x.height - y.height) < 3;
   }
+  // Children that take up space (overlays positioned on top of the image don't).
+  function inFlow(p) {
+    var n = 0;
+    for (var c = p.firstElementChild; c; c = c.nextElementSibling) {
+      var pos = getComputedStyle(c).position;
+      if (pos !== 'absolute' && pos !== 'fixed') n++;
+    }
+    return n;
+  }
   // The element that sets the image's size: the image, or the frame(s) it exactly fills.
   function boxOf(img) {
     var box = img, p = img.parentElement;
-    while (p && !/^(SECTION|MAIN|ARTICLE|BODY)$/.test(p.tagName) && p.children.length === 1 && same(box, p)) {
+    while (p && !/^(SECTION|MAIN|ARTICLE|BODY)$/.test(p.tagName) && inFlow(p) === 1 && same(box, p)) {
       box = p; p = p.parentElement;
     }
     return box;
@@ -46,7 +57,7 @@
     if (!isFinite(ratio) || ratio <= 0) return;
     done.add(img);
     var own = getComputedStyle(box).maxWidth;
-    var cap = 'calc((100svh - var(--hdr, 80px)) * var(--ifit, .85) * ' + ratio.toFixed(4) + ')';
+    var cap = 'calc((100' + VH + ' - var(--hdr, 80px)) * var(--ifit, .85) * ' + ratio.toFixed(4) + ')';
     box.style.setProperty('max-width', own && own !== 'none' ? 'min(' + own + ', ' + cap + ')' : cap, 'important');
   }
 

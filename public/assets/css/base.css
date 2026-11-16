@@ -23,6 +23,9 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+/* Screen-height unit used by the build for every svh value (build.py svh_fallback): svh where the
+   browser supports it (ignores the phone's toolbar), plain vh on older browsers such as TV browsers. */
+@supports (height: 1svh) { :root { --svh: 1svh; } }
 html { scrollbar-gutter: stable; }
 body {
   margin: 0;
