@@ -3,7 +3,7 @@
 (function () {
   var hero = document.querySelector('[data-ref="hero"]'), facts = document.querySelector('[data-ref="facts"]');
   if (!hero || !facts) return;
-  function fit() { hero.style.setProperty('--fh', facts.getBoundingClientRect().height + 'px'); }
+  function fit() { hero.style.setProperty('--fh', facts.getBoundingClientRect().height / (window.__z || 1) + 'px'); }
   fit();
   window.addEventListener('resize', fit);
   window.addEventListener('load', fit);

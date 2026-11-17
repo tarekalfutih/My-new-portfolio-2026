@@ -44,11 +44,11 @@
 
 /* ---------- Laptop / Desktop ≥1025 ---------- */
 @media (min-width:1025px){
-  .illo{padding:clamp(72px,6.3vw,120px) 56px clamp(96px,9.3vw,170px)}
+  .illo{padding:clamp(72px,calc(6.3 * var(--vw, 1vw)),120px) 56px clamp(96px,calc(9.3 * var(--vw, 1vw)),170px)}
   .illo-cover{grid-column:2 / span 4}
   .illo-text{grid-column:7 / span 6}
   .illo-tri{margin-bottom:24px}
-  .illo-title{font-size:clamp(28px,2.4vw,34px);margin-bottom:20px}   /* one line */
+  .illo-title{font-size:clamp(28px,calc(2.4 * var(--vw, 1vw)),34px);margin-bottom:20px}   /* one line */
   .illo-p,.illo-latest{font-size:17px;line-height:1.6}
   .illo-latest{margin-bottom:40px}
   .illo-btn{min-height:48px;padding:0 24px;gap:32px;font-size:14px}
@@ -57,7 +57,7 @@
 /* ---------- iPads 768–1024 (shared) ---------- */
 @media (min-width:768px) and (max-width:1024px){
   .illo-cover{grid-column:1 / span 5}
-  .illo-title{font-size:clamp(24px,2.6vw,28px)}
+  .illo-title{font-size:clamp(24px,calc(2.6 * var(--vw, 1vw)),28px)}
   .illo-p,.illo-latest{font-size:16px;line-height:1.5}
   .illo-btn{min-height:44px;font-size:13px}
 }
@@ -98,7 +98,7 @@
   .illo-tri{display:none}
   .illo-title{order:1;font-size:24px;line-height:1.15;margin:0 0 6px}
   .illo-p{order:2;font-size:16px;line-height:1.45;margin:0 0 14px;max-width:none}
-  .illo-cover{order:3;width:min(75vw, calc(50 * var(--svh, 1vh)));justify-self:start;box-shadow:0 10px 24px rgba(0,0,0,.4)}
+  .illo-cover{order:3;width:min(calc(75 * var(--vw, 1vw)), calc(50 * var(--svh, 1vh)));justify-self:start;box-shadow:0 10px 24px rgba(0,0,0,.4)}
   .illo-latest{order:4;font-size:15px;line-height:1.45;margin:10px 0 0;max-width:none}
   .illo-btns{order:5;grid-template-columns:minmax(0,1fr);justify-content:stretch;gap:10px;margin:14px 0 0}
   .illo-btn{min-height:48px;padding:0 16px;gap:16px;font-size:12px;letter-spacing:.06em}

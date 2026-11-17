@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/about/">
 <meta property="og:url" content="https://tarekdesign.se/about/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>About — Tarek Alfutih</title>
@@ -67,6 +78,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 .tl:hover .fg{animation-name:tPopH}.tl:hover .d{animation-name:tDrawH}.tl:hover .bl{animation-name:tInLH}.tl:hover .br{animation-name:tInRH}.tl:hover .sl{animation-name:tSlashH}.tl:hover .j1,.tl:hover .j2{animation-name:tTypeH}.tl:hover .cr{animation-name:tBlinkH}.tl:hover .st{animation-name:tSteamH}
 @media (prefers-reduced-motion:reduce){.tl svg *{animation:none !important;opacity:1 !important;stroke-dashoffset:0 !important}.tl .cr{opacity:0 !important}}
 @keyframes blobDrift{0%{transform:translate(0,0)}33%{transform:translate(6px,-5px)}66%{transform:translate(-5px,5px)}100%{transform:translate(0,0)}}
+@media (min-width:768px) and (max-width:1023px){html body .hd{padding-left:40px !important;padding-right:40px !important}}
 @media (max-width:760px){
   .hd{padding:16px 24px !important}
   .secpad{padding:36px 24px !important}
@@ -169,7 +181,7 @@ a:hover{color:#1b3ac4;text-decoration:underline}
     <div class="about-text" style="grid-column:6 / span 7">
       <div class="lbl" style="margin-bottom:14px;animation:heroFadeUp .5s ease-out both">About</div>
       <div style="width:56px;height:3px;background:#1b3ac4;margin:0 0 14px;transform-origin:left;animation:heroDrawLine .5s ease-out both;animation-delay:.15s"></div>
-      <h1 class="h1r" style="font:700 clamp(34px, 3.6vw, 46px)/1.08 Archivo;letter-spacing:-.02em;margin:0 0 16px"><span style="display:inline-block;animation:heroWordUp .5s ease-out both;animation-delay:0.25s">Interaction</span> <span style="display:inline-block;animation:heroWordUp .5s ease-out both;animation-delay:0.32s">Designer</span></h1>
+      <h1 class="h1r" style="font:700 clamp(34px, calc(3.6 * var(--vw, 1vw)), 46px)/1.08 Archivo;letter-spacing:-.02em;margin:0 0 16px"><span style="display:inline-block;animation:heroWordUp .5s ease-out both;animation-delay:0.25s">Interaction</span> <span style="display:inline-block;animation:heroWordUp .5s ease-out both;animation-delay:0.32s">Designer</span></h1>
       <p style="font:400 16px/1.6 Archivo;color:#3a3835;margin:0 0 14px;max-width:640px;animation:heroFadeUp .6s ease-out both;animation-delay:.68s">I design digital and physical experiences that make complex things easier to understand and use. I work through research, prototyping and user testing, improving the design based on what I learn.</p>
       <p style="font:400 16px/1.6 Archivo;color:#3a3835;margin:0 0 14px;max-width:640px;animation:heroFadeUp .6s ease-out both;animation-delay:.8s">My background in visual communication and illustration has given me strong visual skills and helps me communicate ideas and information in a clear and engaging way.</p>
       <div class="ab-loc" style="display:inline-flex;align-self:flex-start;width:fit-content;align-items:center;gap:10px;margin:8px 0 0;padding:0;font:500 15px/1.2 Archivo;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.86s"><span aria-hidden="true" style="position:relative;display:inline-flex;width:22px;height:22px;align-items:center;justify-content:center;flex:none"><span class="loc-ping" style="position:absolute;left:50%;top:50%;width:10px;height:10px;margin:-5px 0 0 -5px;border-radius:50%;background:#1b3ac4"></span><svg width="16" height="16" viewBox="0 0 24 24" style="position:relative"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" fill="#1b3ac4"></path><circle cx="12" cy="10" r="3" fill="#fff"></circle></svg></span>Based in Gothenburg, Sweden</div>
@@ -275,9 +287,9 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   </footer>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
 </body>
 </html>

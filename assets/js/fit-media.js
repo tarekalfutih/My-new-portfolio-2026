@@ -57,7 +57,7 @@
     if (!isFinite(ratio) || ratio <= 0) return;
     done.add(img);
     var own = getComputedStyle(box).maxWidth;
-    var cap = 'calc((100' + VH + ' - var(--hdr, 80px)) * var(--ifit, .85) * ' + ratio.toFixed(4) + ')';
+    var cap = 'calc((100 * var(--svh, 1vh) - var(--hdr, 80px)) * var(--ifit, .85) * ' + ratio.toFixed(4) + ')';
     box.style.setProperty('max-width', own && own !== 'none' ? 'min(' + own + ', ' + cap + ')' : cap, 'important');
   }
 

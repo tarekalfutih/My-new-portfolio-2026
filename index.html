@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/">
 <meta property="og:url" content="https://tarekdesign.se/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap">
@@ -143,7 +154,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
 .sk-arw path{stroke-dashoffset:1}
 .sk-armed .sk-arw path{stroke-dashoffset:1}
 .sk-note:hover{transform:rotate(0deg) translateY(-4px) !important}
-.sk-out{position:relative;display:inline-flex;align-items:center;min-height:48px;color:#1b3ac4;font:600 clamp(28px, 2.3vw, 34px)/1 Caveat,cursive;letter-spacing:0;text-decoration:none}
+.sk-out{position:relative;display:inline-flex;align-items:center;min-height:48px;color:#1b3ac4;font:600 clamp(28px, calc(2.3 * var(--vw, 1vw)), 34px)/1 Caveat,cursive;letter-spacing:0;text-decoration:none}
 .sk-out:hover{color:#122a8f;text-decoration:none}
 .sk-out:active{color:#0b1a5c}
 .sk-out:focus-visible{outline:2px solid #1b3ac4;outline-offset:6px}
@@ -154,16 +165,16 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   #skills{min-height:0 !important;padding:72px 24px !important}
   #skills .sk-edu{grid-column:1 / span 4 !important}
   #skills .sk-frame{grid-column:5 / span 8 !important}
-  #skills .sk-steps{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:24px clamp(44px, 4.6vw, 64px) !important}
+  #skills .sk-steps{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:24px clamp(44px, calc(4.6 * var(--vw, 1vw)), 64px) !important}
   #skills .sk-step>div p{font-size:14px !important}
   #skills .sk-step>div{padding:18px 16px !important}
 }
 @media (min-width:901px) and (max-width:1100px){#skills .sk-steps{grid-template-columns:repeat(3,minmax(0,1fr)) !important}}
 @media (min-width:901px) and (max-width:1100px) and (orientation:portrait){#skills{min-height:0 !important;padding:104px 56px 96px !important}}
 @media (min-width:1101px) and (min-height:760px){
-  .sk-step>div{padding:clamp(24px, 3vh, 34px) clamp(22px, 1.8vw, 30px) !important}
-  .sk-step>div p{font-size:clamp(16px, 1.15vw, 19px) !important}
-  .sk-board{padding-top:clamp(28px, 4.4vh, 52px) !important;padding-bottom:clamp(36px, 5.4vh, 64px) !important;gap:clamp(24px, 3.6vh, 40px) !important}
+  .sk-step>div{padding:clamp(24px, calc(3 * var(--vh, 1vh)), 34px) clamp(22px, calc(1.8 * var(--vw, 1vw)), 30px) !important}
+  .sk-step>div p{font-size:clamp(16px, calc(1.15 * var(--vw, 1vw)), 19px) !important}
+  .sk-board{padding-top:clamp(28px, calc(4.4 * var(--vh, 1vh)), 52px) !important;padding-bottom:clamp(36px, calc(5.4 * var(--vh, 1vh)), 64px) !important;gap:clamp(24px, calc(3.6 * var(--vh, 1vh)), 40px) !important}
 }
 /* "How I work" on laptops and desktops: spacing and note text follow the screen height. At ~600px
    tall it is at its tightest and it grows back to the full design by ~950px, so the section and
@@ -171,16 +182,16 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
    Shorter than ~640px it can't fit at a readable size: the button then stays stuck to the bottom of
    the screen while the section shows. */
 @media (min-width:901px) and (orientation:landscape){
-  #skills{padding-top:clamp(6px, calc(6px + (100vh - 600px) * 0.1), 56px) !important;padding-bottom:clamp(4px, calc(4px + (100vh - 600px) * 0.1), 40px) !important;overflow:hidden !important;overflow:clip !important}
-  #skills .sk-edu{padding-top:clamp(4px, calc(4px + (100vh - 600px) * 0.07), 26px) !important}
-  #skills .sk-frame{padding:clamp(10px, calc(10px + (100vh - 600px) * 0.05), 28px) 28px clamp(12px, calc(12px + (100vh - 600px) * 0.05), 30px) !important}
-  #skills .sk-how{margin-top:clamp(8px, calc(8px + (100vh - 600px) * 0.1), 64px) !important}
-  #skills .sk-board{padding-top:clamp(8px, calc(8px + (100vh - 600px) * 0.08), 52px) !important;padding-bottom:clamp(10px, calc(10px + (100vh - 600px) * 0.1), 64px) !important;gap:clamp(8px, calc(8px + (100vh - 600px) * 0.08), 40px) !important}
-  #skills .sk-step>div{padding:clamp(10px, calc(10px + (100vh - 600px) * 0.05), 34px) clamp(16px, 1.8vw, 30px) !important;gap:clamp(6px, calc(6px + (100vh - 600px) * 0.02), 14px) !important}
+  #skills{padding-top:clamp(6px, calc(6px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.1), 56px) !important;padding-bottom:clamp(4px, calc(4px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.1), 40px) !important;overflow:hidden !important;overflow:clip !important}
+  #skills .sk-edu{padding-top:clamp(4px, calc(4px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.07), 26px) !important}
+  #skills .sk-frame{padding:clamp(10px, calc(10px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.05), 28px) 28px clamp(12px, calc(12px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.05), 30px) !important}
+  #skills .sk-how{margin-top:clamp(8px, calc(8px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.1), 64px) !important}
+  #skills .sk-board{padding-top:clamp(8px, calc(8px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.08), 52px) !important;padding-bottom:clamp(10px, calc(10px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.1), 64px) !important;gap:clamp(8px, calc(8px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.08), 40px) !important}
+  #skills .sk-step>div{padding:clamp(10px, calc(10px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.05), 34px) clamp(16px, calc(1.8 * var(--vw, 1vw)), 30px) !important;gap:clamp(6px, calc(6px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.02), 14px) !important}
   /* The notes are square, so on wide-but-short screens their size also follows the height. */
-  #skills .sk-step>div{max-width:max(200px, calc(50vh - 100px)) !important;margin-inline:auto !important}
-  #skills .sk-step>div p{font-size:min(clamp(14px, calc(14px + (100vh - 600px) * 0.015), 19px), max(14px, 1.15vw)) !important;line-height:1.4 !important}
-  #skills .sk-cta-wrap{padding-top:clamp(4px, calc(4px + (100vh - 600px) * 0.1), 40px) !important}
+  #skills .sk-step>div{max-width:max(200px, calc(calc(50 * var(--vh, 1vh)) - 100px)) !important;margin-inline:auto !important}
+  #skills .sk-step>div p{font-size:min(clamp(14px, calc(14px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.015), 19px), max(14px, calc(1.15 * var(--vw, 1vw)))) !important;line-height:1.4 !important}
+  #skills .sk-cta-wrap{padding-top:clamp(4px, calc(4px + (calc(100 * var(--vh, 1vh)) - 600px) * 0.1), 40px) !important}
 }
 @media (min-width:901px) and (orientation:landscape) and (max-height:640px){
   #skills .sk-cta-wrap{position:sticky !important;bottom:0;z-index:5;background:#fff}
@@ -275,7 +286,7 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   .hero-grid>div[data-sp="text"]{grid-column:1 / span 7 !important}
   .hero-grid>.hero-photo,.hero-grid .hero-photo{grid-column:8 / span 5 !important;max-width:none !important;height:auto !important;aspect-ratio:3/4}
   .hero-grid{align-items:center !important}
-  .h1-hero{font-size:clamp(48px,7vw,60px) !important}
+  .h1-hero{font-size:clamp(48px,calc(7 * var(--vw, 1vw)),60px) !important}
   .lead-photo{max-width:none !important}
   .first-screen{min-height:0 !important}
   .hero-pad{padding:72px 24px 104px !important}
@@ -332,12 +343,12 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   <main id="main">
 
   <div class="first-screen" style="display:flex;flex-direction:column;min-height:calc(calc(100 * var(--svh, 1vh)) - 86px)">
-  <section class="sec-pad hero-pad" data-sp-hero="1" style="padding:clamp(16px, 5vh, 48px) 56px clamp(72px, 10vh, 96px);flex:1;display:flex;flex-direction:column;justify-content:center;position:relative">
+  <section class="sec-pad hero-pad" data-sp-hero="1" style="padding:clamp(16px, calc(5 * var(--vh, 1vh)), 48px) 56px clamp(72px, calc(10 * var(--vh, 1vh)), 96px);flex:1;display:flex;flex-direction:column;justify-content:center;position:relative">
     <div class="hero-grid" style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start">
       <div data-sp="text" style="grid-column:1 / span 7;min-width:0">
         <div data-sp="role" class="hero-role" style="display:flex;align-items:center;gap:14px;margin:0 0 28px;animation:heroFadeUp .5s ease-out both"><span style="width:40px;height:3px;background:#1b3ac4;flex:none;transform-origin:left;animation:heroDrawLine .5s ease-out both"></span><span style="font:600 16px/1.2 Archivo;letter-spacing:.14em;text-transform:uppercase;color:#1b3ac4">Interaction Designer</span></div>
-        <h1 class="h1-hero" data-sp="h1" data-type-hero="1" aria-label="Turning complexity into intuitive experiences." style="font:700 clamp(40px, min(7.5vw, 11vh), 96px)/.98 Archivo;letter-spacing:-.045em;margin:0;text-wrap:pretty"><span style="display:inline-block">Turning</span> <span style="display:inline-block">complexity</span> <span style="display:inline-block">into</span> <span class="aurora-word" style="display:inline-block">intuitive</span> <span style="display:inline-block">experiences.</span></h1>
-        <p class="hero-typer" style="margin:clamp(16px, 4vh, 40px) 0 0;min-height:2.8em;max-width:30em;display:flex;align-items:flex-start;gap:14px;text-wrap:pretty;font:500 clamp(18px, 1.7vw, 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none;margin-top:.55em"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Open to freelance projects and full-time opportunities. Based in Gothenburg, Sweden. Usability first, always. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true"><span data-typer-text="1">Open to freelance projects and full-time opportunities.</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;vertical-align:-.15em;background:#1b3ac4"></span></span></p>
+        <h1 class="h1-hero" data-sp="h1" data-type-hero="1" aria-label="Turning complexity into intuitive experiences." style="font:700 clamp(40px, min(calc(7.5 * var(--vw, 1vw)), calc(11 * var(--vh, 1vh))), 96px)/.98 Archivo;letter-spacing:-.045em;margin:0;text-wrap:pretty"><span style="display:inline-block">Turning</span> <span style="display:inline-block">complexity</span> <span style="display:inline-block">into</span> <span class="aurora-word" style="display:inline-block">intuitive</span> <span style="display:inline-block">experiences.</span></h1>
+        <p class="hero-typer" style="margin:clamp(16px, calc(4 * var(--vh, 1vh)), 40px) 0 0;min-height:2.8em;max-width:30em;display:flex;align-items:flex-start;gap:14px;text-wrap:pretty;font:500 clamp(18px, calc(1.7 * var(--vw, 1vw)), 24px)/1.4 Archivo;letter-spacing:-.01em;color:#4a4744;animation:heroFadeUp .6s ease-out both;animation-delay:.9s"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none;margin-top:.55em"></span><span style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Open to freelance projects and full-time opportunities. Based in Gothenburg, Sweden. Usability first, always. Accessible design for everyone. Designer with an illustrator's eye.</span><span aria-hidden="true"><span data-typer-text="1">Open to freelance projects and full-time opportunities.</span><span class="typer-caret" style="display:inline-block;width:2px;height:1.1em;margin-left:3px;vertical-align:-.15em;background:#1b3ac4"></span></span></p>
       </div>
       <div data-sp="photo" class="hero-photo" style="grid-column:8 / span 5;width:100%;height:clamp(240px, calc(calc(100 * var(--svh, 1vh)) - 260px), 600px);overflow:hidden;background:#ececea;animation:heroFadeUp .6s ease-out both;animation-delay:.2s">
         <img width="1244" height="1265" src="/assets/img/my-photo-ai.jpg" srcset="/assets/img/opt/my-photo-ai-480.webp 480w, /assets/img/opt/my-photo-ai-800.webp 800w, /assets/img/opt/my-photo-ai-1200.webp 1200w, /assets/img/opt/my-photo-ai-1244.webp 1244w" sizes="(max-width: 560px) 100vw, (max-width: 900px) 38vw, (max-width: 1280px) 37vw, 540px" alt="Tarek Alfutih" style="width:100%;height:100%;object-fit:cover;display:block">
@@ -353,11 +364,11 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
     <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;-webkit-mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(180deg,transparent 0%,#000 12%,#000 88%,transparent 100%)"><div style="position:absolute;inset:0;background-color:#f5f5f5;background-image:radial-gradient(circle,#c7c7c7 1.2px,transparent 1.6px);background-size:24px 24px;background-position:12px 12px;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 14%,#000 86%,transparent 100%)"></div></div>
     <div class="sk-row" style="position:relative;isolation:isolate;margin:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:24px;align-items:start">
       <div class="sk-edu" style="grid-column:2 / span 3;border-top:3px solid #1c1b1a;padding-top:26px;display:flex;flex-direction:column;gap:14px">
-        <div class="sk-edu-t" style="font:700 clamp(26px, 2.5vw, 34px)/1.08 Archivo;letter-spacing:-.03em;color:#1c1b1a;text-wrap:balance">Master’s in Interaction Design</div>
+        <div class="sk-edu-t" style="font:700 clamp(26px, calc(2.5 * var(--vw, 1vw)), 34px)/1.08 Archivo;letter-spacing:-.03em;color:#1c1b1a;text-wrap:balance">Master’s in Interaction Design</div>
         <div class="sk-edu-s" style="display:flex;align-items:center;gap:10px;font:600 16px/1.3 Archivo;color:#122a8f"><span aria-hidden="true" style="width:8px;height:8px;background:#122a8f;flex:none"></span>Chalmers · 2026</div>
       </div>
       <div class="sk-frame" style="grid-column:5 / span 7;position:relative;box-sizing:border-box;padding:28px 32px 30px;border:1px solid #a9b6ee;background:rgba(229,233,251,.45)">
-        <h2 class="sk-h" style="font:700 clamp(26px, 2.7vw, 36px)/1.08 Archivo;letter-spacing:-.03em;color:#1c1b1a;margin:0 0 18px;text-wrap:balance">I design across digital + physical</h2>
+        <h2 class="sk-h" style="font:700 clamp(26px, calc(2.7 * var(--vw, 1vw)), 36px)/1.08 Archivo;letter-spacing:-.03em;color:#1c1b1a;margin:0 0 18px;text-wrap:balance">I design across digital + physical</h2>
         <ul class="kw">
           <li class="sk-tag">Digital products</li>
           <li class="sk-tag">Tangible interactions</li>
@@ -366,25 +377,25 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
         </ul>
       </div>
     </div>
-    <div class="sk-row sk-how" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px 24px;align-items:start;margin-top:clamp(48px, 5vw, 64px)">
-      <div class="sk-board" style="grid-column:2 / span 10;position:relative;background:#ffffff;border:10px solid #e6e8ec;box-shadow:inset 0 0 0 1px #cfd3da,0 0 0 1px #cfd3da,0 18px 32px -20px rgba(11,26,92,.35);padding:clamp(22px, 2.6vw, 34px) clamp(24px, 4vw, 56px) clamp(30px, 3.4vw, 44px);display:flex;flex-direction:column;gap:clamp(20px, 2.2vw, 28px)">
+    <div class="sk-row sk-how" style="position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px 24px;align-items:start;margin-top:clamp(48px, calc(5 * var(--vw, 1vw)), 64px)">
+      <div class="sk-board" style="grid-column:2 / span 10;position:relative;background:#ffffff;border:10px solid #e6e8ec;box-shadow:inset 0 0 0 1px #cfd3da,0 0 0 1px #cfd3da,0 18px 32px -20px rgba(11,26,92,.35);padding:clamp(22px, calc(2.6 * var(--vw, 1vw)), 34px) clamp(24px, calc(4 * var(--vw, 1vw)), 56px) clamp(30px, calc(3.4 * var(--vw, 1vw)), 44px);display:flex;flex-direction:column;gap:clamp(20px, calc(2.2 * var(--vw, 1vw)), 28px)">
         <div class="sk-how-l">
-          <h3 style="display:flex;align-items:center;gap:12px;font:700 clamp(18px, 1.6vw, 22px)/1.1 Archivo;letter-spacing:-.015em;color:#1c1b1a;margin:0"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none"></span><span class="hw-mark">How I work<svg class="hw-ul" aria-hidden="true" viewBox="0 0 100 6" preserveAspectRatio="none" style="clip-path:inset(0 100% 0 0);position:absolute;left:0;top:calc(100% + .12em);width:100%;height:.3em;overflow:visible"><path d="M1 4 C 30 2, 65 5, 99 2.5" fill="none" stroke="#1b3ac4" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></h3>
+          <h3 style="display:flex;align-items:center;gap:12px;font:700 clamp(18px, calc(1.6 * var(--vw, 1vw)), 22px)/1.1 Archivo;letter-spacing:-.015em;color:#1c1b1a;margin:0"><span aria-hidden="true" style="width:8px;height:8px;background:#1b3ac4;flex:none"></span><span class="hw-mark">How I work<svg class="hw-ul" aria-hidden="true" viewBox="0 0 100 6" preserveAspectRatio="none" style="clip-path:inset(0 100% 0 0);position:absolute;left:0;top:calc(100% + .12em);width:100%;height:.3em;overflow:visible"><path d="M1 4 C 30 2, 65 5, 99 2.5" fill="none" stroke="#1b3ac4" stroke-width="1.6" stroke-linecap="round" vector-effect="non-scaling-stroke"></path></svg></span></h3>
         </div>
-        <ol class="sk-steps" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px clamp(44px, 4.6vw, 64px)">
+        <ol class="sk-steps" style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px clamp(44px, calc(4.6 * var(--vw, 1vw)), 64px)">
           <li class="sk-step" style="position:relative">
             <div class="sk-note" style="position:relative;transform:rotate(-2deg);background:#ff6b6b;border-bottom-right-radius:70px 14px;background-image:linear-gradient(315deg,rgba(255,255,255,.4) 0,rgba(0,0,0,.1) 7%,rgba(0,0,0,0) 24%);padding:24px 22px 26px;aspect-ratio:1 / 1;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:14px;box-shadow:0 1px 2px rgba(0,0,0,.14);transition:transform .25s ease">
               <span class="sk-num" style="display:none;font:800 36px/1 Archivo;letter-spacing:-.03em;color:#1c1b1a">01</span>
               <p style="font:500 16px/1.45 Archivo;color:#1c1b1a;margin:0;text-wrap:pretty">I start by <span class="hw-hl">understanding the problem</span> and the people I'm designing for.</p>
             </div>
-            <svg class="sk-arw" aria-hidden="true" viewBox="0 0 48 28" style="position:absolute;top:50%;left:100%;width:clamp(44px, 4.6vw, 64px);height:28px;margin-top:-14px;padding:0 6px;box-sizing:border-box;overflow:visible"><path d="M4 19 C 12 10, 28 13, 43 13" pathLength="1" stroke-dasharray="1" fill="none" stroke="#1b3ac4" stroke-width="2.2" stroke-linecap="round"></path><path d="M36.5 7.5 L43.5 13 L36 18.5" pathLength="1" stroke-dasharray="1" fill="none" stroke="#1b3ac4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <svg class="sk-arw" aria-hidden="true" viewBox="0 0 48 28" style="position:absolute;top:50%;left:100%;width:clamp(44px, calc(4.6 * var(--vw, 1vw)), 64px);height:28px;margin-top:-14px;padding:0 6px;box-sizing:border-box;overflow:visible"><path d="M4 19 C 12 10, 28 13, 43 13" pathLength="1" stroke-dasharray="1" fill="none" stroke="#1b3ac4" stroke-width="2.2" stroke-linecap="round"></path><path d="M36.5 7.5 L43.5 13 L36 18.5" pathLength="1" stroke-dasharray="1" fill="none" stroke="#1b3ac4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </li>
           <li class="sk-step" style="position:relative">
             <div class="sk-note" style="position:relative;transform:rotate(1.5deg);background:#7ee0b5;border-bottom-left-radius:70px 14px;background-image:linear-gradient(45deg,rgba(255,255,255,.4) 0,rgba(0,0,0,.1) 7%,rgba(0,0,0,0) 24%);padding:24px 22px 26px;aspect-ratio:1 / 1;box-sizing:border-box;display:flex;flex-direction:column;justify-content:center;gap:14px;box-shadow:0 1px 2px rgba(0,0,0,.14);transition:transform .25s ease">
               <span class="sk-num" style="display:none;font:800 36px/1 Archivo;letter-spacing:-.03em;color:#1c1b1a">02</span>
               <p style="font:500 16px/1.45 Archivo;color:#1c1b1a;margin:0;text-wrap:pretty">I explore <span class="hw-hl">different ideas</span> and turn them into <span class="hw-hl">prototypes</span> that people can interact with.</p>
             </div>
-            <svg class="sk-arw" aria-hidden="true" viewBox="0 0 48 28" style="position:absolute;top:50%;left:100%;width:clamp(44px, 4.6vw, 64px);height:28px;margin-top:-14px;padding:0 6px;box-sizing:border-box;overflow:visible"><path d="M4 8 C 12 17, 28 14, 43 14" pathLength="1" stroke-dasharray="1" fill="none" stroke="#1b3ac4" stroke-width="2.2" stroke-linecap="round"></path><path d="M36 8.5 L43.5 14 L36.5 19.5" pathLength="1" stroke-dasharray="1" fill="none" stroke="#1b3ac4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            <svg class="sk-arw" aria-hidden="true" viewBox="0 0 48 28" style="position:absolute;top:50%;left:100%;width:clamp(44px, calc(4.6 * var(--vw, 1vw)), 64px);height:28px;margin-top:-14px;padding:0 6px;box-sizing:border-box;overflow:visible"><path d="M4 8 C 12 17, 28 14, 43 14" pathLength="1" stroke-dasharray="1" fill="none" stroke="#1b3ac4" stroke-width="2.2" stroke-linecap="round"></path><path d="M36 8.5 L43.5 14 L36.5 19.5" pathLength="1" stroke-dasharray="1" fill="none" stroke="#1b3ac4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
           </li>
           <li class="sk-step" style="position:relative">
             <span aria-hidden="true" style="position:absolute;left:8px;bottom:10px;width:40%;height:22px;background:rgba(0,0,0,.25);box-shadow:0 12px 12px rgba(0,0,0,.3);transform:rotate(-5deg)"></span><span aria-hidden="true" style="position:absolute;right:8px;bottom:10px;width:40%;height:22px;background:rgba(0,0,0,.25);box-shadow:0 12px 12px rgba(0,0,0,.3);transform:rotate(3deg)"></span>
@@ -524,11 +535,11 @@ html{scroll-behavior:smooth}@media (prefers-reduced-motion:reduce){html{scroll-b
   </footer>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
-<script src="/assets/js/home.js?v=c9f2e883" defer></script>
-<script src="/assets/js/fireflies.js?v=4842aaa7" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
+<script src="/assets/js/home.js?v=9640bba0" defer></script>
+<script src="/assets/js/fireflies.js?v=dedac5b7" defer></script>
 </body>
 </html>

@@ -9,7 +9,7 @@
     if (!sec) return;
     if (innerWidth < 1025) { sec.style.removeProperty('--k'); return; }
     var top = sec.querySelector('.wl-top');
-    var need = function () { var t = 0; for (var i = 0; i < sec.children.length; i++) t += sec.children[i].getBoundingClientRect().height; return t; };
+    var need = function () { var t = 0; for (var i = 0; i < sec.children.length; i++) t += sec.children[i].getBoundingClientRect().height; return t / (window.__z || 1); };
     var fits = function () { return need() <= sec.clientHeight - 12; };
     if (top) top.style.setProperty('flex', 'none', 'important');
     var lo = .55, hi = 1;

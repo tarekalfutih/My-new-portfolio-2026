@@ -62,7 +62,7 @@ video[controls], [data-replay], [data-top], [data-filter] { cursor: pointer; }
 
 /* Page frame. Decorative bleed (grid backdrops, glows) never causes a horizontal page scroll. */
 .wrap {
-  max-width: 1280px; margin: 0 auto; min-height: 100vh; background: #fff;
+  max-width: 1280px; margin: 0 auto; min-height: calc(100 * var(--vh, 1vh)); background: #fff;
   border-left: 1px solid var(--hairline); border-right: 1px solid var(--hairline);
   overflow-x: clip;
 }
@@ -372,4 +372,30 @@ html.cvv-open { overflow: hidden; }
    only brings back Safari's collapsed toolbar, so keep it well above that zone (one tap works). */
 @media (hover: none) and (pointer: coarse) {
   .btt { padding-bottom: 120px; }
+}
+
+/* Big screens (head.html adds .zm above 1920×1080): the page under the header is the 1920 layout
+   scaled by --z. The header is not scaled (zoom back to 1), but its side padding is, so the logo and
+   menu stay lined up with the content's edges. Screen units go back to the real ones in the header. */
+html.zm .wrap { zoom: var(--z); }
+html.zm .wrap > .hd, html.zm .wrap > .cs-hd { zoom: var(--zi); --vw: calc(1 * var(--vw, 1vw)); --vh: calc(1 * var(--vh, 1vh)); --svh: 1svh; }
+html.zm .hd, html.zm .cs-bar { padding-left: calc(var(--pad-x) * var(--z)); padding-right: calc(var(--pad-x) * var(--z)); }
+html.zm .cs-nav { padding-left: calc(var(--pad-x) * var(--z)) !important; padding-right: calc(var(--pad-x) * var(--z)) !important; }
+
+/* Logo and menu line up with the text's left and right edges (the menu icon sits 11px inside its
+   44px button, so the right padding is 11px less). Phones: text at 20px. 600–767px: the centred
+   text column (same rule as #main sections above). Case studies keep the 56px edge until 860px,
+   where their content switches to 24px. Page-specific edges are set in those pages. */
+@media (max-width: 767px) {
+  html body .hd, html body .cs-bar { padding-left: 20px !important; padding-right: 9px !important; }
+}
+@media (min-width: 600px) and (max-width: 767px) and (min-aspect-ratio: 2/3) {
+  html body .hd, html body .cs-bar {
+    padding-left: max(20px, calc((100% - 540px) / 2)) !important;
+    padding-right: max(9px, calc((100% - 540px) / 2 - 11px)) !important;
+  }
+}
+@media (min-width: 861px) and (max-width: 900px) {
+  .cs-bar { padding-left: 56px; padding-right: 56px; }
+  .cs-nav { padding-left: 56px !important; padding-right: 56px !important; }
 }

@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/work/rel-ai-tionship/">
 <meta property="og:url" content="https://tarekdesign.se/work/rel-ai-tionship/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Rel-AI-tionship — Tarek Alfutih</title>
@@ -67,10 +78,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 @media (max-width:767px){
   .wrap>:where(main)>section.ra-hero{padding-left:0 !important;padding-right:0 !important}
   .ra-hb{gap:24px;padding:28px 20px 32px !important}
-  .ra-title{font-size:clamp(34px,10.4vw,44px) !important}
+  .ra-title{font-size:clamp(34px,calc(10.4 * var(--vw, 1vw)),44px) !important}
   .ra-kick{font-size:11px !important;letter-spacing:.14em !important}
   .ra-sbw{display:none !important}
-  .ra-sb{margin:0 -20px;width:calc(100% + 40px);border-left:0;border-right:0;aspect-ratio:auto;height:clamp(180px,54vw,232px)}
+  .ra-sb{margin:0 -20px;width:calc(100% + 40px);border-left:0;border-right:0;aspect-ratio:auto;height:clamp(180px,calc(54 * var(--vw, 1vw)),232px)}
   .ra-sbcap{font-size:11px !important}
   .ra-ft{grid-template-columns:minmax(0,1fr);padding:0 20px !important}
   .ra-ft>div{display:grid;grid-template-columns:84px minmax(0,1fr);column-gap:12px;align-items:baseline;padding:12px 0 !important;border-right:0 !important}
@@ -146,16 +157,16 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .ra-stw{border-bottom:2px solid #1c1b1a}
   .strip.ra-track,.wrap section .ra-sk.ra-track{display:flex !important;position:relative;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px !important;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   .ra-track::-webkit-scrollbar{display:none}
-  .strip.ra-track{border:0 !important;padding:24px 9vw 0;scroll-padding:0 9vw}
-  .wrap section .ra-sk.ra-track{margin:0 -20px !important;padding:0 9vw}
-  .strip.ra-track>div,.wrap section .ra-sk.ra-track>div{flex:0 0 82vw;min-width:0;scroll-snap-align:center;scroll-snap-stop:always;border:0 !important}
+  .strip.ra-track{border:0 !important;padding:24px calc(9 * var(--vw, 1vw)) 0;scroll-padding:0 calc(9 * var(--vw, 1vw))}
+  .wrap section .ra-sk.ra-track{margin:0 -20px !important;padding:0 calc(9 * var(--vw, 1vw))}
+  .strip.ra-track>div,.wrap section .ra-sk.ra-track>div{flex:0 0 calc(82 * var(--vw, 1vw));min-width:0;scroll-snap-align:center;scroll-snap-stop:always;border:0 !important}
   .strip.ra-track>div>div:last-child{padding:10px 0 0 !important}
   .ra-cc{display:grid !important;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;margin-top:8px}
   .ra-stw>.ra-cc{padding:0 20px 16px}
 }
 @media (min-width:768px) and (max-width:1023px){
-  .strip.ra-track{padding:32px 18vw 0;scroll-padding:0 18vw}
-  .strip.ra-track>div{flex:0 0 64vw}
+  .strip.ra-track{padding:32px calc(18 * var(--vw, 1vw)) 0;scroll-padding:0 calc(18 * var(--vw, 1vw))}
+  .strip.ra-track>div{flex:0 0 calc(64 * var(--vw, 1vw))}
   .wrap section .ra-sk.ra-track{margin:0 !important;padding:0 18%}
   .wrap section .ra-sk.ra-track>div{flex:0 0 100%}
   .ra-stw>.ra-cc{padding:4px 24px 20px}
@@ -198,7 +209,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div class="ra-top">
 <div style="grid-column:1 / span 7;display:flex;flex-direction:column;gap:20px;min-width:0">
 <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;height:3px;background:#1c1b1a;flex:none"></span><span class="ra-kick" style="font:600 12px/1 Archivo;letter-spacing:.18em;text-transform:uppercase;color:#4a4744">Case study · Animation</span></div>
-<h1 class="ra-title" style="font:700 clamp(56px,6.4vw,84px)/.95 Archivo;letter-spacing:-.05em;margin:0;white-space:nowrap">Rel-AI-tionship</h1>
+<h1 class="ra-title" style="font:700 clamp(56px,calc(6.4 * var(--vw, 1vw)),84px)/.95 Archivo;letter-spacing:-.05em;margin:0;white-space:nowrap">Rel-AI-tionship</h1>
 </div>
 <p class="ra-lead2" style="grid-column:8 / span 5;font:400 18px/1.45 Archivo;color:#4a4744;margin:0;text-wrap:pretty">An animation video exploring AI dependency in everyday life, told through the story of Steve, a man who gradually becomes dependent on AI for everyday choices, with humour and satire.</p>
 </div>
@@ -311,10 +322,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
 <script src="/assets/js/carousel.js?v=3d5d9896" defer></script>
 <script src="/assets/js/pages/rel-ai-tionship.js?v=d601d8f5" defer></script>
 </body>

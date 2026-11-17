@@ -61,7 +61,7 @@
       var fit = function () {
         var r = shape();
         if (!r) return;
-        var cap = 'calc((100' + VH + ' - var(--hdr, 80px)) * var(--vfit, .8) * ' + r.toFixed(4) + ')';
+        var cap = 'calc((100 * var(--svh, 1vh) - var(--hdr, 80px)) * var(--vfit, .8) * ' + r.toFixed(4) + ')';
         box.style.setProperty('max-width', own && own !== 'none' ? 'min(' + own + ', ' + cap + ')' : cap, 'important');
       };
       fit();

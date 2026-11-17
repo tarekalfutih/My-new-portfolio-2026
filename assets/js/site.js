@@ -3,7 +3,7 @@
 (function () {
   var h = document.querySelector('.cs-hd, .hd');
   if (!h) return;
-  function set() { document.documentElement.style.setProperty('--hdr', Math.round(h.getBoundingClientRect().height) + 'px'); }
+  function set() { document.documentElement.style.setProperty('--hdr', Math.round(h.getBoundingClientRect().height / (window.__z || 1)) + 'px'); }
   set();
   window.addEventListener('resize', set);
   window.addEventListener('load', set);

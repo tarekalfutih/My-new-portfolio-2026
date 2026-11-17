@@ -1,5 +1,11 @@
 /* Home page: hero typing line, hero spec overlay, and the "digital + physical" second-screen entrance. */
 (function () {
+  // Big screens: the page is zoomed (head.html); on-screen measurements / Z() = the page's own px.
+  var Z = function () { return window.__z || 1; };
+  var rect = function (el) {
+    var r = el.getBoundingClientRect(), z = Z();
+    return { left: r.left / z, top: r.top / z, right: r.right / z, bottom: r.bottom / z, width: r.width / z, height: r.height / z };
+  };
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* Typing line under the hero heading. Screen readers get every phrase once from the
@@ -33,8 +39,8 @@
     if (!sec || window.innerWidth < 901 || reduce) return;
     var t = function (fn, ms) { setTimeout(fn, ms); };
     var B = '#1b3ac4', P = '#ff4d6d';
-    var get = function (s) { var n = sec.querySelector('[data-sp="' + s + '"]'); return n ? n.getBoundingClientRect() : null; };
-    var S = sec.getBoundingClientRect(), cs = getComputedStyle(sec);
+    var get = function (s) { var n = sec.querySelector('[data-sp="' + s + '"]'); return n ? rect(n) : null; };
+    var S = rect(sec), cs = getComputedStyle(sec);
     var role = get('role'), h1 = get('h1'), text = get('text'), photo = get('photo');
     var pl = parseFloat(cs.paddingLeft), pr = parseFloat(cs.paddingRight);
     var top = Math.min(role.top, photo ? photo.top : role.top) - S.top;
@@ -126,7 +132,7 @@
     var r = ul.getBoundingClientRect();
     var b = pa.getBoundingClientRect(), tx = b.left, ty = b.top + b.height / 2;
     pen.tip = { x: tx, y: ty };
-    var mv = function (x, y) { return 'translate(' + (x - tx) + 'px,' + (y - ty) + 'px) rotate(-58deg)'; };
+    var mv = function (x, y) { return 'translate(' + (x - tx) / Z() + 'px,' + (y - ty) / Z() + 'px) rotate(-58deg)'; };
     var y = r.top + r.height / 2;
     var T = penTotal();
     var pts = [[0, 'none'], [450, mv(r.left, y)], [PEN_UL, mv(r.right, y)]];
@@ -199,7 +205,7 @@
     setTimeout(function () {
       var tx, ty;
       if (pen.tip) { tx = pen.tip.x; ty = pen.tip.y; } else { var p = pa.getBoundingClientRect(); tx = p.left; ty = p.top + p.height / 2; }
-      var mv = function (x, y) { return 'translate(' + (x - tx) + 'px,' + (y - ty) + 'px) rotate(-52deg)'; };
+      var mv = function (x, y) { return 'translate(' + (x - tx) / Z() + 'px,' + (y - ty) / Z() + 'px) rotate(-52deg)'; };
       var T = END + 500, kf = [{ transform: pen.end || 'none' }];
       chars.forEach(function (c, i) {
         var r = c.getBoundingClientRect();
@@ -216,7 +222,7 @@
     var q = function (s) { return sec.querySelector(s); };
     var edu = q('.sk-edu'), fr = q('.sk-frame'), mq = q('.sk-mq'), cur = q('.sk-cur'), size = q('.sk-size'), h = q('.sk-h');
     var tags = Array.prototype.slice.call(sec.querySelectorAll('.sk-tag'));
-    var s = sec.getBoundingClientRect(), f = fr.getBoundingClientRect(), e = edu.getBoundingClientRect();
+    var s = rect(sec), f = rect(fr), e = rect(edu);
     var fx = f.left - s.left, fy = f.top - s.top, fw = f.width, fh = f.height;
     var narrow = window.innerWidth <= 900;
     var ex = narrow ? e.left - s.left + 40 : e.right - s.left - 24, ey = narrow ? e.bottom - s.top - 8 : e.top - s.top + 28;
@@ -298,7 +304,7 @@
 
     var tick = function () {
       var r = mq.getBoundingClientRect();
-      size.textContent = r.width > 2 ? Math.round(r.width) + ' × ' + Math.round(r.height) : '';
+      size.textContent = r.width > 2 ? Math.round(r.width / Z()) + ' × ' + Math.round(r.height / Z()) : '';
       if (ma.playState !== 'finished') requestAnimationFrame(tick);
     };
     requestAnimationFrame(tick);

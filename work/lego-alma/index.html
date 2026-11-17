@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/work/lego-alma/">
 <meta property="og:url" content="https://tarekdesign.se/work/lego-alma/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>LEGO ALMA — Tarek Alfutih</title>
@@ -66,7 +77,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .universeum-row>div{flex:1 1 28% !important;min-width:110px}
 }
 @media (min-width:768px) and (max-width:1024px){
-  .cs-top{padding:20px 32px !important}
+  .cs-top{padding:20px 32px !important}html body .cs-bar{padding-left:32px !important;padding-right:32px !important}
   .cs-tabs{padding:2px 32px !important}
   .cs-tabs a{min-height:40px;display:inline-flex !important;align-items:center}
   section[id]{scroll-margin-top:120px}
@@ -74,7 +85,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .night-grid{grid-template-columns:repeat(12,minmax(0,1fr)) !important;padding:64px 32px 56px !important;gap:24px !important}
   .night-text{grid-column:1 / span 7 !important}
   .night-photo{grid-column:8 / span 5 !important;max-width:none !important}
-  h1.h1r{font-size:clamp(40px,5.4vw,52px) !important;margin-bottom:20px !important}
+  h1.h1r{font-size:clamp(40px,calc(5.4 * var(--vw, 1vw)),52px) !important;margin-bottom:20px !important}
   .night-lead{font-size:18px !important;margin-bottom:32px !important}
   .night-loc{margin-bottom:20px !important}
   .night-loc .loc-link{font-size:11px !important;letter-spacing:.14em !important}
@@ -413,10 +424,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
 <script src="/assets/js/pages/lego-alma.js?v=8b4eb670" defer></script>
 </body>
 </html>

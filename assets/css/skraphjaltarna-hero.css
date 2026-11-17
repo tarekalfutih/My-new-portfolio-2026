@@ -48,7 +48,7 @@
   .ih-in{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;padding:40px 56px}
   .ih-tx{grid-column:1 / 6;gap:22px}
   .ih-lb{font-size:15px}
-  .ih h1{font-size:clamp(48px,5.6vw,80px)}
+  .ih h1{font-size:clamp(48px,calc(5.6 * var(--vw, 1vw)),80px)}
   .ih-p{font-size:21px}
   .ih-cv{grid-column:7 / 13;justify-content:center}
   .ih-cv>div{width:min(100%,640px,calc(calc(100 * var(--svh, 1vh)) - 300px))}
@@ -64,7 +64,7 @@
   .ih-in{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:40px;align-items:center;padding:64px 32px}
   .ih-tx{gap:20px}
   .ih-lb{font-size:12px;white-space:nowrap}
-  .ih h1{font-size:clamp(36px,5.2vw,52px)}
+  .ih h1{font-size:clamp(36px,calc(5.2 * var(--vw, 1vw)),52px)}
   .ih-p{font-size:17px}
   .ih-bt{display:grid;grid-template-columns:max-content;justify-content:start;gap:10px}
   .ih-btn{display:flex;justify-content:space-between;gap:24px}
@@ -86,7 +86,7 @@
   .ih-tx{display:contents}
   .ih-ln{display:none}
   .ih-lb{font-size:12px;letter-spacing:.1em;white-space:nowrap}
-  .ih h1{font-size:clamp(40px,11.5vw,52px);letter-spacing:-.03em}
+  .ih h1{font-size:clamp(40px,calc(11.5 * var(--vw, 1vw)),52px);letter-spacing:-.03em}
   .ih-p{font-size:17px}
   .ih-stat-n{font-size:30px}
   .ih-cv{order:1;justify-content:flex-start;margin-top:8px}

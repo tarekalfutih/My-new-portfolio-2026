@@ -16,7 +16,7 @@
     const b = box.getBoundingClientRect();
     const avoid = [...box.querySelectorAll(box.dataset.ffAvoid || 'h1,h2,h3,p,a,button')]
       .map(e => e.getBoundingClientRect()).filter(r => r.width && r.height)
-      .map(r => ({ l: r.left - b.left - PAD, t: r.top - b.top - PAD, r: r.right - b.left + PAD, b: r.bottom - b.top + PAD }));
+      .map(r => { const z = window.__z || 1; return { l: (r.left - b.left) / z - PAD, t: (r.top - b.top) / z - PAD, r: (r.right - b.left) / z + PAD, b: (r.bottom - b.top) / z + PAD }; });
     const free = (x, y) => x > 8 && y > 8 && x < W - 8 && y < H - 8 && !avoid.some(a => x > a.l && x < a.r && y > a.t && y < a.b);
     const segFree = (p, q) => { for (let i = 1; i <= 10; i++) { const t = i / 10; if (!free(p[0] + (q[0] - p[0]) * t, p[1] + (q[1] - p[1]) * t)) return false; } return true; };
     const frag = document.createDocumentFragment();

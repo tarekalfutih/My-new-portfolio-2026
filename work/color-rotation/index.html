@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/work/color-rotation/">
 <meta property="og:url" content="https://tarekdesign.se/work/color-rotation/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap">
@@ -129,8 +140,8 @@ ul.plain li{font:400 16px/1.55 Archivo;color:#4a4744;margin-bottom:6px}
   .wrap section.cr-hero{height:auto;min-height:0;max-height:none}
   .cr-stage{display:flex;flex-direction:column;align-items:stretch;gap:40px;padding:56px 32px 48px}
   .cr-text{gap:18px}
-  .wrap section.cr-hero h1.cr-h1{font-size:clamp(44px,8vw,72px) !important;line-height:.95 !important;margin:0 !important}
-  .wrap .cr-artin{width:min(440px,86vw)}
+  .wrap section.cr-hero h1.cr-h1{font-size:clamp(44px,calc(8 * var(--vw, 1vw)),72px) !important;line-height:.95 !important;margin:0 !important}
+  .wrap .cr-artin{width:min(440px,calc(86 * var(--vw, 1vw)))}
   .wrap .cr-fbar{padding:0 32px !important;grid-template-columns:1fr 1fr !important}
   .wrap .cr-fbar>div{padding:16px 16px 16px 0 !important;border-right:0 !important;border-bottom:1px solid #dcd9d4 !important}
   .wrap .cr-fbar>div.cr-role{grid-column:1 / -1}
@@ -146,7 +157,7 @@ ul.plain li{font:400 16px/1.55 Archivo;color:#4a4744;margin-bottom:6px}
   .cr-stage{padding:32px 20px 36px !important;gap:32px}
   .wrap section.cr-hero{padding:0 !important}
   .cr-text{gap:14px}
-  .wrap section.cr-hero h1.cr-h1{font-size:clamp(38px,11vw,48px) !important}
+  .wrap section.cr-hero h1.cr-h1{font-size:clamp(38px,calc(11 * var(--vw, 1vw)),48px) !important}
   .wrap section.cr-hero .cr-lead{font-size:17px !important}
   .wrap .cr-artin{width:min(340px,100%)}
   .wrap .cr-fbar{padding:4px 20px 8px !important}
@@ -532,7 +543,7 @@ ul.plain li{font:400 16px/1.55 Archivo;color:#4a4744;margin-bottom:6px}
 <div class="cr-stage">
 <div class="cr-text">
 <div aria-hidden="true" style="display:flex;gap:8px"><span style="width:18px;height:18px;border-radius:50%;background:#1f6fd1"></span><span style="width:18px;height:18px;border-radius:50%;background:#3cb44a"></span><span style="width:18px;height:18px;border-radius:50%;background:#ff6b2c"></span><span style="width:18px;height:18px;border-radius:50%;background:#f0559c"></span><span style="width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:inset 0 0 0 1px #c8c6c2"></span><span style="width:18px;height:18px;border-radius:50%;background:#5b3a2a"></span></div>
-<h1 class="h1r cr-h1" style="font:700 clamp(48px,6vw,84px)/.95 Archivo;letter-spacing:-.05em;margin:0;white-space:nowrap;color:#1c1b1a">Color Rotation</h1>
+<h1 class="h1r cr-h1" style="font:700 clamp(48px,calc(6 * var(--vw, 1vw)),84px)/.95 Archivo;letter-spacing:-.05em;margin:0;white-space:nowrap;color:#1c1b1a">Color Rotation</h1>
 <p class="cr-lead" style="font:400 20px/1.45 Archivo;color:#4a4744;margin:0;max-width:460px;text-wrap:pretty">Collect colors. Complete sequences. Outsmart your opponents.</p>
 <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;height:3px;background:#1c1b1a;flex:none"></span><span style="font:700 15px/1 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#1c1b1a">Game design · Board game</span></div>
 </div>
@@ -556,7 +567,7 @@ ul.plain li{font:400 16px/1.55 Archivo;color:#4a4744;margin-bottom:6px}
 <h2 class="sh">What is it?</h2>
 <div class="pos" style="margin-top:20px;align-items:end">
 <div><p class="ctx">Color Rotation is a competitive board game about movement, colour and strategy.</p><p class="ctx" style="margin-bottom:0">Players move across a rotating board, collect Colour Blocks and arrange them in the right order to complete Quests.</p></div>
-<div style="border-top:4px solid #1c1b1a;padding-top:16px"><div class="mini" style="margin-bottom:10px">The objective</div><div style="font:700 clamp(26px,3vw,36px)/1.15 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-wrap:balance">Collect colours. Complete quests. Reach 7 points first.</div></div>
+<div style="border-top:4px solid #1c1b1a;padding-top:16px"><div class="mini" style="margin-bottom:10px">The objective</div><div style="font:700 clamp(26px,calc(3 * var(--vw, 1vw)),36px)/1.15 Archivo;letter-spacing:-.02em;color:#1c1b1a;text-wrap:balance">Collect colours. Complete quests. Reach 7 points first.</div></div>
 </div>
 <div class="grid3" style="gap:24px;margin-top:36px;border-top:1px solid #dcd9d4;padding-top:20px">
 <div><div class="mini" style="margin-bottom:8px">Players</div><div style="font:500 16px/1.5 Archivo">2 to 4</div></div>
@@ -754,10 +765,10 @@ ul.plain li{font:400 16px/1.55 Archivo;color:#4a4744;margin-bottom:6px}
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
 <script src="/assets/js/pages/color-rotation.js?v=a30a91a0" defer></script>
 </body>
 </html>

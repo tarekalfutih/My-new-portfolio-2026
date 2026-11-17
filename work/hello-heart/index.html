@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/work/hello-heart/">
 <meta property="og:url" content="https://tarekdesign.se/work/hello-heart/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Hello Heart — Tarek Alfutih</title>
@@ -46,7 +57,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 
 .m-only{display:none}
 @media (min-width:768px){
-  .hh-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:clamp(32px,4vw,56px);align-items:center;margin-bottom:28px}
+  .hh-top{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:clamp(32px,calc(4 * var(--vw, 1vw)),56px);align-items:center;margin-bottom:28px}
   .hh-txt .hh-lead{margin-bottom:0 !important}
 }
 @media (min-width:768px) and (max-width:1024px){
@@ -130,7 +141,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 .hh-ecg{position:absolute;left:50%;right:0;top:50%;width:50%;height:200px;transform:translateY(-50%);z-index:0;pointer-events:none}
 .hh-ecg-line{stroke-dasharray:1;stroke-dashoffset:1;animation:hhBeat 4.8s cubic-bezier(.45,0,.25,1) infinite}
 .hh-text{position:relative;z-index:1;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:32px 32px 32px 56px;min-width:0}
-.hh-art{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:clamp(24px,4vh,48px) 56px clamp(24px,4vh,48px) 16px;min-width:0;min-height:0}
+.hh-art{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;padding:clamp(24px,calc(4 * var(--vh, 1vh)),48px) 56px clamp(24px,calc(4 * var(--vh, 1vh)),48px) 16px;min-width:0;min-height:0}
 .hh-phone{position:relative;height:100%;max-height:620px;aspect-ratio:400/867;max-width:100%;border:6px solid #ff5c86;border-radius:36px;overflow:hidden;background:#ff3f63;box-shadow:0 24px 70px rgba(255,61,110,.25)}
 .wrap .hh-phone img{display:block;width:100%;height:100%;object-fit:contain;max-width:none}
 .hh-flag{position:absolute;left:0;right:0;top:87.6%;height:7.4%;border:2px solid #ff3d5a;background:rgba(255,61,90,.12);opacity:0;animation:hhFlag 4.8s ease infinite}
@@ -143,7 +154,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 .wrap .hh-fbar>div{padding:18px 24px 20px !important;border-right:1px solid rgba(255,255,255,.18) !important;border-bottom:0 !important}
 .wrap .hh-fbar>div:first-child{padding-left:0 !important}.wrap .hh-fbar>div:last-child{border-right:0 !important}
 .wrap .hh-fbar .lbl{color:#ff7aa2 !important}.wrap .hh-fbar>div>div:last-child{color:#fff !important}
-.hh-roll{font:700 clamp(48px,6.6vw,96px)/1 Archivo;letter-spacing:-.05em;height:1.04em;overflow:hidden}
+.hh-roll{font:700 clamp(48px,calc(6.6 * var(--vw, 1vw)),96px)/1 Archivo;letter-spacing:-.05em;height:1.04em;overflow:hidden}
 .hh-roll>div{display:flex;flex-direction:column;animation:hhRoll 7s cubic-bezier(.7,0,.2,1) infinite}
 .hh-roll span{display:block;height:1.04em;line-height:1.04em;white-space:nowrap}
 .hh-scr{position:absolute;left:0;right:0;top:0;height:200%;display:flex;flex-direction:column;animation:hhRoll 7s cubic-bezier(.7,0,.2,1) infinite;animation-delay:.08s}
@@ -166,7 +177,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 @media (max-width:767px){
   .wrap section.hh-hero{padding-left:0 !important;padding-right:0 !important}
   .wrap section.hh-hero .hh-text{padding:36px 20px 32px !important;gap:12px !important}
-  .hh-roll{font-size:clamp(40px,11vw,48px) !important}
+  .hh-roll{font-size:clamp(40px,calc(11 * var(--vw, 1vw)),48px) !important}
   .wrap section.hh-hero .hh-lead{font-size:17px !important;max-width:320px !important}
   .wrap section.hh-hero .hh-art{padding:0 20px 40px !important}
   .hh-phone{width:220px;border-width:6px;border-radius:30px}
@@ -350,10 +361,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
 <script src="/assets/js/carousel.js?v=3d5d9896" defer></script>
 <script src="/assets/js/pages/hello-heart.js?v=13b235d7" defer></script>
 </body>

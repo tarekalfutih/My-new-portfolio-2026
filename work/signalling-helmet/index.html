@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/work/signalling-helmet/">
 <meta property="og:url" content="https://tarekdesign.se/work/signalling-helmet/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Signalling Helmet — Tarek Alfutih</title>
@@ -121,7 +132,7 @@ section[id]{scroll-margin-top:96px}
 @keyframes sk3{0%,55%{opacity:0}63%,85%{opacity:1}100%{opacity:0}}
 @keyframes shBlink{0%,42%{opacity:1}52%,100%{opacity:0}}
 @media (prefers-reduced-motion:reduce){.shx-blink,.shx-press,.shx-press-dot,.gx,.sk1,.sk2,.sk3{animation:none !important;opacity:1}}
-@media (min-width:1025px){.shx{height:calc(calc(100 * var(--svh, 1vh)) - var(--hdr,110px));min-height:560px}.shx-art{width:min(100%, calc((calc(100 * var(--svh, 1vh)) - var(--hdr,110px) - var(--fh,120px) - 2 * clamp(32px,6vh,64px)) * 1.3333)) !important}}
+@media (min-width:1025px){.shx{height:calc(calc(100 * var(--svh, 1vh)) - var(--hdr,110px));min-height:560px}.shx-art{width:min(100%, calc((calc(100 * var(--svh, 1vh)) - var(--hdr,110px) - var(--fh,120px) - 2 * clamp(32px,calc(6 * var(--vh, 1vh)),64px)) * 1.3333)) !important}}
 @media (max-width:1024px){
   .shx-main{grid-template-columns:minmax(0,1fr) !important;row-gap:40px;padding:56px 32px 48px !important}
   .shx-text,.shx-art{grid-column:auto !important}
@@ -183,10 +194,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   <main id="main">
 
 <section class="shx" data-ref="hero" id="hero" style="background:#0c0f16;color:#fff;display:flex;flex-direction:column;overflow:hidden">
-<div class="shx-main" style="flex:1;min-height:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;padding:clamp(32px,6vh,64px) 56px">
+<div class="shx-main" style="flex:1;min-height:0;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px;align-items:center;padding:clamp(32px,calc(6 * var(--vh, 1vh)),64px) 56px">
 <div class="shx-text" style="grid-column:1 / span 5;display:flex;flex-direction:column;gap:22px;min-width:0">
 <div class="m-keep" style="display:flex;align-items:center;gap:12px"><span aria-hidden="true" class="shx-blink" style="flex:none;width:40px;height:4px;background:#ffa31a"></span><span style="font:600 13px/1.3 Archivo;letter-spacing:.16em;text-transform:uppercase;color:#ffb648">Case study · Functional prototype</span></div>
-<h1 class="shx-h1" style="font:700 clamp(64px,6.6vw,92px)/.95 Archivo;letter-spacing:-.045em;margin:0;color:#fff">Signalling<br/>Helmet</h1>
+<h1 class="shx-h1" style="font:700 clamp(64px,calc(6.6 * var(--vw, 1vw)),92px)/.95 Archivo;letter-spacing:-.045em;margin:0;color:#fff">Signalling<br/>Helmet</h1>
 <p style="font:400 20px/1.45 Archivo;color:#c8cbd2;margin:0;max-width:420px;text-wrap:pretty">A gesture-activated turn-signal helmet and glove system for cyclists</p>
 </div>
 <div class="shx-art m-keep" style="grid-column:6 / span 7;justify-self:end;width:100%;min-width:0">
@@ -243,7 +254,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 <div class="sh-pair2 m-keep" style="display:grid;grid-template-columns:minmax(0,1.309fr) minmax(0,1.094fr);gap:16px;align-items:start;margin-bottom:16px">
 <div style="min-width:0">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3a — Sketch of the signalling helmet</div>
-<div style="position:relative;aspect-ratio:1435/1096;overflow:hidden"><img width="1098" height="839" alt="Helmet sketch: step 1 press the thumb, step 2 extend the index finger, then the helmet light turns on" decoding="async" loading="lazy" src="/assets/img/helmet-sketch3.webp" srcset="/assets/img/opt/helmet-sketch3-480.webp 480w, /assets/img/opt/helmet-sketch3-800.webp 800w, /assets/img/opt/helmet-sketch3-1098.webp 1098w" sizes="(max-width: 1280px) 100vw, 1280px" style="width:100%;display:block;height:100%;object-fit:cover"/><div aria-hidden="true" class="sk-n sk1" style="position:absolute;left:45.4%;top:63.4%;width:clamp(26px,3.4vw,42px);aspect-ratio:1;border-radius:50%;background:#0a6fb8;color:#fff;font:700 clamp(13px,1.6vw,20px)/1 Archivo;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff;pointer-events:none">1</div><div aria-hidden="true" class="sk-n sk2" style="position:absolute;left:8.5%;top:43.6%;width:clamp(26px,3.4vw,42px);aspect-ratio:1;border-radius:50%;background:#0f7a52;color:#fff;font:700 clamp(13px,1.6vw,20px)/1 Archivo;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff;pointer-events:none">2</div><div aria-hidden="true" class="sk3" style="position:absolute;left:68.6%;top:32%;width:60%;height:18%;transform:translate(-50%,-50%) rotate(4deg);background:radial-gradient(ellipse at center,rgba(255,190,80,.7) 0%,rgba(255,160,30,.3) 40%,rgba(255,140,0,0) 70%);mix-blend-mode:multiply;pointer-events:none"></div></div>
+<div style="position:relative;aspect-ratio:1435/1096;overflow:hidden"><img width="1098" height="839" alt="Helmet sketch: step 1 press the thumb, step 2 extend the index finger, then the helmet light turns on" decoding="async" loading="lazy" src="/assets/img/helmet-sketch3.webp" srcset="/assets/img/opt/helmet-sketch3-480.webp 480w, /assets/img/opt/helmet-sketch3-800.webp 800w, /assets/img/opt/helmet-sketch3-1098.webp 1098w" sizes="(max-width: 1280px) 100vw, 1280px" style="width:100%;display:block;height:100%;object-fit:cover"/><div aria-hidden="true" class="sk-n sk1" style="position:absolute;left:45.4%;top:63.4%;width:clamp(26px,calc(3.4 * var(--vw, 1vw)),42px);aspect-ratio:1;border-radius:50%;background:#0a6fb8;color:#fff;font:700 clamp(13px,calc(1.6 * var(--vw, 1vw)),20px)/1 Archivo;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff;pointer-events:none">1</div><div aria-hidden="true" class="sk-n sk2" style="position:absolute;left:8.5%;top:43.6%;width:clamp(26px,calc(3.4 * var(--vw, 1vw)),42px);aspect-ratio:1;border-radius:50%;background:#0f7a52;color:#fff;font:700 clamp(13px,calc(1.6 * var(--vw, 1vw)),20px)/1 Archivo;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 3px #fff;pointer-events:none">2</div><div aria-hidden="true" class="sk3" style="position:absolute;left:68.6%;top:32%;width:60%;height:18%;transform:translate(-50%,-50%) rotate(4deg);background:radial-gradient(ellipse at center,rgba(255,190,80,.7) 0%,rgba(255,160,30,.3) 40%,rgba(255,140,0,0) 70%);mix-blend-mode:multiply;pointer-events:none"></div></div>
 </div>
 <div style="min-width:0">
 <div class="lbl" style="font-size:10px;margin-bottom:8px;color:#75726e">Figure 3b — Circuit built in Tinkercad</div>
@@ -301,10 +312,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
-<script src="/assets/js/pages/signalling-helmet.js?v=92fbcd79" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
+<script src="/assets/js/pages/signalling-helmet.js?v=95cf11d5" defer></script>
 </body>
 </html>

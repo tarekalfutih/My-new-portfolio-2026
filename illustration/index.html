@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/illustration/">
 <meta property="og:url" content="https://tarekdesign.se/illustration/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Illustration — Tarek Alfutih</title>
@@ -62,6 +73,8 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 @keyframes ilNudge{0%,60%,100%{transform:none}70%{transform:translate(4px,-4px)}80%{transform:none}88%{transform:translate(2px,-2px)}}
 @media (max-width:767px){.il-end{align-items:stretch}.il-more{padding:0 16px;font-size:12px}}
 @media (prefers-reduced-motion:reduce){.il-more-ar{animation:none}}
+/* 861–900px: the content keeps its 56px edge, so the header does too. */
+@media (min-width:861px) and (max-width:900px){html body .hd{padding-left:56px !important;padding-right:56px !important}}
 </style>
 </head>
 <body>
@@ -160,11 +173,11 @@ a:hover{color:#1b3ac4;text-decoration:underline}
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
-<script src="/assets/js/pages/illustration.js?v=e798bc91" defer></script>
-<script src="/assets/js/fireflies.js?v=4842aaa7" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
+<script src="/assets/js/pages/illustration.js?v=87592009" defer></script>
+<script src="/assets/js/fireflies.js?v=dedac5b7" defer></script>
 </body>
 </html>

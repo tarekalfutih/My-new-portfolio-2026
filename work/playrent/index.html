@@ -6,11 +6,22 @@
 <link rel="canonical" href="https://tarekdesign.se/work/playrent/">
 <meta property="og:url" content="https://tarekdesign.se/work/playrent/">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=7b81dcac">
+<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>PlayRent — Tarek Alfutih</title>
@@ -152,11 +163,11 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 }
 @media (max-width:767px){.pr-slide{flex-basis:220px !important}.pr-track{gap:14px !important;padding:0 calc(50% - 110px) !important}.wrap section .pr-car{display:grid !important}.pr-nav{max-width:none !important}}
 @media (prefers-reduced-motion:reduce){.pr-track{scroll-behavior:auto !important}}
-@media (max-width:767px){.wrap section .pr-vid{height:min(calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 56px)) * var(--vfit, .85)), calc(92vw * 25 / 12)) !important;width:calc(min(calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 56px)) * var(--vfit, .85)), calc(92vw * 25 / 12)) * 12 / 25) !important}}
+@media (max-width:767px){.wrap section .pr-vid{height:min(calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 56px)) * var(--vfit, .85)), calc(calc(92 * var(--vw, 1vw)) * 25 / 12)) !important;width:calc(min(calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 56px)) * var(--vfit, .85)), calc(calc(92 * var(--vw, 1vw)) * 25 / 12)) * 12 / 25) !important}}
 @media (max-width:1024px){
   /* Section 03 video, iPads and phones: a tall phone-shaped frame (12/25), centred; the wide video is
      cropped to the phone in its middle (the black sides are trimmed). Tall poster: pages/playrent.js. */
-  .wrap section .pr-vid{aspect-ratio:12/25 !important;height:min(calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 80px)) * var(--vfit, .85)), 900px) !important;width:calc(min(calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 80px)) * var(--vfit, .85)), 900px) * 12 / 25) !important;max-width:92vw !important;margin:0 0 0 50% !important;transform:translateX(-50%)}
+  .wrap section .pr-vid{aspect-ratio:12/25 !important;height:min(calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 80px)) * var(--vfit, .85)), 900px) !important;width:calc(min(calc((calc(100 * var(--svh, 1vh)) - var(--hdr, 80px)) * var(--vfit, .85)), 900px) * 12 / 25) !important;max-width:calc(92 * var(--vw, 1vw)) !important;margin:0 0 0 50% !important;transform:translateX(-50%)}
   /* The phone in the recording sits at x 649–1228 of 1920 (580 px wide, a little left of centre), which
      is narrower than the frame's 640 px window: centre the crop on the phone (48.3%) and zoom 1.104 so
      the phone fills the width, with no black bands (only ~20 px of the phone's dark bezel is trimmed). */
@@ -164,7 +175,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wrap section .pr-vid video{width:100% !important;height:100% !important;object-fit:cover !important;object-position:48.3% 50%;transform:scale(1.104)}
   .wrap section .pr-vid .vc:fullscreen video,.wrap section .pr-vid video:fullscreen{object-fit:contain !important;object-position:50% 50%;transform:none}
   .wrap section .pr-vid-intro{margin-bottom:28px !important;font-size:17px !important}
-  .wrap section .pr-pub{width:min(90vw,calc(calc(90 * var(--svh, 1vh)) * 9 / 19.5)) !important;max-width:none !important;margin:0 auto !important}
+  .wrap section .pr-pub{width:min(calc(90 * var(--vw, 1vw)),calc(calc(90 * var(--svh, 1vh)) * 9 / 19.5)) !important;max-width:none !important;margin:0 auto !important}
   .pr-track{touch-action:pan-x pan-y;-webkit-overflow-scrolling:touch}
 }
 /* Section 03 video: the site's video controls wrap the <video>; the wrapper fills the frame. */
@@ -212,7 +223,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   <main id="main">
 
 <section class="rule pr-hero" id="hero" style="background:#1b0942;color:#fff;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);height:calc(calc(100 * var(--svh, 1vh)) - var(--hdr,110px));min-height:560px;overflow:hidden">
-<div class="pr-text" style="display:flex;flex-direction:column;justify-content:center;gap:18px;padding:clamp(32px,5vh,56px) 48px clamp(32px,5vh,56px) 56px;min-width:0">
+<div class="pr-text" style="display:flex;flex-direction:column;justify-content:center;gap:18px;padding:clamp(32px,calc(5 * var(--vh, 1vh)),56px) 48px clamp(32px,calc(5 * var(--vh, 1vh)),56px) 56px;min-width:0">
 <div class="lbl" style="color:#d0bcff">Case study · Mobile app</div>
 <h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;margin:0">PlayRent</h1>
 <div aria-label="PlayRent logo" class="pr-logo m-keep" role="img" style="position:relative;width:min(360px,100%);aspect-ratio:2441/746;margin:8px 0 0 -6px">
@@ -222,13 +233,13 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
 </div>
 <div style="font:400 22px/1.35 Archivo;color:#e6e0e9">Instrument rental app</div>
 <a class="pr-cta hvx1" href="#concept" style="align-self:flex-start;display:inline-flex;align-items:center;gap:10px;margin-top:6px;font:600 14px/1 Archivo;color:#1b0942;background:#d0bcff;border-radius:20px;padding:12px 20px;text-decoration:none">See the flows <span aria-hidden="true">↓</span></a>
-<div class="facts pr-facts" style="margin-top:clamp(16px,3vh,32px)">
+<div class="facts pr-facts" style="margin-top:clamp(16px,calc(3 * var(--vh, 1vh)),32px)">
 <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Role</div><div style="font:600 15px/1.35 Archivo">UI Designer</div></div>
 <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Team</div><div style="font:600 15px/1.35 Archivo">Individual project</div></div>
 <div><div class="lbl" style="font-size:11px;margin-bottom:5px">Tools</div><div style="font:600 15px/1.35 Archivo;display:flex;flex-direction:column;align-items:flex-start;gap:8px"><span style="display:inline-flex;align-items:center;gap:6px"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 40 40" width="16"><path d="M14 2h6v12h-6a6 6 0 0 1 0-12z" fill="#F24E1E"></path><path d="M20 2h6a6 6 0 0 1 0 12h-6z" fill="#FF7262"></path><path d="M14 14h6v12h-6a6 6 0 0 1 0-12z" fill="#A259FF"></path><circle cx="26" cy="20" fill="#1ABCFE" r="6"></circle><path d="M14 26h6v6a6 6 0 1 1-6-6z" fill="#0ACF83"></path></svg>Figma</span><span style="display:inline-flex;align-items:center;gap:6px"><svg aria-hidden="true" height="16" style="flex:none" viewbox="0 0 24 24" width="16"><rect fill="#d0bcff" height="22" width="22" x="1" y="1"></rect><circle cx="12" cy="12" fill="#9a82db" r="8"></circle><path d="M5.6 7.2h12.8L12 18.6z" fill="#6750a4"></path></svg>Material Design 3</span></div></div>
 </div>
 </div>
-<div class="pr-art m-keep" style="position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 55% at 50% 50%,#8a6fd0 0%,#6750a4 55%,#4f378b 100%);min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;padding:clamp(28px,5vh,56px) 24px">
+<div class="pr-art m-keep" style="position:relative;overflow:hidden;background:radial-gradient(ellipse 60% 55% at 50% 50%,#8a6fd0 0%,#6750a4 55%,#4f378b 100%);min-width:0;min-height:0;display:flex;align-items:center;justify-content:center;padding:clamp(28px,calc(5 * var(--vh, 1vh)),56px) 24px">
 <div aria-hidden="true" class="pr-inst" style="position: absolute; inset: 0px; pointer-events: none; opacity: 0.5;"><svg style="position: absolute; left: 9%; top: 10%; --r: -14deg; transform: rotate(-14deg); animation: 9s ease-in-out 0s infinite normal none running prFloat; overflow: visible;" viewbox="0 -16 68 90" width="78"><g fill="none" stroke="#f3edff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M34 70c-9 0-16-6-16-15 0-6 4-9 4-13 0-4-3-6-3-11 0-8 6-13 13-13s13 5 13 13c0 5-3 7-3 11 0 4 4 7 4 13 0 9-7 15-16 15z"></path><circle cx="34" cy="46" r="5"></circle><path d="M34 18V-14M30 -14h8M28 60h12"></path></g></svg><svg style="position: absolute; left: 74%; top: 14%; --r: 6deg; transform: rotate(6deg); animation: 11s ease-in-out 1.5s infinite normal none running prFloat; overflow: visible;" viewbox="0 0 80 62" width="104"><g fill="none" stroke="#f3edff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><ellipse cx="40" cy="18" rx="32" ry="10"></ellipse><path d="M8 18v30c0 6 14 10 32 10s32-4 32-10V18M8 26l16 30M72 26L56 56M40 28v30"></path><path d="M18 4l20 12M62 4L44 16"></path></g></svg><svg style="position: absolute; left: 6%; top: 68%; --r: -8deg; transform: rotate(-8deg); animation: 10s ease-in-out 3s infinite normal none running prFloat; overflow: visible;" viewbox="0 0 100 44" width="130"><g fill="none" stroke="#f3edff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><rect height="40" width="96" x="2" y="2"></rect><path d="M14 2v40M26 2v40M38 2v40M50 2v40M62 2v40M74 2v40M86 2v40"></path><path d="M10 2v22M22 2v22M46 2v22M58 2v22M70 2v22" stroke-width="5"></path></g></svg><svg style="position: absolute; left: 80%; top: 62%; --r: 12deg; transform: rotate(12deg); animation: 12s ease-in-out 2s infinite normal none running prFloat; overflow: visible;" viewbox="0 0 60 70" width="60"><g fill="none" stroke="#f3edff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M44 4c-6 0-8 4-8 8v38c0 10-6 16-14 16s-14-5-14-12c0-4 3-6 6-6s5 2 5 5"></path><path d="M44 4l8-2M36 22h-4M36 32h-4M36 42h-4"></path></g></svg></div>
 <div class="pr-pwrap m-keep" style="position:relative;z-index:1;max-width:100%;border:8px solid #2b2930;border-radius:36px;background:#141218;box-shadow:0 30px 80px rgba(27,9,66,.45);aspect-ratio:412/917;height:100%;max-height:640px;overflow:hidden"><img width="1236" height="2751" alt="PlayRent log in screen" src="/assets/img/playrent-login.png" srcset="/assets/img/opt/playrent-login-480.webp 480w, /assets/img/opt/playrent-login-800.webp 800w, /assets/img/opt/playrent-login-1200.webp 1200w, /assets/img/opt/playrent-login-1236.webp 1236w" sizes="(max-width: 560px) 59vw, (max-width: 900px) 37vw, (max-width: 1280px) 26vw, 280px" style="display:block;width:100%;height:100%;object-fit:cover;object-position:top"/></div>
 </div>
@@ -391,10 +402,10 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   </main>
 
 </div>
-<script src="/assets/js/video-controls.js?v=f49b1941" defer></script>
-<script src="/assets/js/site.js?v=969609fd" defer></script>
+<script src="/assets/js/video-controls.js?v=7313ffe3" defer></script>
+<script src="/assets/js/site.js?v=17be0410" defer></script>
 <script src="/assets/js/legacy.js?v=3b76c0cc" defer></script>
-<script src="/assets/js/fit-media.js?v=c9cd4543" defer></script>
+<script src="/assets/js/fit-media.js?v=9c1174ca" defer></script>
 <script src="/assets/js/carousel.js?v=3d5d9896" defer></script>
 <script src="/assets/js/pages/playrent.js?v=4857f401" defer></script>
 </body>

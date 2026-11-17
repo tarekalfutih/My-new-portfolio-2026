@@ -11,7 +11,7 @@
     bt.classList.add('ih-bt--row');
     var a = bt.firstElementChild.getBoundingClientRect(), b = bt.lastElementChild.getBoundingClientRect();
     var c = cover.getBoundingClientRect();
-    if (b.top > a.bottom - 1 || b.right > c.left - CLEAR) {
+    if (b.top > a.bottom - 1 || b.right > c.left - CLEAR * (window.__z || 1)) {
       bt.classList.remove('ih-bt--row');
       bt.classList.add('ih-bt--stack');
     }
