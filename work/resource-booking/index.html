@@ -6,7 +6,7 @@
 <link rel="canonical" href="https://tarekdesign.se/work/resource-booking/">
 <meta property="og:url" content="https://tarekdesign.se/work/resource-booking/">
 <meta property="og:site_name" content="Tarek Alfutih">
-<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+<script>/* Big screens (> 1920×1080 CSS px): the whole page is the 1920×1080 layout scaled up
    (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
    rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
    1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
@@ -21,7 +21,7 @@ function g(){f();m();}f();addEventListener('resize',g);document.addEventListener
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="/assets/css/modernist.css?v=60062fbb">
-<link rel="stylesheet" href="/assets/css/base.css?v=48515e8c">
+<link rel="stylesheet" href="/assets/css/base.css?v=89f50a1a">
 <script src="/assets/js/video-behavior.js?v=34e7d5f9"></script>
 <script src="/assets/js/cv-viewer.js?v=8855d733" defer></script>
 <title>Resource Booking System for Teachers — Tarek Alfutih</title>
@@ -149,7 +149,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wrap section .rb-vframe{width:calc(100% + 40px) !important;max-width:none !important;margin:0 -20px !important;border-left:0 !important;border-right:0 !important}
 }
 /* Header edge = the content's 80px edge on desktop; 24px up to 900px like the content. */
-@media (min-width:901px){.cs-hd{--pad-x:80px}html body .cs-hd .cs-nav{padding-left:calc(var(--pad-x) * var(--z,1)) !important;padding-right:calc(var(--pad-x) * var(--z,1)) !important}}
+@media (min-width:901px){.cs-hd{--pad-x:80px}html body .cs-hd .cs-nav{padding-left:var(--pad-x) !important;padding-right:var(--pad-x) !important}}
 @media (min-width:861px) and (max-width:900px){html body .cs-bar{padding-left:24px;padding-right:24px}html body .cs-hd .cs-nav{padding-left:24px !important;padding-right:24px !important}}
 </style>
 </head>
