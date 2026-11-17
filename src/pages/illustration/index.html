@@ -51,6 +51,8 @@ a:hover{color:#1b3ac4;text-decoration:underline}
 @keyframes ilNudge{0%,60%,100%{transform:none}70%{transform:translate(4px,-4px)}80%{transform:none}88%{transform:translate(2px,-2px)}}
 @media (max-width:767px){.il-end{align-items:stretch}.il-more{padding:0 16px;font-size:12px}}
 @media (prefers-reduced-motion:reduce){.il-more-ar{animation:none}}
+/* 861–900px: the content keeps its 56px edge, so the header does too. */
+@media (min-width:861px) and (max-width:900px){html body .hd{padding-left:56px !important;padding-right:56px !important}}
 </style>
 </head>
 <body>

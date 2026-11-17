@@ -3,6 +3,17 @@
 <link rel="canonical" href="{{url}}">
 <meta property="og:url" content="{{url}}">
 <meta property="og:site_name" content="Tarek Alfutih">
+<script>/* Big screens (> 1920×1080 CSS px): everything below the header is the 1920×1080 layout scaled up
+   (zoom on .wrap; base.css), so text keeps its size relative to images. Screen units inside are
+   rewritten by the build to var(--vw/--vh/--svh) and set here in the page's own px: the frame is
+   1920 wide, and on screens wider than 16:9 it stays 16:9 and centred. window.__z = the scale as
+   measured (on-screen size / the page's own px), used by scripts that turn measurements into CSS px. */
+(function(){var d=document.documentElement,s=d.style;function f(){var W=d.clientWidth||innerWidth,H=innerHeight,z=Math.min(W/1920,H/1080);
+if(z>1&&window.CSS&&CSS.supports&&CSS.supports('zoom','2')){window.__z=z;d.classList.add('zm');s.setProperty('--z',z);s.setProperty('--zi',1/z);
+s.setProperty('--vw','19.2px');s.setProperty('--vh',H/z/100+'px');s.setProperty('--svh',H/z/100+'px');}
+else if(window.__z){window.__z=1;d.classList.remove('zm');['--z','--zi','--vw','--vh','--svh'].forEach(function(k){s.removeProperty(k)});}}
+function m(){var w=window.__z>1&&document.querySelector('.wrap');if(w){var c=parseFloat(getComputedStyle(w).width);if(c)window.__z=w.getBoundingClientRect().width/c;}}
+function g(){f();m();}f();addEventListener('resize',g);document.addEventListener('DOMContentLoaded',g);})();</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap">

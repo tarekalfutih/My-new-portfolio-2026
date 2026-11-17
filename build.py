@@ -121,16 +121,20 @@ def cache_bust(text):
 # vh declaration isn't enough: most of these values also use var(), and a var() value that turns out
 # invalid resets the property instead of falling back. So every Nsvh becomes calc(N * var(--svh, 1vh)):
 # base.css sets --svh to 1svh where supported; older browsers use the 1vh fallback.
-SVH = re.compile(r'(?<![\w.-])(\d+(?:\.\d+)?)svh\b')
+SVH = re.compile(r'(?<![\w.-])(\d+(?:\.\d+)?)(svh|vh|vw)\b')
+# Also vh and vw: on big screens head.html sets --vw/--vh/--svh in the zoomed page's own px.
+FALLBACK = {'svh': '1vh', 'vh': '1vh', 'vw': '1vw'}
 
 
 def svh_fallback(text):
     def repl(m):
         before = text[max(0, m.start() - 24):m.start()]
-        if '--svh:' in before or '@supports' in before:   # the definition in base.css stays as is
+        if '--svh:' in before or '@supports' in before or '@media' in before:   # definitions, queries stay
             return m.group(0)
-        return 'calc(%s * var(--svh, 1vh))' % m.group(1)
-    return SVH.sub(repl, text)
+        return 'calc(%s * var(--%s, %s))' % (m.group(1), m.group(2), FALLBACK[m.group(2)])
+    # sizes="(max-width:…) 100vw" on images is read by the browser before CSS: never rewritten.
+    parts = re.split(r'(\bsizes="[^"]*")', text)
+    return ''.join(x if x.startswith('sizes="') else SVH.sub(repl, x) for x in parts)
 
 
 def with_base(text):
@@ -189,7 +193,7 @@ def build():
                 path = os.path.join(dirpath, name)
                 with open(path, encoding='utf-8') as f:
                     css = f.read()
-                if 'svh' in css:
+                if re.search(r'\d(s?vh|vw)\b', css):
                     with open(path, 'w', encoding='utf-8') as f:
                         f.write(svh_fallback(css))
     if BASE_PATH and os.path.exists(os.path.join(DIST, 'CNAME')):
