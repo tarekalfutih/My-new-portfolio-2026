@@ -127,7 +127,7 @@ nav a:hover::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2
   .wrap section .rb-vframe{width:calc(100% + 40px) !important;max-width:none !important;margin:0 -20px !important;border-left:0 !important;border-right:0 !important}
 }
 /* Header edge = the content's 80px edge on desktop; 24px up to 900px like the content. */
-@media (min-width:901px){.cs-hd{--pad-x:80px}html body .cs-hd .cs-nav{padding-left:calc(var(--pad-x) * var(--z,1)) !important;padding-right:calc(var(--pad-x) * var(--z,1)) !important}}
+@media (min-width:901px){.cs-hd{--pad-x:80px}html body .cs-hd .cs-nav{padding-left:var(--pad-x) !important;padding-right:var(--pad-x) !important}}
 @media (min-width:861px) and (max-width:900px){html body .cs-bar{padding-left:24px;padding-right:24px}html body .cs-hd .cs-nav{padding-left:24px !important;padding-right:24px !important}}
 </style>
 </head>

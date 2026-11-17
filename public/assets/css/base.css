@@ -374,13 +374,9 @@ html.cvv-open { overflow: hidden; }
   .btt { padding-bottom: 120px; }
 }
 
-/* Big screens (head.html adds .zm above 1920×1080): the page under the header is the 1920 layout
-   scaled by --z. The header is not scaled (zoom back to 1), but its side padding is, so the logo and
-   menu stay lined up with the content's edges. Screen units go back to the real ones in the header. */
+/* Big screens (head.html adds .zm above 1920×1080): the whole page, header included, is the 1920
+   layout scaled by --z, so the logo and menu stay the same size relative to the content and on its edges. */
 html.zm .wrap { zoom: var(--z); }
-html.zm .wrap > .hd, html.zm .wrap > .cs-hd { zoom: var(--zi); --vw: 1vw; --vh: 1vh; --svh: 1svh; }
-html.zm .hd, html.zm .cs-bar { padding-left: calc(var(--pad-x) * var(--z)); padding-right: calc(var(--pad-x) * var(--z)); }
-html.zm .cs-nav { padding-left: calc(var(--pad-x) * var(--z)) !important; padding-right: calc(var(--pad-x) * var(--z)) !important; }
 
 /* Logo and menu line up with the text's left and right edges (the menu icon sits 11px inside its
    44px button, so the right padding is 11px less). Phones: text at 20px. 600–767px: the centred
